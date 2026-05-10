@@ -14,11 +14,25 @@ The effect ranges from subtle to spectacular. The most modest manifestations are
 
 ## The Physics
 
-No satisfying explanation has been produced. The Ascending Peaks have attracted more academic expeditions than nearly any other feature on Azhora, and the consensus after two hundred years of investigation is that something is happening here that is not consistent with any known force. The rock is not magnetic. There are no gas pockets or thermal effects that could account for the lift. The hovering sections are in equilibrium — they do not drift, do not accelerate upward, do not descend. They simply stay where they are.
+The Ascending Peaks have attracted more academic expeditions than nearly any other feature on Azhora, and after two hundred years of investigation the phenomenon is better understood than it was — but still not fully explained.
 
-The boundary of the effect is defined. Outside the Ascending Peaks region, rocks fall normally. The boundary is not a sharp line — there is a zone of several miles on the southern and western edges where things fall more slowly than expected, as if the effect grades off. On the northern and eastern edges the cutoff is sharper.
+What is established:
 
-What happens within the boundary with things that are not rock has been studied with considerable interest. Water falls slowly — streams within the region move in long, lazy arcs. Animals brought into the region show no anomalous effects. People do not float. Objects made of metal fall at normal rates. The effect is specific to stone.
+The hovering sections are in equilibrium — they do not drift, do not accelerate upward, and do not descend. They simply stay where they are. The boundary of the effect is defined: outside the Ascending Peaks region, rocks fall normally. The boundary is not sharp on the southern and western edges, where there is a zone of several miles where things fall more slowly than expected, as if the effect grades off gradually. On the northern and eastern edges the cutoff is much sharper.
+
+What happens within the boundary with things that are not rock has been studied carefully. Water falls slowly — streams within the region move in long, lazy arcs, and rain falls at perhaps a third of normal speed in the zones of strongest effect. Animals and people are not affected. Objects made of ferrous metal — iron, steel — fall at normal rates, possibly slightly faster than normal near the boundary.
+
+**The leading current hypothesis is diamagnetic levitation from a geomagnetic anomaly.**
+
+All materials interact with magnetic fields. Most common materials are weakly diamagnetic — they are slightly repelled by a magnetic field, not attracted to it. In ordinary environments this repulsion is negligible; a magnetic field strong enough to levitate common rock would be extraordinary. But the mineral composition of the Ascending Peaks rock is not ordinary. Analysis has found extremely high concentrations of a crystalline mineral found only in trace amounts elsewhere on Azhora — a dense, dark mineral with diamagnetic properties far exceeding anything previously characterized. In a strong-enough magnetic field, rock of this composition would experience a net upward force.
+
+The magnetic field itself: deep survey work has identified a geomagnetic anomaly beneath the Ascending Peaks — a crustal feature of unusual composition producing a local field estimated at many times the background strength. Whether the crustal anomaly and the unusual rock composition are caused by the same underlying event (the leading theory) or are independent coincidences (the skeptic's position) is unresolved.
+
+The material specificity explains the selective behavior: diamagnetic minerals are repelled by the field; ferromagnetic/paramagnetic minerals (iron and steel) are attracted to it and experience additional downward pull, explaining why metal falls at normal-to-faster rates. Water is also weakly diamagnetic — hence streams falling slowly. Biological tissue is largely diamagnetic but at such low intensity that the field, while strong, is insufficient to produce a perceptible force on an organism. The hovering rock, by contrast, is extraordinarily concentrated in the specific diamagnetic mineral; that concentration is why it and not ordinary stone levitates.
+
+The gradient in effect strength (stronger at the center, fading to the south and west) matches the predicted field geometry of an extended deep crustal anomaly. The sharp cutoff to the north and east may indicate an abrupt geological boundary in the underlying feature.
+
+What remains unexplained: why this region has both the unusual mineral and the underlying magnetic anomaly. The two are likely connected — possibly both products of the same ancient geological or impact event — but the event has not been identified. Some researchers have noted that the Ascending Peaks region lies along an extension of the same crustal zone as the Red Meridian, and that the Red Meridian's unusual mineralogy may be related. This has not been formally published.
 
 ## The Mountain Cultures
 
