@@ -24,7 +24,7 @@ The family includes:
 
 **Hill Mittoli** — the Ganoss upland and Orched Hills variant. Considered archaic by lowland speakers. Preserves several grammatical forms that disappeared from standard usage before the Caeras Compact. Linguists find it invaluable; standard Mittoli speakers find it difficult.
 
-**Forest Mittoli** — spoken in the western deep-forest settlements. Has absorbed vocabulary from an unidentified substrate — words for forest phenomena, fungal and root species, certain qualities of light and shadow — that have no cognates in any other language. Where these words came from is an open question.
+**Forest Mittoli** — spoken in the western deep-forest settlements. Has absorbed vocabulary from an unidentified substrate — words for specific qualities of forest light, categories of forest silence, the behavior of old trees, the felt presence of unseen things — that have no cognates in any other language. The substrate words share a phonological profile: unusual initial consonant clusters, vowels in atypical positions, and a number of monosyllabic forms with dense codas that Mittoli phonology would normally resolve. Whatever spoke these words was not Proto-Western. Where these words came from is an open question. Whether whatever spoke them is gone is, in some forest communities, treated as a separate question.
 
 **Eastern Mittoli** — the transitional dialect of the East Pyros contact zone. Heavily mixed with Pyrosi vocabulary. Sometimes classified as a separate language rather than a dialect; this is a classification argument that generates more heat than light.
 
@@ -59,6 +59,50 @@ The Plains languages, forming their own family with no clear relationship to eit
 The standard explanation is that the Plains peoples are the oldest population on the continent, predating all the others, and that the other families represent later arrivals whose languages have obscured or replaced whatever was spoken across the continent before them. This would imply that the Grassic family is a remnant of the original Azhoran tongue, which would make the Plains peoples — not the Mittoli, not the desert cultures — the true indigenous population.
 
 This theory is not officially controversial. It is not discussed much in Mittoli academic contexts either.
+
+## The Iberos Languages
+
+The family spoken along the Iberos Sea coast is the least documented in this survey and the most consequential for what that absence implies. The Iberos coastal peoples have been trading with Azhoran merchants — primarily East Pyrosi speakers, and through them with Moreshi communities — for at least four centuries. Their language has shaped East Pyrosi, contributed vocabulary to Coastal Trade Moreshi, and provided nautical and commercial terminology that appears in three separate Azhoran language families. This is a language that has done considerable work on Azhora without any Azhoran linguist having studied it on its own terms.
+
+The reasons are practical: the Iberos coast lies across the sea, accessible by ship; Azhoran academic institutions are land-based; and the scholars who have made the crossing were merchants and diplomats, not linguists. What exists in Azhoran archives about the Iberos languages is incidental — vocabulary recorded because it was needed for trade, not because anyone was making a systematic record of the language itself.
+
+From what has been recorded, the following can be said with confidence:
+
+The Iberos family is not related to any Azhoran language family. Its phonological inventory includes consonant types absent from all Mittoli, Pyrosi, and Moreshi varieties and more closely resembles the Bouéni consonant system in some respects — though the relationship, if any, is not established. The word order appears to be SVO consistently, making it structurally similar to colloquial Mittoli, which may explain why Mittoli and Iberos speakers have historically managed to negotiate without a common language better than either manages with Moreshi speakers.
+
+The Iberos word for "trade" and the Mittoli word for "crossing" (*gal*) appear in both languages in forms too similar to be coincidental. Which direction the borrowing went, and when, is not established.
+
+What the Iberos family looks like beyond its trade vocabulary, how many distinct languages or dialects it comprises, and whether it is related to any language anywhere beyond the Iberos Sea, are questions for Iberos linguists, if any exist, to answer. Azhoran scholarship on this point is a gap that several scholars have noted and none has filled, partly because filling it requires sustained presence on the other side of the sea and partly because the Iberos peoples have not, in Azhoran memory, invited outside linguistic study.
+
+The Caeras Valley Academy has a standing interest in this question. It has, as of current knowledge, no answer.
+
+---
+
+## The Discipline of Azhoran Linguistics
+
+The formal study of Azhoran languages is centered at the Caeras Valley Academy, which maintains departments for Mittoli philology, comparative historical linguistics, and what it calls "living language documentation" — the study of non-Mittoli families as ongoing systems rather than historical objects. This last department was established after the first systematic contact between Academy scholars and Plains communities three centuries ago produced a body of data that made Mittoli philologists' prior assumptions about the relationships between the continent's languages look optimistic. The optimism has not entirely recovered.
+
+Several facts in Azhoran linguistics are agreed upon by all working scholars and generate no meaningful dispute:
+
+- The Mittoli and Pyrosi families share a common ancestor, Proto-Western, spoken before written record.
+- The Bouéni language is the most distant living relative of Mittoli, diverged so early that the relationship requires systematic comparison to see.
+- The Moreshi family shares no demonstrable ancestry with any other documented Azhoran language.
+- The Grassic family shares no demonstrable ancestry with any other documented Azhoran language.
+- The Forest Mittoli substrate, the Bouéni substrate, and the Tallyss and Qadimuur ritual registers all contain vocabulary that cannot be traced to any known source.
+
+The facts that generate productive dispute — or, in some cases, unproductive avoidance — are rather more interesting:
+
+*Whether the Grassic family is the oldest surviving language on the continent* has been the central implied question of Azhoran comparative linguistics for three centuries. The evidence is consistent with this interpretation. The institutional and political implications of formally establishing it have not been published. The Academy has noted, repeatedly, that the evidence is "consistent with multiple interpretations." Plains elders find this statement technically accurate and diplomatically transparent in equal measure.
+
+*The origin of the western forest substrate* has not been formally investigated. The Academy's position is that field research in the deep-forest communities presents logistical challenges. This has been the Academy's position for approximately a century and a half, during which period the challenges have not notably changed.
+
+*The relationship between the Bouéni substrate and the Southern Archipelago languages* is the most politically sensitive topic in current Azhoran linguistics. The evidence for a connection — navigational technique, star names, substrate phonological profile, the behavior of Archipelago peoples toward Bouéni sailors — has been accumulating for three centuries. No formal hypothesis has been published. The scholars who have spent time in the Archipelago and in Bouéni communities and who have spoken most carefully about what they observed have uniformly described a professional reluctance to be first. The implications of establishing that the "discovery" of the Southern Archipelago was, from the Archipelago's perspective, a return visit are large enough that multiple scholars have, apparently independently, decided they would prefer the question to remain open.
+
+*The Qadimuur register's relationship to Standard Moreshi* has one published formal analysis, which concludes with the observation that the register either represents a separate language family entirely or an extremely early form of proto-Moreshi, and that the available data does not distinguish between these possibilities. The scholar responsible did not return to the canyon country for subsequent research.
+
+There is, among linguists who have done sustained field research across multiple Azhoran communities, a pattern that is noted privately and not published: the languages of the continent's periphery — Bouéni in the south, Grassic in the center, the Forest Mittoli substrate in the west — appear to be older than the languages that have displaced or surrounded them. The implication is that the Mittoli and Pyrosi families, despite their academic prestige and political dominance, represent a later layer — arrivals who found a continent already inhabited and already speaking, and whose languages have been, in the long view, recent tenants in a much older house.
+
+This is not a conclusion that the Caeras Valley Academy finds comfortable. It is, however, the conclusion that the evidence seems to be pointing toward, in the patient way that evidence does.
 
 ## Language as Identity
 

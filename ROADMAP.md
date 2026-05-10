@@ -35,7 +35,7 @@ The physical world. Mostly complete.
 ---
 
 ### Layer 2 — Languages
-The linguistic world. Three of five families complete.
+The linguistic world. All five families complete.
 
 | Document | Status | Notes |
 |----------|--------|-------|
@@ -43,8 +43,8 @@ The linguistic world. Three of five families complete.
 | `lore/peoples/languages/standard_mittoli.md` | ✓ Done | Full conlang; Cael script; 4 noun classes; 6 cases; aspect verbs; ~80 words; place name etymologies |
 | `lore/peoples/languages/moreshi.md` | ✓ Done | Full conlang; Khaṭṭ abjad; triconsonantal roots; VSO order; the Qadimuur ritual register |
 | `lore/peoples/languages/boueni.md` | ✓ Done | Full conlang; nasal vowels; Mittoli cognates demonstrated; substrate mystery; maritime vocabulary |
-| `lore/peoples/languages/pyrosi.md` | — Planned | Bridges Mittoli and something older; social register encoded in verb forms; Taler archaic dialect; place name etymologies for Pyros region |
-| `lore/peoples/languages/grassic.md` | — Planned | Oldest and strangest; no traceable connection to any other family; oral land-use law; Memory Grass terminology |
+| `lore/peoples/languages/pyrosi.md` | ✓ Done | Full conlang; Ossic abugida (20 chars); 4 aspects incl. latent; 4 prosodic registers; 2 noun classes; Proto-Western cognates demonstrated; Tallyss fire-memory register; base-12 numbers |
+| `lore/peoples/languages/grassic.md` | ✓ Done | Full conlang; predicate-dominant (no noun/verb distinction); 5 evidentials with land-witness highest; polysynthetic verbs; vowel harmony; caull cord notation + Memory Grass network |
 
 **Notes on remaining languages:**
 - Pyrosi should demonstrate the Proto-Western connection to Mittoli from the other side — same ancestor, different divergence

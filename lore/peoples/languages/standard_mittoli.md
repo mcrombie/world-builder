@@ -352,16 +352,89 @@ The phrasing is significant: *nilazhael* ("to un-endure," to stop remaining) is 
 
 ---
 
-## Northern Mittoli: Key Divergences
+## Dialect Profiles
+
+### Northern Mittoli
 
 Northern Mittoli (spoken around Bay of Lol, Smunders Bay, the Ganoss uplands) differs from Standard in four main ways:
 
 1. **Stress shift:** Fixed initial stress. *Mittolo* → **Mít**-tol (with final vowel dropped).
 2. **Final vowel deletion:** Any unstressed final vowel is dropped. *Gala* → *Gal*; *Velm* (already consonant-final) unchanged; *Azhora* → *Ázhur*.
-3. *ae* diphthong collapse: *ae* becomes flat *a* or *e* depending on context. *Caeras* → *Ceras* or *Karas* in the far north.
+3. ***ae* diphthong collapse:** *ae* becomes flat *a* or *e* depending on context. *Caeras* → *Ceras* or *Karas* in the far north.
 4. **Consonant cluster preservation:** Standard Mittoli simplified *mtt-* → *mitt-* centuries ago. Northern preserves the older cluster: *Mttol* for what the south calls *Mittolo*. This is the origin of the spelling *Mttolo* that appears on older northern maps.
 
-The Academy's position is that these are dialects of the same language. Speakers of Hill Mittoli disagree and have said so, in Hill Mittoli, in terms the Academy has declined to formally translate.
+The Academy's position is that Northern is a dialect of the same language. Northern speakers tend not to dispute this, finding the question less interesting than the Academy does.
+
+The place name *Bay of Lol* is the most studied feature of Northern Mittoli. *Lol* does not derive from any Northern, Standard, or Hill Mittoli root. Northern speakers do not offer an etymology because they do not have one. The name is older than the language that carries it. Scholars who have studied the problem note that the Bay of Lol is the geographic feature most completely surrounded by all three Mittoli dialects, and that *Lol* appears in no other context — not as a common noun, not as a root in any compound, not in any other place name. A word for exactly one thing, with no meaning beyond naming it. Scholars note this with discomfort and have moved on.
+
+---
+
+### Hill Mittoli
+
+Hill Mittoli is spoken in the Ganoss uplands and through the Orched Hills — elevated terrain between the northern lowlands and the western forests. It is not, strictly speaking, an intermediate dialect between Northern and Forest Mittoli, though its territory lies between them; it is an archaic variety that has simply changed less than either, because isolated upland communities had fewer occasions to participate in the changes spreading through the lowland trade routes.
+
+Standard Mittoli speakers find Hill Mittoli difficult. Linguists find it invaluable. The two responses are not unrelated.
+
+**Features Hill Mittoli preserves that Standard has lost:**
+
+**Dual number.** Standard Mittoli distinguishes singular and plural. Hill Mittoli distinguishes singular, dual, and plural. The dual is marked by the infix *-oss-* for Class I nouns and *-ae-* for Classes II–IV, placed before the case suffix: *voranoss-ae* (the two people, genitive). Dual is used for things that naturally come in pairs, for two specifically-named individuals acting together, and in a handful of legal formulas that Hill Mittoli law treats as binding and Standard Mittoli law treats as archaic dialect variation.
+
+**Cessative aspect.** Standard Mittoli has three aspects: imperfective, perfective, prospective. Hill Mittoli has a fourth — the cessative, prefix *dre-*, marking "the action of stopping, the moment of ending." It is not the same as the perfective (*ve-*, completion): *vemilos* means "he saw [fully, completed]"; *dremilos* means "he stopped seeing, he looked away, he ceased to look." The distinction matters for oral testimony about events observed. Standard Mittoli speakers collapse both into the perfective and lose the distinction. Hill speakers consider this imprecise.
+
+**Prepositional case augments.** Where Standard Mittoli uses prepositions plus case, Hill Mittoli sometimes uses case alone with specialized meanings that require prepositions in Standard. The Hill locative *-el* can indicate "in the presence of" as well as "at/in," a distinction Standard Mittoli marks with an additional particle. The directive *-ath* similarly can indicate "for the sake of" as well as "toward."
+
+**The Hill Mittoli verb root** for "to leave" is *nilazh-* — unchanged from what Proto-Western reconstruction predicts. Standard Mittoli uses the same root but has contracted it. In Standard, *to leave* is *nilazhael*; in Hill, it remains the full two-root compound *nil-azh-ael* ("to un-endure, to cease remaining"), spoken slowly enough that each part is audible. Hill speakers consider the full form more honest. It names what departure actually is.
+
+**Sample Hill Mittoli:**
+
+> *Voranossae dre-miloss Ganel-el.*
+> — "[The two people] ceased to see [each other] on the height."
+
+In Standard this would be *voranossae vemiloss Ganel-el* — losing the dual and the cessative both, collapsing "they stopped seeing each other" and "they completed seeing" into one form. A Hill speaker giving this testimony would consider the Standard version both grammatically imprecise and morally inadequate for the situation it describes.
+
+The Academy's position is that Hill Mittoli is a dialect of the same language. Hill Mittoli speakers have said what they think of this position. The Academy has declined to formally translate their statement.
+
+---
+
+### Forest Mittoli and the Western Substrate
+
+Forest Mittoli is spoken in the deep-forest settlements of western Azhora — communities that have been inside the old-growth for long enough that the forest is not where they live but what they live in. The variety has changed considerably from Standard, acquiring vocabulary and certain structural habits through long, intimate contact with an environment that Standard Mittoli's vocabulary was not built for. Some of those changes are straightforward borrowings from neighboring dialects. Some are not.
+
+The substrate is the part that is not straightforward.
+
+Every documented Forest Mittoli variety contains a layer of vocabulary with no cognates in any other language family: words for forest phenomena — specific qualities of light, categories of forest silence, the behavior of old trees, certain fungal and root relationships — that appear in Forest Mittoli and nowhere else, in forms that do not derive from Proto-Western and cannot be traced to any known contact language. The substrate is consistent across the Forest Mittoli area, which rules out parallel independent development. Something older was spoken in these forests before Mittoli speakers arrived, and some of its vocabulary survived in the way that substrate vocabulary does — through centuries of practical necessity, because the forest people needed words for things that the incoming language had not named.
+
+**The phonological profile of the substrate:**
+
+The substrate words are recognizable as a group. They tend to begin with consonant clusters unusual in Mittoli: *mv-*, *nv-*, *ngr-*, and initial *th-* followed by a liquid. They tend to carry vowels in positions where Mittoli phonology would normally prohibit them. Several have the vowel *ae* appearing in stem-initial position rather than in the characteristic Mittoli diphthong context. A few are monosyllabic with dense consonant codas that Mittoli would normally resolve.
+
+This profile is different from the Bouéni substrate (which favors open syllables and vowel sequences) and from the Forest substrate vocabulary that occasionally appears in Hill Mittoli (which appears to be a different layer again, possibly from the same source). If the western forests were once home to a language — or a language family — its sound system was heavier on consonant clusters than anything else currently spoken on Azhora.
+
+**Selected substrate vocabulary:**
+
+*mveth* — the quality of light through old-growth canopy in late afternoon: specifically the condition in which the light has warmed from white to gold while the canopy above it remains dark, so that the light makes its surrounding shadow visible rather than the other way. Forest Mittoli has absorbed this into broader use; speakers apply it to any illumination that reveals by contrast, including social situations and arguments. No Mittoli equivalent exists because the Standard variety developed in riverine and agricultural terrain where this quality of light does not appear.
+
+*ungrel* — the felt presence of something alive and watching from cover, before it is seen or heard. Distinguished from the sight or sound of an animal; *ungrel* is the sensation itself, which experienced hunters and foresters describe consistently enough that it is treated as reliable information. Standard Mittoli has no single word for this. The closest formulation is *milelm voranor* ("the sense of being seen by a living thing") — three words, less precise, and carrying none of *ungrel*'s sense of specific, localized direction.
+
+*nvoreth* — a route through forest that has clearly been traveled for a very long time without any human record of its making. These passages are distinguishable from human-made trails by the height of the cleared space (which accommodates something not quite human-proportioned) and by the curve of the route, which tends to follow air and water currents rather than efficient travel lines. Foresters distinguish them from animal runs by their age and by the absence of the specific damage patterns that grazing and browsing animals leave. *Nvoreth* names the thing; it does not explain it. The word is also used, by extension, for reasoning that reaches a correct conclusion through an unclear process — the argument that got there by a *nvoreth*.
+
+*vennae* — the specific smell of old-growth forest on warm air: a combination of fungal, humus, and living sap that requires centuries of uninterrupted forest growth to produce. Forest Mittoli foresters use it as a temporal indicator. A strong *vennae* indicates that the forest in question has not experienced significant clearing in at least several human generations. Where *vennae* is absent, the forest is young, whatever it looks like.
+
+*throngel* — the interval between a large old tree's death and the closing of the clearing it leaves. The tree falls; the canopy opens; light reaches the ground it has not reached in generations; the forest begins to grow into the gap. *Throngel* names the period of the opening — perhaps twenty to a hundred years, depending on species and terrain — before the canopy closes again. Also used, with full awareness of the borrowed weight, for any window of opportunity with a natural closing point. A speaker who says an opening is *throngel* implies it will not stay open.
+
+*ossmer* — the underground part of things; the invisible network supporting what is visible. Originally applied to root systems and, more specifically, to the fungal connections between trees that foresters observe through the behavior of the trees themselves — the way a forest that has lost a large tree will sometimes show stress signatures in trees with no direct root connection, as if something were transmitted through the ground. *Ossmer* names this layer. It has been borrowed into scholarly Standard Mittoli, untranslated, to describe foundational structures in other domains. A Caeras Valley philosopher used it to describe the relationship between a Memory Grass site and the claim it substantiates. Linguists have noted the trajectory with interest.
+
+*seng* — the specific quality of forest quiet that follows sudden complete silence: no birds, no insects, no wind-in-leaves. Foresters treat *seng* as information. Its source is almost always something large, quiet, and near. The word is monosyllabic and bare, with no Mittoli morphology attached to it; it appears in Forest Mittoli as a noun and as a verb (*seng-ael* = to go completely quiet in this way) without showing any of the derivational patterns that Mittoli vocabulary shows. It was borrowed whole.
+
+*nvaelleth* — a dead tree still standing. Old-growth forest contains many of these: trees that have died but remain upright for decades, continuing to function as habitat, structural support, and fungal host long after their living function has ended. *Nvaelleth* names this condition — not the tree, but the state of being a dead thing that still stands and still serves. It has passed into Forest Mittoli idiom to describe institutions, traditions, and occasionally people who are no longer doing the thing they were made for but who provide structure that the living depend on. Using it of a person requires care.
+
+**What the substrate knows:**
+
+Like the Bouéni substrate, the Forest Mittoli substrate vocabulary clusters in specific domains. It knows old-growth forest in considerable detail — light, smell, sound, the behavior of the forest itself. It knows the things that live in old forest and how to read their presence. It appears to know forest as a continuously inhabited environment, not a territory visited.
+
+It does not know rivers in the ways Mittoli knows rivers. It does not know open agricultural land. It does not have reconstructable words for the sky, for settlements, for tools of cultivation. Whatever spoke these words lived inside the forest and treated the forest as the complete world.
+
+The western old-growth of Azhora is genuinely old. Core samples from the largest trees in the deep forest suggest continuous growth of some stands for longer than any Azhoran written record. The substrate speakers may have been in that forest for a very long time. Whether they are gone is a question that some Forest Mittoli foresters, asked quietly and directly, decline to answer straightforwardly. They change the subject to *ungrel*, and then they change the subject again.
 
 ---
 
