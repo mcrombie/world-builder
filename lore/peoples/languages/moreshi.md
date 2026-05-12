@@ -388,6 +388,105 @@ Roots are listed with their core meaning and principal derived forms. Selected f
 
 Numbers above ten are formed by combination: *ʕashara wa-waḥd* (ten and one = eleven). Hundreds: *mia* (100), *alfun* (1000).
 
+### Trade and Exchange
+
+**Th-M-N** — value, price, worth  
+*thaman* = price, value; *thamin* = valuable, costly; *ithmaan* = a mutual exchange (both parties satisfied); *muthaamin* = a trading partner, one with whom fair exchange has been established. This root produces the number eight (*thamaaniya*) — the traditional count for a balanced trade: the eighth item is the confirmation that the exchange was not one-sided.
+
+**B-Y-ʕ** — sell, trade  
+*baaʕa* = sold; *yabiʕu* = sells; *bayʕ* = a sale, a transaction; *bayyaaʕ* = a seller, a trader (agent noun). In Coastal Trade Moreshi, *siir al-bayʕ* (the walk of sale) is the formal circuit of a market where a buyer passes each merchant once before negotiating — to see all options before committing.
+
+**Sh-R-Y** — buy, acquire  
+*shtaraa* = bought; *yashtarii* = buys; *shiraaʔ* = a purchase, an acquisition; the verb is irregular — root Sh-R-Y with an additional prefix in the perfect — which Moreshi grammarians attribute to the word's great antiquity.
+
+**R-B-Ḥ** — gain, profit  
+*rabaḥa* = gained, profited; *ribḥ* = profit; *raabiḥ* = profitable, a profitable venture; *la-rabiḥta* = "you have gained" — a polite acknowledgment that a deal favored the other party, used to close a negotiation gracefully.
+
+**X-S-R** — loss, diminishment  
+*xasara* = lost (in trade or in general); *xisaara* = a loss; *xasraan* = ruinous, at a total loss. The root applies to trade shortfalls and to routes that consume too much water — a path that costs more than it returns is *xisaara* by the same word.
+
+**ʕ-Q-D** — bind, contract, knot  
+*ʕaqada* = bound, tied; *ʕaqd* = a contract, an agreement, a knot; *ʕuquud* = contracts (plural). A spoken *ʕaqd* made under open sky with three witnesses requires no written form in desert tradition — the witnesses carry the terms, and the stars mark the time. Writing an agreement is not a sign of trust; it is a sign that the parties do not expect to meet again under the same sky.
+
+**W-Z-N** — weigh, balance, measure  
+*wazana* = weighed; *miizaan* = a balance, scales; *wazn* = weight; *muwaazan* = balanced, just. The same root applies to judicial fairness: a *ḥukm muwaazan* is a balanced judgment, one that gives each side its correct weight.
+
+### Kinship and Community
+
+**ʔ-B-W** — father, origin, ancestor  
+*ʔab* = father; *ʔabawaat* = ancestors; *ʔabawii* = ancestral; construct form *ʔabu-* is used in honorific titles: *ʔabu-Thalaatha* (father of three resolutions) is a title given to an elder who has arbitrated three major disputes. The title is not for biological parenthood of three children; in formal council address, it refers specifically to arbitrated peace.
+
+**ʔ-M-M** — mother, source, foundation  
+*ʔumm* = mother; *ʔummahat* = mothers; *ʔumm al-ṭuruq* = the mother-road, the main route from which all lesser routes branch. The word also means "principal" or "foundational" in abstract contexts: *ʔumm al-masʔala* is the root of a problem, the original question from which all others derive. An elder woman who has guided more than one generation of caravan routes earns the title *ʔumm al-masiir* — mother of the journey.
+
+**ʔ-X-W** — sibling, companion of shared path  
+*ʔax* (m) / *ʔuxt* (f) = brother / sister; *ʔixwaan* = brothers-in-arms — specifically, members of the same caravan who have survived a desert emergency together, not biological siblings. The word is not used casually. Being called *ʔax* by a caravan leader is a formal statement of trust that carries the same obligations as kinship; refusing the designation is possible but socially significant.
+
+**ʕ-M-M** — paternal kin, tribal bonds  
+*ʕamm* = paternal uncle; *ʕamma* = paternal aunt; *ibn ʕamm* = male cousin (father's brother's son); *ʕamaama* = the web of paternal kin obligations that define who owes what to whom within a tribe. A decision made against *ʕamaama* (against one's kin-web) is not merely rude — it severs the ties that structure desert survival.
+
+**X-W-L** — maternal kin, flexibility, approximation  
+*xaal* = maternal uncle; *xaala* = maternal aunt; *xawl* is also "approximately, roughly, in the vicinity of" in caravan speech. The overlap is not coincidental: maternal kin obligations are treated as *xawl* relations — meaningful, reciprocal, but with more room for negotiation than the strict duties of *ʕamaama*. An outsider brought into a family through maternal connections is *xaal al-qawm* — roughly kin, by the generous measure.
+
+**J-Y-L** — generation, era, successor  
+*jiil* = a generation, an era; *ʔajyaal* = generations; *jiil al-Qadmaat* = the generation of the ruins — a phrase used when something is so old its origin-generation is entirely outside living memory. Moreshi reckons time in generations more naturally than in years; a canyon elder asked the age of a ruin is more likely to answer in terms of *ʔajyaal* than in years counted.
+
+### The Body and Survival
+
+**ʕ-Y-N** — eye, watchfulness, surface water  
+*ʕayn* = eye; *ʕuyuun* = eyes, also wells and visible springs (distinct from the spring-as-life-source, *maʕan*, which is underground and thus not seen before you find it). *ʕayyaan* = watchman, scout; *fii ʕayn al-muruuṣ* = "in the eye of the desert" — at a position where nothing but desert is visible in any direction, no edge, no break. Used as a navigation term for the deep interior.
+
+**Y-D-Y** — hand, control, custody  
+*yad* = hand; *yadaan* = two hands (dual, required form in formal speech); *aydii* = hands (plural); *fii yadii* = "in my hand" — under my keeping. A desert agreement is sealed with both parties extending their right palms and pressing them together twice — the grammar requires *yadayn* (the dual), and using the plural *aydii* in this phrase is a linguistic error that older traders treat as an omen.
+
+**R-ʔ-S** — head, chief, beginning  
+*raʔs* = head; *ruʔasaaʔ* = leaders; *raʔiis* = chief (literally "the head one"); *raʔs al-shahar* = the head of the month, the first day. The same root produces the word for a mountain summit (*raʔs al-jabal*) and the word for the opening line of a song. Moreshi does not distinguish between spatial height, temporal priority, and social elevation.
+
+**Q-L-B** — heart, center, reversal  
+*qalb* = heart; *yaqlub* = turns over, reverses; *inqilaab* = an overturning, a reversal of state. The heart is named for the act of turning because it was understood — before the canyon peoples developed their anatomical tradition — to flip between states: fear and calm, cold and heat. Moreshi medicine treats emotional reversals as physical events in the same root, and does not find this a category confusion.
+
+**Ṣ-W-T** — voice, sound, vote  
+*ṣawt* = voice, sound; *ʔaṣwaat* = voices; *ṣawwata* = voted, spoke one's position. In the council (*mashyaxa*), casting a vote is *ṣawwata bi-naʕam* or *ṣawwata bi-laa* — "voiced a yes" or "voiced a no." The word for vote and the word for voice are not distinguished. A council member who is silent is understood to have abstained; there is no Moreshi word for an abstention vote, only silence.
+
+**Ṭ-ʕ-M** — taste, food, experience by contact  
+*ṭaʕm* = taste, flavor; *ṭaʕaam* = food; *yaṭʕamu* = tastes; the root applies to sensory contact more broadly — you can *ṭaʕama* an idea (taste/try it) or *ṭaʕama* a new route before committing a full caravan to it. The common oasis greeting *kiif al-ṭaʕm?* — how is the taste? — asks about water quality, food availability, and overall conditions depending on which is most pressing; experienced travelers understand from context which is meant.
+
+**M-R-Ḍ** — illness, weakness, false claim  
+*maraḍ* = illness; *mariiḍ* = ill; *yatamaaraḍu* = feigns illness, malingers. The reflexive pattern applied to this root yields a verb specifically for pretending sickness — a word so specific that linguists note it implies a sufficient cultural history of the practice to need a name. Caravan masters have a separate vocabulary for *maraḍ al-ṭariiq* (road-illness: real exhaustion, to be accommodated) versus *tamaraḍ* (feigned illness, to be addressed directly).
+
+**R-W-Ḥ** — wind, breath, spirit  
+*riḥ* = wind; *arwaaḥ* = winds, spirits; *raaʔiḥa* = smell, scent (what the wind carries); *ruwaaḥ* = the afternoon wind, specifically. The same root covers wind, breath, and what certain traditions call the animating presence in living things — the three are one thing across scales: personal breath, local wind, the animating movement in the world. Canyon peoples do not explain this further. The grammar already says it.
+
+### Time and the Calendar
+
+**W-Q-T** — time, appointed moment  
+*waqt* = a time, a specific moment; *awqaat* = times; *mawqit* = the appointed time; caravan planning is structured around *awqaat al-siira* (the times of travel) — the hours before dawn and after sunset when the heat permits movement. Missing a *mawqit* on a desert route is treated with the same weight as breaking a contract.
+
+**Y-W-M** — day, daylight hours  
+*yawm* = day; *ʔayyaam* = days; caravan usage distinguishes *al-yawm al-ḥaarr* (the hot day — the midday halt when nothing moves) from *al-waqt al-siira* (the travel time at the day's edges). "Today" is *al-yawm*; the expression *haadhaa al-yawm* (this-the-day, emphatic form) means "before this day ends" — a deadline, not merely a reference.
+
+**L-Y-L** — night  
+*layl* = night; *layaali* = nights; *layliiy* = nocturnal; *al-layl al-mudiid* (the long night) = the clear winter nights of the canyon country, when the sky holds enough stars to read routes by precision rather than estimation. Caravan apprentices learn star navigation exclusively during *layaali al-bard* (the cold nights of winter) in their first year. The reasoning: you do not learn to trust the stars on comfortable nights.
+
+**Sh-H-R** — month, lunar cycle  
+*shahar* = a month; *ashhur* = months; the word is rooted in visibility — a month is the period of a moon's visible change. Corav has two moons with different orbital periods, so the Moreshi calendar tracks both. An *aligned month* — when both new moons fall within three days of each other — is called *shahar al-tawʔamayn* (the month of the twins). It occurs approximately eleven times in seventeen years. It is considered neither lucky nor unlucky but significant: a time when two separate things become briefly visible as one. Agreements made in aligned months are traditionally reviewed at the next one.
+
+**S-N-W** — year, cycle  
+*sana* = a year; *siniin* = years; *sanawii* = annual. The desert calendar divides the year into eight seasons rather than four, tracking the major shifts in heat, wind, and star position:
+
+| Season | Name | Character |
+|--------|------|-----------|
+| 1 | *al-Ḥarr al-Awwal* (the first heat) | peak summer; the halt season |
+| 2 | *al-Ḥarr al-Thaanii* (the second heat) | slightly lesser; late-summer routes reopen |
+| 3 | *al-Mawsim* (the season, the wind-season) | the trade-wind season; most caravan movement |
+| 4 | *al-Bard al-Awwal* (the first cold) | the cooling; star-navigation season begins |
+| 5 | *al-Bard al-Kabiir* (the great cold) | peak winter; canyon country is severe |
+| 6 | *al-Barad* (hail) | the transitional storms from the mountain interior |
+| 7 | *al-Nawm* (the sleep) | windless, heat-haze; the stillness before the winds return |
+| 8 | *al-Ṭuluuʕ* (the rising) | routes reopen; the year begins again |
+
+*Al-Mawsim* is both a season name and a common noun: *mawsim* has entered trade dialects across the Iberos coast to mean "season" in the sense of "the right time for something" — a borrowing that happened through the trade corridor and has naturalized in several other languages.
+
 ## Place Name Etymologies
 
 **Muruuṣ** (rendered in Mittoli as *Moroshé*)  
@@ -438,6 +537,130 @@ The desert road does not forget those who walked on it.
 
 *Notes: The road (*ṭariiq*, grammatically masculine) is given feminine verb agreement (*tansaa*) — a personification common in caravan speech and possibly a remnant of the Ritual Register's universal animate conventions. It is not corrected in caravan contexts.*
 
+### A trade negotiation closing
+
+*Qaala al-rrajul: "Al-thaman thaminun."*  
+*Qaalat al-marʔa: "Al-thaman ʕaadilun — laa thaminun wa-laa raxiiṣun. Ithmaan."*  
+*Maddaa al-rrajulu yadahu wa-maddaat al-marʔa yadahaa. Tammat al-ṣafqa.*
+
+The man said: "The price is high."  
+The woman said: "The price is fair — not high and not low. Mutual exchange."  
+The man extended his hand and the woman extended her hand. The deal was complete.
+
+*Notes: *Ithmaan* (mutual exchange) is the word that closes a Moreshi trade negotiation — using it is a formal declaration that neither party was disadvantaged. The man's complaint used the adjective *thamin* (valuable/costly); the woman's reframe used *ʕaadil* (just, balanced, from root ʕ-D-L). Once *ithmaan* is spoken and both hands extended, the deal is considered a spoken contract in desert tradition. The dual form *yadayn* (two hands) is implied in the ceremonial exchange though only one hand is named per party.*
+
+### A parent giving a child their ism
+
+*Ism al-walad Ṣabr. Yuqaawim al-ḥarr wa-yaʕrifu al-rimaal wa-yantaẓiru an tasquṭa an-nujuum min as-samaaʔ ḥatta yaraww anna al-nujuum laa tasquṭu. Haadhaa huwa al-Ṣabr.*
+
+The child's name is Ṣabr. He will endure the heat and know the sands and wait for stars to fall from the sky until he sees that stars do not fall. That is Ṣabr.
+
+*Notes: Birth-name declarations in the canyon tradition follow a pattern: *ism* + explanation of what the name will require + assertion that the name is therefore correct. The declaration is said aloud at sunrise on the seventh day. The phrasing "until he sees that stars do not fall" encodes the difference between *ʕilm* (systematic knowledge gained through discipline) and *maʕrifa* (personal knowledge from direct experience) — the child will learn patience not by being told it exists but by waiting long enough to know it personally.*
+
+## Proverbs and Sayings (*al-Ḥikam*)
+
+Desert cultures preserve compressed knowledge in proverbs precisely because a proverb survives transport. These are drawn from the Oasis and Nomadic dialect traditions; Canyon Moreshi has its own parallel corpus that is considered more archaic and is not always intelligible to oasis speakers.
+
+---
+
+*Al-muruuṣ muʕallim al-ṣabr; al-xaraabaab muʕallim al-ṣamt.*  
+"The desert teaches patience; the ruins teach silence."  
+*The two lessons the desert offers are learned through different encounters. One is earned through endurance. The other is earned by arriving at something large enough that speech becomes inadequate.*
+
+---
+
+*Man laa yaʕrifu al-rimaal laa yasmaʕu al-ṭariiq.*  
+"The one who does not know the sands does not hear the road."  
+*Route knowledge is encoded in sand-pattern and wind-shift; the literal and figurative meanings are inseparable. A person who has not learned to read their environment cannot read anything in it.*
+
+---
+
+*Al-maaʔ laa yaʕdhiru nafsahu.*  
+"Water does not excuse itself."  
+*Water is where it is or it is not. Reliable things do not explain their reliability; they simply are, or are not. Said of trustworthy people, good routes, and wells that have not gone dry.*
+
+---
+
+*Qabla al-xuruj, ʕudd al-awqaat. Qabla al-rujuuʕ, ʕudd al-ʔayyaam.*  
+"Before leaving, count the hours. Before returning, count the days."  
+*Caravan planning: departure is calculated in water-time; the return depends on knowing how long you have been away and what may have changed. The two calculations are different operations.*
+
+---
+
+*Lam takun al-Qadmaat ṣaghiira ḥiina buniyat.*  
+"The ancient ruins were not small when they were built."  
+*Said before entering the deep ruins, as a recognition of their builders' scale. Also said when someone underestimates something old, or when a problem has been growing longer than is comfortable to acknowledge.*
+
+---
+
+*Maruuṣ al-ṣabr ʔawsaʕ min al-muruuṣ.*  
+"The desert of patience is wider than the desert."  
+*The internal experience of endurance exceeds the physical landscape that occasions it. Said to someone who is struggling, not as comfort but as accurate information: what you are carrying is larger than what you are crossing.*
+
+---
+
+*Al-shayx laa yaḥmil al-ṭariiq — al-ṭariiq yaḥmiluhu.*  
+"The elder does not carry the road — the road carries the elder."  
+*Knowledge earned through long travel becomes structural rather than active. The elder no longer has to remember how routes work; they simply move through the world and the world arranges itself correctly around that knowledge. Said of expertise deep enough to be automatic.*
+
+---
+
+*Kull waadi ʕindu lisaanu.*  
+"Every canyon has its tongue."  
+*Each canyon in the deep interior produces wind sounds specific to its shape; experienced navigators identify their position by sound in darkness or sandstorm. The metaphor extends: every landscape speaks, but only to those who have spent time listening.*
+
+---
+
+*Al-nujuum laa taʕrifu asmaaʔahaa.*  
+"The stars do not know their names."  
+*The names we give things are ours, not the things'. Navigation names, route names, ruin names — all are Moreshi language laid onto a landscape that precedes the language. Said when a dispute arises over naming conventions, and occasionally when someone claims more authority over a thing than the thing permits.*
+
+---
+
+## Naming Conventions
+
+Moreshi names do not separate "first name" from "family name" in the Mittoli fashion. A person's full designation is a chain of identifications, each layer serving a different social function.
+
+### The Ism — birth-name
+
+The *ism* (root S-M-W, which also produces *samaaʔ* — sky — suggesting a name is something that hovers over a person) is given on the seventh day after birth. Seven navigation stars; seven for completeness. Birth-names are typically root-derived nouns or quality-words:
+
+Common birth-names and their roots:
+- *Ṣabr* (patience, endurance) — root Ṣ-B-R
+- *Nuur* (light) — root N-W-R
+- *Ghayth* (rain, relief) — root Gh-Y-Th
+- *Riḥ* (wind) — root R-W-Ḥ
+- *Ṣaxr* (stone) — root Ṣ-X-R
+- *Najm* (star) — root N-J-M
+- *Ḥarr* (heat — given to children born in *al-Ḥarr al-Awwal*, without irony)
+
+Feminine birth-names often take the *-a* ending or use inherently feminine nouns: *Waaḥa* (oasis), *Maʕan* (the life-giving spring), *Layla* (night-of-a-specific-night, as opposed to *layl* which is night in general).
+
+### The Nasab — genealogical chain
+
+The *nasab* (root N-S-B: connection, lineage, attribution — the same root that produces the grammatical *nisba* suffix) places a person in their family line: *ibn* (son of) or *bint* (daughter of) plus the father's name. Extended nasab names three or four generations back; this is used in formal settings and legal disputes where establishing family connections matters. The common social form shortens to one generation.
+
+### The Laqab — earned designation
+
+The *laqab* (root L-Q-B: appellation, designation, what sticks) is an earned or assigned name that often supersedes the birth-name in daily use. It is never chosen by the person who receives it; it accumulates through life and is given by the community that witnesses the behavior the laqab describes.
+
+Some laqab are descriptive (*Al-Ḥamra*, the red one; *Al-ʕAriif*, the knower; *al-Ṭawiil*, the tall one). Others are functional honorifics:
+- *Umm Xamsiin* — mother of fifty — an elder woman who has guided fifty caravans safely to destination
+- *ʔAbu Thalaatha* — father of three — an elder who has arbitrated three major disputes to settlement
+- *Al-Miftaaḥ* (the key, root F-T-Ḥ: open) — one who opens routes, a pathfinder
+
+A person whose laqab is widely known may be addressed by it exclusively; their ism becomes a private-family thing. Canyon communities have families where the ism has not been spoken outside the household in two generations because the laqab was more accurate.
+
+### The Nisba — community of origin
+
+When relevant, the nisba suffix (-*ii* masculine, -*iyya* feminine) places a person in relation to their home community or affiliation: *al-Widyaanii* (canyon person), *al-Waaḥii* (oasis-dweller), *al-Muruuṣii* (desert person generally), *al-Saaḥilii* (coastal person, from Coastal Trade Moreshi communities).
+
+### A full name
+
+A complete formal address: *Ṣabr ibn Ghayth al-Ḥamra al-Widyaaniyy* — "Ṣabr, son of Ghayth, the red one, of the canyons."
+
+Mittoli speakers encountering full Moreshi names for the first time often ask which part is the "real" name. The question does not translate well.
+
 ## The Ritual Register: *Qadimuur*
 
 The desert peoples maintain a register of language used only in specific ceremonial contexts — most commonly at the ruins of the deep interior, at the ancient canyon petroglyphs, and at certain named points along the oldest trade routes where tradition holds that something significant once happened or was said.
@@ -451,6 +674,41 @@ This register is called *Qadimuur* (from Q-D-M: "the Ancient Ones, the ancient f
 **Universal animate agreement**: All nouns, without exception, take animate agreement in the Qadimuur. Rocks, stones, canyons, ruins, sand, sky — all gendered, all agreeing with animate verbs. The practitioners describe this as "speaking to everything as if it is listening." Linguists describe it as a grammatical anomaly without an accepted account.
 
 **Unfamiliar vocabulary**: Approximately a third of the Qadimuur lexicon has no cognates in Standard Moreshi or in any other language currently spoken or documented. These words occur in fixed positions within ritual speech and cannot be paraphrased or substituted. Practitioners say the words are not theirs — they belong to what came before. Phonological reconstruction by linguists confirms that the sound patterns are consistent with the Moreshi phonological inventory but point toward no known ancestor.
+
+### Known Qadimuur Roots (partial)
+
+The Qadimuur vocabulary that has been documented and can be shared outside ceremonial context represents perhaps a third of the total register. Canyon practitioners do not withhold the rest as a matter of secrecy — they are explicit that some words are not dangerous to know but are meaningless outside the correct acoustic context of their use-sites. Publishing them would be like printing a melody without a note of music.
+
+The following quadriliteral roots have been documented with consistent meanings across multiple canyon communities:
+
+| Root | Known Meaning | Notes |
+|------|--------------|-------|
+| Q-D-M-R | the old presence; the thing that has not left | No cognate in Standard Moreshi. The register's own name derives from this root. Practitioners translate it as "the ancient listening" — something that is present, attending, and old. |
+| K-L-M-Ṭ | to address; to speak toward something that is not yet speaking back | The Standard Moreshi verb for "speak" is Q-W-L; this root is specific to the act of speaking at the ruins themselves. The implied audience is present but silent. |
+| Th-R-Q-B | to witness an exchange between old things | Used when two ruin-sites are discussed in relation to each other. Linguists have not found it in any other context. The fourth consonant (B) is phonologically consistent with Moreshi but the root as a whole matches nothing. |
+| B-L-Ṭ-M | to return what was placed | Appears in the portion of the ritual performed when leaving a site. The word has directional grammar encoding — the thing being returned moves *toward* the site, not away from it. This implies the speaker is considered to have taken something, even if they are not aware of what. |
+| M-R-Ṣ-L | to pass through a threshold of a different type | Related in meaning to the Standard Moreshi word for crossing a distance (root S-Y-R) but specifically for the transition between ordinary space and ruin-space. Not metaphorical: practitioners use it at the physical boundary of a site, not figuratively. |
+| Ṣ-W-Ḥ-N | to be correctly positioned relative to something very old | Appears in a fixed phrase at the opening of formal ruin-speech. It cannot be paraphrased. Canyon practitioners, when asked what it means, tend to demonstrate — they adjust their physical stance slightly — rather than explain. |
+
+These roots take the same formation patterns as Standard Moreshi roots (CaCaC, CuuC, etc.) but their products are words that no longer exist in Standard Moreshi. The vowel patterns work. The word-shapes are Moreshi-normal. The roots themselves map to nothing.
+
+### A Qadimuur fragment
+
+The following exchange was recorded at one of the major canyon sites, with the practitioner's permission. The Standard Moreshi glosses are her own translations, given after the ritual was complete.
+
+*Qadimuur:*  
+*Ṣawaḥna al-qadmur fii maraṣlat al-xaraabaab.*  
+*Naktalmitu bi-lisaan al-awwaliina.*  
+*Al-thuurqabu yablaṭamu maa ʔuʕṭiya.*
+
+*Practitioner's gloss (Oasis Moreshi):*  
+"We are correctly positioned before the ancient presence at the threshold of the ruins."  
+"We speak in the tongue of the first ones."  
+"The witnessing returns what was given."
+
+*Notes: Al-thuurqabu takes animate agreement (*yablaṭamu*) despite being an abstract noun, in accordance with the universal animate rule. The practitioner noted that the third line is always said facing away from the site, toward the direction you came from.*
+
+The Caeras Valley linguist who transcribed this fragment spent some time looking at the middle line. The phrase "tongue of the first ones" uses a demonstrably Standard Moreshi expression (*lisaan al-awwaliina*) inside an otherwise Qadimuur construction, as if someone had inserted a Mittoli word into a sentence otherwise in a foreign language. When this was pointed out to the practitioner, she said: "Yes. That part is ours. The rest is not."
 
 ### What the desert peoples say about it
 
