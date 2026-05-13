@@ -3,7 +3,7 @@ name: Pyros
 category: region
 tags: [border, volcanic, West Pyros, East Pyros, transition, Azhora, ancient, fire]
 status: draft
-related: [Azhora, Mittolo, The Plains, Moroshé Desert, Talermolis, Gala]
+related: [Azhora, Mittolo, The Plains, Moroshé Desert, Amod, Talermolis, Gala]
 ---
 
 # Pyros
@@ -33,6 +33,8 @@ East Pyros is a transit zone. The great trade routes between the Mittolo heartla
 The people of East Pyros — where they have a distinct identity at all, rather than simply considering themselves traders first — are lighter in their cultural commitments than the Westpyrosi. They have a reputation for adaptability, pragmatism, and a certain ethical flexibility that the more settled peoples around them have found useful and also worrying at various points in history.
 
 **Talermolis** is the name of the upland district in the northern part of East Pyros, where the ridge is high enough to catch some moisture and the land is greener and older. Talermolis has a different character from the rest of East Pyros — more traditional, more closed, older money and older grudges. The Taler dialect is considered archaic even by Pyrosi standards and preserves forms that linguists use to reconstruct the pre-Compact Pyrosi language.
+
+North of the Pyrosi transit country, before the land rises fully into the Lotharn, lies **Amod**: a foothill country of terraces, water courts, and pass markets. East Pyros relies on Amod more than East Pyrosi merchants like to admit. Goods descending from the Lotharn usually become southern trade goods in Amodian warehouses first, and the Amodian habit of measuring every channel, mule-load, and road fee has quietly shaped the accounting practices of the northern Pyrosi routes.
 
 ## The Fire Memory
 

@@ -3,7 +3,7 @@ name: Azhora
 category: geography
 tags: [continent, homeland, civilization, forests, arid-east, rivers, known-world, Corav]
 status: draft
-related: [Corav, Mittolo, Northern Azhora, Pyros, Moroshé Desert, Iberos Coast, Bouén, The Plains, Languages of Azhora]
+related: [Corav, Mittolo, Northern Azhora, Pyros, Amod, Moroshé Desert, Iberos Coast, Bouén, The Plains, Languages of Azhora]
 ---
 
 # Azhora
@@ -38,6 +38,7 @@ Azhora's major regions each have their own distinct geography, history, and cult
 - **Northern Azhora** — the cold coastal north, Bay of Lol and Smunders Bay, the Ganoss uplands, the Orched Hills
 - **Pyros** — West Pyros (volcanic, fertile, contested) and East Pyros (the trade corridor, the rain shadow)
 - **The Lotharn Mountains** — the ancient eastern spine, geologically old and heavily forested, Appalachian in scale; many valleys, many passes, rich in iron and coal; insular valley communities
+- **Amod** — the south-facing Lotharn foothill country, terraces, water courts, pass markets, and orchards
 - **The Plains** — the great transitional grasslands, home to the continent's oldest peoples
 - **Moroshé Desert** — the arid interior, Mediterranean coasts, ancient ruins, distinct cultures
 - **Iberos Coast** — the eastern seaboard, the island chains, the Iberos Sea maritime world

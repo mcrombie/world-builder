@@ -18,6 +18,7 @@ The physical world. Mostly complete.
 | `lore/geography/regions/mittolo.md` | ✓ Done | Forested heartland; three rivers; Dark Groves |
 | `lore/geography/regions/north_azhora.md` | ✓ Done | Bay of Lol; Smunders Bay; Ganoss clans |
 | `lore/geography/regions/pyros.md` | ✓ Done | Volcanic soil; Fire Memory; Gala and Talermolis |
+| `lore/geography/regions/amod.md` | ✓ Done | South Lotharn foothills; terraces, water courts, pass markets |
 | `lore/geography/regions/moroshe_desert.md` | ✓ Done | Arid interior; canyon country; Nova Homa; the ruins |
 | `lore/geography/regions/iberos_coast.md` | ✓ Done | Iberos Sea islands; Nyross; Zoth; Suval |
 | `lore/geography/regions/bouen.md` | ✓ Done | Cold southern peninsula; Deep River current; Te Nillium |
