@@ -236,6 +236,104 @@ A second negative form, **sẽ**, marks permanent, absolute, or ontological nega
 
 *Sẽ* appears in sailor's oaths and in descriptions of the substrate words that have no explanation. It is distinct from *nav* (which negates a specific action) in that *sẽ* negates a category of possibility. It may be substrate-derived; the etymological connection to anything in Proto-Western is unclear.
 
+### Pronouns
+
+Subject pronouns are optional in ordinary Bouéni because the verb suffix already marks person. They are used for emphasis, contrast, correction, and in verbless replies. A sailor asked who will take the night watch may answer simply *vaelõ* ("I sail / I take it"), but if another sailor has been assumed responsible, the answer becomes *nõ vaelõ* — "I do."
+
+| Person | Independent pronoun | Notes |
+|--------|---------------------|-------|
+| 1sg | *nõ* | I, me; nasal vowel preserves older final *-om* |
+| 2sg | *es* | you; cognate with the second-person verb suffix |
+| 3sg masculine | *lo* | he, it (masculine nouns) |
+| 3sg feminine | *la* | she, it (feminine nouns) |
+| 1pl | *nõn* | we, us |
+| 2pl | *esen* | you all |
+| 3pl masculine | *lon* | they (masculine/mixed ordinary agreement) |
+| 3pl feminine | *lan* | they (feminine agreement) |
+
+Possession uses the genitive suffix on the pronoun:
+
+*nõel barr* = my ship
+*esel liñ* = your language
+*lael brizel* = her shelter; the shelter belonging to a feminine noun/person
+
+The older island dialect permits the possessive pronoun after the noun (*barr nõel*), especially for inalienable or emotionally charged possession: *noa nõel* means "my return-home" in the sense of a return that must be achieved by me personally. Mainland speakers understand the form but consider it strongly marked.
+
+### Demonstratives and Distance
+
+Bouéni distinguishes distance by navigational relation rather than purely by physical measurement. The language asks where something is in relation to the speaker's vessel, the coast, and the knowable horizon.
+
+| Form | Meaning | Use |
+|------|---------|-----|
+| *ta* | this, this known one | Near the speaker or under shared attention |
+| *se* | that, that visible one | Away from the speaker but visible or identifiable |
+| *ia* | that out there, beyond knowing | Beyond sight, beyond certain reference; substrate-derived |
+| *az-* | outer, beyond, far-side | Prefix in place names and navigational terms |
+
+*Ta lhav* = this marker, the one we are standing beside.
+*Se lhav* = that marker visible from here.
+*Ia lhav* = the marker beyond the fog, the one the route says is there.
+
+This distinction matters in navigation. A Bouéni pilot who says *se* has seen the thing, or at least has a visible bearing on it. A pilot who says *ia* is not admitting ignorance exactly; they are placing the thing in the category of what can be approached but not yet confirmed.
+
+### Questions
+
+Yes-or-no questions use word order unchanged and are marked by intonation. In writing, a question mark is a late Cael habit and is used mostly in school texts and letters to foreigners.
+
+*Tevilẽs?* — "Are you reading the swell?"
+*Nav tevilẽs?* — "Are you not reading the swell?"
+
+Content questions use interrogative words placed where the answer would appear:
+
+| Word | Meaning | Literally / domain |
+|------|---------|--------------------|
+| *shi* | who | person |
+| *ma* | what | thing, event |
+| *ven-ma* | where to | toward-what |
+| *de-ma* | from where | from-what |
+| *kã* | when | tide-time, season-time |
+| *sõ* | why, for what purpose | purpose, intended course |
+| *avẽl-ma* | by which route, along what | path/current/coastline |
+
+*Shi vi-shevel-a?* — "Who gave the warning?"
+*Avẽl-ma vaelẽs?* — "By which route are you sailing?"
+*Sõ nav sulẽs?* — "Why are you not landing?"
+
+Bouéni questions are often phrased as route-questions. A Mittoli official asks "Where are you going?" A Bouéni harbor-master asks *avẽl-ma vaelẽs?* — "Along what are you sailing?" Destination matters, but the route is what can kill you first.
+
+### Time Words
+
+Bouéni verbs mark aspect, not tense. Time is supplied by adverbs, seasonal terms, tide terms, or context. This makes Bouéni narratives sound temporally loose to Mittoli scribes, who prefer every event nailed to a grammatical time. Bouéni speakers consider this a failure to understand weather.
+
+| Word | Meaning |
+|------|---------|
+| *brẽn* | before, earlier tide; also "previously" |
+| *prula* | after, later tide |
+| *kãvel* | dawn-fog, the early grey before sunrise |
+| *ornas* | star-time, night suitable for star navigation |
+| *lenn-kã* | coastal season; safe near-shore season |
+| *serv-kã* | open-ocean season; the period suited for southern voyages |
+| *veldkã* | current-wind season; the coldest, most reliable wind period |
+
+The word *kã* can mean "when" as an interrogative, but in compounds it means a time defined by conditions rather than by a calendar. *Serv-kã* begins when open-ocean wind, current, star visibility, and provisioning align. It does not begin on a fixed date, which has caused trouble for every outside administration that has tried to schedule Bouéni shipping season by decree.
+
+### Evidential Particles
+
+Bouéni does not have a full evidential system like Grassic, but maritime speech uses sentence-final particles to mark the source of navigational knowledge. These are not mandatory in ordinary conversation. At sea, omitting them can sound careless.
+
+| Particle | Meaning | Use |
+|----------|---------|-----|
+| *ya* | seen, directly observed | The speaker has visual confirmation |
+| *vel* | felt in wind/current/body | The speaker infers from physical conditions |
+| *shem* | heard or signaled | Foghorns, shouted warnings, hull-sound, oral report |
+| *lhav* | marked, recorded, confirmed by navigation markers | Charts, tide-poles, Blue Stone marks, established route signs |
+
+*Briñ vi-kova-a të lenn ya.* — "The fog has covered the near-waters; I see it."
+*Veld prul-a vel.* — "The current-wind is turning; I feel it."
+*Serv nav brizel-o lhav.* — "The open ocean gives no shelter; the markers/records confirm it."
+
+The particle *lhav* is formally identical to the substrate word for a standing marker. Whether the particle developed from ordinary navigation-marker usage or preserves an older grammatical category is disputed. Bouéni sailors do not dispute it. They use it when the marked world has spoken.
+
 ## Core Vocabulary
 
 ### The Sea and Its Conditions
@@ -289,6 +387,72 @@ Bouéni distinguishes between sea zones in ways that have no Mittoli equivalents
 **noa** — SUBSTRATE. Home in the sense of return: not a place but the act of returning to it. *Nav vivaelõ noa* = "I have not returned home" (literally: "not / perf-sailed / noa"). *Noa* cannot be used for home as a static location; you cannot "be in noa" — you can only "reach noa" or "not reach noa." The concept the word encodes treats home as a state achieved through return, not a place that exists independently of the returning. Mittoli has no equivalent.
 
 **ia** — SUBSTRATE. There, out there, specifically in the direction of the southern horizon, beyond sight. Not a directional word (Bouéni has those) but a word that combines direction with distance and the condition of being beyond knowledge. "What is *ia*?" is a question that expects no complete answer. "We go *ia*" is a statement about a voyage that acknowledges it leads somewhere that is not fully knowable.
+
+### Kinship and Household
+
+Bouéni kinship terms distinguish shore-household from sea-household. A person's blood family matters, but so does the crew that has carried them through weather. The two systems overlap, and formal introductions often mention both.
+
+**amme** — mother; also the senior woman of a household.
+
+**atto** — father; also the senior man of a household.
+
+**nima** — child, especially a young child still kept ashore during the sailing season. The island dialect uses *nima* for any child who has not yet made a first open-water crossing.
+
+**velnima** — sea-child; a child who has completed the first instructional voyage and may begin formal navigation training.
+
+**shenn** — sibling of the same household, whether by blood or fostering. Bouéni households commonly absorb children of lost sailors; the language does not force a distinction between birth-sibling and storm-sibling unless legal inheritance is being discussed.
+
+**barr-shenn** — ship-sibling; a crewmate who has survived a serious voyage with you. The term carries obligations: shelter in port, testimony in dispute, and first notice to family if a sailor does not return.
+
+**noamar** — return-person; the person who waits for a sailor's return and receives them at shore. This is not necessarily a spouse. A child, sibling, elder, lover, or sworn friend can be one's *noamar*. To have no *noamar* is considered unlucky; to sail without naming one before a long voyage is considered irresponsible.
+
+**teñel** — hearth, indoor fire, the household's protected warmth. Cognate uncertain. In Bouéni thought the hearth is not opposed to the sea; it is what makes leaving the sea meaningful.
+
+**brizel dõm** — shelter-house; a house built to break wind from at least two directions. The phrase is partly architectural and partly moral: a good household provides shelter before anyone has to ask.
+
+### Boats, Work, and Daily Life
+
+**barr** — ship, vessel; grammatically feminine in ordinary speech despite taking some masculine compounds in technical registers. In old island songs every named ship takes feminine agreement without exception.
+
+**barrel** — hull; literally "of the ship" fossilized into a noun. The example appears in grammatical explanations so often that students sometimes forget it was once a productive genitive.
+
+**shem** — sound, signal, audible sign. Related to *shevel* (warning) but broader. A harbor at night is described as "known by shem" — by rope-creak, wave-angle, bell, and sleeping gulls.
+
+**dõm** — house, building, enclosed place. A Mittoli loan, but fully naturalized. Island speakers prefer *teñel* when speaking of home and reserve *dõm* for buildings as structures.
+
+**nill** — narrow, constrained, passable only by care. Survives in *Nilliu* and in technical navigation: *nill-vael* is a narrow water passage with hidden risk.
+
+**sava** — rope; line; obligation. A borrowed word from an unknown source, possibly substrate but phonologically less clear than *bou* or *teva*. *Sava* is used in legal metaphors: a promise is a line tied to a person.
+
+**korr** — net; web; fishing gear. Nets are feminine by agreement, grouped with fog and sea because they conceal and reveal by the same action.
+
+**nosh** — fish in general; edible catch. Individual fish species have specialized names, many of them borrowed through trade.
+
+**velnosh** — cold-current fish, the oil-rich species that follow the Deep River. The Bouéni fishery depends on them; Te Nillium tax records depend on pretending the category is simpler than it is.
+
+**sulmar** — shore-person; someone whose work keeps them primarily on land: boatwright, smokehouse worker, rope-maker, harbor clerk. Not an insult. A ship survives because many people do not sail.
+
+**barran** — crew, literally "ship-plural" in an old collective formation. Modern speakers do not analyze the ending productively, but the word still takes feminine plural agreement in ritual speech when the crew is addressed as an extension of the vessel.
+
+**ornel-kelo** — star-table; a memorized sequence of star bearings used in instruction. Not a physical table. Students recite it in rhythm while pointing with two fingers: one for the star, one for the expected swell.
+
+### Emotions and Social Judgment
+
+Bouéni emotion vocabulary is practical. It often names the outward navigational consequence of an internal state rather than the state itself.
+
+**shev-a** — afraid, literally "gone cold" in the feminine adjectival form when used of a person regardless of their grammatical gender. Fear at sea is treated as a temporary weather condition inside the body.
+
+**grond-noa** — longing for return; homesickness that becomes useful because it keeps a sailor attentive.
+
+**serv teñ** — open-ocean heart; disorientation, the feeling of being without landmarks. Used for grief, exile, politics, and accounts with too many columns.
+
+**belv-liñ** — thick speech; evasive, obscuring, or over-formal language. Bouéni speakers use this term for Mittoli legal correspondence with some frequency.
+
+**lell** — clear enough, usable, navigable. Not "clear" in an absolute sense. A fog may be *lell* if the stars are visible; a person may be *lell* if their intentions are sufficiently legible to work with.
+
+**sava-belv** — obligation-tangled; socially complicated. Said of families with unresolved inheritance, crews with competing duties, and trade agreements written by people who enjoy clauses.
+
+**noa-lell** — ready to return; said when a person has completed the internal part of a journey before the physical return has happened.
 
 ### General Vocabulary
 
@@ -374,6 +538,109 @@ From Proto-Bouéni *bou-én*: *bou* (the cold deep current; the Deep River) + *�
 
 **Vael Bou** (the Deep River, the cold ocean current)  
 *Vael* = sea, the navigated ocean. *Bou* = SUBSTRATE. The cold depths, the current from the deep south. "The sea-of-the-deep" or more naturally "the deep-current sea." The Bouéni name for the current that defines their climate and their fishery. Azhoran oceanographers call it the Southern Draw. Bouéni sailors call it *Të Bou* in informal speech — dropping the *vael* and using just the substrate word, with the article: "the deep one."
+
+## Names and Address
+
+Bouéni personal names are built in layers. The system is less elaborate than Moreshi naming and less administratively tidy than Mittoli naming. It answers the questions Bouéni communities consider most important: who received you, who waits for you, what sea has tested you, and what work you are trusted to do.
+
+### The Given Name
+
+Children receive a shore-name shortly after birth, usually from a household elder. These names are short and often draw from weather, shelter, and near-shore vocabulary:
+
+- *Lell* — clear enough, navigable
+- *Briña* — fog, feminine form used as a personal name
+- *Kelo* — the southern star; more common in Azner Island families
+- *Teñel* — hearth, protected warmth
+- *Nima* — child; usually given only after an illness survived in infancy
+- *Sava* — rope, line, obligation
+- *Belu* — blue-grey, the color of deep water and the Blue Stones
+
+The given name is used inside the household and by childhood companions. In formal adult contexts it is rarely sufficient by itself; an adult known only by a childhood name is either very beloved, very young, or being deliberately diminished.
+
+### The Sea-Name
+
+After a first open-water voyage, a young person may receive a sea-name. This is not automatic. The name is given only if the voyage produced a quality worth naming: steadiness in fog, attention to rope-work, a calm hand during sudden weather, a mistake survived and remembered correctly.
+
+Sea-names are compounds:
+
+- *Briñmar* — fog-navigator; a title as well as a name
+- *Veldnõ* — "I of the current-wind"; one who reads cold wind well
+- *Shemlell* — clear-signal; one whose warnings are trusted
+- *Noavael* — return-sailer; one who brings crews home
+- *Korrsava* — net-line; one skilled in fishery work and obligation-keeping
+
+The person does not choose the sea-name. A name chosen by oneself is called *belv-liñ* — thick speech — and is assumed to be concealing something.
+
+### The Noamar Link
+
+Formal introductions may include the *noamar*, the person who receives one's return:
+
+*Lell Noavael, noamar Amme Sava* — "Lell Noavael, whose return-person is Mother Sava."
+
+This is not a marital formula. It is a public statement of social anchoring. A person may change their *noamar* after marriage, after apprenticeship, after the death of an elder, or after a serious estrangement. Changing the *noamar* without public acknowledgment is considered more socially serious than changing a residence.
+
+### Address and Politeness
+
+Bouéni politeness is not built around rank so much as around competence and situational authority. On land, an elder may be addressed as *shayx* or *vael-shaen*. At sea, the person who currently understands the weather best receives the grammar of command regardless of age.
+
+The polite second-person form is simply the plural *esen*. It is used to elders, harbor officials, skilled navigators, and anyone being addressed during a formal disagreement. It is also used to the sea in certain prayers and curses, because one does not casually *es* the thing that can kill everyone in the boat.
+
+Direct commands are acceptable at sea and rude on shore unless urgency is clear. A shore request usually adds *lell*:
+
+*Sava ven nõ, lell* — "The rope to me, if clear / if workable."
+At sea the same request becomes simply: *Sava ven nõ.* If the rope is needed, politeness has already been supplied by reality.
+
+## Registers
+
+Bouéni has no formal class register comparable to Pyrosi and no ritual language as separate as Moreshi Qadimuur. It does, however, have several recognizable styles of speech.
+
+**Harbor Speech** — quick, elliptical, full of nouns and directionals. Used in markets, docks, smokehouses, and weather-facing work. It drops pronouns aggressively and often omits articles when the referent is physically present.
+
+**House Speech** — slower, more article-heavy, full of kinship and obligation terms. This is the register in which disputes are softened before they become public. A sentence that would be an accusation in Harbor Speech can become a repairable concern in House Speech simply by adding possession and *lell*.
+
+**Fog Speech** — the restricted command style used during low visibility. Short clauses, evidential particles, repeated bearings, no jokes. Fog Speech avoids personal names unless someone is in danger; names carry too much emotional force and can pull attention away from the shared task.
+
+**Stone Speech** — the formulaic language used near the Blue Stones and old navigation markers. It preserves archaic word order in a few fixed phrases and uses feminine agreement for stones that ordinarily take masculine agreement. Outside scholars have tried to collect Stone Speech as a coherent ritual register. Bouéni informants tend to provide three phrases, stop, and say the rest is "for when the stones are there."
+
+## Proverbs and Sayings
+
+Bouéni sayings are usually practical on the surface and metaphysical only after they have already been useful. A proverb that cannot help someone mend a rope, read weather, or survive embarrassment is unlikely to last.
+
+---
+
+*Briñ nav shev-a; briñ lell-a.*
+"Fog is not cold; fog is usable."
+Said to frightened apprentices. The point is not that fog is safe. The point is that fear names the wrong property.
+
+---
+
+*Të sava vi-sẽn-a brẽn të barr vi-sẽn-a.*
+"The rope knew before the ship knew."
+Small signs reveal large failures first. Used for rigging, households, and politics.
+
+---
+
+*Ia nav serv; ia ia.*
+"Out there is not open ocean; out there is out there."
+Do not reduce the unknown to a familiar category. Often quoted in arguments about southern voyages and in scholarly debates about the substrate.
+
+---
+
+*Noa nav dõm; noa vi-viña-a.*
+"Home is not a house; home arrives."
+A common return saying. It is spoken at docks more often than inside houses.
+
+---
+
+*Lhav nav liñẽs; es liñẽs ven lhav.*
+"The marker does not speak to you; you speak toward the marker."
+Used to correct overconfident interpretations of old signs. Also said to children who claim certainty too quickly.
+
+---
+
+*Serv teñ, avẽl lenn.*
+"If your heart is open-ocean, follow the near-shore."
+When disoriented, choose the route with landmarks. Said as advice for grief, drunkenness, navigation, and accounts.
 
 ## Sample Texts
 
