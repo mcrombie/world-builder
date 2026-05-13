@@ -263,6 +263,52 @@ Adjectives precede the noun in Pyrosi (opposite of Mittoli's post-noun position)
 
 The West Pyrosi formal VSO is either a grammatical habit or a philosophical position, and the Pyrosi have declined to distinguish between the two. *Burns — the soil — the memory*: the world is already in motion before any participant is named.
 
+### Particles, Questions, and Evidential Tone
+
+Pyrosi does not use a single question particle equivalent to Mittoli *thael*. Questions are marked by a small set of sentence-final particles, each of which says what kind of answer the speaker believes the relationship can bear. The particle is outside the verb, but it is never socially neutral: a question asked with the wrong particle can feel as wrong as a verb in the wrong register.
+
+| Particle | Usual register | Function | Example |
+|---|---|---|---|
+| *-kho* | Intimate/Familiar | ordinary information question; answer expected directly | *Sol-milleth llos-ov-kho?* — "Do you see the ash?" |
+| *-va* | Social | invitation to answer; leaves room for refusal or elaboration | *Vaer-tosseth kěl-es-va?* — "Does the water flow well for you?" |
+| *-ka* | Elevated | petition, formal inquiry, or question to the land/dead | *Kael-lleth-tossoss lleth-es-ka?* — "Is the ground's fire latent?" |
+| *-neth* | Intimate | checking for shared understanding; often translated "you know?" | *Neth-vel-millom-neth.* — "I saw it, you know." |
+| *-oss?* | Formal written | archival uncertainty marker; "is this record complete?" | Used in ledgers, land records, and inscriptions where a question concerns evidence rather than a person |
+
+West Pyrosi also distinguishes **knowledge source** by optional clitic. These are not full evidentials in the Moreshi scholarly sense, because ordinary speech can omit them, but careful speakers use them when the source of a statement matters.
+
+| Clitic | Source of knowledge | Typical use |
+|---|---|---|
+| *=mill* | seen directly | witness testimony, weather reports, technical observation |
+| *=ell* | heard from a named speaker | reports, messages, transmitted speech |
+| *=llyr* | known through embodied memory or repeated practice | farming, craft, kinship obligations, ritual knowledge |
+| *=oss* | fixed in record; written or carved | legal claims, boundary statements, archive references |
+| *=lleth* | inferred from what is latent in the situation | crop forecasts, social inevitabilities, volcanic signs |
+
+*Vel-vaer-gallom=mill* means "I completed the welcome; I saw/was there for it." *Lleth-kael-khothoss=lleth* means "the ridge will divide this [one can read it in the ground]." The clitic does not change truth value. It tells the listener what kind of truth the speaker is offering: seen, heard, practiced, recorded, or read from latency.
+
+Taler uses these clitics more often than West Pyrosi and treats them as close to obligatory in formal narrative. East Pyrosi has kept only *=mill* and *=ell*, usually shortened to *-mi* and *-e*, because trade language cares very much whether something was seen or merely reported and much less about whether it was latent in the soil.
+
+### Derivation and Compounding
+
+Pyrosi word formation is transparent enough that speakers coin compounds readily, but not everything can be compounded with everything else. The first root normally supplies the field of meaning; the second root fixes the word's social or material status.
+
+Common derivational endings:
+
+| Ending | Function | Example |
+|---|---|---|
+| *-an* | person associated with a root; Class I by default | *ossyan* — witness; *taleran* — fire-keeper as a person |
+| *-van* | fixed collective, ground, or institutional body; Class II | *llethvan* — soil's willingness; *kělvanoss* — water-fixed people |
+| *-yr* | infinitive; action named as speakable | *ellyr* — to speak; *ossyr* — to mark |
+| *-gall* | completed transition or socially recognized crossing | *vaer-gall*, *neth-gall*, *lossyr-gall* |
+| *-rath* | burden, weight, obligation | *solrath*, *ell-solrath* |
+| *-ran* | addressed one, the person positioned by speech | *kael-ran* |
+| *-molis* | upland district, high settled ground | *Talermolis* |
+
+Compounds involving register roots are never casual. A thing named with *neth-*, *sol-*, *vaer-*, or *kael-* is being placed inside a social structure. *Vaer-kěl* is not simply "guest-water"; it is water offered as part of welcome, and refusing it refuses more than thirst. *Sol-oss* is a mark made between peers, valid because neither party stands above the other. *Kael-ell* is elevated speech, used for a formal address to land, elder, or dead, and cannot be used for ordinary flattery without sounding grotesque.
+
+The most productive material compounds are built on *tal* (active fire), *pyross* (ash/residue), *llos* (volcanic ash), *lleth* (latent soil), *kěl* (flow), *oss* (mark/permanence), and *llyr* (embodied memory). These roots can shift the class of a word. A moving stream of melted rock is *tal-kěl* (Class I); the cooled channel it leaves is *pyross-khothoss* (Class II). The same event has two nouns because the event has two lives: one while it moves, one after it remains.
+
 ---
 
 ## Core Vocabulary
@@ -353,6 +399,26 @@ Pyrosi has more words for the structure of social relationships than for most ot
 | *ell-solrath* | II | speech-debt; obligation created by imprecision | *ell* (speech) + *solrath*. A broader concept: anything you have said in the wrong register, said incompletely, or not said when it was needed. The obligation that attaches to language used incorrectly |
 | *kael-ran* | I | the elevated-one; whoever you address in *kael-* | *kael* (elevated register) + *-ran* (the addressed one). Not a permanent title. Whoever you are currently addressing in *kael-* is your *kael-ran* in that moment — whether elder, the land, or the dead |
 | *ossyan* | I | a witness to something permanent | *oss-* (to mark, to cut into permanence) + *-an* (person). One present at an *oss-yr* moment — when something becomes official, named, or permanently recorded. The *ossyan* is mentioned in legal formulae: a transaction witnessed by fewer than two *ossyan* is considered *vel-gall* ("still crossing," not yet complete) |
+
+### Kinship, Households, and Names
+
+Pyrosi kinship terms describe register and dwelling before blood. This causes mistranslation in Mittoli records, where several distinct Pyrosi relationships are flattened into "relative," "guest," or "household member."
+
+| Pyrosi | Class | Meaning | Notes |
+|---|---|---|---|
+| *nethvan* | II | the home circle as an institution | Not the building. The set of people who can use *neth-* without negotiation |
+| *nethan* | I | one received into the home circle | A spouse, adopted child, sworn companion, or elder permanently taken in |
+| *vaerran* | I | guest under active welcome | From *vaer-* + *-ran*. A *vaerran* is not yet *solyan* and not simply a stranger |
+| *homoss* | II | house-site; dwelling cluster | Cognate with Mittoli *homoss*, but Pyrosi treats it as fixed-place rather than settlement in motion |
+| *homethan* | I | one who dwells here temporarily | A lodger, seasonal worker, visiting kin, or student |
+| *llossan* | I | ash-kin; those bound by a shared event | People who became socially connected because they witnessed or survived the same irreversible event |
+| *ell-neth* | II | household speech; private language of a home | The shortened, elliptical speech used by those who share routines deeply enough not to finish sentences |
+| *taler* | I | fire-keeper; ritual maintainer | Also the root of Taler identity. In West Pyrosi usage a role; in Talermolis an ethnic and linguistic self-description |
+| *gall-ell* | II | crossing-name; name taken after a major life transition | Given after marriage, adoption, craft initiation, long return, or another completed crossing |
+
+Personal naming in West Pyros is layered. A child receives a **hearth-name** inside the *nethvan*, usually short and not recorded outside the household. At first public witness, the child receives an **oss-name**, carved or written by an *ossyan* and used in legal records. Later, a person may acquire a **gall-name** after a completed crossing: marriage, adoption, initiation into a craft, return from long absence, or survival of an event that changes what register others use for them.
+
+A single person might therefore be *Talla* at home, *Tallos Voranell Gala-es* in a land record, and *Velkěl* among companions after returning from a flood season. None of these names is more real than the others. Each belongs to a different relationship.
 
 ### Verbs (Roots)
 
@@ -492,6 +558,38 @@ Uses Taler pitch accent (low-pitch *tàl-yr* for "the fire's mark, as it was" ra
 "Fire burns; ash speaks."
 
 The Pyrosi counterpart to the Mittoli *cael novos; nill azhoas* ("Water renews; stone endures"). Where the Mittoli saying distinguishes change from permanence, the Pyrosi saying distinguishes action from record. Every action leaves a readable remainder; ash is not silence, it is a different kind of speaking. Applied practically: that what someone has done will be known; that consequences are already embedded in what has occurred; that the Fire Memory holds what the present has not yet acknowledged.
+
+### Asking the soil before planting
+
+*Kael-lleth-ellom llethvan-in. Kael-milloss=lleth tal-es-ka?*
+
+"I speak [elevated, latent] to the soil's willingness. Does the fire belong in the ground [as latent knowledge]?"
+
+This is not the full planting rite, only the shortened field formula used before ordinary work. The farmer uses *kael-* because the addressee is not a human superior but the soil itself. The evidential clitic *=lleth* marks the question as one to be answered by signs already present: warmth underfoot, water held in the furrow, the smell of ash after rain. A negative answer is not a failed omen. It means the ground is not ready to receive seed yet.
+
+### A household correction
+
+*Neth-milleth-neth. Sol-ellom vaerran-in.*
+
+"You see this, you know. I speak [familiar] to the guest."
+
+The first clause is intimate and incomplete; between household members it is sufficient. The second clause deliberately shifts to Familiar rather than Social. This is a small correction: the speaker is telling someone inside the household that the arriving person has already passed *vaer-gall* and should not be treated as a newly welcomed stranger. In a Mittoli translation the line becomes "Don't be so formal," which is accurate in outcome and poor in grammar.
+
+### East Pyrosi trade speech
+
+*Mi sol-kělom. Tu kěl? Prez vel-gall?*
+
+"I bring water. You flow? Price crossed?"
+
+This is not good West Pyrosi and is not trying to be. East Pyrosi trade speech uses borrowed pronouns, drops noun class marking, reduces evidential *=mill* to *mi*, and lets coastal commercial vocabulary like *prez* sit untouched. A West Pyrosi speaker understands it with the same expression a formal scribe wears when reading a market receipt written in a hurry: the meaning is there, but the language has its sleeves rolled up.
+
+### A naming after return
+
+*Ossyanoss vel-milloss. Sol-vellos. Gall-ell: Velkěl.*
+
+"The witnesses have seen. He has returned [familiar]. Crossing-name: Returning-water."
+
+This is the compact public formula for a *gall-ell* given after long absence. The witnesses are named first because the event must be seen before it can be fixed. *Velkěl* is a plausible return-name for someone who left by a dry road and came back during flood season, or for someone whose return restored a household's flow after a long interruption.
 
 ---
 
