@@ -40,6 +40,7 @@ Azhora's major regions each have their own distinct geography, history, and cult
 - **The Plains** — the great transitional grasslands, home to the continent's oldest peoples
 - **Moroshé Desert** — the arid interior, Mediterranean coasts, ancient ruins, distinct cultures
 - **Iberos Coast** — the eastern seaboard, the island chains, the Iberos Sea maritime world
+- **Ibenale** — the western corridor, coastal plain running SW to NE between forest and sea, terminating at the western mountains
 - **Alezhor** — the gold coast, coastal strip between the western sea and the great southwestern forest, independent city-states
 - **Legemum** — the western peninsula, tin country, no king, the miners' and fishers' guilds
 - **Dinova** — the largest southern peninsula, the Meroshe desert interior, the Kingdom of Marosh, the commercial kingdom of Hama
