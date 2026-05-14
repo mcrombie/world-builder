@@ -1,9 +1,9 @@
 ---
 name: Northern Azhora
 category: region
-tags: [north, cold, maritime, Bay of Lol, Smunders Bay, Ganoss, fishing, trade, hardy]
+tags: [north, cold, maritime, Bay of Lol, Smunders Bay, Ganoss, fishing, trade, hardy, pastoral, livestock]
 status: draft
-related: [Azhora, Mittolo, Bay of Lol, Smunders Bay, Ganoss, Orched Hills]
+related: [Azhora, Mittolo, Bay of Lol, Smunders Bay, Ganoss, Orched Hills, Livestock of Azhora]
 ---
 
 # Northern Azhora
@@ -39,6 +39,8 @@ The northern peoples were raiding cultures before they were trading cultures. Fo
 Since that transition, the north has been an essential part of the Azhoran trading network. Its ports are the first landfall for westward-arriving ships, its fishing fleets range further than any other on the continent, and its shipbuilding tradition — born from necessity — produces vessels that are widely regarded as superior for open-water work.
 
 **The Ganoss Upland Clans** are the interior peoples of the north, distinct from the coastal communities in almost every respect. They are pastoral, moving their herds between lower winter pastures and the high heath in summer. They have their own dialect, their own laws, and a deep suspicion of any authority that tries to govern them from below. The coastal cities of the north have had varying success in incorporating them into administrative frameworks; the current arrangement is best described as a mutual agreement to leave each other alone except during trading seasons.
+
+Their defining herd animal is the Ganoss shag-ox, one of the northern great bovids treated in **Livestock of Azhora**. Shag-oxen are milk, hair, meat, traction, dowry, oath pledge, weather warning, and political fact at once. Coastal tax officers may prefer coin, but the upland clans count serious wealth in winter cows that can stand through sleet and still calve in spring.
 
 ## Language
 

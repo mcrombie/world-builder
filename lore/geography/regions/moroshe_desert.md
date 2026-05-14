@@ -1,9 +1,9 @@
 ---
 name: Moroshé Desert
 category: region
-tags: [desert, arid, south, ancient, Moroshé, trade routes, ruins, Azhora]
+tags: [desert, arid, south, ancient, Moroshé, trade routes, ruins, Azhora, pastoral, livestock]
 status: draft
-related: [Azhora, East Pyros, Iberos Coast, Bouén, The Plains, Nova Homa, Tros]
+related: [Azhora, East Pyros, Iberos Coast, Bouén, The Plains, Nova Homa, Tros, Livestock of Azhora]
 ---
 
 # Moroshé Desert
@@ -43,6 +43,8 @@ The desert cultures that exist now are not the descendants of the ruin-builders 
 ## The Desert Peoples
 
 The Moroshé is inhabited by several distinct peoples with different relationships to the land. The settled communities cluster around the oases and the canyon country. The nomadic and semi-nomadic groups move along routes that have been maintained for so long that they appear in the oldest maps as established roads, though no one built them.
+
+Their most important large herd animal is the Moroshé dustback, the desert-edge buffalo-cattle described in **Livestock of Azhora**. Dustbacks are wealth because they convert thorn, dry basin grass, patient watering, and bad years into milk, calves, hide, traction, and caravan security. An oasis house may keep coin in locked jars, but its political standing is usually measured by how many dustbacks it can move through a dry season without begging water.
 
 The desert languages are related to each other but not to the Mittoli family at all. They represent a completely separate linguistic lineage that predates any contact with the western continent. This fact is of significant interest to linguists and of complete indifference to the desert people, who are aware they speak differently from the westerners and consider this unsurprising.
 

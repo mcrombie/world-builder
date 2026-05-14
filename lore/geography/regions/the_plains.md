@@ -1,9 +1,9 @@
 ---
 name: The Plains
 category: region
-tags: [transition, grassland, nomadic, trade routes, contested, Azhora, border]
+tags: [transition, grassland, nomadic, pastoral, livestock, trade routes, contested, Azhora, border]
 status: draft
-related: [Azhora, Mittolo, East Pyros, Moroshé Desert, Iberos Coast, Ganoss]
+related: [Azhora, Mittolo, East Pyros, Moroshé Desert, Iberos Coast, Ganoss, Livestock of Azhora]
 ---
 
 # The Plains
@@ -25,6 +25,8 @@ Several rivers cross the Plains, draining from the western uplands to the easter
 The Plains have been inhabited since before the historical record, and the peoples who have lived there longest are not the farmers and city-builders of the neighboring regions but the mobile pastoral cultures who have followed the grass and the seasonal water sources in patterns that the fixed civilizations around them have sometimes understood as wandering and which are, in fact, highly organized systems of land use developed over thousands of years.
 
 The Plains herding cultures move along routes that are as well-established as any Mittoli road, governed by a body of customary law concerning grazing rights, water access, and passage that is more sophisticated than it looks to outsiders because it is oral rather than written. The cultures that have attempted to impose fixed land ownership on the Plains have consistently found that the pastoral peoples had already developed workable solutions to every problem those systems were designed to address, and that the imposition created new problems rather than solving old ones.
+
+The central wealth animal of these routes is the plains tallhorn, one of the great buffalo-like bovids treated in detail in **Livestock of Azhora**. Tallhorn herds are not merely food or sale value; they preserve route rights, compensation law, marriage alliances, and the memory of water.
 
 The Plains peoples speak several related languages that form their own family, distinct from Mittoli, Pyrosi, and the desert tongues. The family is called Grassic by outside linguists, a name the Plains peoples find mildly insulting and inaccurate, though they have not converged on an alternative.
 

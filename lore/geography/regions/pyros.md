@@ -1,9 +1,9 @@
 ---
 name: Pyros
 category: region
-tags: [border, volcanic, West Pyros, East Pyros, transition, Azhora, ancient, fire]
+tags: [border, volcanic, West Pyros, East Pyros, transition, Azhora, ancient, fire, agriculture, livestock]
 status: draft
-related: [Azhora, Mittolo, The Plains, Moroshé Desert, Amod, Talermolis, Gala]
+related: [Azhora, Mittolo, The Plains, Moroshé Desert, Amod, Talermolis, Gala, Livestock of Azhora]
 ---
 
 # Pyros
@@ -15,6 +15,8 @@ The word "Pyros" appears in multiple Azhoran language families with similar mean
 ## West Pyros
 
 West Pyros is the greener, wetter, more populated of the two. It sits between the Mittolo forest country to the north and west and the ridge that divides it from its eastern counterpart. The volcanic soil makes it extraordinarily fertile; the hillside terraces of West Pyros, built up over centuries of careful agriculture, are among the most productive agricultural land on the continent per unit area.
+
+The terrace animal of West Pyros is the ashback, a compact volcanic-slope bovid described in **Livestock of Azhora**. Ashbacks are not impressive beside river-horns or tallhorns, but they are sure-footed, manure-rich, and stubborn enough to work ledged fields that would break larger cattle. Pyrosi farmers value them less as spectacle than as proof that a household has enough patience to make steep land answer.
 
 West Pyros has historically been the most contested agricultural zone in Azhora. Mittoli powers have invaded it, held it briefly, and been expelled from it at regular intervals throughout the historical record. The Pyrosi have never been a significant military power, but they have an almost pathological capacity for outlasting occupation — governing their own affairs quietly through any external administration, preserving institutions beneath the surface, and resuming full self-governance the moment pressure releases. Scholars of political history call this the Pyrosi Method and study it with a mixture of admiration and fascination.
 
