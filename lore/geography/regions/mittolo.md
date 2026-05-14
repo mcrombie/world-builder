@@ -1,9 +1,9 @@
 ---
 name: Mittolo
 category: region
-tags: [heartland, forest, temperate, fertile, central, civilization, Azhora, Lizeem, Minora, breadbasket, river-plains, music]
+tags: [heartland, forest, temperate, fertile, central, civilization, Azhora, Lizeem, Minora, breadbasket, river-plains, music, grain, agriculture]
 status: draft
-related: [Azhora, West Pyros, East Pyros, The Plains, Bay of Lol, Ganoss, Orched Hills, Oremindi Mountains, Minora, Iberos Coast, Musical Traditions of Mittolo]
+related: [Azhora, West Pyros, East Pyros, The Plains, Bay of Lol, Ganoss, Orched Hills, Oremindi Mountains, Minora, Iberos Coast, Musical Traditions of Mittolo, Grains of Mittolo]
 ---
 
 # Mittolo
@@ -39,6 +39,8 @@ The name Minora is Standard Mittoli. In older texts and in the speech of the riv
 Below Minora the river becomes many rivers. The main distributaries — there are traditionally counted as seven major branches, though hydrologists note that this count has changed as channels shift and the "major" threshold is not precisely defined — spread across the plain over the course of several hundred miles before reaching the Iberos coast. Each branch has its own name, its own character, and its own chain of riverside settlements. Each branch also has its own hydrological behavior: some are deep and slow, navigable by large vessels for most of the year; some are shallow and fast, crossable in summer but dangerous in the flood season; some have been redirected by human intervention over the centuries to serve irrigation systems that now depend on them entirely.
 
 The flood season is the defining event of the Mithala agricultural year. When the snowmelt off the Oremindi and the spring rains of the upper interior arrive together — which happens most years and is catastrophically combined in some — the Lizeem rises and the branches spread, and the plain between the channels is briefly underwater. This flooding is not purely destructive. It deposits the sediment that has made the plain what it is and keeps the soil at its extraordinary productivity. The Mithala farmers have built their settlements and laid out their fields around the flood's requirements rather than against them. The villages sit on the highest available ground. The grain is planted after the waters recede. The calendar that the river-plain communities use is organized around the flood — its arrival, its peak, its recession — rather than around the astronomical year, and this calendar conflicts with the Caeras-city astronomical calendar in ways that have generated two thousand years of administrative friction.
+
+The grain culture of Mittolo is treated in detail in **Grains of Mittolo**, which distinguishes the major floodplain, terrace, forest-edge, and wetland grains by field ecology and early spring planting behavior. The short version is that Mithala feeds Azhora not because it grows one miraculous crop, but because it grows many grains precisely matched to water: floodwheats on fresh silt, barley on drained terraces, reed-rice in managed shallows, oats in damp forest margins, rye on levees and causeways, and several millets and pseudo-grains that turn bad timing into survival.
 
 ## Climate
 
