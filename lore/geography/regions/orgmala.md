@@ -3,7 +3,7 @@ name: Orgmala
 category: region
 tags: [Orgmala, north, rocky, highland, valleys, raiding, sinister, stronghold, defensible, captives, Ganun, Riesov, Ganoss, Northern Azhora]
 status: draft
-related: [Northern Azhora, Ganun, Riesov, Ganoss, Lond]
+related: [Northern Azhora, Ganun, Riesov, Ganoss, Lond, Witherst]
 ---
 
 # Orgmala
