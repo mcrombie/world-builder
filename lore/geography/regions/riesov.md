@@ -3,7 +3,7 @@ name: Riesov
 category: region
 tags: [Riesov, north, coastal, cold, maritime, seafaring, Skeld, Strendal, Smunders Bay, Ganun, rivalry, fishing, shipping, Northern Azhora]
 status: draft
-related: [Northern Azhora, Ganun, Smunders Bay, Bay of Lol, Ganoss, Lond]
+related: [Northern Azhora, Ganun, Smunders Bay, Bay of Lol, Ganoss, Lond, Orgmala]
 ---
 
 # Riesov

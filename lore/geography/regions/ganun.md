@@ -3,7 +3,7 @@ name: Ganun
 category: region
 tags: [Ganun, north, river, trade, seafaring, fertile, Sond, Ondrath, Smunders Bay, Lond, Orched Hills, commercial, Northern Azhora]
 status: draft
-related: [Northern Azhora, Lond, Smunders Bay, Orched Hills, Ganoss, Bay of Lol, Endevor, Riesov]
+related: [Northern Azhora, Lond, Smunders Bay, Orched Hills, Ganoss, Bay of Lol, Endevor, Riesov, Orgmala]
 ---
 
 # Ganun
