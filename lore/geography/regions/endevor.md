@@ -3,7 +3,7 @@ name: Endevor
 category: region
 tags: [Endevor, north, hilly, pastoral, wool, Acorwood, Bay of Lol, Ganoss, Oremindi, transit, smoke-reading, fell-sheep, Stroven, stone-shelters, Northern Mittoli, gold, silver, mines, barrows, empire, Vornheld, epic, Vel-Eld, renewal, prophecy, Eld-Gold, Veld]
 status: draft
-related: [Northern Azhora, Acorwood, Bay of Lol, Ganoss, Oremindi Mountains, Thalmagar, Livestock of Azhora]
+related: [Northern Azhora, Acorwood, Bay of Lol, Ganoss, Oremindi Mountains, Thalmagar, Lond, Livestock of Azhora]
 ---
 
 # Endevor

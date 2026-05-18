@@ -3,7 +3,7 @@ name: Northern Azhora
 category: region
 tags: [north, cold, maritime, Bay of Lol, Smunders Bay, Ganoss, fishing, trade, hardy, pastoral, livestock]
 status: draft
-related: [Azhora, Mittolo, Bay of Lol, Smunders Bay, Ganoss, Orched Hills, Endevor, Livestock of Azhora]
+related: [Azhora, Mittolo, Bay of Lol, Smunders Bay, Ganoss, Orched Hills, Endevor, Lond, Livestock of Azhora]
 ---
 
 # Northern Azhora
