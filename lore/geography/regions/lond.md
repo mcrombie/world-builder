@@ -3,7 +3,7 @@ name: Lond
 category: region
 tags: [Lond, north, highland plain, fertile, agriculture, grain, Stonefist, fortress, strategic, breadbasket, Northern Azhora, Ganoss, Bay of Lol, Smunders Bay]
 status: draft
-related: [Northern Azhora, Endevor, Ganoss, Bay of Lol, Smunders Bay, Acorwood, Orched Hills]
+related: [Northern Azhora, Endevor, Ganoss, Bay of Lol, Smunders Bay, Acorwood, Orched Hills, Ganun]
 ---
 
 # Lond
