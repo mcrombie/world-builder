@@ -3,7 +3,7 @@ name: Nonoth
 category: region
 tags: [Nonoth, north, rivers, Ond, fertile, loyal, Stonefist, vassal, Northern Azhora, Gorgi, Endevor, Lond]
 status: draft
-related: [Northern Azhora, Lond, Endevor, Witherst, Ganoss, Orgmala, Ganun]
+related: [Northern Azhora, Lond, Endevor, Witherst, Ganoss, Orgmala, Ganun, Orsa]
 ---
 
 # Nonoth

@@ -3,7 +3,7 @@ name: Witherst
 category: region
 tags: [Witherst, White Hills, north, coastal, cold, wind, extreme, arctic, amber, marine, Gorgi Mountains, Northern Azhora, hospitality, isolated]
 status: draft
-related: [Northern Azhora, Lond, Orgmala, Ganoss, Gorgi Mountains]
+related: [Northern Azhora, Lond, Orgmala, Ganoss, Gorgi Mountains, Orsa]
 ---
 
 # Witherst
