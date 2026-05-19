@@ -443,3 +443,250 @@ The western old-growth of Azhora is genuinely old. Core samples from the largest
 The *-ael* infinitive suffix deserves separate comment. It contains the root *ael* (speech, saying), which means that grammatically, Mittoli treats infinitives as "the expression of the action" — the act named rather than performed. This is not merely linguistic coincidence; it reflects a philosophical position encoded into the language itself. An action that has not been performed is still, in some sense, a word. The Mittoli verb for "to promise" is *aelael* — "to speak a speaking" — which captures this exactly: a promise is an action that exists first as language and may or may not become deed.
 
 This feature does not survive in Northern Mittoli, where infinitives have reduced to *-al*. Whether something was lost or merely simplified depends on who you ask.
+
+---
+
+## Time and the Calendar
+
+The Mittoli language carries two calendrical systems simultaneously, and this has been a source of administrative friction for approximately two thousand years.
+
+The **astronomical calendar** (*ganel-elom-oss*, "the counting of the sky-days") divides the year into twelve months of thirty days, with five intercalary days at year's end called *the Silence Days* (*Dre-elomoss*, "the days of stopping") — six in years requiring correction. It is the system of the Caeras Valley academies, formal city-state contracts, and all Academy correspondence. It gives every day a fixed position.
+
+The **flood calendar** (*cael-elom-oss*, "the counting of the river-days") used across the Mithala plains and throughout the Mittolo interior does not divide the year into fixed units. It names four seasons by the Lizeem River's annual behavior:
+
+| Name | Literal meaning | Character |
+|---|---|---|
+| *Aezhaelith* | "river-storm season" | The spring flood — beginning when first Oremindi snowmelt reaches the plains, ending when the Lizeem returns to its banks |
+| *Vorcael* | "north-water" | The high warm months after the flood recedes; the plains drying, the planting window open |
+| *Drethae* | "the descent" | Late summer into autumn, as the river falls and harvests come in |
+| *Nilcaelith* | "the dry river" | Low-water winter; the Lizeem navigable only in its central channel; the quiet season |
+
+The flood calendar does not assign numbered days within seasons. Interior speakers say the season is *early*, *deep*, or *turning*, and expect interlocutors to know what the river is doing. Contracts between Mithala communities specify season and character — "before the *turning Drethae*" — without fixed dates.
+
+This creates the well-documented problem: when a Caeras city and a Mithala community sign a contract, they must negotiate which calendar the deadline runs on. The Academy has developed a standard conversion table. Mithala communities tend to point out that the table assumes the flood arrives on schedule, which it does not.
+
+A fixed phrase in formal Caeras Valley correspondence, recorded for centuries:
+
+> *Cael nilazhos elom.*
+> — "The river does not stay for a day."
+
+Deployed by administrators explaining why a Mithala delivery is late. Not a complaint about the Mithala communities; an admission that the river is not subordinate to the calendar.
+
+### Time Vocabulary
+
+| Mittoli | Class | Meaning | Notes |
+|---|---|---|---|
+| *elom* | IV | a day; one turning | From *el* (one) + *-om* (turning suffix); cosmological origin |
+| *elomoss* | IV (pl.) | days; a period of days | |
+| *mittom* | IV | midpoint; noon or midnight | Context determines which; a common source of written ambiguity |
+| *sael-talael* | IV | sunset; "the western burning" | Poetic but in everyday use |
+| *vorn-aezh* | IV | the northern wind; autumn's arrival | When cold air comes off the mountains; used loosely for the turn of the season |
+| *dae-milael* | IV | "two seeings" | The full arc of a waking day; dawn and dusk as boundary markers |
+| *velonelom* | IV | a ten-day | River-traders' working unit; from *velon* (ten) + *elom* (day) |
+| *elom-tal* | IV | a working day | Distinguished from a rest or feast day by the lit forge or hearth |
+| *azhon-elom* | IV | "an ancient day" | Idiom: the unspecified distant past |
+
+---
+
+## Trade, Commerce, and Exchange
+
+Standard Mittoli is the trade language of Azhora in part because Mittolo's river system makes it the natural interior exchange hub. The commercial vocabulary reflects this.
+
+| Mittoli | Class | Meaning | Notes |
+|---|---|---|---|
+| *galoss* | III | a crossing, a ford; a deal, an agreement | From *gal* (to cross) — a trade is a crossing of goods |
+| *galael* | IV | to trade, to exchange | Same root as "to ford a river"; the metaphor is structural |
+| *galeth* | I | a trader, a merchant | Person suffix on *gal* |
+| *velaeloss* | III | price, agreed value | Lit. "the stated-flow"; what has been spoken aloud for the exchange |
+| *milaeth* | III | a measured weight | From *mil* (to see) + *-aeth* (measurement suffix); "what is seen to be the amount" |
+| *novgal* | III | a renegotiated deal; a new arrangement | *nov* (new) + *gal* (crossing) |
+| *drossgal* | III | a broken deal; bad faith exchange | *dross* (broken) + *gal* (crossing) |
+| *azhgal* | III | a standing arrangement; a long-term agreement | *azh* (enduring) + *gal* (crossing) |
+| *homgal* | II | a market, a trading post | *hom* (dwelling) + *gal* (crossing); "where crossings happen" |
+| *caelgal* | IV | goods in transit; the movement of cargo through a hub | *cael* (flow) + *gal* (cross) |
+| *veth-galoss* | III | a held agreement; a guarantee | *veth* (hold) + *galoss* (deal) |
+
+The highest commercial compliment is *galoss azhael* — "an enduring crossing" — meaning a deal kept well enough to establish reputation. Its opposite, *galoss drethael* ("a descending crossing"), describes a deal that deteriorated from its original terms, whether through bad faith or changed circumstances. Both phrases use the verb as an adjective, a grammatical construction that is archaic in Standard but preserved because it carries weight the newer vocabulary does not.
+
+### The Merchant Mittoli Register
+
+River-trade communities between Minora and Nylon developed a compressed variety of Standard Mittoli that sits at the edge of being a separate dialect. It drops most case marking in favor of strict word order, replaces the SOV/SVO alternation with fixed VSO (verb first, subject, object), and uses gesture to replace several particles. A Standard Mittoli speaker can follow most of it but will miss roughly one exchange in five. River-traders consider this adequate.
+
+Key features:
+
+- **Case compression:** Only nominative and genitive are reliably marked. Accusative is indicated by position. Dative and locative collapse into a single form with context disambiguation.
+- **VSO order:** *Milos voran homatham* — "Sees [the] person [the] house" — signals transaction-in-progress. The verb-first position functions as a transaction-start marker. The SOV/SVO register alternation of Standard is absent.
+- **Number handling:** Numbers above twenty are stated as estimates until final accounting. A merchant who gives a precise number above fifty in conversation is either unusually formal or working from a written record.
+- **The *gal* particle:** Placed between two nouns to mean "exchange involving both." *Grain gal gold* requires no verb. This is not Standard Mittoli grammar.
+
+The Caeras Valley Academy does not consider Merchant Mittoli a dialect. River-traders do not care.
+
+---
+
+## Emotion and Inner States
+
+Mittoli is sometimes described by speakers of other Azhoran languages as "a language without a word for homesickness." This is accurate. What Mittoli has instead is three words that collectively cover the same territory but refuse to treat it as a single thing.
+
+*Azhelm* — the feeling of a place that is correctly yours. Not nostalgia; not longing; the present-tense recognition that the place you are in corresponds to you and you to it. Used of a home region, but also of any place that produces this recognition unexpectedly. The feeling is treated as informational: if *azhelm* occurs somewhere unfamiliar, that is worth attending to.
+
+*Nilhom* — the absence of belonging; the felt awareness that one is somewhere that does not correspond to one. Neutral in tone; a phenomenological report, not a complaint. A speaker asked how they are finding a new city may say *"milom nilhom"* ("I find no-belonging") without this implying fault in either the speaker or the city.
+
+*Drelazh* — the state of moving away from the place that is yours, knowing it. The departure-awareness. It names the interval between home and not-home. Travelers and merchants use it matter-of-factly. In oral poetry it carries considerable weight. A speaker who left Mittolo for Pyros and was asked how they felt would likely say:
+
+> *Vemilom drelazh, aemilom nilhom Pyros-el, azhom azhelm Mittoloel.*
+> "I felt *drelazh* [upon departing], I expect *nilhom* in Pyros, I endure *azhelm* for Mittolo."
+
+The three words are doing different work that a single "homesickness" cannot.
+
+Additional emotion vocabulary:
+
+| Mittoli | Meaning | Notes |
+|---|---|---|
+| *talaen* | passion; a burning feeling | From *tal* (fire); neither positive nor negative in itself |
+| *niltalos* | emotional exhaustion; the fire gone out | *nil-* (nothing) + *tal* (fire); "the fire that is nothing" |
+| *milvethos* | vigilance; watchful sustained care | From *mil-veth* (see-hold compound) |
+| *caelom* | ease; the feeling of moving correctly | From *cael* (flow); applied to skilled performance, smooth negotiation, travel going well |
+| *drossae* | grief; the rupture-feeling | From *dross* (broken); grief is specifically a breaking, not an absence |
+| *novael-milos* | wonder; the feeling of seeing something newly | An archaic compound most speakers use without knowing its parts |
+| *ganel-azhom* | serenity; the holding of a high place | *ganel* (height) + *azh* (endure); in popular imagination associated with the Sevronese Verath |
+
+---
+
+## Proverbs and Idiomatic Expressions
+
+The Mittoli proverbial tradition circulates across all dialects in recognizable forms. Northern Mittoli tends to compress proverbs; Hill Mittoli sometimes preserves archaic forms that Standard has simplified.
+
+### River Proverbs
+
+> *Cael novos; nill azhoas.*
+> "Water renews; stone endures."
+> The foundational Mittoli dualism. Know which you are dealing with.
+
+> *Caelith nilveth-ael milaeross.*
+> "A river holds nothing that was seen to fall in."
+> Said of secrets shared with too many people, of promises to unreliable parties, and of rivers after floods.
+
+> *Galael caelith drossith; galael milom orchan.*
+> "I ford the broken river; I see the ground."
+> You crossed something difficult and came through with knowledge you did not have before. Said after a hard negotiation or a crisis that taught something.
+
+> *Cael azhael thael milom?*
+> "Does the enduring flow see me?"
+> A river-prayer before a difficult crossing. Grammatically a question; functionally an act of acknowledgment. Used also as an idiom for standing before something much larger than yourself and formally noting its presence.
+
+### Forest Proverbs
+
+> *Veloss nilmilom voran-el; voran nilmilom veloss-el.*
+> "The forest does not see the person in it; the person does not see the forest they are in."
+> Applied to people who mistake familiarity for understanding, and to people who do not realize where they are. Forest Mittoli speakers use the second half more than the first.
+
+> *Nvaelleth azhael.*
+> "The standing dead endures."
+> The substrate word *nvaelleth* (a dead tree still standing, still serving) gives this its weight. In Standard Mittoli the saying is a metaphor; in Forest Mittoli it is a description first.
+
+### Agricultural and Seasonal Proverbs
+
+> *Aezhaelith nov, Nilcaelith azh.*
+> "The flood renews; the low-water endures."
+> The year-proverb. Said at turning points — a new season, a new arrangement, a crisis resolved.
+
+> *Orchan milom ael; caelom ael orchan.*
+> "The soil sees what is spoken; the spoken flows through the soil."
+> Said of the agricultural practice of naming what you plant — speaking the grain's name aloud during sowing. Passes into idiom for any situation where naming something carefully makes a difference.
+
+> *Ae-novael homatham voran dross; ae-nilael homatham voran vaer.*
+> "A bad person intends to renew their house; a good person intends not to leave it."
+> The prospective aspect (*ae-*) carries the weight — this is about intention, not completion. Used in judgments of character.
+
+### Proverbs of Presence and Departure
+
+> *Milom drossae — nilazhom.*
+> "I see the grief — I will not leave."
+> A statement of presence, not consolation. The force is in *nilazhael* (to cease-not-remaining — to stay): you are choosing to be the thing that does not depart. Used between close friends at moments of loss.
+
+> *Niltalos azhom.*
+> "The cold fire endures."
+> Sustained quiet determination — the person who is not loud about their purpose but continues regardless. Can be compliment or warning.
+
+### Proverbs with No Agreed Meaning
+
+Mittoli scholarship recognizes several proverbs in wide circulation that speakers explain differently when asked. These are considered linguistically interesting.
+
+> *Bay of Lol milom Lol.*
+> "The Bay of Lol sees the Lol."
+> The word *Lol* appears nowhere in Mittoli except as a place name with no etymology. The proverb is grammatically complete but semantically opaque, or alternatively has a meaning fully contained in the name. Scholars who have asked native speakers what it means are told: "Exactly that."
+
+> *Vornaethoss drelaethos nilazhael.*
+> "The northern things' descending did not remain."
+> Applied variously to: things that came from the north and left; bad influences that passed; invaders who withdrew; winter; the First Silence (disputed). The archaic dual genitive construction (*vornaethoss*) preserved from Hill Mittoli suggests the proverb is very old. Its original context is unrecoverable.
+
+---
+
+## The Writing System in Practice
+
+The Cael Script as described is the formal literary standard. Several variants exist in practical use.
+
+**The Merchants' Compact:** River-traders and market scribes developed a cursive form of Cael Script that reduces most multi-stroke characters to two strokes, eliminates optional diacritics, and uses approximately forty logographic shorthand marks (*galmarks*) for common commercial terms, quantities, and the most-traded goods. The Merchants' Compact is technically Standard Mittoli encoded differently, but its galmarks are opaque to readers without commercial training. An Academy scholar can read Merchants' Compact phonetically but will miss every galmark — which typically contain the most relevant information.
+
+**The Stone Script:** Monument inscriptions in pre-standard Mittoli cities use a formally identical alphabet but in angular carved forms rather than rounded cursive. Some Stone Script inscriptions include characters not present in current Cael Script, representing sounds that Standard Mittoli no longer uses. Philologists have reconstructed four of these sounds; three remain uncertain.
+
+**The River-Mark system:** Not an alphabet. Approximately two hundred marks traditionally carved or painted on significant navigational points along the Lizeem and its tributaries — rocks at fords, tree-roots near dangerous currents, the edges of established camps. River-marks communicate specific navigational and seasonal information (flood markers, low-water routes, camp quality, last-known hazard) through a symbol vocabulary that does not correspond to the sounds of any language. They are maintained by the river-trading communities. Scholars who have attempted to describe River-marks as a language have been corrected by river-traders, who describe them as practical information.
+
+---
+
+## Sample Texts (Extended)
+
+### A River-Trader's Dawn Exchange (Merchant Mittoli)
+
+> *Milos cael?*
+> *Vemilos. Caelom.*
+> *Galael vorn-el?*
+> *Nilgalael. Dross.*
+>
+> Lit.:
+> "Does [the] river flow?"
+> "It flowed. [It's] flowing well."
+> "Trade [going] north?"
+> "No trade. [Things are] broken."
+
+Compressed VSO Merchant Mittoli, case-dropped, with gesture supplementing the missing particles. A Standard Mittoli speaker can follow it, but the pace is wrong and the professional shorthand is invisible. Offered here as a calibration point.
+
+---
+
+### From Oral Tradition: *The First Departure* (Standard Mittoli, ceremonial register)
+
+The following is the opening of the First Silence oral account as preserved in the Mithala valley tradition. It is performed, not read; the text here is a transcription. In performance, the formal SOV is maintained throughout, and gemination is sustained across sentence boundaries — a prosodic feature the written text cannot represent.
+
+> *Voranoss azhonor Mithala-el homael voranoss drossael.*
+> *Voranoss nilloss-ae miloss dae-elomoss; nilmiloss.*
+> *Aezhaelith caelos; nilcaelos; nill azhoas.*
+>
+> "The ancient people in Mithala dwelt, [and] the people became broken."
+> "The people of the mountains were seen [for] two days; [then] were seen no more."
+> "The flood flowed; the dry-river flowed; stone endured."
+
+The phrase *voranoss drossael* ("the people became broken") is the ceremonial term for whatever happened in the First Silence. It does not say "left," or "died," or "were destroyed." The root *dross* (broken) applied to the animate plural suggests something worse than departure and more passive than destruction — the people did not go; they came apart. The audience understands that this is not an explanation.
+
+The final line is the proverb *Cael novos; nill azhoas* in its performative form, past-tensed, with *caelos* (the water-flow, historical) and *nilcaelos* (the dry-river-flow, historical) tracing the river's full annual cycle before the unchanged *nill azhoas* closes everything. The message: time passed in both its aspects, the river did what rivers do, stone was still there.
+
+---
+
+### Marginal Note (Hill Mittoli, from a land record)
+
+From the edge of a land record preserved at the Caeras Valley Academy, attributed to a Hill Mittoli valley community's scribe:
+
+> *Nilazh-oss-ae vel-ith-oss Ganel-el dre-milos.*
+> "[The two of them] having ceased-to-remain [here], the trees of the high place ceased-to-be-seen."
+
+The Academy translation, added in a different hand:
+
+> *Vemiloss Ganel-el.*
+> "They were seen to leave the height."
+
+The Hill scribe noted in a second hand, after the Academy translation:
+
+> *Niloss.*
+
+The word *niloss* is the Hill Mittoli colloquial form of *nil* (nothing, empty) with a completing suffix — a closed nothing, as opposed to an open absence. It indicates that the translation preserved none of what was meant.
+
+The Academy's position is that the translation is correct. The scribe's position is recorded in the document. Both positions remain in the archive.
