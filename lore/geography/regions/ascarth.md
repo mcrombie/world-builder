@@ -3,7 +3,7 @@ name: The Ascarth Peninsula
 category: geography
 tags: [Ascarth, Aevis, Avites, bronze, warrior culture, heroic, peninsula, Iberos Coast, kingdom, city-state]
 status: draft
-related: [Iberos Coast, Nylon, Svaleen, Selemis, Legemum, Azhora, Lizeem River]
+related: [Iberos Coast, Nylon, Svaleen, Selemis, Legemum, Azhora, Lizeem River, Gala]
 ---
 
 # The Ascarth Peninsula
@@ -75,6 +75,8 @@ The southern tip of the peninsula is the part most consistently outside Aevis's 
 ---
 
 ## Among the Coastal Cities
+
+South of the peninsula's base, on the western bank of the Lizeem, lies Gala — a market city and agricultural region that the kings of Aevis control more often than not, through tribute and access arrangements rather than direct garrison. Gala is Ascarth's provisioning ground and its commercial outlet on the mainland side; its grain and oil supplement what the rocky peninsula cannot grow, and its market gives Avite bronze goods a trading floor that reaches the Lizeem's river network. The Galans are not Avites and do not become Avites, which the Avites find either irrelevant or mildly grating depending on the king. What matters strategically is that the arrangements hold. See the Gala entry for detail.
 
 When the Kingdom of Ascarth is strong, the cities of the Iberos coast — Nylon, the Svaleen confederation, Nyross — pay attention. A united Ascarth controls a stretch of coastline that any ship moving north or south must pass, and a king who decides that taxing that passage is a good idea has the military capacity to enforce the decision. This has happened before. It is not remembered fondly in the maritime trading records of the coastal cities.
 

@@ -3,7 +3,7 @@ name: Nylon
 category: geography
 tags: [Nylon, city-state, Iberos Coast, Lizeem River, philosophy, intellectual, culture, independent, walls]
 status: draft
-related: [Iberos Coast, Mittolo, Svaleen, Azhora, Caeras Valley Academy, Lizeem River, Eer]
+related: [Iberos Coast, Mittolo, Svaleen, Azhora, Caeras Valley Academy, Lizeem River, Eer, Gala]
 ---
 
 # Nylon
