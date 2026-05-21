@@ -80,7 +80,7 @@ Minora finds the Flood Council difficult to deal with because there is no single
 
 **Thelom** — Upstream of Ovesos and further removed from Nethereum. The Nethrani have periodic disputes with Thelom over the western upper tributaries where the two river systems' catchments overlap; when Thelom diverts water upstream it affects the Neth's flow into the Nethermere. These disputes are slower-developing and less intense than the Ovesos-Thelom boundary conflict, because changes to the Nethermere's water level are gradual and ambiguous in cause. The Nethrani do track the correlation. They simply cannot prove it to Branch Court standards.
 
-**Errath** — The eastern inner branch, separated from Nethereum by Ovesos. The two polities have no direct relationship. They appear in each other's political calculations only when the inner-branch alliances shift enough that an Errath-Thelom alignment threatens to isolate Ovesos and leave Nethereum with a difficult downstream partner.
+**Caricas** — The eastern inner branch, separated from Nethereum by Ovesos. The two polities have no direct relationship. They appear in each other's political calculations only when the inner-branch alliances shift enough that an Caricas-Thelom alignment threatens to isolate Ovesos and leave Nethereum with a difficult downstream partner.
 
 ---
 

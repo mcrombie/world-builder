@@ -3,7 +3,7 @@ name: Isoruous
 category: geography
 tags: [Isoruous, Isor, Lizeem, inner branches, transit, buffer zone, Minora, pilotage, tolls, five branch countries, contested, subordinate, Fork Council, Measure Houses, highland-lowland transition]
 status: draft
-related: [Nethereum, Ovesos, Minora, Lizeem River, Mittolo, Mithala, Thelom, Errath]
+related: [Nethereum, Ovesos, Minora, Lizeem River, Mittolo, Mithala, Thelom, Caricas]
 ---
 
 # Isoruous
@@ -78,7 +78,7 @@ The dependency comes from the same fact. The route from the inner-branch country
 
 **Nethereum** — limited direct contact. The Nethrani's Flood Council governance is even harder for Isor's River Council to deal with than for Minora's Branch Courts. Nethrani fish and marsh goods reach the Lizeem system through Isoruous's staging grounds at Vel-Oss, where the Upstream Faction maintains a standing relationship with the Flood Council's commercial representatives; the fish trade is old enough to have its own rhythm largely independent of factional politics. When Isoruous and Nethereum appear in the same Branch Court proceeding it is usually because a downstream buyer has created a contractual chain that includes both.
 
-**Thelom and Errath** — further upstream, less directly engaged. Their goods reach Vel-Oss eventually, but through intermediate polities. The Isor River Council treats them as upstream suppliers rather than political relationships.
+**Thelom and Caricas** — further upstream, less directly engaged. Their goods reach Vel-Oss eventually, but through intermediate polities. The Isor River Council treats them as upstream suppliers rather than political relationships.
 
 ---
 
