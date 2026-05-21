@@ -311,6 +311,32 @@ The most productive material compounds are built on *tal* (active fire), *pyross
 
 ---
 
+## Register Acquisition
+
+Infants produce *neth-* prosody before they produce words. The low, murmured, rapid breath-pattern of Intimate register appears in infant vocalization before speech begins. West Pyrosi adults describe recognizing a child's first register not by vocabulary but by prosodic shape: the pace, the breath, the rise and fall. The home circle has already been learned before there are words to speak in it.
+
+The first register error follows shortly: the child carries *neth-* prosody outside the household, addressing a neighbor or market-keeper with the intimate breath of home. Adults respond with *sol-* or *vaer-* depending on their relationship to the household; the child receives a different prosodic return without knowing why. Over months of such encounters, the threshold between the home circle and the outside world becomes felt — not as a rule but as a pattern: here the breath changes.
+
+The *kěl-ell* children's call-and-response songs teach the Social-to-Familiar shift as *llyr* before it becomes named knowledge: the caller uses *vaer-* prosody, the responder uses *sol-*. A child who has sung these forms can navigate a formal introduction before they can say what a register is.
+
+The first formal explanation of the register system as a named four-part structure comes at the first occasion that carries real social stakes — a formal greeting to an elder, a presentation to someone the parents address in *kael-*. The instruction beforehand is brief and occasion-specific. West Pyrosi parents consistently describe this moment not as teaching something new but as *naming what the child already knows*: giving language to a practice already held in the body.
+
+Adolescent errors are well-documented in Galan tradition, because adolescents are simultaneously most aware of the system and least reliably in command of it. The recognizable failure patterns:
+
+*Sol-* deployed too early in a Social exchange reads as an attempt to accelerate familiarity — to claim closeness before it has been offered. It is read not as an error but as an intent; whether that intent is welcome depends on the situation.
+
+*Vaer-* held past the *gall-ell* shift reads as reluctance: not ready, uncertain, or withholding. The other speaker does not repeat the invitation.
+
+*Kael-* to someone who expected *sol-* — because of an existing intimacy the speaker has failed to recognize as operative — re-formalizes what was already open. It reads as deliberate re-establishment of distance. This is not what the adolescent usually means, but is what is heard, and carries *solrath*.
+
+None of these are corrected in the moment. Register errors are absorbed and read, not named. The only correction offered is the return register — the response that indicates what was expected. A speaker paying attention learns from it; one who is not accumulates a pattern of misfires they cannot locate.
+
+The description of adult register competence is consistent across West Pyros: *you stop choosing the register.* The choice has moved below conscious access. Register is produced as a fluent speaker produces inflection — not by applying a held rule but as a direct perception of the social situation from which the register follows without deliberation. A person still consciously selecting is still a learner, regardless of duration of practice. This is both description and instruction: the goal is the state in which it is no longer practice.
+
+Practitioners describe this transition as having a before and an after. Before: you hear words, then notice the register. After: you hear the relationship, and the words come along with it.
+
+---
+
 ## Core Vocabulary
 
 ### Fire, Soil, and Geological Vocabulary
@@ -466,6 +492,32 @@ The deeper origin of twelve is astronomical. The planet Ossian — the fifth and
 *Lossyr* (twelve) shares its form with *lossyr* meaning "that which speaks; the speaking-count." The connection between twelve and speaking is old enough that the Pyrosi no longer explain it analytically — it is simply true in the way that old things are true. The Taler tradition holds that twelve is the number of sounds in the Fire Memory register's core vocabulary and that the number system was built around the register. Academy astronomers find the Ossian explanation more parsimonious; Taler speakers, when shown both, say that the Fire Memory and the sky are speaking the same number, which they consider more informative than either explanation.
 
 Numbers above twelve: *dě-lossyr* = twenty-four; *rell-lossyr* = seventy-two; *lossyr-el* = thirteen.
+
+### Body and Sensation
+
+Body vocabulary in Pyrosi is distributed across elemental and social registers rather than grouped as a separate domain. The body is classified by the same system as the landscape: alive and in motion is Class I; settled or fixed is Class II. The same physical substance shifts class as its state changes.
+
+| Pyrosi | Class | Meaning | Notes |
+|---|---|---|---|
+| *voran-hom* | I | the living body; one's physical person | *voran* (person) + *hom* (dwelling): the body as the place where the *voran* lives rather than what the *voran* is. Class I: it breathes and moves |
+| *llosset* | II | the body after death; the human form at permanent rest | *llos* (volcanic ash) + *-set* (settled, come to rest). Class II: fixed as ash becomes soil. Funerary and Tallyss usage; everyday speech avoids naming the remnant directly and says *vel-llyryr* (returned through the body) instead |
+| *kolvell* | I | breath; the body's exhalation | *kelv* (fumarole) + *ell* (tongue/speech): what the body-fumarole exhales. Class I: breath is in constant motion. The Tallyss word *kholl* may share this root; the equivalence is held in practice without scholarly resolution |
+| *sorren* | I | pain; urgent bodily sensation demanding attention | Class I: pain moves and compels. A pain that has become chronic and fixed becomes *sorros* (Class II): pain's residue in the body, the mark it has left. The class shift names the transition from acute experience to permanent condition |
+| *tossset* | II | fever; heat that has settled in the body | *toss* (to burn) + *-set* (settled). A fever is fire that has lodged rather than flowing. Class II. Recovery is *tossset vel-kělyr*: the fixed heat has returned to moving water |
+| *pyrant-hom* | II | home ground; the place where one's *llyr* is deepest | *pyrant* (living productive soil, Tallyss) + *hom* (dwelling). Not necessarily a birthplace; the place whose ground has made the most of a person. Class II: fixed geography that a person has entered into |
+
+### Color, Light, and Volcanic Landscape
+
+Pyrosi color vocabulary describes what light does to surfaces and what materials show after undergoing something. Color is an event or condition rather than a fixed property.
+
+| Pyrosi | Class | Meaning | Notes |
+|---|---|---|---|
+| *talven* | I | the orange-red of active volcanic heat; fire-color | *tal* (fire) + *-ven* (going): fire in the act of being fire. Class I: currently occurring. Applied to molten rock, the sky before dawn at a particular moment, and (in register-adjacent usage) someone in the grip of strong feeling |
+| *llossel* | II | the grey-white of settled volcanic ash; aftermath-color | *llos* (volcanic ash) + *-ell* (the speaking of): the color ash achieves when it has finished being ash. Class II. Standard color word for grey; also used for grey hair — *llossel voran*, one who has lived through fire and carries its residue |
+| *khovell* | II | the dark grey-black of basalt; cooled-fire-color | *khoth* (volcanic ridge) + *-vell* (cold wind): the color rock wears after cold has settled onto the cooled eruption. Class II. A completed thing wearing the evidence of what happened to it — considered a good color |
+| *kělven* | I | the silver-grey of moving water in flat light; motion-color | *kěl* (flowing water) + *-ven* (going). The color of water in motion under overcast sky. Aesthetic descriptor for tones committed to neither warmth nor coolness — between states, moving |
+| *pyross-hom* | II | the dark red-brown of volcanic soil at planting readiness | *pyross* (ash-residue) + *hom* (dwelling): what ash has become when it is ready to receive. The specific color of *pyrant* soil ready for seed. Class II. Farmers read it at twenty feet; used as a warm red-brown aesthetic standard generally, implying readiness |
+| *llethvan-oss* | II | the slight darkening of ground above volcanic heat | *lleth* (latent-fire-earth) + *-van* + *-oss* (nominative). Tallyss-origin term used in agricultural practice for the visual sign that heat is present below. Not easily explained to those without the farming *llyr*; visible to those who have it |
 
 ---
 
@@ -650,6 +702,46 @@ The Moreshi word for West Pyrosi speakers translates as "the people of the warm 
 
 ---
 
+## On Language Itself
+
+*Ell* (language) is Class II — a fixed, rooted thing, something you inhabit rather than carry. This classification is not structural accident. The Pyrosi tradition holds that language exists independently of its speakers, the way volcanic soil exists independently of what grows in it. Speakers inhabit *ell* as farmers inhabit the *pyrant* layer: what is grown comes from the soil, not from the grower; the soil was there before them and will remain after.
+
+The register system follows directly. If language is Class II — already there, fixed, waiting — then what moves is the relationship between speakers. Register is the living element, Class I, in motion. The word-stock is the fixed element, Class II, the structure you find when you enter. A speaker who knows the vocabulary without knowing the register has hold of the fixed thing without the living thing: the ash correctly identified, the heat unread.
+
+**The concept of *ell-llyr***: language-embodied-memory. The knowledge that inheres in a language itself, independent of any speaker. A practitioner who has mastered a language to the point of no longer operating *on* it is considered to have accessed *ell-llyr* — not what they have learned about the language but what the language itself knows. The Ossic tradition holds this to be a real phenomenon. What the language knows includes things no individual speaker has been explicitly told: patterns visible only to someone sufficiently inside the structure, the way volcanic stratigraphy is legible not to someone who has studied it from outside but to someone who has spent enough time in the layers.
+
+This is the deep account of why Taler practitioners can read inscriptions that have no other living interpreters: not because they have studied older forms carefully (though they have) but because Taler, as the most conservative living form of Proto-Western, carries *ell-llyr* that reaches further back. The language knows more of its own history, and a practitioner inside it can access that depth. West Pyrosi scholars acknowledge this account as consistent with their own tradition. The Caeras Valley Academy considers it philosophically coherent and analytically unavailable, which is not the same position, and the tradition has noticed.
+
+**The distinction between *ellyr* and *pyrossyr*** carries the Pyrosi account of what speech can and cannot do. *Ellyr* (to speak) names ordinary language use. *Pyrossyr* (to burn permanently into record) names speech that has contacted the *ell-llyr* — speech that leaves something indelible, the way volcanic events become permanently legible in volcanic soil. Not all speech *pyrosses*. What determines whether it does is not the content of the words nor the intention of the speaker but the degree of contact between the speaker's *llyr* and the language's *llyr*: whether the speaking comes from the body's knowing or from knowledge held at a more accessible, more disposable depth.
+
+This is why the Tallyss texts, correctly transcribed, are considered inadequate for practice. The transcription preserves the fixed element: the words, the formula, the ash. It does not preserve the fire. A practitioner speaking a Tallyss formula from memory produces *ellyr*; one speaking it from the body — from practice so deep it precedes deliberation — produces *pyrossyr*. The same words. Different fire.
+
+**On metaphor**: In Pyrosi terms, what outside linguistics calls a metaphor is the recognition of shared class between two things — the same movement of the same underlying material under different conditions. *Tal* (fire) and the warmth of *sol-* (familiar register) are not compared to each other; they are recognized as the same kind of thing at different scales. The register system did not borrow fire as a metaphor for social warmth; the tradition holds that the fire-world and the social world are governed by the same logic, and the language developed to reflect both simultaneously. This is either a philosophy of language or a description of the world. The tradition does not find it necessary to distinguish between these.
+
+---
+
+## Pyrosi in the Mouth of Outsiders
+
+The register system does not translate outward, and the most consequential feature of this is that its absence is invisible to those who lack it.
+
+A Mittoli speaker who has learned West Pyrosi vocabulary and grammar — sometimes accurately, sometimes fluently — arrives at the register system with a consistent and predictable error: they treat *kael-* as formal distance and *vaer-* as warmer formality. This is not arbitrary. Mittoli distinguishes formal from informal speech. What it lacks is the West Pyrosi distinction between *honored arrival* and *active welcome*, and in the absence of that distinction, a Mittoli speaker maps their own structure onto what they hear. Elevated register sounds like maximum care; Social register sounds like permission to relax. The conclusion that follows from these premises is consistent and exactly wrong.
+
+The result: from the Mittoli side, West Pyrosi speech is warm when it seems cold and cold when it seems warm. From the West Pyrosi side, a speaker has arrived and is being welcomed, and is performing something that reads as "I acknowledge this as a formal occasion" — the opposite of what welcome-reception looks like. Both sides register a slight texture of wrongness; neither can locate it; neither is impolite enough to name it. The interaction proceeds at an angle from what it should be.
+
+The West Pyrosi description for a speaker who cannot perceive or produce register is *vaer-nil* (social-absent). It is a description rather than a judgment — approximately analogous to being pitch-deaf in a tonal context. A real inability, not a character fault. Most West Pyrosi speakers who work regularly with Mittoli counterparts develop an internal compensation: they assign the Mittoli speaker a register early — usually Social, since most outside speakers are functionally at the guest threshold — and maintain that assignment regardless of what the Mittoli speaker's output does. Galan diplomatic practitioners describe the practice as carrying two conversations simultaneously: the one that is happening, and the one being reconstructed into register-legibility. Not unkind. Tiring in a specific way.
+
+A small number of Mittoli scholars have genuinely acquired the West Pyrosi register system — not learned to produce the marks correctly, but internalized the social landscape the marks describe. Their accounts consistently describe a transition: a point at which the system stopped being a description of how Pyrosi speech worked and became a description of how social reality worked. They report afterward noticing what register conversations in other languages would occupy if those languages had one — a perception the register system does not train you to articulate but which follows naturally from having internalized what it sees.
+
+These scholars are the ones who can be trusted to translate Pyrosi diplomatic correspondence for Mittoli courts. The others can be trusted to represent what the words said.
+
+**The Moreshi experience of Pyrosi** is different in mechanism and similar in outcome. Moreshi speakers who have learned East Pyrosi encounter a register system so vestigial that it creates almost no friction; East Pyrosi reads as simply warm or not warm, which maps tolerably onto Moreshi commercial practice. When Moreshi speakers encounter West Pyrosi, they typically describe a language in which everyone appears to be conducting a ceremony at all times, and the ceremony keeps changing, and no one explains what it is for.
+
+The standard Moreshi solution: treat all West Pyrosi speech as Social register, on the grounds that you are always a guest and the welcome-threshold is the most defensible position in an unfamiliar context. West Pyrosi speakers recognize this immediately and maintain Social register in return, indefinitely. Both sides are too courteous to move. The result is an interaction that can remain in pleasant, formal stasis for years — each party extending welcome, each accepting welcome, neither committing to the familiarity that acceptance of welcome is supposed to eventually produce.
+
+**Children raised in contact households** — where one parent is Pyrosi and one is not — typically acquire the register system on the Pyrosi side and code-switch out of it in conversation with the non-Pyrosi parent, a pattern legible by adolescence and operating below deliberation in practice. What these children report, when asked, is that speaking without register feels like speaking without weight — not wrong exactly, but lighter than real. Language that does not show the relationship is missing something they feel as an absence rather than observe as an error.
+
+---
+
 ## Taler: A Closer Account
 
 The Taler dialect of Talermolis is, for most practical purposes, a different language from West Pyrosi — mutually intelligible only to those who have studied the correspondence between the two. Taler speakers typically acquire West Pyrosi as a second language for dealings outside the upland. West Pyrosi speakers encounter Taler as a scholarly text or as unexpected speech and find they understand less than they expect.
@@ -703,6 +795,24 @@ Translation: "The elevated presence settles here — it has always settled here.
 A West Pyrosi reader working through the correspondence tables reaches something like: "Address is received at this site. The ground resonance speaks specifically here. The fire with the people of the volcanic ground has made a permanent mark — what returns carries the home circle with it."
 
 A Taler speaker says both versions are approximately correct about the events and do not carry what the pitch says. The ass-pitched *kàel* means the address is being made where it has always been made, not for the first time. The vel-pitched *vélrr* means the resonance is active now, in this carving moment. West Pyrosi has no grammatical mechanism for this distinction; translation explains rather than performs.
+
+### Taler and the Outside World
+
+The Talermolis upland supports a population that has never needed to be large to do what it does. Administrative census attempts have produced estimates varying by a factor of four depending on how settlement clusters were counted, whether seasonal movement through the passes was included, and whether the relationship between named households and resident adults matched the enumerator's expectations. Taler speakers asked directly for their population count typically give a response that translates as "sufficient." This is not evasion; it is their actual unit of reckoning.
+
+The relationship between Taler speakers and the Caeras Valley Academy is one of the most thoroughly documented scholarly non-collaborations in Azhoran academic history. The pattern is consistent across several generations of field visits: the Academy sends scholars; the Taler receive them with courtesy; the scholars ask questions about phonology, inscription records, and Proto-Western reconstruction; the Taler answer with accuracy and precision; the scholars leave with more data than any previous visit and the same fundamental questions unanswered — not because the questions were refused but because they were answered with a specificity that requires context the scholars left without acquiring.
+
+The handful of scholars invited to remain for extended periods have produced different accounts. Their notes, read alongside standard Academy reports, show what sustained presence reveals: Taler understanding of the language is not a theory about historical preservation. It is a practice, and the practice holds that the language exists for a reason unconnected to comparative linguistics, and that reason is visible in the land.
+
+There are, in Gala and the East Pyrosi transit corridor, a small number of people who have spent enough time in both communities to work between them. They are not translators in the ordinary sense — the correspondence tables are established, and the linguistic work is not technically difficult for a trained scholar. They are needed for occasions when what a Taler speaker says technically means one thing and functionally means another, and the audience needs to know the difference. This requires not linguistic knowledge but presence: having been upland, stayed, left, and returned.
+
+In Talermolis, that pattern of departure and return is a specific recognized relationship: the *vel-kěl*, one who returns as water returns. It cannot be performed intentionally; it is recognized after the fact. These intermediaries are welcome in the upland because they have the relationship. In Gala they are consulted when something significant is arriving from Talermolis. Both communities trust them partially and respect them fully — the most reliable position available to someone who belongs to neither context completely.
+
+What Taler speakers make of West Pyrosi, when they address it at all: *it is West Pyrosi.* Not condescension — noting that a language has developed in a particular direction under particular conditions is not a judgment. West Pyrosi is what happens when the fire-ground language encounters centuries of contact, commerce, and political complexity, and accommodates itself to those conditions. Taler is what the language was doing before contact became the primary condition. Which is more correct is not a question the Taler tradition poses.
+
+The Taler account of the Tallyss tradition follows from this: not that the Fire Memory is a ceremonial overlay added to a base language for ritual purposes, but that everyday speech is what developed later, for the practical work of community and commerce, and Tallyss is the original. The sequence runs opposite to what outside scholars typically assume. Taler practitioners, when the assumption is stated to them, confirm it is opposite, and that this is a reasonable thing to notice.
+
+This has not been published as a formal claim in Academy literature. It appears in field notes, attributed to Taler speakers, where it has sat for several generations without formal analysis. The Academy's stated position is that the question requires further data. Taler speakers find this response recognizable; it is the response of people who have not yet stayed long enough.
 
 ---
 
