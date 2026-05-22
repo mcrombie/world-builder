@@ -3,7 +3,7 @@ name: The Lotharn Mountains
 category: geography
 tags: [Lotharn, mountains, old-growth, valleys, mining, ancient, eastern Azhora, forested, passes, geology]
 status: draft
-related: [Mittolo, Mithala, The Plains, Iberos Coast, East Pyros, Amod, Azhora, Lizeem, Minora]
+related: [Mittolo, Mithala, Amod, Elagos, Ambron, The Plains, East Pyros, Azhora, Lizeem, Minora]
 ---
 
 # The Lotharn Mountains
@@ -38,7 +38,7 @@ The valleys are the defining feature of the range. Dozens of them — some wide 
 
 The rivers of the Lotharn flow in two directions. The western face drains toward the Lizeem system and the Mithala plain; these streams join the Lizeem's distributaries and are part of the great river network that made the Mithala plain what it is. The eastern face drains toward the Plains, contributing seasonal water to the rivers that cross that drier country and that are partly sustained by the Lotharn's reliable rainfall. The ridgeline that divides the two drainage systems is not sharp — the Lotharn's broad-backed summits mean that the watershed often runs through forest rather than along obvious topographic features, and the position of the divide has been the subject of boundary disputes between valley communities on either side for as long as boundary disputes have been recorded.
 
-The southern face descends into **Amod**, a country of foothills, terraces, and pass roads that belongs neither fully to the mountains nor to the Pyrosi country below. Amod is where Lotharn streams are first captured into irrigation channels, where mountain goods are repacked for southern markets, and where the forested ridges give way to orchards, grazing slopes, and stone-walled fields. Lotharn people often describe Amod as "downhill" rather than "south," which is geographically imprecise and culturally exact.
+The southern face descends into **Amod**, a country of foothills, terraces, and pass roads that belongs neither fully to the mountains nor to the lake country below. Amod is where Lotharn streams are first captured into irrigation channels, where mountain goods are repacked for southern markets, and where the forested ridges give way to orchards, grazing slopes, and stone-walled fields. The Elagosi lake system is visible from the higher Amodian passes on clear days — a feature of some consequence, since it means the southern Lotharn also offers a view of the lake empire and everything it implies. Lotharn people often describe Amod as "downhill" rather than "south," which is geographically imprecise and culturally exact.
 
 ---
 
