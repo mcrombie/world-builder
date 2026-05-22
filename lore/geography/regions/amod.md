@@ -1,9 +1,9 @@
 ---
 name: Amod
 category: region
-tags: [Amod, country, Lotharn foothills, southern Lotharn, terraces, passes, orchards, Azhora, borderland]
+tags: [Amod, country, Lotharn foothills, southern Lotharn, terraces, passes, orchards, Azhora, borderland, Bavaria, Elagos, Ambron]
 status: draft
-related: [The Lotharn Mountains, Pyros, East Pyros, West Pyros, The Plains, Iberos Coast, Mittolo]
+related: [The Lotharn Mountains, Elagos, Ambron, Mittolo, Pyros, East Pyros]
 ---
 
 # Amod
@@ -14,13 +14,13 @@ The name *Amod* is used by outsiders for the country as a whole. Amodians use it
 
 ## Geography
 
-Amod runs along the southern foot of the Lotharn in an uneven crescent. To the north, the land rises into the forested Lotharn slopes; to the south, it softens into the drier uplands and transit country that eventually become Pyros and the eastern routes. Its western end is greener and more deeply wooded, catching rain that spills around the mountain shoulders. Its eastern end is drier, stonier, and more open, with pale grasses between terrace walls and villages built around springs.
+Amod runs along the southern foot of the Lotharn in an uneven crescent. To the north, the land rises into the forested Lotharn slopes. To the south and southeast, the foothills descend gradually into the lake country of Elagos — the transition from terraced hillside to lake-margin flat is one of the great visual moments of northeastern Azhora, visible from the upper Amodian passes as a shining interruption in the distance. To the west, the country opens toward the Mittoli river plains and eventually Pyros. Its western end is greener and more deeply wooded, catching rain that spills around the mountain shoulders. Its eastern end is drier, stonier, and more open, with pale grasses between terrace walls and villages built around springs.
 
 The land is made of descending ridges. Each ridge throws a valley southward; each valley carries a stream out of the Lotharn; each stream has been made to work. Amodian fields are terraced wherever the slope allows it and irrigated wherever the stream can be persuaded. The terraces are the country's most visible human mark: long stone ribs following contour lines across the hills, patched and rebuilt by the same families for generations.
 
 The upper foothills are chestnut, oak, beech, and walnut country. Lower down, the slopes carry orchards, vines, pulses, grazing goats, and the small hardy grains that tolerate thin soil and uncertain rain. Amod is not one of Azhora's great bread regions, but it is rarely hungry. It has too many elevations, exposures, and microclimates for a single bad season to ruin everything at once.
 
-The rivers are small but reliable. They come cold from the Lotharn, gather warmth on the south-facing slopes, and run into Pyrosi and Plains drainage systems depending on the valley. This makes water rights the central fact of Amodian law. Land can be inherited, bought, married into, or abandoned. Water must be remembered correctly.
+The rivers are small but reliable. They come cold from the Lotharn, gather warmth on the south-facing slopes, and drain in two directions depending on the valley: the western rivers run toward the Mittoli plain network, the eastern and southern rivers feed into the lake system of Elagos. A watershed divide runs through Amod without anyone having formally agreed where it is, which has generated its own category of boundary dispute. This makes water rights the central fact of Amodian law. Land can be inherited, bought, married into, or abandoned. Water must be remembered correctly.
 
 ## Climate
 
@@ -86,7 +86,11 @@ Several scholars have argued that the name *Amod* is not Mittoli. Proposed deriv
 
 With the Lotharn, Amod has kinship, trade, and irritation. Mountain communities think Amodians are lowlanders who talk too much about walls. Amodians think mountain communities are admirable people who would forget half their income if no one downhill wrote it down. The relationship works because both claims are partly true.
 
-With Pyros, Amod has a warmer but more cautious relationship. The Pyrosi admire Amodian hospitality and find Amodian councils exhausting. Amodians admire Pyrosi formality and find Pyrosi latent certainty difficult to invoice. Trade between them is constant: fruit, wine, stone, wool, tools, and pass access going one way; volcanic-soil produce, finished goods, and eastern-route connections coming the other.
+With Elagos, Amod has its most commercially consequential relationship. The lake country below is the primary destination for Amodian exports — chestnuts, wine, stonework, dried fruit, and the pass-refined goods that come down through Mavren and reach the Elagosi lake markets by the southern river routes. The Elagosi lake towns are large enough to absorb Amodian production volumes that no other regional market can, and the return trade — lake fish, lowland grain in poor years, Elagosi metalwork — fills gaps that the hills cannot fill from their own resources. Amod and Elagos have been commercially interlocked long enough that the ledgers in Mavren contain Elagosi-derived accounting forms that arrived through trade and stayed.
+
+Ambron is a political fact that Amod has navigated in most generations rather than resolved. The empire that controls Elagos wants the Lotharn passes — the routes through Amod connect the lake system to the Mittoli interior and to the northern mountains, and whoever holds Elagos finds Amod's cooperation worth purchasing or, periodically, compelling. In the strong imperial periods Amod has paid tribute to Ambron and received the usual imperial package in return: road maintenance, trade protection, military presence that functions as both security and occupation depending on the moment. The Terrace Compact's institutional depth makes Amod harder to directly administer than the Moros plain or even Drent — the water courts, measure-keepers, and pass families all have legitimate authority that Ambronite prefects cannot simply override without breaking the systems they need to function. Ambron has learned this in practice more than once. The characteristic resolution is a negotiated tribute arrangement that leaves the Compact nominally intact, which suits both parties well enough to persist across contraction cycles. Amod does not keep two sets of legal forms the way Drent does; the Terrace Compact is too old and too embedded to be replaced. It simply continues, with or without an Ambronite representative in Mavren, and the presence or absence of that representative is noted and adjusted for.
+
+With Pyros, to the west, Amod maintains older commercial ties that predate the Elagosi connections. The Pyrosi admire Amodian hospitality and find Amodian councils exhausting. Amodians admire Pyrosi formality and find Pyrosi latent certainty difficult to invoice. Trade between them is real but slower than the Elagosi connection — overland through the Mittoli plain country, with the usual friction of moving goods between highland and lowland economies without a convenient lake network to do it on.
 
 With the Plains peoples, Amod's relationship is seasonal. Herding groups use the lower foothill grazing in certain years, and the older agreements governing that access are maintained through Amodian water courts and Grassic oral law in parallel. The two systems do not translate cleanly, but they have coexisted for long enough that both sides know which parts must not be simplified.
 
