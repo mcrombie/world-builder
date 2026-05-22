@@ -3,7 +3,7 @@ name: Mithala
 category: region
 tags: [Mithala, plains, breadbasket, Lizeem, flood, grain, river, Mittolo, flat, agricultural, channels, braided, flood-calendar, river-horn, Minora]
 status: draft
-related: [Mittolo, The Lotharn Mountains, Acorwood, Oremindi Mountains, Minora, Lizeem River, East Pyros, Azhora, Ibenwood]
+related: [Mittolo, The Lotharn Mountains, Acorwood, Oremindi Mountains, Minora, Lizeem River, East Pyros, Azhora, Ibenwood, Celder]
 ---
 
 # Mithala
