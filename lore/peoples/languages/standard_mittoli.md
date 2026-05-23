@@ -1,7 +1,7 @@
 ---
 name: Standard Mittoli
 category: language
-tags: [language, Mittoli, grammar, phonology, vocabulary, Azhora, conlang]
+tags: [language, Mittoli, grammar, phonology, vocabulary, Azhora, conlang, kinship, legal, body, color, substrate, interior-substrate, causative, verbal-morphology, health, death]
 status: draft
 related: [Languages of Azhora, Mittolo, Northern Azhora, Pyros, Azhoran Academy of Natural History]
 ---
@@ -178,6 +178,32 @@ Examples: *voran vaer-or* (a good person), *homath vaer-el* (a good house), *hom
 The shift in word order is one of the clearest registers in Mittoli. A speaker using SOV is being deliberate, formal, or literary. A speaker using SVO is being conversational. Mixed order within a single sentence signals irony or emphasis.
 
 Questions are formed by rising intonation in speech; in writing, the particle *thael* is placed at the sentence's beginning: *Thael voran vemilos?* — "Did the person see [it]?"
+
+### Extended Verbal Morphology
+
+**Causative:** formed by the prefix *al-* (beside, near — originally spatial, grammaticalized into "causing to"). *al-milom* = "I cause [something] to be seen / I show." *al-homael* = "to cause to dwell / to settle someone." *al-novael* = "to cause renewal / to reform." The causative takes the full aspect system of the base verb: *al-ve-milos* = "he caused [it] to be seen [and it was done]." Used in governance and commercial contexts more than in daily speech; causing someone to do something is a notable social act and the grammar marks it as one.
+
+**Reflexive and Middle Voice:** formed by the suffix *-vel* added before the person ending. *milos-vel* = "he sees himself." But the middle is broader than reflexive — it marks that the action affects primarily the subject, including actions the subject does for their own sake without necessarily doing them *to* themselves. *azhael-vel* = "to endure for oneself / to persist on one's own account." *novael-vel* = "to renew oneself." *galael-vel* = "to ford for oneself / to cross for one's own purpose." The *-vel* suffix derives from *vel* (growth, plant) and is fully grammaticalized; speakers no longer hear the plant root in it, though etymologically a reflexive action is one that "grows back toward" the actor.
+
+**Passive:** Mittoli has no dedicated passive morpheme. True passive is expressed with the impersonal third-person inanimate *-as* ending plus a genitive construction: *milas Mittoloel-ae* = "it is seen in Mittolo's regard" — grammatically "it sees in-the-direction-of Mittolo" but functioning as passive. Spoken Mittoli avoids this construction and prefers active restatement or a generic "they" subject (*vemiloss* — "they saw it"). The written formal register uses the construction; colloquial speech avoids it. This avoidance is not accidental: a language organized around agents tends to find agentless sentences uncomfortable.
+
+**Compound Verb Formation:** The productive system of compound verbs from two roots follows a consistent rule: the first root qualifies or conditions the second. The second root is the primary act; the first specifies how it is done.
+
+Productive patterns with common first-roots:
+- *mil-* (see): *mil-veth* (watch-hold = guard), *mil-azh* (see-endure = witness, commit to having observed), *mil-cael* (see-flow = monitor a process over time), *mil-gal* (see-cross = navigate, find a route by looking)
+- *nil-* (nothing): *nil-azh* (un-endure = abandon), *nil-hom* (un-dwell = be without house, be cast out), *nil-cael* (un-flow = dam, block), *nil-gal* (un-cross = refuse passage, seal a border)
+- *vel-* (grow/green): less common, more poetic and archaic: *vel-azh* (grow-endure = endure through increase; used for traditions, old forests, dynasties that survive by growing rather than holding); *vel-cael* (grow-flow = a river in spring flood, but also any growth that moves)
+- *cael-* (flow): *cael-azh* (flow-endure = the permanent current; a river's deep channel that does not change with flood or drought; used metaphorically for principles that persist through change)
+
+The compounds are not always compositional. *nil-azh* does not mean "to both-nothing and endure"; it means "endurance that is also absence" — to remain-without-remaining. *mil-azh* does not mean "to see and also endure"; it means "seeing that binds you to what was seen." The grammar generates the forms; the meanings have to be learned. Advanced Mittoli learners who attempt to construct new compounds from the pattern often produce phrases that are grammatically valid and semantically wrong.
+
+**The Prospective's Ambiguity:** The prospective aspect *ae-* marks intended, wished-for, expected, or anticipated actions without grammatically specifying which. *Aemilom* can mean "I intend to see," "I expect to see," "I wish I could see," "I plan to see," or "I will probably see." The distinction matters acutely in legal and commercial contexts. Legal Mittoli deploys adverbial qualifiers to resolve it:
+
+- *ae-milom veth-el* — "I intend to see [it] with certainty" (holding-intention)
+- *ae-milom cael-el* — "I expect to see [it] in the course of things" (flow-intention; expectation, not commitment)
+- *ae-milom nil-veth-el* — "I wish I could see [it]" (holding-nothing-intention; unfulfillable wish)
+
+Common speech leaves the ambiguity in place. A person asked whether they plan to return who answers *aemilom* has not made a promise. Whether they meant to is a different question, which the grammar declines to answer.
 
 ---
 
@@ -438,6 +464,59 @@ The western old-growth of Azhora is genuinely old. Core samples from the largest
 
 ---
 
+### The Pre-Mittoli Interior Substrate
+
+There is a third linguistic layer in Mittolo country — distinct from the Forest substrate and from Proto-Western — that appears almost entirely in place names. It has no living speakers. It does not appear in vocabulary beyond names inherited on the landscape. It is invisible except in the names the current population uses for things they did not name themselves.
+
+It is sometimes called the Plains Layer by scholars at the Academy, though "Plains" is misleading: the names that belong to this substrate appear across the Mithala plain, through the Lotharn mountain valleys, in the Narcoshi passes, in the Yunethran corridor, and across the Celder upland. This is not a plains language; it is a landscape language, one that covers open ground, mountain passages, river systems, and the routes connecting them.
+
+**The phonological profile:**
+
+Where the Forest substrate is identifiable by unusual onset clusters (*mv-*, *nv-*, *ngr-*), dense monosyllabic codas, and vowels in atypical positions, the Interior Substrate carries a different signature:
+
+- Terminal formations *-ala*, *-erd*, *-ethre* that look superficially like Mittoli endings but cannot be etymologized from any Mittoli root
+- Medial vowel sequences (*-ith-ala-*, *-un-eth-*) that do not appear in Mittoli morphology
+- A distribution preference for initial *M-*, *C-*, *N-*, and *Y-* that is non-random but does not match Mittoli phonotactics
+- Weight-bearing monosyllables: names of one syllable with high semantic load and no Mittoli etymology
+
+**Names attributed to this layer:**
+
+*Mithala* — the oldest name for the eastern plains. The etymology *mitt-ala* has been proposed but the vowel sequence is wrong and the *-ala* terminal appears in no Mittoli word as a productive suffix. Whatever *-ala* designates, it is not a Mittoli formation. The name appears in the oldest available written texts already fully formed; it was not coined in any language we have records of.
+
+*Canerd* — the mound-castle of Celder. The *-erd* terminal is unique on the continent; no Mittoli root produces it. Proposed etymologies (*cae-nerd*, *can-erd*) do not account for the vowel or the terminal. The mound under the castle predates not only Mittoli records but the oral traditions of the Celder horse-breeding houses — and those traditions are old. Whoever built the mound called it something; what they said survives as *Canerd*.
+
+*Yunethre* — the corridor and its gate-territory. The *-ethre* terminal appears nowhere else in any documented Azhoran place name. An Academy proposal that it derives from a lost Mittoli form *yunn-eth-rae* ("the between-place passage") has been noted and disputed; *yunn-* is not an attested Mittoli root in any dialect. The name is older than the Vaundrel toll archive, which is itself among the oldest continuous records in Azhora.
+
+*Lol* — already documented at length in this text. The Bay of Lol is entirely surrounded by all three Mittoli dialects; the name means nothing in any of them and has no other use. It belongs to this layer, which is the most that can be said.
+
+*Errath* — the Minoran and Caeras administrative name for what the Carica people call Caricas. The Carica people's own name for their country is Mittoli-derived; *Errath* is not. The *-ath* terminal looks like the Mittoli directive case but the stress pattern is wrong. It appears to be what the Interior Substrate speakers called the Carica River valley, preserved in administrative use after Mittoli speakers encountered it from traders who had been using it for longer than Mittoli had been spoken in the area.
+
+Several deep Lotharn valley names, a number of Narcoshi valley designations (distinct from the *vel-narcoth* route names, which are Mittoli), and several lower-Lizeem distributary names that do not derive from any branch community's naming conventions also appear to belong to this layer. The Academy's catalogue is incomplete.
+
+**What the Interior Substrate knows:**
+
+The Forest substrate vocabulary is dense with ecological specificity: old-growth light, forest silence, the behavior of organisms in close growth, routes through dense canopy. The Interior Substrate, visible only through place names, knows geography at a different scale. Its names designate major landscape features (a broad plain, a mountain-corridor, a river system), crossing and passage points, and what appear to be territorial markers. It does not appear to name dense-forest ecology. It does not appear to name interior settlement or specific agricultural terrain. It names open country, routes, and the topographic features that matter to people moving across landscape rather than dwelling inside it.
+
+This is a meaningful distinction. The Forest substrate speakers appear to have treated the Ibenwood as a complete world — their vocabulary describes the forest as an environment inhabited and understood from the inside. The Interior Substrate speakers, based on what their surviving names name, were people of open ground: the plains, the mountain passes, the river crossings, the corridors between.
+
+The geographic distribution of the Interior Substrate names follows a coherent pattern. It covers the central Mithala plains, the mountain systems on either side — Oremindi in the west, Lotharn and Narcoshi in the northeast — and the corridors connecting them. This is approximately the territory a mobile herding or seasonally-ranging culture would occupy. It is not the deep forest. It is not the settled river-bottom communities.
+
+**The population question:**
+
+Scholars who have noted the Interior Substrate have generally proposed three interpretations.
+
+The conservative interpretation: the substrate represents a pre-Mittoli population displaced or absorbed when Proto-Western speakers expanded into the central continent. Their language disappeared; their geography-names did not, because place names outlast the populations that gave them. The Interior Substrate speakers are gone in any meaningful sense; only their words for where they were remain.
+
+The moderate interpretation: the Interior Substrate speakers are the direct ancestors of the hill valley communities, the mountain-pass peoples, and the Mithala plains farmers — communities that adopted the incoming Mittoli language over generations while the geography retained its older names. They are not gone; they became everyone's ancestors in the interior.
+
+The interpretation that has not been published in any Academy paper: the continuous geographic distribution of Interior Substrate names — from the central plains through both mountain systems, across the Narcoshi passes and the Yunethran corridor — represents a single culture's coherent territory, not a random collection of preserved names. This would be a large territory, encompassing open ground across most of the continent's interior. The culture that named all of this was not small, and was not marginal. Whatever happened to it left behind only its geography.
+
+Whether the Interior Substrate speakers and the Forest substrate speakers were in contact, in conflict, or simply adjacent in different environments is not recorded anywhere that has been found. The Ibenwood edge communities and the deep Narcoshi valley oral archives are the populations most likely to carry any memory of the relationship. Neither has been asked the question directly. Whether an answer exists is not known.
+
+The Academy's formal position is that the Interior Substrate requires systematic comparative fieldwork before conclusions can be drawn. This position has been maintained for over eighty years.
+
+---
+
 ## Notes for Scholars
 
 The *-ael* infinitive suffix deserves separate comment. It contains the root *ael* (speech, saying), which means that grammatically, Mittoli treats infinitives as "the expression of the action" — the act named rather than performed. This is not merely linguistic coincidence; it reflects a philosophical position encoded into the language itself. An action that has not been performed is still, in some sense, a word. The Mittoli verb for "to promise" is *aelael* — "to speak a speaking" — which captures this exactly: a promise is an action that exists first as language and may or may not become deed.
@@ -523,6 +602,60 @@ The Caeras Valley Academy does not consider Merchant Mittoli a dialect. River-tr
 
 ---
 
+## Legal and Governance Register
+
+The legal vocabulary of Standard Mittoli developed alongside the Caeras Compact system of city-state agreements. It is formal by convention, uses SOV order throughout — colloquial SVO does not appear in any legal context where the record matters — and preserves several grammatical forms that have disappeared from everyday speech.
+
+The core concept of Mittoli law is *galoss-azh* — "the enduring crossing" — a deal or agreement that has acquired the quality of permanence. Most agreements begin as *galoss* (a deal, a crossing of interests) and may become *galoss-azh* through fulfillment, reputation, and time. The legal system is largely concerned with distinguishing which agreements have reached this status and which have not.
+
+### Legal Vocabulary
+
+| Mittoli | Meaning | Notes |
+|---|---|---|
+| *milael-voran* | witness | *mil* (see) + *-ael* (speech-act suffix) + *voran* (person); "the person who speaks a seeing"; a witness is specifically one who has seen and formally states it |
+| *mil-azh-ael* | to witness formally | Compound infinitive: see + endure + speak; witnessing is seeing that one commits to as permanent |
+| *galoss-miloss* | witnessed agreement | "A deal that was seen" — the passive-adjacent construction used for formally recorded agreements |
+| *drossgal-miloss* | breach of a witnessed agreement | The witnessed deal that broke |
+| *azhom-galoss* | a compact; a binding multi-party framework | *azh* as verb (to endure) + *galoss* (deal); used for arrangements like the Caeras Compact itself |
+| *veth-miloss* | a held judgment; a ruling | *veth* (hold) + *miloss* (was seen); "what was seen and held" — a determination that does not move |
+| *nil-galoss* | void; a deal declared not-standing | The negation of an agreement; formal term for nullification |
+| *caer-miloss* | clear evidence | *caer* (clear, open, known) applied to the witnessing construction; evidence that has not been obscured |
+| *dross-miloss* | disputed or broken testimony | |
+| *aeloss-galoss* | a contract; "the body of speech for a deal" | *aeloss* (language, the body of speech) applied to a commercial agreement; a written contract is spoken into existence and then held |
+| *hom-galoss-azh* | a household compact; lineage agreement | Extended household arrangements: inheritance, marriage-crossing obligations, property held across generations |
+| *milae-galoss* | intent to deal; a preliminary offer | From prospective *ae-* + *galoss*; the "intending to cross" that precedes formal agreement; not binding |
+
+**The Caeras Compact's name in formal speech:**
+
+*Azhom-galoss Caeras-ae voranoss Mittoloel* — "the enduring-deal of the Caeras, for the people of Mittolo." The genitive construction uses the river as both geographic marker and implied witness: the river that makes all interior trade possible also names the agreement that governs it. The Second Caeras Compact (five hundred years old) is formally prefixed with *te-* (renewed/rebuilt): *Te-azhom-galoss Caeras-ae*.
+
+### The Witnessing Formula
+
+The standard witnessing declaration, preserved unchanged in formal legal usage for at least three centuries:
+
+> *Milom, ve-milom, azhom mil-azhael.*
+> "I see, I saw, I commit to having-seen."
+
+The three-part structure is mandatory in formal witness. Imperfective (*milom* — I see, as ongoing truth); perfective (*ve-milom* — I saw, as completed fact); then the compound infinitive (*mil-azhael* — "seeing-enduring") converted into a first-person commitment (*azhom* — I endure/commit). The formula means: what I see is true, what I saw was true, and I bind myself to having seen it. Not "I believe I saw" or "I think I saw" — *azhom* is the endurance-verb, which commits the speaker's ongoing existence to the statement.
+
+The Hill Mittoli legal tradition additionally uses the cessative aspect: *dre-milom* ("I ceased to see") — specific testimony about when observation ended. Standard Mittoli cannot express this in native grammar. Legal practice borrows the Hill cessative in written formal contexts for this specific case: the testimony of exactly when a thing was no longer witnessed. It is one of the few places where Standard actively uses Hill Mittoli grammar rather than finding a workaround.
+
+### Governance and Deliberation
+
+| Mittoli | Meaning | Notes |
+|---|---|---|
+| *homoss-galoss* | a settlement compact; local governance agreement | *homoss* (settlement/cluster) + *galoss* (deal); how a town manages shared obligation |
+| *veth-galoss-voran* | a deal-holder; an administrator | The person whose function is to hold agreements in force; not the same as a judge |
+| *mil-veth-voran* | a watchman; an enforcer | Already in core vocabulary; in governance context, the person who watches and holds |
+| *aeloss-mil-azh* | a formal record; witnessed speech | The written document produced by *aeloss-galoss* (a contract) once witnessed |
+| *caer-aeloss* | public declaration; open speech | A statement made openly, in hearing of others, creating social obligation through witness |
+| *nil-caer-aeloss* | private speech; speech with no witness | Not legally binding; a distinction that matters in contract disputes |
+| *galoss-drossael* | arbitration; the repair of a broken deal | *galoss* + *drossael* (becoming broken); the process of addressing breach |
+
+The question of who may witness a *galoss* to make it *galoss-azh* — enduring — is handled differently by the city-state, river-community, and hill-community traditions, and these differences are a recurring source of dispute in cross-community legal proceedings. The Caeras Valley formal position is that a witness must be *caer-voran* — a person known to both parties, whose standing has been established. River communities tend to accept any adult third party present at the exchange. Hill communities require a specific form of dual witnessing (preserved from the Hill grammatical dual) that Standard proceedings cannot precisely replicate and tend to approximate badly.
+
+---
+
 ## Emotion and Inner States
 
 Mittoli is sometimes described by speakers of other Azhoran languages as "a language without a word for homesickness." This is accurate. What Mittoli has instead is three words that collectively cover the same territory but refuse to treat it as a single thing.
@@ -549,6 +682,119 @@ Additional emotion vocabulary:
 | *drossae* | grief; the rupture-feeling | From *dross* (broken); grief is specifically a breaking, not an absence |
 | *novael-milos* | wonder; the feeling of seeing something newly | An archaic compound most speakers use without knowing its parts |
 | *ganel-azhom* | serenity; the holding of a high place | *ganel* (height) + *azh* (endure); in popular imagination associated with the Sevronese Verath |
+
+---
+
+## Body, Health, and Death
+
+Mittoli body vocabulary is organized by the noun class system in ways that reflect cultural assumptions. Body parts considered agentive — that do things — tend toward Class I (living beings). Parts that are structural or container-like tend toward Class III (objects, materials). Parts with ongoing process functions tend toward Class IV (processes, events). This is not a consistent medical taxonomy; it reflects how speakers relate to the body's different aspects rather than anatomical grouping.
+
+### Body Vocabulary
+
+| Mittoli | Class | Meaning | Notes |
+|---|---|---|---|
+| *milvor* | I | the eye, as actor | *mil* (see) + *-vor* (agent suffix); the eye that sees; agentive |
+| *miloss-vel* | III | the eye, as organ | Medical/formal term; the eye as a thing in the body |
+| *aelvoran* | I | tongue; a speaker | *ael* (speech) + *voran* (person); "the speaking-person compressed into part of the body"; used for tongue as organ of speech; anatomical term is different |
+| *homvelt* | III | the chest; body's dwelling | *hom* (dwelling) + *-velt* (interior-space suffix); the body cavity as a house |
+| *caelith-velt* | IV | the bloodstream; the inner river | *cael* (flow) + *-ith* (natural feature) + *-velt* (interior); blood conceived as a river running inside |
+| *nillvelt* | III | bone | *nill* (stone) + *-velt* (interior); the stones inside the body |
+| *velthann* | III | skin; outer surface | *vel* (growth) + *-thann* (surface suffix); the outward growth of the body |
+| *orchvelt* | III | muscle; solid tissue | *orch* (earth, mineral ore) + *-velt* (interior); earth inside the body |
+| *galneth* | IV | breath; breathing | *gal* (to cross) + *-neth* (rhythmic process suffix); breath as a crossing done continuously; each breath is a crossing |
+| *milvelthann* | III | the face | *mil* (see) + *velthann* (skin-surface); "the skin that sees and is seen"; the face as the site of mutual perception |
+
+### Health
+
+Health in Mittoli is conceived as correct flow. The key term is *caelom* (already in the emotion vocabulary — ease, the feeling of moving correctly), which serves double duty as both the emotional and physical positive state. A healthy person is *caelom voranoss-el* — "in the flow, in the condition of the people." The language does not, at root level, distinguish physical from emotional well-being; the same flowing or blockage can be either or both, and the vocabulary reflects this.
+
+Illness is expressed through disruption:
+
+| Mittoli | Meaning | Notes |
+|---|---|---|
+| *nilcaelom* | general illness; feeling unwell | "Not-flowing-ease"; the flow is blocked; does not specify where or how |
+| *drossom-voran* | serious illness; structural damage | "The person in broken-condition"; the structure has fractured rather than merely blocked |
+| *talaethos-el* | fever | "In a burning event"; the body as a fire; *tal* (fire) + *-aethos* (event suffix) |
+| *nilazhom-vel* | decline; the body ceasing to remain | "Not-enduring" in a bodily sense; used for illness that is progressing rather than static; the body is losing its quality of *azh* |
+| *caelom-veth* | recovery; returning flow | "Flow held again"; restoration of the healthy state after illness |
+
+### Death
+
+Death vocabulary distinguishes several conceptually distinct phenomena. This is treated as a meaningful difference, not lexical abundance for its own sake.
+
+*vemiloss-nil* — "was seen no more"; the plain factual statement; colloquial in register; used for any death, human or animal, without ceremony
+
+*drossael-voran* — "the person became broken"; the ceremonial term, borrowed from the First Silence oral tradition (*voranoss drossael* — the people became broken); used in formal mourning and death rites; emphasizes destruction of integrity
+
+*nilazhael-voran* — "the person ceased to remain"; the older poetic term; used in oral tradition and Hill Mittoli; emphasizes departure over destruction; the person did not break, they simply stopped being here
+
+*hom-nil* — "no home"; the post-death state; a dead person is *hom-nil*, without dwelling; used in ritual contexts to explain why burial practice must give the dead a place; the body without *hom* is a person still needing somewhere to be
+
+The distinction between *drossael-voran* and *nilazhael-voran* — broken versus departed — persists in funeral practice. Communities with a *drossael* emphasis bury with objects for use; communities with a *nilazhael* emphasis bury with provisions for travel. This division does not map cleanly onto any political boundary, but loosely tracks the distinction between settled river communities (who tend toward *drossael*) and mountain-pass and forest communities (who tend toward *nilazhael*). The Academy has noted the correlation and not pursued it.
+
+---
+
+## Color and Light
+
+Mittoli does not have dedicated abstract color terms. What it has is a set of natural-phenomenon roots that are extended to cover colors by metonymy: the color is named after the prototypical thing of that color. The system is productive — any competent speaker can form a new color term — but a set of established formations are widely understood.
+
+| Mittoli | Literal source | Color range | Notes |
+|---|---|---|---|
+| *cael-eth* | "water-thing" | blue; grey-blue; clear sky color | Includes both water-blue and sky-blue; context distinguishes |
+| *vel-eth* | "growth-thing" | green; living-green | Forest Mittoli collapses many shades into this; Standard Mittoli adds qualifiers for specific greens |
+| *tal-eth* | "fire-thing" | orange; red; warm gold | Any warm-bright color; not restricted to orange |
+| *nill-eth* | "stone-thing" | grey; stone-grey; flat color | Can mean dull of any hue, not only grey |
+| *orchan-eth* | "earth-thing" | brown; rich dark brown | |
+| *aezh-eth* | "wind-thing" | white; pale grey; translucent | Wind has no color, so the term covers pale, empty, or absent color |
+| *smael-eth* | "cold-grey-thing" | steel grey; winter sky; overcast flat | *Smael* is a Northern borrowing; carries a quality of cold and flatness beyond the color |
+| *dross-eth* | "broken-thing" | dark; tarnished; discolored | Not a hue but a quality of wrongness in color; used for diseased growth, rusted metal, spoiled food |
+| *nov-eth* | "new-thing" | vivid; saturated; fresh color | Not a hue but a quality of brightness; newly dyed cloth is *nov-eth*; faded cloth is *dross-eth* |
+
+Compound terms are productive. *vel-cael-eth* = "growth-water-thing" = the blue-green of shallow clear water over a living bed. *Tal-nill-eth* = "fire-stone-thing" = the dark red-orange of volcanic rock or a heated forge. *Aezh-vel-eth* = "wind-growth-thing" = pale silvery-green, specifically the underside of leaves turned by wind. Dyers and painters working in commercial contexts have borrowed more specific color terms from Iberos trade contacts for hues the system cannot easily describe, but these are technical vocabulary rather than standard speech.
+
+The word for "a color I cannot name" is *milae-dross-eth* — "broken-looking" — which is simultaneously unflattering to the color and honest about the speaker's limitation. This is considered slightly self-deprecating; a speaker who uses it regularly is implying their vocabulary is insufficient.
+
+The substrate word *mveth* — the Forest Mittoli quality of light that reveals by contrast — has no parallel in the color vocabulary. Forest Mittoli distinguishes light quality from color as separate phenomena. Standard Mittoli conflates them both into approximate color-reference terms. Forest speakers consider this a genuine loss; Standard speakers tend not to notice the absence until it is pointed out.
+
+---
+
+## Kinship and Household
+
+Mittoli kinship vocabulary is organized around the *hom* (dwelling) root rather than blood relationship. The household is the primary kinship unit; biological relationship is acknowledged but secondary to co-dwelling and shared obligation. This is not universally true across all Mittoli-speaking communities — northern and hill communities have variants — but Standard Mittoli encodes the *hom*-centered model.
+
+### Household Vocabulary
+
+| Mittoli | Class | Meaning | Notes |
+|---|---|---|---|
+| *homvoran* | I | a household member; a person of the house | Blood or not; anyone living under the household's obligation |
+| *hom-azh* | II | the lineage; the enduring house | *hom* + *azh* (endure); the household persisting across generations; what continues when individuals don't |
+| *tal-voran* | I | the hearth-keeper; head of household | *tal* (fire) + person; the one who tends the central fire; function-based, not necessarily the eldest |
+| *tel-voran* | I | elder; senior of the household | *tel* (archaic root: to precede, to come before); those who came before in the same house |
+| *nov-voran* | I | newcomer; one newly joined | Birth or marriage entry equally; "the new person" regardless of origin |
+| *caer-voran* | I | a vouched-for person; someone the household attests to | *caer* (clear, known); someone whose standing has been established through the household's word |
+| *nil-voran* | I | a person without household | Already listed as *nilor* in core vocabulary; the most significant social status below death; to be without *hom* is to be without place in the Mittoli social structure |
+
+### Generation Structure
+
+The generational framework uses the core vocabulary directionally rather than numbered ranks:
+
+*hom-veth* — "the holding house" — the generation currently managing the household: not the oldest generation but the one bearing active obligations, making agreements, managing property. Eldest members may hold this position or may have yielded it.
+
+*hom-ganel* — "the high house" — the previous generation, no longer managing but respected as predecessors; the elders in their late role.
+
+*hom-drel* — "the descending house" — the next generation; those coming down into responsibility. *Drel* (south, descent) marks the direction of movement: the young are descending toward the obligations they will take over.
+
+*hom-nov* — "the new house" — the youngest, not yet counted in the descent structure; children before they are recognized as *hom-drel*.
+
+Siblings are not lexically distinguished by birth order in Standard Mittoli (Hill Mittoli preserves an archaic term for "the older of the two" in its dual structure, which Standard has lost). Instead, relative seniority between siblings is expressed through the *hom-veth/hom-ganel* framework applied within the same generation — the senior sibling is the one who holds more of the household's active obligations. Since obligation-holding can shift, so can seniority. This creates a kinship structure that is explicitly dynamic rather than fixed at birth, which outsiders from fixed-birth-order systems often find confusing and Mittoli speakers tend to find natural.
+
+### Marriage
+
+Marriage in Mittoli is *gal-hom* — "the crossing of houses" — using the *gal* root (to ford, to cross, to exchange). A person who marries into a household *galoms homatham* — "crosses into the house." The crossing metaphor is structural: marriage is an exchange, a ford between two bodies of territory, not a dissolution.
+
+The practical consequence: marriage does not erase prior household affiliation. The person who crosses in retains *caer-voran* status in their birth household indefinitely — someone the birth household vouches for, whose standing is established there. This creates a network of acknowledged obligations across household lines that functions as an extended kinship network without requiring the language of blood. It is also, in practice, how the dense commercial and legal relationships between city-state households are maintained across generations: marriages create standing, and standing creates credit.
+
+The formal term for a marriage agreement is *gal-hom-galoss* — "the house-crossing deal" — treated legally as a subtype of *azhom-galoss* (compact) rather than as a private personal matter.
 
 ---
 
