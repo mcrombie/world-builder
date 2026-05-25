@@ -34,6 +34,17 @@ The island dialect preserves several specific forms that mainland Bouéni has si
 
 *oul* — the physical sensation of the outer current taking hold of a hull before the vessel has traveled far enough to see that it is being pulled. A subtle thing — movement without visible cause. Island navigators track *oul* as an early indicator that a vessel has entered the Deep River current. The phonological shape (two open syllables, no nasal vowels, vowel sequence) is substrate-consistent. It appears in certain Southern Archipelago navigational accounts as a named condition, under a different word.
 
+**The *bou-shem* evidential** (island-only): Island Azner speech maintains a fifth evidential particle, *bou-shem* — deep-heard — distinct from the four-particle mainland system. Where *shem* marks information received by sound or signal, *bou-shem* marks knowledge that comes from below the level of transmission: traditional navigational technique known before it can be articulated, the body's pre-conscious reading of conditions, the inherited practice that works before a practitioner can say why. Island navigators use it for the most reliable knowledge they have, which is the knowledge they cannot fully explain. Mainland sailors, when they encounter the particle, often render it as mere emphasis on *shem*. Island speakers do not correct this. They have noted it.
+
+**The extended bearing rhyme** (island variant): The island version of the children's bearing rhyme adds two steps beyond the mainland's ten:
+
+*Velõ-él ven bou-ou* — eleven, toward the depth-of-depth.  
+*Velõ-dĩ ven ia* — twelve, toward out there.
+
+The island version puts the deepest and the most unknowable beyond the counting sequence rather than within it. A child who has learned twelve can point in all directions worth pointing in. Whether "twelve" is a direction or a state is left as a question for later. The mainland version ends at ten; the island version is sometimes described by mainland Bouéni as "going too far," which island speakers consider an accurate characterization.
+
+**Ia-sul**: The southernmost inhabited island in the Azner chain has the formal name *Ia-sul* — "the unknowable land." It is the only place name in any Bouéni variety that uses *ia* as a naming element. Island elders, when asked about the name, confirm it is correct and that it was not given lightly. They do not elaborate.
+
 **Te Nillium Maritime** — a contact variety spoken at the gateway city and along the northern trade coast, mixing Bouéni grammar with Mittoli vocabulary in proportions that vary by topic. When discussing commerce, weather, or navigation, it sounds primarily Bouéni; when discussing politics, scholarship, or anything the Mittoli had words for first, it sounds primarily Mittoli. Not a fully separate dialect — more a style of use that reflects a century of pragmatic coexistence.
 
 ## Writing
@@ -348,6 +359,75 @@ Bouéni does not have a full evidential system like Grassic, but maritime speech
 
 The particle *lhav* is formally identical to the substrate word for a standing marker. Whether the particle developed from ordinary navigation-marker usage or preserves an older grammatical category is disputed. Bouéni sailors do not dispute it. They use it when the marked world has spoken.
 
+### Clause Structure and Subordination
+
+Bouéni forms relative, conditional, and complement clauses through systematic reuse of its interrogative words as subordinators.
+
+**Relative clauses** use *shi* (who) for animate heads and *ma* (what) for inanimate heads, placed at the start of the embedded clause:
+
+*Të vẽlmar shi vi-briñĩla-o* — the sailor who navigated in fog  
+*Të barr ma vi-viña-a* — the ship that came  
+*Të lhav de-ma sulẽs* — the marker from which you land
+
+When the head noun is the location or route of the embedded clause, the prepositional interrogative stands in: *ven-ma*, *de-ma*, *avẽl-ma* serve as locative and directional relativizers. Bouéni preserves the full prepositional phrase of the embedded position rather than stranding the preposition at the end. This sounds formally heavy to Mittoli speakers and transparent to Bouéni ones.
+
+**Complement clauses** use *ma* as a complementizer:
+
+*Vi-sẽna-o ma vi-viña-a të briñ* — he knew that the fog came  
+*Nav vi-sẽna-a ma ĩ-sulĩl* — she did not know that someone would land
+
+The complementizer *ma* can be omitted in informal speech when context makes the embedding obvious. Harbor Speech omits it almost always; formal House Speech keeps it.
+
+**Conditional clauses** use the particle *sẽl* (if, should it be the case) before the condition clause:
+
+*Sẽl briñvas vi-viña-a, nav ĩ-vaelõ* — if the thick fog comes, I will not sail  
+*Sẽl nav ya, nav sẽna-es* — if you have not seen it, do not state it as known
+
+*Sẽl* grammaticalized from *sẽ + -l* (the locative suffix), meaning originally "in the case of non-being" — the conditional as a negative-possibility frame. The form is transparent enough that older speakers sometimes produce the longer *fõ sẽ* (within the not-possible) for the same function, but *sẽl* has largely replaced it.
+
+**Coordination**: The preposition *wĩs* (with) doubles as a clausal coordinator for sequential or associated events: *Vivaelõ wĩs vi-shevelĩla-o* — "I sailed and he gave warning." For contrastive coordination, the phrase *sev ta* (without this one) begins the contrasted clause: *Vi-vaelõ, sev ta — nav vi-sulĩla* — "I sailed; but she did not land."
+
+### Reflexivity and Voice
+
+Bouéni does not have a dedicated reflexive morpheme. The language's reduction of case morphology eliminated the morphological reflexive that Proto-Western likely possessed. Reflexivity is now expressed syntactically.
+
+**Simple reflexive**: The appropriate subject pronoun is added as object. *Shevõ nõ* — "I cold myself" = I pull back, I withdraw. *Lhavĩl lo* — "he marks himself" = he takes his own bearings. In maritime speech, the reflexive is not vain; it is navigational. *Lhavĩl nõ* means to locate oneself with precision before proceeding.
+
+**Middle voice** — where the action benefits the subject without a stated object — uses the directional *avẽl* (along, parallel to) followed by the pronoun:
+
+*Vaelõ avẽl nõ* — I sail along my own [route] = I make my own way, I proceed on my own terms  
+*Briñĩl la avẽl la* — she navigates in fog along herself = she trusts her own reading
+
+A Bouéni sailor who says *vaelõ avẽl nõ* is not being arrogant — they are stating that they have a route and are following it. A sailor who cannot say this is one who doesn't know their route.
+
+**Passive**: Bouéni has no dedicated passive morphology. Passive meaning is achieved through omission: dropping the subject and placing the object first produces a patient-first reading. *Barr vi-kova-a* — "the ship has been covered" (literally: ship / perf-cover-3sgF, with no stated agent). This impersonal construction is common in weather reports and in the evidence-based narrative of fog navigation, where agents are often unknown or irrelevant.
+
+### Participial Forms
+
+Bouéni derives two participial forms from the verb system.
+
+**The perfective participle** uses the *vi-* prefix and gender agreement, but attached to a noun as modifier rather than as predicate. *Vi-vael-on barran* — "the crew that has sailed" (masculine plural perfective). *Vi-briñ-a barr* — "the fog-navigated ship" (the ship that has gone through fog; the ship bearing the mark of having been through it). In Stone Speech, the Blue Stones are occasionally addressed with perfective participles, treating them as having completed a voyage of their own.
+
+**The imperfective participle** uses the suffix *-ãn* (nasal vowel, marking ongoing action) attached to the verb root: *vael-ãn* = sailing, in the act of sailing. *Të vael-ãn barr* = the sailing ship (currently underway, not at anchor). *Briñ-ãn mar* = the fog-navigating person, a fog navigator in the act. The *-ãn* suffix does not trigger gender agreement on the participle itself but may agree when used predicatively: *Vi-kova-ãn, là briñ* — "the fog, in the act of covering" — said of active fog-cover moving in, as distinct from fog already arrived.
+
+### Directional Verb Compounds
+
+Bouéni forms compound verbs by prefixing prepositions to verb roots, producing verbs with specific directional or aspectual character. These are distinct from simply using the preposition as an adverb.
+
+| Compound | Literal | Meaning |
+|----------|---------|---------|
+| *ven-sulĩl* | toward-land | to head for shore (intention, not yet arrival; contrast *sulĩl* = to land) |
+| *de-briñĩl* | from-fog-navigate | to emerge from fogwork; to complete an opaque task; to come out the other side |
+| *avẽl-vaelĩl* | along-sail | to follow (to sail parallel to another course or vessel) |
+| *avẽl-liñĩl* | along-speak | to speak alongside; to provide the other account; to narrate in parallel |
+| *fõ-briñĩl* | within-fog-navigate | to navigate deep in fog; intensive: complete visual restriction, maximum attention |
+| *trã-vaelĩl* | through-sail | to cross a current, strait, or distance — arriving on the other side, not merely traversing |
+| *sul-lhavĩl* | on-mark | to mark on stone; to confirm binding; to commit permanently |
+| *brẽ-liñĩl* | before-speak | to speak first; to give the opening report; to state terms before negotiation begins |
+| *prul-vaelĩl* | after-sail | to follow in another's wake; also to sail out after a departure — to pursue, or to mourn |
+
+*De-briñĩl* is the most metaphorically productive: any prolonged, ambiguous, visibility-reduced difficulty can be described as fog to be navigated from. A merchant who has survived a complicated negotiation has *de-briñĩla-o* — has emerged from fog navigation. The literal and figurative uses occur in the same register without distinction.
+
 ## Core Vocabulary
 
 ### The Sea and Its Conditions
@@ -467,6 +547,26 @@ Bouéni emotion vocabulary is practical. It often names the outward navigational
 **sava-belv** — obligation-tangled; socially complicated. Said of families with unresolved inheritance, crews with competing duties, and trade agreements written by people who enjoy clauses.
 
 **noa-lell** — ready to return; said when a person has completed the internal part of a journey before the physical return has happened.
+
+### Body, Health, and Cold
+
+Bouéni body vocabulary organizes itself around the cold and the sea in ways that make its coastal origins visible even in vocabulary that has nothing to do with water.
+
+**shev-vel** — cold-in-the-body; physiological cold, hypothermia specifically, distinct from *shev-a* (going cold as fear or withdrawal). *Shev-vel* is measured by the hands and the lips: when a sailor's hands cannot work rope and their speech slurs, *shev-vel* has been reached. The condition is not considered shameful but is taken seriously. A navigator who ignores *shev-vel* in their crew is negligent. Treatment involves enclosure (*fõ brizel*), warm drink, and the presence of another body — specifics that Te Nillium navigational training transmits as clearly as any sailing instruction.
+
+**veld-skinn** — current-wind skin; the weathered, salt-hardened quality of skin after years of open-water work. Not an injury. *Veld-skinn* on a sailor's face and hands is the physical record of voyages. A shore official with soft hands and a sailor with *veld-skinn* occupy different categories even in conversations that have nothing to do with the sea.
+
+**sava-grond** — rope-long; the sustained deep-muscle ache from hours of sustained rope work, rigging, and hauling. *Grond* (long, of duration) in this compound becomes the long reach of pain through the shoulders and hands. Fishery workers know *sava-grond* as seasonal: it begins in earnest mid-harvest and eases only when the haul slows.
+
+**barr-kã** — ship-time sickness; the motion illness of a new sailor, specific to the first days aboard before the body adapts. A temporary condition. A sailor who still has *barr-kã* after seven days is considered constitutionally unsuited for open-water work. This assessment is made privately; the person is not insulted. They are simply never offered that kind of voyage again.
+
+**brizel-vel** — shelter-cold; the specific quality of warmth inside a properly protected space during bad weather — defined by contrast with what is outside. *Brizel-vel* is not the temperature of a place but the experienced quality of warmth-against-cold. A hearth fire in summer is not *brizel-vel*; the same fire during an ocean storm is.
+
+**de-barrana-a** — from the crew, departed; the condition of dying at sea without a body recovered. Grammatically it is the perfective of the directional compound *de-barrana* — literally "from-crewed, de-crewed." The phrase became conventional because it names the social fact: the crew continues, the person has left it. Te Nillium mortuary records use it formally.
+
+**vi-sulĩla** — has landed; died at home, peacefully, with the body present. The perfective of *sulĩl* (to land). Using a navigator's vocabulary for peaceful death is not accidental: the metaphor implies that life was a voyage and the person arrived where they intended. Applied to those who died in their household, in old age, in the presence of their *noamar*. The application is controlled — it cannot be used for violent deaths or deaths at sea, because those voyages did not end at land.
+
+**sẽ-noa-a** — will not return; applied to those lost in circumstances that prevent either *de-barrana-a* or *vi-sulĩla*. A disappearance without witness. A person who sailed and was never heard from. The phrase uses *sẽ* (ontological negation — not merely "has not" but "cannot, will not in any sense"). To say *sẽ-noa-a* of someone is to close the possibility of return formally, and is not said until there is genuine certainty that no account is coming. The Bouéni do not use it quickly.
 
 ### General Vocabulary
 
@@ -613,6 +713,20 @@ Nothing in the substrate describes the desert. Nothing describes agriculture. No
 
 The two facts do not prove a connection. Linguists who have noted them have not published a formal hypothesis. The Bouéni have their own account.
 
+### Substrate Grammatical Influence
+
+The substrate did not only contribute words. Several features of Bouéni grammar diverge from the patterns expected from the Proto-Western ancestor in ways that suggest structural influence.
+
+**The tripartite demonstrative system** — near (*ta*), visible (*se*), and beyond-knowing (*ia*) — expands the binary near/far system reconstructed for Proto-Western. The extra category (*ia*) is substrate-derived and names a spatial-epistemic zone that no other Azhoran language has. The category persists because it is useful in navigation: the difference between a landmark that is visible and one whose position is known but unconfirmed is not stylistic. In certain evidential contexts Bouéni grammar makes the distinction mandatory.
+
+**The *sẽ* particle** — ontological negation, "not and cannot be" — has no cognate in any other member of the Proto-Western family. Mittoli and its relatives have various forms of ordinary negation; none have a particle dedicated to negating categories of possibility. *Sẽ* may be substrate-derived. Its phonological shape (single syllable, open, vowel-initial) is consistent with the substrate profile. Its grammaticalization into the conditional *sẽl* (if, should it be the case) would represent a substrate particle becoming a structural element of grammar — a more penetrating influence than ordinary loanword borrowing.
+
+**Feminine grammatical gender for ships, fog, storms, the southern horizon, and webs** departs from reconstructed Proto-Western practice and from the convention of related languages. No other Azhoran language genders ships feminine. The substrate-speaking maritime people who preceded or merged with the Bouéni ancestors may have maintained a different gender-assignment principle — one in which maritime vehicles, weather phenomena, and the direction of origin share a grammatical category. If so, the Bouéni inherited not only vocabulary but the categorical thinking behind it.
+
+**Open syllable preference** — CVCV, CVC — is more pronounced in Bouéni than is predictable from Proto-Western, which tolerated more complex codas. The substrate words (consistently open-syllable) may have reinforced or extended a pre-existing tendency, or may have introduced it. Caeras Academy linguists who have attempted Proto-Western reconstruction have noted the open-syllable anomaly and attributed it variously to substrate influence, to initial-stress erosion of codas, or to a Proto-Western variant that Bouéni preserves more faithfully than Mittoli. All three may be partly true. The Academy has not committed to one reading.
+
+**Lhav as both noun and evidential**: The marker-stone word *lhav* that appears as a sentence-final evidential particle (*lhav* = confirmed by markers, records, navigation signs) may preserve a substrate construction in which the word for standing-stone functioned predicatively: "the marker stands for it," "it is marked." No other Azhoran evidential system grammaticalized a physical object this way. The result is that Bouéni speakers, when they use *lhav* as an evidential, are technically saying something like "the marker confirms" without any marker being grammatically present. The word carries its physical referent as a ghost inside its grammatical use.
+
 ### "We Came from the Sea"
 
 The Bouéni origin tradition — treated by the Bouéni as historical memory and by outside scholars as metaphor — describes the ancestors arriving on the coast of Bouén from the sea. Not from the interior of Azhora, not from the northern continent, but from the open ocean to the south. They came in ships. They found the peninsula. They stayed.
@@ -719,6 +833,38 @@ A fourth phrase, which some informants produce before stopping: *"Kelo vi-navell
 
 After these, informants stop — not from reluctance exactly, but in accordance with the principle encoded in the Lhav proverb: the marker does not speak to you. You speak toward the marker. The rest requires the stones to be present.
 
+## Language Acquisition
+
+Children acquire Bouéni in a sequence that reflects the language's genuine difficulty rather than a smooth developmental progression.
+
+**Nasal vowel acquisition**: Children produce oral vowels where nasal vowels are required well past age four. The pair *vel* (cold) and *vẽl* (the current, the deep pull) remains unstable until around five or six. Before the distinction is secure, children regularly say *vel-kelo* when they mean *vẽl-kelo* (current-star, the star that aligns with the Deep River's path). Bouéni adults find this charming: the southern star is cold, and the conflation is wrong in a way that is also right. Correction is gentle and never urgent — the distinction will clarify on its own when the child has spent enough time attending to actual cold things and actual currents.
+
+The production sequence for nasal vowels follows frequency of encounter: *-õ* (the first-person verb suffix, heard thousands of times daily in the speech of parents and elder siblings) arrives first. Children correctly produce *vaelõ* (I sail, said during play) before they can produce *vẽl* (the current) accurately, because the suffix is acquired through frequency while the standalone word requires phonemic category control. *ũ* (the rarest nasal vowel, appearing primarily in substrate-derived words) is consistently last. Azner Island children, surrounded by more substrate vocabulary in daily use, acquire *ũ* somewhat earlier than mainland children.
+
+**Evidential particle acquisition**: The four evidential particles are acquired in order of concreteness. *Ya* (directly seen) appears first, used liberally and often over-applied — children attribute *ya* to things they have been told about and have imagined clearly, which is technically incorrect and which produces gentle correction ("*shem* — you heard it, you didn't see it"). *Shem* (heard or signaled) follows, with children initially confused between *shem* as "I heard someone say this" and *shem* as "I heard the physical sound directly" — the blur between report and direct observation persists in some children until seven or eight. *Vel* (felt in body, inferred from physical conditions) requires systematic self-observation that most children don't stabilize until eight or nine. *Lhav* (confirmed by markers, records, established signs) is last, and is typically acquired in the context of learning the *ornel-kelo* star-table recitation — when children begin to understand that the marked world has spoken before them and that their reading of it is confirmation rather than discovery.
+
+A child who uses *lhav* correctly in a navigation context has crossed a threshold. The navigator who taught them will note it without ceremony.
+
+**The word *ia***: Young children use *ia* (out there, beyond knowing) for anything far away or outside their immediate sight. Adults recognize this and do not correct it until the child is old enough for open-water instruction, at which point the navigational specificity of *ia* — the direction of the southern horizon, the category of what can be approached but not yet confirmed — is taught explicitly. Adult sailors occasionally observe that very young children know what *ia* means more completely than adults do, because they have not yet reduced it to a particular direction. The observation is made with the dry fondness the Bouéni apply to things that are simultaneously true and annoying.
+
+**The *noa-liñ* shift**: The vocabulary shift that follows a child's first open-water crossing has a name: *noa-liñ* (return-speech) describes the changed quality of a child's sea vocabulary after they have been out of sight of land and come back. Certain words solidify. *Bou* (the deep) stops being an adult concept they are repeating and becomes a word that refers to something they encountered. *Lell* (clear enough, navigable) narrows from its loose meaning (usable, okay) to its precise navigational sense. Children who have sailed and returned are expected to use *sẽ-noa-a* correctly — to understand what it means to name someone who will not return — in a way that children who have not yet crossed open water are not expected to understand.
+
+## Wordplay and the Understated
+
+Bouéni humor is specifically an understated practice. The Bouéni character — warm at close range, opaque at distance — applies to jokes. A Bouéni joke rarely announces itself as a joke. It is delivered with the same level tone as navigational information and requires the listener to perform the same kind of reading they apply to fog: attending to what is present rather than what is stated.
+
+**The navigational double**: The most reliable Bouéni joke form takes a maritime term and applies it precisely to a social situation without flagging the shift. *Serv teñ* (open-ocean heart — disorientation, grief, exile) said of someone mildly confused at a social event is funny because it is both exact and enormous: calling a person lost at a party by the same term used for profound navigational disorientation. The humor is that the term fits perfectly at two scales simultaneously.
+
+***Lell* as a compliment**: Bouéni speakers use *lell* positively — it means genuinely useful, trustworthy, good enough to navigate by. Said of a merchant: *"Lo lell ya"* — "He is navigable; I've seen it" — is high praise. Said of food: *"Lell"* — workable, worth eating. Mainlanders, expecting either enthusiastic praise or polite silence, consistently receive *lell* as faint condemnation and leave confused. The Bouéni have noticed this pattern and consider it more information about the mainland than about their vocabulary.
+
+**The evidential as social comment**: Using *vel* (inferred from physical sensation, not directly observed) where context clearly demands *ya* (directly observed) is a way of maintaining a fiction of uncertainty about something obvious. A Bouéni elder who says "I infer from my physical sensations that the boat was badly moored" (*vel*) when they personally watched it wash away has not misspoken. They have declined to say directly what they know. The *vel* signals that the speaker is extending the benefit of navigational doubt to something that does not deserve it — which is a specific kind of social message with no equivalent gesture in Mittoli.
+
+**The *ia* dismissal**: *Ia* used to locate something whose location is obvious functions as an elegant refusal. "Where is the harbor master?" / *"Ia"* — out there, beyond knowing. This is not saying "I don't know." It is placing the person in the category of things that cannot currently be confirmed — which is either a statement of genuine exasperation, a coded comment on the harbor master's reliability, or a joke, depending on timing. The Bouéni distinguish between these uses by tone. Outsiders often cannot tell which is which, which the Bouéni consider accurate.
+
+**The *sẽ* in ordinary speech**: *Sẽ* (ontological negation — not merely "is not" but "cannot be, will never be") appears in jokes as precision exaggeration. Where a Mittoli speaker would say "that's very difficult," a Bouéni speaker in casual speech might say *"sẽ-lell"* — cannot be navigated, impossible to read as clear. The humor is that *sẽ* is serious vocabulary (sailors' oaths, substrate descriptions, the third death term) applied to a minor inconvenience. The mismatch between the weight of *sẽ* and the triviality of the situation is the joke. Bouéni speakers are not being melodramatic; they are being technically precise in the most excessive way available.
+
+**The proverb as response**: Bouéni proverbs are sometimes quoted as direct conversation responses in ways that are technically accurate and practically deflecting. "When will this be resolved?" / *"Nav shi ĩ-sulĩl, nav ma ĩ-shevel"* — not knowing who will land, not knowing what will warn. The proverb names the situation precisely while providing no useful information. This is not rudeness — it is a statement that the situation genuinely is what the proverb names, and that asking when it will resolve is asking for a weather prediction. The Bouéni consider it honest. The person asking usually wanted a date.
+
 ## Proverbs and Sayings
 
 Bouéni sayings are usually practical on the surface and metaphysical only after they have already been useful. A proverb that cannot help someone mend a rope, read weather, or survive embarrassment is unlikely to last.
@@ -788,6 +934,48 @@ Said when too many things are unresolved to plan. Not a despairing saying — it
 *Briñ nav liñĩl; briñ tevilĩl.*
 "Fog does not speak; fog is navigated by swell."
 Do not ask conditions to explain themselves. Read what they show. Used for teachers who over-explain and for authorities who speak at length when movement is needed.
+
+---
+
+*Vel nav ya; ya nav vel.*
+"The felt is not the seen; the seen is not the felt."
+Knowledge from the body and knowledge from the eye correct each other. A navigator who ignores one source because the other is louder has already made an error. Used in training and in academic arguments about evidence.
+
+---
+
+*Briñmar nav briñ; briñ nav briñmar.*
+"The fog-navigator is not the fog; the fog is not the fog-navigator."
+Said to navigators who begin to believe their expertise commands conditions rather than reads them. The fog does not know you. Used as a corrective to the overconfidence that gets sailors killed.
+
+---
+
+*Bou vi-sẽna-on brẽ liñ.*
+"The deep has known before language."
+Whatever you can say about the deep ocean, it already knew. Used before significant voyages and in arguments about the substrate — the language predates the language that names it.
+
+---
+
+*Sulmar nav sẽ-barran.*
+"Shore-person is not never-crew."
+A person who keeps others at sea is part of the crew. The boatwright, the smokehouse worker, the rope-maker, the harbor clerk. Said when shore work is being undervalued, and more specifically when sailors return and forget who kept the harbor for them.
+
+---
+
+*Ia nav shev-o; ia vi-briñĩla-o.*
+"Out there is not cold; out there has been navigated in fog."
+The deep and the far are not the same. The unknowable beyond-the-horizon is not frozen — it is simply not yet navigated. Said when fear and the unknown are being conflated, usually by people who have not yet been either afraid or at sea.
+
+---
+
+*De-briñĩla-a; nav ĩ-viña-a.*
+"She navigated out of fog; she has not yet come."
+Said of someone on a long passage whose return is expected but not yet visible. Not worried. Not certain. The correct attitude toward a delay that has not become a disaster.
+
+---
+
+*Lhav vi-lĩla-o brẽ nõ.*
+"The marker spoke before me."
+Used when a person arrives at a conclusion that the evidence made obvious and then claims credit for reasoning. The marker was there first. Used gently and also not gently, depending on the situation.
 
 ---
 
