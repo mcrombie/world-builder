@@ -1043,3 +1043,225 @@ Native Moreshi words follow the heavy-syllable rule: stress falls on the last sy
 *mirsa* — anchorage. Disputed origin: some scholars argue this is native Moreshi (root R-S-W: to anchor, to fix in place) that independently developed a nautical application; others argue it is an Iberos loan that back-formed a spurious Moreshi root. The canyon communities find this debate irrelevant. The oasis communities note that arguing about where a word came from does not help you anchor a ship.
 
 **What the dialect lost:** Coastal Trade Moreshi has weakened the gender agreement system — in port contexts where Iberos, Pyrosi, and Moreshi speakers are trading in mixed groups, full agreement marking becomes a source of confusion rather than clarity. Coastal Trade speakers in commercial registers drop gender agreement on adjectives, keeping it only on verbs. This strikes inland Moreshi speakers as something failing; it strikes Coastal Trade speakers as something working.
+
+## Extended Verb Morphology
+
+The base verb forms described in the Grammar section represent what Moreshi grammarians call the *mujarrad* — the bare root. Eight additional derived stems extend the same root through prefixation, vowel patterns, and gemination. These are the *mazid* (augmented) forms. Mastering them is the inflection point at which outside learners report the root system becoming genuinely productive rather than merely learnable — the moment when knowing three hundred roots suddenly means knowing several thousand words.
+
+Each form is demonstrated primarily using Ṣ-B-R (patience, endurance), with additional examples from roots established elsewhere in this document.
+
+**Form II — Intensification / Causation** (geminate middle consonant: CaCCaCa)
+
+*ṣabbara* — to train someone in patience; to cause endurance through repeated exposure to situations that require it. Caravan masters describe drilling apprentices not by teaching patience but by *ṣabbara* — placing them in situations where patience is the only possible response and observing who develops it. *Ṣabbara al-ṭariiq al-mayyit* — "the dead route trained him" — means a navigator learned endurance specifically because they were sent on an undocumented crossing that gave them no options.
+
+*ʕallama* (Form II of ʕ-L-M) is the most common Form II verb in daily speech. The base *ʕilm* means systematic knowledge; Form II produces "to cause knowing in another." Teaching is making knowing happen. The Form II existence of this verb is why Moreshi grammarians say: "you do not share knowledge; you cause it."
+
+**Form III — Associative / Mutual Action** (lengthen first vowel: CaaCaCa)
+
+*ṣaabara* — to endure together; to hold each other's patience across a difficult crossing. Individual patience is *ṣabr*; shared patience requires a different word. Canyon communities use *ṣaabara* for the teacher-practitioner relationship in Qadimuur training: both parties are enduring something, in relation to each other.
+
+*qaawala* (Form III of Q-W-L, to say) — to negotiate; to speak back and forth with a partner toward an agreement. Negotiation is the Form III of "to say." A deal is mutual speech that has converged on a point.
+
+**Form IV — True Causative** (ʔa- prefix: ʔaCCaCa)
+
+*ʔaṣbara* — to cause patience from outside; to stabilize a group through presence. *ʔaṣbarahum al-shayx* — "the elder made them patient" — implies an elder whose authority prevented a rash decision. Where Form II trains patience through process, Form IV imposes it through intervention.
+
+*ʔaraa* (Form IV of R-ʔ-Y, to see) — to show; to cause seeing. Showing and seeing share a root because showing is the act of making someone else see. You cannot show what you have not first seen.
+
+**Form V — Reflexive of Form II** (ta- prefix added to Form II: taCaCCaCa)
+
+*taṣabbara* — to school oneself in patience; deliberate self-discipline applied to one's own impatience. Caravan masters describe the navigators they trust not as naturally patient (*ṣabiir*, Form I adjective) but as *mutaṣabbir* — the Form V active participle — people who practiced their way to endurance. Natural patience is a gift. Practiced patience is a craft. The distinction is considered important enough to maintain separate words for it.
+
+Form V of M-R-Ḍ produces *tamaraḍa* (to feign illness) — already noted in the vocabulary section. It is the single most precisely specific derived verb in common usage: sick behavior deliberately applied to oneself.
+
+**Form VI — Reciprocal of Form III** (ta- prefix added to Form III: taCaaCaCa)
+
+*taṣaabara* — to shore each other up; mutual active endurance when neither party has patience to spare. Form VI implies both parties are simultaneously supporting and being supported. Canyon communities distinguish this carefully from simple Form III *ṣaabara*: in Form III, one party has patience to give; in Form VI, neither does, but the exchange functions anyway. A Caeras Valley linguist who documented this form wrote: "impossible to describe unless you have experienced it." The note survives in the Academy's field archive.
+
+**Form VII — Middle / Intransitive Process** (in- prefix: inCaCaCa)
+
+*inmaraṣa* — to spread of its own accord; to open naturally. *Al-ṭariiq yanmariṣu baʕda al-mawsim* — "the route opens after the wind-season" — carries no agent. The route becomes available because conditions allow it; no one clears it. Canyon peoples use Form VII of X-R-B exclusively for the Qadmaat: *inxaraba* — fell of its own weight, over time — rather than *xaraba* (something ruined it). They do not claim external agency in the ruins' collapse, and Form VII makes that non-claim grammatically precise.
+
+**Form VIII — Reflexive / Inchoative** (t-infix after first consonant: iCtaCaCa)
+
+*iṣṭabara* — to enter desert patience; to undergo the specific transition when a navigator's impatience breaks and they accept the actual timeline. Canyon tradition marks this transition publicly: *iṣṭabara al-muruuṣ* — "she entered desert patience" — is a formal acknowledgment that someone has become reliable in difficult crossings. Not resignation. Recalibration.
+
+*iʕtarafa* (Form VIII of ʕ-R-F, to know personally) — to confess; to acknowledge. The word for confession is the Form VIII of "to know personally" — you recognize something in yourself. Canyon medicine treats *iʕtarafa bi-al-maraḍ* (a patient acknowledging an illness) as a medical event with its own significance: diagnosis cannot proceed while the patient refuses Form VIII.
+
+**Form X — Estimative / Requestive** (ista- prefix: istaCCaCa)
+
+*istaṣbara* — to resolve on patience; to assess a situation and determine that endurance is the correct response, before the difficulty has arrived. Distinct from Form VIII (entering patience in the moment) and Form V (drilling oneself): Form X is a calculation made in advance.
+
+*istaxbara* (Form X of X-B-R: to experience, to gain knowledge through exposure) — to seek information deliberately; to send scouts. The *mustaxbir* (Form X active participle) is the intelligence-gatherer sent ahead of the season's first caravan to report on route conditions. The word for scout is not a root of its own; it is the Form X of "to learn through experience" — someone who goes out specifically in order to become experienced on behalf of others.
+
+---
+
+## Pastoral Vocabulary: The Dustback Herds
+
+The Moroshé dustback — large, short-legged, heavily coated, capable of converting thorn scrub and dry-basin grass into milk, calves, hide, and draft power — is the economic foundation of nomadic desert culture. A household's wealth is counted in dustbacks before it is counted in coin. An oasis community that holds coin but cannot move animals through a dry season is not wealthy by nomadic standards; it is merely comfortable until the comfort ends.
+
+The Moreshi name for the dustback is **ghubr** (root **Gh-B-R**: to become dust-coated through long exposure; to be grey-browned by the desert). The animal is named for the way a long crossing coats it — the same root that produces *ghubaar* (dust) yields the word for the creature that is always covered in it. The Mittoli name "dustback" is a translation of what the word already means.
+
+| Root | Principal words | Notes |
+|------|----------------|-------|
+| **Gh-B-R** | *ghubr* = a single dustback; *ghubaaraat* = the herd; *ghabbaarr* = dustback herder (agent noun) | The herder title *ghabbaarr* is distinguished from *raaʕii* (general shepherd); a *ghabbaarr* specifically manages dustbacks and knows their route-memory |
+| **N-T-J** | *naatij* = a productive animal; *nataja* = gave birth or yielded; *intaaj* = the season's yield | Used specifically for the dustback's productive output — milking, calving. The root measures an animal by what it produces, not what it is |
+| **R-ʕ-Y** | *raʕy* = grazing, pasture; *raaʕii* = herder; *marʕaa* = grazing ground; *marʕaa al-ghubr* = a dustback-specific territory | Grazing territories are held communally by herding families and their boundaries are oral, not written. A *marʕaa al-ghubr* boundary dispute goes to the *mashyaxa*, not to outside arbitration |
+| **Q-Ṭ-ʕ** | *qaṭaʕa* = to traverse; *qiṭʕa* = a crossing-section; *qaṭiif* = the distance one dustback herd can manage between water points | The nomadic unit of pastoral distance is animal-specific, not geographic. Two herders saying "three *qaṭiif* from the well" may mean different absolute distances depending on herd condition and season |
+
+**Counting dustbacks:** Nomadic Moreshi uses an alternative counting register for livestock above six. The series *waḥd, zawk, thulth, rabʕ, xamis, sitta* covers one through six; above this threshold, counts shift to phrases built on *ṣafwat* (the prime group: animals in peak condition) and *zaʕf* (the trailing group: older, slower animals). The total is given as "*ṣafwat* of [number] and *zaʕf* of [number]." This is not imprecision; it is more information than a raw count. A herd of twenty with a *zaʕf* of twelve is a different economic situation than a herd of twenty with a *zaʕf* of three.
+
+**The dustback calendar:** Nomadic communities track seasonal events by herd behavior rather than purely astronomical observation. *Mawsim al-wilaada* (birth season) and *mawsim al-naql* (moving season) are more practically urgent than the eight-season astronomical calendar. The two calendar systems coexist in the same community without conflict; they track different things. A caravan navigator uses the astronomical calendar; a herder uses the dustback calendar; a community that does both keeps both.
+
+**On the dustback's route knowledge:** Canyon communities maintain that the dustback knows certain things before its herder does. *Al-ghubr yaʕrifu maa laa nasmaʕu* — "the dustback knows what we do not hear" — is applied when animal reluctance precedes human understanding of a problem: a water source that has shifted, a route with a subsurface collapse, a sand condition that will not bear the weight of a loaded herd. A *ghabbaarr* who overrides their animals' reluctance without first investigating its cause is described as having forgotten which one of them has been walking these routes longer.
+
+---
+
+## Silence as Communication
+
+Moreshi encodes silence at multiple registers — grammatical, practical, ritual. This is not incidental. The desert is not quiet (wind, sand-movement, canyon acoustics, the sound of a simoom at five miles), but it teaches a specific relationship between speaking and meaning. Moreshi structure reflects that relationship at every level.
+
+**The implicit copula**
+
+The nominal sentence — subject juxtaposed with predicate, no linking verb — is the most common sentence type in Moreshi. *Al-maaʔ ḥayaat* (the water / life) needs nothing between its two nouns. The silence carries the assertion. Mittoli requires a verb; Moreshi declines to insert one not because the equivalent word doesn't exist but because inserting it would introduce doubt where none belongs. A Moreshi speaker who says "water *is* life" has qualified the statement — implies it might need proving.
+
+Moreshi speakers learning Mittoli report finding the copula verb slightly suspicious, as if the speaker is not certain enough of their assertion to let it stand without support.
+
+**The simoom protocol**
+
+When *simoom* is spoken — by anyone in the caravan, cook or navigator, apprentice or master — the caravan stops. No one speaks. The reason is physical: opening the mouth admits sand. But the protocol encodes something broader: in genuine emergency, language stops. Action continues (face animals from the wind, cover nostrils, shelter beneath them) but is conducted in silence or gesture. A caravan that speaks during a simoom halt has demonstrated that it doesn't yet understand what the desert is.
+
+**The gesture register**
+
+Extended desert crossings develop a functional gesture vocabulary for conditions where speech is impractical: sandstorm, extreme distance, signal across a canyon floor. The register is not standardized across all route traditions, but certain signals are universal:
+
+| Gesture | Meaning |
+|---------|---------|
+| Flat hand, palm down, horizontal sweep | *maaʔ faasid* — corrupted water; do not drink |
+| Index finger vertical, then rotated to point down | source is below this point; dig |
+| Two-handed spreading gesture, palms outward | route is alive but open to another group's claim; proceed with acknowledgment |
+| Both hands crossed at wrist, held still | full halt; *qif taam* without the word |
+
+The gesture register has no grammatical structure, no root system, no capacity for abstract meaning. It is a survival vocabulary that functions because everyone on a given route tradition has learned the same conventions. A navigator who does not know the gesture register of the caravan they have joined is a liability. Not because they can't communicate — they can, slowly, with words — but because they cannot be signaled to in time.
+
+**Silence in council**
+
+The *mashyaxa* has no word for abstention. A member who does not speak is recorded as silent. Silence is the record of abstention, and it carries more weight than formal abstention in Mittoli council practice: a *shayx* who is silent when a question touches their specific domain of knowledge is understood to hold an opinion they are not yet ready to state — not that they have no opinion. The silence has a shape. Other council members read it.
+
+**Silence at the ruins**
+
+*Al-xaraabaab muʕallim al-ṣamt* — "the ruins teach silence" — is not poetic in the Moreshi reading. The ruins are a place where speaking feels incorrect; not prohibited, not dangerous, but wrong in the way that speaking in a space not built for your voice is wrong. Qadimuur practitioners describe a specific silence that must precede the ritual register: the site must be entered in ordinary quiet before Qadimuur is appropriate to speak. The sequence is: silence, then the register, then silence again. A practitioner who moves from ordinary speech directly into Qadimuur is considered to have begun from the wrong position. What they say may be correct. Where they say it from is not.
+
+**Silence in the poetry**
+
+Moreshi poetry rhymes on the final consonants of roots, not on vowel sounds. The vowels — which the abjad script omits and spoken Moreshi treats as secondary — are, in the poetic tradition, what silence is filled with. The consonants are the permanent structure; the vowels are the breath that momentarily makes the structure audible. A Moreshi poet working with root rhyme is building poems out of permanent things. The vowels are decoration. The silence around the consonants is the poem.
+
+---
+
+## Oath-Taking and Sworn Speech
+
+Moreshi oaths are addressed upward and outward — to sky, to witnesses, to the duration that outlasts the speaker. The Mittoli *galoss-azh* (enduring deal sealed at a threshold) and the Grassic hand-to-ground oath both address horizontal relationships. The Moreshi tradition addresses the vertical — what is above and what precedes.
+
+**The nafs oath**
+
+The simplest sworn statement is made *bi-nafsi* — "by my breath-self." To speak by the *nafs* is to stake the self on the statement's truth. This is the oath form used in caravan emergency — no witnesses required, binding in the moment, too light for property contracts and too personal for diplomatic agreements. A person who makes a nafs oath and breaks it has not merely broken an agreement. The construction says: they have broken themselves.
+
+**The sky oath**
+
+Formal agreements are sworn *taḥta as-samaaʔ* — under the open sky — with a minimum of three named witnesses. The sky is the fourth witness: it has no voice to confirm but no power to forget. Stars mark the hour, and a complete sky oath includes a celestial reference establishing the time in a way that cannot be disputed by later parties: *fii waqt al-Qalb al-Muruuṣ fawqa umm al-ṭuruq* — "at the time the desert's heart is directly above the mother road." The polar star's position is the timestamp. This is precision, not ceremony.
+
+Writing an agreement is not a sign of trust in desert tradition — it is a sign that the parties do not expect to meet again under the same sky. A written contract implies the witnesses will not be available. Oral contracts made under sky with named witnesses are considered more binding by many communities, not less: the witnesses carry the terms, and the stars mark the time, and both are harder to misplace than a document.
+
+**The water oath**
+
+*Bi-maaʔ al-maʕan* — "by the spring's water" — is the strongest oath form. Springs are animate, ungovernable, essential, and witnesses in the Qadimuur sense of animate agreement: they are present, attending, and older than the speaker's lineage. To swear by a spring is to swear by something that will be there long after you are not.
+
+Breaking a spring oath is described in canyon tradition as having consequences that carry through generations. Outside researchers translate this as reputation damage; canyon practitioners do not entirely frame it as metaphor. They do not elaborate.
+
+**Oath-breaking vocabulary**
+
+*Xaana* (root X-W-N) — to break faith; *xiyaana* = betrayal; *xaaʔin* = oath-breaker. The root connects to words for internal corruption: materials that rot from within, routes that fail at a hidden subsurface weakness. An oath-breaker is not simply someone who did something wrong — they are something that appeared to be one thing and was another. The linguistic category is structural failure, not moral failure.
+
+*Naqs al-ʕahd* — "diminishment of the covenant" — is the formal council term. *Naqs* implies reduction of something that should be complete: an oath is complete when made, and breaking it is described as making it incomplete retroactively. The breaker has done damage to the past.
+
+**What oaths cannot compel**
+
+Desert tradition holds that an oath cannot override *ḍiyaafa* — the hospitality obligation. If you have sworn to harm a traveler who is now your guest, *ḍiyaafa* takes precedence for the full three days of hospitality. The canyon communities' resolution: the hospitality obligation terminates the oath at the moment of the traveler's arrival. The oasis communities' resolution: the oath was void from the moment it was sworn, because no legitimate oath can have an impossible object. The two resolutions reach the same outcome by different routes, which both communities acknowledge and neither finds troubling.
+
+---
+
+## Language Acquisition: Learning the Root Mind
+
+Children learning Moreshi as a first language show a developmental pattern that linguists from outside the tradition find unexpected. The sequence is not: words, then grammar. It is: skeleton, then pattern, then transparency.
+
+**Phase one — consonantal mapping**
+
+Young children produce words as consonant skeletons before they produce them with correct vowels. *K-T-B* before *kitaab*. *Ṣ-B-R* before *ṣabr*. This is not a universal feature of language acquisition — Mittoli-learning children acquire words as whole units, with consonant and vowel together, and their errors are mispronunciations rather than consonant-correct, vowel-variable productions. Moreshi-learning children appear to acquire the root first and vowel it second. The implication: they are mapping the semantic field before mapping the specific word.
+
+**Phase two — pattern overextension**
+
+Once children acquire a formation pattern, they apply it to all roots regardless of whether the resulting word exists. A child who has learned *rammaal* (sand-reader, CaCCaaC agent noun from R-M-L) and *najjaam* (star-reader) will form *qawwaam* from Q-W-L — a plausible but nonexistent "speech-professional." The error is internally coherent. It is corrected not because the pattern is wrong — the pattern is right — but because no such word has been established. This phase can be disorienting for outside parents who married into Moreshi-speaking communities: the child is making up words that should exist and don't.
+
+**Phase three — root transparency**
+
+At some point, specific to the individual child and not predictable from earlier development, the root system becomes transparent. The child stops encountering words and starts encountering roots that the words are made of. Moreshi communities track this transition as the primary developmental marker. Before it, a child is learning Moreshi. After it, a child thinks in Moreshi.
+
+Adults who passed through this transition report it in retrospect as a physical sensation: not learning a new fact, but suddenly seeing the structure underneath things they already knew. The metaphor used most commonly in canyon communities — which have had longest to develop a vocabulary for the experience — is *wuquuʕ fii al-muruuṣ*: "falling into the expanse." The surface felt solid. Then it didn't. Then you were inside it.
+
+**Canyon children and the [r] / [ʀ] distinction**
+
+Canyon children acquire both r-sounds early, before the semantic distinction is consolidated. They use both sounds in play and alternate between them without apparent system. The point at which a child's [r]/[ʀ] usage becomes systematically correct — tracking the singular/cyclic distinction — is treated as a distinct developmental milestone, comparable to the root-transparency threshold in non-canyon communities. Adults track it carefully. A child still alternating sounds unsystematically at an age when peers have consolidated is watched — not for deficiency, but for the specific moment when it resolves. It always resolves. Canyon community memory does not record a case where it did not.
+
+**What the acquisition pattern reveals**
+
+Moreshi children learn the abstract root structure as a framework before they learn specific words. The words are applications of a system the child already holds. Mittoli children learn words first and may or may not later derive a grammar from them. The two approaches produce speakers with different cognitive relationships to their language: a Mittoli speaker who encounters an unfamiliar word must look it up or infer from context. A Moreshi speaker who encounters an unfamiliar word on a familiar root makes an inference and is, most of the time, correct.
+
+---
+
+### Grief, Mourning, and the Language of Loss
+
+**N-D-B** — lamentation, calling out to the absent
+
+*nadaba* = to lament; *nidaaʔ* = a calling-out, a cry toward someone who is gone; *naadib* = one who laments publicly. Public lamentation (*nadab*) is a gendered tradition in oasis communities: women lead the formal lamentation at death, which is understood to be the voice of the community's grief made audible. Men's grief is expressed primarily through *ṣamt* (silence) and subsequent behavior — the routes walked differently, the year of modified practice, the decision that references the dead. The distinction is not hierarchy; it is register. Both are grief. They use different forms.
+
+**Ḥ-Z-N** — grief, the weight of loss
+
+*ḥuzn* = grief; *ḥaziim* = grieving; *maḥzuun* = one who is under grief. The root is related to the root for heaviness. *Thaqiil al-ḥuzn* (heavy with grief) uses the same construction as *thaqiil al-maraḍ* (heavy with illness) — consistent with canyon medical framing. Both are conditions of accumulation: something that should move has stopped. The treatment, in both cases, is directed movement — grief is metabolized through action, not through stillness.
+
+**ʕ-Z-Y** — condolence, accompanying in grief
+
+*ʕazzaa* = to offer condolence; *taʕziya* = condolence; *muʕazziiy* = one who accompanies grief. The act is framed as accompaniment — not comfort, not guidance out of grief, but walking with someone in it. *Taʕziya* visits are conducted in silence or near-silence for the first three days; speaking to the bereaved is done only when the bereaved initiates. This is not social awkwardness; it is correct practice. A person who speaks comfort into someone else's grief before being invited is described as *mutamaʕziya bi-ghayri waqtihaa* — "condoling out of its time." The grief has not yet made room for condolence. You are speaking into a space that has not opened.
+
+**The mourning period vocabulary:**
+
+| Term | Meaning |
+|------|---------|
+| *ʕidda* | the period of altered practice; root ʕ-D-D (to count) — grief has a counted, numbered duration |
+| *ʕidda al-wafaa* | the mourning period following death; includes suspension of normal trade, changes in dress, avoidance of certain route-associated words |
+| *al-inqiṭaaʕ* | "the cutting-off"; the formal end of mourning, marked by the first deliberate return to normal practice — the first cup of coffee made at full attention, the first route-word spoken aloud. The end of mourning is not the end of grief; it is the decision to move again |
+
+**The three verbs for dying:**
+
+*Maata* — the bare fact of death. It happened. *Tawaffaa* (root W-F-Y: to complete, to fulfill) — used for a death that completed the person's work; an elder who died at the end of a full life. The word implies that what was supposed to happen, happened in full. *Raḥala* (root R-Ḥ-L: to depart, to unpack a tent and leave) — used for deaths that feel like departures: a caravan leader who went into the desert and did not return, a young person who died on a crossing. *Raḥala* carries no more sadness than the others, but it carries more motion. The person was going somewhere. They are still going.
+
+---
+
+## Canyon Petroglyphs: The Texts Before Language
+
+The canyon walls of the deep Moroshé interior carry inscriptions so old that the canyon peoples do not claim to read them. These are distinct from the Khaṭṭ script (documented, learnable), distinct from the Qadimuur (spoken in specific ritual contexts), and distinct from any other known Azhoran writing tradition. The Academy's term for them is *al-Nuquush al-Qaadiima* (the ancient markings). The canyon peoples' term is *maa kataba al-waadi* — what the canyon wrote. This is not metaphor; it is the position they maintain when asked directly. The canyon produced the markings. The question of how is not one they ask.
+
+**What can be documented:**
+
+The marks are incised rather than painted. Many appear in locations requiring significant difficulty of access — not for visibility (the marks are not visible from below) but as if the location was specifically required. Several canyon navigators report being able to identify, approximately, which cliff faces contain markings by a particular quality of acoustic return in the canyon below: carved surfaces reflect sound differently from uncarved stone at the same distance. This method is practiced, not explained.
+
+The marks include: recurring forms that may be symbols; spatial groupings that may be maps; single-mark concentrations that may be records of presence. Canyon communities do not claim certainty about any of these interpretations. The Academy's linguists who have worked in the canyon country are similarly unable to make strong claims. The marks resist the analytical approaches available.
+
+**The tradition of sitting with them:**
+
+Canyon communities maintain a specific practice regarding the petroglyphs: *al-jalsa ʕinda al-nuquush* — sitting at the markings. Not studying, not copying, not analyzing. Sitting in proximity and remaining quiet for a period that extends past the point of comfort. The practice has no stated goal. When asked what you learn from sitting with the petroglyphs, practitioners give answers that the Academy's field notes record variably but consistently: you learn that you are sitting with them.
+
+The Caeras Valley linguist who spent eleven years in the canyon country sat with the petroglyphs on multiple occasions. Her published work does not discuss what she learned by doing so. A paragraph in her private correspondence, quoted in several academic discussions of the canyon tradition, is typically cited as evidence of methodological breakdown under field conditions. Canyon practitioners, shown the paragraph, described it as accurate and did not find it unusual.
+
+**Relationship to the Qadimuur:**
+
+Canyon practitioners are explicit that the Qadimuur is not the language of the petroglyphs. They may be related — the Academy's hypothesis — but practitioners hold these as two categorically different things. The Qadimuur is a language they know and use. The petroglyphs may contain a language, or may contain something that is not a language. The distinction is considered important. The Qadimuur can be spoken; a practitioner holds its words and speaks them in the correct context. The petroglyphs cannot be spoken; they predate the speakers. The Qadimuur speaks *toward* the ancient presence. The petroglyphs may be what the ancient presence left behind for a later language to speak toward — the record of what was said before there were people to receive it, preserved on the canyon wall until a language grew old enough to address it.
