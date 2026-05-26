@@ -1026,3 +1026,192 @@ West Pyrosi has a large body of proverbial expression built around the register 
 *Ell-solrath kael-tossoss* — "speech-debt burns at the elevated register." What you owe for language used badly weighs on you more than you realize and is visible to others before it is visible to you. Applied when someone's unresolved *ell-solrath* is being observed by those outside it.
 
 *Vel-kěl; vel-llyryr* — "the water returns; it returns through the body." Said to those who have lost something and been told it will come back. The proverb is not comfort exactly; it is a reminder that return is in the nature of things, that patience is not passive but is itself a form of readiness. The water does not hurry; nor should you.
+
+---
+
+## Agricultural and Seasonal Vocabulary
+
+West Pyrosi farming knowledge is the most developed technical register in the language outside the Fire Memory itself. The volcanic terraces have been worked long enough that the vocabulary for reading them has become specific to the point of untranslatability: outside scholars who attempt to describe West Pyros agricultural practice in Mittoli lose detail at every step, because Mittoli soil vocabulary was developed for river-plain farming and carries assumptions about what soil is that do not apply to volcanic terraces.
+
+The agricultural vocabulary intersects with the Tallyss register at several points — the words for soil layers (*llos*, *pyrant*, *lleth*) carry both technical farming meaning and ritual meaning simultaneously. A farmer who asks *llethvan* before planting is using a Tallyss word in an ordinary farming context. The word has not been translated out; it has migrated into practice. West Pyrosi speakers who are asked whether planting-time *llethvan* is ritual or practical typically treat the distinction as unhelpful.
+
+| Pyrosi | Class | Meaning | Notes |
+|---|---|---|---|
+| *pyrant* | II | the living productive soil layer; planting-ready volcanic ground | Already in Tallyss vocabulary; entered agricultural speech without changing meaning. The specific layer of volcanic soil above the *llos* (deep ash) and above the *lleth* (deep hot ground) — the middle zone that receives seed. Reading its color and texture is the primary diagnostic skill of West Pyros farming |
+| *pyrant-vel* | I | the moment of planting-readiness; when the soil signals it will receive | *Pyrant* + *vel-* (the rising; the return). A state, not a date — the soil arrives at this condition in its own time. A farmer who plants by the calendar rather than the *pyrant-vel* is considered either outside the tradition or in a hurry they cannot afford |
+| *llosset-tal* | II | the volcanic mineral sublayer; the stratum that holds residual heat | *Llosset* (settled ash) + *tal* (fire). The dark layer at depth that radiates warmth into the productive *pyrant* above. Read by smell and by hand temperature; cannot be accurately assessed from the surface |
+| *kolvell-mor* | II | fumarole calendar; the seasonal reading of steam venting | *Kolvell* (fumarole breath) + *-mor* (measure; Mittoli loanword). The practice of using fumarole activity patterns — timing, volume, sulfur content — as an agricultural forecasting tool. Maintained by the *talmarr* and consulted before major planting decisions |
+| *vel-pyrant* | I | the return of soil productivity after a fallow or damage year | *Vel-* (return) + *pyrant* (living soil). Not recovery in the Mittoli sense of gradual healing; in Pyrosi understanding the productivity was latent throughout the fallow, not absent. The *vel-pyrant* is the latent made active, not something regenerated |
+| *llos-oss khovell* | II | the deep ash record; volcanic soil stratigraphy readable from a terrace cut | *Llos-oss* (the ash that has settled into permanence) + *khovell* (the dark color of cooled volcanic stone). The layers visible in a terrace cut, each representing a volcanic event. West Pyros farmers who dig terrace footings are required to leave a named representative to read the *llos-oss khovell* before construction covers it. This is not law; no authority enforces it. It is what is done |
+| *talyr-azhoss* | II | the burn-clearing cycle; controlled fire used to prepare terrace margins | *Talyr* (burning) + *azhoss* (the year cycle; Mittoli loanword). Burn-clearing in West Pyros is not done at a fixed date; it is done when soil temperature, moisture content, and fumarole activity together indicate the correct moment. The *tossvorr* (Tallyss: fire that has completed what it was for) is spoken at the end of the clearing |
+| *vel-kěl mor-eth* | I | the seasonal drainage measure; the reading of terrace outflow | *Vel-kěl* (the water that returns) + *mor-eth* (at the place of measure). West Pyros terraces are engineered for drainage of winter rain and snowmelt; the rate of drainage is read each spring as a predictor of season moisture. Communities in the same ridge system share *vel-kěl mor-eth* data through the Galan market networks |
+| *pyross-vel* | II | the ash return; what falls on the terraces after distant volcanic events | *Pyross* (ash) + *vel* (return). Ash falls from upland eruptions onto the lower terraces in quantities that can be read as beneficial (thin coating, mineral supplement) or damaging (heavy deposit, smothering). Distinguishing which requires reading the ash composition by color and texture. This is *llyr-ell* knowledge, not written anywhere accessible outside the farming households |
+| *llossan-vel* | I | a farmer who has returned to volcanic homeland after long absence | *Llossan* (one of the ash-folk) + *vel-* (return). The word applies specifically to those who left and spent long enough away that their *llyr* for the soil needs to be reacquired. The *llossan-vel* is expected to work a full season alongside existing practitioners before being consulted; the soil's *llethvan* must be re-learned, not assumed |
+
+### The Twelve-Day Agricultural Cycle
+
+West Pyros agriculture runs on a twelve-day subcycle matching the Pyrosi numerical base. The subcycle does not correspond to a moon phase; its origin is astronomical (Ossian's twelve-year orbit, subdivided) and has become agricultural by practice rather than by calculation.
+
+Each twelve-day period is named for what the volcanic soil typically does in that period across the agricultural season. The names are technically conditional — "what the soil does when conditions are correct" — but are used practically as though fixed, with the understanding that a *talmarr* consultation is needed when the soil is not doing what the period name suggests.
+
+The subcycle names use Tallyss vocabulary that has not transferred into ordinary Pyrosi:
+
+| Subcycle | Tallyss name | Meaning |
+|---|---|---|
+| First (deep winter) | *Lleth-oss-vel* | The stone's waiting; deep cold |
+| Second | *Velkhoss-tal* | The fire sleeps knowing it will wake |
+| Third | *Azhkěl-nor* | The water has not yet been asked |
+| Fourth (late winter) | *Pyrant-nil* | The soil has not yet received; pre-*llethvan* |
+| Fifth | *Llethvan-vel* | The latent willingness is rising |
+| Sixth (first planting) | *Talorr-gall* | The ground's consent has crossed; plant now |
+| Seventh | *Kolvell-tal* | The fumarole-breath and the fire together |
+| Eighth | *Pyrant-kěl* | The living soil and the water together |
+| Ninth (high season) | *Vel-toss* | The burning arrival; peak growth |
+| Tenth | *Talross-kělyr* | The flowing fire has returned to water |
+| Eleventh (harvest) | *Tossvorr-vel* | The fire completed what it was for; return |
+| Twelfth | *Pyross-elloss* | The ash speaks the year; reading-time |
+
+The twelfth subcycle — *pyross-elloss* — is the period at year's end when the farming household reads its season: what was planted, what grew, what the soil showed that the planting had not expected. The *llyr-ell* agricultural knowledge is tested against what the ground actually did. Where they diverge, the ground is understood as correct; the *llyr-ell* is supplemented, not the ground's behavior explained away. This is the agricultural version of the observation that runs through all Pyrosi practice: the fixed thing teaches the living thing, not the other way.
+
+---
+
+## East Pyrosi: A Closer Account
+
+East Pyrosi is not simplified West Pyrosi. It is a different outcome from the same starting point, the way a river that has crossed open ground arrives differently than one that has cut through volcanic rock. Both had the same water; what happened to it is not the same.
+
+The transit corridor produced a language optimized for being useful to people who do not share a language — which means its most significant adaptations are the ones that reduce barrier to entry. The register system is vestigial not because East Pyrosi speakers lack registers but because a language used as a second tongue by half its speakers cannot require prosodic precision from those speakers. The simplified East Pyrosi register distinction — *khaen* (the respectful tone, a fusion of *vaer-* and *kael-*) and *vel* (the ordinary tone, equivalent to *sol-*) — is fully intelligible to West Pyrosi ears as a rough approximation. It is not received as warmly.
+
+### East Pyrosi Grammar Notes
+
+**Pronoun borrowing**: East Pyrosi has introduced explicit freestanding pronouns — *mi* (I), *tu* (you singular), *nu* (we), *so* (they) — from Iberos coast contact language, because unregistered speech requires marking person explicitly when verb agreement carries social meaning a speaker cannot afford to get wrong. West Pyrosi, which encodes register in the verb, treats explicit pronouns as redundant in formal contexts. In East Pyrosi they are necessary.
+
+**Noun class simplification**: Class I/II distinction is maintained in verbs but has largely disappeared from noun case marking. East Pyrosi speakers use Class I case endings for all nouns except in formal speech, where Class II *-oss* nominative persists for named places and institutions. A West Pyrosi speaker can follow East Pyrosi case marking; an East Pyrosi speaker who speaks West Pyrosi casually omits Class II marking consistently and is identifiable immediately.
+
+**The residual latent**: The latent aspect *lleth-* has not disappeared from East Pyrosi — it survives in trade and commercial contexts specifically, because transit-corridor commerce has a genuine use for "this is inevitable, not yet expressed." A merchant who says *lleth-vel-kěl prez* ("the price is latently returning — it will rise again") is making a serious commercial statement, not performing Fire Memory ritual. The latent survives because the concept survived; what the transit corridor stripped is the register, not the reality.
+
+### East Pyrosi Trade Vocabulary
+
+| Pyrosi | Meaning | Notes |
+|---|---|---|
+| *prez* | price; the going rate | Iberos coast borrowing; sits in Class II by default (all loanwords are fixed things — arrived, not moving) |
+| *kěl-prez* | price in motion; a rate not yet fixed | *Kěl-* (flow) + *prez*. Describes a price still negotiable or subject to conditions. Contrast *oss-prez* (a fixed price; what a stone tablet says) |
+| *oss-prez* | fixed price; a rate written down | *Oss-* (mark; permanent record) + *prez*. Used for prices stated in contracts; legally binding in Galan trade agreements by convention |
+| *gall-kěl* | a deal that has crossed; completed transaction | *Gall-* (to cross, complete) + *kěl* (flow). The completion formula: the exchange has happened; both sides have given what they promised. A *gall-kěl* is acknowledged aloud by both parties in Galan market practice |
+| *vel-kěl prez* | price that returns; a seasonal or cyclical rate | Specific to goods whose price follows predictable cycles (harvest produce, seasonal imports). A merchant citing *vel-kěl prez* is making a latent claim: this is what the price will be when conditions repeat |
+| *vaerran-kěl* | a guest-trader; someone on their first passage through | *Vaerran* (guest under active welcome) + *kěl* (flow). Used for merchants on their first transit through a town; they are guests, not yet *solyan* (familiars). The East Pyrosi distinction between *vaerran-kěl* (first passage) and *kělvan* (established river-trader) determines how prices are quoted and what credit is extended |
+| *kělvan* | an established river-trader; one who follows the water routes | Pre-existing West Pyrosi word with specific trade-register meaning in East Pyrosi: not just someone who trades by water, but someone who has made enough passages to have a known reputation. A *kělvan* is quoted the *kěl-prez*; a *vaerran-kěl* is quoted higher |
+| *nil-gall* | a broken deal; transaction not completed | *Nil-* (negation) + *gall-* (crossing). A *nil-gall* in Galan market practice carries consequences: the party who voided the deal is marked in the *oss* record. Not law; reputation. But East Pyrosi commerce runs on reputation more than law, because the parties are often passing through |
+| *llos-kěl* | ash-water; trade goods originating from volcanic terraces | Specifically Pyros-origin produce in Iberos coast trade networks. A category in Galan market records; merchants who specialize in volcanic-terrace goods are called *llos-kělvan* |
+| *pyrossyr-gall* | to fix a transaction permanently; to make it part of the record | Compound verb: *pyrossyr* (to burn permanently into record) + *gall-* (completion). The formal act of entering a completed trade into the Galan ledger. An exchange that has been *pyrossyr-gall* cannot be disputed without challenging the ledger directly; challenges require two *ossyan* witnesses to testify against it |
+
+The Iberos-coast contact vocabulary in East Pyrosi is handled with the same unselfconsciousness that characterizes transit-corridor cultures everywhere: words that are useful become part of the language without being marked as foreign. A West Pyrosi scholar reading an East Pyrosi trade document can identify the loanwords by their failure to follow the Proto-Western correspondence rules — *prez* has no Pyrosi cognate; *gall-* does — but an East Pyrosi speaker making a deal does not experience the sentence as a mixture of linguistic heritages. It is simply the language trade is done in.
+
+---
+
+## Emotional and Relational Vocabulary
+
+The register system handles what other languages address through emotional vocabulary: the relationship between speakers is encoded in the grammar, not the word-stock. This means West Pyrosi has less explicit emotional vocabulary than might be expected from a culture with elaborate social forms — the register already says much of what emotion-words would say elsewhere. What emotional vocabulary exists is therefore precise in a specific way: it names states the register cannot reach.
+
+| Pyrosi | Class | Meaning | Notes |
+|---|---|---|---|
+| *lleth-sol* | II | the latent familiar; what underlies a relationship not yet expressed | *Lleth-* (latent) + *sol* (familiar register). The unspoken understanding between two people who have not yet moved into Familiar register but are already there in everything but grammar. Not a compliment; a description. Two people who have *lleth-sol* are in the social equivalent of the latent aspect: the familiarity exists; it has not yet surfaced |
+| *neth-sorren* | I | intimate pain; distress that belongs inside the home circle | *Neth* (home circle) + *sorren* (urgent pain). Pain that cannot be expressed honestly in Social or Familiar register — it requires Intimate. Used when someone carries *neth-*register pain into a public setting: the speaker is observed to be holding what should be said at home |
+| *tal-solrath* | II | fire-register-debt; the weight of a relationship managed in the wrong register for too long | *Tal* (fire) + *solrath* (register-debt). Deeper than ordinary *solrath*: it accumulates when the mismatch between the register used and the actual relationship is extreme — when someone is addressed in *kael-* who should be in *neth-*, or in *vaer-* who has long since earned *sol-*. The relationship is burning incorrectly; the debt accrues interest |
+| *vel-neth* | II | returned home circle; restoration of intimate relationship after estrangement | *Vel-* (return) + *neth* (home circle). Not reunion exactly — the home circle never formally ended, but its register was not fully operative. *Vel-neth* is the moment it becomes operative again: a *neth-gall* that had been suspended rather than broken, completing itself |
+| *kael-sorren* | II | elevated pain; grief of a kind that has the standing of the land | *Kael-* (elevated register) + *sorren* (pain). The classification of deep grief as warranting Elevated address — the same standing given to the land, elders, and the dead. What distinguishes *kael-sorren* from ordinary grief is not its intensity but its quality: it has settled, like the ground, into something the person must now live on top of |
+| *pyross-sol* | II | ash-familiar; the familiarity that results from shared irreversible experience | *Pyross* (ash; what burning leaves) + *sol* (familiar register). Two people who have been through the same fire have *pyross-sol*; they are in Familiar register not because they have developed it slowly but because something happened that made register negotiation beside the point. *Llossan* (ash-kin) is the kinship word for this; *pyross-sol* is the relational description |
+| *kolvell-hom* | I | breath-dwelling; the quality of comfort between people who can be silent together | *Kolvell* (breath) + *hom* (dwelling). A Class I concept — alive, in motion, produced between bodies rather than fixed. Applied to relationships in which silence is not an absence of speech but a shared presence: the household members who work side by side without needing to name what they are doing. Distinguishable from mere silence by what it sounds like |
+| *llyr-vaer* | II | practiced welcome; hospitality encoded in the body | *Llyr* (embodied memory) + *vaer* (social register). The quality of a host who has extended welcome so many times that the Social register prosody has become *llyr* — no longer performed but produced from the body. Considered the highest form of Galan hospitality culture: not gracious behavior but grace that has become nature. A guest in the house of someone with *llyr-vaer* does not feel welcomed so much as simply comfortable, which is the more difficult achievement |
+| *nil-neth* | II | absence of home circle; having no intimate register | *Nil-* (negation) + *neth* (home circle). Not loneliness exactly — West Pyrosi has *voran-nil-hom* ("a person without a dwelling") for the material condition. *Nil-neth* is the relational condition: a person for whom the Intimate register has no recipients, permanently or temporarily. The word is used carefully and not directed at someone as an observation; it is self-reported, when reported at all |
+| *vel-kael* | II | returning elevation; the restoration of standing after its loss | *Vel-* (return) + *kael* (elevated register). Applied to people who lost standing — through failure, exile, poverty, or disgrace — and recovered it. How a community responds to *vel-kael* — whether they receive the elevation as genuine or remember its interruption — is considered a measure of that community's character |
+
+### Anger and Conflict in Register
+
+West Pyrosi has no single word for anger because the register system distributes what anger does across several relational categories. An angry speaker does not simply produce anger-words; they make register choices that express the nature of the anger precisely.
+
+Anger expressed in Elevated register (*kael-*) is the most serious form. To address someone you are in conflict with using *kael-* is to treat them as a force of nature — not a person who has done something wrong but something constitutive of the situation, something that cannot be fought directly. *Kael-*-register anger is also the form used for anger at the land, at weather, at death — anger that has no possible resolution through human action. Pyrosi speakers who sustain *kael-*-register anger toward another person for extended periods are understood to have categorized that person as something beyond ordinary relationship. This is either very bad or very final.
+
+Anger expressed in Intimate register (*neth-*) is the most private and, by convention, the most permissible. Home circle anger does not create *solrath* the way public register-misuse does; the *nethvan* is understood to be a place where emotion can move without being read as social declaration. A West Pyrosi adult who expresses anger toward a family member in Social register, in front of others, has made a statement that will be noted.
+
+Anger expressed in Familiar register is the ordinary level of conflict between people who know each other. It creates *solrath* that can be resolved through subsequent interaction; the anger is evidence of closeness, not its negation. Two people capable of anger in Familiar register have a relationship strong enough to bear it. The same anger expressed between *vaerran* — guests — would be register catastrophe.
+
+---
+
+## Oaths and Sworn Speech
+
+Pyrosi oath-taking draws on the same system that produces the *khoth-oss* boundary stone: something must be made permanent, witnessed, and legible. The difference between an oath and a contract is that an oath places the speaker's *llyr* as the guarantee, not a record that can be disputed. Where a *khoth-oss* invokes the *ossyan* witnesses and the inscription as primary evidence, an oath invokes the speaker's embodied memory as the thing that cannot be successfully falsified.
+
+**The *Llyr-Oss* oath** — oath by embodied memory — is the primary Pyrosi form. It uses *kael-* register throughout, because the speaker addresses the *llyr* itself as a *kael-ran*: elevating their own accumulated knowledge as the thing being sworn by. The formula:
+
+*Kael-vel-ossyr llyr-van-in. Kael-lleth-tossyr nil-sol-vel.*
+
+"I have permanently marked [elevated] into the body of memory. Latently burning [elevated]: the familiar return will not come."
+
+The formula commits the speaker to an action that, if unfulfilled, will be visible in the *llyr* — readable by those who know how to read it, and by the speaker themselves. The West Pyrosi understanding is that a failed *Llyr-Oss* oath does not require external punishment; the betrayal is permanent in the speaker's embodied record. Other people's *llyr* may read the failure; the speaker's own practice will know it; the land's *llos-pyros* will eventually hold it. Whether this is metaphysics or community psychology the tradition declines to specify.
+
+**The *Oss-Vel* oath** — oath by permanent return — is used when the swearing involves a commitment to come back: to a place, a practice, a person, or an obligation. The formula commits the return as a *vel-kěl* — a flowing-back that is in the nature of things:
+
+*Vel-kael-kělyr; nil-lleth-norr.*
+
+"Return flows [elevated]; there is no latent impossibility."
+
+The *nil-lleth-norr* construction is significant. *Nor-* is emphatic negation — ontological impossibility. The oath states that returning is not impossible in the nature of things; the path is open; only the speaker's failure could close it. This is considered a stronger form than a simple promise because it commits not only the speaker's intention but their understanding of what is possible.
+
+**The *Kolvell-Oss* oath** — breath-oath; the informal sworn statement — is used in situations where a *khoth-oss* inscription is unnecessary or inappropriate. One speaker produces *kolvell-oss* before a statement to mark it as sworn rather than conversational:
+
+*Sol-vel-kolvelloss: vel-millom.*
+
+"I breathe-permanently [familiar]: I saw it."
+
+The *kolvell-oss* construction appears in testimony before the Galan *ossyan* witnesses when the event being testified to could not have produced a written record. Eyewitness accounts in market disputes use *kolvell-oss*; it carries less weight than a *khoth-oss* but more than unsworn speech.
+
+**Breaking oaths**: West Pyrosi has vocabulary for oath-breaking, but the terms describe what the breaker has done to their own *llyr* rather than what consequence they face. *Nil-vel-llyryr* — "has not returned through the body; has blocked the body's return" — names the state of someone who has broken an oath. The construction is impersonal; the passive-adjacent structure places the blockage as something that has occurred rather than something the person has done, which is either a mercy or an accurate description of the West Pyrosi understanding that oath-breaking damages the *llyr* the way not-burning damages volcanic ground: the heat remains, trapped, turning into something other than what it was meant to be.
+
+---
+
+## Music and Performance Vocabulary
+
+The *kěl-ell* and *tallos-ell* oral traditions require vocabulary that the core Pyrosi word-stock addresses obliquely. The language of music and performance is not a specialized register but a set of extensions from existing roots, most of which are immediately transparent to any Pyrosi speaker.
+
+| Pyrosi | Class | Meaning | Notes |
+|---|---|---|---|
+| *vel-kolvell* | I | the breath that returns; a sustained note | *Vel-* (return) + *kolvell* (breath). A held note in *kěl-ell* is understood as breath that has returned to itself before moving on — a cycle completed within the phrase. Gives Pyrosi singers a vocabulary for sustain that is not merely duration |
+| *tal-kěl-ell* | II | fire-water-speech; the transition point in narrative performance | The moment in *tallos-ell* when the register shifts from *vaer-* to *sol-* — when the audience is brought inside. A teller who executes the *tal-kěl-ell* well is said to have found where the fire reaches the water: intensity meeting flow, the household becoming briefly communal |
+| *llyr-kolvell* | II | embodied-breath; the practice of producing vocal sound from the body | *Llyr* (embodied memory) + *kolvell* (breath). The quality of *kěl-ell* performance that separates practiced practitioners from those still learning: breath that comes from below the chest, shaped by *llyr* rather than deliberate direction. Agricultural workers describe the *llyr-kolvell* form as the sound that maintains rhythm in labor without requiring the worker to think about it |
+| *pyross-kěl* | II | the ash-flow; a completed performance that has left something behind | *Pyross* (ash; permanent residue) + *kěl* (flow). What a good *tallos-ell* or *kael-kěl* performance does: moves through and leaves something that was not there before it. A *pyross-kěl* performance is one the audience carries afterward, not merely remembers |
+| *vel-khovell* | I | the returning dark; the weighted pause between performed phrases | *Vel-* (return) + *khovell* (the dark color of cooled volcanic stone). The silence between phrases in *kael-kěl* recitation — specifically the silence weighted with what came before. A practitioner who cannot hold *vel-khovell* is said to be afraid of the dark between the words, which the tradition considers both an aesthetic observation and a practical assessment |
+| *taler-kěl* | I | fire-keeper's flow; the unbroken transmission of a *llyr-ell* form | *Taler* (fire-keeper) + *kěl* (flow). The quality of an oral form passed without break from one practitioner to another — the condition of a *llyr-ell* that has never been interrupted and re-learned from a written approximation. Household elders describe the difference between a *taler-kěl* form and a reconstituted one as audible: the breath pattern carries differently when it has never stopped |
+| *lossyr-kěl-ell* | II | twelve-speech-flow; the twelve-day seasonal performance cycle | *Lossyr* (twelve) + *kěl-ell* (lyric form). The recognized cycle of *kěl-ell* forms associated with the twelve agricultural subcycles. Some communities maintain the cycle fully; others have kept only the planting-season forms; others retain only the harvest forms. The Galan *kěloss-van* maintains a full written record of the cycle but acknowledges that the written forms require a *taler-kěl* practitioner to produce correctly |
+| *vel-neth-kolvell* | I | returning home-circle breath; performance in Intimate register | *Vel-neth* (returned home circle) + *kolvell* (breath). The *kěl-ell* form performed inside the household for household members only — short forms, specific to the season, not performed for guests. Not secret; simply private. A household that performs them with a guest present has made a statement about that guest's standing |
+
+### The *Tallos-Ell* Performance Tradition
+
+The *tallos-ell* has conventions that are observed without being codified — performance knowledge held in the practitioner community rather than written down.
+
+**Opening**: Every *tallos-ell* opens in Social register, regardless of the audience's composition. This is not convention for courtesy; it is accuracy: the teller does not yet know which register the evening will arrive at, and beginning in Social is beginning at the correct threshold. A teller who opens in Familiar is either performing intimacy with an audience they know well and have decided to accelerate, or making an error. Both are recognized.
+
+**The *Lleth-Ell* pause**: After the opening clause or two, a good practitioner stops. Not hesitation — a held silence in the latent aspect, the way the soil holds heat before the fumarole opens. The audience does not fill it. They have heard this structure enough to know what is coming. The teller is performing *lleth-*: the story was always going to be told; it is arriving. When the pause ends and the voice continues, the performance has committed. This is described in practitioner accounts but not taught explicitly; apprentices watch for it and find it in themselves at different times.
+
+**Register management**: The performance moves from Social toward Familiar over its length as the audience is received. How quickly depends on what the teller reads in the room — not applause or explicit reaction, but a quality. A fast *gall-ell* shift is appropriate for an audience already known to the teller; a slow one, for strangers. An audience that does not move toward Familiar has not been reached. The teller adjusts.
+
+**The Familiar line**: Within an Elevated-register passage — most commonly in stories involving fumarole events, historical occupations, or the dead — a single Familiar line appears, attributed to an ordinary person present at the event. This is the same principle as the *kael-kěl* tradition's permitted Familiar line. The line says: the elevated event contained an ordinary moment; the ordinary moment is as real as the elevated one; the record is not complete without both.
+
+**Closing**: The practitioner returns to Social register for the close, regardless of where the performance arrived during its center. The audience that was brought into Familiar during the middle finds itself gently returned to Social at the end — not expelled, not distanced, but correctly placed: you were inside for a time; you are now at the threshold again, being seen out. Galan practitioners describe the close as the host's gesture at the end of a *kěl-taloss*: the Elevated farewell that returns the guest to the world. The performance has enacted a complete *kěl-taloss* structure, in miniature.
+
+---
+
+## Additional Proverbs and Idioms
+
+*Lleth-taloss; nil-tossyr.* — "Latent fire-feast; nothing burns yet." Said of a situation that appears quiet but contains everything needed for something significant to emerge. Used as a gentle warning, a description, and occasionally a reason to wait rather than act. The fire-feast is prepared; the moment has not arrived; a person who breaks open the latency prematurely has interrupted something that would have been better left to itself.
+
+*Kěl-oss pyrant-in.* — "Water into the living soil." Said of information or change that arrives and is immediately absorbed, producing something — but slowly, invisibly, in ways not seen on the surface. Applied when outside influence enters a community or practice and seems to disappear: it has not been rejected; it has gone into the *pyrant*. What grows from it will appear in its own season.
+
+*Sol-milleth llosset-tal.* — "You see [familiar] the settled heat." Said to someone correctly reading a situation others are missing. *Llosset-tal* is the heat in the deep ash layer — present, real, invisible from the surface unless you know how to find it. To say someone sees it is to say they have *llyr* in the relevant domain. Said with appreciation; also, occasionally, with the slight unease that attaches to someone whose perception runs ahead of what should be visible.
+
+*Nil-gall-kěl; lleth-vel.* — "The crossing-water has not completed; the return is latent." Said of an agreement, relationship, or process that has not yet reached its conclusion but will. Not comfort — the latent is not a promise — but a description: the return is in the nature of this situation, even if it has not yet surfaced. Applied to long correspondences, to negotiations that have gone quiet, to relationships interrupted. The Pyrosi version of "it is not over."
+
+*Pyross-ell nil-ellyr.* — "The ash speaks; [you are] not speaking." Said to someone communicating clearly without knowing it — whose state or situation is legible to everyone around them while they remain unaware. Not unkind exactly; the ash cannot help speaking; the fire that made it has already burned. But the observation carries an implicit invitation: the ash is speaking; what will you say?
+
+*Kael-hom kolvell-ell.* — "The elevated dwelling breathes-speaks." Said of an old building, institution, or place that has been used long enough to have absorbed the *llyr* of all who passed through it. The Elevated address (*kael-*) is given because what inheres in a long-used place has the standing of the land — has become, in some sense, fixed and rooted and speaking in the way volcanic ground speaks. Applied to the Galan market halls, to old boundary stone sites, to farming terraces worked through many generations. What they say is not always legible, but that they say something is not disputed.
+
+*Vel-kěl-ell voran-eth.* — "The returning water-speech [is] at the person." Said when the right words for something arrive after the moment has passed — when someone finds how to express what they felt, but too late for the occasion that called for it. Neither condemnation nor consolation. The water has returned; it has arrived; it is now here. The moment it would have filled is past. What is done with the water now is still a live question.
