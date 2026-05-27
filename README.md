@@ -13,16 +13,16 @@ There is also a map-generation script, `generate_map.py`, which produces a child
 
 ## Project Status
 
-The lore is organized in layers. Geography and major language-family documents are the most developed areas right now. Peoples, cultures, institutions, history, artifacts, and open mysteries are mapped out in `ROADMAP.md` and are intended to grow as separate entries.
+The lore is organized in layers. Geography, major language-family documents, peoples, culture, and natural history are the most developed areas right now. Institutions, additional history, artifacts, and open mysteries are mapped out in `ROADMAP.md` and are intended to grow as separate entries.
 
 At a glance:
 
 - Geography: mostly complete, including Corav, Azhora, regional entries, nearby continents, and major phenomena.
 - Languages: overview plus major conlang family documents.
-- Peoples and cultures: planned as standalone documents.
+- Peoples and cultures: active, with many standalone documents now in place.
 - Institutions and history: referenced in lore, planned for future entries.
 - Artifacts: started with the schoolchild map collection.
-- App tooling: basic lore loading, listing, showing, and searching are implemented.
+- App tooling: lore loading, listing, showing, searching, tag filtering, and metadata checks are implemented.
 
 ## Repository Layout
 
@@ -34,7 +34,11 @@ At a glance:
 |   +-- models.py        # LoreEntry dataclass
 +-- lore/
 |   +-- artifacts/
+|   +-- cosmology/
+|   +-- culture/
+|   +-- fauna/
 |   +-- geography/
+|   +-- history/
 |   +-- peoples/
 +-- generate_map.py      # Creates azhora_map.png
 +-- main.py              # CLI entry point
@@ -67,26 +71,24 @@ Run commands from the project root:
 ```powershell
 python main.py list
 python main.py list geography
+python main.py list geography --tag mystery
 python main.py show Corav
 python main.py search Pyros
+python main.py check
 ```
 
 Commands:
 
-- `list [category]`: list all lore entries, optionally filtered by category.
+- `list [category] [--tag tag]`: list all lore entries, optionally filtered by category and tag.
 - `show <name>`: print a single entry with wrapped body text.
 - `search <query>`: search entry names, tags, and body text.
+- `check [--strict]`: report duplicate names, empty entries, one-entry categories, and unresolved `related:` references. Default mode exits successfully if there are warnings only; `--strict` exits nonzero on warnings too.
 
-Names are matched either by frontmatter `name` or by the Markdown filename stem.
+Names are matched either by frontmatter `name` or by the Markdown filename stem. Name matching is case-insensitive, punctuation-insensitive, and accent-insensitive, so `Bouen` will find `Bouén`.
 
 ### Windows UTF-8 Note
 
-Some lore entries use characters outside the default Windows console encoding. If `list` or `search` raises a `UnicodeEncodeError` in PowerShell, run:
-
-```powershell
-$env:PYTHONIOENCODING = "utf-8"
-python main.py list
-```
+The CLI configures standard output as UTF-8 when Python supports it, so PowerShell should display entries with accented characters without requiring `PYTHONIOENCODING`.
 
 ## Lore File Format
 
@@ -132,10 +134,11 @@ The app code is intentionally small:
 
 - `LoreEntry.summary()` returns the first non-heading paragraph.
 - `load_all()` recursively parses frontmatter-backed Markdown under `lore/`.
-- `find()` resolves exact entry names or filename stems.
-- `search()` performs simple case-insensitive substring search across names, body text, and tags.
+- `find()` resolves entry names or filename stems with normalized matching.
+- `search()` performs normalized substring search across names, body text, and tags.
+- `check_lore()` validates loaded entries and reports unresolved `related:` references.
 
-Planned app features are tracked in `ROADMAP.md`, including tag filtering, related-entry graphing, cross-reference checks, and better formatting for language entries.
+Planned app features are tracked in `ROADMAP.md`, including related-entry graphing and better formatting for language entries.
 
 ## Existing Lore Summary
 

@@ -55,7 +55,7 @@ The linguistic world. All five families complete.
 ---
 
 ### Layer 3 — Peoples and Cultures
-The human world. Not yet started as standalone documents.
+The human world. Active, with many standalone people and culture documents now present. The remaining planned documents below are still useful targets where a broad synthesis entry is preferable to the current more granular coverage.
 
 | Document | Status | Notes |
 |----------|--------|-------|
@@ -138,7 +138,9 @@ These are not missing documents. They are open questions that should remain open
 | CLI: `show <name>` | ✓ Done | Full text with wrapping; fuzzy name match |
 | CLI: `search <query>` | ✓ Done | Full-text and tag search |
 | Childlike map generator | ✓ Done | `generate_map.py`; wobble function; crayon aesthetic; schoolchild framing |
-| Tag filtering in CLI | — Planned | `python main.py list --tag mystery` |
+| Category/name normalization | ✓ Done | `region` entries list under `geography`; lookup/search is accent-insensitive and filename-aware |
+| Tag filtering in CLI | ✓ Done | `python main.py list geography --tag mystery` |
+| Cross-reference checker | ✓ Done | `python main.py check`; reports missing `related:` targets and duplicate normalized names |
+| Test suite | ✓ Done | `python -m unittest discover -s tests -v`; covers loader, lookup, search, and validation behavior |
 | Related-entry graph | — Planned | Visualize connections between lore entries; the `related:` frontmatter field is already populated |
-| Cross-reference checker | — Planned | Find entries referenced in `related:` fields that don't exist yet |
 | Language entry formatter | — Planned | `show` command formats conlang tables better than raw markdown |
