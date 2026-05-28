@@ -59,6 +59,7 @@ export interface MapData {
 }
 
 export type Tool = 'paint' | 'erase' | 'select' | 'pan' | 'river' | 'region'
+export type SelectMode = 'tile' | 'region'
 
 export interface LayerVisibility {
   terrain: boolean

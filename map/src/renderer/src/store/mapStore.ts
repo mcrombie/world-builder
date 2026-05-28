@@ -1,5 +1,5 @@
 import { create } from 'zustand'
-import { HexData, MapData, RegionData, RiverSize, TerrainType, Tool, LayerVisibility } from '../types/map'
+import { HexData, MapData, RegionData, RiverSize, SelectMode, TerrainType, Tool, LayerVisibility } from '../types/map'
 import { hexKey, hexesInRadius } from '../lib/hex'
 
 const MAX_HISTORY = 50
@@ -15,6 +15,8 @@ interface MapStore {
   mapVersion: number
   currentFilePath: string | null
   selectedHex: string | null
+  selectedRegion: string | null
+  selectMode: SelectMode
   activeTool: Tool
   activeTerrain: TerrainType
   activeRiverSize: RiverSize
@@ -34,6 +36,8 @@ interface MapStore {
   endStroke: () => void
   undo: () => void
   selectHex: (key: string | null) => void
+  selectRegion: (id: string | null) => void
+  setSelectMode: (mode: SelectMode) => void
   updateHex: (key: string, data: Partial<HexData>) => void
   setTool: (tool: Tool) => void
   setTerrain: (terrain: TerrainType) => void
@@ -54,6 +58,8 @@ export const useMapStore = create<MapStore>((set, get) => ({
   mapVersion: 0,
   currentFilePath: null,
   selectedHex: null,
+  selectedRegion: null,
+  selectMode: 'tile',
   activeTool: 'paint',
   activeTerrain: 'plains',
   activeRiverSize: 'medium',
@@ -90,6 +96,7 @@ export const useMapStore = create<MapStore>((set, get) => ({
       currentFilePath: null,
       isDirty: true,
       selectedHex: null,
+      selectedRegion: null,
       history: [],
       strokeBefore: null,
     })
@@ -107,6 +114,7 @@ export const useMapStore = create<MapStore>((set, get) => ({
       currentFilePath: filePath,
       isDirty: false,
       selectedHex: null,
+      selectedRegion: null,
       history: [],
       strokeBefore: null,
     }))
@@ -180,7 +188,9 @@ export const useMapStore = create<MapStore>((set, get) => ({
     }))
   },
 
-  selectHex: (key) => set({ selectedHex: key }),
+  selectHex:    (key)  => set({ selectedHex: key, selectedRegion: null }),
+  selectRegion: (id)   => set({ selectedRegion: id, selectedHex: null }),
+  setSelectMode:(mode) => set({ selectMode: mode, selectedHex: null, selectedRegion: null }),
 
   updateHex: (key, data) =>
     set((state) => ({

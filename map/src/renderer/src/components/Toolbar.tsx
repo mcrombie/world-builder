@@ -2,7 +2,7 @@ import { useState } from 'react'
 import { useMapStore, REGION_PALETTE } from '../store/mapStore'
 import { ALL_TERRAINS, TERRAIN_COLORS, TERRAIN_LABELS } from '../lib/terrain'
 import { fileIO } from '../lib/fileIO'
-import { Tool, LayerVisibility, RiverSize } from '../types/map'
+import { Tool, LayerVisibility, RiverSize, SelectMode } from '../types/map'
 
 const TOOLS: { id: Tool; label: string; icon: string }[] = [
   { id: 'paint',  label: 'Paint',  icon: '🖌' },
@@ -33,6 +33,7 @@ export function Toolbar() {
   const activeTool      = useMapStore((s) => s.activeTool)
   const activeTerrain   = useMapStore((s) => s.activeTerrain)
   const activeRiverSize = useMapStore((s) => s.activeRiverSize)
+  const selectMode      = useMapStore((s) => s.selectMode)
   const brushRadius     = useMapStore((s) => s.brushRadius)
   const layers        = useMapStore((s) => s.layers)
   const activeRegion  = useMapStore((s) => s.activeRegion)
@@ -40,6 +41,7 @@ export function Toolbar() {
   const setTool         = useMapStore((s) => s.setTool)
   const setTerrain      = useMapStore((s) => s.setTerrain)
   const setRiverSize    = useMapStore((s) => s.setRiverSize)
+  const setSelectMode   = useMapStore((s) => s.setSelectMode)
   const setBrushRadius  = useMapStore((s) => s.setBrushRadius)
   const setLayer        = useMapStore((s) => s.setLayer)
   const setUnderlay     = useMapStore((s) => s.setUnderlay)
@@ -112,6 +114,27 @@ export function Toolbar() {
                   <div className="rounded-full bg-current" style={{ width: dotPx, height: dotPx }} />
                 </div>
                 <span className="text-xs leading-none">{hexCount}</span>
+              </button>
+            ))}
+          </div>
+        </section>
+      )}
+
+      {/* Select mode */}
+      {activeTool === 'select' && (
+        <section>
+          <h3 className="text-xs font-semibold uppercase tracking-widest text-gray-400 mb-2">Select</h3>
+          <div className="flex gap-1">
+            {(['tile', 'region'] as SelectMode[]).map((mode) => (
+              <button
+                key={mode}
+                onClick={() => setSelectMode(mode)}
+                className={`flex-1 py-1.5 rounded text-sm capitalize transition-colors
+                  ${selectMode === mode
+                    ? 'bg-indigo-600 text-white'
+                    : 'bg-gray-800 hover:bg-gray-700 text-gray-300'}`}
+              >
+                {mode}
               </button>
             ))}
           </div>

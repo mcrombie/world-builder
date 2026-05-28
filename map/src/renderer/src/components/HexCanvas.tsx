@@ -6,6 +6,7 @@ import {
 } from '../lib/hex'
 import { TERRAIN_COLORS } from '../lib/terrain'
 import { HexData, RiverSize } from '../types/map'
+import { SelectMode } from '../types/map'
 
 interface ViewState {
   offsetX: number
@@ -34,6 +35,8 @@ export function HexCanvas() {
   const mapRef          = useRef(map)
   const layers          = useMapStore((s) => s.layers)
   const selectedHex     = useMapStore((s) => s.selectedHex)
+  const selectedRegion  = useMapStore((s) => s.selectedRegion)
+  const selectMode      = useMapStore((s) => s.selectMode)
   const activeTool      = useMapStore((s) => s.activeTool)
   const brushRadius     = useMapStore((s) => s.brushRadius)
   const activeRegion    = useMapStore((s) => s.activeRegion)
@@ -42,6 +45,7 @@ export function HexCanvas() {
   const paintRegionHex  = useMapStore((s) => s.paintRegionHex)
   const endStroke       = useMapStore((s) => s.endStroke)
   const selectHex       = useMapStore((s) => s.selectHex)
+  const selectRegion    = useMapStore((s) => s.selectRegion)
   const toggleRiverEdge = useMapStore((s) => s.toggleRiverEdge)
 
   const hoverCoord        = useRef<AxialCoord | null>(null)
@@ -52,9 +56,11 @@ export function HexCanvas() {
   const activeToolRef     = useRef(activeTool)
   const brushRadiusRef    = useRef(brushRadius)
   const activeRegionRef   = useRef(activeRegion)
+  const selectModeRef     = useRef(selectMode)
   activeToolRef.current   = activeTool
   brushRadiusRef.current  = brushRadius
   activeRegionRef.current = activeRegion
+  selectModeRef.current   = selectMode
   mapRef.current          = map
 
   useEffect(() => {
@@ -64,7 +70,7 @@ export function HexCanvas() {
     img.src = map.underlayPath
   }, [map?.underlayPath])
 
-  useEffect(() => { needsRedraw.current = true }, [map, layers, selectedHex, brushRadius, activeTool, activeRegion])
+  useEffect(() => { needsRedraw.current = true }, [map, layers, selectedHex, selectedRegion, brushRadius, activeTool, activeRegion])
 
   // ── Render ────────────────────────────────────────────────────────────────────
 
@@ -266,6 +272,19 @@ export function HexCanvas() {
       strokeHex(ctx, cx, cy, hexSize * 0.85)
     }
 
+    // ── Selected region highlight ─────────────────────────────────────────────
+    if (selectedRegion) {
+      ctx.strokeStyle = '#ffcc00'
+      ctx.lineWidth = 2 / zoom
+      for (const hex of Object.values(hexes)) {
+        if (hex.region !== selectedRegion) continue
+        const [cx, cy] = hexToPixel(hex.q, hex.r, hexSize)
+        if (cx + cullPad < viewL || cx - cullPad > viewR) continue
+        if (cy + cullPad < viewT || cy - cullPad > viewB) continue
+        strokeHex(ctx, cx, cy, hexSize)
+      }
+    }
+
     // ── Brush / region-paint hover preview ────────────────────────────────────
     const tool = activeToolRef.current
     const hc   = hoverCoord.current
@@ -293,7 +312,7 @@ export function HexCanvas() {
     }
 
     ctx.restore()
-  }, [map, layers, selectedHex, activeRegion])
+  }, [map, layers, selectedHex, selectedRegion, activeRegion])
 
   // ── RAF loop ──────────────────────────────────────────────────────────────────
   useEffect(() => {
@@ -413,11 +432,17 @@ export function HexCanvas() {
         if (coord) paintHex(coord.q, coord.r)
       } else if (activeTool === 'select') {
         const coord = hexAtScreen(e.clientX, e.clientY)
-        selectHex(coord ? hexKey(coord.q, coord.r) : null)
+        if (selectModeRef.current === 'region') {
+          const key = coord ? hexKey(coord.q, coord.r) : null
+          const regionId = key && map.hexes[key]?.region ? map.hexes[key].region! : null
+          selectRegion(regionId)
+        } else {
+          selectHex(coord ? hexKey(coord.q, coord.r) : null)
+        }
         needsRedraw.current = true
       }
     },
-    [map, activeTool, beginStroke, hexAtScreen, paintHex, paintRegionHex, selectHex, toggleRiverEdge, screenToWorld]
+    [map, activeTool, beginStroke, hexAtScreen, paintHex, paintRegionHex, selectHex, selectRegion, toggleRiverEdge, screenToWorld]
   )
 
   const onMouseMove = useCallback(
