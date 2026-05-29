@@ -3,8 +3,7 @@ import { join } from 'path'
 import { readFileSync, writeFileSync, existsSync } from 'fs'
 import { spawn, spawnSync, ChildProcess } from 'child_process'
 import * as http from 'http'
-import { spawn, spawnSync, ChildProcess } from 'child_process'
-import * as http from 'http'
+import * as net from 'net'
 
 const EXAMPLES_DIR = app.isPackaged
   ? join(process.resourcesPath, 'examples')
@@ -23,7 +22,7 @@ function createWindow(): BrowserWindow {
   const win = new BrowserWindow({
     width: 1400,
     height: 900,
-    title: 'Worldwright',
+    title: 'World Builder',
     backgroundColor: '#1a1a2e',
     webPreferences: {
       preload: join(__dirname, '../preload/index.js'),
@@ -66,7 +65,7 @@ ipcMain.handle('map:save', async (_, jsonData: string, filePath?: string) => {
     const result = await dialog.showSaveDialog({
       title: 'Save Map',
       defaultPath: 'my-world.wwmap',
-      filters: [{ name: 'Worldwright Map', extensions: ['wwmap'] }],
+      filters: [{ name: 'World Builder Map', extensions: ['wwmap'] }],
     })
     if (result.canceled || !result.filePath) return { canceled: true }
     targetPath = result.filePath
@@ -78,7 +77,7 @@ ipcMain.handle('map:save', async (_, jsonData: string, filePath?: string) => {
 ipcMain.handle('map:load', async () => {
   const result = await dialog.showOpenDialog({
     title: 'Open Map',
-    filters: [{ name: 'Worldwright Map', extensions: ['wwmap', 'azmap'] }],
+    filters: [{ name: 'World Builder Map', extensions: ['wwmap', 'azmap'] }],
     properties: ['openFile'],
   })
   if (result.canceled || result.filePaths.length === 0) return { canceled: true }
@@ -183,17 +182,24 @@ function killSimProcess() {
   simPid = undefined
 }
 
-async function waitForPortFree(maxMs = 5000): Promise<boolean> {
+function isPortListening(port: number, timeoutMs = 300): Promise<boolean> {
+  return new Promise(resolve => {
+    const sock = new net.Socket()
+    sock.setTimeout(timeoutMs)
+    sock.once('connect', () => { sock.destroy(); resolve(true) })
+    sock.once('error', () => resolve(false))
+    sock.once('timeout', () => { sock.destroy(); resolve(false) })
+    sock.connect(port, '127.0.0.1')
+  })
+}
+
+async function waitForPortFree(maxMs = 8000): Promise<boolean> {
   const deadline = Date.now() + maxMs
   while (Date.now() < deadline) {
-    try {
-      await simGet('/api/health')
-      await new Promise<void>((r) => setTimeout(r, 150))
-    } catch {
-      return true // connection refused = port is free
-    }
+    if (!(await isPortListening(SIM_PORT))) return true
+    await new Promise<void>((r) => setTimeout(r, 200))
   }
-  return false // timed out — port still occupied
+  return false
 }
 
 async function _spawnServer(
@@ -208,7 +214,7 @@ async function _spawnServer(
   if (process.platform === 'win32') {
     spawnSync('cmd', ['/c',
       `for /f "tokens=5" %a in ('netstat -ano ^| findstr ":${SIM_PORT}" ^| findstr "LISTENING"') do taskkill /F /T /PID %a`,
-    ], { shell: true, encoding: 'utf-8' })
+    ], { encoding: 'utf-8' })
   } else {
     spawnSync('sh', ['-c', `lsof -ti:${SIM_PORT} | xargs -r kill -9`], { encoding: 'utf-8' })
   }
@@ -276,13 +282,13 @@ function simPost(path: string, body: object): Promise<string> {
   })
 }
 
-async function waitForServer(maxMs = 20_000): Promise<void> {
+async function waitForServer(maxMs = 60_000): Promise<void> {
   const deadline = Date.now() + maxMs
   while (Date.now() < deadline) {
     try { await simGet('/api/health'); return } catch { /* not ready yet */ }
     await new Promise<void>((r) => setTimeout(r, 250))
   }
-  throw new Error('Clashvergence server did not start within 20 s.')
+  throw new Error('Clashvergence server did not start within 60 s.')
 }
 
 // ── Simulation IPC ────────────────────────────────────────────────────────────
@@ -322,7 +328,7 @@ ipcMain.handle('sim:save-state', async () => {
     const result = await dialog.showSaveDialog({
       title: 'Save Simulation',
       defaultPath: 'simulation.wwsim',
-      filters: [{ name: 'Worldwright Simulation', extensions: ['wwsim'] }],
+      filters: [{ name: 'World Builder Simulation', extensions: ['wwsim'] }],
     })
     if (result.canceled || !result.filePath) return { canceled: true }
     const envelope = {
@@ -341,7 +347,7 @@ ipcMain.handle('sim:save-state', async () => {
 ipcMain.handle('sim:load-and-start', async () => {
   const pickResult = await dialog.showOpenDialog({
     title: 'Load Simulation',
-    filters: [{ name: 'Worldwright Simulation', extensions: ['wwsim'] }],
+    filters: [{ name: 'World Builder Simulation', extensions: ['wwsim'] }],
     properties: ['openFile'],
   })
   if (pickResult.canceled || !pickResult.filePaths.length) return { canceled: true }

@@ -1,6 +1,5 @@
 import { create } from 'zustand'
 import { HexData, MapData, RegionData, RiverSize, SelectMode, SimWorldState, TerrainType, Tool, LayerVisibility } from '../types/map'
-import { HexData, MapData, RegionData, RiverSize, SelectMode, SimWorldState, TerrainType, Tool, LayerVisibility } from '../types/map'
 import { hexKey, hexesInRadius } from '../lib/hex'
 
 const MAX_HISTORY = 50
@@ -28,7 +27,7 @@ interface MapStore {
   history: Record<string, HexData>[]
   strokeBefore: Record<string, HexData> | null
 
-  newMap: (name: string, width: number, height: number, hexSize: number, hexes?: Record<string, HexData>) => void
+  newMap: (name: string, width: number, height: number, hexSize: number, hexes?: Record<string, HexData>, regions?: Record<string, RegionData>) => void
   loadMap: (data: MapData, filePath: string) => void
   setFilePath: (path: string) => void
   beginStroke: () => void
@@ -76,10 +75,10 @@ export const useMapStore = create<MapStore>((set, get) => ({
   layers: {
     terrain: true,
     grid: true,
-    regions: true,
+    regions: false,
     settlements: true,
     rivers: true,
-    underlay: true,
+    underlay: false,
   },
   isDirty: false,
   history: [],
@@ -91,7 +90,7 @@ export const useMapStore = create<MapStore>((set, get) => ({
   setSimulating: (v) => set({ isSimulating: v }),
   setSimFactionCount: (n) => set({ simFactionCount: n }),
 
-  newMap: (name, width, height, hexSize, precomputedHexes) => {
+  newMap: (name, width, height, hexSize, precomputedHexes, precomputedRegions) => {
     let hexes: Record<string, HexData>
     if (precomputedHexes) {
       hexes = precomputedHexes
@@ -105,7 +104,7 @@ export const useMapStore = create<MapStore>((set, get) => ({
       }
     }
     set({
-      map: { name, width, height, hexSize, hexes, rivers: {}, regions: {} },
+      map: { name, width, height, hexSize, hexes, rivers: {}, regions: precomputedRegions ?? {} },
       mapVersion: get().mapVersion + 1,
       currentFilePath: null,
       isDirty: true,

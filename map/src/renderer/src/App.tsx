@@ -13,7 +13,6 @@ import { useMapStore } from './store/mapStore'
 import { fileIO, IS_BROWSER, type RecentFile } from './lib/fileIO'
 import { autoSave, loadAutoSave, saveToLibrary } from './lib/mapLibrary'
 import type { MapData, SimWorldState } from './types/map'
-import type { MapData, SimWorldState } from './types/map'
 
 export default function App() {
   const [showNewDialog,       setShowNewDialog]       = useState(false)
@@ -185,7 +184,7 @@ export default function App() {
 
       {/* ── Menu bar ── */}
       <header className="flex items-center gap-2 px-4 py-2 bg-gray-900 border-b border-gray-800 shrink-0">
-        <span className="font-semibold text-indigo-400 mr-2">Worldwright</span>
+        <span className="font-semibold text-indigo-400 mr-2">World Builder</span>
 
         <button className="px-3 py-1 text-sm rounded hover:bg-gray-700" onClick={() => setShowNewDialog(true)}>
           New
@@ -274,12 +273,11 @@ export default function App() {
           )}
         </main>
         {isSimulating ? <SimulationPanel /> : <InfoPanel />}
-        {isSimulating ? <SimulationPanel /> : <InfoPanel />}
       </div>
 
       {/* ── Status bar ── */}
       <footer className="px-4 py-1 text-xs text-gray-500 bg-gray-900 border-t border-gray-800 shrink-0">
-        Worldwright &nbsp;|&nbsp; Scroll to zoom · Middle-click or Pan tool to pan · Click to paint
+        World Builder &nbsp;|&nbsp; Scroll to zoom · Middle-click or Pan tool to pan · Click to paint
       </footer>
 
       {showExamplesDialog && (
