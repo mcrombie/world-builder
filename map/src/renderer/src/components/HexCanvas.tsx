@@ -6,6 +6,7 @@ import {
 } from '../lib/hex'
 import { TERRAIN_COLORS } from '../lib/terrain'
 import { HexData, RiverSize, SimWorldState } from '../types/map'
+import { HexData, RiverSize, SimWorldState } from '../types/map'
 import { SelectMode } from '../types/map'
 import { buildFactionColorMap } from './SimulationPanel'
 
@@ -54,6 +55,12 @@ export function HexCanvas() {
   const isSimRef        = useRef(isSimulating)
   simWorldRef.current   = simWorld
   isSimRef.current      = isSimulating
+  const simWorld        = useMapStore((s) => s.simWorld)
+  const isSimulating    = useMapStore((s) => s.isSimulating)
+  const simWorldRef     = useRef<SimWorldState | null>(simWorld)
+  const isSimRef        = useRef(isSimulating)
+  simWorldRef.current   = simWorld
+  isSimRef.current      = isSimulating
 
   const hoverCoord        = useRef<AxialCoord | null>(null)
   const hoverRiverEdge    = useRef<string | null>(null)
@@ -77,6 +84,7 @@ export function HexCanvas() {
     img.src = map.underlayPath
   }, [map?.underlayPath])
 
+  useEffect(() => { needsRedraw.current = true }, [map, layers, selectedHex, selectedRegion, brushRadius, activeTool, activeRegion, simWorld, isSimulating])
   useEffect(() => { needsRedraw.current = true }, [map, layers, selectedHex, selectedRegion, brushRadius, activeTool, activeRegion, simWorld, isSimulating])
 
   // ── Render ────────────────────────────────────────────────────────────────────

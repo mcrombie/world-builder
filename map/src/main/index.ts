@@ -3,6 +3,8 @@ import { join } from 'path'
 import { readFileSync, writeFileSync, existsSync } from 'fs'
 import { spawn, spawnSync, ChildProcess } from 'child_process'
 import * as http from 'http'
+import { spawn, spawnSync, ChildProcess } from 'child_process'
+import * as http from 'http'
 
 const EXAMPLES_DIR = app.isPackaged
   ? join(process.resourcesPath, 'examples')

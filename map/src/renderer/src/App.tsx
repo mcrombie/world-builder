@@ -13,6 +13,7 @@ import { useMapStore } from './store/mapStore'
 import { fileIO, IS_BROWSER, type RecentFile } from './lib/fileIO'
 import { autoSave, loadAutoSave, saveToLibrary } from './lib/mapLibrary'
 import type { MapData, SimWorldState } from './types/map'
+import type { MapData, SimWorldState } from './types/map'
 
 export default function App() {
   const [showNewDialog,       setShowNewDialog]       = useState(false)
@@ -272,6 +273,7 @@ export default function App() {
             </div>
           )}
         </main>
+        {isSimulating ? <SimulationPanel /> : <InfoPanel />}
         {isSimulating ? <SimulationPanel /> : <InfoPanel />}
       </div>
 
