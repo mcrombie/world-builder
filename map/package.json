@@ -1,5 +1,5 @@
 {
-  "name": "worldwright",
+  "name": "world-builder",
   "version": "0.1.0",
   "description": "Interactive hex map editor for world-building",
   "main": "./out/main/index.js",

@@ -35,6 +35,8 @@ export default function App() {
   const setSimWorld      = useMapStore((s) => s.setSimWorld)
   const simFactionCount  = useMapStore((s) => s.simFactionCount)
   const setSimFactionCount = useMapStore((s) => s.setSimFactionCount)
+  const simType          = useMapStore((s) => s.simType)
+  const setSimType       = useMapStore((s) => s.setSimType)
 
   // ── Restore autosave on mount (browser only) ──────────────────────────────
   const restoredRef = useRef(false)
@@ -143,12 +145,13 @@ export default function App() {
     setShowSimulateDialog(true)
   }
 
-  async function handleStartNew(factionCount: number) {
+  async function handleStartNew(factionCount: number, selectedSimType: 'clashvergence' | 'claudevergence') {
     setShowSimulateDialog(false)
     if (!currentPath || !window.electronAPI?.sim) return
     setSimFactionCount(factionCount)
+    setSimType(selectedSimType)
     setSimulating(true)
-    const result = await window.electronAPI.sim.start(currentPath, factionCount)
+    const result = await window.electronAPI.sim.start(currentPath, factionCount, selectedSimType)
     if (!result.ok) {
       alert('Simulation failed to start:\n' + (result.error ?? 'Unknown error'))
       setSimulating(false)
@@ -289,6 +292,7 @@ export default function App() {
       {showSimulateDialog && (
         <SimulateDialog
           initialFactionCount={simFactionCount}
+          initialSimType={simType}
           onStartNew={handleStartNew}
           onLoadSaved={handleLoadSaved}
           onClose={() => setShowSimulateDialog(false)}

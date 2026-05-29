@@ -155,21 +155,27 @@ ipcMain.handle('map:add-recent', (_, path: string, name: string) => {
 })
 
 // ── Simulation subprocess ─────────────────────────────────────────────────────
-// app.getAppPath() = .../typescript/worldwright/map  (in dev)
+// app.getAppPath() = .../typescript/world-builder/map  (in dev)
 // Clashvergence:     .../python/Clashvergence  (3 dirs up, then python/)
-// Translator:        .../typescript/worldwright/wwmap_to_clashvergence.py (1 dir up)
+// Claudevergence:    .../python/claudevergence  (3 dirs up, then python/)
+// Translators:       .../typescript/world-builder/wwmap_to_*.py (1 dir up)
 
-const PYTHON_CMD        = process.env.WW_PYTHON           ?? 'python'
-const CLASHVERGENCE_DIR = process.env.WW_CLASHVERGENCE_DIR
+const PYTHON_CMD             = process.env.WW_PYTHON              ?? 'python'
+const CLASHVERGENCE_DIR      = process.env.WW_CLASHVERGENCE_DIR
   ?? join(app.getAppPath(), '..', '..', '..', 'python', 'Clashvergence')
-const TRANSLATOR_SCRIPT = process.env.WW_TRANSLATOR
+const CLAUDEVERGENCE_DIR     = process.env.WW_CLAUDEVERGENCE_DIR
+  ?? join(app.getAppPath(), '..', '..', '..', 'python', 'claudevergence')
+const CV_TRANSLATOR_SCRIPT   = process.env.WW_CV_TRANSLATOR
   ?? join(app.getAppPath(), '..', 'wwmap_to_clashvergence.py')
+const CV2_TRANSLATOR_SCRIPT  = process.env.WW_CV2_TRANSLATOR
+  ?? join(app.getAppPath(), '..', 'wwmap_to_claudevergence.py')
 const SIM_PORT = 18765
 
 let simProcess: ChildProcess | null = null
 let simPid: number | undefined
 let simMapPath: string | null = null
 let simNumFactions: number = 4
+let simType: string = 'clashvergence'
 
 function killSimProcess() {
   if (!simProcess) return
@@ -205,6 +211,7 @@ async function waitForPortFree(maxMs = 8000): Promise<boolean> {
 async function _spawnServer(
   resolvedMapPath: string,
   numFactions: number,
+  requestedSimType: string = 'clashvergence',
 ): Promise<{ ok: boolean; error?: string }> {
   killSimProcess()
 
@@ -222,14 +229,18 @@ async function _spawnServer(
   // Confirm the port is actually free before spawning.
   const portFree = await waitForPortFree()
   if (!portFree) {
-    return { ok: false, error: `Port ${SIM_PORT} is still in use after kill attempt. Close any lingering Clashvergence processes and try again.` }
+    return { ok: false, error: `Port ${SIM_PORT} is still in use after kill attempt. Close any lingering simulation processes and try again.` }
   }
 
-  const cmapPath = resolvedMapPath.endsWith('.wwmap')
-    ? resolvedMapPath.replace(/\.wwmap$/, '.cmap.json')
-    : resolvedMapPath + '.cmap.json'
+  const isClaudevergence = requestedSimType === 'claudevergence'
+  const translatorScript = isClaudevergence ? CV2_TRANSLATOR_SCRIPT : CV_TRANSLATOR_SCRIPT
+  const mapExt           = isClaudevergence ? '.cvmap.json' : '.cmap.json'
+  const simDir           = isClaudevergence ? CLAUDEVERGENCE_DIR : CLASHVERGENCE_DIR
+  const mapFileArg       = resolvedMapPath.endsWith('.wwmap')
+    ? resolvedMapPath.replace(/\.wwmap$/, mapExt)
+    : resolvedMapPath + mapExt
 
-  const xResult = spawnSync(PYTHON_CMD, [TRANSLATOR_SCRIPT, resolvedMapPath, cmapPath, String(numFactions)], { encoding: 'utf-8' })
+  const xResult = spawnSync(PYTHON_CMD, [translatorScript, resolvedMapPath, mapFileArg, String(numFactions)], { encoding: 'utf-8' })
   if (xResult.status !== 0) {
     return { ok: false, error: xResult.stderr?.trim() || xResult.error?.message || 'Translator failed.' }
   }
@@ -237,8 +248,8 @@ async function _spawnServer(
   const stderrChunks: Buffer[] = []
   simProcess = spawn(
     PYTHON_CMD,
-    [join(CLASHVERGENCE_DIR, 'main.py'), '--map-file', cmapPath, '--game-server', '--port', String(SIM_PORT)],
-    { cwd: CLASHVERGENCE_DIR },
+    [join(simDir, 'main.py'), '--map-file', mapFileArg, '--game-server', '--port', String(SIM_PORT)],
+    { cwd: simDir },
   )
   simPid = simProcess.pid
   simProcess.stderr?.on('data', (chunk: Buffer) => stderrChunks.push(chunk))
@@ -302,15 +313,16 @@ function _resolveMapPath(mapFilePath: string): string | null {
   return mapFilePath
 }
 
-ipcMain.handle('sim:start', async (_, mapFilePath: string, numFactions: number = 4) => {
+ipcMain.handle('sim:start', async (_, mapFilePath: string, numFactions: number = 4, requestedSimType: string = 'clashvergence') => {
   const resolvedPath = _resolveMapPath(mapFilePath)
   if (!resolvedPath) return { ok: false, error: `Unknown example: ${mapFilePath}` }
 
-  const spawn_result = await _spawnServer(resolvedPath, numFactions)
+  const spawn_result = await _spawnServer(resolvedPath, numFactions, requestedSimType)
   if (!spawn_result.ok) return spawn_result
 
   simMapPath = mapFilePath
   simNumFactions = numFactions
+  simType = requestedSimType
 
   try {
     const raw = await simGet('/api/world')
@@ -333,6 +345,7 @@ ipcMain.handle('sim:save-state', async () => {
     if (result.canceled || !result.filePath) return { canceled: true }
     const envelope = {
       worldwright_save: true,
+      sim_type: simType,
       map_path: simMapPath,
       num_factions: simNumFactions,
       world_state: JSON.parse(worldRaw),
@@ -362,16 +375,18 @@ ipcMain.handle('sim:load-and-start', async () => {
 
   const mapPath = envelope.map_path as string
   const numFactions = Number(envelope.num_factions ?? 4)
+  const savedSimType: string = envelope.sim_type ?? 'clashvergence'
   const worldState = envelope.world_state
 
   const resolvedPath = _resolveMapPath(mapPath)
   if (!resolvedPath) return { ok: false, error: `Save file references unknown map: ${mapPath}` }
 
-  const spawn_result = await _spawnServer(resolvedPath, numFactions)
+  const spawn_result = await _spawnServer(resolvedPath, numFactions, savedSimType)
   if (!spawn_result.ok) return spawn_result
 
   simMapPath = mapPath
   simNumFactions = numFactions
+  simType = savedSimType
 
   try {
     const loadRaw = await simPost('/api/load', worldState)

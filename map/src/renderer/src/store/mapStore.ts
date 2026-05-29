@@ -55,9 +55,11 @@ interface MapStore {
   simWorld: SimWorldState | null
   isSimulating: boolean
   simFactionCount: number
+  simType: 'clashvergence' | 'claudevergence'
   setSimWorld: (world: SimWorldState | null) => void
   setSimulating: (v: boolean) => void
   setSimFactionCount: (n: number) => void
+  setSimType: (t: 'clashvergence' | 'claudevergence') => void
 }
 
 export const useMapStore = create<MapStore>((set, get) => ({
@@ -86,9 +88,11 @@ export const useMapStore = create<MapStore>((set, get) => ({
   simWorld: null,
   isSimulating: false,
   simFactionCount: 4,
+  simType: 'clashvergence',
   setSimWorld: (world) => set({ simWorld: world }),
   setSimulating: (v) => set({ isSimulating: v }),
   setSimFactionCount: (n) => set({ simFactionCount: n }),
+  setSimType: (t) => set({ simType: t }),
 
   newMap: (name, width, height, hexSize, precomputedHexes, precomputedRegions) => {
     let hexes: Record<string, HexData>

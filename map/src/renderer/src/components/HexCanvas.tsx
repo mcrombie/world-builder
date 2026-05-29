@@ -130,7 +130,8 @@ export function HexCanvas() {
       const factionColors = buildFactionColorMap(simWorldRef.current.factions)
       const factionLabels: Record<string, string> = {}
       for (const f of simWorldRef.current.factions) {
-        factionLabels[f.name] = f.display_name.split(' ')[0]
+        const stripped = f.display_name.startsWith('The ') ? f.display_name.slice(4) : f.display_name
+        factionLabels[f.name] = stripped.split(' ')[0]
       }
       const regionOwnerMap: Record<string, string | null> = {}
       for (const r of simWorldRef.current.regions) {
@@ -378,7 +379,10 @@ export function HexCanvas() {
   // ── RAF loop ──────────────────────────────────────────────────────────────────
   useEffect(() => {
     const loop = () => {
-      if (needsRedraw.current) { render(); needsRedraw.current = false }
+      if (needsRedraw.current) {
+        try { render() } catch (e) { console.error('HexCanvas render error:', e) }
+        needsRedraw.current = false
+      }
       rafRef.current = requestAnimationFrame(loop)
     }
     rafRef.current = requestAnimationFrame(loop)
