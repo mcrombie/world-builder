@@ -5,8 +5,9 @@ import {
   riverEdgeKey, parseRiverEdge, NEIGHBOR_TO_EDGE_SLOT, HEX_NEIGHBORS,
 } from '../lib/hex'
 import { TERRAIN_COLORS } from '../lib/terrain'
-import { HexData, RiverSize } from '../types/map'
+import { HexData, RiverSize, SimWorldState } from '../types/map'
 import { SelectMode } from '../types/map'
+import { SIM_FACTION_COLORS } from './SimulationPanel'
 
 interface ViewState {
   offsetX: number
@@ -47,6 +48,12 @@ export function HexCanvas() {
   const selectHex       = useMapStore((s) => s.selectHex)
   const selectRegion    = useMapStore((s) => s.selectRegion)
   const toggleRiverEdge = useMapStore((s) => s.toggleRiverEdge)
+  const simWorld        = useMapStore((s) => s.simWorld)
+  const isSimulating    = useMapStore((s) => s.isSimulating)
+  const simWorldRef     = useRef<SimWorldState | null>(simWorld)
+  const isSimRef        = useRef(isSimulating)
+  simWorldRef.current   = simWorld
+  isSimRef.current      = isSimulating
 
   const hoverCoord        = useRef<AxialCoord | null>(null)
   const hoverRiverEdge    = useRef<string | null>(null)
@@ -70,7 +77,7 @@ export function HexCanvas() {
     img.src = map.underlayPath
   }, [map?.underlayPath])
 
-  useEffect(() => { needsRedraw.current = true }, [map, layers, selectedHex, selectedRegion, brushRadius, activeTool, activeRegion])
+  useEffect(() => { needsRedraw.current = true }, [map, layers, selectedHex, selectedRegion, brushRadius, activeTool, activeRegion, simWorld, isSimulating])
 
   // ── Render ────────────────────────────────────────────────────────────────────
 
@@ -114,6 +121,25 @@ export function HexCanvas() {
         if (cx + cullPad < viewL || cx - cullPad > viewR) continue
         if (cy + cullPad < viewT || cy - cullPad > viewB) continue
         drawHexFill(ctx, cx, cy, hexSize, TERRAIN_COLORS[hex.terrain])
+      }
+      ctx.globalAlpha = 1
+    }
+
+    // ── Simulation faction overlay ────────────────────────────────────────────
+    if (isSimRef.current && simWorldRef.current) {
+      const regionOwnerMap: Record<string, string> = {}
+      for (const r of simWorldRef.current.regions) {
+        if (r.owner) regionOwnerMap[r.name] = r.owner
+      }
+      ctx.globalAlpha = 0.5
+      for (const hex of Object.values(hexes)) {
+        if (!hex.region) continue
+        const owner = regionOwnerMap[hex.region]
+        if (!owner) continue
+        const [cx, cy] = hexToPixel(hex.q, hex.r, hexSize)
+        if (cx + cullPad < viewL || cx - cullPad > viewR) continue
+        if (cy + cullPad < viewT || cy - cullPad > viewB) continue
+        drawHexFill(ctx, cx, cy, hexSize, SIM_FACTION_COLORS[owner] ?? '#888888')
       }
       ctx.globalAlpha = 1
     }

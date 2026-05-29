@@ -59,6 +59,33 @@ export interface MapData {
   regions: Record<string, RegionData>    // regionId → RegionData
 }
 
+export interface SimFaction {
+  name: string
+  display_name: string
+  treasury: number
+  owned_regions: number
+  population: number
+  doctrine_label: string
+}
+
+export interface SimRegion {
+  name: string
+  display_name: string
+  owner: string | null
+  population: number
+  resources: number
+  unrest: number
+}
+
+export interface SimWorldState {
+  ok?: boolean
+  turn: number
+  turn_label: string
+  factions: SimFaction[]
+  regions: SimRegion[]
+  recent_events: unknown[]
+}
+
 export type Tool = 'paint' | 'erase' | 'select' | 'pan' | 'river' | 'region'
 export type SelectMode = 'tile' | 'region'
 

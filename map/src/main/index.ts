@@ -1,6 +1,8 @@
 import { app, shell, BrowserWindow, ipcMain, dialog } from 'electron'
 import { join } from 'path'
 import { readFileSync, writeFileSync, existsSync } from 'fs'
+import { spawn, spawnSync, ChildProcess } from 'child_process'
+import * as http from 'http'
 
 const EXAMPLES_DIR = app.isPackaged
   ? join(process.resourcesPath, 'examples')
@@ -149,4 +151,113 @@ ipcMain.handle('map:add-recent', (_, path: string, name: string) => {
   files.unshift({ path, name, savedAt: new Date().toISOString() })
   if (files.length > RECENT_MAX) files.length = RECENT_MAX
   writeRecent(files)
+})
+
+// ── Simulation subprocess ─────────────────────────────────────────────────────
+
+const PYTHON_CMD       = process.env.WW_PYTHON          ?? 'python'
+const CLASHVERGENCE_DIR = process.env.WW_CLASHVERGENCE_DIR
+  ?? join(app.getAppPath(), '..', '..', 'Clashvergence')
+const TRANSLATOR_SCRIPT = process.env.WW_TRANSLATOR
+  ?? join(app.getAppPath(), '..', 'wwmap_to_clashvergence.py')
+const SIM_PORT = 18765
+
+let simProcess: ChildProcess | null = null
+
+function simGet(path: string): Promise<string> {
+  return new Promise((resolve, reject) => {
+    const req = http.get(`http://127.0.0.1:${SIM_PORT}${path}`, (res) => {
+      let data = ''
+      res.on('data', (chunk: Buffer) => { data += chunk })
+      res.on('end', () => resolve(data))
+    })
+    req.on('error', reject)
+  })
+}
+
+function simPost(path: string, body: object): Promise<string> {
+  return new Promise((resolve, reject) => {
+    const payload = JSON.stringify(body)
+    const req = http.request(
+      { hostname: '127.0.0.1', port: SIM_PORT, path, method: 'POST',
+        headers: { 'Content-Type': 'application/json', 'Content-Length': Buffer.byteLength(payload) } },
+      (res) => {
+        let data = ''
+        res.on('data', (chunk: Buffer) => { data += chunk })
+        res.on('end', () => resolve(data))
+      },
+    )
+    req.on('error', reject)
+    req.write(payload)
+    req.end()
+  })
+}
+
+async function waitForServer(maxMs = 20_000): Promise<void> {
+  const deadline = Date.now() + maxMs
+  while (Date.now() < deadline) {
+    try { await simGet('/api/health'); return } catch { /* not ready yet */ }
+    await new Promise<void>((r) => setTimeout(r, 250))
+  }
+  throw new Error('Clashvergence server did not start within 20 s.')
+}
+
+// ── Simulation IPC ────────────────────────────────────────────────────────────
+
+ipcMain.handle('sim:start', async (_, mapFilePath: string) => {
+  if (simProcess) { simProcess.kill(); simProcess = null }
+
+  const cmapPath = mapFilePath.endsWith('.wwmap')
+    ? mapFilePath.replace(/\.wwmap$/, '.cmap.json')
+    : mapFilePath + '.cmap.json'
+
+  const xResult = spawnSync(PYTHON_CMD, [TRANSLATOR_SCRIPT, mapFilePath, cmapPath], { encoding: 'utf-8' })
+  if (xResult.status !== 0) {
+    return { ok: false, error: xResult.stderr || 'Translator failed.' }
+  }
+
+  simProcess = spawn(
+    PYTHON_CMD,
+    [join(CLASHVERGENCE_DIR, 'main.py'), '--map-file', cmapPath, '--game-server', '--port', String(SIM_PORT)],
+    { cwd: CLASHVERGENCE_DIR },
+  )
+
+  try {
+    await waitForServer()
+    const raw = await simGet('/api/world')
+    return { ok: true, world: JSON.parse(raw) }
+  } catch (e: any) {
+    simProcess?.kill(); simProcess = null
+    return { ok: false, error: e.message }
+  }
+})
+
+ipcMain.handle('sim:stop', () => {
+  if (simProcess) { simProcess.kill(); simProcess = null }
+  return { ok: true }
+})
+
+ipcMain.handle('sim:world', async () => {
+  try {
+    return JSON.parse(await simGet('/api/world'))
+  } catch (e: any) {
+    return { ok: false, error: e.message }
+  }
+})
+
+ipcMain.handle('sim:advance', async () => {
+  try {
+    const stateRaw = await simGet('/api/state')
+    const state = JSON.parse(stateRaw)
+    const actions: Array<{ action_id: string }> = state.state?.available_actions ?? []
+    const actionId = actions[0]?.action_id ?? 'hold'
+    await simPost('/api/action', { action_id: actionId })
+    return JSON.parse(await simGet('/api/world'))
+  } catch (e: any) {
+    return { ok: false, error: e.message }
+  }
+})
+
+app.on('before-quit', () => {
+  if (simProcess) { simProcess.kill(); simProcess = null }
 })

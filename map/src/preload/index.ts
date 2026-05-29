@@ -11,4 +11,10 @@ contextBridge.exposeInMainWorld('electronAPI', {
     listExamples: ()                                   => ipcRenderer.invoke('map:list-examples'),
     loadExample:  (id: string)                         => ipcRenderer.invoke('map:load-example', id),
   },
+  sim: {
+    start:   (mapFilePath: string) => ipcRenderer.invoke('sim:start', mapFilePath),
+    stop:    ()                    => ipcRenderer.invoke('sim:stop'),
+    world:   ()                    => ipcRenderer.invoke('sim:world'),
+    advance: ()                    => ipcRenderer.invoke('sim:advance'),
+  },
 })
