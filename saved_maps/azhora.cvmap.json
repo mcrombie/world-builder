@@ -1,0 +1,2549 @@
+{
+  "description": "world-builder map: Azhora",
+  "num_traditions": 4,
+  "tradition_names": [],
+  "sea_links": [
+    [
+      "Narcosh",
+      "South Oremindi Mountains"
+    ]
+  ],
+  "river_links": [
+    [
+      "Alezhor",
+      "Ganesh Desert"
+    ],
+    [
+      "Alezhor",
+      "Navarth"
+    ],
+    [
+      "Alezhor",
+      "South Ibenal"
+    ],
+    [
+      "Alezhor",
+      "South Ibenwood"
+    ],
+    [
+      "Amod",
+      "Elagos"
+    ],
+    [
+      "Amod",
+      "Vastos"
+    ],
+    [
+      "Caricas",
+      "Isareos"
+    ],
+    [
+      "Caricas",
+      "Nesdor"
+    ],
+    [
+      "Caricas",
+      "Nethereum"
+    ],
+    [
+      "Caricas",
+      "Ovesos"
+    ],
+    [
+      "Central Ibenwood",
+      "South Ibenwood"
+    ],
+    [
+      "Central Lond",
+      "North Lond"
+    ],
+    [
+      "Central Lond",
+      "South Lond"
+    ],
+    [
+      "Central Lond",
+      "West Lond"
+    ],
+    [
+      "Central Thoth",
+      "North Nonoth"
+    ],
+    [
+      "Central Thoth",
+      "North Orsa"
+    ],
+    [
+      "Central Thoth",
+      "North Thoth"
+    ],
+    [
+      "Central Thoth",
+      "South Orsa"
+    ],
+    [
+      "Central Thoth",
+      "South Thoth"
+    ],
+    [
+      "Drent",
+      "Elagos"
+    ],
+    [
+      "Drent",
+      "Luscia"
+    ],
+    [
+      "Drent",
+      "Pueth"
+    ],
+    [
+      "East Acordwood",
+      "North Acorwood"
+    ],
+    [
+      "East Acordwood",
+      "South Acordwood"
+    ],
+    [
+      "East Baldro Mountains",
+      "East Ganun"
+    ],
+    [
+      "East Baldro Mountains",
+      "South Riesov"
+    ],
+    [
+      "East Endevor",
+      "North Endevor"
+    ],
+    [
+      "East Endevor",
+      "South Endevor"
+    ],
+    [
+      "East Ganun",
+      "South Ganun"
+    ],
+    [
+      "East Ganun",
+      "South Riesov"
+    ],
+    [
+      "East Ganun",
+      "West Ganun"
+    ],
+    [
+      "East Inseld",
+      "West Inseld"
+    ],
+    [
+      "East Lotharn Mountains",
+      "South Mithala"
+    ],
+    [
+      "East Mithala",
+      "South Mithala"
+    ],
+    [
+      "East Mithala",
+      "West Mithala"
+    ],
+    [
+      "East Pyros",
+      "West Pyros"
+    ],
+    [
+      "East Suval",
+      "Luscia"
+    ],
+    [
+      "East Witherst",
+      "West Witherst"
+    ],
+    [
+      "Eer",
+      "Gala"
+    ],
+    [
+      "Eer",
+      "Northern Ascarth"
+    ],
+    [
+      "Eer",
+      "West Suval"
+    ],
+    [
+      "Elagos",
+      "Meneth"
+    ],
+    [
+      "Eshtor Plateau",
+      "West Witherst"
+    ],
+    [
+      "Feradom",
+      "Pueth"
+    ],
+    [
+      "Gala",
+      "Legemum"
+    ],
+    [
+      "Gala",
+      "Nesdor"
+    ],
+    [
+      "Gala",
+      "Oves Desert"
+    ],
+    [
+      "Gala",
+      "Ovesos"
+    ],
+    [
+      "Gala",
+      "Telemonia"
+    ],
+    [
+      "Isareos",
+      "Nethereum"
+    ],
+    [
+      "Luscia",
+      "West Suval"
+    ],
+    [
+      "Meneth",
+      "Vastos"
+    ],
+    [
+      "Moros Plain",
+      "West Suval"
+    ],
+    [
+      "Nesdor",
+      "Ovesos"
+    ],
+    [
+      "Nether Desert",
+      "Nethereum"
+    ],
+    [
+      "Nethereum",
+      "Ovesos"
+    ],
+    [
+      "North Acorwood",
+      "South Acordwood"
+    ],
+    [
+      "North Acorwood",
+      "West Acorwood"
+    ],
+    [
+      "North Celder",
+      "South Celder"
+    ],
+    [
+      "North Celder",
+      "South Mithala"
+    ],
+    [
+      "North Celder",
+      "West Mithala"
+    ],
+    [
+      "North Endevor",
+      "South Endevor"
+    ],
+    [
+      "North Endevor",
+      "West Endevor"
+    ],
+    [
+      "North Ganun",
+      "West Ganun"
+    ],
+    [
+      "North Ibenal",
+      "South Ibenal"
+    ],
+    [
+      "North Lond",
+      "West Gorgi Mountains"
+    ],
+    [
+      "North Mithala",
+      "West Mithala"
+    ],
+    [
+      "North Nonoth",
+      "South Orsa"
+    ],
+    [
+      "North Nonoth",
+      "South Thoth"
+    ],
+    [
+      "North Orsa",
+      "North Thoth"
+    ],
+    [
+      "North Riesov",
+      "South Riesov"
+    ],
+    [
+      "North Thoth",
+      "West Witherst"
+    ],
+    [
+      "Noth Hills",
+      "South Nonoth"
+    ],
+    [
+      "Oves Desert",
+      "Ovesos"
+    ],
+    [
+      "Oves Desert",
+      "Telemonia"
+    ],
+    [
+      "South Endevor",
+      "West Endevor"
+    ],
+    [
+      "South Ibenal",
+      "West Ibenwood"
+    ],
+    [
+      "South Mithala",
+      "West Mithala"
+    ],
+    [
+      "South Nonoth",
+      "South Thoth"
+    ]
+  ],
+  "regions": {
+    "Cold Stones": {
+      "neighbors": [],
+      "sea_neighbors": [],
+      "river_neighbors": [],
+      "terrain_tags": [
+        "hills"
+      ],
+      "climate": "temperate",
+      "base_prestige": 2,
+      "starting_tradition": null
+    },
+    "North Orsa": {
+      "neighbors": [
+        "Central Thoth",
+        "North Thoth",
+        "South Orsa"
+      ],
+      "sea_neighbors": [],
+      "river_neighbors": [
+        "Central Thoth",
+        "North Thoth"
+      ],
+      "terrain_tags": [
+        "steppe"
+      ],
+      "climate": "temperate",
+      "base_prestige": 2,
+      "starting_tradition": null
+    },
+    "North Thoth": {
+      "neighbors": [
+        "Central Thoth",
+        "North Gorgi Mountains",
+        "North Orsa",
+        "West Witherst"
+      ],
+      "sea_neighbors": [],
+      "river_neighbors": [
+        "Central Thoth",
+        "North Orsa",
+        "West Witherst"
+      ],
+      "terrain_tags": [
+        "steppe"
+      ],
+      "climate": "temperate",
+      "base_prestige": 2,
+      "starting_tradition": null
+    },
+    "West Witherst": {
+      "neighbors": [
+        "East Witherst",
+        "Eshtor Plateau",
+        "North Gorgi Mountains",
+        "North Thoth"
+      ],
+      "sea_neighbors": [],
+      "river_neighbors": [
+        "East Witherst",
+        "Eshtor Plateau",
+        "North Thoth"
+      ],
+      "terrain_tags": [
+        "steppe"
+      ],
+      "climate": "temperate",
+      "base_prestige": 2,
+      "starting_tradition": null
+    },
+    "South Orsa": {
+      "neighbors": [
+        "Central Thoth",
+        "North Nonoth",
+        "North Orsa"
+      ],
+      "sea_neighbors": [],
+      "river_neighbors": [
+        "Central Thoth",
+        "North Nonoth"
+      ],
+      "terrain_tags": [
+        "steppe"
+      ],
+      "climate": "temperate",
+      "base_prestige": 2,
+      "starting_tradition": null
+    },
+    "Central Thoth": {
+      "neighbors": [
+        "North Gorgi Mountains",
+        "North Nonoth",
+        "North Orsa",
+        "North Thoth",
+        "South Orsa",
+        "South Thoth",
+        "West Gorgi Mountains"
+      ],
+      "sea_neighbors": [],
+      "river_neighbors": [
+        "North Nonoth",
+        "North Orsa",
+        "North Thoth",
+        "South Orsa",
+        "South Thoth"
+      ],
+      "terrain_tags": [
+        "steppe"
+      ],
+      "climate": "temperate",
+      "base_prestige": 2,
+      "starting_tradition": null
+    },
+    "North Gorgi Mountains": {
+      "neighbors": [
+        "Central Thoth",
+        "East Gorgi Mountains",
+        "Eshtor Plateau",
+        "North Thoth",
+        "West Gorgi Mountains",
+        "West Witherst"
+      ],
+      "sea_neighbors": [],
+      "river_neighbors": [],
+      "terrain_tags": [
+        "hills",
+        "highland"
+      ],
+      "climate": "temperate",
+      "base_prestige": 2,
+      "starting_tradition": null
+    },
+    "North Nonoth": {
+      "neighbors": [
+        "Central Thoth",
+        "South Nonoth",
+        "South Orsa",
+        "South Thoth"
+      ],
+      "sea_neighbors": [],
+      "river_neighbors": [
+        "Central Thoth",
+        "South Orsa",
+        "South Thoth"
+      ],
+      "terrain_tags": [
+        "steppe"
+      ],
+      "climate": "temperate",
+      "base_prestige": 2,
+      "starting_tradition": null
+    },
+    "East Witherst": {
+      "neighbors": [
+        "Eshtor Plateau",
+        "North Riesov",
+        "West Witherst"
+      ],
+      "sea_neighbors": [],
+      "river_neighbors": [
+        "West Witherst"
+      ],
+      "terrain_tags": [
+        "steppe"
+      ],
+      "climate": "temperate",
+      "base_prestige": 2,
+      "starting_tradition": null
+    },
+    "West Gorgi Mountains": {
+      "neighbors": [
+        "Central Thoth",
+        "East Gorgi Mountains",
+        "North Gorgi Mountains",
+        "North Lond",
+        "Noth Hills",
+        "South Thoth"
+      ],
+      "sea_neighbors": [],
+      "river_neighbors": [
+        "North Lond"
+      ],
+      "terrain_tags": [
+        "hills",
+        "highland"
+      ],
+      "climate": "temperate",
+      "base_prestige": 2,
+      "starting_tradition": null
+    },
+    "East Gorgi Mountains": {
+      "neighbors": [
+        "Eshtor Plateau",
+        "North Gorgi Mountains",
+        "North Lond",
+        "Orgmala",
+        "West Gorgi Mountains"
+      ],
+      "sea_neighbors": [],
+      "river_neighbors": [],
+      "terrain_tags": [
+        "hills",
+        "highland"
+      ],
+      "climate": "temperate",
+      "base_prestige": 2,
+      "starting_tradition": null
+    },
+    "Eshtor Plateau": {
+      "neighbors": [
+        "East Gorgi Mountains",
+        "East Witherst",
+        "North Gorgi Mountains",
+        "North Riesov",
+        "Orgmala",
+        "West Baldro Mountains",
+        "West Witherst"
+      ],
+      "sea_neighbors": [],
+      "river_neighbors": [
+        "West Witherst"
+      ],
+      "terrain_tags": [
+        "hills"
+      ],
+      "climate": "temperate",
+      "base_prestige": 2,
+      "starting_tradition": null
+    },
+    "South Nonoth": {
+      "neighbors": [
+        "North Nonoth",
+        "Noth Hills",
+        "Nothwood",
+        "South Thoth"
+      ],
+      "sea_neighbors": [],
+      "river_neighbors": [
+        "Noth Hills",
+        "South Thoth"
+      ],
+      "terrain_tags": [
+        "steppe"
+      ],
+      "climate": "temperate",
+      "base_prestige": 2,
+      "starting_tradition": null
+    },
+    "South Thoth": {
+      "neighbors": [
+        "Central Thoth",
+        "North Nonoth",
+        "Noth Hills",
+        "South Nonoth",
+        "West Gorgi Mountains"
+      ],
+      "sea_neighbors": [],
+      "river_neighbors": [
+        "Central Thoth",
+        "North Nonoth",
+        "South Nonoth"
+      ],
+      "terrain_tags": [
+        "steppe"
+      ],
+      "climate": "temperate",
+      "base_prestige": 2,
+      "starting_tradition": null
+    },
+    "North Riesov": {
+      "neighbors": [
+        "East Baldro Mountains",
+        "East Witherst",
+        "Eshtor Plateau",
+        "South Riesov",
+        "West Baldro Mountains"
+      ],
+      "sea_neighbors": [],
+      "river_neighbors": [
+        "South Riesov"
+      ],
+      "terrain_tags": [
+        "steppe",
+        "hills"
+      ],
+      "climate": "temperate",
+      "base_prestige": 2,
+      "starting_tradition": null
+    },
+    "Noth Hills": {
+      "neighbors": [
+        "East Endevor",
+        "North Lond",
+        "Nothwood",
+        "South Nonoth",
+        "South Thoth",
+        "West Gorgi Mountains",
+        "West Lond"
+      ],
+      "sea_neighbors": [],
+      "river_neighbors": [
+        "South Nonoth"
+      ],
+      "terrain_tags": [
+        "hills"
+      ],
+      "climate": "temperate",
+      "base_prestige": 2,
+      "starting_tradition": null
+    },
+    "Orgmala": {
+      "neighbors": [
+        "East Gorgi Mountains",
+        "East Lond",
+        "Eshtor Plateau",
+        "North Lond",
+        "West Baldro Mountains"
+      ],
+      "sea_neighbors": [],
+      "river_neighbors": [],
+      "terrain_tags": [
+        "steppe",
+        "hills",
+        "highland",
+        "forest",
+        "marsh",
+        "plains"
+      ],
+      "climate": "temperate",
+      "base_prestige": 2,
+      "starting_tradition": null
+    },
+    "North Lond": {
+      "neighbors": [
+        "Central Lond",
+        "East Gorgi Mountains",
+        "East Lond",
+        "Noth Hills",
+        "Orgmala",
+        "West Gorgi Mountains",
+        "West Lond"
+      ],
+      "sea_neighbors": [],
+      "river_neighbors": [
+        "Central Lond",
+        "West Gorgi Mountains"
+      ],
+      "terrain_tags": [
+        "steppe",
+        "plains"
+      ],
+      "climate": "temperate",
+      "base_prestige": 2,
+      "starting_tradition": null
+    },
+    "Nothwood": {
+      "neighbors": [
+        "East Endevor",
+        "North Endevor",
+        "Noth Hills",
+        "South Nonoth"
+      ],
+      "sea_neighbors": [],
+      "river_neighbors": [],
+      "terrain_tags": [
+        "forest",
+        "steppe"
+      ],
+      "climate": "temperate",
+      "base_prestige": 2,
+      "starting_tradition": null
+    },
+    "West Baldro Mountains": {
+      "neighbors": [
+        "East Baldro Mountains",
+        "East Lond",
+        "Eshtor Plateau",
+        "North Ganun",
+        "North Riesov",
+        "Orgmala"
+      ],
+      "sea_neighbors": [],
+      "river_neighbors": [],
+      "terrain_tags": [
+        "hills",
+        "highland"
+      ],
+      "climate": "temperate",
+      "base_prestige": 2,
+      "starting_tradition": null
+    },
+    "South Riesov": {
+      "neighbors": [
+        "East Baldro Mountains",
+        "East Ganun",
+        "North Riesov"
+      ],
+      "sea_neighbors": [],
+      "river_neighbors": [
+        "East Baldro Mountains",
+        "East Ganun",
+        "North Riesov"
+      ],
+      "terrain_tags": [
+        "steppe",
+        "hills"
+      ],
+      "climate": "temperate",
+      "base_prestige": 2,
+      "starting_tradition": "Tradition2"
+    },
+    "East Lond": {
+      "neighbors": [
+        "Central Lond",
+        "North Ganun",
+        "North Lond",
+        "Orgmala",
+        "South Lond",
+        "West Baldro Mountains",
+        "West Ganun"
+      ],
+      "sea_neighbors": [],
+      "river_neighbors": [],
+      "terrain_tags": [
+        "steppe",
+        "plains"
+      ],
+      "climate": "temperate",
+      "base_prestige": 2,
+      "starting_tradition": null
+    },
+    "West Lond": {
+      "neighbors": [
+        "Central Lond",
+        "East Endevor",
+        "North Acorwood",
+        "North Lond",
+        "Noth Hills",
+        "South Lond"
+      ],
+      "sea_neighbors": [],
+      "river_neighbors": [
+        "Central Lond"
+      ],
+      "terrain_tags": [
+        "steppe",
+        "plains"
+      ],
+      "climate": "temperate",
+      "base_prestige": 2,
+      "starting_tradition": null
+    },
+    "Central Lond": {
+      "neighbors": [
+        "East Lond",
+        "North Lond",
+        "South Lond",
+        "West Lond"
+      ],
+      "sea_neighbors": [],
+      "river_neighbors": [
+        "North Lond",
+        "South Lond",
+        "West Lond"
+      ],
+      "terrain_tags": [
+        "plains"
+      ],
+      "climate": "temperate",
+      "base_prestige": 2,
+      "starting_tradition": null
+    },
+    "East Baldro Mountains": {
+      "neighbors": [
+        "East Ganun",
+        "North Ganun",
+        "North Riesov",
+        "South Riesov",
+        "West Baldro Mountains"
+      ],
+      "sea_neighbors": [],
+      "river_neighbors": [
+        "East Ganun",
+        "South Riesov"
+      ],
+      "terrain_tags": [
+        "hills",
+        "highland"
+      ],
+      "climate": "temperate",
+      "base_prestige": 2,
+      "starting_tradition": null
+    },
+    "North Endevor": {
+      "neighbors": [
+        "East Endevor",
+        "Nothwood",
+        "South Endevor",
+        "West Endevor"
+      ],
+      "sea_neighbors": [],
+      "river_neighbors": [
+        "East Endevor",
+        "South Endevor",
+        "West Endevor"
+      ],
+      "terrain_tags": [
+        "steppe"
+      ],
+      "climate": "temperate",
+      "base_prestige": 2,
+      "starting_tradition": null
+    },
+    "East Endevor": {
+      "neighbors": [
+        "North Acorwood",
+        "North Endevor",
+        "Noth Hills",
+        "Nothwood",
+        "South Endevor",
+        "West Lond"
+      ],
+      "sea_neighbors": [],
+      "river_neighbors": [
+        "North Endevor",
+        "South Endevor"
+      ],
+      "terrain_tags": [
+        "steppe"
+      ],
+      "climate": "temperate",
+      "base_prestige": 2,
+      "starting_tradition": null
+    },
+    "West Endevor": {
+      "neighbors": [
+        "Acor Wetlands",
+        "North Endevor",
+        "South Endevor"
+      ],
+      "sea_neighbors": [],
+      "river_neighbors": [
+        "North Endevor",
+        "South Endevor"
+      ],
+      "terrain_tags": [
+        "steppe"
+      ],
+      "climate": "temperate",
+      "base_prestige": 2,
+      "starting_tradition": null
+    },
+    "North Ganun": {
+      "neighbors": [
+        "East Baldro Mountains",
+        "East Ganun",
+        "East Lond",
+        "West Baldro Mountains",
+        "West Ganun"
+      ],
+      "sea_neighbors": [],
+      "river_neighbors": [
+        "West Ganun"
+      ],
+      "terrain_tags": [
+        "steppe"
+      ],
+      "climate": "temperate",
+      "base_prestige": 2,
+      "starting_tradition": null
+    },
+    "East Ganun": {
+      "neighbors": [
+        "East Baldro Mountains",
+        "North Ganun",
+        "South Ganun",
+        "South Riesov",
+        "West Ganun"
+      ],
+      "sea_neighbors": [],
+      "river_neighbors": [
+        "East Baldro Mountains",
+        "South Ganun",
+        "South Riesov",
+        "West Ganun"
+      ],
+      "terrain_tags": [
+        "steppe"
+      ],
+      "climate": "temperate",
+      "base_prestige": 2,
+      "starting_tradition": null
+    },
+    "South Endevor": {
+      "neighbors": [
+        "Acor Wetlands",
+        "East Endevor",
+        "North Acorwood",
+        "North Endevor",
+        "West Acorwood",
+        "West Endevor"
+      ],
+      "sea_neighbors": [],
+      "river_neighbors": [
+        "East Endevor",
+        "North Endevor",
+        "West Endevor"
+      ],
+      "terrain_tags": [
+        "steppe"
+      ],
+      "climate": "temperate",
+      "base_prestige": 2,
+      "starting_tradition": null
+    },
+    "South Lond": {
+      "neighbors": [
+        "Central Lond",
+        "East Acordwood",
+        "East Lond",
+        "North Acorwood",
+        "West Ganun",
+        "West Lond"
+      ],
+      "sea_neighbors": [],
+      "river_neighbors": [
+        "Central Lond"
+      ],
+      "terrain_tags": [
+        "plains",
+        "steppe"
+      ],
+      "climate": "temperate",
+      "base_prestige": 2,
+      "starting_tradition": null
+    },
+    "West Ganun": {
+      "neighbors": [
+        "East Ganun",
+        "East Lond",
+        "North Ganun",
+        "South Ganun",
+        "South Lond"
+      ],
+      "sea_neighbors": [],
+      "river_neighbors": [
+        "East Ganun",
+        "North Ganun"
+      ],
+      "terrain_tags": [
+        "steppe"
+      ],
+      "climate": "temperate",
+      "base_prestige": 2,
+      "starting_tradition": null
+    },
+    "North Acorwood": {
+      "neighbors": [
+        "East Acordwood",
+        "East Endevor",
+        "South Acordwood",
+        "South Endevor",
+        "South Lond",
+        "West Acorwood",
+        "West Lond"
+      ],
+      "sea_neighbors": [],
+      "river_neighbors": [
+        "East Acordwood",
+        "South Acordwood",
+        "West Acorwood"
+      ],
+      "terrain_tags": [
+        "forest"
+      ],
+      "climate": "temperate",
+      "base_prestige": 2,
+      "starting_tradition": null
+    },
+    "Cape Thalmagar": {
+      "neighbors": [
+        "Cudon",
+        "Narcosh"
+      ],
+      "sea_neighbors": [],
+      "river_neighbors": [],
+      "terrain_tags": [
+        "steppe"
+      ],
+      "climate": "temperate",
+      "base_prestige": 2,
+      "starting_tradition": null
+    },
+    "West Acorwood": {
+      "neighbors": [
+        "Acor Wetlands",
+        "East Mithala",
+        "North Acorwood",
+        "North Mithala",
+        "South Acordwood",
+        "South Endevor"
+      ],
+      "sea_neighbors": [],
+      "river_neighbors": [
+        "North Acorwood"
+      ],
+      "terrain_tags": [
+        "forest"
+      ],
+      "climate": "temperate",
+      "base_prestige": 2,
+      "starting_tradition": null
+    },
+    "East Acordwood": {
+      "neighbors": [
+        "North Acorwood",
+        "South Acordwood",
+        "South Lond"
+      ],
+      "sea_neighbors": [],
+      "river_neighbors": [
+        "North Acorwood",
+        "South Acordwood"
+      ],
+      "terrain_tags": [
+        "forest"
+      ],
+      "climate": "temperate",
+      "base_prestige": 2,
+      "starting_tradition": null
+    },
+    "South Ganun": {
+      "neighbors": [
+        "East Ganun",
+        "West Ganun"
+      ],
+      "sea_neighbors": [],
+      "river_neighbors": [
+        "East Ganun"
+      ],
+      "terrain_tags": [
+        "steppe"
+      ],
+      "climate": "temperate",
+      "base_prestige": 2,
+      "starting_tradition": null
+    },
+    "East Inseld": {
+      "neighbors": [
+        "West Inseld"
+      ],
+      "sea_neighbors": [],
+      "river_neighbors": [
+        "West Inseld"
+      ],
+      "terrain_tags": [
+        "plains"
+      ],
+      "climate": "temperate",
+      "base_prestige": 2,
+      "starting_tradition": null
+    },
+    "Acor Wetlands": {
+      "neighbors": [
+        "Henborth",
+        "Narcosh",
+        "North Mithala",
+        "South Endevor",
+        "West Acorwood",
+        "West Endevor"
+      ],
+      "sea_neighbors": [],
+      "river_neighbors": [],
+      "terrain_tags": [
+        "marsh"
+      ],
+      "climate": "temperate",
+      "base_prestige": 1,
+      "starting_tradition": null
+    },
+    "Narcosh": {
+      "neighbors": [
+        "Acor Wetlands",
+        "Cape Thalmagar",
+        "Cudon",
+        "Henborth",
+        "Lesser Oremindi Mountains"
+      ],
+      "sea_neighbors": [
+        "South Oremindi Mountains"
+      ],
+      "river_neighbors": [],
+      "terrain_tags": [
+        "highland",
+        "steppe",
+        "coast",
+        "plains",
+        "hills"
+      ],
+      "climate": "temperate",
+      "base_prestige": 2,
+      "starting_tradition": null
+    },
+    "Cudon": {
+      "neighbors": [
+        "Cape Thalmagar",
+        "Lesser Oremindi Mountains",
+        "Narcosh",
+        "North Oreminidi Mountains"
+      ],
+      "sea_neighbors": [],
+      "river_neighbors": [],
+      "terrain_tags": [
+        "hills",
+        "steppe",
+        "highland"
+      ],
+      "climate": "temperate",
+      "base_prestige": 2,
+      "starting_tradition": "Tradition1"
+    },
+    "South Acordwood": {
+      "neighbors": [
+        "East Acordwood",
+        "East Mithala",
+        "North Acorwood",
+        "West Acorwood"
+      ],
+      "sea_neighbors": [],
+      "river_neighbors": [
+        "East Acordwood",
+        "North Acorwood"
+      ],
+      "terrain_tags": [
+        "forest"
+      ],
+      "climate": "temperate",
+      "base_prestige": 2,
+      "starting_tradition": null
+    },
+    "West Inseld": {
+      "neighbors": [
+        "East Inseld"
+      ],
+      "sea_neighbors": [],
+      "river_neighbors": [
+        "East Inseld"
+      ],
+      "terrain_tags": [
+        "plains",
+        "steppe"
+      ],
+      "climate": "temperate",
+      "base_prestige": 2,
+      "starting_tradition": null
+    },
+    "Lesser Oremindi Mountains": {
+      "neighbors": [
+        "Cudon",
+        "Henborth",
+        "Narcosh",
+        "North Oreminidi Mountains"
+      ],
+      "sea_neighbors": [],
+      "river_neighbors": [],
+      "terrain_tags": [
+        "highland",
+        "hills"
+      ],
+      "climate": "temperate",
+      "base_prestige": 1,
+      "starting_tradition": null
+    },
+    "North Mithala": {
+      "neighbors": [
+        "Acor Wetlands",
+        "East Mithala",
+        "Henborth",
+        "West Acorwood",
+        "West Mithala"
+      ],
+      "sea_neighbors": [],
+      "river_neighbors": [
+        "West Mithala"
+      ],
+      "terrain_tags": [
+        "steppe",
+        "plains"
+      ],
+      "climate": "temperate",
+      "base_prestige": 2,
+      "starting_tradition": null
+    },
+    "Henborth": {
+      "neighbors": [
+        "Acor Wetlands",
+        "East Oremindi Mountains",
+        "Lesser Oremindi Mountains",
+        "Narcosh",
+        "North Celder",
+        "North Mithala",
+        "North Oreminidi Mountains",
+        "West Mithala"
+      ],
+      "sea_neighbors": [],
+      "river_neighbors": [],
+      "terrain_tags": [
+        "steppe"
+      ],
+      "climate": "temperate",
+      "base_prestige": 2,
+      "starting_tradition": null
+    },
+    "North Oreminidi Mountains": {
+      "neighbors": [
+        "Cudon",
+        "East Oremindi Mountains",
+        "Henborth",
+        "Lesser Oremindi Mountains",
+        "West Oremindi Mountains"
+      ],
+      "sea_neighbors": [],
+      "river_neighbors": [],
+      "terrain_tags": [
+        "highland",
+        "hills"
+      ],
+      "climate": "temperate",
+      "base_prestige": 1,
+      "starting_tradition": null
+    },
+    "East Mithala": {
+      "neighbors": [
+        "North Mithala",
+        "South Acordwood",
+        "South Mithala",
+        "West Acorwood",
+        "West Mithala"
+      ],
+      "sea_neighbors": [],
+      "river_neighbors": [
+        "South Mithala",
+        "West Mithala"
+      ],
+      "terrain_tags": [
+        "steppe",
+        "plains"
+      ],
+      "climate": "temperate",
+      "base_prestige": 2,
+      "starting_tradition": null
+    },
+    "West Mithala": {
+      "neighbors": [
+        "East Mithala",
+        "Henborth",
+        "North Celder",
+        "North Mithala",
+        "South Mithala"
+      ],
+      "sea_neighbors": [],
+      "river_neighbors": [
+        "East Mithala",
+        "North Celder",
+        "North Mithala",
+        "South Mithala"
+      ],
+      "terrain_tags": [
+        "plains",
+        "steppe"
+      ],
+      "climate": "temperate",
+      "base_prestige": 2,
+      "starting_tradition": null
+    },
+    "West Oremindi Mountains": {
+      "neighbors": [
+        "East Oremindi Mountains",
+        "North Oreminidi Mountains",
+        "South Oremindi Mountains"
+      ],
+      "sea_neighbors": [],
+      "river_neighbors": [],
+      "terrain_tags": [
+        "highland",
+        "hills"
+      ],
+      "climate": "temperate",
+      "base_prestige": 1,
+      "starting_tradition": null
+    },
+    "East Oremindi Mountains": {
+      "neighbors": [
+        "Henborth",
+        "North Celder",
+        "North Oreminidi Mountains",
+        "South Celder",
+        "South Oremindi Mountains",
+        "West Oremindi Mountains"
+      ],
+      "sea_neighbors": [],
+      "river_neighbors": [],
+      "terrain_tags": [
+        "highland",
+        "hills"
+      ],
+      "climate": "temperate",
+      "base_prestige": 1,
+      "starting_tradition": null
+    },
+    "South Mithala": {
+      "neighbors": [
+        "East Lotharn Mountains",
+        "East Mithala",
+        "North Celder",
+        "South Celder",
+        "West Lotharn Mountains",
+        "West Mithala"
+      ],
+      "sea_neighbors": [],
+      "river_neighbors": [
+        "East Lotharn Mountains",
+        "East Mithala",
+        "North Celder",
+        "West Mithala"
+      ],
+      "terrain_tags": [
+        "steppe",
+        "plains",
+        "hills"
+      ],
+      "climate": "temperate",
+      "base_prestige": 2,
+      "starting_tradition": null
+    },
+    "North Celder": {
+      "neighbors": [
+        "East Oremindi Mountains",
+        "Henborth",
+        "South Celder",
+        "South Mithala",
+        "West Mithala"
+      ],
+      "sea_neighbors": [],
+      "river_neighbors": [
+        "South Celder",
+        "South Mithala",
+        "West Mithala"
+      ],
+      "terrain_tags": [
+        "steppe",
+        "plains"
+      ],
+      "climate": "temperate",
+      "base_prestige": 2,
+      "starting_tradition": null
+    },
+    "East Lotharn Mountains": {
+      "neighbors": [
+        "Amod",
+        "Feradom",
+        "South Mithala",
+        "Vastos",
+        "West Lotharn Mountains"
+      ],
+      "sea_neighbors": [],
+      "river_neighbors": [
+        "South Mithala"
+      ],
+      "terrain_tags": [
+        "hills",
+        "highland"
+      ],
+      "climate": "temperate",
+      "base_prestige": 2,
+      "starting_tradition": null
+    },
+    "Feradom": {
+      "neighbors": [
+        "Amod",
+        "East Lotharn Mountains",
+        "Pueth"
+      ],
+      "sea_neighbors": [],
+      "river_neighbors": [
+        "Pueth"
+      ],
+      "terrain_tags": [
+        "steppe",
+        "hills",
+        "highland"
+      ],
+      "climate": "temperate",
+      "base_prestige": 2,
+      "starting_tradition": null
+    },
+    "South Celder": {
+      "neighbors": [
+        "East Oremindi Mountains",
+        "North Celder",
+        "South Mithala",
+        "South Oremindi Mountains",
+        "West Lotharn Mountains",
+        "Yunethre"
+      ],
+      "sea_neighbors": [],
+      "river_neighbors": [
+        "North Celder"
+      ],
+      "terrain_tags": [
+        "steppe"
+      ],
+      "climate": "temperate",
+      "base_prestige": 2,
+      "starting_tradition": null
+    },
+    "West Lotharn Mountains": {
+      "neighbors": [
+        "East Lotharn Mountains",
+        "Isareos",
+        "Meneth",
+        "South Celder",
+        "South Mithala",
+        "Vastos",
+        "Yunethre"
+      ],
+      "sea_neighbors": [],
+      "river_neighbors": [],
+      "terrain_tags": [
+        "highland",
+        "hills"
+      ],
+      "climate": "temperate",
+      "base_prestige": 1,
+      "starting_tradition": null
+    },
+    "South Oremindi Mountains": {
+      "neighbors": [
+        "East Oremindi Mountains",
+        "North Ibenal",
+        "North Ibenwood",
+        "South Celder",
+        "West Oremindi Mountains",
+        "Yunethre"
+      ],
+      "sea_neighbors": [
+        "Narcosh"
+      ],
+      "river_neighbors": [],
+      "terrain_tags": [
+        "highland",
+        "hills",
+        "coast"
+      ],
+      "climate": "temperate",
+      "base_prestige": 2,
+      "starting_tradition": null
+    },
+    "Amod": {
+      "neighbors": [
+        "East Lotharn Mountains",
+        "Elagos",
+        "Feradom",
+        "Pueth",
+        "Vastos"
+      ],
+      "sea_neighbors": [],
+      "river_neighbors": [
+        "Elagos",
+        "Vastos"
+      ],
+      "terrain_tags": [
+        "plains",
+        "hills",
+        "highland"
+      ],
+      "climate": "temperate",
+      "base_prestige": 2,
+      "starting_tradition": null
+    },
+    "North Ibenal": {
+      "neighbors": [
+        "North Ibenwood",
+        "South Ibenal",
+        "South Oremindi Mountains",
+        "West Ibenwood"
+      ],
+      "sea_neighbors": [],
+      "river_neighbors": [
+        "South Ibenal"
+      ],
+      "terrain_tags": [
+        "steppe",
+        "hills"
+      ],
+      "climate": "temperate",
+      "base_prestige": 2,
+      "starting_tradition": null
+    },
+    "Vastos": {
+      "neighbors": [
+        "Amod",
+        "East Lotharn Mountains",
+        "Elagos",
+        "Meneth",
+        "West Lotharn Mountains"
+      ],
+      "sea_neighbors": [],
+      "river_neighbors": [
+        "Amod",
+        "Meneth"
+      ],
+      "terrain_tags": [
+        "plains"
+      ],
+      "climate": "temperate",
+      "base_prestige": 2,
+      "starting_tradition": null
+    },
+    "Yunethre": {
+      "neighbors": [
+        "Isareos",
+        "North Ibenwood",
+        "South Celder",
+        "South Oremindi Mountains",
+        "West Lotharn Mountains"
+      ],
+      "sea_neighbors": [],
+      "river_neighbors": [],
+      "terrain_tags": [
+        "steppe"
+      ],
+      "climate": "temperate",
+      "base_prestige": 2,
+      "starting_tradition": null
+    },
+    "Pueth": {
+      "neighbors": [
+        "Amod",
+        "Drent",
+        "Feradom"
+      ],
+      "sea_neighbors": [],
+      "river_neighbors": [
+        "Drent",
+        "Feradom"
+      ],
+      "terrain_tags": [
+        "plains",
+        "hills",
+        "steppe"
+      ],
+      "climate": "temperate",
+      "base_prestige": 2,
+      "starting_tradition": null
+    },
+    "Meneth": {
+      "neighbors": [
+        "Caricas",
+        "Elagos",
+        "Isareos",
+        "Nesdor",
+        "Vastos",
+        "West Lotharn Mountains"
+      ],
+      "sea_neighbors": [],
+      "river_neighbors": [
+        "Elagos",
+        "Vastos"
+      ],
+      "terrain_tags": [
+        "plains"
+      ],
+      "climate": "temperate",
+      "base_prestige": 2,
+      "starting_tradition": null
+    },
+    "North Ibenwood": {
+      "neighbors": [
+        "Central Ibenwood",
+        "East Ibenwood",
+        "Isareos",
+        "North Ibenal",
+        "South Oremindi Mountains",
+        "West Ibenwood",
+        "Yunethre"
+      ],
+      "sea_neighbors": [],
+      "river_neighbors": [],
+      "terrain_tags": [
+        "forest"
+      ],
+      "climate": "temperate",
+      "base_prestige": 2,
+      "starting_tradition": null
+    },
+    "Elagos": {
+      "neighbors": [
+        "Amod",
+        "Drent",
+        "Luscia",
+        "Meneth",
+        "Moros Plain",
+        "Nesdor",
+        "Vastos"
+      ],
+      "sea_neighbors": [],
+      "river_neighbors": [
+        "Amod",
+        "Drent",
+        "Meneth"
+      ],
+      "terrain_tags": [
+        "plains",
+        "forest",
+        "coast"
+      ],
+      "climate": "temperate",
+      "base_prestige": 2,
+      "starting_tradition": null
+    },
+    "Isareos": {
+      "neighbors": [
+        "Caricas",
+        "East Ibenwood",
+        "Meneth",
+        "Nethereum",
+        "North Ibenwood",
+        "West Lotharn Mountains",
+        "Yunethre"
+      ],
+      "sea_neighbors": [],
+      "river_neighbors": [
+        "Caricas",
+        "Nethereum"
+      ],
+      "terrain_tags": [
+        "plains",
+        "steppe"
+      ],
+      "climate": "temperate",
+      "base_prestige": 2,
+      "starting_tradition": null
+    },
+    "Drent": {
+      "neighbors": [
+        "Elagos",
+        "Luscia",
+        "Pueth"
+      ],
+      "sea_neighbors": [],
+      "river_neighbors": [
+        "Elagos",
+        "Luscia",
+        "Pueth"
+      ],
+      "terrain_tags": [
+        "plains",
+        "steppe"
+      ],
+      "climate": "temperate",
+      "base_prestige": 2,
+      "starting_tradition": null
+    },
+    "Caricas": {
+      "neighbors": [
+        "Isareos",
+        "Meneth",
+        "Nesdor",
+        "Nethereum",
+        "Ovesos"
+      ],
+      "sea_neighbors": [],
+      "river_neighbors": [
+        "Isareos",
+        "Nesdor",
+        "Nethereum",
+        "Ovesos"
+      ],
+      "terrain_tags": [
+        "plains",
+        "steppe"
+      ],
+      "climate": "temperate",
+      "base_prestige": 2,
+      "starting_tradition": null
+    },
+    "South Ibenal": {
+      "neighbors": [
+        "Alezhor",
+        "North Ibenal",
+        "West Ibenwood"
+      ],
+      "sea_neighbors": [],
+      "river_neighbors": [
+        "Alezhor",
+        "North Ibenal",
+        "West Ibenwood"
+      ],
+      "terrain_tags": [
+        "steppe"
+      ],
+      "climate": "temperate",
+      "base_prestige": 2,
+      "starting_tradition": null
+    },
+    "West Ibenwood": {
+      "neighbors": [
+        "Alezhor",
+        "Central Ibenwood",
+        "North Ibenal",
+        "North Ibenwood",
+        "South Ibenal",
+        "South Ibenwood"
+      ],
+      "sea_neighbors": [],
+      "river_neighbors": [
+        "South Ibenal"
+      ],
+      "terrain_tags": [
+        "forest"
+      ],
+      "climate": "temperate",
+      "base_prestige": 2,
+      "starting_tradition": null
+    },
+    "Central Ibenwood": {
+      "neighbors": [
+        "East Ibenwood",
+        "North Ibenwood",
+        "South Ibenwood",
+        "West Ibenwood"
+      ],
+      "sea_neighbors": [],
+      "river_neighbors": [
+        "South Ibenwood"
+      ],
+      "terrain_tags": [
+        "forest"
+      ],
+      "climate": "temperate",
+      "base_prestige": 2,
+      "starting_tradition": null
+    },
+    "East Ibenwood": {
+      "neighbors": [
+        "Central Ibenwood",
+        "Isareos",
+        "Navarth",
+        "Nether Desert",
+        "Nethereum",
+        "North Ibenwood",
+        "South Ibenwood",
+        "West Pyros"
+      ],
+      "sea_neighbors": [],
+      "river_neighbors": [],
+      "terrain_tags": [
+        "forest"
+      ],
+      "climate": "temperate",
+      "base_prestige": 2,
+      "starting_tradition": null
+    },
+    "Luscia": {
+      "neighbors": [
+        "Drent",
+        "East Suval",
+        "Elagos",
+        "Moros Plain",
+        "West Suval"
+      ],
+      "sea_neighbors": [],
+      "river_neighbors": [
+        "Drent",
+        "East Suval",
+        "West Suval"
+      ],
+      "terrain_tags": [
+        "plains",
+        "forest",
+        "steppe"
+      ],
+      "climate": "temperate",
+      "base_prestige": 2,
+      "starting_tradition": null
+    },
+    "Peblos": {
+      "neighbors": [],
+      "sea_neighbors": [],
+      "river_neighbors": [],
+      "terrain_tags": [
+        "hills",
+        "steppe"
+      ],
+      "climate": "temperate",
+      "base_prestige": 2,
+      "starting_tradition": null
+    },
+    "Nethereum": {
+      "neighbors": [
+        "Caricas",
+        "East Ibenwood",
+        "Isareos",
+        "Nether Desert",
+        "Ovesos"
+      ],
+      "sea_neighbors": [],
+      "river_neighbors": [
+        "Caricas",
+        "Isareos",
+        "Nether Desert",
+        "Ovesos"
+      ],
+      "terrain_tags": [
+        "plains",
+        "steppe"
+      ],
+      "climate": "temperate",
+      "base_prestige": 2,
+      "starting_tradition": null
+    },
+    "Nesdor": {
+      "neighbors": [
+        "Caricas",
+        "Eer",
+        "Elagos",
+        "Gala",
+        "Meneth",
+        "Moros Plain",
+        "Ovesos"
+      ],
+      "sea_neighbors": [],
+      "river_neighbors": [
+        "Caricas",
+        "Gala",
+        "Ovesos"
+      ],
+      "terrain_tags": [
+        "steppe",
+        "plains",
+        "forest"
+      ],
+      "climate": "temperate",
+      "base_prestige": 2,
+      "starting_tradition": null
+    },
+    "Moros Plain": {
+      "neighbors": [
+        "Eer",
+        "Elagos",
+        "Luscia",
+        "Nesdor",
+        "West Suval"
+      ],
+      "sea_neighbors": [],
+      "river_neighbors": [
+        "West Suval"
+      ],
+      "terrain_tags": [
+        "steppe"
+      ],
+      "climate": "temperate",
+      "base_prestige": 2,
+      "starting_tradition": null
+    },
+    "East Suval": {
+      "neighbors": [
+        "Luscia",
+        "South Suval",
+        "West Suval"
+      ],
+      "sea_neighbors": [],
+      "river_neighbors": [
+        "Luscia"
+      ],
+      "terrain_tags": [
+        "plains",
+        "hills",
+        "steppe"
+      ],
+      "climate": "temperate",
+      "base_prestige": 2,
+      "starting_tradition": "Tradition4"
+    },
+    "South Ibenwood": {
+      "neighbors": [
+        "Alezhor",
+        "Central Ibenwood",
+        "East Ibenwood",
+        "Navarth",
+        "West Ibenwood"
+      ],
+      "sea_neighbors": [],
+      "river_neighbors": [
+        "Alezhor",
+        "Central Ibenwood"
+      ],
+      "terrain_tags": [
+        "forest"
+      ],
+      "climate": "temperate",
+      "base_prestige": 2,
+      "starting_tradition": null
+    },
+    "Nether Desert": {
+      "neighbors": [
+        "East Ibenwood",
+        "East Pyros",
+        "Nethereum",
+        "Oves Desert",
+        "Ovesos",
+        "West Pyros"
+      ],
+      "sea_neighbors": [],
+      "river_neighbors": [
+        "Nethereum"
+      ],
+      "terrain_tags": [
+        "steppe"
+      ],
+      "climate": "temperate",
+      "base_prestige": 2,
+      "starting_tradition": null
+    },
+    "Ovesos": {
+      "neighbors": [
+        "Caricas",
+        "Gala",
+        "Nesdor",
+        "Nether Desert",
+        "Nethereum",
+        "Oves Desert"
+      ],
+      "sea_neighbors": [],
+      "river_neighbors": [
+        "Caricas",
+        "Gala",
+        "Nesdor",
+        "Nethereum",
+        "Oves Desert"
+      ],
+      "terrain_tags": [
+        "steppe",
+        "plains"
+      ],
+      "climate": "temperate",
+      "base_prestige": 2,
+      "starting_tradition": null
+    },
+    "West Suval": {
+      "neighbors": [
+        "East Suval",
+        "Eer",
+        "Luscia",
+        "Moros Plain",
+        "South Suval"
+      ],
+      "sea_neighbors": [],
+      "river_neighbors": [
+        "Eer",
+        "Luscia",
+        "Moros Plain"
+      ],
+      "terrain_tags": [
+        "plains",
+        "steppe",
+        "hills"
+      ],
+      "climate": "temperate",
+      "base_prestige": 2,
+      "starting_tradition": null
+    },
+    "Oves Desert": {
+      "neighbors": [
+        "East Pyros",
+        "Gala",
+        "Nether Desert",
+        "Ovesos",
+        "Telemonia"
+      ],
+      "sea_neighbors": [],
+      "river_neighbors": [
+        "Gala",
+        "Ovesos",
+        "Telemonia"
+      ],
+      "terrain_tags": [
+        "steppe",
+        "hills"
+      ],
+      "climate": "temperate",
+      "base_prestige": 2,
+      "starting_tradition": null
+    },
+    "Alezhor": {
+      "neighbors": [
+        "Ganesh Desert",
+        "Navarth",
+        "South Ibenal",
+        "South Ibenwood",
+        "West Ibenwood"
+      ],
+      "sea_neighbors": [],
+      "river_neighbors": [
+        "Ganesh Desert",
+        "Navarth",
+        "South Ibenal",
+        "South Ibenwood"
+      ],
+      "terrain_tags": [
+        "plains",
+        "steppe"
+      ],
+      "climate": "temperate",
+      "base_prestige": 2,
+      "starting_tradition": null
+    },
+    "Navarth": {
+      "neighbors": [
+        "Alezhor",
+        "East Ibenwood",
+        "Ganesh Desert",
+        "Ganesh Plain",
+        "South Ibenwood",
+        "West Pyros"
+      ],
+      "sea_neighbors": [],
+      "river_neighbors": [
+        "Alezhor"
+      ],
+      "terrain_tags": [
+        "steppe",
+        "hills",
+        "forest"
+      ],
+      "climate": "temperate",
+      "base_prestige": 2,
+      "starting_tradition": null
+    },
+    "West Pyros": {
+      "neighbors": [
+        "East Ibenwood",
+        "East Pyros",
+        "Ganesh Plain",
+        "Navarth",
+        "Nether Desert"
+      ],
+      "sea_neighbors": [],
+      "river_neighbors": [
+        "East Pyros"
+      ],
+      "terrain_tags": [
+        "steppe",
+        "plains"
+      ],
+      "climate": "temperate",
+      "base_prestige": 2,
+      "starting_tradition": null
+    },
+    "East Pyros": {
+      "neighbors": [
+        "Legemum",
+        "Nether Desert",
+        "Oves Desert",
+        "Telemonia",
+        "West Pyros"
+      ],
+      "sea_neighbors": [],
+      "river_neighbors": [
+        "West Pyros"
+      ],
+      "terrain_tags": [
+        "steppe",
+        "plains"
+      ],
+      "climate": "temperate",
+      "base_prestige": 2,
+      "starting_tradition": null
+    },
+    "Eer": {
+      "neighbors": [
+        "Gala",
+        "Moros Plain",
+        "Nesdor",
+        "Northern Ascarth",
+        "West Suval"
+      ],
+      "sea_neighbors": [],
+      "river_neighbors": [
+        "Gala",
+        "Northern Ascarth",
+        "West Suval"
+      ],
+      "terrain_tags": [
+        "plains",
+        "steppe"
+      ],
+      "climate": "temperate",
+      "base_prestige": 2,
+      "starting_tradition": null
+    },
+    "Gala": {
+      "neighbors": [
+        "Eer",
+        "Legemum",
+        "Nesdor",
+        "Northern Ascarth",
+        "Oves Desert",
+        "Ovesos",
+        "Telemonia"
+      ],
+      "sea_neighbors": [],
+      "river_neighbors": [
+        "Eer",
+        "Legemum",
+        "Nesdor",
+        "Oves Desert",
+        "Ovesos",
+        "Telemonia"
+      ],
+      "terrain_tags": [
+        "steppe",
+        "plains"
+      ],
+      "climate": "temperate",
+      "base_prestige": 2,
+      "starting_tradition": null
+    },
+    "South Suval": {
+      "neighbors": [
+        "East Suval",
+        "West Suval"
+      ],
+      "sea_neighbors": [],
+      "river_neighbors": [],
+      "terrain_tags": [
+        "hills",
+        "highland",
+        "plains"
+      ],
+      "climate": "temperate",
+      "base_prestige": 2,
+      "starting_tradition": null
+    },
+    "Telemonia": {
+      "neighbors": [
+        "East Pyros",
+        "Gala",
+        "Legemum",
+        "Oves Desert"
+      ],
+      "sea_neighbors": [],
+      "river_neighbors": [
+        "Gala",
+        "Oves Desert"
+      ],
+      "terrain_tags": [
+        "hills",
+        "steppe"
+      ],
+      "climate": "temperate",
+      "base_prestige": 2,
+      "starting_tradition": null
+    },
+    "Iscare Archipeligo": {
+      "neighbors": [],
+      "sea_neighbors": [],
+      "river_neighbors": [],
+      "terrain_tags": [
+        "plains",
+        "steppe",
+        "hills"
+      ],
+      "climate": "temperate",
+      "base_prestige": 2,
+      "starting_tradition": null
+    },
+    "Ganesh Desert": {
+      "neighbors": [
+        "Alezhor",
+        "Cape Heth",
+        "Dinelv Highlands",
+        "Ganesh Plain",
+        "Navarth"
+      ],
+      "sea_neighbors": [],
+      "river_neighbors": [
+        "Alezhor"
+      ],
+      "terrain_tags": [
+        "steppe"
+      ],
+      "climate": "temperate",
+      "base_prestige": 2,
+      "starting_tradition": null
+    },
+    "Northern Ascarth": {
+      "neighbors": [
+        "Eer",
+        "Gala",
+        "Southern Ascarth"
+      ],
+      "sea_neighbors": [],
+      "river_neighbors": [
+        "Eer"
+      ],
+      "terrain_tags": [
+        "plains",
+        "hills"
+      ],
+      "climate": "temperate",
+      "base_prestige": 2,
+      "starting_tradition": null
+    },
+    "East Izol": {
+      "neighbors": [
+        "West Izol"
+      ],
+      "sea_neighbors": [],
+      "river_neighbors": [],
+      "terrain_tags": [
+        "plains",
+        "steppe",
+        "hills",
+        "forest",
+        "highland"
+      ],
+      "climate": "temperate",
+      "base_prestige": 2,
+      "starting_tradition": null
+    },
+    "Ganesh Plain": {
+      "neighbors": [
+        "Dinelv Highlands",
+        "Ganesh Desert",
+        "Marosh",
+        "Navarth",
+        "North Meroshe Desert",
+        "West Pyros"
+      ],
+      "sea_neighbors": [],
+      "river_neighbors": [],
+      "terrain_tags": [
+        "steppe",
+        "plains"
+      ],
+      "climate": "temperate",
+      "base_prestige": 2,
+      "starting_tradition": null
+    },
+    "Legemum": {
+      "neighbors": [
+        "East Pyros",
+        "Gala",
+        "Telemonia"
+      ],
+      "sea_neighbors": [],
+      "river_neighbors": [
+        "Gala"
+      ],
+      "terrain_tags": [
+        "plains",
+        "steppe",
+        "hills"
+      ],
+      "climate": "temperate",
+      "base_prestige": 2,
+      "starting_tradition": null
+    },
+    "Cape Heth": {
+      "neighbors": [
+        "Dinelv Highlands",
+        "Ganesh Desert"
+      ],
+      "sea_neighbors": [],
+      "river_neighbors": [],
+      "terrain_tags": [
+        "steppe",
+        "plains"
+      ],
+      "climate": "temperate",
+      "base_prestige": 2,
+      "starting_tradition": null
+    },
+    "West Izol": {
+      "neighbors": [
+        "East Izol"
+      ],
+      "sea_neighbors": [],
+      "river_neighbors": [],
+      "terrain_tags": [
+        "plains",
+        "hills",
+        "steppe"
+      ],
+      "climate": "temperate",
+      "base_prestige": 2,
+      "starting_tradition": null
+    },
+    "Dinelv Highlands": {
+      "neighbors": [
+        "Cape Heth",
+        "Ganesh Desert",
+        "Ganesh Plain",
+        "North Meroshe Desert",
+        "West Meroshe Desert"
+      ],
+      "sea_neighbors": [],
+      "river_neighbors": [],
+      "terrain_tags": [
+        "hills",
+        "steppe",
+        "highland"
+      ],
+      "climate": "temperate",
+      "base_prestige": 2,
+      "starting_tradition": null
+    },
+    "Southern Ascarth": {
+      "neighbors": [
+        "Northern Ascarth"
+      ],
+      "sea_neighbors": [],
+      "river_neighbors": [],
+      "terrain_tags": [
+        "plains"
+      ],
+      "climate": "temperate",
+      "base_prestige": 2,
+      "starting_tradition": null
+    },
+    "Marosh": {
+      "neighbors": [
+        "Central Meroshe Desert",
+        "Ganesh Plain",
+        "North Meroshe Desert",
+        "South Meroshe Desert",
+        "Trogo"
+      ],
+      "sea_neighbors": [],
+      "river_neighbors": [],
+      "terrain_tags": [
+        "plains",
+        "hills"
+      ],
+      "climate": "temperate",
+      "base_prestige": 2,
+      "starting_tradition": null
+    },
+    "North Meroshe Desert": {
+      "neighbors": [
+        "Central Meroshe Desert",
+        "Dinelv Highlands",
+        "Ganesh Plain",
+        "Marosh",
+        "West Meroshe Desert"
+      ],
+      "sea_neighbors": [],
+      "river_neighbors": [],
+      "terrain_tags": [
+        "steppe"
+      ],
+      "climate": "temperate",
+      "base_prestige": 2,
+      "starting_tradition": null
+    },
+    "Aurumlis Archipeligo": {
+      "neighbors": [],
+      "sea_neighbors": [],
+      "river_neighbors": [],
+      "terrain_tags": [
+        "plains",
+        "hills"
+      ],
+      "climate": "temperate",
+      "base_prestige": 2,
+      "starting_tradition": null
+    },
+    "West Meroshe Desert": {
+      "neighbors": [
+        "Central Meroshe Desert",
+        "Dinelv Highlands",
+        "Hama",
+        "North Meroshe Desert"
+      ],
+      "sea_neighbors": [],
+      "river_neighbors": [],
+      "terrain_tags": [
+        "steppe"
+      ],
+      "climate": "temperate",
+      "base_prestige": 2,
+      "starting_tradition": null
+    },
+    "Central Meroshe Desert": {
+      "neighbors": [
+        "Hama",
+        "Marosh",
+        "North Meroshe Desert",
+        "South Meroshe Desert",
+        "West Meroshe Desert"
+      ],
+      "sea_neighbors": [],
+      "river_neighbors": [],
+      "terrain_tags": [
+        "steppe"
+      ],
+      "climate": "temperate",
+      "base_prestige": 2,
+      "starting_tradition": null
+    },
+    "Selemi": {
+      "neighbors": [],
+      "sea_neighbors": [],
+      "river_neighbors": [],
+      "terrain_tags": [
+        "plains"
+      ],
+      "climate": "temperate",
+      "base_prestige": 2,
+      "starting_tradition": null
+    },
+    "Azhor Stones": {
+      "neighbors": [],
+      "sea_neighbors": [],
+      "river_neighbors": [],
+      "terrain_tags": [
+        "forest"
+      ],
+      "climate": "temperate",
+      "base_prestige": 2,
+      "starting_tradition": null
+    },
+    "South Meroshe Desert": {
+      "neighbors": [
+        "Central Meroshe Desert",
+        "Hama",
+        "Marosh",
+        "Trogo"
+      ],
+      "sea_neighbors": [],
+      "river_neighbors": [],
+      "terrain_tags": [
+        "steppe"
+      ],
+      "climate": "temperate",
+      "base_prestige": 2,
+      "starting_tradition": null
+    },
+    "Trogo": {
+      "neighbors": [
+        "Marosh",
+        "South Meroshe Desert"
+      ],
+      "sea_neighbors": [],
+      "river_neighbors": [],
+      "terrain_tags": [
+        "forest",
+        "plains"
+      ],
+      "climate": "temperate",
+      "base_prestige": 2,
+      "starting_tradition": null
+    },
+    "Hama": {
+      "neighbors": [
+        "Central Meroshe Desert",
+        "South Meroshe Desert",
+        "West Meroshe Desert"
+      ],
+      "sea_neighbors": [],
+      "river_neighbors": [],
+      "terrain_tags": [
+        "steppe",
+        "plains"
+      ],
+      "climate": "temperate",
+      "base_prestige": 2,
+      "starting_tradition": "Tradition3"
+    },
+    "Babon": {
+      "neighbors": [],
+      "sea_neighbors": [],
+      "river_neighbors": [],
+      "terrain_tags": [
+        "plains",
+        "forest"
+      ],
+      "climate": "temperate",
+      "base_prestige": 2,
+      "starting_tradition": null
+    },
+    "North Scythe": {
+      "neighbors": [
+        "South Scythe"
+      ],
+      "sea_neighbors": [],
+      "river_neighbors": [],
+      "terrain_tags": [
+        "forest"
+      ],
+      "climate": "temperate",
+      "base_prestige": 2,
+      "starting_tradition": null
+    },
+    "South Scythe": {
+      "neighbors": [
+        "North Scythe"
+      ],
+      "sea_neighbors": [],
+      "river_neighbors": [],
+      "terrain_tags": [
+        "forest"
+      ],
+      "climate": "temperate",
+      "base_prestige": 2,
+      "starting_tradition": null
+    }
+  }
+}

@@ -11,6 +11,9 @@ contextBridge.exposeInMainWorld('electronAPI', {
     listExamples: ()                                   => ipcRenderer.invoke('map:list-examples'),
     loadExample:  (id: string)                         => ipcRenderer.invoke('map:load-example', id),
   },
+  lore: {
+    load: () => ipcRenderer.invoke('lore:load'),
+  },
   sim: {
     start:         (mapFilePath: string, numFactions?: number, simType?: string) => ipcRenderer.invoke('sim:start', mapFilePath, numFactions ?? 4, simType ?? 'clashvergence'),
     stop:          ()                    => ipcRenderer.invoke('sim:stop'),

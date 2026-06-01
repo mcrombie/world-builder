@@ -64,8 +64,8 @@ ipcMain.handle('map:save', async (_, jsonData: string, filePath?: string) => {
   if (!targetPath) {
     const result = await dialog.showSaveDialog({
       title: 'Save Map',
-      defaultPath: 'my-world.wwmap',
-      filters: [{ name: 'World Builder Map', extensions: ['wwmap'] }],
+      defaultPath: 'my-world.azmap',
+      filters: [{ name: 'World Builder Map', extensions: ['azmap', 'wwmap'] }],
     })
     if (result.canceled || !result.filePath) return { canceled: true }
     targetPath = result.filePath
@@ -89,6 +89,21 @@ ipcMain.handle('map:load-by-path', async (_, path: string) => {
   try {
     const raw = readFileSync(path, 'utf-8')
     return { data: raw, filePath: path }
+  } catch {
+    return { canceled: true, error: 'File not found or unreadable.' }
+  }
+})
+
+ipcMain.handle('lore:load', async () => {
+  const result = await dialog.showOpenDialog({
+    title: 'Open Lore File',
+    filters: [{ name: 'Azhora Lore', extensions: ['azlore'] }],
+    properties: ['openFile'],
+  })
+  if (result.canceled || result.filePaths.length === 0) return { canceled: true }
+  try {
+    const data = readFileSync(result.filePaths[0], 'utf-8')
+    return { canceled: false, data, filePath: result.filePaths[0] }
   } catch {
     return { canceled: true, error: 'File not found or unreadable.' }
   }
@@ -177,6 +192,11 @@ let simMapPath: string | null = null
 let simNumFactions: number = 4
 let simType: string = 'clashvergence'
 
+function _generatedMapPathFor(sourcePath: string, mapExt: string): string {
+  const normalized = sourcePath.replace(/\.(azmap|wwmap|json)$/i, mapExt)
+  return normalized === sourcePath ? sourcePath + mapExt : normalized
+}
+
 function killSimProcess() {
   if (!simProcess) return
   if (process.platform === 'win32' && simPid != null) {
@@ -238,9 +258,7 @@ async function _spawnServer(
   const translatorScript = isClaudevergence ? CV2_TRANSLATOR_SCRIPT : CV_TRANSLATOR_SCRIPT
   const mapExt           = isClaudevergence ? '.cvmap.json' : '.cmap.json'
   const simDir           = isClaudevergence ? CLAUDEVERGENCE_DIR : CLASHVERGENCE_DIR
-  const mapFileArg       = resolvedMapPath.endsWith('.wwmap')
-    ? resolvedMapPath.replace(/\.wwmap$/, mapExt)
-    : resolvedMapPath + mapExt
+  const mapFileArg       = _generatedMapPathFor(resolvedMapPath, mapExt)
 
   const xResult = spawnSync(PYTHON_CMD, [translatorScript, resolvedMapPath, mapFileArg, String(numFactions)], { encoding: 'utf-8' })
   if (xResult.status !== 0) {

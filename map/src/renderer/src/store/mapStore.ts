@@ -1,5 +1,5 @@
 import { create } from 'zustand'
-import { Climate, HexData, MapData, RegionData, RiverSize, SelectMode, SimWorldState, TerrainType, Tool, LayerVisibility } from '../types/map'
+import { AzloreFile, Climate, HexData, MapData, RegionData, RiverSize, SelectMode, SimWorldState, TerrainType, Tool, LayerVisibility, ViewMode } from '../types/map'
 import { hexKey, hexesInRadius } from '../lib/hex'
 
 const MAX_HISTORY = 50
@@ -32,6 +32,8 @@ const DEFAULT_CLIMATE: Record<TerrainType, Climate> = {
   hills:        'temperate',
   forest:       'temperate',
   deep_forest:  'temperate',
+  jungle:       'tropical',
+  deep_jungle:  'tropical',
   mountain:     'cold',
   high_mountain:'cold',
   wetland:      'temperate',
@@ -98,6 +100,12 @@ interface MapStore {
   setSimulating: (v: boolean) => void
   setSimFactionCount: (n: number) => void
   setSimType: (t: 'clashvergence' | 'claudevergence') => void
+
+  loreFile: AzloreFile | null
+  setLoreFile: (f: AzloreFile | null) => void
+
+  viewMode: ViewMode
+  setViewMode: (m: ViewMode) => void
 }
 
 export const useMapStore = create<MapStore>((set, get) => ({
@@ -132,6 +140,12 @@ export const useMapStore = create<MapStore>((set, get) => ({
   setSimulating: (v) => set({ isSimulating: v }),
   setSimFactionCount: (n) => set({ simFactionCount: n }),
   setSimType: (t) => set({ simType: t }),
+
+  loreFile: null,
+  setLoreFile: (f) => set({ loreFile: f }),
+
+  viewMode: 'map',
+  setViewMode: (m) => set({ viewMode: m }),
 
   newMap: (name, width, height, hexSize, precomputedHexes, precomputedRegions) => {
     let hexes: Record<string, HexData>

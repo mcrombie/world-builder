@@ -2,7 +2,7 @@ import { useState } from 'react'
 import { useMapStore, REGION_PALETTE } from '../store/mapStore'
 import { ALL_TERRAINS, TERRAIN_COLORS, TERRAIN_LABELS } from '../lib/terrain'
 import { fileIO } from '../lib/fileIO'
-import { Tool, LayerVisibility, RiverSize, SelectMode } from '../types/map'
+import { AzloreFile, Tool, LayerVisibility, RiverSize, SelectMode } from '../types/map'
 
 const TOOLS: { id: Tool; label: string; icon: string }[] = [
   { id: 'paint',  label: 'Paint',  icon: '🖌' },
@@ -51,6 +51,9 @@ export function Toolbar() {
   const deleteRegion    = useMapStore((s) => s.deleteRegion)
 
   const [newRegionName, setNewRegionName] = useState('')
+
+  const loreFile   = useMapStore((s) => s.loreFile)
+  const setLoreFile = useMapStore((s) => s.setLoreFile)
 
   async function chooseUnderlay() {
     const result = await fileIO.chooseImage()
@@ -281,6 +284,29 @@ export function Toolbar() {
         >
           Choose image…
         </button>
+      </section>
+
+      {/* Lore file */}
+      <section>
+        <h3 className="text-xs font-semibold uppercase tracking-widest text-gray-400 mb-2">Lore</h3>
+        <button
+          onClick={async () => {
+            const result = await (window as any).electronAPI?.lore?.load()
+            if (!result || result.canceled || !result.data) return
+            try {
+              const parsed = JSON.parse(result.data) as AzloreFile
+              if (parsed.azlore) setLoreFile(parsed)
+            } catch { /* invalid file */ }
+          }}
+          className="w-full text-xs bg-gray-800 hover:bg-gray-700 rounded px-2 py-2 text-left truncate"
+        >
+          Load lore file…
+        </button>
+        {loreFile && (
+          <div className="mt-1 text-xs text-gray-400 truncate">
+            <span className="text-green-400">✓</span> {loreFile.worldName} — {loreFile.entries.length} entries
+          </div>
+        )}
       </section>
 
     </aside>

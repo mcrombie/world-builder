@@ -12,7 +12,12 @@ interface _SimWorld     { ok?: boolean; error?: string; turn: number; turn_label
 interface _SimStartResult { ok: boolean; error?: string; canceled?: boolean; world?: _SimWorld }
 interface _SimSaveResult  { ok?: boolean; error?: string; canceled?: boolean; filePath?: string }
 
+interface _LoreResult { data?: string; filePath?: string; canceled?: boolean; error?: string }
+
 export interface ElectronAPI {
+  lore: {
+    load: () => Promise<_LoreResult>
+  }
   map: {
     save:        (jsonData: string, filePath?: string) => Promise<_SaveResult>
     load:        () => Promise<_LoadResult>
@@ -24,7 +29,7 @@ export interface ElectronAPI {
     loadExample:  (id: string)                          => Promise<_LoadResult>
   }
   sim: {
-    start:        (mapFilePath: string, numFactions?: number) => Promise<_SimStartResult>
+    start:        (mapFilePath: string, numFactions?: number, simType?: string) => Promise<_SimStartResult>
     stop:         ()                    => Promise<{ ok: boolean }>
     world:        ()                    => Promise<_SimWorld>
     advance:      ()                    => Promise<_SimWorld>

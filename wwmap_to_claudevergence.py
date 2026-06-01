@@ -1,8 +1,8 @@
 """
-Converts a world-builder .wwmap file to a Claudevergence map definition JSON.
+Converts a world-builder map file to a Claudevergence map definition JSON.
 
 Usage:
-    python wwmap_to_claudevergence.py path/to/map.wwmap [output.json] [num_traditions]
+    python wwmap_to_claudevergence.py path/to/map.azmap [output.json] [num_traditions]
 
 Claudevergence is a cultural diffusion simulation. Traditions spread influence
 across regions through contact, prestige, and terrain affinity rather than
@@ -128,7 +128,7 @@ def _pick_connected_starts(graph, num_traditions: int) -> list[str]:
 
 def translate(wwmap_path: str | Path, num_traditions: int = 4) -> dict:
     """
-    Reads a .wwmap file and returns a Claudevergence map definition dict.
+    Reads a world-builder map file and returns a Claudevergence map definition dict.
     """
     graph = load_map_graph(wwmap_path, num_traditions)
 

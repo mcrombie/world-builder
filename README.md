@@ -46,7 +46,7 @@ The map editor is a desktop app built with Electron, React, Vite, and Tailwind. 
 - Annotate individual hexes with notes
 - Generate random maps at 10 size scales (hamlet to world) with terrain noise
 - Resize maps after creation
-- Load/save `.json` map files
+- Load/save `.azmap` map files
 - Underlay a reference image beneath the grid
 - Undo support
 
@@ -92,4 +92,5 @@ Azhora is a world of overlapping valid records: maps, routes, ruins, carvings, s
 
 The continent of Azhora runs roughly north to south on the planet Corav. Its major regions — Mittolo, Pyros, North Azhora, the Plains, the Moroshe Desert, the Iberos Coast, Bouen, and Amod — each have their own terrain, culture, language family, and relationship to the continent's unresolved history. Geography, languages, peoples, cultures, artifacts, and cosmology are documented in `lore/`.
 
-See `ROADMAP.md` for what's complete and what's planned.
+See `ROADMAP.md` for the lore roadmap, `docs/app_roadmap.md` for the app roadmap,
+and `docs/clashvergence_integration_roadmap.md` for the Clashvergence bridge plan.

@@ -1,8 +1,9 @@
 """
-wwmap_core.py — shared map-graph parser for world-builder bridge scripts.
+wwmap_core.py - shared map-graph parser for world-builder bridge scripts.
 
-Parses a .wwmap file and computes the full region graph: land adjacency,
-sea links, river links, centroids, and start-region selection.
+Parses a world-builder map JSON file (.azmap preferred; .wwmap supported) and
+computes the full region graph: land adjacency, sea links, river links,
+centroids, and start-region selection.
 Import this module from any wwmap_to_*.py bridge script.
 """
 
@@ -100,7 +101,7 @@ class MapGraph:
 
 
 def load_map_graph(path: str | Path, num_factions: int = 4) -> MapGraph:
-    """Parse a .wwmap file into a fully-computed MapGraph."""
+    """Parse a world-builder map file into a fully-computed MapGraph."""
     path = Path(path)
     data = json.loads(path.read_text(encoding="utf-8"))
 

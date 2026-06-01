@@ -87,6 +87,7 @@ const HEX_DIRS = [
 
 function classifyTerrain(
   elevation:    number,
+  temperature:  number,
   moisture:     number,
   seaLevel:     number,
   highlandRate: number,
@@ -97,16 +98,17 @@ function classifyTerrain(
   const land = (elevation - seaLevel) / (1 - seaLevel)
   if (land < 0.07) return 'coast'
 
-  const wet  = moisture > 0.65
-  const moist = moisture > 0.42
+  const wet     = moisture > 0.65
+  const moist   = moisture > 0.42
+  const tropical = temperature > 0.68
 
   if (land > 0.78) return 'high_mountain'
   if (land > 0.55) return 'mountain'
   if (land > 0.38 && altNoise < highlandRate * 0.85) return 'highland'
 
-  if (land > 0.35) return wet ? 'deep_forest' : 'hills'
-  if (wet)   return 'wetland'
-  if (moist) return land > 0.28 ? 'forest' : 'plains'
+  if (land > 0.35) return wet ? (tropical ? 'deep_jungle' : 'deep_forest') : 'hills'
+  if (wet)   return tropical ? 'deep_jungle' : 'wetland'
+  if (moist) return land > 0.28 ? (tropical ? 'jungle' : 'forest') : 'plains'
   if (land > 0.30) return 'hills'
   if (moisture < 0.32) return 'grassland'
   return 'plains'
@@ -332,7 +334,7 @@ export function generateMap(cfg: MapGenConfig): Record<string, HexData> {
     for (let col = 0; col < width; col++) {
       const q = col - Math.floor(r / 2)
       const k = hexKey(q, r)
-      const terrain = classifyTerrain(elevMap[k], adjMoistMap[k], seaLevel, highlandRate, altMap[k])
+      const terrain = classifyTerrain(elevMap[k], tempMap[k], adjMoistMap[k], seaLevel, highlandRate, altMap[k])
       const climate = classifyClimate(terrain, tempMap[k], adjMoistMap[k], coastDist[k] ?? COAST_REACH)
       hexes[k] = { q, r, terrain, climate }
     }

@@ -1,1207 +1,1211 @@
 {
   "description": "world-builder map: Azhora",
-  "num_factions": 8,
+  "num_factions": 6,
   "faction_names": [],
   "sea_links": [
-    [
-      "Marosh",
-      "West Izol"
-    ],
-    [
-      "Trogo",
-      "West Izol"
-    ],
-    [
-      "Drent",
-      "Iscare Archipeligo"
-    ],
-    [
-      "East Pyros",
-      "Northern Ascarth"
-    ],
-    [
-      "Aurumlis Archipeligo",
-      "Gala"
-    ],
-    [
-      "East Pyros",
-      "Narcosh"
-    ],
-    [
-      "East Suval",
-      "Narcosh"
-    ],
-    [
-      "South Oremindi Mountains",
-      "West Pyros"
-    ],
-    [
-      "Southern Ascarth",
-      "West Suval"
-    ],
-    [
-      "Eer",
-      "Gala"
-    ],
-    [
-      "Northern Ascarth",
-      "Selemi"
-    ],
-    [
-      "Aurumlis Archipeligo",
-      "Cape Heth"
-    ],
-    [
-      "Hama",
-      "Northern Ascarth"
-    ],
-    [
-      "Cape Heth",
-      "South Oremindi Mountains"
-    ],
-    [
-      "East Pyros",
-      "Legemum"
-    ],
-    [
-      "East Suval",
-      "Ganesh Plain"
-    ],
-    [
-      "East Suval",
-      "Legemum"
-    ],
-    [
-      "East Izol",
-      "South Oremindi Mountains"
-    ],
-    [
-      "Northern Ascarth",
-      "West Izol"
-    ],
-    [
-      "Ganesh Plain",
-      "South Suval"
-    ],
-    [
-      "Legemum",
-      "Selemi"
-    ],
     [
       "Alezhor",
       "Aurumlis Archipeligo"
     ],
     [
-      "Gala",
-      "South Oremindi Mountains"
+      "Alezhor",
+      "Babon"
     ],
     [
-      "Marosh",
+      "Alezhor",
+      "Cape Heth"
+    ],
+    [
+      "Alezhor",
+      "Drent"
+    ],
+    [
+      "Alezhor",
+      "East Izol"
+    ],
+    [
+      "Alezhor",
+      "East Pyros"
+    ],
+    [
+      "Alezhor",
+      "East Suval"
+    ],
+    [
+      "Alezhor",
+      "Eer"
+    ],
+    [
+      "Alezhor",
+      "Gala"
+    ],
+    [
+      "Alezhor",
+      "Ganesh Plain"
+    ],
+    [
+      "Alezhor",
+      "Hama"
+    ],
+    [
+      "Alezhor",
+      "Iscare Archipeligo"
+    ],
+    [
+      "Alezhor",
+      "Legemum"
+    ],
+    [
+      "Alezhor",
+      "Marosh"
+    ],
+    [
+      "Alezhor",
       "Narcosh"
     ],
     [
-      "Babon",
-      "West Pyros"
+      "Alezhor",
+      "Northern Ascarth"
+    ],
+    [
+      "Alezhor",
+      "Selemi"
+    ],
+    [
+      "Alezhor",
+      "South Oremindi Mountains"
+    ],
+    [
+      "Alezhor",
+      "South Suval"
+    ],
+    [
+      "Alezhor",
+      "Southern Ascarth"
+    ],
+    [
+      "Alezhor",
+      "Trogo"
+    ],
+    [
+      "Alezhor",
+      "West Izol"
     ],
     [
       "Alezhor",
       "West Pyros"
     ],
     [
-      "South Suval",
-      "West Izol"
+      "Alezhor",
+      "West Suval"
     ],
     [
-      "South Oremindi Mountains",
-      "Southern Ascarth"
+      "Aurumlis Archipeligo",
+      "Babon"
     ],
     [
-      "Iscare Archipeligo",
-      "South Oremindi Mountains"
+      "Aurumlis Archipeligo",
+      "Cape Heth"
     ],
     [
-      "Cape Heth",
-      "South Suval"
+      "Aurumlis Archipeligo",
+      "Drent"
+    ],
+    [
+      "Aurumlis Archipeligo",
+      "East Izol"
+    ],
+    [
+      "Aurumlis Archipeligo",
+      "East Pyros"
+    ],
+    [
+      "Aurumlis Archipeligo",
+      "East Suval"
+    ],
+    [
+      "Aurumlis Archipeligo",
+      "Eer"
+    ],
+    [
+      "Aurumlis Archipeligo",
+      "Gala"
+    ],
+    [
+      "Aurumlis Archipeligo",
+      "Ganesh Plain"
+    ],
+    [
+      "Aurumlis Archipeligo",
+      "Hama"
+    ],
+    [
+      "Aurumlis Archipeligo",
+      "Iscare Archipeligo"
+    ],
+    [
+      "Aurumlis Archipeligo",
+      "Legemum"
+    ],
+    [
+      "Aurumlis Archipeligo",
+      "Marosh"
+    ],
+    [
+      "Aurumlis Archipeligo",
+      "Narcosh"
+    ],
+    [
+      "Aurumlis Archipeligo",
+      "Northern Ascarth"
+    ],
+    [
+      "Aurumlis Archipeligo",
+      "Selemi"
     ],
     [
       "Aurumlis Archipeligo",
       "South Oremindi Mountains"
     ],
     [
-      "Legemum",
+      "Aurumlis Archipeligo",
+      "South Suval"
+    ],
+    [
+      "Aurumlis Archipeligo",
+      "Southern Ascarth"
+    ],
+    [
+      "Aurumlis Archipeligo",
+      "Trogo"
+    ],
+    [
+      "Aurumlis Archipeligo",
+      "West Izol"
+    ],
+    [
+      "Aurumlis Archipeligo",
+      "West Pyros"
+    ],
+    [
+      "Aurumlis Archipeligo",
+      "West Suval"
+    ],
+    [
+      "Babon",
+      "Cape Heth"
+    ],
+    [
+      "Babon",
+      "Drent"
+    ],
+    [
+      "Babon",
+      "East Izol"
+    ],
+    [
+      "Babon",
+      "East Pyros"
+    ],
+    [
+      "Babon",
+      "East Suval"
+    ],
+    [
+      "Babon",
+      "Eer"
+    ],
+    [
+      "Babon",
+      "Gala"
+    ],
+    [
+      "Babon",
+      "Ganesh Plain"
+    ],
+    [
+      "Babon",
+      "Hama"
+    ],
+    [
+      "Babon",
+      "Iscare Archipeligo"
+    ],
+    [
+      "Babon",
+      "Legemum"
+    ],
+    [
+      "Babon",
+      "Marosh"
+    ],
+    [
+      "Babon",
+      "Narcosh"
+    ],
+    [
+      "Babon",
+      "Northern Ascarth"
+    ],
+    [
+      "Babon",
+      "Selemi"
+    ],
+    [
+      "Babon",
+      "South Oremindi Mountains"
+    ],
+    [
+      "Babon",
+      "South Suval"
+    ],
+    [
+      "Babon",
+      "Southern Ascarth"
+    ],
+    [
+      "Babon",
+      "Trogo"
+    ],
+    [
+      "Babon",
+      "West Izol"
+    ],
+    [
+      "Babon",
+      "West Pyros"
+    ],
+    [
+      "Babon",
+      "West Suval"
+    ],
+    [
+      "Cape Heth",
+      "Drent"
+    ],
+    [
+      "Cape Heth",
+      "East Izol"
+    ],
+    [
+      "Cape Heth",
+      "East Pyros"
+    ],
+    [
+      "Cape Heth",
+      "East Suval"
+    ],
+    [
+      "Cape Heth",
+      "Eer"
+    ],
+    [
+      "Cape Heth",
+      "Gala"
+    ],
+    [
+      "Cape Heth",
+      "Ganesh Plain"
+    ],
+    [
+      "Cape Heth",
+      "Hama"
+    ],
+    [
+      "Cape Heth",
+      "Iscare Archipeligo"
+    ],
+    [
+      "Cape Heth",
+      "Legemum"
+    ],
+    [
+      "Cape Heth",
       "Marosh"
     ],
     [
       "Cape Heth",
+      "Narcosh"
+    ],
+    [
+      "Cape Heth",
+      "Northern Ascarth"
+    ],
+    [
+      "Cape Heth",
+      "Selemi"
+    ],
+    [
+      "Cape Heth",
+      "South Oremindi Mountains"
+    ],
+    [
+      "Cape Heth",
+      "South Suval"
+    ],
+    [
+      "Cape Heth",
+      "Southern Ascarth"
+    ],
+    [
+      "Cape Heth",
+      "Trogo"
+    ],
+    [
+      "Cape Heth",
+      "West Izol"
+    ],
+    [
+      "Cape Heth",
       "West Pyros"
     ],
     [
       "Cape Heth",
-      "East Suval"
-    ],
-    [
-      "East Izol",
-      "South Suval"
-    ],
-    [
-      "Selemi",
-      "West Izol"
-    ],
-    [
-      "South Oremindi Mountains",
       "West Suval"
     ],
     [
-      "Eer",
-      "South Oremindi Mountains"
+      "Drent",
+      "East Izol"
     ],
     [
-      "East Izol",
+      "Drent",
+      "East Pyros"
+    ],
+    [
+      "Drent",
       "East Suval"
     ],
     [
-      "Trogo",
-      "West Pyros"
+      "Drent",
+      "Eer"
+    ],
+    [
+      "Drent",
+      "Elagos"
+    ],
+    [
+      "Drent",
+      "Gala"
+    ],
+    [
+      "Drent",
+      "Ganesh Plain"
+    ],
+    [
+      "Drent",
+      "Hama"
+    ],
+    [
+      "Drent",
+      "Iscare Archipeligo"
+    ],
+    [
+      "Drent",
+      "Legemum"
+    ],
+    [
+      "Drent",
+      "Marosh"
+    ],
+    [
+      "Drent",
+      "Narcosh"
+    ],
+    [
+      "Drent",
+      "Northern Ascarth"
+    ],
+    [
+      "Drent",
+      "Selemi"
+    ],
+    [
+      "Drent",
+      "South Oremindi Mountains"
     ],
     [
       "Drent",
       "South Suval"
+    ],
+    [
+      "Drent",
+      "Southern Ascarth"
+    ],
+    [
+      "Drent",
+      "Trogo"
+    ],
+    [
+      "Drent",
+      "West Izol"
+    ],
+    [
+      "Drent",
+      "West Pyros"
+    ],
+    [
+      "Drent",
+      "West Suval"
+    ],
+    [
+      "East Izol",
+      "East Pyros"
+    ],
+    [
+      "East Izol",
+      "East Suval"
+    ],
+    [
+      "East Izol",
+      "Eer"
+    ],
+    [
+      "East Izol",
+      "Gala"
+    ],
+    [
+      "East Izol",
+      "Ganesh Plain"
+    ],
+    [
+      "East Izol",
+      "Hama"
+    ],
+    [
+      "East Izol",
+      "Iscare Archipeligo"
+    ],
+    [
+      "East Izol",
+      "Legemum"
+    ],
+    [
+      "East Izol",
+      "Marosh"
+    ],
+    [
+      "East Izol",
+      "Narcosh"
+    ],
+    [
+      "East Izol",
+      "Northern Ascarth"
+    ],
+    [
+      "East Izol",
+      "Selemi"
+    ],
+    [
+      "East Izol",
+      "South Oremindi Mountains"
+    ],
+    [
+      "East Izol",
+      "South Suval"
+    ],
+    [
+      "East Izol",
+      "Southern Ascarth"
+    ],
+    [
+      "East Izol",
+      "Trogo"
+    ],
+    [
+      "East Izol",
+      "West Izol"
+    ],
+    [
+      "East Izol",
+      "West Pyros"
+    ],
+    [
+      "East Izol",
+      "West Suval"
+    ],
+    [
+      "East Pyros",
+      "East Suval"
     ],
     [
       "East Pyros",
       "Eer"
     ],
     [
-      "East Suval",
-      "Eer"
+      "East Pyros",
+      "Gala"
     ],
     [
-      "Drent",
-      "East Suval"
+      "East Pyros",
+      "Ganesh Plain"
     ],
     [
       "East Pyros",
       "Hama"
     ],
     [
-      "Ganesh Plain",
-      "Trogo"
-    ],
-    [
       "East Pyros",
-      "Selemi"
-    ],
-    [
-      "Babon",
-      "Gala"
-    ],
-    [
-      "East Suval",
-      "Selemi"
-    ],
-    [
-      "Alezhor",
-      "Gala"
-    ],
-    [
-      "Gala",
-      "West Pyros"
-    ],
-    [
-      "Ganesh Plain",
       "Iscare Archipeligo"
     ],
     [
       "East Pyros",
-      "West Izol"
-    ],
-    [
-      "Babon",
-      "Cape Heth"
-    ],
-    [
-      "East Suval",
-      "West Izol"
-    ],
-    [
-      "Alezhor",
-      "Cape Heth"
-    ],
-    [
-      "Ganesh Plain",
-      "West Suval"
-    ],
-    [
-      "Iscare Archipeligo",
-      "South Suval"
-    ],
-    [
-      "Legemum",
-      "Narcosh"
-    ],
-    [
-      "Iscare Archipeligo",
-      "West Pyros"
-    ],
-    [
-      "Aurumlis Archipeligo",
-      "West Pyros"
+      "Legemum"
     ],
     [
       "East Pyros",
       "Marosh"
     ],
     [
-      "Cape Heth",
+      "East Pyros",
+      "Narcosh"
+    ],
+    [
+      "East Pyros",
+      "Northern Ascarth"
+    ],
+    [
+      "East Pyros",
+      "Selemi"
+    ],
+    [
+      "East Pyros",
+      "South Oremindi Mountains"
+    ],
+    [
+      "East Pyros",
+      "South Suval"
+    ],
+    [
+      "East Pyros",
       "Southern Ascarth"
+    ],
+    [
+      "East Pyros",
+      "Trogo"
+    ],
+    [
+      "East Pyros",
+      "West Izol"
+    ],
+    [
+      "East Pyros",
+      "West Pyros"
+    ],
+    [
+      "East Pyros",
+      "West Suval"
+    ],
+    [
+      "East Suval",
+      "Eer"
+    ],
+    [
+      "East Suval",
+      "Gala"
+    ],
+    [
+      "East Suval",
+      "Ganesh Plain"
+    ],
+    [
+      "East Suval",
+      "Hama"
+    ],
+    [
+      "East Suval",
+      "Iscare Archipeligo"
+    ],
+    [
+      "East Suval",
+      "Legemum"
     ],
     [
       "East Suval",
       "Marosh"
+    ],
+    [
+      "East Suval",
+      "Narcosh"
+    ],
+    [
+      "East Suval",
+      "Northern Ascarth"
+    ],
+    [
+      "East Suval",
+      "Selemi"
+    ],
+    [
+      "East Suval",
+      "South Oremindi Mountains"
+    ],
+    [
+      "East Suval",
+      "South Suval"
+    ],
+    [
+      "East Suval",
+      "Southern Ascarth"
+    ],
+    [
+      "East Suval",
+      "Trogo"
+    ],
+    [
+      "East Suval",
+      "West Izol"
+    ],
+    [
+      "East Suval",
+      "West Pyros"
+    ],
+    [
+      "East Suval",
+      "West Suval"
+    ],
+    [
+      "Eer",
+      "Gala"
+    ],
+    [
+      "Eer",
+      "Ganesh Plain"
+    ],
+    [
+      "Eer",
+      "Hama"
+    ],
+    [
+      "Eer",
+      "Iscare Archipeligo"
+    ],
+    [
+      "Eer",
+      "Legemum"
+    ],
+    [
+      "Eer",
+      "Marosh"
+    ],
+    [
+      "Eer",
+      "Narcosh"
+    ],
+    [
+      "Eer",
+      "Northern Ascarth"
+    ],
+    [
+      "Eer",
+      "Selemi"
+    ],
+    [
+      "Eer",
+      "South Oremindi Mountains"
+    ],
+    [
+      "Eer",
+      "South Suval"
+    ],
+    [
+      "Eer",
+      "Southern Ascarth"
+    ],
+    [
+      "Eer",
+      "Trogo"
+    ],
+    [
+      "Eer",
+      "West Izol"
     ],
     [
       "Eer",
       "West Pyros"
     ],
     [
-      "Hama",
+      "Eer",
+      "West Suval"
+    ],
+    [
+      "Gala",
+      "Ganesh Plain"
+    ],
+    [
+      "Gala",
+      "Hama"
+    ],
+    [
+      "Gala",
+      "Iscare Archipeligo"
+    ],
+    [
+      "Gala",
+      "Legemum"
+    ],
+    [
+      "Gala",
+      "Marosh"
+    ],
+    [
+      "Gala",
+      "Narcosh"
+    ],
+    [
+      "Gala",
+      "Northern Ascarth"
+    ],
+    [
+      "Gala",
+      "Selemi"
+    ],
+    [
+      "Gala",
+      "South Oremindi Mountains"
+    ],
+    [
+      "Gala",
+      "South Suval"
+    ],
+    [
+      "Gala",
+      "Southern Ascarth"
+    ],
+    [
+      "Gala",
       "Trogo"
     ],
     [
-      "East Izol",
-      "Trogo"
+      "Gala",
+      "West Izol"
+    ],
+    [
+      "Gala",
+      "West Pyros"
+    ],
+    [
+      "Gala",
+      "West Suval"
+    ],
+    [
+      "Ganesh Plain",
+      "Hama"
+    ],
+    [
+      "Ganesh Plain",
+      "Iscare Archipeligo"
+    ],
+    [
+      "Ganesh Plain",
+      "Legemum"
+    ],
+    [
+      "Ganesh Plain",
+      "Marosh"
+    ],
+    [
+      "Ganesh Plain",
+      "Narcosh"
     ],
     [
       "Ganesh Plain",
       "Northern Ascarth"
     ],
     [
-      "Cape Heth",
+      "Ganesh Plain",
+      "Selemi"
+    ],
+    [
+      "Ganesh Plain",
+      "South Oremindi Mountains"
+    ],
+    [
+      "Ganesh Plain",
+      "South Suval"
+    ],
+    [
+      "Ganesh Plain",
+      "Southern Ascarth"
+    ],
+    [
+      "Ganesh Plain",
+      "Trogo"
+    ],
+    [
+      "Ganesh Plain",
+      "West Izol"
+    ],
+    [
+      "Ganesh Plain",
+      "West Pyros"
+    ],
+    [
+      "Ganesh Plain",
+      "West Suval"
+    ],
+    [
+      "Hama",
       "Iscare Archipeligo"
+    ],
+    [
+      "Hama",
+      "Legemum"
+    ],
+    [
+      "Hama",
+      "Marosh"
+    ],
+    [
+      "Hama",
+      "Narcosh"
+    ],
+    [
+      "Hama",
+      "Northern Ascarth"
+    ],
+    [
+      "Hama",
+      "Selemi"
+    ],
+    [
+      "Hama",
+      "South Oremindi Mountains"
+    ],
+    [
+      "Hama",
+      "South Suval"
+    ],
+    [
+      "Hama",
+      "Southern Ascarth"
+    ],
+    [
+      "Hama",
+      "Trogo"
+    ],
+    [
+      "Hama",
+      "West Izol"
+    ],
+    [
+      "Hama",
+      "West Pyros"
+    ],
+    [
+      "Hama",
+      "West Suval"
+    ],
+    [
+      "Iscare Archipeligo",
+      "Legemum"
+    ],
+    [
+      "Iscare Archipeligo",
+      "Marosh"
+    ],
+    [
+      "Iscare Archipeligo",
+      "Narcosh"
+    ],
+    [
+      "Iscare Archipeligo",
+      "Northern Ascarth"
+    ],
+    [
+      "Iscare Archipeligo",
+      "Selemi"
+    ],
+    [
+      "Iscare Archipeligo",
+      "South Oremindi Mountains"
+    ],
+    [
+      "Iscare Archipeligo",
+      "South Suval"
+    ],
+    [
+      "Iscare Archipeligo",
+      "Southern Ascarth"
+    ],
+    [
+      "Iscare Archipeligo",
+      "Trogo"
+    ],
+    [
+      "Iscare Archipeligo",
+      "West Izol"
+    ],
+    [
+      "Iscare Archipeligo",
+      "West Pyros"
+    ],
+    [
+      "Iscare Archipeligo",
+      "West Suval"
+    ],
+    [
+      "Legemum",
+      "Marosh"
+    ],
+    [
+      "Legemum",
+      "Narcosh"
+    ],
+    [
+      "Legemum",
+      "Northern Ascarth"
+    ],
+    [
+      "Legemum",
+      "Selemi"
+    ],
+    [
+      "Legemum",
+      "South Oremindi Mountains"
+    ],
+    [
+      "Legemum",
+      "South Suval"
+    ],
+    [
+      "Legemum",
+      "Southern Ascarth"
+    ],
+    [
+      "Legemum",
+      "Trogo"
+    ],
+    [
+      "Legemum",
+      "West Izol"
+    ],
+    [
+      "Legemum",
+      "West Pyros"
+    ],
+    [
+      "Legemum",
+      "West Suval"
+    ],
+    [
+      "Marosh",
+      "Narcosh"
+    ],
+    [
+      "Marosh",
+      "Northern Ascarth"
+    ],
+    [
+      "Marosh",
+      "Selemi"
+    ],
+    [
+      "Marosh",
+      "South Oremindi Mountains"
+    ],
+    [
+      "Marosh",
+      "South Suval"
+    ],
+    [
+      "Marosh",
+      "Southern Ascarth"
+    ],
+    [
+      "Marosh",
+      "Trogo"
+    ],
+    [
+      "Marosh",
+      "West Izol"
+    ],
+    [
+      "Marosh",
+      "West Pyros"
+    ],
+    [
+      "Marosh",
+      "West Suval"
+    ],
+    [
+      "Narcosh",
+      "Northern Ascarth"
+    ],
+    [
+      "Narcosh",
+      "Selemi"
+    ],
+    [
+      "Narcosh",
+      "South Oremindi Mountains"
+    ],
+    [
+      "Narcosh",
+      "South Suval"
+    ],
+    [
+      "Narcosh",
+      "Southern Ascarth"
+    ],
+    [
+      "Narcosh",
+      "Trogo"
+    ],
+    [
+      "Narcosh",
+      "West Izol"
+    ],
+    [
+      "Narcosh",
+      "West Pyros"
+    ],
+    [
+      "Narcosh",
+      "West Suval"
+    ],
+    [
+      "Northern Ascarth",
+      "Selemi"
+    ],
+    [
+      "Northern Ascarth",
+      "South Oremindi Mountains"
+    ],
+    [
+      "Northern Ascarth",
+      "South Suval"
+    ],
+    [
+      "Northern Ascarth",
+      "Southern Ascarth"
+    ],
+    [
+      "Northern Ascarth",
+      "Trogo"
+    ],
+    [
+      "Northern Ascarth",
+      "West Izol"
+    ],
+    [
+      "Northern Ascarth",
+      "West Pyros"
+    ],
+    [
+      "Northern Ascarth",
+      "West Suval"
+    ],
+    [
+      "Selemi",
+      "South Oremindi Mountains"
+    ],
+    [
+      "Selemi",
+      "South Suval"
+    ],
+    [
+      "Selemi",
+      "Southern Ascarth"
+    ],
+    [
+      "Selemi",
+      "Trogo"
+    ],
+    [
+      "Selemi",
+      "West Izol"
+    ],
+    [
+      "Selemi",
+      "West Pyros"
+    ],
+    [
+      "Selemi",
+      "West Suval"
+    ],
+    [
+      "South Oremindi Mountains",
+      "South Suval"
+    ],
+    [
+      "South Oremindi Mountains",
+      "Southern Ascarth"
+    ],
+    [
+      "South Oremindi Mountains",
+      "Trogo"
+    ],
+    [
+      "South Oremindi Mountains",
+      "West Izol"
+    ],
+    [
+      "South Oremindi Mountains",
+      "West Pyros"
+    ],
+    [
+      "South Oremindi Mountains",
+      "West Suval"
+    ],
+    [
+      "South Suval",
+      "Southern Ascarth"
+    ],
+    [
+      "South Suval",
+      "Trogo"
+    ],
+    [
+      "South Suval",
+      "West Izol"
     ],
     [
       "South Suval",
       "West Pyros"
+    ],
+    [
+      "South Suval",
+      "West Suval"
+    ],
+    [
+      "Southern Ascarth",
+      "Trogo"
+    ],
+    [
+      "Southern Ascarth",
+      "West Izol"
+    ],
+    [
+      "Southern Ascarth",
+      "West Pyros"
+    ],
+    [
+      "Southern Ascarth",
+      "West Suval"
+    ],
+    [
+      "Trogo",
+      "West Izol"
+    ],
+    [
+      "Trogo",
+      "West Pyros"
+    ],
+    [
+      "Trogo",
+      "West Suval"
+    ],
+    [
+      "West Izol",
+      "West Pyros"
+    ],
+    [
+      "West Izol",
+      "West Suval"
     ],
     [
       "West Pyros",
       "West Suval"
-    ],
-    [
-      "Cape Heth",
-      "West Suval"
-    ],
-    [
-      "Drent",
-      "Trogo"
-    ],
-    [
-      "East Izol",
-      "West Suval"
-    ],
-    [
-      "Southern Ascarth",
-      "Trogo"
-    ],
-    [
-      "East Izol",
-      "East Pyros"
-    ],
-    [
-      "Gala",
-      "Southern Ascarth"
-    ],
-    [
-      "Ganesh Plain",
-      "Legemum"
-    ],
-    [
-      "Ganesh Plain",
-      "South Oremindi Mountains"
-    ],
-    [
-      "Drent",
-      "West Suval"
-    ],
-    [
-      "Babon",
-      "South Oremindi Mountains"
-    ],
-    [
-      "Selemi",
-      "West Pyros"
-    ],
-    [
-      "Alezhor",
-      "South Oremindi Mountains"
-    ],
-    [
-      "South Oremindi Mountains",
-      "South Suval"
-    ],
-    [
-      "Drent",
-      "East Pyros"
-    ],
-    [
-      "Gala",
-      "Iscare Archipeligo"
-    ],
-    [
-      "Iscare Archipeligo",
-      "Southern Ascarth"
-    ],
-    [
-      "Cape Heth",
-      "Northern Ascarth"
-    ],
-    [
-      "Narcosh",
-      "South Oremindi Mountains"
-    ],
-    [
-      "Aurumlis Archipeligo",
-      "Southern Ascarth"
-    ],
-    [
-      "East Izol",
-      "Northern Ascarth"
-    ],
-    [
-      "Hama",
-      "Narcosh"
-    ],
-    [
-      "East Pyros",
-      "Ganesh Plain"
-    ],
-    [
-      "Marosh",
-      "South Oremindi Mountains"
-    ],
-    [
-      "Eer",
-      "Southern Ascarth"
-    ],
-    [
-      "Aurumlis Archipeligo",
-      "Iscare Archipeligo"
-    ],
-    [
-      "Drent",
-      "Northern Ascarth"
-    ],
-    [
-      "East Suval",
-      "West Pyros"
-    ],
-    [
-      "Iscare Archipeligo",
-      "West Suval"
-    ],
-    [
-      "Aurumlis Archipeligo",
-      "West Suval"
-    ],
-    [
-      "Hama",
-      "Legemum"
-    ],
-    [
-      "East Izol",
-      "Legemum"
-    ],
-    [
-      "Eer",
-      "Iscare Archipeligo"
-    ],
-    [
-      "South Suval",
-      "Southern Ascarth"
-    ],
-    [
-      "West Izol",
-      "West Suval"
-    ],
-    [
-      "Drent",
-      "Legemum"
-    ],
-    [
-      "Babon",
-      "South Suval"
-    ],
-    [
-      "Selemi",
-      "Southern Ascarth"
-    ],
-    [
-      "Alezhor",
-      "South Suval"
-    ],
-    [
-      "Legemum",
-      "West Izol"
-    ],
-    [
-      "Babon",
-      "East Suval"
-    ],
-    [
-      "Northern Ascarth",
-      "South Oremindi Mountains"
-    ],
-    [
-      "Alezhor",
-      "East Suval"
-    ],
-    [
-      "Iscare Archipeligo",
-      "Northern Ascarth"
-    ],
-    [
-      "Narcosh",
-      "South Suval"
-    ],
-    [
-      "Aurumlis Archipeligo",
-      "Northern Ascarth"
-    ],
-    [
-      "South Oremindi Mountains",
-      "Trogo"
-    ],
-    [
-      "Narcosh",
-      "West Pyros"
-    ],
-    [
-      "Ganesh Plain",
-      "Hama"
-    ],
-    [
-      "Ganesh Plain",
-      "Selemi"
-    ],
-    [
-      "East Pyros",
-      "Gala"
-    ],
-    [
-      "East Suval",
-      "Gala"
-    ],
-    [
-      "Marosh",
-      "West Pyros"
-    ],
-    [
-      "Legemum",
-      "South Oremindi Mountains"
-    ],
-    [
-      "Cape Heth",
-      "Drent"
-    ],
-    [
-      "East Izol",
-      "Eer"
-    ],
-    [
-      "Cape Heth",
-      "Hama"
-    ],
-    [
-      "Gala",
-      "South Suval"
-    ],
-    [
-      "Ganesh Plain",
-      "Marosh"
-    ],
-    [
-      "Selemi",
-      "South Oremindi Mountains"
-    ],
-    [
-      "East Izol",
-      "Hama"
-    ],
-    [
-      "Babon",
-      "Southern Ascarth"
-    ],
-    [
-      "Drent",
-      "Eer"
-    ],
-    [
-      "Alezhor",
-      "Southern Ascarth"
-    ],
-    [
-      "East Izol",
-      "Selemi"
-    ],
-    [
-      "Hama",
-      "Selemi"
-    ],
-    [
-      "Northern Ascarth",
-      "West Pyros"
-    ],
-    [
-      "Drent",
-      "Hama"
-    ],
-    [
-      "Aurumlis Archipeligo",
-      "South Suval"
-    ],
-    [
-      "Narcosh",
-      "Southern Ascarth"
-    ],
-    [
-      "Babon",
-      "Iscare Archipeligo"
-    ],
-    [
-      "Aurumlis Archipeligo",
-      "East Suval"
-    ],
-    [
-      "Alezhor",
-      "Iscare Archipeligo"
-    ],
-    [
-      "Drent",
-      "Selemi"
-    ],
-    [
-      "Babon",
-      "West Suval"
-    ],
-    [
-      "Eer",
-      "South Suval"
-    ],
-    [
-      "Alezhor",
-      "West Suval"
-    ],
-    [
-      "Cape Heth",
-      "Trogo"
-    ],
-    [
-      "Hama",
-      "West Izol"
-    ],
-    [
-      "Babon",
-      "East Pyros"
-    ],
-    [
-      "Marosh",
-      "Southern Ascarth"
-    ],
-    [
-      "Alezhor",
-      "East Pyros"
-    ],
-    [
-      "Legemum",
-      "West Pyros"
-    ],
-    [
-      "Narcosh",
-      "West Suval"
-    ],
-    [
-      "East Pyros",
-      "South Oremindi Mountains"
-    ],
-    [
-      "East Izol",
-      "Marosh"
-    ],
-    [
-      "East Suval",
-      "South Oremindi Mountains"
-    ],
-    [
-      "Ganesh Plain",
-      "Narcosh"
-    ],
-    [
-      "Hama",
-      "Marosh"
-    ],
-    [
-      "Southern Ascarth",
-      "West Izol"
-    ],
-    [
-      "Aurumlis Archipeligo",
-      "Drent"
-    ],
-    [
-      "Trogo",
-      "West Suval"
-    ],
-    [
-      "Cape Heth",
-      "East Pyros"
-    ],
-    [
-      "Drent",
-      "Marosh"
-    ],
-    [
-      "Selemi",
-      "South Suval"
-    ],
-    [
-      "Babon",
-      "Northern Ascarth"
-    ],
-    [
-      "Alezhor",
-      "Northern Ascarth"
-    ],
-    [
-      "Gala",
-      "Trogo"
-    ],
-    [
-      "Northern Ascarth",
-      "Southern Ascarth"
-    ],
-    [
-      "Narcosh",
-      "Northern Ascarth"
-    ],
-    [
-      "Alezhor",
-      "Legemum"
-    ],
-    [
-      "Cape Heth",
-      "Narcosh"
-    ],
-    [
-      "Gala",
-      "West Suval"
-    ],
-    [
-      "Iscare Archipeligo",
-      "Trogo"
-    ],
-    [
-      "Aurumlis Archipeligo",
-      "Trogo"
-    ],
-    [
-      "East Izol",
-      "Narcosh"
-    ],
-    [
-      "East Suval",
-      "South Suval"
-    ],
-    [
-      "Eer",
-      "Trogo"
-    ],
-    [
-      "Cape Heth",
-      "Legemum"
-    ],
-    [
-      "Drent",
-      "Narcosh"
-    ],
-    [
-      "East Pyros",
-      "West Pyros"
-    ],
-    [
-      "Legemum",
-      "Southern Ascarth"
-    ],
-    [
-      "East Izol",
-      "Ganesh Plain"
-    ],
-    [
-      "South Suval",
-      "Trogo"
-    ],
-    [
-      "Aurumlis Archipeligo",
-      "East Pyros"
-    ],
-    [
-      "Eer",
-      "West Suval"
-    ],
-    [
-      "Alezhor",
-      "East Izol"
-    ],
-    [
-      "Gala",
-      "Northern Ascarth"
-    ],
-    [
-      "Drent",
-      "Ganesh Plain"
-    ],
-    [
-      "South Oremindi Mountains",
-      "West Izol"
-    ],
-    [
-      "South Suval",
-      "West Suval"
-    ],
-    [
-      "Alezhor",
-      "Babon"
-    ],
-    [
-      "Selemi",
-      "Trogo"
-    ],
-    [
-      "Iscare Archipeligo",
-      "Narcosh"
-    ],
-    [
-      "Gala",
-      "Legemum"
-    ],
-    [
-      "Hama",
-      "West Suval"
-    ],
-    [
-      "Aurumlis Archipeligo",
-      "Narcosh"
-    ],
-    [
-      "Selemi",
-      "West Suval"
-    ],
-    [
-      "Eer",
-      "Northern Ascarth"
-    ],
-    [
-      "Marosh",
-      "South Suval"
-    ],
-    [
-      "Eer",
-      "Narcosh"
-    ],
-    [
-      "Iscare Archipeligo",
-      "Legemum"
-    ],
-    [
-      "Babon",
-      "Drent"
-    ],
-    [
-      "Aurumlis Archipeligo",
-      "Legemum"
-    ],
-    [
-      "Alezhor",
-      "Drent"
-    ],
-    [
-      "Babon",
-      "Hama"
-    ],
-    [
-      "Ganesh Plain",
-      "West Izol"
-    ],
-    [
-      "Alezhor",
-      "Hama"
-    ],
-    [
-      "East Pyros",
-      "Southern Ascarth"
-    ],
-    [
-      "East Suval",
-      "Southern Ascarth"
-    ],
-    [
-      "East Izol",
-      "Gala"
-    ],
-    [
-      "Alezhor",
-      "Selemi"
-    ],
-    [
-      "Eer",
-      "Legemum"
-    ],
-    [
-      "Cape Heth",
-      "Eer"
-    ],
-    [
-      "East Pyros",
-      "Iscare Archipeligo"
-    ],
-    [
-      "Drent",
-      "Gala"
-    ],
-    [
-      "East Suval",
-      "Iscare Archipeligo"
-    ],
-    [
-      "East Pyros",
-      "West Suval"
-    ],
-    [
-      "East Suval",
-      "West Suval"
-    ],
-    [
-      "Cape Heth",
-      "Selemi"
-    ],
-    [
-      "Northern Ascarth",
-      "South Suval"
-    ],
-    [
-      "Babon",
-      "Trogo"
-    ],
-    [
-      "Alezhor",
-      "Trogo"
-    ],
-    [
-      "Cape Heth",
-      "West Izol"
-    ],
-    [
-      "Alezhor",
-      "Marosh"
-    ],
-    [
-      "Aurumlis Archipeligo",
-      "Babon"
-    ],
-    [
-      "East Izol",
-      "West Izol"
-    ],
-    [
-      "Narcosh",
-      "Trogo"
-    ],
-    [
-      "Narcosh",
-      "West Izol"
-    ],
-    [
-      "Cape Heth",
-      "East Izol"
-    ],
-    [
-      "East Suval",
-      "Northern Ascarth"
-    ],
-    [
-      "Cape Heth",
-      "Marosh"
-    ],
-    [
-      "Drent",
-      "West Izol"
-    ],
-    [
-      "Gala",
-      "Hama"
-    ],
-    [
-      "Gala",
-      "Selemi"
-    ],
-    [
-      "Legemum",
-      "South Suval"
-    ],
-    [
-      "Marosh",
-      "Trogo"
-    ],
-    [
-      "Aurumlis Archipeligo",
-      "Eer"
-    ],
-    [
-      "Marosh",
-      "West Suval"
-    ],
-    [
-      "Drent",
-      "East Izol"
-    ],
-    [
-      "Gala",
-      "West Izol"
-    ],
-    [
-      "Aurumlis Archipeligo",
-      "Hama"
-    ],
-    [
-      "Hama",
-      "South Oremindi Mountains"
-    ],
-    [
-      "Iscare Archipeligo",
-      "Selemi"
-    ],
-    [
-      "Aurumlis Archipeligo",
-      "Selemi"
-    ],
-    [
-      "Babon",
-      "Narcosh"
-    ],
-    [
-      "Eer",
-      "Hama"
-    ],
-    [
-      "Alezhor",
-      "Narcosh"
-    ],
-    [
-      "Iscare Archipeligo",
-      "West Izol"
-    ],
-    [
-      "Drent",
-      "South Oremindi Mountains"
-    ],
-    [
-      "Eer",
-      "Selemi"
-    ],
-    [
-      "Gala",
-      "Marosh"
-    ],
-    [
-      "Aurumlis Archipeligo",
-      "West Izol"
-    ],
-    [
-      "Ganesh Plain",
-      "West Pyros"
-    ],
-    [
-      "Northern Ascarth",
-      "Trogo"
-    ],
-    [
-      "Babon",
-      "Ganesh Plain"
-    ],
-    [
-      "Babon",
-      "Legemum"
-    ],
-    [
-      "Alezhor",
-      "Ganesh Plain"
-    ],
-    [
-      "Eer",
-      "West Izol"
-    ],
-    [
-      "Marosh",
-      "Northern Ascarth"
-    ],
-    [
-      "Iscare Archipeligo",
-      "Marosh"
-    ],
-    [
-      "Aurumlis Archipeligo",
-      "East Izol"
-    ],
-    [
-      "Northern Ascarth",
-      "West Suval"
-    ],
-    [
-      "Aurumlis Archipeligo",
-      "Marosh"
-    ],
-    [
-      "East Pyros",
-      "South Suval"
-    ],
-    [
-      "Cape Heth",
-      "Ganesh Plain"
-    ],
-    [
-      "East Pyros",
-      "East Suval"
-    ],
-    [
-      "Eer",
-      "Marosh"
-    ],
-    [
-      "Legemum",
-      "Trogo"
-    ],
-    [
-      "Hama",
-      "South Suval"
-    ],
-    [
-      "Hama",
-      "West Pyros"
-    ],
-    [
-      "East Izol",
-      "West Pyros"
-    ],
-    [
-      "Gala",
-      "Narcosh"
-    ],
-    [
-      "Legemum",
-      "West Suval"
-    ],
-    [
-      "Drent",
-      "West Pyros"
-    ],
-    [
-      "Ganesh Plain",
-      "Southern Ascarth"
-    ],
-    [
-      "East Suval",
-      "Hama"
-    ],
-    [
-      "Gala",
-      "Ganesh Plain"
-    ],
-    [
-      "Southern Ascarth",
-      "West Pyros"
-    ],
-    [
-      "Babon",
-      "Eer"
-    ],
-    [
-      "Legemum",
-      "Northern Ascarth"
-    ],
-    [
-      "Alezhor",
-      "Eer"
-    ],
-    [
-      "Aurumlis Archipeligo",
-      "Ganesh Plain"
-    ],
-    [
-      "Cape Heth",
-      "Gala"
-    ],
-    [
-      "Babon",
-      "Selemi"
-    ],
-    [
-      "East Pyros",
-      "Trogo"
-    ],
-    [
-      "East Suval",
-      "Trogo"
-    ],
-    [
-      "Eer",
-      "Ganesh Plain"
-    ],
-    [
-      "West Izol",
-      "West Pyros"
-    ],
-    [
-      "Hama",
-      "Southern Ascarth"
-    ],
-    [
-      "Babon",
-      "West Izol"
-    ],
-    [
-      "East Izol",
-      "Southern Ascarth"
-    ],
-    [
-      "Alezhor",
-      "West Izol"
-    ],
-    [
-      "Narcosh",
-      "Selemi"
-    ],
-    [
-      "Marosh",
-      "Selemi"
-    ],
-    [
-      "Drent",
-      "Southern Ascarth"
-    ],
-    [
-      "Hama",
-      "Iscare Archipeligo"
-    ],
-    [
-      "East Izol",
-      "Iscare Archipeligo"
-    ],
-    [
-      "Babon",
-      "East Izol"
-    ],
-    [
-      "Babon",
-      "Marosh"
     ]
   ],
   "river_links": [
@@ -2023,7 +2027,7 @@
         "West Ganun",
         "West Lond"
       ],
-      "owner": "Faction8",
+      "owner": null,
       "resources": 3,
       "terrain_tags": [
         "riverland",
@@ -2466,7 +2470,7 @@
         "Pueth",
         "Vastos"
       ],
-      "owner": "Faction7",
+      "owner": null,
       "resources": 2,
       "terrain_tags": [
         "highland",

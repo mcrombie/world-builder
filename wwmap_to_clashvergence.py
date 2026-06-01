@@ -1,8 +1,8 @@
 """
-Converts a world-builder .wwmap file to a Clashvergence map definition JSON.
+Converts a world-builder map file to a Clashvergence map definition JSON.
 
 Usage:
-    python wwmap_to_clashvergence.py path/to/map.wwmap [output.json] [num_factions]
+    python wwmap_to_clashvergence.py path/to/map.azmap [output.json] [num_factions]
 """
 
 from __future__ import annotations
@@ -12,7 +12,7 @@ import sys
 from collections import Counter
 from pathlib import Path
 
-from wwmap_core import load_map_graph, MapGraph
+from wwmap_core import load_map_graph
 
 # ── Terrain mapping ──────────────────────────────────────────────────────────
 # world-builder terrain type → Clashvergence terrain_tags list.
@@ -28,6 +28,8 @@ TERRAIN_TO_TAGS: dict[str, list[str]] = {
     "desert_hills":          ["hills"],
     "forest":                ["forest"],
     "deep_forest":           ["forest", "highland"],
+    "jungle":                ["forest"],
+    "deep_jungle":           ["forest", "highland"],
     "mountain":              ["highland"],
     "tundra_mountain":       ["highland"],
     "desert_mountain":       ["highland"],
@@ -86,7 +88,7 @@ def _compute_terrain_tags(terrain_counts: Counter) -> list[str]:
 
 def translate(wwmap_path: str | Path, num_factions: int = 4) -> dict:
     """
-    Reads a .wwmap file and returns a Clashvergence map definition dict.
+    Reads a world-builder map file and returns a Clashvergence map definition dict.
     """
     graph = load_map_graph(wwmap_path, num_factions)
 

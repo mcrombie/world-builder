@@ -37,6 +37,8 @@ export default function App() {
   const setSimFactionCount = useMapStore((s) => s.setSimFactionCount)
   const simType          = useMapStore((s) => s.simType)
   const setSimType       = useMapStore((s) => s.setSimType)
+  const viewMode         = useMapStore((s) => s.viewMode)
+  const setViewMode      = useMapStore((s) => s.setViewMode)
 
   // ── Restore autosave on mount (browser only) ──────────────────────────────
   const restoredRef = useRef(false)
@@ -245,7 +247,53 @@ export default function App() {
           </button>
         )}
 
-        <span className="ml-auto text-xs text-gray-500 truncate max-w-xs">{saveStatus}</span>
+        {/* View mode toggle */}
+        <div className="ml-auto flex items-center gap-0.5 bg-gray-800 rounded p-0.5">
+          {([
+            {
+              id: 'map',      title: 'Map focused',
+              icon: <svg width="20" height="12" viewBox="0 0 20 12" fill="currentColor">
+                <rect x="0"  y="0" width="12" height="12" rx="1.5" opacity="0.65" />
+                <rect x="14" y="0" width="6"  height="12" rx="1.5" />
+              </svg>,
+            },
+            {
+              id: 'balanced', title: 'Balanced',
+              icon: <svg width="20" height="12" viewBox="0 0 20 12" fill="currentColor">
+                <rect x="0"  y="0" width="9" height="12" rx="1.5" opacity="0.65" />
+                <rect x="11" y="0" width="9" height="12" rx="1.5" />
+              </svg>,
+            },
+            {
+              id: 'panel',    title: 'Panel focused',
+              icon: <svg width="20" height="12" viewBox="0 0 20 12" fill="currentColor">
+                <rect x="0"  y="0" width="6"  height="12" rx="1.5" opacity="0.65" />
+                <rect x="8"  y="0" width="12" height="12" rx="1.5" />
+              </svg>,
+            },
+            {
+              id: 'lore',     title: 'Lore reader (50/50)',
+              icon: <svg width="20" height="12" viewBox="0 0 20 12" fill="currentColor">
+                <rect x="0"  y="0"   width="8" height="12" rx="1.5" opacity="0.65" />
+                <rect x="11" y="1"   width="9" height="2"  rx="1" />
+                <rect x="11" y="5"   width="9" height="2"  rx="1" />
+                <rect x="11" y="9"   width="6" height="2"  rx="1" />
+              </svg>,
+            },
+          ] as const).map(({ id, title, icon }) => (
+            <button
+              key={id}
+              title={title}
+              onClick={() => setViewMode(id)}
+              className={`flex items-center justify-center px-2 py-1 rounded transition-colors
+                ${viewMode === id ? 'bg-indigo-600 text-white' : 'text-gray-400 hover:text-gray-200 hover:bg-gray-700'}`}
+            >
+              {icon}
+            </button>
+          ))}
+        </div>
+
+        <span className="text-xs text-gray-500 truncate max-w-xs">{saveStatus}</span>
         {map && <span className="text-xs text-gray-500">{map.width}×{map.height} hexes</span>}
       </header>
 

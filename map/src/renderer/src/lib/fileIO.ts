@@ -47,7 +47,7 @@ const browserIO: FileIO = {
     const url  = URL.createObjectURL(blob)
     const a    = Object.assign(document.createElement('a'), {
       href: url,
-      download: name.endsWith('.wwmap') ? name : `${name}.wwmap`,
+      download: /\.(azmap|wwmap)$/i.test(name) ? name : `${name}.azmap`,
     })
     a.click()
     URL.revokeObjectURL(url)

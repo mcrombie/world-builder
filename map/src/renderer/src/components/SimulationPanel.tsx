@@ -1,7 +1,14 @@
 import { useMemo, useState, useRef, useEffect } from 'react'
 import { useMapStore } from '../store/mapStore'
 import { IS_BROWSER } from '../lib/fileIO'
-import type { SimFaction } from '../types/map'
+import type { SimFaction, ViewMode } from '../types/map'
+
+const SIM_PANEL_WIDTH: Record<ViewMode, string> = {
+  map:      'w-64',
+  balanced: 'w-[420px]',
+  panel:    'w-[600px]',
+  lore:     'w-[calc(50vw-96px)]',
+}
 
 const FACTION_PALETTE = [
   '#e74c3c', '#3498db', '#2ecc71', '#e67e22',
@@ -46,6 +53,7 @@ export function SimulationPanel() {
   const setSimulating  = useMapStore((s) => s.setSimulating)
   const currentFilePath = useMapStore((s) => s.currentFilePath)
   const simFactionCount = useMapStore((s) => s.simFactionCount)
+  const viewMode       = useMapStore((s) => s.viewMode)
   const [isAdvancing, setIsAdvancing] = useState(false)
   const [isPlaying,   setIsPlaying]   = useState(false)
   const [error, setError]             = useState<string | null>(null)
@@ -154,7 +162,7 @@ export function SimulationPanel() {
   )
 
   return (
-    <aside className="w-64 bg-gray-900 text-gray-100 flex flex-col shrink-0 overflow-hidden">
+    <aside className={`${SIM_PANEL_WIDTH[viewMode]} bg-gray-900 text-gray-100 flex flex-col shrink-0 overflow-hidden border-l border-gray-800`}>
 
       {/* Header */}
       <div className="px-4 py-3 bg-gray-800 border-b border-gray-700">

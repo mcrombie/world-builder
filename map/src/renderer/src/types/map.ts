@@ -1,5 +1,24 @@
 export type RiverSize = 'small' | 'medium' | 'large'
 
+export interface LoreEntry {
+  id: string
+  name: string
+  category: string
+  tags: string[]
+  related: string[]
+  summary: string
+  body: string
+  sourcePath: string
+}
+
+export interface AzloreFile {
+  azlore: true
+  worldName: string
+  version: string
+  compiledAt: string
+  entries: LoreEntry[]
+}
+
 export type TerrainType =
   | 'ocean'
   | 'coast'
@@ -8,6 +27,8 @@ export type TerrainType =
   | 'hills'
   | 'forest'
   | 'deep_forest'
+  | 'jungle'
+  | 'deep_jungle'
   | 'mountain'
   | 'high_mountain'
   | 'wetland'
@@ -25,8 +46,9 @@ export interface RegionData {
   faction?: string
   climate?: Climate
   coreStatus?: CoreStatus
+  loreRef?: string          // ID into a loaded AzloreFile
   notes?: string
-  lore?: string
+  lore?: string             // legacy: embedded lore text from populate_region_lore.py
 }
 
 export interface HexData {
@@ -80,6 +102,7 @@ export interface SimWorldState {
 
 export type Tool = 'paint' | 'erase' | 'select' | 'pan' | 'river' | 'region'
 export type SelectMode = 'tile' | 'region'
+export type ViewMode = 'map' | 'balanced' | 'panel' | 'lore'
 
 export interface LayerVisibility {
   terrain: boolean

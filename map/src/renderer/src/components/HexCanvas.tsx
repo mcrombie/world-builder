@@ -30,6 +30,7 @@ export function HexCanvas() {
   const underlayImg      = useRef<HTMLImageElement | null>(null)
   const rafRef           = useRef<number>(0)
   const needsRedraw      = useRef(true)
+  const panAnim = useRef<{ fromX: number; fromY: number; toX: number; toY: number; t0: number; dur: number } | null>(null)
 
   const map             = useMapStore((s) => s.map)
   const mapVersion      = useMapStore((s) => s.mapVersion)
@@ -337,17 +338,17 @@ export function HexCanvas() {
     if (selectedHex && hexes[selectedHex]) {
       const h = hexes[selectedHex]
       const [cx, cy] = hexToPixel(h.q, h.r, hexSize)
-      ctx.strokeStyle = '#ffffff'
+      ctx.strokeStyle = 'rgba(255,255,255,0.75)'
       ctx.lineWidth = 2 / zoom
       strokeHex(ctx, cx, cy, hexSize)
-      ctx.strokeStyle = '#ffcc00'
+      ctx.strokeStyle = 'rgba(180,190,200,0.6)'
       ctx.lineWidth = 1 / zoom
       strokeHex(ctx, cx, cy, hexSize * 0.85)
     }
 
     // ── Selected region highlight ─────────────────────────────────────────────
     if (selectedRegion) {
-      ctx.strokeStyle = '#ffcc00'
+      ctx.strokeStyle = 'rgba(220,220,215,0.55)'
       ctx.lineWidth = 2 / zoom
       for (const hex of Object.values(hexes)) {
         if (hex.region !== selectedRegion) continue
@@ -390,6 +391,16 @@ export function HexCanvas() {
   // ── RAF loop ──────────────────────────────────────────────────────────────────
   useEffect(() => {
     const loop = () => {
+      // Smooth pan animation
+      const anim = panAnim.current
+      if (anim) {
+        const t = Math.min((performance.now() - anim.t0) / anim.dur, 1)
+        const ease = t < 0.5 ? 2 * t * t : -1 + (4 - 2 * t) * t  // ease-in-out
+        view.current.offsetX = anim.fromX + (anim.toX - anim.fromX) * ease
+        view.current.offsetY = anim.fromY + (anim.toY - anim.fromY) * ease
+        needsRedraw.current = true
+        if (t >= 1) panAnim.current = null
+      }
       if (needsRedraw.current) {
         try { render() } catch (e) { console.error('HexCanvas render error:', e) }
         needsRedraw.current = false
@@ -449,6 +460,34 @@ export function HexCanvas() {
     return () => cancelAnimationFrame(id)
   }, [mapVersion, fitView])
 
+  // ── Pan to selected region ────────────────────────────────────────────────────
+  useEffect(() => {
+    if (!selectedRegion || !mapRef.current) return
+    const canvas = canvasRef.current
+    if (!canvas) return
+    const { hexes, hexSize } = mapRef.current
+    const regionHexes = Object.values(hexes).filter(h => h.region === selectedRegion)
+    if (regionHexes.length === 0) return
+
+    let sumX = 0, sumY = 0
+    for (const h of regionHexes) {
+      const [px, py] = hexToPixel(h.q, h.r, hexSize)
+      sumX += px; sumY += py
+    }
+    const centX = sumX / regionHexes.length
+    const centY = sumY / regionHexes.length
+
+    const { zoom } = view.current
+    panAnim.current = {
+      fromX: view.current.offsetX,
+      fromY: view.current.offsetY,
+      toX:   canvas.width  / 2 - centX * zoom,
+      toY:   canvas.height / 2 - centY * zoom,
+      t0:    performance.now(),
+      dur:   420,
+    }
+  }, [selectedRegion])
+
   const screenToWorld = useCallback((sx: number, sy: number): [number, number] => {
     const { offsetX, offsetY, zoom } = view.current
     return [(sx - offsetX) / zoom, (sy - offsetY) / zoom]
@@ -476,6 +515,7 @@ export function HexCanvas() {
       if (e.button === 1 || activeTool === 'pan') {
         isPanning.current = true
         lastMouse.current = { x: e.clientX, y: e.clientY }
+        panAnim.current = null  // cancel any in-flight animation
         return
       }
       if (e.button !== 0) return
