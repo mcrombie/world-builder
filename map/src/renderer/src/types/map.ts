@@ -4,25 +4,16 @@ export type TerrainType =
   | 'ocean'
   | 'coast'
   | 'grassland'
+  | 'plains'
   | 'hills'
-  | 'tundra_hills'
-  | 'desert_hills'
   | 'forest'
   | 'deep_forest'
   | 'mountain'
-  | 'tundra_mountain'
-  | 'desert_mountain'
   | 'high_mountain'
-  | 'tundra_high_mountain'
-  | 'desert_high_mountain'
-  | 'desert'
-  | 'tundra'
   | 'wetland'
   | 'lake'
   | 'highland'
   | 'riverland'
-  | 'plains'
-  | 'mediterranean'
 
 export type SettlementSize = 'village' | 'town' | 'city' | 'capital'
 export type Climate    = 'temperate' | 'oceanic' | 'cold' | 'arid' | 'steppe' | 'tropical'
@@ -42,6 +33,7 @@ export interface HexData {
   q: number
   r: number
   terrain: TerrainType
+  climate: Climate
   region?: string          // key into MapData.regions
   settlement?: string
   settlementSize?: SettlementSize
@@ -96,4 +88,5 @@ export interface LayerVisibility {
   settlements: boolean
   rivers: boolean
   underlay: boolean
+  climate: boolean
 }

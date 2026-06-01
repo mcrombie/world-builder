@@ -1,5 +1,5 @@
 import { create } from 'zustand'
-import { HexData, MapData, RegionData, RiverSize, SelectMode, SimWorldState, TerrainType, Tool, LayerVisibility } from '../types/map'
+import { Climate, HexData, MapData, RegionData, RiverSize, SelectMode, SimWorldState, TerrainType, Tool, LayerVisibility } from '../types/map'
 import { hexKey, hexesInRadius } from '../lib/hex'
 
 const MAX_HISTORY = 50
@@ -9,6 +9,44 @@ export const REGION_PALETTE = [
   '#2980b9', '#8e44ad', '#e91e63', '#ff5722', '#546e7a',
   '#6d4c41', '#00897b', '#1e88e5', '#5e35b1', '#f06292',
 ]
+
+// Maps old climate-encoded terrain types to [terrain, climate]
+const LEGACY_TERRAIN_MAP: Record<string, [TerrainType, Climate]> = {
+  tundra_hills:         ['hills',         'cold'],
+  tundra_mountain:      ['mountain',      'cold'],
+  tundra_high_mountain: ['high_mountain', 'cold'],
+  desert_hills:         ['hills',         'arid'],
+  desert_mountain:      ['mountain',      'arid'],
+  desert_high_mountain: ['high_mountain', 'arid'],
+  tundra:               ['plains',        'cold'],
+  desert:               ['plains',        'arid'],
+  mediterranean:        ['grassland',     'temperate'],
+}
+
+const DEFAULT_CLIMATE: Record<TerrainType, Climate> = {
+  ocean:        'oceanic',
+  coast:        'oceanic',
+  lake:         'temperate',
+  grassland:    'temperate',
+  plains:       'temperate',
+  hills:        'temperate',
+  forest:       'temperate',
+  deep_forest:  'temperate',
+  mountain:     'cold',
+  high_mountain:'cold',
+  wetland:      'temperate',
+  highland:     'temperate',
+  riverland:    'temperate',
+}
+
+function migrateHex(raw: any): HexData {
+  const legacy = LEGACY_TERRAIN_MAP[raw.terrain as string]
+  if (legacy) {
+    return { ...raw, terrain: legacy[0], climate: raw.climate ?? legacy[1] }
+  }
+  const terrain = raw.terrain as TerrainType
+  return { ...raw, climate: raw.climate ?? DEFAULT_CLIMATE[terrain] ?? 'temperate' }
+}
 
 interface MapStore {
   map: MapData | null
@@ -81,6 +119,7 @@ export const useMapStore = create<MapStore>((set, get) => ({
     settlements: true,
     rivers: true,
     underlay: false,
+    climate: false,
   },
   isDirty: false,
   history: [],
@@ -103,7 +142,7 @@ export const useMapStore = create<MapStore>((set, get) => ({
       for (let r = 0; r < height; r++) {
         for (let col = 0; col < width; col++) {
           const q = col - Math.floor(r / 2)
-          hexes[hexKey(q, r)] = { q, r, terrain: 'ocean' }
+          hexes[hexKey(q, r)] = { q, r, terrain: 'ocean', climate: 'oceanic' }
         }
       }
     }
@@ -125,8 +164,15 @@ export const useMapStore = create<MapStore>((set, get) => ({
     const rivers: Record<string, RiverSize> = Array.isArray(rawRivers)
       ? Object.fromEntries(rawRivers.map((k: string) => [k, 'medium' as RiverSize]))
       : (rawRivers ?? {})
+
+    // Migrate hexes: fill in missing climate and convert legacy terrain types
+    const migratedHexes: Record<string, HexData> = {}
+    for (const [key, hex] of Object.entries((data as any).hexes ?? {})) {
+      migratedHexes[key] = migrateHex(hex)
+    }
+
     set((state) => ({
-      map: { regions: {}, ...data, rivers },
+      map: { regions: {}, ...data, hexes: migratedHexes, rivers },
       mapVersion: state.mapVersion + 1,
       currentFilePath: filePath,
       isDirty: false,
@@ -261,7 +307,7 @@ export const useMapStore = create<MapStore>((set, get) => ({
         hexes[key] = map.hexes[key]
       } else {
         const [qs, rs] = key.split(',').map(Number)
-        hexes[key] = { q: qs, r: rs, terrain: 'ocean' }
+        hexes[key] = { q: qs, r: rs, terrain: 'ocean', climate: 'oceanic' }
       }
     }
     set((state) => ({

@@ -20,6 +20,7 @@ const LAYER_LABELS: Record<keyof LayerVisibility, string> = {
   settlements: 'Settlements',
   rivers:      'Rivers',
   underlay:    'Underlay',
+  climate:     'Climate',
 }
 
 const BRUSH_SIZES = [

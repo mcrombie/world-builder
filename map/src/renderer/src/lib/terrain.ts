@@ -1,60 +1,63 @@
-import { TerrainType } from '../types/map'
+import { Climate, TerrainType } from '../types/map'
 
 export const TERRAIN_COLORS: Record<TerrainType, string> = {
   ocean:       '#1a5c8a',
   coast:       '#4a9bb8',
   grassland:   '#c8d878',
+  plains:      '#d4c080',
   hills:       '#a8a06a',
-  tundra_hills:'#8cacb4',
-  desert_hills:'#c8965a',
   forest:      '#4a7c4e',
   deep_forest: '#2d5a32',
-  mountain:          '#8b8b8b',
-  tundra_mountain:   '#6a8c9c',
-  desert_mountain:   '#b87a50',
-  high_mountain:     '#d0d0d0',
-  tundra_high_mountain:'#bcd0d8',
-  desert_high_mountain:'#d8c4a0',
-  desert:      '#e8c878',
-  tundra:      '#a8b8b8',
+  mountain:    '#8b8b8b',
+  high_mountain:'#d0d0d0',
   wetland:     '#6a9b7c',
   lake:        '#6baed6',
   highland:    '#b09060',
   riverland:   '#7ab8a8',
-  plains:      '#d4c080',
-  mediterranean:'#c4a85c',
 }
 
 export const TERRAIN_LABELS: Record<TerrainType, string> = {
   ocean:        'Ocean',
   coast:        'Coast',
   grassland:    'Grassland',
+  plains:       'Plains',
   hills:        'Hills',
-  tundra_hills: 'Tundra Hills',
-  desert_hills: 'Desert Hills',
   forest:       'Forest',
   deep_forest:  'Deep Forest',
-  mountain:           'Mountain',
-  tundra_mountain:    'Tundra Mountain',
-  desert_mountain:    'Desert Mountain',
-  high_mountain:      'High Mountain',
-  tundra_high_mountain:'Tundra High Mountain',
-  desert_high_mountain:'Desert High Mountain',
-  desert:       'Desert',
-  tundra:       'Tundra',
+  mountain:     'Mountain',
+  high_mountain:'High Mountain',
   wetland:      'Wetland',
   lake:         'Lake',
   highland:     'Highland',
   riverland:    'Riverland',
-  plains:       'Plains',
-  mediterranean:'Mediterranean',
 }
 
 export const ALL_TERRAINS: TerrainType[] = [
-  'ocean', 'coast', 'grassland', 'plains', 'hills', 'tundra_hills', 'desert_hills',
+  'ocean', 'coast', 'grassland', 'plains', 'hills',
   'forest', 'deep_forest',
-  'mountain', 'tundra_mountain', 'desert_mountain',
-  'high_mountain', 'tundra_high_mountain', 'desert_high_mountain',
-  'desert', 'tundra', 'wetland', 'lake',
-  'highland', 'riverland', 'mediterranean',
+  'mountain', 'high_mountain',
+  'wetland', 'lake',
+  'highland', 'riverland',
+]
+
+export const CLIMATE_COLORS: Record<Climate, string> = {
+  temperate: '#7ab87a',
+  oceanic:   '#5b9ec9',
+  cold:      '#a8c8d8',
+  arid:      '#d4a84b',
+  steppe:    '#c8b870',
+  tropical:  '#3aad6e',
+}
+
+export const CLIMATE_LABELS: Record<Climate, string> = {
+  temperate: 'Temperate',
+  oceanic:   'Oceanic',
+  cold:      'Cold',
+  arid:      'Arid',
+  steppe:    'Steppe',
+  tropical:  'Tropical',
+}
+
+export const ALL_CLIMATES: Climate[] = [
+  'temperate', 'oceanic', 'cold', 'arid', 'steppe', 'tropical',
 ]

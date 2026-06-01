@@ -4,7 +4,7 @@ import {
   hexToPixel, pixelToHex, hexCorners, hexKey, hexesInRadius, AxialCoord,
   riverEdgeKey, parseRiverEdge, NEIGHBOR_TO_EDGE_SLOT, HEX_NEIGHBORS,
 } from '../lib/hex'
-import { TERRAIN_COLORS } from '../lib/terrain'
+import { TERRAIN_COLORS, CLIMATE_COLORS } from '../lib/terrain'
 import { HexData, RiverSize, SimWorldState } from '../types/map'
 import { SelectMode } from '../types/map'
 import { buildFactionColorMap } from './SimulationPanel'
@@ -121,6 +121,18 @@ export function HexCanvas() {
         if (cx + cullPad < viewL || cx - cullPad > viewR) continue
         if (cy + cullPad < viewT || cy - cullPad > viewB) continue
         drawHexFill(ctx, cx, cy, hexSize, TERRAIN_COLORS[hex.terrain])
+      }
+      ctx.globalAlpha = 1
+    }
+
+    // ── Climate fill ─────────────────────────────────────────────────────────
+    if (layers.climate) {
+      ctx.globalAlpha = 0.55
+      for (const hex of Object.values(hexes)) {
+        const [cx, cy] = hexToPixel(hex.q, hex.r, hexSize)
+        if (cx + cullPad < viewL || cx - cullPad > viewR) continue
+        if (cy + cullPad < viewT || cy - cullPad > viewB) continue
+        drawHexFill(ctx, cx, cy, hexSize, CLIMATE_COLORS[hex.climate])
       }
       ctx.globalAlpha = 1
     }

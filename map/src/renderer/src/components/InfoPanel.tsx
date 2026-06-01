@@ -1,9 +1,8 @@
 import { useMapStore } from '../store/mapStore'
-import { TERRAIN_LABELS } from '../lib/terrain'
-import { SettlementSize, Climate, CoreStatus } from '../types/map'
+import { TERRAIN_LABELS, CLIMATE_LABELS, ALL_CLIMATES } from '../lib/terrain'
+import { Climate, SettlementSize, CoreStatus } from '../types/map'
 
 const SETTLEMENT_SIZES: SettlementSize[] = ['village', 'town', 'city', 'capital']
-const CLIMATES: Climate[] = ['temperate', 'oceanic', 'cold', 'arid', 'steppe', 'tropical']
 const CORE_STATUSES: CoreStatus[] = ['homeland', 'core', 'frontier']
 
 export function InfoPanel() {
@@ -54,12 +53,12 @@ export function InfoPanel() {
             value={rd.faction ?? ''} placeholder="e.g. Mittoli Republic"
             onChange={(e) => upsertRegion(selectedRegion, { faction: e.target.value || undefined })} />
         )}
-        {field('Climate',
+        {field('Dominant Climate',
           <select className="w-full bg-gray-800 text-sm rounded px-2 py-1 outline-none focus:ring-1 ring-indigo-500"
             value={rd.climate ?? ''}
             onChange={(e) => upsertRegion(selectedRegion, { climate: (e.target.value || undefined) as Climate | undefined })}>
             <option value="">— unset —</option>
-            {CLIMATES.map((c) => <option key={c} value={c}>{c.charAt(0).toUpperCase() + c.slice(1)}</option>)}
+            {ALL_CLIMATES.map((c) => <option key={c} value={c}>{CLIMATE_LABELS[c]}</option>)}
           </select>
         )}
         {field('Status',
@@ -113,6 +112,18 @@ export function InfoPanel() {
       </h2>
 
       {field('Terrain', <p className="text-sm">{TERRAIN_LABELS[hex.terrain]}</p>)}
+
+      {field('Climate',
+        <select
+          className="w-full bg-gray-800 text-sm rounded px-2 py-1 outline-none focus:ring-1 ring-indigo-500"
+          value={hex.climate}
+          onChange={(e) => updateHex(selectedHex, { climate: e.target.value as Climate })}
+        >
+          {ALL_CLIMATES.map((c) => (
+            <option key={c} value={c}>{CLIMATE_LABELS[c]}</option>
+          ))}
+        </select>
+      )}
 
       {field('Region',
         <input
@@ -195,15 +206,15 @@ export function InfoPanel() {
           />
         )}
 
-        {field('Climate',
+        {field('Dominant Climate',
           <select
             className="w-full bg-gray-800 text-sm rounded px-2 py-1 outline-none focus:ring-1 ring-indigo-500"
             value={regionData.climate ?? ''}
             onChange={(e) => upsertRegion(hex.region!, { climate: (e.target.value || undefined) as Climate | undefined })}
           >
             <option value="">— unset —</option>
-            {CLIMATES.map((c) => (
-              <option key={c} value={c}>{c.charAt(0).toUpperCase() + c.slice(1)}</option>
+            {ALL_CLIMATES.map((c) => (
+              <option key={c} value={c}>{CLIMATE_LABELS[c]}</option>
             ))}
           </select>
         )}
@@ -226,7 +237,7 @@ export function InfoPanel() {
             className="w-full bg-gray-800 text-sm rounded px-2 py-1 outline-none focus:ring-1 ring-indigo-500 resize-none"
             rows={3}
             value={regionData.notes ?? ''}
-            placeholder="Lore notes, lore/geography/regions/…"
+            placeholder="Lore notes…"
             onChange={(e) => upsertRegion(hex.region!, { notes: e.target.value || undefined })}
           />
         )}
