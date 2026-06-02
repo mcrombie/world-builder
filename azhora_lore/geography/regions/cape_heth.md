@@ -1,0 +1,75 @@
+---
+name: Cape Heth
+category: geography
+tags: [Cape Heth, promontory, western coast, Boueni, Alezhor, cold current, navigation, maritime, landmark, salvage, western sea route]
+status: draft
+related: [Bouén, Alezhor, Ibenale, Ibenwood, Western Sea Route, Aurumlis Archipelago]
+---
+
+# Cape Heth
+
+**Cape Heth** is a narrow promontory on the western Azhoran coast, extending into the ocean south of the Alezhor gold-coast territories and north of the Bouén peninsula's cold-current reach. It is not a dramatic geographical feature in the mode of high cliff headlands or bold rocky outcrops; it is a low, extended point of land that juts far enough west to matter as a navigational landmark on a coast that, without it, would offer ships running the western sea route a long undifferentiated stretch of beach and forest edge with few reliable fixes. The cape's value is its extension — it reaches far enough west into the ocean to be visible at sea when the coast behind it has already dropped below the horizon, giving ships running north or south a position fix at the point when they most need one. The communities at the cape tip know this and have organized their economy around it for long enough that the terms of this organization are simply the terms of life at Cape Heth. The cold current's marginal influence, the westerly exposure, and the navigation traffic that the landmark generates together produce a community character specific to this place and not quite replicated anywhere else on the western coast.
+
+---
+
+## Geography
+
+The cape is a sedimentary formation — not hard igneous rock but consolidated marine sediment from an earlier geological period when this section of the continental shelf was submerged. The rock is grey-brown, soft enough to be worked by hand tools, hard enough to provide a stable foundation for the buildings that have occupied the cape tip for generations. The formation extends perhaps fifteen miles inland from the cape point before it transitions into the forested terrain that characterizes the coastal zone between the Alezhor gold-coast rivers and the Bouén cold-water system.
+
+The cape's western face is the maritime face — the side that ships at sea see, the side that weather hits first, the side from which the community reads the ocean. The ocean-facing slope is low enough that spray overtops it in the largest winter storms; the cape's residents describe major storm events by how far the salt water got — whether it reached the cisterns, whether the upper buildings needed their storm shutters, whether anything below the high-water mark survived intact. These measurements are maintained in the community's oral record as a practical archive of storm history.
+
+The eastern, landward side of the cape is more sheltered and is where most of the permanent settlement sits: buildings in the lee of the cape's slight ridge, gardens on the soil that has accumulated in the drainage hollows, the boat-handling infrastructure in the small harbor that the cape's orientation creates on its southeastern face. This harbor is not large — it shelters a dozen boats comfortably and twice that in crowded emergency conditions — but it is the only shelter for many miles in either direction and it is where visiting vessels anchor when they choose to stop.
+
+Between the cape and the main Azhoran coastline to the east lies the **Heth Bight** — a shallow embayment where the cape and the mainland form two sides of an angle. The bight is too shallow for deep-draft vessels but provides additional shelter for the small-boat traffic that moves along the coast, and it is the productive zone for the shallow-water fishing that the cape communities use to supplement the offshore catch.
+
+---
+
+## The Navigation Landmark
+
+Cape Heth's function as a navigation landmark on the western sea route is the fact around which everything else in the cape communities' existence is organized. The western sea route — the corridor that runs north-south along Azhora's western coast, connecting the Bouén peninsula to the southern routes and to the Alezhor coast and Ibenale in the north — is not well-served with landmarks. The coastline north of the Bouén cold-current zone is not dramatic; it does not offer the cliff faces, headlands, and prominent points that make navigation on the rocky northern coast or the Iberos Sea approaches relatively position-rich. Cape Heth is the prominent feature of this coast, and it is prominent not because it is high or bold but simply because it extends far enough west to be visible at sea distances where the coast behind it is gone.
+
+A ship running north from the Bouén on the western sea route uses Cape Heth as its first reliable position fix after leaving the cold-current coast. A ship running south from the Alezhor coast uses it as its last reliable fix before the approach to the Bouén. In both cases, the cape provides the same service: it tells a navigator where they are when the coast does not. This service is not available anywhere else in this stretch, which is what the cape communities have to sell.
+
+The pilotage service at Cape Heth is not equivalent to the Peblos pilotage in technical complexity. The cape is not a barrier island system with shifting bars and hidden inlets; it is a headland that needs to be rounded. The rounding requires knowing the current pattern at the cape tip — the eddy structure on the cape's lee side, the specific wind shadow that the promontory creates, the interaction between the cold-current edge that runs close to the cape point in some seasons and the warmer water to the north — and knowing in which conditions the outside passage is preferable to the inshore channel. This knowledge is useful. It is not, however, the kind of exclusive navigational knowledge that the Peblos pilots hold, and the cape community does not have the same complete leverage over access that barrier island pilots possess. What they have is reliable, accurate, and available, and they price it accordingly — lower than the Peblos, reflecting the lower exclusivity, but consistently earned because the knowledge is real.
+
+---
+
+## The Cold-Current Margin
+
+Cape Heth sits at the northern margin of the Bouén cold current's influence — the zone where the cold water that defines the Bouén coast begins to mix with the warmer oceanic water to the north. The cold current does not end abruptly at the cape; it tapers, mixing and weakening as it moves north and east, and the cape's position within this transition zone gives it a climate and ecology that is neither fully Alezhor-temperate nor fully Bouén-cold.
+
+The vegetation on the cape reflects the marginal position. The inland trees — those on the protected eastern face and in the Heth Bight area — are broadly temperate-character, including species found throughout the Alezhor coastal zone. The western face and the cape tip itself carry a wind-scoured, salt-tolerant vegetation that is recognizably closer to the Bouén coast's characteristic scrub: lower, more prostrate, dominated by species that have adapted to the combination of cold, salt, and persistent westerly exposure that the cape tip provides. The transition between these two zones is visible within the cape itself — a gradient that runs from the sheltered eastern side to the exposed western point and that follows the cold-current gradient in a spatial form.
+
+The Boueni navigators who work the western sea route are familiar with this margin and use it as a secondary navigation tool: the cold-current boundary's position relative to the cape shifts seasonally, and the shift tells a Boueni navigator something about the larger seasonal state of the current that is useful for planning the offshore portions of the southern crossing. The relationship between Cape Heth's cold-current edge and the Boueni's navigational practice is more than a landmark relationship; the cape is also a calibration point for reading the western sea's seasonal state.
+
+---
+
+## Communities
+
+The permanent communities at Cape Heth are small — perhaps three hundred people in total, distributed between the main cape-tip settlement and two smaller communities in the Heth Bight — and organized around the combination of maritime service, fishing, and the provisioning economy that the maritime traffic generates. They are not related by language or cultural tradition to the Boueni, despite the cape's position at the cold-current margin; they are a southwestern Azhoran coastal people, related by language and material culture to the communities of the Alezhor coast and Ibenale to the north, but specific enough in character to be recognized as distinct by their neighbors.
+
+The cape community has been here long enough that the maritime orientation is total: there is no memory of a period before the landmark economy, no cultural tradition that reaches back to an agricultural or forest-peoples base. The community does not farm in any significant sense; the soil at the cape tip is thin and salt-affected, and the energy that farming would require is better spent on the water. Food comes from fishing and from the provisioning trade — the things that visiting ships bring and leave as partial payment for services, the specific supplies that the Alezhor coastal traders deliver in quantity for resale to ship traffic. The dependency on this supply chain is understood and managed.
+
+The community's relationship to the Boueni is more than commercial but difficult to specify. The Boueni are the dominant users of the western sea route and the most consistent visitors at Cape Heth across all seasons. The relationship has accumulated across enough generations that the two communities know each other in a specific and detailed way — specific families recognized, specific pilots and Boueni navigators whose professional relationship spans careers, an accumulated mutual knowledge that is not recorded in any document and is not the same thing as friendship but is something more than commercial familiarity. The Boueni have not absorbed the cape community into their own cultural framework, and the cape community has not become Boueni. They have developed the particular relationship of neighbors who share a specific stretch of water and have a mutual professional interest in understanding it.
+
+---
+
+## Economy
+
+The provisioning economy is the primary commercial activity at Cape Heth — water, bread, salt meat, rope, and the practical supplies that a vessel at the midpoint of a western coast passage might need to supplement or replace. The cape community maintains its cisterns with more attention than most of its other infrastructure, because water is the supply that vessels most consistently need and the supply that the cape's geological character most readily provides: the consolidated sediment captures and holds rainfall in a way that the sandy or rocky coastlines to north and south cannot match.
+
+The pilotage revenue is significant but not dominant — not every vessel that passes Cape Heth requires a pilot for the rounding, and those that do pay a fee calibrated to the service rather than to a monopoly position. What the pilots provide is insurance: a vessel that rounds Cape Heth with a local pilot does not encounter the current surprises that have occasionally led to groundings on the cape's lee shallows, and does not experience the specific conditions at the cape point in the southeast swell state that have produced the cape's modest but consistent record of vessel groundings. The pilots are worth hiring. They are not the only option, as the Peblos pilots effectively are.
+
+The salvage trade exists at Cape Heth as it exists wherever there are shoals and traffic. The groundings on the cape's lee side in the southeast swell state have been documented frequently enough to be a recognized risk, and the cape community's salvage response is practiced. The community's position on salvage is the same as every maritime salvage community's position: they cannot be responsible for vessels that came onto the shoals without assistance, and the custom of salvage is old and requires no explanation. The difference from the Peblos salvage is scale and visibility: Cape Heth groundings are occasional rather than regular, and in a smaller community, each salvage operation is individually remembered rather than accumulating into the quiet background practice it represents at the Peblos.
+
+---
+
+## The Western Sea Route
+
+The western sea route is not the Iberos Sea trade network. The Iberos Sea trade is the primary commercial system of Azhoran maritime commerce — dense, well-documented, connected to the major cities. The western sea route is the secondary system: the corridor that runs outside the continent, connecting the Bouén peninsula to the Alezhor coast and beyond, used by the Boueni primarily and by others when the Iberos is politically disrupted or when the western route offers commercial advantages for specific goods moving in specific directions.
+
+Cape Heth's position on this route makes it structurally valuable to the Boueni in a way it is not valuable to most Iberos Sea powers, whose traffic moves primarily on the eastern coast. This difference in commercial base translates into the cape community's specific situation: their most consistent and most important relationship is with the Boueni, who are southern-coast navigators without a major power base on the Iberos, rather than with the major Iberos Sea powers that control the commerce of the east. The cape is outside the primary commercial network, a position that has protected it from the intensive outside attention that the Iscare or the Scythe Islands receive and has also limited the scale of its commercial development.
+
+The Alezhor gold-coast cities maintain periodic contact with Cape Heth, and the cape's provisioning trade includes Alezhor goods. But the Alezhor merchants' primary orientation is the Iberos Sea trade — their gold moves east, to the Iberos commercial network, not south along the western route. The cape is at the edge of the Alezhor economic sphere rather than within it, and the relationship is one of geographical proximity without deep commercial integration.
+
+The Aurumlis Archipelago, further south and west, is known to the cape community in the way that all users of the western sea route know the southern waypoints — as a feature of the route that the Boueni know and others know of. The cape community's knowledge of the Aurumlis is secondhand, filtered through the Boueni relationship. They know the archipelago exists, approximately where it is, and that Boueni vessels transit it in both directions. They do not know what the Boueni know about the routes west and south of the Aurumlis, because the Boueni have not shared it. The cape community does not find this surprising. In their experience, the Boueni share what is useful for the working relationship and not more, which is also how the cape community manages what it knows about the cape's own approaches and conditions.
