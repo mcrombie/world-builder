@@ -10,6 +10,7 @@ import { ExampleMapsDialog } from './components/ExampleMapsDialog'
 import { SimulationPanel } from './components/SimulationPanel'
 import { SimulateDialog } from './components/SimulateDialog'
 import { StoryView } from './components/StoryView'
+import { WorldBuilderIcon } from './components/WorldBuilderIcon'
 import { useMapStore } from './store/mapStore'
 import { fileIO, IS_BROWSER, type RecentFile } from './lib/fileIO'
 import { autoSave, loadAutoSave, saveToLibrary } from './lib/mapLibrary'
@@ -231,7 +232,10 @@ export default function App() {
 
       {/* ── Menu bar ── */}
       <header className="flex items-center gap-2 px-4 py-2 bg-gray-900 border-b border-gray-800 shrink-0">
-        <span className="font-semibold text-indigo-400 mr-1">World Builder</span>
+        <div className="flex items-center gap-2 mr-1 shrink-0">
+          <WorldBuilderIcon size={22} className="text-indigo-400" />
+          <span className="font-semibold text-indigo-400">World Builder</span>
+        </div>
 
         {/* App mode tabs */}
         <div className="flex gap-0.5 bg-gray-800 rounded p-0.5 mr-2">

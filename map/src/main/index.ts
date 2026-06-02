@@ -18,11 +18,16 @@ const BUNDLED_EXAMPLES = [
   },
 ]
 
+const ICON_PATH = app.isPackaged
+  ? join(process.resourcesPath, 'icon.png')
+  : join(app.getAppPath(), 'resources', 'icon.png')
+
 function createWindow(): BrowserWindow {
   const win = new BrowserWindow({
     width: 1400,
     height: 900,
     title: 'World Builder',
+    icon: existsSync(ICON_PATH) ? ICON_PATH : undefined,
     backgroundColor: '#1a1a2e',
     webPreferences: {
       preload: join(__dirname, '../preload/index.js'),
