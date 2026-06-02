@@ -23,7 +23,7 @@ export function ExampleMapsDialog({ onClose, onLoad }: Props) {
       const result = await fileIO.loadExample(id)
       if (result.error) { setError(result.error); return }
       if (!result.canceled && result.data) {
-        onLoad(JSON.parse(result.data) as MapData, `__example__${id}`)
+        onLoad(JSON.parse(result.data) as MapData, result.filePath ?? `__example__${id}`)
         onClose()
       }
     } catch {

@@ -346,7 +346,11 @@ export default function App() {
       {showExamplesDialog && (
         <ExampleMapsDialog
           onClose={() => setShowExamplesDialog(false)}
-          onLoad={(data, id) => { storeLoad(data, id); setShowExamplesDialog(false) }}
+          onLoad={(data, id) => {
+            storeLoad(data, id)
+            if (!IS_BROWSER && !id.startsWith('__')) fileIO.addRecent(id, data.name)
+            setShowExamplesDialog(false)
+          }}
         />
       )}
       {showSimulateDialog && (

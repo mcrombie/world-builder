@@ -132,8 +132,9 @@ ipcMain.handle('map:load-example', (_, id: string) => {
   const ex = BUNDLED_EXAMPLES.find(e => e.id === id)
   if (!ex) return { canceled: true, error: 'Unknown example.' }
   try {
-    const raw = readFileSync(join(EXAMPLES_DIR, ex.filename), 'utf-8')
-    return { data: raw }
+    const filePath = join(EXAMPLES_DIR, ex.filename)
+    const raw = readFileSync(filePath, 'utf-8')
+    return { data: raw, filePath }
   } catch {
     return { canceled: true, error: 'Example file not found.' }
   }
