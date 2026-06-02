@@ -1,6 +1,7 @@
 import { create } from 'zustand'
 import { AzloreFile, Climate, HexData, MapData, RegionData, RiverSize, SelectMode, SimWorldState, TerrainType, Tool, LayerVisibility, ViewMode } from '../types/map'
 import { hexKey, hexesInRadius } from '../lib/hex'
+import { normalizeClimate } from '../lib/climate'
 
 const MAX_HISTORY = 50
 
@@ -12,42 +13,49 @@ export const REGION_PALETTE = [
 
 // Maps old climate-encoded terrain types to [terrain, climate]
 const LEGACY_TERRAIN_MAP: Record<string, [TerrainType, Climate]> = {
-  tundra_hills:         ['hills',         'cold'],
-  tundra_mountain:      ['mountain',      'cold'],
-  tundra_high_mountain: ['high_mountain', 'cold'],
-  desert_hills:         ['hills',         'arid'],
-  desert_mountain:      ['mountain',      'arid'],
-  desert_high_mountain: ['high_mountain', 'arid'],
-  tundra:               ['plains',        'cold'],
-  desert:               ['plains',        'arid'],
-  mediterranean:        ['grassland',     'temperate'],
+  tundra_hills:         ['hills',         'ET'],
+  tundra_mountain:      ['mountain',      'Dfc'],
+  tundra_high_mountain: ['high_mountain', 'EF'],
+  desert_hills:         ['hills',         'BWh'],
+  desert_mountain:      ['mountain',      'BWk'],
+  desert_high_mountain: ['high_mountain', 'BWk'],
+  tundra:               ['plains',        'ET'],
+  desert:               ['plains',        'BWh'],
+  mediterranean:        ['grassland',     'Csa'],
 }
 
 const DEFAULT_CLIMATE: Record<TerrainType, Climate> = {
-  ocean:        'oceanic',
-  coast:        'oceanic',
-  lake:         'temperate',
-  grassland:    'temperate',
-  plains:       'temperate',
-  hills:        'temperate',
-  forest:       'temperate',
-  deep_forest:  'temperate',
-  jungle:       'tropical',
-  deep_jungle:  'tropical',
-  mountain:     'cold',
-  high_mountain:'cold',
-  wetland:      'temperate',
-  highland:     'temperate',
-  riverland:    'temperate',
+  ocean:        'Cfb',
+  coast:        'Cfb',
+  lake:         'Cfb',
+  grassland:    'Cfb',
+  plains:       'Cfb',
+  hills:        'Cfb',
+  forest:       'Cfb',
+  deep_forest:  'Cfb',
+  jungle:       'Af',
+  deep_jungle:  'Af',
+  mountain:     'Dfb',
+  high_mountain:'Dfc',
+  wetland:      'Cfa',
+  highland:     'Cfb',
+  riverland:    'Cfa',
 }
 
 function migrateHex(raw: any): HexData {
   const legacy = LEGACY_TERRAIN_MAP[raw.terrain as string]
   if (legacy) {
-    return { ...raw, terrain: legacy[0], climate: raw.climate ?? legacy[1] }
+    return { ...raw, terrain: legacy[0], climate: normalizeClimate(raw.climate, legacy[1]) }
   }
   const terrain = raw.terrain as TerrainType
-  return { ...raw, climate: raw.climate ?? DEFAULT_CLIMATE[terrain] ?? 'temperate' }
+  return { ...raw, climate: normalizeClimate(raw.climate, DEFAULT_CLIMATE[terrain] ?? 'Cfb') }
+}
+
+function migrateRegion(raw: RegionData): RegionData {
+  return {
+    ...raw,
+    climate: raw.climate ? normalizeClimate(raw.climate) : undefined,
+  }
 }
 
 interface MapStore {
@@ -122,7 +130,7 @@ export const useMapStore = create<MapStore>((set, get) => ({
   selectMode: 'tile',
   activeTool: 'paint',
   activeTerrain: 'plains',
-  activeClimate: 'temperate',
+  activeClimate: 'Cfb',
   activeRiverSize: 'medium',
   activeRegion: null,
   brushRadius: 0,
@@ -158,18 +166,23 @@ export const useMapStore = create<MapStore>((set, get) => ({
   newMap: (name, width, height, hexSize, precomputedHexes, precomputedRegions) => {
     let hexes: Record<string, HexData>
     if (precomputedHexes) {
-      hexes = precomputedHexes
+      hexes = Object.fromEntries(
+        Object.entries(precomputedHexes).map(([key, hex]) => [key, migrateHex(hex)]),
+      )
     } else {
       hexes = {}
       for (let r = 0; r < height; r++) {
         for (let col = 0; col < width; col++) {
           const q = col - Math.floor(r / 2)
-          hexes[hexKey(q, r)] = { q, r, terrain: 'ocean', climate: 'oceanic' }
+          hexes[hexKey(q, r)] = { q, r, terrain: 'ocean', climate: 'Cfb' }
         }
       }
     }
+    const regions = Object.fromEntries(
+      Object.entries(precomputedRegions ?? {}).map(([key, region]) => [key, migrateRegion(region)]),
+    )
     set({
-      map: { name, width, height, hexSize, hexes, rivers: {}, regions: precomputedRegions ?? {} },
+      map: { name, width, height, hexSize, climateSystem: 'koppen-v1', hexes, rivers: {}, regions },
       mapVersion: get().mapVersion + 1,
       currentFilePath: null,
       isDirty: true,
@@ -192,9 +205,13 @@ export const useMapStore = create<MapStore>((set, get) => ({
     for (const [key, hex] of Object.entries((data as any).hexes ?? {})) {
       migratedHexes[key] = migrateHex(hex)
     }
+    const migratedRegions: Record<string, RegionData> = {}
+    for (const [key, region] of Object.entries((data as any).regions ?? {})) {
+      migratedRegions[key] = migrateRegion(region as RegionData)
+    }
 
     set((state) => ({
-      map: { regions: {}, ...data, hexes: migratedHexes, rivers },
+      map: { ...data, climateSystem: 'koppen-v1', hexes: migratedHexes, rivers, regions: migratedRegions },
       mapVersion: state.mapVersion + 1,
       currentFilePath: filePath,
       isDirty: false,
@@ -278,16 +295,19 @@ export const useMapStore = create<MapStore>((set, get) => ({
   setSelectMode:(mode) => set({ selectMode: mode, selectedHex: null, selectedRegion: null }),
 
   updateHex: (key, data) =>
-    set((state) => ({
-      map: state.map
-        ? { ...state.map, hexes: { ...state.map.hexes, [key]: { ...state.map.hexes[key], ...data } } }
-        : null,
-      isDirty: true,
-    })),
+    set((state) => {
+      const patch = data.climate ? { ...data, climate: normalizeClimate(data.climate) } : data
+      return {
+        map: state.map
+          ? { ...state.map, hexes: { ...state.map.hexes, [key]: { ...state.map.hexes[key], ...patch } } }
+          : null,
+        isDirty: true,
+      }
+    }),
 
   setTool: (tool) => set({ activeTool: tool }),
   setTerrain: (terrain) => set({ activeTerrain: terrain }),
-  setClimate: (climate) => set({ activeClimate: climate }),
+  setClimate: (climate) => set({ activeClimate: normalizeClimate(climate) }),
   setRiverSize: (size) => set({ activeRiverSize: size }),
 
   paintClimateHex: (q, r) => {
@@ -350,7 +370,7 @@ export const useMapStore = create<MapStore>((set, get) => ({
         hexes[key] = map.hexes[key]
       } else {
         const [qs, rs] = key.split(',').map(Number)
-        hexes[key] = { q: qs, r: rs, terrain: 'ocean', climate: 'oceanic' }
+        hexes[key] = { q: qs, r: rs, terrain: 'ocean', climate: 'Cfb' }
       }
     }
     set((state) => ({
@@ -364,10 +384,11 @@ export const useMapStore = create<MapStore>((set, get) => ({
     set((state) => {
       if (!state.map) return {}
       const existing = state.map.regions[id] ?? { name: id, color: '#888888' }
+      const patch = data.climate ? { ...data, climate: normalizeClimate(data.climate) } : data
       return {
         map: {
           ...state.map,
-          regions: { ...state.map.regions, [id]: { ...existing, ...data } },
+          regions: { ...state.map.regions, [id]: { ...existing, ...patch } },
         },
         isDirty: true,
       }

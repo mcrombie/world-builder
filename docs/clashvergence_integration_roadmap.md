@@ -20,6 +20,8 @@ without hand-editing `maps.py` or generated JSON.
 - `HexCanvas` already paints a simulation ownership overlay.
 - `SimulationPanel` can show standings, recent events, advance turns, auto-play,
   save, reset, and stop.
+- World-builder climate data is now normalized to `koppen-v1` before
+  Clashvergence export; old broad climate names still load through aliases.
 - The bridge still has rough edges around file naming, stale generated map
   files, scenario authoring fields, and player action choice.
 
@@ -48,6 +50,8 @@ Tasks:
 - Update bridge script docs from "Worldwright/.wwmap" to "world-builder/.azmap".
 - Trim legacy terrain mappings to the current terrain system or move legacy
   aliases into one explicit compatibility table.
+- Keep the `climate_compat.py` table aligned with Clashvergence's
+  `src/climate.py` aliases when new climate codes are added.
 
 Acceptance criteria:
 

@@ -9,6 +9,20 @@ from wwmap_to_clashvergence import translate
 ROOT = Path(__file__).parent
 
 
+def _write_test_map(path: Path, *, regions: dict, hexes: dict) -> None:
+    path.write_text(
+        json.dumps(
+            {
+                "name": "Climate Test",
+                "regions": regions,
+                "rivers": {},
+                "hexes": hexes,
+            }
+        ),
+        encoding="utf-8",
+    )
+
+
 class ClashvergenceExportTests(unittest.TestCase):
     def test_azhora_export_includes_default_language_families(self):
         map_definition = translate(ROOT / "saved_maps" / "azhora.azmap", num_factions=9)
@@ -109,6 +123,80 @@ class ClashvergenceExportTests(unittest.TestCase):
             shutil.rmtree(tmp_dir)
 
         self.assertNotIn("faction_language_families", map_definition)
+
+    def test_export_normalizes_legacy_hex_climate(self):
+        tmp_dir = ROOT / ".tmp_clashvergence_export_tests"
+        tmp_dir.mkdir(exist_ok=True)
+        map_path = tmp_dir / "legacy_climate.azmap"
+        _write_test_map(
+            map_path,
+            regions={"North": {"name": "North", "color": "#aaaaaa"}},
+            hexes={
+                "0,0": {"q": 0, "r": 0, "terrain": "grassland", "region": "North", "climate": "temperate"},
+                "1,0": {"q": 1, "r": 0, "terrain": "forest", "region": "North", "climate": "oceanic"},
+            },
+        )
+        try:
+            map_definition = translate(map_path, num_factions=1)
+        finally:
+            shutil.rmtree(tmp_dir)
+
+        self.assertEqual(map_definition["regions"]["North"]["climate"], "Cfb")
+
+    def test_export_preserves_direct_koppen_hex_climate(self):
+        tmp_dir = ROOT / ".tmp_clashvergence_export_tests"
+        tmp_dir.mkdir(exist_ok=True)
+        map_path = tmp_dir / "koppen_climate.azmap"
+        _write_test_map(
+            map_path,
+            regions={"Steppe": {"name": "Steppe", "color": "#aaaaaa"}},
+            hexes={
+                "0,0": {"q": 0, "r": 0, "terrain": "plains", "region": "Steppe", "climate": "BSh"},
+                "1,0": {"q": 1, "r": 0, "terrain": "plains", "region": "Steppe", "climate": "BSh"},
+            },
+        )
+        try:
+            map_definition = translate(map_path, num_factions=1)
+        finally:
+            shutil.rmtree(tmp_dir)
+
+        self.assertEqual(map_definition["regions"]["Steppe"]["climate"], "BSh")
+
+    def test_region_climate_override_beats_painted_dominant_climate(self):
+        tmp_dir = ROOT / ".tmp_clashvergence_export_tests"
+        tmp_dir.mkdir(exist_ok=True)
+        map_path = tmp_dir / "region_override.azmap"
+        _write_test_map(
+            map_path,
+            regions={"South": {"name": "South", "color": "#aaaaaa", "climate": "Csa"}},
+            hexes={
+                "0,0": {"q": 0, "r": 0, "terrain": "jungle", "region": "South", "climate": "Af"},
+                "1,0": {"q": 1, "r": 0, "terrain": "jungle", "region": "South", "climate": "Af"},
+            },
+        )
+        try:
+            map_definition = translate(map_path, num_factions=1)
+        finally:
+            shutil.rmtree(tmp_dir)
+
+        self.assertEqual(map_definition["regions"]["South"]["climate"], "Csa")
+
+    def test_export_rejects_unknown_climate(self):
+        tmp_dir = ROOT / ".tmp_clashvergence_export_tests"
+        tmp_dir.mkdir(exist_ok=True)
+        map_path = tmp_dir / "unknown_climate.azmap"
+        _write_test_map(
+            map_path,
+            regions={"Nowhere": {"name": "Nowhere", "color": "#aaaaaa"}},
+            hexes={
+                "0,0": {"q": 0, "r": 0, "terrain": "plains", "region": "Nowhere", "climate": "moonlit"},
+            },
+        )
+        try:
+            with self.assertRaises(ValueError):
+                translate(map_path, num_factions=1)
+        finally:
+            shutil.rmtree(tmp_dir)
 
 
 if __name__ == "__main__":

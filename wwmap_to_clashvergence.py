@@ -13,6 +13,7 @@ import sys
 from collections import Counter
 from pathlib import Path
 
+from climate_compat import normalize_climate
 from wwmap_core import load_map_graph
 
 try:
@@ -132,6 +133,15 @@ def _compute_terrain_tags(terrain_counts: Counter) -> list[str]:
             if t not in tags:
                 tags.append(t)
     return _sorted_terrain_tags(tags) or ["plains"]
+
+
+def _resolve_region_climate(region, meta: dict) -> str:
+    explicit = meta.get("climate")
+    if explicit:
+        return normalize_climate(explicit)
+    if region.dominant_climate:
+        return normalize_climate(region.dominant_climate)
+    return normalize_climate(None)
 
 
 def _load_azhoran_scenario(wwmap_path: Path) -> dict | None:
@@ -377,7 +387,7 @@ def translate(wwmap_path: str | Path, num_factions: int = 4) -> dict:
             "owner": owner,
             "resources": _resources_for_tags(tags),
             "terrain_tags": tags,
-            "climate": region.dominant_climate or meta.get("climate") or "temperate",
+            "climate": _resolve_region_climate(region, meta),
         }
 
     # River links — only between known regions; also connect adjacent riverland regions

@@ -14,6 +14,8 @@ from collections import Counter, defaultdict
 from dataclasses import dataclass, field
 from pathlib import Path
 
+from climate_compat import normalize_climate
+
 HEX_NEIGHBORS = [(1, 0), (1, -1), (0, -1), (-1, 0), (-1, 1), (0, 1)]
 WATER_TERRAINS = {"ocean", "lake"}
 
@@ -137,7 +139,7 @@ def load_map_graph(path: str | Path, num_factions: int = 4) -> MapGraph:
     }
 
     climate_counts_map: dict[str, Counter] = {
-        rid: Counter(h["climate"] for h in hlist if h.get("climate"))
+        rid: Counter(normalize_climate(h["climate"]) for h in hlist if h.get("climate"))
         for rid, hlist in region_hexes.items()
     }
 

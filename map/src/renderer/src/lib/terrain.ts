@@ -1,4 +1,5 @@
-import { Climate, TerrainType } from '../types/map'
+import { TerrainType } from '../types/map'
+export { ALL_CLIMATES, CLIMATE_COLORS, CLIMATE_GROUPS, CLIMATE_LABELS } from './climate'
 
 export const TERRAIN_COLORS: Record<TerrainType, string> = {
   ocean:       '#1a5c8a',
@@ -42,26 +43,4 @@ export const ALL_TERRAINS: TerrainType[] = [
   'mountain', 'high_mountain',
   'wetland', 'lake',
   'highland', 'riverland',
-]
-
-export const CLIMATE_COLORS: Record<Climate, string> = {
-  temperate: '#7ab87a',
-  oceanic:   '#5b9ec9',
-  cold:      '#a8c8d8',
-  arid:      '#d4a84b',
-  steppe:    '#c8b870',
-  tropical:  '#3aad6e',
-}
-
-export const CLIMATE_LABELS: Record<Climate, string> = {
-  temperate: 'Temperate',
-  oceanic:   'Oceanic',
-  cold:      'Cold',
-  arid:      'Arid',
-  steppe:    'Steppe',
-  tropical:  'Tropical',
-}
-
-export const ALL_CLIMATES: Climate[] = [
-  'temperate', 'oceanic', 'cold', 'arid', 'steppe', 'tropical',
 ]

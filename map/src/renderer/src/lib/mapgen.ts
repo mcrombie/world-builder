@@ -187,42 +187,42 @@ function classifyClimate(
   coastDist: number,   // hex steps to nearest ocean (0 = ocean)
 ): Climate {
   // ── Water ─────────────────────────────────────────────────────────────────
-  if (terrain === 'ocean') return 'oceanic'
+  if (terrain === 'ocean') return 'Cfb'
 
   // ── Coasts: moderate oceanic, tropical if hot, cold if polar ──────────────
   if (terrain === 'coast') {
-    if (temp < 0.20) return 'cold'
-    if (temp > 0.70) return 'tropical'
-    return 'oceanic'
+    if (temp < 0.20) return 'Cfc'
+    if (temp > 0.70) return moisture > 0.68 ? 'Af' : 'Aw'
+    return 'Cfb'
   }
 
   // ── High mountains are always above the snowline ──────────────────────────
-  if (terrain === 'high_mountain') return 'cold'
+  if (terrain === 'high_mountain') return temp < 0.16 ? 'EF' : 'ET'
 
   // ── Mountains: cold in temperate zones, temperate in tropics ─────────────
-  if (terrain === 'mountain') return temp < 0.60 ? 'cold' : 'temperate'
+  if (terrain === 'mountain') return temp < 0.42 ? 'Dfc' : temp < 0.60 ? 'Dfb' : 'Cfb'
 
   // ── Polar / subarctic ─────────────────────────────────────────────────────
-  if (temp < 0.18) return 'cold'
-  if (temp < 0.27 && moisture < 0.52) return 'cold'
+  if (temp < 0.18) return 'ET'
+  if (temp < 0.27 && moisture < 0.52) return 'Dfc'
 
   // ── Tropical: hot + at least moderate moisture ────────────────────────────
-  if (temp > 0.72 && moisture > 0.38) return 'tropical'
+  if (temp > 0.72 && moisture > 0.38) return moisture > 0.72 ? 'Af' : moisture > 0.56 ? 'Am' : 'Aw'
 
   // ── Arid: very dry regardless of temperature ──────────────────────────────
-  if (moisture < 0.20) return 'arid'
-  if (temp > 0.65 && moisture < 0.40) return 'arid'   // hot deserts
+  if (moisture < 0.20) return temp > 0.52 ? 'BWh' : 'BWk'
+  if (temp > 0.65 && moisture < 0.40) return 'BWh'   // hot deserts
 
   // ── Steppe: semi-arid or continental interior dryness ────────────────────
-  if (moisture < 0.33) return 'steppe'
-  if (moisture < 0.44 && coastDist > 5) return 'steppe'
+  if (moisture < 0.33) return temp > 0.52 ? 'BSh' : 'BSk'
+  if (moisture < 0.44 && coastDist > 5) return temp > 0.52 ? 'BSh' : 'BSk'
 
   // ── Oceanic: coastal belt with adequate moisture ──────────────────────────
-  if (coastDist <= 3 && moisture > 0.42 && temp > 0.24 && temp < 0.72) return 'oceanic'
-  if (coastDist <= 6 && moisture > 0.55 && temp > 0.24 && temp < 0.72) return 'oceanic'
+  if (coastDist <= 3 && moisture > 0.42 && temp > 0.24 && temp < 0.72) return temp > 0.58 ? 'Cfa' : 'Cfb'
+  if (coastDist <= 6 && moisture > 0.55 && temp > 0.24 && temp < 0.72) return temp > 0.58 ? 'Cfa' : 'Cfb'
 
   // ── Default: temperate ────────────────────────────────────────────────────
-  return 'temperate'
+  return coastDist <= 5 ? 'Cfb' : temp < 0.42 ? 'Dfb' : 'Cfa'
 }
 
 // ── main generator ────────────────────────────────────────────────────────────

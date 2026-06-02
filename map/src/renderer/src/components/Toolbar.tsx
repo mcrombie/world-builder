@@ -1,6 +1,6 @@
 import { useState } from 'react'
 import { useMapStore, REGION_PALETTE } from '../store/mapStore'
-import { ALL_TERRAINS, TERRAIN_COLORS, TERRAIN_LABELS, ALL_CLIMATES, CLIMATE_COLORS, CLIMATE_LABELS } from '../lib/terrain'
+import { ALL_TERRAINS, TERRAIN_COLORS, TERRAIN_LABELS, CLIMATE_COLORS, CLIMATE_GROUPS, CLIMATE_LABELS } from '../lib/terrain'
 import { fileIO } from '../lib/fileIO'
 import { AzloreFile, Tool, LayerVisibility, RiverSize, SelectMode } from '../types/map'
 
@@ -204,22 +204,29 @@ export function Toolbar() {
       {activeTool === 'climate' && (
         <section>
           <h3 className="text-xs font-semibold uppercase tracking-widest text-gray-400 mb-2">Climate</h3>
-          <div className="flex flex-col gap-1">
-            {ALL_CLIMATES.map((c) => (
-              <button
-                key={c}
-                onClick={() => setClimate(c)}
-                className={`flex items-center gap-2 px-2 py-1 rounded text-sm transition-colors
-                  ${activeClimate === c
-                    ? 'ring-2 ring-indigo-400 bg-gray-800'
-                    : 'hover:bg-gray-800'}`}
-              >
-                <span
-                  className="inline-block w-4 h-4 rounded-sm border border-gray-600 shrink-0"
-                  style={{ background: CLIMATE_COLORS[c] }}
-                />
-                <span className="truncate">{CLIMATE_LABELS[c]}</span>
-              </button>
+          <div className="flex flex-col gap-2">
+            {CLIMATE_GROUPS.map((group) => (
+              <div key={group.id} className="flex flex-col gap-1">
+                <div className="text-[10px] uppercase tracking-wide text-gray-500 px-1">{group.id} {group.label}</div>
+                {group.climates.map((c) => (
+                  <button
+                    key={c}
+                    onClick={() => setClimate(c)}
+                    className={`flex items-center gap-2 px-2 py-1 rounded text-xs transition-colors text-left
+                      ${activeClimate === c
+                        ? 'ring-2 ring-indigo-400 bg-gray-800'
+                        : 'hover:bg-gray-800'}`}
+                    title={`${c} ${CLIMATE_LABELS[c]}`}
+                  >
+                    <span
+                      className="inline-block w-4 h-4 rounded-sm border border-gray-600 shrink-0"
+                      style={{ background: CLIMATE_COLORS[c] }}
+                    />
+                    <span className="font-mono text-gray-300 w-7 shrink-0">{c}</span>
+                    <span className="truncate">{CLIMATE_LABELS[c]}</span>
+                  </button>
+                ))}
+              </div>
             ))}
           </div>
         </section>
