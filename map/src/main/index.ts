@@ -189,8 +189,9 @@ const SIM_PORT = 18765
 let simProcess: ChildProcess | null = null
 let simPid: number | undefined
 let simMapPath: string | null = null
-let simNumFactions: number = 7
+let simNumFactions: number = 9
 let simType: string = 'clashvergence'
+let simSeed: string | null = null
 
 function _generatedMapPathFor(sourcePath: string, mapExt: string): string {
   const normalized = sourcePath.replace(/\.(azmap|wwmap|json)$/i, mapExt)
@@ -232,6 +233,7 @@ async function _spawnServer(
   resolvedMapPath: string,
   numFactions: number,
   requestedSimType: string = 'clashvergence',
+  requestedSeed: string | null = null,
 ): Promise<{ ok: boolean; error?: string }> {
   killSimProcess()
 
@@ -259,6 +261,7 @@ async function _spawnServer(
   const mapExt           = isClaudevergence ? '.cvmap.json' : '.cmap.json'
   const simDir           = isClaudevergence ? CLAUDEVERGENCE_DIR : CLASHVERGENCE_DIR
   const mapFileArg       = _generatedMapPathFor(resolvedMapPath, mapExt)
+  const normalizedSeed   = (requestedSeed ?? '').trim()
 
   const xResult = spawnSync(PYTHON_CMD, [translatorScript, resolvedMapPath, mapFileArg, String(numFactions)], { encoding: 'utf-8' })
   if (xResult.status !== 0) {
@@ -266,9 +269,13 @@ async function _spawnServer(
   }
 
   const stderrChunks: Buffer[] = []
+  const simArgs = [join(simDir, 'main.py'), '--map-file', mapFileArg, '--game-server', '--port', String(SIM_PORT)]
+  if (normalizedSeed) {
+    simArgs.push('--seed', normalizedSeed)
+  }
   simProcess = spawn(
     PYTHON_CMD,
-    [join(simDir, 'main.py'), '--map-file', mapFileArg, '--game-server', '--port', String(SIM_PORT)],
+    simArgs,
     { cwd: simDir },
   )
   simPid = simProcess.pid
@@ -333,20 +340,22 @@ function _resolveMapPath(mapFilePath: string): string | null {
   return mapFilePath
 }
 
-ipcMain.handle('sim:start', async (_, mapFilePath: string, numFactions: number = 7, requestedSimType: string = 'clashvergence') => {
+ipcMain.handle('sim:start', async (_, mapFilePath: string, numFactions: number = 9, requestedSimType: string = 'clashvergence', requestedSeed: string = '') => {
   const resolvedPath = _resolveMapPath(mapFilePath)
   if (!resolvedPath) return { ok: false, error: `Unknown example: ${mapFilePath}` }
 
-  const spawn_result = await _spawnServer(resolvedPath, numFactions, requestedSimType)
+  const normalizedSeed = requestedSeed.trim()
+  const spawn_result = await _spawnServer(resolvedPath, numFactions, requestedSimType, normalizedSeed)
   if (!spawn_result.ok) return spawn_result
 
   simMapPath = mapFilePath
   simNumFactions = numFactions
   simType = requestedSimType
+  simSeed = normalizedSeed || null
 
   try {
     const raw = await simGet('/api/world')
-    return { ok: true, world: JSON.parse(raw) }
+    return { ok: true, world: JSON.parse(raw), seed: simSeed ?? '' }
   } catch (e: any) {
     killSimProcess()
     return { ok: false, error: e.message }
@@ -366,6 +375,7 @@ ipcMain.handle('sim:save-state', async () => {
     const envelope = {
       worldwright_save: true,
       sim_type: simType,
+      sim_seed: simSeed,
       map_path: simMapPath,
       num_factions: simNumFactions,
       world_state: JSON.parse(worldRaw),
@@ -394,19 +404,21 @@ ipcMain.handle('sim:load-and-start', async () => {
   if (!envelope.worldwright_save) return { ok: false, error: 'Invalid save file format.' }
 
   const mapPath = envelope.map_path as string
-  const numFactions = Number(envelope.num_factions ?? 7)
+  const numFactions = Number(envelope.num_factions ?? 9)
   const savedSimType: string = envelope.sim_type ?? 'clashvergence'
+  const savedSeed: string = envelope.sim_seed ?? envelope.world_state?.random_seed ?? ''
   const worldState = envelope.world_state
 
   const resolvedPath = _resolveMapPath(mapPath)
   if (!resolvedPath) return { ok: false, error: `Save file references unknown map: ${mapPath}` }
 
-  const spawn_result = await _spawnServer(resolvedPath, numFactions, savedSimType)
+  const spawn_result = await _spawnServer(resolvedPath, numFactions, savedSimType, savedSeed)
   if (!spawn_result.ok) return spawn_result
 
   simMapPath = mapPath
   simNumFactions = numFactions
   simType = savedSimType
+  simSeed = savedSeed.trim() || null
 
   try {
     const loadRaw = await simPost('/api/load', worldState)
@@ -415,7 +427,7 @@ ipcMain.handle('sim:load-and-start', async () => {
       killSimProcess()
       return { ok: false, error: loadResult.error ?? 'Server rejected save state.' }
     }
-    return { ok: true, world: loadResult }
+    return { ok: true, world: loadResult, seed: simSeed ?? '' }
   } catch (e: any) {
     killSimProcess()
     return { ok: false, error: e.message }

@@ -37,6 +37,8 @@ export default function App() {
   const setSimFactionCount = useMapStore((s) => s.setSimFactionCount)
   const simType          = useMapStore((s) => s.simType)
   const setSimType       = useMapStore((s) => s.setSimType)
+  const simSeed          = useMapStore((s) => s.simSeed)
+  const setSimSeed       = useMapStore((s) => s.setSimSeed)
   const viewMode         = useMapStore((s) => s.viewMode)
   const setViewMode      = useMapStore((s) => s.setViewMode)
 
@@ -147,13 +149,15 @@ export default function App() {
     setShowSimulateDialog(true)
   }
 
-  async function handleStartNew(factionCount: number, selectedSimType: 'clashvergence' | 'claudevergence') {
+  async function handleStartNew(factionCount: number, selectedSimType: 'clashvergence' | 'claudevergence', seed: string) {
     setShowSimulateDialog(false)
     if (!currentPath || !window.electronAPI?.sim) return
+    const normalizedSeed = seed.trim()
     setSimFactionCount(factionCount)
     setSimType(selectedSimType)
+    setSimSeed(normalizedSeed)
     setSimulating(true)
-    const result = await window.electronAPI.sim.start(currentPath, factionCount, selectedSimType)
+    const result = await window.electronAPI.sim.start(currentPath, factionCount, selectedSimType, normalizedSeed)
     if (!result.ok) {
       alert('Simulation failed to start:\n' + (result.error ?? 'Unknown error'))
       setSimulating(false)
@@ -175,6 +179,7 @@ export default function App() {
       alert('Failed to load simulation:\n' + (result.error ?? 'Unknown error'))
       setSimulating(false)
     } else if (result.world) {
+      setSimSeed(result.seed ?? '')
       setSimWorld(result.world as SimWorldState)
     }
   }
@@ -341,6 +346,7 @@ export default function App() {
         <SimulateDialog
           initialFactionCount={simFactionCount}
           initialSimType={simType}
+          initialSeed={simSeed}
           onStartNew={handleStartNew}
           onLoadSaved={handleLoadSaved}
           onClose={() => setShowSimulateDialog(false)}

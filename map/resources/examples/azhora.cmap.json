@@ -1,6 +1,6 @@
 {
   "description": "world-builder map: Azhora",
-  "num_factions": 7,
+  "num_factions": 9,
   "faction_names": [],
   "sea_links": [
     [
@@ -2584,7 +2584,7 @@
         "Nesdor",
         "Vastos"
       ],
-      "owner": null,
+      "owner": "Faction8",
       "resources": 4,
       "terrain_tags": [
         "coast",
@@ -3017,7 +3017,7 @@
         "Legemum",
         "Oves Desert"
       ],
-      "owner": null,
+      "owner": "Faction9",
       "resources": 2,
       "terrain_tags": [
         "hills",
@@ -4408,6 +4408,290 @@
       "style_notes": [
         "Elodi names preserve an eastern Old Kingdom lineage rather than an Azhoran family.",
         "Koleth and Balog roots mark scriptural, administrative, and sacred authority registers."
+      ],
+      "shift_keys": []
+    },
+    "Faction8": {
+      "family_name": "Elagosi",
+      "default_culture_name": "Elagosi",
+      "traditions": [
+        "azhoran",
+        "elagosi",
+        "ambronite"
+      ],
+      "inspirations": [
+        "Elagos",
+        "Ambron",
+        "Lake Ela",
+        "Brul",
+        "Ossen",
+        "Thelas",
+        "Moros Plain",
+        "Drent"
+      ],
+      "candidate_pool": [
+        "Ambron",
+        "Elagos",
+        "Thelasi",
+        "Brulon",
+        "Osseni",
+        "Vastosel",
+        "Menethar",
+        "Elauron"
+      ],
+      "onsets": [
+        "am",
+        "amb",
+        "brul",
+        "dr",
+        "el",
+        "ela",
+        "lag",
+        "men",
+        "oss",
+        "thel",
+        "vast",
+        "ven",
+        "zel"
+      ],
+      "middles": [
+        "a",
+        "ae",
+        "e",
+        "i",
+        "o",
+        "u"
+      ],
+      "suffixes": [
+        "an",
+        "ar",
+        "el",
+        "en",
+        "eth",
+        "i",
+        "on",
+        "or",
+        "os",
+        "um"
+      ],
+      "seed_fragments": [
+        "am",
+        "ambr",
+        "brul",
+        "ela",
+        "elag",
+        "men",
+        "oss",
+        "thel",
+        "vast"
+      ],
+      "lexical_roots": {
+        "settlement": [
+          "ambr",
+          "ela"
+        ],
+        "river": [
+          "ela",
+          "thel"
+        ],
+        "forest": [
+          "men",
+          "dr"
+        ],
+        "hill": [
+          "vast",
+          "brul"
+        ],
+        "plain": [
+          "mor",
+          "oss"
+        ],
+        "marsh": [
+          "oss",
+          "ela"
+        ],
+        "sea": [
+          "ros",
+          "ela"
+        ],
+        "border": [
+          "vast",
+          "men"
+        ],
+        "market": [
+          "ambr",
+          "thel"
+        ],
+        "fort": [
+          "ambr",
+          "vast"
+        ],
+        "sacred": [
+          "ela",
+          "brul"
+        ],
+        "sun": [
+          "zel",
+          "ela"
+        ],
+        "ancestor": [
+          "ambr",
+          "elag"
+        ],
+        "ruler": [
+          "ambr",
+          "thel"
+        ],
+        "dynasty": [
+          "ambr",
+          "ela"
+        ]
+      },
+      "style_notes": [
+        "Lake Lands and Ambronite administrative names with liquid lake roots and formal civic endings.",
+        "Favors ela, ambr, thel, oss, and brul roots for lakes, prefectures, courts, and portage towns."
+      ],
+      "shift_keys": []
+    },
+    "Faction9": {
+      "family_name": "Kellith",
+      "default_culture_name": "Telemon",
+      "traditions": [
+        "azhoran",
+        "kellith",
+        "telemon"
+      ],
+      "inspirations": [
+        "Telemonia",
+        "Telemon",
+        "Kellith",
+        "Gala",
+        "Legemum",
+        "East Pyros",
+        "Verath",
+        "Highland Passes"
+      ],
+      "candidate_pool": [
+        "Kellith",
+        "Verath",
+        "Tormon",
+        "Belketh",
+        "Rothkar",
+        "Galmeth",
+        "Tarnel",
+        "Kethorn"
+      ],
+      "onsets": [
+        "bel",
+        "gal",
+        "kel",
+        "kell",
+        "keth",
+        "morn",
+        "roth",
+        "tarn",
+        "tel",
+        "tor",
+        "ver",
+        "vorn"
+      ],
+      "middles": [
+        "a",
+        "e",
+        "i",
+        "o",
+        "u"
+      ],
+      "suffixes": [
+        "an",
+        "ath",
+        "el",
+        "eth",
+        "ith",
+        "k",
+        "kar",
+        "mon",
+        "n",
+        "orn",
+        "th"
+      ],
+      "seed_fragments": [
+        "bel",
+        "gal",
+        "kel",
+        "keth",
+        "mon",
+        "roth",
+        "tarn",
+        "tel",
+        "tor",
+        "ver"
+      ],
+      "lexical_roots": {
+        "settlement": [
+          "kel",
+          "tel"
+        ],
+        "river": [
+          "ver",
+          "gal"
+        ],
+        "forest": [
+          "morn",
+          "bel"
+        ],
+        "hill": [
+          "tarn",
+          "ver"
+        ],
+        "plain": [
+          "gal",
+          "tor"
+        ],
+        "marsh": [
+          "bel",
+          "morn"
+        ],
+        "sea": [
+          "gal",
+          "vel"
+        ],
+        "border": [
+          "ver",
+          "keth"
+        ],
+        "market": [
+          "gal",
+          "tel"
+        ],
+        "fort": [
+          "keth",
+          "tarn"
+        ],
+        "sacred": [
+          "kel",
+          "ver"
+        ],
+        "sun": [
+          "tor",
+          "kel"
+        ],
+        "ancestor": [
+          "kell",
+          "mon"
+        ],
+        "ruler": [
+          "tor",
+          "keth"
+        ],
+        "dynasty": [
+          "kell",
+          "ver"
+        ]
+      },
+      "style_notes": [
+        "Telemon highland names with compact forms and hard k, t, r, and th closures.",
+        "Kellith roots emphasize passes, endurance, bands, borders, and terrain known too precisely for outsiders."
       ],
       "shift_keys": []
     }

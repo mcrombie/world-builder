@@ -80,6 +80,8 @@ AZHORAN_PREFERRED_START_REGIONS: dict[str, list[str]] = {
     "grassic": ["West Mithala"],
     "ibnael": ["South Acordwood"],
     "elodi": ["East Suval"],
+    "elagosi": ["Elagos"],
+    "kellith": ["Telemonia"],
 }
 
 AZHORAN_DISRUPTIVE_ARRIVALS: dict[str, dict] = {

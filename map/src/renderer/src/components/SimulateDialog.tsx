@@ -5,7 +5,8 @@ type SimType = 'clashvergence' | 'claudevergence'
 interface Props {
   initialFactionCount: number
   initialSimType: SimType
-  onStartNew: (factionCount: number, simType: SimType) => void
+  initialSeed: string
+  onStartNew: (factionCount: number, simType: SimType, seed: string) => void
   onLoadSaved: () => void
   onClose: () => void
 }
@@ -23,9 +24,10 @@ const SIM_OPTIONS: { value: SimType; label: string; description: string }[] = [
   },
 ]
 
-export function SimulateDialog({ initialFactionCount, initialSimType, onStartNew, onLoadSaved, onClose }: Props) {
+export function SimulateDialog({ initialFactionCount, initialSimType, initialSeed, onStartNew, onLoadSaved, onClose }: Props) {
   const [factionCount, setFactionCount] = useState(initialFactionCount)
   const [simType, setSimType] = useState<SimType>(initialSimType)
+  const [seed, setSeed] = useState(initialSeed)
 
   return (
     <div
@@ -67,15 +69,25 @@ export function SimulateDialog({ initialFactionCount, initialSimType, onStartNew
             value={factionCount}
             onChange={(e) => setFactionCount(Number(e.target.value))}
           >
-            {[2, 3, 4, 5, 6, 7, 8].map((n) => (
+            {[2, 3, 4, 5, 6, 7, 8, 9].map((n) => (
               <option key={n} value={n}>{n}</option>
             ))}
           </select>
         </div>
 
+        <div className="flex items-center gap-3">
+          <label className="text-sm text-gray-300 shrink-0">Seed</label>
+          <input
+            className="flex-1 px-2 py-1.5 rounded bg-gray-800 border border-gray-700 text-gray-200 text-sm"
+            value={seed}
+            onChange={(e) => setSeed(e.target.value)}
+            placeholder="pyrosi-isareos-1"
+          />
+        </div>
+
         <button
           className="w-full px-4 py-2 rounded-lg bg-indigo-600 hover:bg-indigo-500 text-white text-sm font-medium"
-          onClick={() => onStartNew(factionCount, simType)}
+          onClick={() => onStartNew(factionCount, simType, seed)}
         >
           New Simulation
         </button>

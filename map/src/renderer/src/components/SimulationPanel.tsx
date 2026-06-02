@@ -53,6 +53,8 @@ export function SimulationPanel() {
   const setSimulating  = useMapStore((s) => s.setSimulating)
   const currentFilePath = useMapStore((s) => s.currentFilePath)
   const simFactionCount = useMapStore((s) => s.simFactionCount)
+  const simType         = useMapStore((s) => s.simType)
+  const simSeed         = useMapStore((s) => s.simSeed)
   const viewMode       = useMapStore((s) => s.viewMode)
   const [isAdvancing, setIsAdvancing] = useState(false)
   const [isPlaying,   setIsPlaying]   = useState(false)
@@ -141,7 +143,7 @@ export function SimulationPanel() {
     setIsAdvancing(true)
     setError(null)
     // sim.start already kills the existing process — no need to stop first
-    const result = await window.electronAPI.sim.start(currentFilePath, simFactionCount)
+    const result = await window.electronAPI.sim.start(currentFilePath, simFactionCount, simType, simSeed)
     if (!result.ok) {
       setError(result.error ?? 'Failed to restart simulation.')
     } else if (result.world) {
@@ -168,7 +170,12 @@ export function SimulationPanel() {
       <div className="px-4 py-3 bg-gray-800 border-b border-gray-700">
         <div className="text-xs font-semibold text-gray-400 uppercase tracking-wider">Simulation</div>
         {simWorld && (
-          <div className="text-sm font-bold text-indigo-300 mt-0.5">{simWorld.turn_label}</div>
+          <>
+            <div className="text-sm font-bold text-indigo-300 mt-0.5">{simWorld.turn_label}</div>
+            {simSeed && (
+              <div className="text-[11px] text-gray-500 mt-0.5 truncate">Seed: {simSeed}</div>
+            )}
+          </>
         )}
       </div>
 
