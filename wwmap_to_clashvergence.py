@@ -377,7 +377,7 @@ def translate(wwmap_path: str | Path, num_factions: int = 4) -> dict:
             "owner": owner,
             "resources": _resources_for_tags(tags),
             "terrain_tags": tags,
-            "climate": meta.get("climate") or "temperate",
+            "climate": region.dominant_climate or meta.get("climate") or "temperate",
         }
 
     # River links — only between known regions; also connect adjacent riverland regions

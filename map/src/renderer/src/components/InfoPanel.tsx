@@ -1,6 +1,6 @@
 import { useMemo, useState, useCallback } from 'react'
 import { useMapStore } from '../store/mapStore'
-import { TERRAIN_LABELS, CLIMATE_LABELS, ALL_CLIMATES } from '../lib/terrain'
+import { TERRAIN_LABELS, CLIMATE_LABELS, CLIMATE_COLORS, ALL_CLIMATES } from '../lib/terrain'
 import { Climate, LoreEntry, RegionData, SettlementSize, CoreStatus, ViewMode } from '../types/map'
 import { buildFactionColorMap } from './SimulationPanel'
 
@@ -258,6 +258,41 @@ function LoreLinkField({
 
 // ── Lore reader (used in 'lore' view mode) ────────────────────────────────────
 
+function DominantClimateField({ regionId }: { regionId: string }) {
+  const map = useMapStore((s) => s.map)
+  const { dominant, total } = useMemo(() => {
+    if (!map) return { dominant: null as Climate | null, total: 0 }
+    const counts: Partial<Record<Climate, number>> = {}
+    for (const hex of Object.values(map.hexes)) {
+      if (hex.region === regionId && hex.climate) {
+        counts[hex.climate] = (counts[hex.climate] ?? 0) + 1
+      }
+    }
+    const entries = Object.entries(counts) as [Climate, number][]
+    if (!entries.length) return { dominant: null as Climate | null, total: 0 }
+    const tot = entries.reduce((s, [, n]) => s + n, 0)
+    const dom = entries.reduce((a, b) => b[1] > a[1] ? b : a)[0]
+    return { dominant: dom, total: tot }
+  }, [map, regionId])
+
+  return (
+    <Field label="Dominant Climate">
+      {dominant ? (
+        <div className="flex items-center gap-2 px-2.5 py-1.5 bg-gray-800 rounded">
+          <span className="inline-block w-3 h-3 rounded-sm border border-gray-600 shrink-0"
+            style={{ background: CLIMATE_COLORS[dominant] }} />
+          <span className="text-sm text-gray-200">{CLIMATE_LABELS[dominant]}</span>
+          <span className="text-xs text-gray-500 ml-auto">{total} hex{total !== 1 ? 'es' : ''}</span>
+        </div>
+      ) : (
+        <p className="text-sm text-gray-500 italic px-2.5 py-1.5 bg-gray-800 rounded">
+          — paint hexes to set —
+        </p>
+      )}
+    </Field>
+  )
+}
+
 function FactionField({
   owner,
   value,
@@ -392,13 +427,7 @@ function LoreReader({ regionId, rd }: { regionId: string; rd: RegionData }) {
               onChange={(e) => upsertRegion(regionId, { faction: e.target.value || undefined })} />
           </Field>
           <div className="grid grid-cols-2 gap-3">
-            <Field label="Climate">
-              <select className={SELECT} value={rd.climate ?? ''}
-                onChange={(e) => upsertRegion(regionId, { climate: (e.target.value || undefined) as Climate | undefined })}>
-                <option value="">— unset —</option>
-                {ALL_CLIMATES.map((c) => <option key={c} value={c}>{CLIMATE_LABELS[c]}</option>)}
-              </select>
-            </Field>
+            <DominantClimateField regionId={regionId} />
             <Field label="Status">
               <select className={SELECT} value={rd.coreStatus ?? ''}
                 onChange={(e) => upsertRegion(regionId, { coreStatus: (e.target.value || undefined) as CoreStatus | undefined })}>
@@ -558,13 +587,7 @@ export function InfoPanel() {
           value={rd.faction ?? ''}
           onChange={(value) => upsertRegion(selectedRegion, { faction: value || undefined })}
         />
-        <Field label="Dominant Climate">
-          <select className={SELECT} value={rd.climate ?? ''}
-            onChange={(e) => upsertRegion(selectedRegion, { climate: (e.target.value || undefined) as Climate | undefined })}>
-            <option value="">— unset —</option>
-            {ALL_CLIMATES.map((c) => <option key={c} value={c}>{CLIMATE_LABELS[c]}</option>)}
-          </select>
-        </Field>
+        <DominantClimateField regionId={selectedRegion} />
         <Field label="Status">
           <select className={SELECT} value={rd.coreStatus ?? ''}
             onChange={(e) => upsertRegion(selectedRegion, { coreStatus: (e.target.value || undefined) as CoreStatus | undefined })}>
@@ -675,13 +698,7 @@ export function InfoPanel() {
             value={regionData.faction ?? ''}
             onChange={(value) => upsertRegion(hex.region!, { faction: value || undefined })}
           />
-          <Field label="Dominant Climate">
-            <select className={SELECT} value={regionData.climate ?? ''}
-              onChange={(e) => upsertRegion(hex.region!, { climate: (e.target.value || undefined) as Climate | undefined })}>
-              <option value="">— unset —</option>
-              {ALL_CLIMATES.map((c) => <option key={c} value={c}>{CLIMATE_LABELS[c]}</option>)}
-            </select>
-          </Field>
+          <DominantClimateField regionId={hex.region!} />
           <Field label="Status">
             <select className={SELECT} value={regionData.coreStatus ?? ''}
               onChange={(e) => upsertRegion(hex.region!, { coreStatus: (e.target.value || undefined) as CoreStatus | undefined })}>

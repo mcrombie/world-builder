@@ -83,12 +83,19 @@ class RegionInfo:
     centroid_r: float = 0.0
     meta: dict = field(default_factory=dict)
     terrain_counts: Counter = field(default_factory=Counter)
+    climate_counts: Counter = field(default_factory=Counter)
 
     @property
     def primary_terrain(self) -> str:
         if not self.terrain_counts:
             return "plains"
         return self.terrain_counts.most_common(1)[0][0]
+
+    @property
+    def dominant_climate(self) -> str | None:
+        if not self.climate_counts:
+            return None
+        return self.climate_counts.most_common(1)[0][0]
 
 
 @dataclass
@@ -126,6 +133,11 @@ def load_map_graph(path: str | Path, num_factions: int = 4) -> MapGraph:
 
     terrain_counts_map: dict[str, Counter] = {
         rid: Counter(h.get("terrain", "plains") for h in hlist)
+        for rid, hlist in region_hexes.items()
+    }
+
+    climate_counts_map: dict[str, Counter] = {
+        rid: Counter(h["climate"] for h in hlist if h.get("climate"))
         for rid, hlist in region_hexes.items()
     }
 
@@ -235,6 +247,7 @@ def load_map_graph(path: str | Path, num_factions: int = 4) -> MapGraph:
             centroid_r=cr,
             meta=regions_meta.get(rid, {}),
             terrain_counts=terrain_counts_map[rid],
+            climate_counts=climate_counts_map[rid],
         )
 
     return MapGraph(
