@@ -4,10 +4,10 @@ import { IS_BROWSER } from '../lib/fileIO'
 import type { SimFaction, ViewMode } from '../types/map'
 
 const SIM_PANEL_WIDTH: Record<ViewMode, string> = {
-  map:      'w-64',
-  balanced: 'w-[420px]',
-  panel:    'w-[600px]',
-  lore:     'w-[calc(50vw-96px)]',
+  map:      'w-56',
+  balanced: 'w-72',
+  panel:    'w-80',
+  lore:     'w-64',
 }
 
 const FACTION_PALETTE = [

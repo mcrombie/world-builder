@@ -1,7 +1,8 @@
-import { useState } from 'react'
+import { useMemo, useState } from 'react'
 import { useMapStore } from '../store/mapStore'
 import { TERRAIN_LABELS, CLIMATE_LABELS, ALL_CLIMATES } from '../lib/terrain'
 import { Climate, LoreEntry, RegionData, SettlementSize, CoreStatus, ViewMode } from '../types/map'
+import { buildFactionColorMap } from './SimulationPanel'
 
 const SETTLEMENT_SIZES: SettlementSize[] = ['village', 'town', 'city', 'capital']
 const CORE_STATUSES: CoreStatus[] = ['homeland', 'core', 'frontier']
@@ -27,6 +28,11 @@ function Field({ label, children }: { label: string; children: React.ReactNode }
 
 const INPUT  = 'w-full bg-gray-800 text-sm rounded px-2.5 py-1.5 outline-none focus:ring-1 ring-indigo-500 text-gray-100'
 const SELECT = INPUT
+
+interface SimOwner {
+  displayName: string
+  color: string
+}
 
 // ── Simple lore body renderer ─────────────────────────────────────────────────
 // Converts ## headings and paragraph blocks without a markdown library.
@@ -210,6 +216,38 @@ function LoreLinkField({
 
 // ── Lore reader (used in 'lore' view mode) ────────────────────────────────────
 
+function FactionField({
+  owner,
+  value,
+  onChange,
+}: {
+  owner: SimOwner | null | undefined
+  value: string
+  onChange: (value: string) => void
+}) {
+  return (
+    <Field label="Faction">
+      {owner !== undefined ? (
+        owner ? (
+          <div className="flex items-center gap-2 rounded bg-gray-800 px-2.5 py-1.5 text-sm text-gray-100">
+            <span className="inline-block w-3 h-3 rounded-sm shrink-0" style={{ background: owner.color }} />
+            <span className="truncate">{owner.displayName}</span>
+          </div>
+        ) : (
+          <p className="text-sm text-gray-500 italic px-2.5 py-1.5 bg-gray-800 rounded">Unowned</p>
+        )
+      ) : (
+        <input
+          className={INPUT}
+          value={value}
+          placeholder="e.g. Mittoli Republic"
+          onChange={(e) => onChange(e.target.value)}
+        />
+      )}
+    </Field>
+  )
+}
+
 function LoreReader({ regionId, rd }: { regionId: string; rd: RegionData }) {
   const loreFile     = useMapStore((s) => s.loreFile)
   const upsertRegion = useMapStore((s) => s.upsertRegion)
@@ -368,7 +406,42 @@ export function InfoPanel() {
   const updateHex      = useMapStore((s) => s.updateHex)
   const upsertRegion   = useMapStore((s) => s.upsertRegion)
   const viewMode       = useMapStore((s) => s.viewMode)
+  const simWorld       = useMapStore((s) => s.simWorld)
   const panelW         = PANEL_WIDTH[viewMode]
+
+  const factionColors = useMemo(
+    () => buildFactionColorMap(simWorld?.factions ?? []),
+    [simWorld?.factions],
+  )
+
+  const simOwners = useMemo(() => {
+    if (!simWorld) return {}
+
+    const factions = new Map(simWorld.factions.map((f) => [f.name, f]))
+    const owners: Record<string, SimOwner | null> = {}
+
+    for (const region of simWorld.regions) {
+      const ownerName = region.owner
+      const ownerFaction = ownerName ? factions.get(ownerName) : null
+      const owner = ownerName
+        ? {
+            displayName: ownerFaction?.display_name ?? ownerName,
+            color: factionColors[ownerName] ?? '#888888',
+          }
+        : null
+
+      owners[region.name] = owner
+      if (region.display_name) owners[region.display_name] = owner
+    }
+
+    return owners
+  }, [factionColors, simWorld])
+
+  function getSimOwner(regionId: string | null | undefined): SimOwner | null {
+    if (!regionId || !map) return null
+    const regionName = map.regions[regionId]?.name
+    return simOwners[regionId] ?? (regionName ? simOwners[regionName] : null) ?? null
+  }
 
   // ── Lore reader mode ──────────────────────────────────────────────────────
   if (viewMode === 'lore') {
@@ -395,6 +468,7 @@ export function InfoPanel() {
   if (selectedRegion && map?.regions[selectedRegion]) {
     const rd = map.regions[selectedRegion]
     const hexCount = Object.values(map.hexes).filter(h => h.region === selectedRegion).length
+    const simOwner = getSimOwner(selectedRegion)
 
     return (
       <aside className={`${panelW} bg-gray-900 text-gray-100 p-5 flex flex-col gap-4 shrink-0 overflow-y-auto border-l border-gray-800`}>
@@ -419,10 +493,11 @@ export function InfoPanel() {
             <span className="text-sm text-gray-400 font-mono">{rd.color}</span>
           </div>
         </Field>
-        <Field label="Faction">
-          <input className={INPUT} value={rd.faction ?? ''} placeholder="e.g. Mittoli Republic"
-            onChange={(e) => upsertRegion(selectedRegion, { faction: e.target.value || undefined })} />
-        </Field>
+        <FactionField
+          owner={simWorld ? simOwner : undefined}
+          value={rd.faction ?? ''}
+          onChange={(value) => upsertRegion(selectedRegion, { faction: value || undefined })}
+        />
         <Field label="Dominant Climate">
           <select className={SELECT} value={rd.climate ?? ''}
             onChange={(e) => upsertRegion(selectedRegion, { climate: (e.target.value || undefined) as Climate | undefined })}>
@@ -470,6 +545,7 @@ export function InfoPanel() {
   // ── Hex-select panel ──────────────────────────────────────────────────────
   const hex = map.hexes[selectedHex]
   const regionData = hex.region ? map.regions[hex.region] : null
+  const simOwner = getSimOwner(hex.region)
 
   return (
     <aside className={`${panelW} bg-gray-900 text-gray-100 p-5 flex flex-col gap-4 shrink-0 overflow-y-auto border-l border-gray-800`}>
@@ -533,10 +609,11 @@ export function InfoPanel() {
               <span className="text-sm text-gray-400 font-mono">{regionData.color}</span>
             </div>
           </Field>
-          <Field label="Faction">
-            <input className={INPUT} value={regionData.faction ?? ''} placeholder="e.g. Mittoli Republic"
-              onChange={(e) => upsertRegion(hex.region!, { faction: e.target.value || undefined })} />
-          </Field>
+          <FactionField
+            owner={simWorld ? simOwner : undefined}
+            value={regionData.faction ?? ''}
+            onChange={(value) => upsertRegion(hex.region!, { faction: value || undefined })}
+          />
           <Field label="Dominant Climate">
             <select className={SELECT} value={regionData.climate ?? ''}
               onChange={(e) => upsertRegion(hex.region!, { climate: (e.target.value || undefined) as Climate | undefined })}>

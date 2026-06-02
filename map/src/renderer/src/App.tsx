@@ -328,7 +328,14 @@ export default function App() {
             </div>
           )}
         </main>
-        {isSimulating ? <SimulationPanel /> : <InfoPanel />}
+        {isSimulating ? (
+          <>
+            <SimulationPanel />
+            <InfoPanel />
+          </>
+        ) : (
+          <InfoPanel />
+        )}
       </div>
 
       {/* ── Status bar ── */}

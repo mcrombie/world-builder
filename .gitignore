@@ -13,3 +13,8 @@ map/node_modules/
 map/out/
 map/.env
 
+# Saved simulation state
+saved_simulations/
+*.wwsim
+
+
