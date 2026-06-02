@@ -1,4 +1,4 @@
-import { useState } from 'react'
+import { useEffect, useRef, useState } from 'react'
 import { useMapStore, REGION_PALETTE } from '../store/mapStore'
 import { ALL_TERRAINS, TERRAIN_COLORS, TERRAIN_LABELS, CLIMATE_COLORS, CLIMATE_GROUPS, CLIMATE_LABELS } from '../lib/terrain'
 import { fileIO } from '../lib/fileIO'
@@ -31,6 +31,21 @@ const BRUSH_SIZES = [
   { radius: 3, hexCount: 37, dotPx: 19 },
 ]
 
+const SIDEBAR_WIDTH_KEY = 'world-builder-toolbar-width'
+const SIDEBAR_MIN_WIDTH = 192
+const SIDEBAR_MAX_WIDTH = 440
+const SIDEBAR_DEFAULT_WIDTH = 192
+
+function clampSidebarWidth(width: number): number {
+  return Math.max(SIDEBAR_MIN_WIDTH, Math.min(SIDEBAR_MAX_WIDTH, Math.round(width)))
+}
+
+function loadSidebarWidth(): number {
+  if (typeof window === 'undefined') return SIDEBAR_DEFAULT_WIDTH
+  const saved = Number(window.localStorage.getItem(SIDEBAR_WIDTH_KEY))
+  return Number.isFinite(saved) ? clampSidebarWidth(saved) : SIDEBAR_DEFAULT_WIDTH
+}
+
 export function Toolbar() {
   const activeTool      = useMapStore((s) => s.activeTool)
   const activeTerrain   = useMapStore((s) => s.activeTerrain)
@@ -54,9 +69,49 @@ export function Toolbar() {
   const deleteRegion    = useMapStore((s) => s.deleteRegion)
 
   const [newRegionName, setNewRegionName] = useState('')
+  const [sidebarWidth, setSidebarWidth] = useState(loadSidebarWidth)
+  const sidebarWidthRef = useRef(sidebarWidth)
+  const resizeStart = useRef<{ x: number; width: number } | null>(null)
 
   const loreFile   = useMapStore((s) => s.loreFile)
   const setLoreFile = useMapStore((s) => s.setLoreFile)
+
+  useEffect(() => {
+    sidebarWidthRef.current = sidebarWidth
+  }, [sidebarWidth])
+
+  useEffect(() => {
+    function onPointerMove(event: PointerEvent) {
+      if (!resizeStart.current) return
+      const next = clampSidebarWidth(resizeStart.current.width + event.clientX - resizeStart.current.x)
+      sidebarWidthRef.current = next
+      setSidebarWidth(next)
+    }
+
+    function onPointerUp() {
+      if (!resizeStart.current) return
+      resizeStart.current = null
+      window.localStorage.setItem(SIDEBAR_WIDTH_KEY, String(sidebarWidthRef.current))
+      document.body.style.cursor = ''
+      document.body.style.userSelect = ''
+    }
+
+    window.addEventListener('pointermove', onPointerMove)
+    window.addEventListener('pointerup', onPointerUp)
+    return () => {
+      window.removeEventListener('pointermove', onPointerMove)
+      window.removeEventListener('pointerup', onPointerUp)
+      document.body.style.cursor = ''
+      document.body.style.userSelect = ''
+    }
+  }, [])
+
+  function beginResize(event: React.PointerEvent<HTMLDivElement>) {
+    event.preventDefault()
+    resizeStart.current = { x: event.clientX, width: sidebarWidthRef.current }
+    document.body.style.cursor = 'col-resize'
+    document.body.style.userSelect = 'none'
+  }
 
   async function chooseUnderlay() {
     const result = await fileIO.chooseImage()
@@ -80,7 +135,19 @@ export function Toolbar() {
   const regionIds = Object.keys(regions)
 
   return (
-    <aside className="w-48 flex flex-col gap-4 bg-gray-900 text-gray-100 p-3 overflow-y-auto shrink-0">
+    <aside
+      className="relative flex shrink-0 overflow-hidden bg-gray-900 text-gray-100"
+      style={{ width: sidebarWidth }}
+    >
+      <div
+        role="separator"
+        aria-orientation="vertical"
+        aria-label="Resize tool panel"
+        title="Drag to resize"
+        onPointerDown={beginResize}
+        className="absolute right-0 top-0 bottom-0 w-2 cursor-col-resize bg-transparent hover:bg-indigo-500/40 active:bg-indigo-500/60 transition-colors"
+      />
+      <div className="flex w-full flex-col gap-4 overflow-y-auto p-3 pr-4">
 
       {/* Tools */}
       <section>
@@ -223,7 +290,7 @@ export function Toolbar() {
                       style={{ background: CLIMATE_COLORS[c] }}
                     />
                     <span className="font-mono text-gray-300 w-7 shrink-0">{c}</span>
-                    <span className="truncate">{CLIMATE_LABELS[c]}</span>
+                    <span className="min-w-0 truncate">{CLIMATE_LABELS[c]}</span>
                   </button>
                 ))}
               </div>
@@ -344,6 +411,7 @@ export function Toolbar() {
         )}
       </section>
 
+      </div>
     </aside>
   )
 }
