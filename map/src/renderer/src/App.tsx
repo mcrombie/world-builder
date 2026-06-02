@@ -354,6 +354,10 @@ export default function App() {
           initialFactionCount={simFactionCount}
           initialSimType={simType}
           initialSeed={simSeed}
+          isAzhoraMap={
+            (map?.name ?? '').toLowerCase().includes('azhora') ||
+            (currentPath ?? '').toLowerCase().includes('azhora')
+          }
           onStartNew={handleStartNew}
           onLoadSaved={handleLoadSaved}
           onClose={() => setShowSimulateDialog(false)}

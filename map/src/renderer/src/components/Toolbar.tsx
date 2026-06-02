@@ -1,6 +1,6 @@
 import { useState } from 'react'
 import { useMapStore, REGION_PALETTE } from '../store/mapStore'
-import { ALL_TERRAINS, TERRAIN_COLORS, TERRAIN_LABELS } from '../lib/terrain'
+import { ALL_TERRAINS, TERRAIN_COLORS, TERRAIN_LABELS, ALL_CLIMATES, CLIMATE_COLORS, CLIMATE_LABELS } from '../lib/terrain'
 import { fileIO } from '../lib/fileIO'
 import { AzloreFile, Tool, LayerVisibility, RiverSize, SelectMode } from '../types/map'
 
@@ -11,6 +11,7 @@ const TOOLS: { id: Tool; label: string; icon: string }[] = [
   { id: 'region', label: 'Region', icon: '🗺' },
   { id: 'select', label: 'Select', icon: '🔍' },
   { id: 'pan',    label: 'Pan',    icon: '✋' },
+  { id: 'climate', label: 'Climate', icon: '🌡' },
 ]
 
 const LAYER_LABELS: Record<keyof LayerVisibility, string> = {
@@ -33,6 +34,7 @@ const BRUSH_SIZES = [
 export function Toolbar() {
   const activeTool      = useMapStore((s) => s.activeTool)
   const activeTerrain   = useMapStore((s) => s.activeTerrain)
+  const activeClimate   = useMapStore((s) => s.activeClimate)
   const activeRiverSize = useMapStore((s) => s.activeRiverSize)
   const selectMode      = useMapStore((s) => s.selectMode)
   const brushRadius     = useMapStore((s) => s.brushRadius)
@@ -41,6 +43,7 @@ export function Toolbar() {
   const map           = useMapStore((s) => s.map)
   const setTool         = useMapStore((s) => s.setTool)
   const setTerrain      = useMapStore((s) => s.setTerrain)
+  const setClimate      = useMapStore((s) => s.setClimate)
   const setRiverSize    = useMapStore((s) => s.setRiverSize)
   const setSelectMode   = useMapStore((s) => s.setSelectMode)
   const setBrushRadius  = useMapStore((s) => s.setBrushRadius)
@@ -100,7 +103,7 @@ export function Toolbar() {
       </section>
 
       {/* Brush size — paint / erase / region */}
-      {(activeTool === 'paint' || activeTool === 'erase' || activeTool === 'region') && (
+      {(activeTool === 'paint' || activeTool === 'erase' || activeTool === 'region' || activeTool === 'climate') && (
         <section>
           <h3 className="text-xs font-semibold uppercase tracking-widest text-gray-400 mb-2">Brush Size</h3>
           <div className="grid grid-cols-4 gap-1">
@@ -191,6 +194,31 @@ export function Toolbar() {
                   style={{ background: TERRAIN_COLORS[t] }}
                 />
                 <span className="truncate">{TERRAIN_LABELS[t]}</span>
+              </button>
+            ))}
+          </div>
+        </section>
+      )}
+
+      {/* Climate palette */}
+      {activeTool === 'climate' && (
+        <section>
+          <h3 className="text-xs font-semibold uppercase tracking-widest text-gray-400 mb-2">Climate</h3>
+          <div className="flex flex-col gap-1">
+            {ALL_CLIMATES.map((c) => (
+              <button
+                key={c}
+                onClick={() => setClimate(c)}
+                className={`flex items-center gap-2 px-2 py-1 rounded text-sm transition-colors
+                  ${activeClimate === c
+                    ? 'ring-2 ring-indigo-400 bg-gray-800'
+                    : 'hover:bg-gray-800'}`}
+              >
+                <span
+                  className="inline-block w-4 h-4 rounded-sm border border-gray-600 shrink-0"
+                  style={{ background: CLIMATE_COLORS[c] }}
+                />
+                <span className="truncate">{CLIMATE_LABELS[c]}</span>
               </button>
             ))}
           </div>

@@ -42,10 +42,12 @@ export function HexCanvas() {
   const activeTool      = useMapStore((s) => s.activeTool)
   const brushRadius     = useMapStore((s) => s.brushRadius)
   const activeRegion    = useMapStore((s) => s.activeRegion)
-  const beginStroke     = useMapStore((s) => s.beginStroke)
-  const paintHex        = useMapStore((s) => s.paintHex)
-  const paintRegionHex  = useMapStore((s) => s.paintRegionHex)
-  const endStroke       = useMapStore((s) => s.endStroke)
+  const activeClimate    = useMapStore((s) => s.activeClimate)
+  const beginStroke      = useMapStore((s) => s.beginStroke)
+  const paintHex         = useMapStore((s) => s.paintHex)
+  const paintRegionHex   = useMapStore((s) => s.paintRegionHex)
+  const paintClimateHex  = useMapStore((s) => s.paintClimateHex)
+  const endStroke        = useMapStore((s) => s.endStroke)
   const selectHex       = useMapStore((s) => s.selectHex)
   const selectRegion    = useMapStore((s) => s.selectRegion)
   const toggleRiverEdge = useMapStore((s) => s.toggleRiverEdge)
@@ -64,10 +66,12 @@ export function HexCanvas() {
   const activeToolRef     = useRef(activeTool)
   const brushRadiusRef    = useRef(brushRadius)
   const activeRegionRef   = useRef(activeRegion)
+  const activeClimateRef  = useRef(activeClimate)
   const selectModeRef     = useRef(selectMode)
   activeToolRef.current   = activeTool
   brushRadiusRef.current  = brushRadius
   activeRegionRef.current = activeRegion
+  activeClimateRef.current = activeClimate
   selectModeRef.current   = selectMode
   mapRef.current          = map
 
@@ -78,7 +82,7 @@ export function HexCanvas() {
     img.src = map.underlayPath
   }, [map?.underlayPath])
 
-  useEffect(() => { needsRedraw.current = true }, [map, layers, selectedHex, selectedRegion, brushRadius, activeTool, activeRegion, simWorld, isSimulating])
+  useEffect(() => { needsRedraw.current = true }, [map, layers, selectedHex, selectedRegion, brushRadius, activeTool, activeRegion, activeClimate, simWorld, isSimulating])
 
   // ── Render ────────────────────────────────────────────────────────────────────
 
@@ -362,11 +366,12 @@ export function HexCanvas() {
     // ── Brush / region-paint hover preview ────────────────────────────────────
     const tool = activeToolRef.current
     const hc   = hoverCoord.current
-    if (hc && (tool === 'paint' || tool === 'erase' || tool === 'region')) {
+    if (hc && (tool === 'paint' || tool === 'erase' || tool === 'region' || tool === 'climate')) {
       const radius = brushRadiusRef.current
       const previewColor =
-        tool === 'erase'  ? '#ff6666' :
-        tool === 'region' ? (activeRegionRef.current ? (map.regions[activeRegionRef.current]?.color ?? '#ffffff') : '#ff6666') :
+        tool === 'erase'   ? '#ff6666' :
+        tool === 'region'  ? (activeRegionRef.current ? (map.regions[activeRegionRef.current]?.color ?? '#ffffff') : '#ff6666') :
+        tool === 'climate' ? CLIMATE_COLORS[activeClimateRef.current] :
         '#ffffff'
       const affected = hexesInRadius(hc.q, hc.r, radius).filter(
         ({ q: pq, r: pr }) => hexKey(pq, pr) in hexes
@@ -546,6 +551,11 @@ export function HexCanvas() {
         beginStroke()
         const coord = hexAtScreen(e.clientX, e.clientY)
         if (coord) paintHex(coord.q, coord.r)
+      } else if (activeTool === 'climate') {
+        isPainting.current = true
+        beginStroke()
+        const coord = hexAtScreen(e.clientX, e.clientY)
+        if (coord) paintClimateHex(coord.q, coord.r)
       } else if (activeTool === 'select') {
         const coord = hexAtScreen(e.clientX, e.clientY)
         if (selectModeRef.current === 'region') {
@@ -558,7 +568,7 @@ export function HexCanvas() {
         needsRedraw.current = true
       }
     },
-    [map, activeTool, beginStroke, hexAtScreen, paintHex, paintRegionHex, selectHex, selectRegion, toggleRiverEdge, screenToWorld]
+    [map, activeTool, beginStroke, hexAtScreen, paintHex, paintRegionHex, paintClimateHex, selectHex, selectRegion, toggleRiverEdge, screenToWorld]
   )
 
   const onMouseMove = useCallback(
@@ -594,9 +604,10 @@ export function HexCanvas() {
       if (isPainting.current && coord) {
         if (activeTool === 'paint' || activeTool === 'erase') paintHex(coord.q, coord.r)
         if (activeTool === 'region') paintRegionHex(coord.q, coord.r)
+        if (activeTool === 'climate') paintClimateHex(coord.q, coord.r)
       }
     },
-    [activeTool, map, hexAtScreen, paintHex, paintRegionHex, toggleRiverEdge, screenToWorld]
+    [activeTool, map, hexAtScreen, paintHex, paintRegionHex, paintClimateHex, toggleRiverEdge, screenToWorld]
   )
 
   const onMouseUp = useCallback(() => {

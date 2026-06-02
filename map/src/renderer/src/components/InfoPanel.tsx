@@ -1,4 +1,4 @@
-import { useMemo, useState } from 'react'
+import { useMemo, useState, useCallback } from 'react'
 import { useMapStore } from '../store/mapStore'
 import { TERRAIN_LABELS, CLIMATE_LABELS, ALL_CLIMATES } from '../lib/terrain'
 import { Climate, LoreEntry, RegionData, SettlementSize, CoreStatus, ViewMode } from '../types/map'
@@ -147,14 +147,39 @@ function LoreSearch({
   )
 }
 
+// ── Lore auto-link helpers ────────────────────────────────────────────────────
+
+function scoreLoreMatch(regionName: string, entryName: string): number {
+  const r = regionName.toLowerCase().trim()
+  const e = entryName.toLowerCase().trim()
+  if (r === e) return 3
+  if (e.startsWith(r) || r.startsWith(e)) return 2
+  if (e.includes(r) || r.includes(e)) return 1
+  return 0
+}
+
+function useLoreSuggestions(regionName: string | undefined, linked: LoreEntry | undefined, loreFile: { entries: LoreEntry[] } | null): LoreEntry[] {
+  return useMemo(() => {
+    if (!loreFile || !regionName || linked) return []
+    return loreFile.entries
+      .map((entry) => ({ entry, score: scoreLoreMatch(regionName, entry.name) }))
+      .filter(({ score }) => score > 0)
+      .sort((a, b) => b.score - a.score || a.entry.name.localeCompare(b.entry.name))
+      .slice(0, 3)
+      .map(({ entry }) => entry)
+  }, [loreFile, regionName, linked])
+}
+
 // ── Lore link control (used in non-lore view modes) ───────────────────────────
 
 function LoreLinkField({
   currentRef,
+  regionName,
   onLink,
   onClear,
 }: {
   currentRef: string | undefined
+  regionName?: string
   onLink: (entry: LoreEntry) => void
   onClear: () => void
 }) {
@@ -163,7 +188,8 @@ function LoreLinkField({
   const [open, setOpen]         = useState(false)
   const [expanded, setExpanded] = useState(false)
 
-  const linked = loreFile?.entries.find((e) => e.id === currentRef)
+  const linked      = loreFile?.entries.find((e) => e.id === currentRef)
+  const suggestions = useLoreSuggestions(regionName, linked, loreFile ?? null)
 
   if (!loreFile) {
     return <p className="text-sm text-gray-500 italic">Load a lore file to enable linking.</p>
@@ -180,7 +206,23 @@ function LoreLinkField({
           <button onClick={onClear} className="text-gray-500 hover:text-red-400 px-1.5 py-1 text-sm shrink-0 rounded hover:bg-gray-800 transition-colors" title="Remove link">✕</button>
         </div>
       ) : (
-        <p className="text-sm text-gray-500 italic">— unlinked —</p>
+        <>
+          <p className="text-sm text-gray-500 italic">— unlinked —</p>
+          {suggestions.length > 0 && (
+            <div className="flex flex-col gap-1">
+              {suggestions.map((entry) => (
+                <button
+                  key={entry.id}
+                  onClick={() => { onLink(entry); setOpen(false) }}
+                  className="flex items-baseline gap-2 px-2.5 py-1.5 rounded bg-indigo-900/30 border border-indigo-700/40 hover:bg-indigo-800/40 transition-colors text-left"
+                >
+                  <span className="text-sm text-indigo-200 truncate flex-1">{entry.name}</span>
+                  <span className="text-xs text-indigo-400 capitalize shrink-0">{entry.category}</span>
+                </button>
+              ))}
+            </div>
+          )}
+        </>
       )}
 
       <button
@@ -254,7 +296,9 @@ function LoreReader({ regionId, rd }: { regionId: string; rd: RegionData }) {
   const [searching, setSearching]   = useState(false)
   const [showFields, setShowFields] = useState(false)
 
-  const linked = loreFile?.entries.find((e) => e.id === rd.loreRef)
+  const linked      = loreFile?.entries.find((e) => e.id === rd.loreRef)
+  const suggestions = useLoreSuggestions(rd.name, linked, loreFile ?? null)
+  const linkEntry   = useCallback((entry: LoreEntry) => { upsertRegion(regionId, { loreRef: entry.id }); setSearching(false) }, [upsertRegion, regionId])
 
   return (
     <div className="flex flex-col h-full overflow-hidden">
@@ -285,12 +329,28 @@ function LoreReader({ regionId, rd }: { regionId: string; rd: RegionData }) {
                 </button>
               </div>
             ) : (
-              <button
-                onClick={() => setSearching((v) => !v)}
-                className="text-sm text-indigo-400 hover:text-indigo-300 transition-colors"
-              >
-                {searching ? '▲ cancel' : '+ Link lore entry'}
-              </button>
+              <div className="flex flex-col gap-1.5 mt-0.5">
+                {suggestions.length > 0 && !searching && (
+                  <div className="flex flex-wrap gap-1.5">
+                    {suggestions.map((entry) => (
+                      <button
+                        key={entry.id}
+                        onClick={() => linkEntry(entry)}
+                        className="flex items-baseline gap-1.5 px-2 py-0.5 rounded bg-indigo-900/40 border border-indigo-700/40 hover:bg-indigo-800/50 transition-colors"
+                      >
+                        <span className="text-xs text-indigo-200">{entry.name}</span>
+                        <span className="text-xs text-indigo-500 capitalize">{entry.category}</span>
+                      </button>
+                    ))}
+                  </div>
+                )}
+                <button
+                  onClick={() => setSearching((v) => !v)}
+                  className="text-sm text-indigo-400 hover:text-indigo-300 transition-colors"
+                >
+                  {searching ? '▲ cancel' : suggestions.length > 0 ? '▼ search all' : '+ Link lore entry'}
+                </button>
+              </div>
             )}
           </div>
           <button
@@ -307,7 +367,7 @@ function LoreReader({ regionId, rd }: { regionId: string; rd: RegionData }) {
           <div className="mt-3">
             <LoreSearch
               currentRef={rd.loreRef}
-              onLink={(entry) => { upsertRegion(regionId, { loreRef: entry.id }); setSearching(false) }}
+              onLink={linkEntry}
               onClose={() => setSearching(false)}
             />
           </div>
@@ -519,6 +579,7 @@ export function InfoPanel() {
         <Field label="Lore Entry">
           <LoreLinkField
             currentRef={rd.loreRef}
+            regionName={rd.name}
             onLink={(entry) => upsertRegion(selectedRegion, { loreRef: entry.id })}
             onClear={() => upsertRegion(selectedRegion, { loreRef: undefined })}
           />
@@ -635,6 +696,7 @@ export function InfoPanel() {
           <Field label="Lore Entry">
             <LoreLinkField
               currentRef={regionData.loreRef}
+              regionName={regionData.name}
               onLink={(entry) => upsertRegion(hex.region!, { loreRef: entry.id })}
               onClear={() => upsertRegion(hex.region!, { loreRef: undefined })}
             />

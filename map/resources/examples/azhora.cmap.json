@@ -1542,7 +1542,7 @@
       "terrain_tags": [
         "hills"
       ],
-      "climate": "temperate"
+      "climate": "cold"
     },
     "North Orsa": {
       "neighbors": [
@@ -1555,7 +1555,7 @@
       "terrain_tags": [
         "plains"
       ],
-      "climate": "temperate"
+      "climate": "cold"
     },
     "North Thoth": {
       "neighbors": [
@@ -1569,7 +1569,7 @@
       "terrain_tags": [
         "plains"
       ],
-      "climate": "temperate"
+      "climate": "cold"
     },
     "West Witherst": {
       "neighbors": [
@@ -1583,7 +1583,7 @@
       "terrain_tags": [
         "plains"
       ],
-      "climate": "temperate"
+      "climate": "cold"
     },
     "South Orsa": {
       "neighbors": [
@@ -1597,7 +1597,7 @@
         "steppe",
         "plains"
       ],
-      "climate": "temperate"
+      "climate": "cold"
     },
     "Central Thoth": {
       "neighbors": [
@@ -1614,7 +1614,7 @@
       "terrain_tags": [
         "plains"
       ],
-      "climate": "temperate"
+      "climate": "cold"
     },
     "North Gorgi Mountains": {
       "neighbors": [
@@ -1631,7 +1631,7 @@
         "highland",
         "hills"
       ],
-      "climate": "temperate"
+      "climate": "cold"
     },
     "North Nonoth": {
       "neighbors": [
@@ -1646,7 +1646,7 @@
         "steppe",
         "plains"
       ],
-      "climate": "temperate"
+      "climate": "cold"
     },
     "East Witherst": {
       "neighbors": [
@@ -1659,7 +1659,7 @@
       "terrain_tags": [
         "plains"
       ],
-      "climate": "temperate"
+      "climate": "cold"
     },
     "West Gorgi Mountains": {
       "neighbors": [
@@ -1677,7 +1677,7 @@
         "highland",
         "hills"
       ],
-      "climate": "temperate"
+      "climate": "cold"
     },
     "East Gorgi Mountains": {
       "neighbors": [
@@ -1693,7 +1693,7 @@
         "highland",
         "hills"
       ],
-      "climate": "temperate"
+      "climate": "cold"
     },
     "Eshtor Plateau": {
       "neighbors": [
@@ -1710,7 +1710,7 @@
       "terrain_tags": [
         "hills"
       ],
-      "climate": "temperate"
+      "climate": "cold"
     },
     "South Nonoth": {
       "neighbors": [
@@ -1725,7 +1725,7 @@
         "steppe",
         "plains"
       ],
-      "climate": "temperate"
+      "climate": "cold"
     },
     "South Thoth": {
       "neighbors": [
@@ -1740,7 +1740,7 @@
       "terrain_tags": [
         "plains"
       ],
-      "climate": "temperate"
+      "climate": "cold"
     },
     "North Riesov": {
       "neighbors": [
@@ -1756,7 +1756,7 @@
         "hills",
         "plains"
       ],
-      "climate": "temperate"
+      "climate": "oceanic"
     },
     "Noth Hills": {
       "neighbors": [
@@ -1773,7 +1773,7 @@
       "terrain_tags": [
         "hills"
       ],
-      "climate": "temperate"
+      "climate": "cold"
     },
     "Orgmala": {
       "neighbors": [
@@ -1793,7 +1793,7 @@
         "steppe",
         "plains"
       ],
-      "climate": "temperate"
+      "climate": "cold"
     },
     "North Lond": {
       "neighbors": [
@@ -1812,7 +1812,7 @@
         "steppe",
         "plains"
       ],
-      "climate": "temperate"
+      "climate": "steppe"
     },
     "Nothwood": {
       "neighbors": [
@@ -1828,7 +1828,7 @@
         "forest",
         "plains"
       ],
-      "climate": "temperate"
+      "climate": "cold"
     },
     "West Baldro Mountains": {
       "neighbors": [
@@ -1845,7 +1845,7 @@
         "highland",
         "hills"
       ],
-      "climate": "temperate"
+      "climate": "cold"
     },
     "South Riesov": {
       "neighbors": [
@@ -1859,7 +1859,7 @@
         "hills",
         "steppe"
       ],
-      "climate": "temperate"
+      "climate": "oceanic"
     },
     "East Lond": {
       "neighbors": [
@@ -1877,7 +1877,7 @@
         "steppe",
         "plains"
       ],
-      "climate": "temperate"
+      "climate": "steppe"
     },
     "West Lond": {
       "neighbors": [
@@ -1894,7 +1894,7 @@
         "steppe",
         "plains"
       ],
-      "climate": "temperate"
+      "climate": "steppe"
     },
     "Central Lond": {
       "neighbors": [
@@ -1909,7 +1909,7 @@
         "riverland",
         "plains"
       ],
-      "climate": "temperate"
+      "climate": "steppe"
     },
     "East Baldro Mountains": {
       "neighbors": [
@@ -1925,7 +1925,7 @@
         "highland",
         "hills"
       ],
-      "climate": "temperate"
+      "climate": "cold"
     },
     "North Endevor": {
       "neighbors": [
@@ -1939,7 +1939,7 @@
       "terrain_tags": [
         "steppe"
       ],
-      "climate": "temperate"
+      "climate": "cold"
     },
     "East Endevor": {
       "neighbors": [
@@ -1955,7 +1955,7 @@
       "terrain_tags": [
         "steppe"
       ],
-      "climate": "temperate"
+      "climate": "cold"
     },
     "West Endevor": {
       "neighbors": [
@@ -1968,7 +1968,7 @@
       "terrain_tags": [
         "steppe"
       ],
-      "climate": "temperate"
+      "climate": "cold"
     },
     "North Ganun": {
       "neighbors": [
@@ -1984,7 +1984,7 @@
         "riverland",
         "steppe"
       ],
-      "climate": "temperate"
+      "climate": "steppe"
     },
     "East Ganun": {
       "neighbors": [
@@ -2000,7 +2000,7 @@
         "riverland",
         "steppe"
       ],
-      "climate": "temperate"
+      "climate": "steppe"
     },
     "South Endevor": {
       "neighbors": [
@@ -2016,7 +2016,7 @@
       "terrain_tags": [
         "steppe"
       ],
-      "climate": "temperate"
+      "climate": "cold"
     },
     "South Lond": {
       "neighbors": [
@@ -2034,7 +2034,7 @@
         "steppe",
         "plains"
       ],
-      "climate": "temperate"
+      "climate": "steppe"
     },
     "West Ganun": {
       "neighbors": [
@@ -2049,7 +2049,7 @@
       "terrain_tags": [
         "steppe"
       ],
-      "climate": "temperate"
+      "climate": "steppe"
     },
     "North Acorwood": {
       "neighbors": [
@@ -2079,7 +2079,7 @@
       "terrain_tags": [
         "steppe"
       ],
-      "climate": "temperate"
+      "climate": "cold"
     },
     "West Acorwood": {
       "neighbors": [
@@ -2123,7 +2123,7 @@
         "riverland",
         "steppe"
       ],
-      "climate": "temperate"
+      "climate": "steppe"
     },
     "East Inseld": {
       "neighbors": [
@@ -2134,7 +2134,7 @@
       "terrain_tags": [
         "plains"
       ],
-      "climate": "temperate"
+      "climate": "oceanic"
     },
     "Acor Wetlands": {
       "neighbors": [
@@ -2169,7 +2169,7 @@
         "steppe",
         "plains"
       ],
-      "climate": "temperate"
+      "climate": "cold"
     },
     "Cudon": {
       "neighbors": [
@@ -2212,7 +2212,7 @@
         "steppe",
         "plains"
       ],
-      "climate": "temperate"
+      "climate": "oceanic"
     },
     "Lesser Oremindi Mountains": {
       "neighbors": [
@@ -2227,7 +2227,7 @@
         "highland",
         "hills"
       ],
-      "climate": "temperate"
+      "climate": "cold"
     },
     "North Mithala": {
       "neighbors": [
@@ -2244,7 +2244,7 @@
         "steppe",
         "plains"
       ],
-      "climate": "temperate"
+      "climate": "steppe"
     },
     "Henborth": {
       "neighbors": [
@@ -2262,7 +2262,7 @@
       "terrain_tags": [
         "steppe"
       ],
-      "climate": "temperate"
+      "climate": "cold"
     },
     "North Oreminidi Mountains": {
       "neighbors": [
@@ -2278,7 +2278,7 @@
         "highland",
         "hills"
       ],
-      "climate": "temperate"
+      "climate": "cold"
     },
     "East Mithala": {
       "neighbors": [
@@ -2294,7 +2294,7 @@
         "steppe",
         "plains"
       ],
-      "climate": "temperate"
+      "climate": "steppe"
     },
     "West Mithala": {
       "neighbors": [
@@ -2311,7 +2311,7 @@
         "steppe",
         "plains"
       ],
-      "climate": "temperate"
+      "climate": "steppe"
     },
     "West Oremindi Mountains": {
       "neighbors": [
@@ -2325,7 +2325,7 @@
         "highland",
         "hills"
       ],
-      "climate": "temperate"
+      "climate": "cold"
     },
     "East Oremindi Mountains": {
       "neighbors": [
@@ -2342,7 +2342,7 @@
         "highland",
         "hills"
       ],
-      "climate": "temperate"
+      "climate": "cold"
     },
     "South Mithala": {
       "neighbors": [
@@ -2360,7 +2360,7 @@
         "steppe",
         "plains"
       ],
-      "climate": "temperate"
+      "climate": "steppe"
     },
     "North Celder": {
       "neighbors": [
@@ -2376,7 +2376,7 @@
         "steppe",
         "plains"
       ],
-      "climate": "temperate"
+      "climate": "steppe"
     },
     "East Lotharn Mountains": {
       "neighbors": [
@@ -2392,7 +2392,7 @@
         "highland",
         "hills"
       ],
-      "climate": "temperate"
+      "climate": "cold"
     },
     "Feradom": {
       "neighbors": [
@@ -2424,7 +2424,7 @@
       "terrain_tags": [
         "steppe"
       ],
-      "climate": "temperate"
+      "climate": "steppe"
     },
     "West Lotharn Mountains": {
       "neighbors": [
@@ -2442,7 +2442,7 @@
         "highland",
         "hills"
       ],
-      "climate": "temperate"
+      "climate": "cold"
     },
     "South Oremindi Mountains": {
       "neighbors": [
@@ -2460,7 +2460,7 @@
         "highland",
         "hills"
       ],
-      "climate": "temperate"
+      "climate": "cold"
     },
     "Amod": {
       "neighbors": [
@@ -2554,7 +2554,7 @@
       "terrain_tags": [
         "plains"
       ],
-      "climate": "temperate"
+      "climate": "cold"
     },
     "North Ibenwood": {
       "neighbors": [
@@ -2611,7 +2611,7 @@
         "steppe",
         "plains"
       ],
-      "climate": "temperate"
+      "climate": "oceanic"
     },
     "Drent": {
       "neighbors": [
@@ -2726,7 +2726,7 @@
         "steppe",
         "plains"
       ],
-      "climate": "temperate"
+      "climate": "steppe"
     },
     "Peblos": {
       "neighbors": [],
@@ -2736,7 +2736,7 @@
         "hills",
         "steppe"
       ],
-      "climate": "temperate"
+      "climate": "oceanic"
     },
     "Nethereum": {
       "neighbors": [
@@ -2772,7 +2772,7 @@
         "steppe",
         "plains"
       ],
-      "climate": "temperate"
+      "climate": "steppe"
     },
     "Moros Plain": {
       "neighbors": [
@@ -2787,7 +2787,7 @@
       "terrain_tags": [
         "steppe"
       ],
-      "climate": "temperate"
+      "climate": "steppe"
     },
     "East Suval": {
       "neighbors": [
@@ -2803,7 +2803,7 @@
         "steppe",
         "plains"
       ],
-      "climate": "temperate"
+      "climate": "oceanic"
     },
     "South Ibenwood": {
       "neighbors": [
@@ -2836,7 +2836,7 @@
       "terrain_tags": [
         "steppe"
       ],
-      "climate": "temperate"
+      "climate": "arid"
     },
     "Ovesos": {
       "neighbors": [
@@ -2871,7 +2871,7 @@
         "steppe",
         "plains"
       ],
-      "climate": "temperate"
+      "climate": "oceanic"
     },
     "Oves Desert": {
       "neighbors": [
@@ -2887,7 +2887,7 @@
         "hills",
         "steppe"
       ],
-      "climate": "temperate"
+      "climate": "arid"
     },
     "Alezhor": {
       "neighbors": [
@@ -3008,7 +3008,7 @@
         "hills",
         "plains"
       ],
-      "climate": "temperate"
+      "climate": "oceanic"
     },
     "Telemonia": {
       "neighbors": [
@@ -3035,7 +3035,7 @@
         "steppe",
         "plains"
       ],
-      "climate": "temperate"
+      "climate": "oceanic"
     },
     "Ganesh Desert": {
       "neighbors": [
@@ -3050,7 +3050,7 @@
       "terrain_tags": [
         "steppe"
       ],
-      "climate": "temperate"
+      "climate": "arid"
     },
     "Northern Ascarth": {
       "neighbors": [
@@ -3081,7 +3081,7 @@
         "steppe",
         "plains"
       ],
-      "climate": "temperate"
+      "climate": "oceanic"
     },
     "Ganesh Plain": {
       "neighbors": [
@@ -3099,7 +3099,7 @@
         "steppe",
         "plains"
       ],
-      "climate": "temperate"
+      "climate": "arid"
     },
     "Legemum": {
       "neighbors": [
@@ -3129,7 +3129,7 @@
         "steppe",
         "plains"
       ],
-      "climate": "temperate"
+      "climate": "oceanic"
     },
     "West Izol": {
       "neighbors": [
@@ -3143,7 +3143,7 @@
         "steppe",
         "plains"
       ],
-      "climate": "temperate"
+      "climate": "oceanic"
     },
     "Dinelv Highlands": {
       "neighbors": [
@@ -3160,7 +3160,7 @@
         "hills",
         "steppe"
       ],
-      "climate": "temperate"
+      "climate": "arid"
     },
     "Southern Ascarth": {
       "neighbors": [
@@ -3190,7 +3190,7 @@
         "hills",
         "plains"
       ],
-      "climate": "temperate"
+      "climate": "arid"
     },
     "North Meroshe Desert": {
       "neighbors": [
@@ -3205,7 +3205,7 @@
       "terrain_tags": [
         "steppe"
       ],
-      "climate": "temperate"
+      "climate": "arid"
     },
     "Aurumlis Archipeligo": {
       "neighbors": [],
@@ -3216,7 +3216,7 @@
         "hills",
         "plains"
       ],
-      "climate": "temperate"
+      "climate": "oceanic"
     },
     "West Meroshe Desert": {
       "neighbors": [
@@ -3230,7 +3230,7 @@
       "terrain_tags": [
         "steppe"
       ],
-      "climate": "temperate"
+      "climate": "arid"
     },
     "Central Meroshe Desert": {
       "neighbors": [
@@ -3245,7 +3245,7 @@
       "terrain_tags": [
         "steppe"
       ],
-      "climate": "temperate"
+      "climate": "arid"
     },
     "Selemi": {
       "neighbors": [],
@@ -3255,7 +3255,7 @@
         "coast",
         "plains"
       ],
-      "climate": "temperate"
+      "climate": "oceanic"
     },
     "Azhor Stones": {
       "neighbors": [],
@@ -3265,7 +3265,7 @@
         "highland",
         "forest"
       ],
-      "climate": "temperate"
+      "climate": "oceanic"
     },
     "South Meroshe Desert": {
       "neighbors": [
@@ -3279,7 +3279,7 @@
       "terrain_tags": [
         "steppe"
       ],
-      "climate": "temperate"
+      "climate": "arid"
     },
     "Trogo": {
       "neighbors": [
@@ -3295,7 +3295,7 @@
         "forest",
         "plains"
       ],
-      "climate": "temperate"
+      "climate": "tropical"
     },
     "Hama": {
       "neighbors": [
@@ -3310,7 +3310,7 @@
         "steppe",
         "plains"
       ],
-      "climate": "temperate"
+      "climate": "arid"
     },
     "Babon": {
       "neighbors": [],
@@ -3323,7 +3323,7 @@
         "forest",
         "plains"
       ],
-      "climate": "temperate"
+      "climate": "arid"
     },
     "North Scythe": {
       "neighbors": [
@@ -3335,7 +3335,7 @@
         "highland",
         "forest"
       ],
-      "climate": "temperate"
+      "climate": "oceanic"
     },
     "South Scythe": {
       "neighbors": [
@@ -3347,7 +3347,7 @@
         "highland",
         "forest"
       ],
-      "climate": "temperate"
+      "climate": "oceanic"
     }
   },
   "faction_language_families": {

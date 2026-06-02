@@ -100,7 +100,7 @@ export interface SimWorldState {
   recent_events: unknown[]
 }
 
-export type Tool = 'paint' | 'erase' | 'select' | 'pan' | 'river' | 'region'
+export type Tool = 'paint' | 'erase' | 'select' | 'pan' | 'river' | 'region' | 'climate'
 export type SelectMode = 'tile' | 'region'
 export type ViewMode = 'map' | 'balanced' | 'panel' | 'lore'
 

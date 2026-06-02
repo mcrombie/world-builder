@@ -79,9 +79,12 @@ interface MapStore {
   selectRegion: (id: string | null) => void
   setSelectMode: (mode: SelectMode) => void
   updateHex: (key: string, data: Partial<HexData>) => void
+  activeClimate: Climate
   setTool: (tool: Tool) => void
   setTerrain: (terrain: TerrainType) => void
+  setClimate: (climate: Climate) => void
   setRiverSize: (size: RiverSize) => void
+  paintClimateHex: (q: number, r: number) => void
   setActiveRegion: (id: string | null) => void
   setBrushRadius: (radius: number) => void
   toggleRiverEdge: (edgeKey: string) => void
@@ -119,6 +122,7 @@ export const useMapStore = create<MapStore>((set, get) => ({
   selectMode: 'tile',
   activeTool: 'paint',
   activeTerrain: 'plains',
+  activeClimate: 'temperate',
   activeRiverSize: 'medium',
   activeRegion: null,
   brushRadius: 0,
@@ -283,7 +287,28 @@ export const useMapStore = create<MapStore>((set, get) => ({
 
   setTool: (tool) => set({ activeTool: tool }),
   setTerrain: (terrain) => set({ activeTerrain: terrain }),
+  setClimate: (climate) => set({ activeClimate: climate }),
   setRiverSize: (size) => set({ activeRiverSize: size }),
+
+  paintClimateHex: (q, r) => {
+    const { map, activeClimate, brushRadius, strokeBefore } = get()
+    if (!map) return
+    const updates: Record<string, HexData> = {}
+    const newStrokeBefore = strokeBefore ? { ...strokeBefore } : null
+    for (const coord of hexesInRadius(q, r, brushRadius)) {
+      const key = hexKey(coord.q, coord.r)
+      if (key in map.hexes && map.hexes[key].climate !== activeClimate) {
+        if (newStrokeBefore && !(key in newStrokeBefore)) newStrokeBefore[key] = map.hexes[key]
+        updates[key] = { ...map.hexes[key], climate: activeClimate }
+      }
+    }
+    if (Object.keys(updates).length === 0) return
+    set((state) => ({
+      map: state.map ? { ...state.map, hexes: { ...state.map.hexes, ...updates } } : null,
+      strokeBefore: newStrokeBefore,
+      isDirty: true,
+    }))
+  },
   setActiveRegion: (id) => set({ activeRegion: id }),
   setBrushRadius: (radius) => set({ brushRadius: radius }),
 
