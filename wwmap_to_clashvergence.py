@@ -82,6 +82,30 @@ AZHORAN_PREFERRED_START_REGIONS: dict[str, list[str]] = {
     "elodi": ["East Suval"],
 }
 
+AZHORAN_DISRUPTIVE_ARRIVALS: dict[str, dict] = {
+    "mittoli": {
+        "arrival_turn": 10,
+        "arrival_type": "disruptive_colonial_landing",
+        "entry_region": "East Mithala",
+        "origin": "foreign land",
+        "status": "foreign_colony",
+    },
+    "ibnael": {
+        "arrival_turn": 11,
+        "arrival_type": "disruptive_colonial_landing",
+        "entry_region": "South Acordwood",
+        "origin": "foreign land",
+        "status": "foreign_colony",
+    },
+    "elodi": {
+        "arrival_turn": 20,
+        "arrival_type": "disruptive_colonial_landing",
+        "entry_region": "East Suval",
+        "origin": "foreign land",
+        "status": "foreign_colony",
+    },
+}
+
 
 def _sorted_terrain_tags(tags: list[str]) -> list[str]:
     unique = list(dict.fromkeys(tags))
@@ -211,6 +235,39 @@ def _apply_azhoran_start_preferences(
         auto_start_owners[preferred_region] = owner_id
 
 
+def _build_azhoran_faction_arrivals(
+    wwmap_path: Path,
+    graph,
+    num_factions: int,
+) -> dict[str, dict]:
+    if not _is_azhora_map(wwmap_path, graph):
+        return {}
+
+    arrivals: dict[str, dict] = {}
+    for language_key, arrival in AZHORAN_DISRUPTIVE_ARRIVALS.items():
+        owner_id = _get_default_language_faction_id(language_key, num_factions)
+        if owner_id is None:
+            continue
+        entry_region = arrival.get("entry_region")
+        if entry_region not in graph.regions:
+            continue
+        arrivals[owner_id] = {
+            "language": language_key,
+            **arrival,
+        }
+    return arrivals
+
+
+def _remove_delayed_azhoran_start_owners(
+    auto_start_owners: dict[str, str],
+    faction_arrivals: dict[str, dict],
+) -> None:
+    delayed_owner_ids = set(faction_arrivals)
+    for region_name, owner_id in list(auto_start_owners.items()):
+        if owner_id in delayed_owner_ids:
+            auto_start_owners.pop(region_name, None)
+
+
 def _build_faction_language_families(
     wwmap_path: Path,
     graph,
@@ -289,6 +346,13 @@ def translate(wwmap_path: str | Path, num_factions: int = 4) -> dict:
             auto_start_owners,
             num_factions,
         )
+    faction_arrivals = _build_azhoran_faction_arrivals(
+        wwmap_path,
+        graph,
+        num_factions,
+    )
+    if faction_arrivals:
+        _remove_delayed_azhoran_start_owners(auto_start_owners, faction_arrivals)
 
     # Build Clashvergence region objects
     clashvergence_regions: dict[str, dict] = {}
@@ -358,6 +422,8 @@ def translate(wwmap_path: str | Path, num_factions: int = 4) -> dict:
     )
     if faction_language_families:
         map_definition["faction_language_families"] = faction_language_families
+    if faction_arrivals:
+        map_definition["faction_arrivals"] = faction_arrivals
     return map_definition
 
 

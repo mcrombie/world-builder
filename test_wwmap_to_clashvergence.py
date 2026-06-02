@@ -30,12 +30,14 @@ class ClashvergenceExportTests(unittest.TestCase):
         map_definition = translate(ROOT / "saved_maps" / "azhora.azmap", num_factions=7)
         expected_starts = {
             "Faction1": "Central Lond",
-            "Faction2": "East Mithala",
             "Faction3": "West Pyros",
             "Faction4": "Marosh",
             "Faction5": "West Mithala",
-            "Faction6": "South Acordwood",
-            "Faction7": "East Suval",
+        }
+        expected_arrivals = {
+            "Faction2": (10, "East Mithala"),
+            "Faction6": (11, "South Acordwood"),
+            "Faction7": (20, "East Suval"),
         }
 
         for owner_id, region_name in expected_starts.items():
@@ -47,6 +49,21 @@ class ClashvergenceExportTests(unittest.TestCase):
                     if region_data.get("owner") == owner_id
                 ],
                 [region_name],
+            )
+
+        for owner_id, (arrival_turn, entry_region) in expected_arrivals.items():
+            arrival = map_definition["faction_arrivals"][owner_id]
+            self.assertEqual(arrival["arrival_turn"], arrival_turn)
+            self.assertEqual(arrival["entry_region"], entry_region)
+            self.assertEqual(arrival["arrival_type"], "disruptive_colonial_landing")
+            self.assertEqual(map_definition["regions"][entry_region]["owner"], None)
+            self.assertEqual(
+                [
+                    current_region_name
+                    for current_region_name, region_data in map_definition["regions"].items()
+                    if region_data.get("owner") == owner_id
+                ],
+                [],
             )
 
     def test_plain_export_omits_language_families(self):

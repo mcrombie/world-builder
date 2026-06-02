@@ -2194,7 +2194,7 @@
         "North Acorwood",
         "West Acorwood"
       ],
-      "owner": "Faction6",
+      "owner": null,
       "resources": 2,
       "terrain_tags": [
         "highland",
@@ -2288,7 +2288,7 @@
         "West Acorwood",
         "West Mithala"
       ],
-      "owner": "Faction2",
+      "owner": null,
       "resources": 2,
       "terrain_tags": [
         "steppe",
@@ -2795,7 +2795,7 @@
         "South Suval",
         "West Suval"
       ],
-      "owner": "Faction7",
+      "owner": null,
       "resources": 3,
       "terrain_tags": [
         "coast",
@@ -4410,6 +4410,32 @@
         "Koleth and Balog roots mark scriptural, administrative, and sacred authority registers."
       ],
       "shift_keys": []
+    }
+  },
+  "faction_arrivals": {
+    "Faction2": {
+      "language": "mittoli",
+      "arrival_turn": 10,
+      "arrival_type": "disruptive_colonial_landing",
+      "entry_region": "East Mithala",
+      "origin": "foreign land",
+      "status": "foreign_colony"
+    },
+    "Faction6": {
+      "language": "ibnael",
+      "arrival_turn": 11,
+      "arrival_type": "disruptive_colonial_landing",
+      "entry_region": "South Acordwood",
+      "origin": "foreign land",
+      "status": "foreign_colony"
+    },
+    "Faction7": {
+      "language": "elodi",
+      "arrival_turn": 20,
+      "arrival_type": "disruptive_colonial_landing",
+      "entry_region": "East Suval",
+      "origin": "foreign land",
+      "status": "foreign_colony"
     }
   }
 }
