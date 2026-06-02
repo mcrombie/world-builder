@@ -1,6 +1,6 @@
 import { app, shell, BrowserWindow, ipcMain, dialog } from 'electron'
 import { join } from 'path'
-import { readFileSync, writeFileSync, existsSync } from 'fs'
+import { readFileSync, writeFileSync, existsSync, mkdirSync } from 'fs'
 import { spawn, spawnSync, ChildProcess } from 'child_process'
 import * as http from 'http'
 import * as net from 'net'
@@ -138,6 +138,15 @@ ipcMain.handle('map:load-example', (_, id: string) => {
   } catch {
     return { canceled: true, error: 'Example file not found.' }
   }
+})
+
+ipcMain.handle('map:save-story', async (_, jsonData: string, worldName: string) => {
+  const safe = (worldName ?? 'story-world').replace(/[^a-zA-Z0-9-_ ]/g, '').trim().slice(0, 64) || 'story-world'
+  const dir = join(app.getPath('userData'), 'story-worlds')
+  if (!existsSync(dir)) mkdirSync(dir, { recursive: true })
+  const filePath = join(dir, `${safe}-${Date.now()}.wwmap`)
+  writeFileSync(filePath, jsonData, 'utf-8')
+  return { filePath }
 })
 
 // ── Recent files IPC ──────────────────────────────────────────────────────────

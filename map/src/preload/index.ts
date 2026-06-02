@@ -10,6 +10,7 @@ contextBridge.exposeInMainWorld('electronAPI', {
     addRecent:   (path: string, name: string)          => ipcRenderer.invoke('map:add-recent', path, name),
     listExamples: ()                                   => ipcRenderer.invoke('map:list-examples'),
     loadExample:  (id: string)                         => ipcRenderer.invoke('map:load-example', id),
+    saveStory:    (json: string, name: string)          => ipcRenderer.invoke('map:save-story', json, name),
   },
   lore: {
     load: () => ipcRenderer.invoke('lore:load'),

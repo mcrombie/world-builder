@@ -16,6 +16,7 @@ export interface ExampleMeta {
 
 export interface FileIO {
   saveMap(json: string, currentPath?: string): Promise<SaveMapResult>
+  saveStory(json: string, worldName: string): Promise<SaveMapResult>
   loadMap(): Promise<LoadMapResult>
   loadByPath(path: string): Promise<LoadMapResult>
   chooseImage(): Promise<ImageResult>
@@ -30,7 +31,8 @@ export interface FileIO {
 export const IS_BROWSER = import.meta.env.VITE_PLATFORM === 'browser'
 
 const electronIO: FileIO = {
-  saveMap:     (json, path) => (window as any).electronAPI.map.save(json, path),
+  saveMap:      (json, path)       => (window as any).electronAPI.map.save(json, path),
+  saveStory:    (json, worldName)  => (window as any).electronAPI.map.saveStory(json, worldName),
   loadMap:     ()           => (window as any).electronAPI.map.load(),
   loadByPath:  (path)       => (window as any).electronAPI.map.loadByPath(path),
   chooseImage: ()           => (window as any).electronAPI.map.chooseImage(),
@@ -41,6 +43,10 @@ const electronIO: FileIO = {
 }
 
 const browserIO: FileIO = {
+  async saveStory(json, worldName) {
+    const name = `${(worldName || 'my-world').replace(/[^a-zA-Z0-9- ]/g, '').trim()}.wwmap`
+    return browserIO.saveMap(json, name)
+  },
   async saveMap(json, filename) {
     const name = filename?.replace(/[/\\]/g, '_') ?? 'my-world'
     const blob = new Blob([json], { type: 'application/json' })

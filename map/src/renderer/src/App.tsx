@@ -194,6 +194,33 @@ export default function App() {
     }
   }
 
+  // ── Story mode completion ─────────────────────────────────────────────────
+  async function handleStoryComplete(numFactions: number, worldName: string) {
+    setAppMode('editor')
+    if (!IS_BROWSER && window.electronAPI?.sim) {
+      const currentMap = useMapStore.getState().map
+      if (!currentMap) return
+      try {
+        const saved = await fileIO.saveStory(JSON.stringify(currentMap, null, 2), worldName)
+        if (saved.filePath) {
+          markSaved(saved.filePath)
+          await fileIO.addRecent(saved.filePath, worldName)
+          setSimFactionCount(numFactions)
+          setSimulating(true)
+          const result = await window.electronAPI.sim.start(saved.filePath, numFactions, 'clashvergence', '')
+          if (!result.ok) {
+            alert('Simulation failed to start:\n' + (result.error ?? 'Unknown error'))
+            setSimulating(false)
+          } else if (result.world) {
+            setSimWorld(result.world as SimWorldState)
+          }
+        }
+      } catch (err) {
+        console.error('Story mode completion error:', err)
+      }
+    }
+  }
+
   // ── Status display ────────────────────────────────────────────────────────
   const saveStatus = IS_BROWSER
     ? (isDirty ? 'Unsaved changes' : currentPath ? 'Saved' : '')
@@ -372,7 +399,7 @@ export default function App() {
           </div>
         )}
 
-        {appMode === 'story' && <StoryView />}
+        {appMode === 'story' && <StoryView onComplete={handleStoryComplete} />}
       </div>
 
       {/* ── Status bar ── */}
