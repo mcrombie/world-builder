@@ -189,7 +189,7 @@ const SIM_PORT = 18765
 let simProcess: ChildProcess | null = null
 let simPid: number | undefined
 let simMapPath: string | null = null
-let simNumFactions: number = 4
+let simNumFactions: number = 7
 let simType: string = 'clashvergence'
 
 function _generatedMapPathFor(sourcePath: string, mapExt: string): string {
@@ -333,7 +333,7 @@ function _resolveMapPath(mapFilePath: string): string | null {
   return mapFilePath
 }
 
-ipcMain.handle('sim:start', async (_, mapFilePath: string, numFactions: number = 4, requestedSimType: string = 'clashvergence') => {
+ipcMain.handle('sim:start', async (_, mapFilePath: string, numFactions: number = 7, requestedSimType: string = 'clashvergence') => {
   const resolvedPath = _resolveMapPath(mapFilePath)
   if (!resolvedPath) return { ok: false, error: `Unknown example: ${mapFilePath}` }
 
@@ -394,7 +394,7 @@ ipcMain.handle('sim:load-and-start', async () => {
   if (!envelope.worldwright_save) return { ok: false, error: 'Invalid save file format.' }
 
   const mapPath = envelope.map_path as string
-  const numFactions = Number(envelope.num_factions ?? 4)
+  const numFactions = Number(envelope.num_factions ?? 7)
   const savedSimType: string = envelope.sim_type ?? 'clashvergence'
   const worldState = envelope.world_state
 

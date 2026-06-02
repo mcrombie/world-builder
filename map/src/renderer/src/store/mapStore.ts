@@ -134,7 +134,7 @@ export const useMapStore = create<MapStore>((set, get) => ({
   strokeBefore: null,
   simWorld: null,
   isSimulating: false,
-  simFactionCount: 4,
+  simFactionCount: 7,
   simType: 'clashvergence',
   setSimWorld: (world) => set({ simWorld: world }),
   setSimulating: (v) => set({ isSimulating: v }),

@@ -15,7 +15,7 @@ contextBridge.exposeInMainWorld('electronAPI', {
     load: () => ipcRenderer.invoke('lore:load'),
   },
   sim: {
-    start:         (mapFilePath: string, numFactions?: number, simType?: string) => ipcRenderer.invoke('sim:start', mapFilePath, numFactions ?? 4, simType ?? 'clashvergence'),
+    start:         (mapFilePath: string, numFactions?: number, simType?: string) => ipcRenderer.invoke('sim:start', mapFilePath, numFactions ?? 7, simType ?? 'clashvergence'),
     stop:          ()                    => ipcRenderer.invoke('sim:stop'),
     world:         ()                    => ipcRenderer.invoke('sim:world'),
     advance:       ()                    => ipcRenderer.invoke('sim:advance'),

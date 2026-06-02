@@ -1,6 +1,6 @@
 {
   "description": "world-builder map: Azhora",
-  "num_factions": 4,
+  "num_factions": 7,
   "faction_names": [],
   "sea_links": [
     [
@@ -650,7 +650,7 @@
         "East Ganun",
         "North Riesov"
       ],
-      "owner": "Faction3",
+      "owner": null,
       "resources": 2,
       "terrain_tags": [
         "hills",
@@ -700,7 +700,7 @@
         "South Lond",
         "West Lond"
       ],
-      "owner": null,
+      "owner": "Faction1",
       "resources": 3,
       "terrain_tags": [
         "riverland",
@@ -871,7 +871,7 @@
         "Cudon",
         "Narcosh"
       ],
-      "owner": "Faction1",
+      "owner": null,
       "resources": 2,
       "terrain_tags": [
         "steppe"
@@ -991,7 +991,7 @@
         "North Acorwood",
         "West Acorwood"
       ],
-      "owner": null,
+      "owner": "Faction6",
       "resources": 2,
       "terrain_tags": [
         "highland",
@@ -1085,7 +1085,7 @@
         "West Acorwood",
         "West Mithala"
       ],
-      "owner": null,
+      "owner": "Faction2",
       "resources": 2,
       "terrain_tags": [
         "steppe",
@@ -1101,7 +1101,7 @@
         "North Mithala",
         "South Mithala"
       ],
-      "owner": null,
+      "owner": "Faction5",
       "resources": 3,
       "terrain_tags": [
         "riverland",
@@ -1591,7 +1591,7 @@
         "South Suval",
         "West Suval"
       ],
-      "owner": null,
+      "owner": "Faction7",
       "resources": 2,
       "terrain_tags": [
         "hills",
@@ -1726,7 +1726,7 @@
         "Navarth",
         "Nether Desert"
       ],
-      "owner": null,
+      "owner": "Faction3",
       "resources": 2,
       "terrain_tags": [
         "steppe",
@@ -1857,7 +1857,7 @@
       "neighbors": [
         "West Izol"
       ],
-      "owner": "Faction4",
+      "owner": null,
       "resources": 2,
       "terrain_tags": [
         "highland",
@@ -1962,7 +1962,7 @@
         "South Meroshe Desert",
         "Trogo"
       ],
-      "owner": null,
+      "owner": "Faction4",
       "resources": 3,
       "terrain_tags": [
         "riverland",
@@ -2115,13 +2115,1075 @@
       "neighbors": [
         "North Scythe"
       ],
-      "owner": "Faction2",
+      "owner": null,
       "resources": 2,
       "terrain_tags": [
         "highland",
         "forest"
       ],
       "climate": "temperate"
+    }
+  },
+  "faction_language_families": {
+    "Faction1": {
+      "family_name": "Boueni",
+      "default_culture_name": "Boueni",
+      "traditions": [
+        "azhoran",
+        "boueni"
+      ],
+      "inspirations": [
+        "Bouen",
+        "Orgmala",
+        "Oremindi",
+        "Cudon",
+        "Celder",
+        "Mithala",
+        "Aurumlis",
+        "Inseld"
+      ],
+      "candidate_pool": [
+        "Bouenel",
+        "Wisves",
+        "Sevun",
+        "Brenoul",
+        "Tesrel",
+        "Belvem",
+        "Kuvon",
+        "Mesrel"
+      ],
+      "onsets": [
+        "az",
+        "belv",
+        "bou",
+        "bren",
+        "di",
+        "grond",
+        "ia",
+        "kuv",
+        "mes",
+        "no",
+        "sev",
+        "srel",
+        "sri",
+        "te",
+        "vel",
+        "veln",
+        "wis"
+      ],
+      "middles": [
+        "a",
+        "an",
+        "e",
+        "en",
+        "i",
+        "o",
+        "on",
+        "u"
+      ],
+      "suffixes": [
+        "el",
+        "em",
+        "i",
+        "o",
+        "on",
+        "oul",
+        "srel",
+        "un",
+        "ves"
+      ],
+      "seed_fragments": [
+        "aur",
+        "bel",
+        "bou",
+        "bren",
+        "cel",
+        "cud",
+        "kuv",
+        "mes",
+        "ore",
+        "org",
+        "sev",
+        "srel",
+        "vel",
+        "wis"
+      ],
+      "lexical_roots": {
+        "settlement": [
+          "bou",
+          "cel"
+        ],
+        "river": [
+          "ore",
+          "vel"
+        ],
+        "forest": [
+          "wis",
+          "cel"
+        ],
+        "hill": [
+          "grond",
+          "org"
+        ],
+        "plain": [
+          "sev",
+          "bel"
+        ],
+        "marsh": [
+          "srel",
+          "ore"
+        ],
+        "sea": [
+          "aur",
+          "vel"
+        ],
+        "border": [
+          "grond",
+          "kuv"
+        ],
+        "market": [
+          "mes",
+          "bel"
+        ],
+        "fort": [
+          "grond",
+          "bren"
+        ],
+        "sacred": [
+          "aur",
+          "az"
+        ],
+        "sun": [
+          "aur",
+          "sev"
+        ],
+        "ancestor": [
+          "bou",
+          "org"
+        ],
+        "ruler": [
+          "bel",
+          "kuv"
+        ],
+        "dynasty": [
+          "bou",
+          "vel"
+        ]
+      },
+      "style_notes": [
+        "Southern and island-influenced names with bou, vel, wis, and srel stems.",
+        "Soft vowel bridges lead into clipped -el, -em, -un, and -ves endings."
+      ],
+      "shift_keys": []
+    },
+    "Faction2": {
+      "family_name": "Mittoli",
+      "default_culture_name": "Mittoli",
+      "traditions": [
+        "azhoran",
+        "mittoli"
+      ],
+      "inspirations": [
+        "Azhora",
+        "Mittolo",
+        "Caeras",
+        "Alezhor",
+        "Telemonia",
+        "Legemum",
+        "Minoleth",
+        "Nilom"
+      ],
+      "candidate_pool": [
+        "Caeloss",
+        "Velith",
+        "Galom",
+        "Daelith",
+        "Azhorel",
+        "Belath",
+        "Treloss",
+        "Nilor"
+      ],
+      "onsets": [
+        "al",
+        "ar",
+        "azh",
+        "bel",
+        "cael",
+        "dael",
+        "dor",
+        "el",
+        "gal",
+        "hom",
+        "kael",
+        "mel",
+        "mir",
+        "nil",
+        "sor",
+        "tal",
+        "thal",
+        "trel",
+        "vel",
+        "zael"
+      ],
+      "middles": [
+        "a",
+        "ae",
+        "e",
+        "i",
+        "o",
+        "oe",
+        "u"
+      ],
+      "suffixes": [
+        "a",
+        "ael",
+        "an",
+        "ath",
+        "el",
+        "eth",
+        "in",
+        "ith",
+        "oe",
+        "ol",
+        "om",
+        "on",
+        "or",
+        "os",
+        "oss",
+        "um"
+      ],
+      "seed_fragments": [
+        "azh",
+        "cael",
+        "dael",
+        "gal",
+        "hom",
+        "leg",
+        "min",
+        "mitt",
+        "nil",
+        "noth",
+        "tel",
+        "trel",
+        "vel"
+      ],
+      "lexical_roots": {
+        "settlement": [
+          "hom",
+          "mitt"
+        ],
+        "river": [
+          "cael",
+          "nil"
+        ],
+        "forest": [
+          "ib",
+          "noth"
+        ],
+        "hill": [
+          "thal",
+          "dor"
+        ],
+        "plain": [
+          "gal",
+          "bel"
+        ],
+        "marsh": [
+          "ac",
+          "ib"
+        ],
+        "sea": [
+          "vel",
+          "isca"
+        ],
+        "border": [
+          "trel",
+          "dor"
+        ],
+        "market": [
+          "leg",
+          "tel"
+        ],
+        "fort": [
+          "dor",
+          "thal"
+        ],
+        "sacred": [
+          "azh",
+          "cael"
+        ],
+        "sun": [
+          "ael",
+          "sol"
+        ],
+        "ancestor": [
+          "mitt",
+          "azhor"
+        ],
+        "ruler": [
+          "tal",
+          "bel"
+        ],
+        "dynasty": [
+          "azh",
+          "dael"
+        ]
+      },
+      "style_notes": [
+        "Old Azhoran civic names with liquid consonants and open vowels.",
+        "Often favors cael, vel, and azh roots for rivers, coasts, and sacred lineages."
+      ],
+      "shift_keys": []
+    },
+    "Faction3": {
+      "family_name": "Pyrosi",
+      "default_culture_name": "Pyrosi",
+      "traditions": [
+        "azhoran",
+        "pyrosi"
+      ],
+      "inspirations": [
+        "Pyros",
+        "Navarth",
+        "Velnor",
+        "Nethereum",
+        "Isareos",
+        "Caricas",
+        "Elagos",
+        "Vastos"
+      ],
+      "candidate_pool": [
+        "Vorell",
+        "Pyrath",
+        "Kelmarr",
+        "Taeloss",
+        "Nethir",
+        "Vaellom",
+        "Raelith",
+        "Gelovan"
+      ],
+      "onsets": [
+        "bass",
+        "dre",
+        "fell",
+        "gel",
+        "kael",
+        "kel",
+        "llaer",
+        "moss",
+        "neth",
+        "nor",
+        "pyr",
+        "rael",
+        "tael",
+        "tal",
+        "vaell",
+        "vel",
+        "vor"
+      ],
+      "middles": [
+        "a",
+        "ae",
+        "e",
+        "i",
+        "o",
+        "u"
+      ],
+      "suffixes": [
+        "ael",
+        "an",
+        "ell",
+        "eth",
+        "iel",
+        "in",
+        "ir",
+        "ith",
+        "marr",
+        "om",
+        "oss",
+        "ov",
+        "van"
+      ],
+      "seed_fragments": [
+        "car",
+        "ell",
+        "gel",
+        "nav",
+        "neth",
+        "pyr",
+        "rael",
+        "tael",
+        "vel",
+        "vor"
+      ],
+      "lexical_roots": {
+        "settlement": [
+          "nav",
+          "pyr"
+        ],
+        "river": [
+          "vaell",
+          "neth"
+        ],
+        "forest": [
+          "moss",
+          "gel"
+        ],
+        "hill": [
+          "fell",
+          "vor"
+        ],
+        "plain": [
+          "tael",
+          "vast"
+        ],
+        "marsh": [
+          "neth",
+          "moss"
+        ],
+        "sea": [
+          "is",
+          "rael"
+        ],
+        "border": [
+          "vor",
+          "fell"
+        ],
+        "market": [
+          "car",
+          "gel"
+        ],
+        "fort": [
+          "bass",
+          "vor"
+        ],
+        "sacred": [
+          "pyr",
+          "rael"
+        ],
+        "sun": [
+          "pyr",
+          "tael"
+        ],
+        "ancestor": [
+          "nav",
+          "vel"
+        ],
+        "ruler": [
+          "tal",
+          "kel"
+        ],
+        "dynasty": [
+          "pyr",
+          "neth"
+        ]
+      },
+      "style_notes": [
+        "Highland and volcanic names with py, vor, vel, and neth stems.",
+        "Compounds tend toward strong initial consonants and -oss, -ell, or -marr endings."
+      ],
+      "shift_keys": []
+    },
+    "Faction4": {
+      "family_name": "Moreshi",
+      "default_culture_name": "Moreshi",
+      "traditions": [
+        "azhoran",
+        "moreshi"
+      ],
+      "inspirations": [
+        "Marosh",
+        "Meroshe",
+        "Sabr",
+        "Nuur",
+        "Ghayth",
+        "Rih",
+        "Saxr",
+        "Muruus",
+        "Maan",
+        "Waaha"
+      ],
+      "candidate_pool": [
+        "Sahraan",
+        "Nuurat",
+        "Ghaymar",
+        "Rihas",
+        "Saxrul",
+        "Maanub",
+        "Waahan",
+        "Maroshi"
+      ],
+      "onsets": [
+        "al",
+        "ar",
+        "bar",
+        "ghay",
+        "ha",
+        "kal",
+        "maan",
+        "mar",
+        "naj",
+        "nur",
+        "qad",
+        "rih",
+        "sab",
+        "sar",
+        "sax",
+        "waa",
+        "zar"
+      ],
+      "middles": [
+        "a",
+        "aa",
+        "i",
+        "ii",
+        "u",
+        "uu"
+      ],
+      "suffixes": [
+        "ah",
+        "an",
+        "as",
+        "at",
+        "b",
+        "iim",
+        "l",
+        "m",
+        "n",
+        "r",
+        "t",
+        "ub"
+      ],
+      "seed_fragments": [
+        "bar",
+        "ghay",
+        "maan",
+        "mar",
+        "mer",
+        "mur",
+        "nur",
+        "qad",
+        "rih",
+        "sab",
+        "sax",
+        "waa"
+      ],
+      "lexical_roots": {
+        "settlement": [
+          "waa",
+          "maan"
+        ],
+        "river": [
+          "nahr",
+          "wadii"
+        ],
+        "forest": [
+          "ghab",
+          "zar"
+        ],
+        "hill": [
+          "sax",
+          "qad"
+        ],
+        "plain": [
+          "mur",
+          "mer"
+        ],
+        "marsh": [
+          "sab",
+          "wadii"
+        ],
+        "sea": [
+          "bahr",
+          "mar"
+        ],
+        "border": [
+          "hadd",
+          "sax"
+        ],
+        "market": [
+          "suq",
+          "maan"
+        ],
+        "fort": [
+          "hisn",
+          "qad"
+        ],
+        "sacred": [
+          "qad",
+          "nur"
+        ],
+        "sun": [
+          "sham",
+          "nur"
+        ],
+        "ancestor": [
+          "sabr",
+          "mar"
+        ],
+        "ruler": [
+          "malik",
+          "amir"
+        ],
+        "dynasty": [
+          "mar",
+          "ghay"
+        ]
+      },
+      "style_notes": [
+        "Desert and oasis names with long vowels, hissing consonants, and compact endings.",
+        "Common roots distinguish wells, stone ridges, caravans, and old sacred sites."
+      ],
+      "shift_keys": []
+    },
+    "Faction5": {
+      "family_name": "Grassic",
+      "default_culture_name": "Grassic",
+      "traditions": [
+        "azhoran",
+        "grassic"
+      ],
+      "inspirations": [
+        "Ibenal",
+        "Ibenwood",
+        "Acorwood",
+        "Nonoth",
+        "Lond",
+        "Mithala",
+        "Thoth",
+        "Witherst"
+      ],
+      "candidate_pool": [
+        "Velveth",
+        "Kaulgeil",
+        "Aulthor",
+        "Nellgaul",
+        "Thraunel",
+        "Golvoth",
+        "Belkaul",
+        "Sorthor"
+      ],
+      "onsets": [
+        "aul",
+        "bel",
+        "gaul",
+        "gol",
+        "hom",
+        "kaul",
+        "kor",
+        "nell",
+        "sor",
+        "tel",
+        "thel",
+        "thos",
+        "thraun",
+        "vel",
+        "wol"
+      ],
+      "middles": [
+        "a",
+        "e",
+        "i",
+        "o",
+        "u"
+      ],
+      "suffixes": [
+        "aul",
+        "gaul",
+        "geil",
+        "ke",
+        "ko",
+        "ne",
+        "nel",
+        "nol",
+        "ther",
+        "thor",
+        "veth",
+        "voth"
+      ],
+      "seed_fragments": [
+        "acor",
+        "aul",
+        "bel",
+        "iben",
+        "kaul",
+        "lond",
+        "mith",
+        "nell",
+        "noth",
+        "thel",
+        "thoth",
+        "vel"
+      ],
+      "lexical_roots": {
+        "settlement": [
+          "hom",
+          "iben"
+        ],
+        "river": [
+          "aul",
+          "vel"
+        ],
+        "forest": [
+          "iben",
+          "acor"
+        ],
+        "hill": [
+          "thoth",
+          "kaul"
+        ],
+        "plain": [
+          "lond",
+          "vel"
+        ],
+        "marsh": [
+          "acor",
+          "aul"
+        ],
+        "sea": [
+          "is",
+          "wol"
+        ],
+        "border": [
+          "kor",
+          "thos"
+        ],
+        "market": [
+          "tel",
+          "hom"
+        ],
+        "fort": [
+          "kor",
+          "bel"
+        ],
+        "sacred": [
+          "thel",
+          "thoth"
+        ],
+        "sun": [
+          "aul",
+          "vel"
+        ],
+        "ancestor": [
+          "noth",
+          "mith"
+        ],
+        "ruler": [
+          "bel",
+          "thel"
+        ],
+        "dynasty": [
+          "iben",
+          "nell"
+        ]
+      },
+      "style_notes": [
+        "Woodland and grassland names with Germanic-like th, v, and l clusters.",
+        "Favors compact roots for homesteads, woods, border stones, and old clearings."
+      ],
+      "shift_keys": []
+    },
+    "Faction6": {
+      "family_name": "Ibnael",
+      "default_culture_name": "Ibnael",
+      "traditions": [
+        "azhoran",
+        "ibnael",
+        "forest_mittoli"
+      ],
+      "inspirations": [
+        "Ibenwood",
+        "Ibenal",
+        "Ibenale",
+        "Alezhor",
+        "Elagos",
+        "Dark Groves",
+        "Velmara",
+        "Ondren"
+      ],
+      "candidate_pool": [
+        "Ibnael",
+        "Ibnoss",
+        "Aeliben",
+        "Threnib",
+        "Velmorn",
+        "Nothib",
+        "Gloameth",
+        "Ossiben"
+      ],
+      "onsets": [
+        "ael",
+        "dren",
+        "glom",
+        "ib",
+        "iben",
+        "ibn",
+        "morn",
+        "noth",
+        "ond",
+        "oss",
+        "thal",
+        "thren",
+        "vel",
+        "vorn",
+        "wyr"
+      ],
+      "middles": [
+        "a",
+        "ae",
+        "e",
+        "i",
+        "o",
+        "oe",
+        "u",
+        "y"
+      ],
+      "suffixes": [
+        "ael",
+        "ath",
+        "d",
+        "el",
+        "en",
+        "eth",
+        "ib",
+        "il",
+        "n",
+        "oss",
+        "th",
+        "um",
+        "yr"
+      ],
+      "seed_fragments": [
+        "ael",
+        "dren",
+        "el",
+        "glom",
+        "ib",
+        "iben",
+        "ibn",
+        "morn",
+        "noth",
+        "ond",
+        "oss",
+        "thal",
+        "thren",
+        "vel"
+      ],
+      "lexical_roots": {
+        "settlement": [
+          "ibn",
+          "ael"
+        ],
+        "river": [
+          "vel",
+          "ond"
+        ],
+        "forest": [
+          "iben",
+          "glom"
+        ],
+        "hill": [
+          "thal",
+          "dren"
+        ],
+        "plain": [
+          "ael",
+          "vel"
+        ],
+        "marsh": [
+          "ond",
+          "ib"
+        ],
+        "sea": [
+          "ael",
+          "vorn"
+        ],
+        "border": [
+          "thren",
+          "thal"
+        ],
+        "market": [
+          "ael",
+          "vel"
+        ],
+        "fort": [
+          "dren",
+          "oss"
+        ],
+        "sacred": [
+          "iben",
+          "morn"
+        ],
+        "sun": [
+          "ael",
+          "vel"
+        ],
+        "ancestor": [
+          "noth",
+          "iben"
+        ],
+        "ruler": [
+          "ael",
+          "oss"
+        ],
+        "dynasty": [
+          "ibn",
+          "noth"
+        ]
+      },
+      "style_notes": [
+        "Forest Mittoli endonym built from Ibenwood roots and older dense substrate forms.",
+        "Favors ib, ibn, thren, and glom clusters for old forest, silence, and unseen-presence concepts."
+      ],
+      "shift_keys": []
+    },
+    "Faction7": {
+      "family_name": "Elodi",
+      "default_culture_name": "Elodi",
+      "traditions": [
+        "azhoran",
+        "elodi",
+        "koleth"
+      ],
+      "inspirations": [
+        "Elod",
+        "Elodi",
+        "Koleth",
+        "Erath Kol",
+        "Balog",
+        "Threshold",
+        "Old Kingdom",
+        "Central Island"
+      ],
+      "candidate_pool": [
+        "Elodi",
+        "Koleth",
+        "Balogeth",
+        "Erathol",
+        "Threskol",
+        "Kolven",
+        "Lodikar",
+        "Velketh"
+      ],
+      "onsets": [
+        "bal",
+        "dar",
+        "el",
+        "er",
+        "eth",
+        "kel",
+        "kol",
+        "lod",
+        "nem",
+        "od",
+        "sov",
+        "thal",
+        "vel",
+        "zar"
+      ],
+      "middles": [
+        "a",
+        "e",
+        "i",
+        "o",
+        "u",
+        "ae",
+        "ia"
+      ],
+      "suffixes": [
+        "ag",
+        "an",
+        "ath",
+        "el",
+        "eth",
+        "i",
+        "ik",
+        "od",
+        "ol",
+        "on",
+        "th",
+        "um"
+      ],
+      "seed_fragments": [
+        "bal",
+        "el",
+        "elod",
+        "erath",
+        "eth",
+        "kol",
+        "koleth",
+        "lod",
+        "od",
+        "thal",
+        "vel"
+      ],
+      "lexical_roots": {
+        "settlement": [
+          "elod",
+          "kol"
+        ],
+        "river": [
+          "vel",
+          "od"
+        ],
+        "forest": [
+          "lod",
+          "thal"
+        ],
+        "hill": [
+          "erath",
+          "kol"
+        ],
+        "plain": [
+          "er",
+          "lod"
+        ],
+        "marsh": [
+          "od",
+          "vel"
+        ],
+        "sea": [
+          "kol",
+          "vel"
+        ],
+        "border": [
+          "thal",
+          "eth"
+        ],
+        "market": [
+          "kol",
+          "bal"
+        ],
+        "fort": [
+          "bal",
+          "erath"
+        ],
+        "sacred": [
+          "bal",
+          "kol"
+        ],
+        "sun": [
+          "sov",
+          "el"
+        ],
+        "ancestor": [
+          "erath",
+          "lod"
+        ],
+        "ruler": [
+          "balog",
+          "bal"
+        ],
+        "dynasty": [
+          "kol",
+          "erath"
+        ]
+      },
+      "style_notes": [
+        "Elodi names preserve an eastern Old Kingdom lineage rather than an Azhoran family.",
+        "Koleth and Balog roots mark scriptural, administrative, and sacred authority registers."
+      ],
+      "shift_keys": []
     }
   }
 }
