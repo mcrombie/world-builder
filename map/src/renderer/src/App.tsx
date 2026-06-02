@@ -9,13 +9,23 @@ import { MapLibraryDialog } from './components/MapLibraryDialog'
 import { ExampleMapsDialog } from './components/ExampleMapsDialog'
 import { SimulationPanel } from './components/SimulationPanel'
 import { SimulateDialog } from './components/SimulateDialog'
+import { StoryView } from './components/StoryView'
 import { useMapStore } from './store/mapStore'
 import { fileIO, IS_BROWSER, type RecentFile } from './lib/fileIO'
 import { autoSave, loadAutoSave, saveToLibrary } from './lib/mapLibrary'
 import type { MapData, SimWorldState } from './types/map'
 
+type AppMode = 'editor' | 'generate' | 'story'
+
+const APP_TABS: { id: AppMode; label: string }[] = [
+  { id: 'editor',   label: 'Editor'     },
+  { id: 'generate', label: 'Generate'   },
+  { id: 'story',    label: 'Story Mode' },
+]
+
 export default function App() {
-  const [showNewDialog,       setShowNewDialog]       = useState(false)
+  const [appMode,              setAppMode]             = useState<AppMode>('editor')
+  const [showNewDialog,        setShowNewDialog]       = useState(false)
   const [showRandomDialog,    setShowRandomDialog]    = useState(false)
   const [showResizeDialog,    setShowResizeDialog]    = useState(false)
   const [showLibraryDialog,   setShowLibraryDialog]   = useState(false)
@@ -194,16 +204,32 @@ export default function App() {
 
       {/* ── Menu bar ── */}
       <header className="flex items-center gap-2 px-4 py-2 bg-gray-900 border-b border-gray-800 shrink-0">
-        <span className="font-semibold text-indigo-400 mr-2">World Builder</span>
+        <span className="font-semibold text-indigo-400 mr-1">World Builder</span>
 
+        {/* App mode tabs */}
+        <div className="flex gap-0.5 bg-gray-800 rounded p-0.5 mr-2">
+          {APP_TABS.map(({ id, label }) => (
+            <button
+              key={id}
+              onClick={() => setAppMode(id)}
+              className={`px-3 py-1 text-sm rounded transition-colors ${
+                appMode === id
+                  ? 'bg-gray-900 text-white'
+                  : 'text-gray-400 hover:text-gray-200 hover:bg-gray-700'
+              }`}
+            >
+              {label}
+            </button>
+          ))}
+        </div>
+
+        {/* Editor-only controls */}
+        {appMode === 'editor' && (<>
         <button className="px-3 py-1 text-sm rounded hover:bg-gray-700" onClick={() => setShowNewDialog(true)}>
           New
         </button>
         <button className="px-3 py-1 text-sm rounded hover:bg-gray-700" onClick={() => setShowExamplesDialog(true)}>
           Maps
-        </button>
-        <button className="px-3 py-1 text-sm rounded hover:bg-gray-700" onClick={() => setShowRandomDialog(true)}>
-          Generate
         </button>
         <button className="px-3 py-1 text-sm rounded hover:bg-gray-700" onClick={handleOpen}>
           Open
@@ -300,42 +326,53 @@ export default function App() {
 
         <span className="text-xs text-gray-500 truncate max-w-xs">{saveStatus}</span>
         {map && <span className="text-xs text-gray-500">{map.width}×{map.height} hexes</span>}
+        </>)}
       </header>
 
       {/* ── Main area ── */}
       <div className="flex flex-1 overflow-hidden">
-        <Toolbar />
-        <main className="flex-1 relative overflow-hidden">
-          {map ? (
-            <HexCanvas />
-          ) : (
-            <div className="flex flex-col items-center justify-center h-full gap-4 text-gray-500">
-              <p className="text-lg">No map loaded</p>
-              <div className="flex gap-3">
-                <button
-                  className="px-4 py-2 rounded bg-indigo-600 hover:bg-indigo-500 text-white text-sm"
-                  onClick={() => setShowNewDialog(true)}
-                >
-                  New Map
-                </button>
-                <button
-                  className="px-4 py-2 rounded bg-gray-700 hover:bg-gray-600 text-sm"
-                  onClick={handleOpen}
-                >
-                  Open Map
-                </button>
+        {appMode === 'editor' && (<>
+          <Toolbar />
+          <main className="flex-1 relative overflow-hidden">
+            {map ? (
+              <HexCanvas />
+            ) : (
+              <div className="flex flex-col items-center justify-center h-full gap-4 text-gray-500">
+                <p className="text-lg">No map loaded</p>
+                <div className="flex gap-3">
+                  <button
+                    className="px-4 py-2 rounded bg-indigo-600 hover:bg-indigo-500 text-white text-sm"
+                    onClick={() => setShowNewDialog(true)}
+                  >
+                    New Map
+                  </button>
+                  <button
+                    className="px-4 py-2 rounded bg-gray-700 hover:bg-gray-600 text-sm"
+                    onClick={handleOpen}
+                  >
+                    Open Map
+                  </button>
+                </div>
               </div>
-            </div>
-          )}
-        </main>
-        {isSimulating ? (
-          <>
-            <SimulationPanel />
+            )}
+          </main>
+          {isSimulating ? (
+            <>
+              <SimulationPanel />
+              <InfoPanel />
+            </>
+          ) : (
             <InfoPanel />
-          </>
-        ) : (
-          <InfoPanel />
+          )}
+        </>)}
+
+        {appMode === 'generate' && (
+          <div className="flex-1 flex items-start justify-center overflow-y-auto p-8 bg-gray-950">
+            <RandomMapDialog inline onClose={() => setAppMode('editor')} />
+          </div>
         )}
+
+        {appMode === 'story' && <StoryView />}
       </div>
 
       {/* ── Status bar ── */}

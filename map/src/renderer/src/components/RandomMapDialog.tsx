@@ -5,6 +5,7 @@ import { TERRAIN_COLORS } from '../lib/terrain'
 
 interface Props {
   onClose: () => void
+  inline?: boolean
 }
 
 const MAP_SIZES = [
@@ -54,7 +55,7 @@ function Slider({
   )
 }
 
-export function RandomMapDialog({ onClose }: Props) {
+export function RandomMapDialog({ onClose, inline = false }: Props) {
   const newMap = useMapStore((s) => s.newMap)
 
   const [name,          setName]          = useState('My World')
@@ -122,11 +123,10 @@ export function RandomMapDialog({ onClose }: Props) {
     onClose()
   }
 
-  return (
-    <div className="fixed inset-0 bg-black/70 flex items-center justify-center z-50">
-      <div className="bg-gray-900 rounded-lg p-6 text-gray-100 max-h-[90vh] overflow-y-auto w-[780px] max-w-[95vw]">
+  const inner = (
+    <div className={inline ? 'bg-gray-900 rounded-lg p-6 text-gray-100 w-[780px] max-w-full' : 'bg-gray-900 rounded-lg p-6 text-gray-100 max-h-[90vh] overflow-y-auto w-[780px] max-w-[95vw]'}>
 
-        <h2 className="text-lg font-semibold mb-4">Random Map</h2>
+      <h2 className="text-lg font-semibold mb-4">Random Map</h2>
 
         {/* ── Top row: basic settings + minimap ────────────────────────── */}
         <div className="flex gap-6 mb-5">
@@ -229,12 +229,14 @@ export function RandomMapDialog({ onClose }: Props) {
         </div>
 
         <div className="flex gap-2 justify-end mt-5">
-          <button
-            className="px-4 py-2 text-sm rounded bg-gray-700 hover:bg-gray-600"
-            onClick={onClose}
-          >
-            Cancel
-          </button>
+          {!inline && (
+            <button
+              className="px-4 py-2 text-sm rounded bg-gray-700 hover:bg-gray-600"
+              onClick={onClose}
+            >
+              Cancel
+            </button>
+          )}
           <button
             className="px-4 py-2 text-sm rounded bg-indigo-600 hover:bg-indigo-500 font-semibold"
             onClick={generate}
@@ -243,7 +245,13 @@ export function RandomMapDialog({ onClose }: Props) {
           </button>
         </div>
 
-      </div>
+    </div>
+  )
+
+  if (inline) return inner
+  return (
+    <div className="fixed inset-0 bg-black/70 flex items-center justify-center z-50">
+      {inner}
     </div>
   )
 }
