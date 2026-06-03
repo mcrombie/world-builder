@@ -397,7 +397,7 @@ export function Toolbar() {
             if (!result || result.canceled || !result.data) return
             try {
               const parsed = JSON.parse(result.data) as AzloreFile
-              if (parsed.azlore) setLoreFile(parsed)
+              if (parsed.azlore) setLoreFile(parsed, result.filePath)
             } catch { /* invalid file */ }
           }}
           className="w-full text-xs bg-gray-800 hover:bg-gray-700 rounded px-2 py-2 text-left truncate"

@@ -16,7 +16,8 @@ interface _LoreResult { data?: string; filePath?: string; canceled?: boolean; er
 
 export interface ElectronAPI {
   lore: {
-    load: () => Promise<_LoreResult>
+    load:       () => Promise<_LoreResult>
+    loadByPath: (path: string) => Promise<_LoreResult>
   }
   map: {
     save:        (jsonData: string, filePath?: string) => Promise<_SaveResult>

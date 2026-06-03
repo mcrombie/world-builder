@@ -99,6 +99,15 @@ ipcMain.handle('map:load-by-path', async (_, path: string) => {
   }
 })
 
+ipcMain.handle('lore:load-by-path', async (_, path: string) => {
+  try {
+    const data = readFileSync(path, 'utf-8')
+    return { canceled: false, data, filePath: path }
+  } catch {
+    return { canceled: true, error: 'File not found or unreadable.' }
+  }
+})
+
 ipcMain.handle('lore:load', async () => {
   const result = await dialog.showOpenDialog({
     title: 'Open Lore File',

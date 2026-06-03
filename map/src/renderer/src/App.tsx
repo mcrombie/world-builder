@@ -14,7 +14,7 @@ import { WorldBuilderIcon } from './components/WorldBuilderIcon'
 import { useMapStore } from './store/mapStore'
 import { fileIO, IS_BROWSER, type RecentFile } from './lib/fileIO'
 import { autoSave, loadAutoSave, saveToLibrary } from './lib/mapLibrary'
-import type { MapData, SimWorldState } from './types/map'
+import type { AzloreFile, MapData, SimWorldState } from './types/map'
 
 type AppMode = 'editor' | 'generate' | 'story'
 
@@ -52,6 +52,8 @@ export default function App() {
   const setSimSeed       = useMapStore((s) => s.setSimSeed)
   const viewMode         = useMapStore((s) => s.viewMode)
   const setViewMode      = useMapStore((s) => s.setViewMode)
+  const lorePath         = useMapStore((s) => s.map?.lorePath)
+  const setLoreFile      = useMapStore((s) => s.setLoreFile)
 
   // ── Restore autosave on mount (browser only) ──────────────────────────────
   const restoredRef = useRef(false)
@@ -78,6 +80,21 @@ export default function App() {
       window.removeEventListener('beforeunload', save)
     }
   }, [])
+
+  // ── Auto-load lore file when map has a saved lorePath ────────────────────
+  useEffect(() => {
+    if (!lorePath || IS_BROWSER) return
+    if (useMapStore.getState().loreFile) return
+    ;(async () => {
+      const result = await window.electronAPI?.lore?.loadByPath(lorePath)
+      if (!result || result.canceled || !result.data) return
+      try {
+        const parsed = JSON.parse(result.data) as AzloreFile
+        if (parsed.azlore) setLoreFile(parsed)
+      } catch {}
+    })()
+  // eslint-disable-next-line react-hooks/exhaustive-deps
+  }, [lorePath])
 
   // ── Keyboard shortcuts ────────────────────────────────────────────────────
   useEffect(() => {

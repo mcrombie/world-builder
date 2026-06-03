@@ -115,7 +115,7 @@ interface MapStore {
   setSimSeed: (seed: string) => void
 
   loreFile: AzloreFile | null
-  setLoreFile: (f: AzloreFile | null) => void
+  setLoreFile: (f: AzloreFile | null, filePath?: string) => void
 
   viewMode: ViewMode
   setViewMode: (m: ViewMode) => void
@@ -158,7 +158,29 @@ export const useMapStore = create<MapStore>((set, get) => ({
   setSimSeed: (seed) => set({ simSeed: seed }),
 
   loreFile: null,
-  setLoreFile: (f) => set({ loreFile: f }),
+  setLoreFile: (f, filePath?) => {
+    if (!f) { set({ loreFile: null }); return }
+    const { map } = get()
+    if (!map) { set({ loreFile: f }); return }
+    const updatedRegions = { ...map.regions }
+    let changed = false
+    for (const [id, region] of Object.entries(updatedRegions)) {
+      if (region.loreRef) continue
+      const regionName = region.name.toLowerCase().trim()
+      const match = f.entries.find((e) => e.name.toLowerCase().trim() === regionName)
+      if (match) {
+        updatedRegions[id] = { ...region, loreRef: match.id }
+        changed = true
+      }
+    }
+    const mapUpdate = (changed || filePath)
+      ? { ...map, regions: changed ? updatedRegions : map.regions, ...(filePath ? { lorePath: filePath } : {}) }
+      : map
+    set({
+      loreFile: f,
+      ...(changed || filePath ? { map: mapUpdate, isDirty: true } : {}),
+    })
+  },
 
   viewMode: 'map',
   setViewMode: (m) => set({ viewMode: m }),
@@ -219,6 +241,7 @@ export const useMapStore = create<MapStore>((set, get) => ({
       selectedRegion: null,
       history: [],
       strokeBefore: null,
+      loreFile: null,
     }))
   },
 

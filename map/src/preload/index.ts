@@ -13,7 +13,8 @@ contextBridge.exposeInMainWorld('electronAPI', {
     saveStory:    (json: string, name: string)          => ipcRenderer.invoke('map:save-story', json, name),
   },
   lore: {
-    load: () => ipcRenderer.invoke('lore:load'),
+    load:       ()             => ipcRenderer.invoke('lore:load'),
+    loadByPath: (path: string) => ipcRenderer.invoke('lore:load-by-path', path),
   },
   sim: {
     start:         (mapFilePath: string, numFactions?: number, simType?: string, seed?: string) => ipcRenderer.invoke('sim:start', mapFilePath, numFactions ?? 9, simType ?? 'clashvergence', seed ?? ''),

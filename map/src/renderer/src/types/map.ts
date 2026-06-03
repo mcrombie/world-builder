@@ -76,6 +76,7 @@ export interface MapData {
   climateSystem?: 'koppen-v1'
   hexes: Record<string, HexData>
   underlayPath?: string
+  lorePath?: string                      // absolute path to the linked .azlore file
   rivers: Record<string, RiverSize>      // edgeKey → size
   regions: Record<string, RegionData>    // regionId → RegionData
 }
