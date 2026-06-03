@@ -1,7 +1,7 @@
 ---
 name: Ibenale
 category: geography
-tags: [Ibenale, coastal plain, corridor, forest-edge, western coast, mountains, southwest, Azhora, transit]
+tags: [Ibenale, Ibenal, coastal plain, corridor, forest-edge, western coast, mountains, southwest, Azhora, transit]
 status: draft
 related: [Alezhor, Legemum, Mittolo, Azhora, western forest, western mountains]
 ---

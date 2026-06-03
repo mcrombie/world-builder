@@ -1,7 +1,7 @@
 ---
 name: Moroshé Desert
 category: region
-tags: [desert, arid, south, ancient, Moroshé, trade routes, ruins, Azhora, pastoral, livestock]
+tags: [desert, arid, south, ancient, Moroshé, Meroshe Desert, Meroshe, trade routes, ruins, Azhora, pastoral, livestock]
 status: draft
 related: [Azhora, East Pyros, Iberos Coast, Bouén, The Plains, Nova Homa, Tros, Livestock of Azhora]
 ---

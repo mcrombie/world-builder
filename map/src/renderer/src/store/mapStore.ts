@@ -5,6 +5,34 @@ import { normalizeClimate } from '../lib/climate'
 
 const MAX_HISTORY = 50
 
+const LORE_STRIP_PREFIXES = [
+  'east ', 'west ', 'north ', 'south ', 'central ',
+  'northern ', 'southern ', 'eastern ', 'western ',
+  'upper ', 'lower ', 'inner ', 'outer ', 'lesser ', 'greater ',
+]
+
+function loreAutoLinkScore(regionName: string, entry: { name: string; tags: string[] }): number {
+  const r = regionName.toLowerCase().trim()
+  const e = entry.name.toLowerCase().trim()
+  const eCore = e.startsWith('the ') ? e.slice(4) : e
+
+  if (r === e || r === eCore) return 3
+
+  let rCore = r
+  for (const p of LORE_STRIP_PREFIXES) {
+    if (r.startsWith(p)) { rCore = r.slice(p.length); break }
+  }
+
+  if (rCore !== r) {
+    if (rCore === e || rCore === eCore) return 2
+    if (entry.tags.some(t => t.toLowerCase().trim() === rCore)) return 1
+  }
+
+  if (entry.tags.some(t => t.toLowerCase().trim() === r)) return 1
+
+  return 0
+}
+
 export const REGION_PALETTE = [
   '#c0392b', '#e67e22', '#d4ac0d', '#27ae60', '#16a085',
   '#2980b9', '#8e44ad', '#e91e63', '#ff5722', '#546e7a',
@@ -166,8 +194,11 @@ export const useMapStore = create<MapStore>((set, get) => ({
     let changed = false
     for (const [id, region] of Object.entries(updatedRegions)) {
       if (region.loreRef) continue
-      const regionName = region.name.toLowerCase().trim()
-      const match = f.entries.find((e) => e.name.toLowerCase().trim() === regionName)
+      const scored = f.entries
+        .map(e => ({ e, s: loreAutoLinkScore(region.name, e) }))
+        .filter(({ s }) => s > 0)
+        .sort((a, b) => b.s - a.s || a.e.name.length - b.e.name.length)
+      const match = scored[0]?.e
       if (match) {
         updatedRegions[id] = { ...region, loreRef: match.id }
         changed = true

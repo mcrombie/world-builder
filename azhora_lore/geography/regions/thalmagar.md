@@ -1,7 +1,7 @@
 ---
 name: The Cape of Thalmagar
 category: region
-tags: [Thalmagar, cape, isolated, megafauna, archaic, sparse, western sea, Oremindi, bay, northern Azhora, ancient]
+tags: [Thalmagar, Cape Thalmagar, cape, isolated, megafauna, archaic, sparse, western sea, Oremindi, bay, northern Azhora, ancient]
 status: draft
 related: [Oremindi Mountains, Northern Azhora, Azhora, Sevron, Ibenwood, Distribution of Fauna Across Azhora, Narcosh]
 ---
