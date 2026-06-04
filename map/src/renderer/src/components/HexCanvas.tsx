@@ -5,7 +5,7 @@ import {
   riverEdgeKey, parseRiverEdge, NEIGHBOR_TO_EDGE_SLOT, HEX_NEIGHBORS,
 } from '../lib/hex'
 import { TERRAIN_COLORS, CLIMATE_COLORS } from '../lib/terrain'
-import { HexData, RiverSize, SimWorldState } from '../types/map'
+import { FactionData, HexData, RiverSize, SimWorldState } from '../types/map'
 import { SelectMode } from '../types/map'
 import { buildFactionColorMap } from './SimulationPanel'
 
@@ -47,16 +47,21 @@ export function HexCanvas() {
   const paintHex         = useMapStore((s) => s.paintHex)
   const paintRegionHex   = useMapStore((s) => s.paintRegionHex)
   const paintClimateHex  = useMapStore((s) => s.paintClimateHex)
+  const paintFactionHex  = useMapStore((s) => s.paintFactionHex)
+  const activeFaction    = useMapStore((s) => s.activeFaction)
   const endStroke        = useMapStore((s) => s.endStroke)
   const selectHex       = useMapStore((s) => s.selectHex)
   const selectRegion    = useMapStore((s) => s.selectRegion)
   const toggleRiverEdge = useMapStore((s) => s.toggleRiverEdge)
   const simWorld        = useMapStore((s) => s.simWorld)
   const isSimulating    = useMapStore((s) => s.isSimulating)
+  const simDetailSelection = useMapStore((s) => s.simDetailSelection)
   const simWorldRef     = useRef<SimWorldState | null>(simWorld)
   const isSimRef        = useRef(isSimulating)
+  const simDetailSelectionRef = useRef(simDetailSelection)
   simWorldRef.current   = simWorld
   isSimRef.current      = isSimulating
+  simDetailSelectionRef.current = simDetailSelection
 
   const hoverCoord        = useRef<AxialCoord | null>(null)
   const hoverRiverEdge    = useRef<string | null>(null)
@@ -67,11 +72,13 @@ export function HexCanvas() {
   const brushRadiusRef    = useRef(brushRadius)
   const activeRegionRef   = useRef(activeRegion)
   const activeClimateRef  = useRef(activeClimate)
+  const activeFactionRef  = useRef(activeFaction)
   const selectModeRef     = useRef(selectMode)
-  activeToolRef.current   = activeTool
-  brushRadiusRef.current  = brushRadius
-  activeRegionRef.current = activeRegion
+  activeToolRef.current    = activeTool
+  brushRadiusRef.current   = brushRadius
+  activeRegionRef.current  = activeRegion
   activeClimateRef.current = activeClimate
+  activeFactionRef.current = activeFaction
   selectModeRef.current   = selectMode
   mapRef.current          = map
 
@@ -82,7 +89,7 @@ export function HexCanvas() {
     img.src = map.underlayPath
   }, [map?.underlayPath])
 
-  useEffect(() => { needsRedraw.current = true }, [map, layers, selectedHex, selectedRegion, brushRadius, activeTool, activeRegion, activeClimate, simWorld, isSimulating])
+  useEffect(() => { needsRedraw.current = true }, [map, layers, selectedHex, selectedRegion, brushRadius, activeTool, activeRegion, activeClimate, activeFaction, simWorld, isSimulating, simDetailSelection])
 
   // ── Render ────────────────────────────────────────────────────────────────────
 
@@ -153,6 +160,9 @@ export function HexCanvas() {
       for (const r of simWorldRef.current.regions) {
         regionOwnerMap[r.name] = r.owner
       }
+      const selectedSimFaction = simDetailSelectionRef.current?.type === 'faction'
+        ? simDetailSelectionRef.current.factionName
+        : null
 
       // Colour fill + centroid accumulation
       const centroids: Record<string, { x: number; y: number; n: number }> = {}
@@ -171,6 +181,53 @@ export function HexCanvas() {
         }
       }
       ctx.globalAlpha = 1
+
+      if (selectedSimFaction) {
+        const highlightColor = factionColors[selectedSimFaction] ?? '#ffffff'
+        ctx.globalAlpha = 0.9
+        for (const hex of Object.values(hexes)) {
+          if (!hex.region || regionOwnerMap[hex.region] !== selectedSimFaction) continue
+          const [cx, cy] = hexToPixel(hex.q, hex.r, hexSize)
+          if (cx + cullPad < viewL || cx - cullPad > viewR) continue
+          if (cy + cullPad < viewT || cy - cullPad > viewB) continue
+          drawHexFill(ctx, cx, cy, hexSize, highlightColor)
+        }
+        ctx.globalAlpha = 1
+
+        ctx.lineCap = 'round'
+        ctx.lineJoin = 'round'
+        for (const hex of Object.values(hexes)) {
+          if (!hex.region || regionOwnerMap[hex.region] !== selectedSimFaction) continue
+          const [cx, cy] = hexToPixel(hex.q, hex.r, hexSize)
+          if (cx + cullPad < viewL || cx - cullPad > viewR) continue
+          if (cy + cullPad < viewT || cy - cullPad > viewB) continue
+
+          const corners = hexCorners(cx, cy, hexSize)
+          for (let d = 0; d < 6; d++) {
+            const nq = hex.q + HEX_NEIGHBORS[d].q
+            const nr = hex.r + HEX_NEIGHBORS[d].r
+            const neighbor = hexes[hexKey(nq, nr)]
+            const neighborOwner = neighbor?.region ? regionOwnerMap[neighbor.region] : null
+            if (neighborOwner === selectedSimFaction) continue
+
+            const slot = NEIGHBOR_TO_EDGE_SLOT[d]
+            const [x1, y1] = corners[slot]
+            const [x2, y2] = corners[(slot + 1) % 6]
+            ctx.strokeStyle = 'rgba(255,255,255,0.88)'
+            ctx.lineWidth = Math.max(2.2, hexSize * 0.22) / zoom
+            ctx.beginPath()
+            ctx.moveTo(x1, y1)
+            ctx.lineTo(x2, y2)
+            ctx.stroke()
+            ctx.strokeStyle = highlightColor
+            ctx.lineWidth = Math.max(1.2, hexSize * 0.11) / zoom
+            ctx.beginPath()
+            ctx.moveTo(x1, y1)
+            ctx.lineTo(x2, y2)
+            ctx.stroke()
+          }
+        }
+      }
 
       // Territory name labels — drawn in screen space so size is always readable
       ctx.save()
@@ -268,6 +325,86 @@ export function HexCanvas() {
       }
     }
 
+    // ── Faction overlay (manual, non-simulation) ─────────────────────────────
+    if (layers.factions && mapRef.current?.factions && !isSimRef.current) {
+      const mapFactions: Record<string, FactionData> = mapRef.current.factions
+      // Translucent fill per faction
+      ctx.globalAlpha = 0.30
+      for (const hex of Object.values(hexes)) {
+        if (!hex.region) continue
+        const factionId = regions[hex.region]?.faction
+        if (!factionId) continue
+        const fd = mapFactions[factionId]
+        if (!fd) continue
+        const [cx, cy] = hexToPixel(hex.q, hex.r, hexSize)
+        if (cx + cullPad < viewL || cx - cullPad > viewR) continue
+        if (cy + cullPad < viewT || cy - cullPad > viewB) continue
+        drawHexFill(ctx, cx, cy, hexSize, fd.color)
+      }
+      ctx.globalAlpha = 1
+
+      // Thick borders between different factions
+      ctx.lineCap = 'round'
+      for (const hex of Object.values(hexes)) {
+        if (!hex.region) continue
+        const factionId = regions[hex.region]?.faction
+        if (!factionId) continue
+        const fd = mapFactions[factionId]
+        if (!fd) continue
+        const [cx, cy] = hexToPixel(hex.q, hex.r, hexSize)
+        if (cx + cullPad < viewL || cx - cullPad > viewR) continue
+        if (cy + cullPad < viewT || cy - cullPad > viewB) continue
+        const corners = hexCorners(cx, cy, hexSize)
+        ctx.strokeStyle = fd.color
+        ctx.lineWidth = Math.max(2.5, hexSize * 0.18) / zoom
+        for (let d = 0; d < 6; d++) {
+          const nq = hex.q + HEX_NEIGHBORS[d].q
+          const nr = hex.r + HEX_NEIGHBORS[d].r
+          const neighbor = hexes[hexKey(nq, nr)]
+          const neighborFactionId = neighbor?.region ? regions[neighbor.region]?.faction : undefined
+          if (neighborFactionId === factionId) continue
+          const slot = NEIGHBOR_TO_EDGE_SLOT[d]
+          const [x1, y1] = corners[slot]
+          const [x2, y2] = corners[(slot + 1) % 6]
+          ctx.beginPath()
+          ctx.moveTo(x1, y1)
+          ctx.lineTo(x2, y2)
+          ctx.stroke()
+        }
+      }
+
+      // Faction name labels at centroid of each faction's territory
+      const factionCentroids: Record<string, { x: number; y: number; n: number }> = {}
+      for (const hex of Object.values(hexes)) {
+        if (!hex.region) continue
+        const fid = regions[hex.region]?.faction
+        if (!fid || !mapRef.current!.factions![fid]) continue
+        const [cx, cy] = hexToPixel(hex.q, hex.r, hexSize)
+        const c = factionCentroids[fid] ?? (factionCentroids[fid] = { x: 0, y: 0, n: 0 })
+        c.x += cx; c.y += cy; c.n++
+      }
+      ctx.save()
+      ctx.setTransform(1, 0, 0, 1, 0, 0)
+      ctx.textAlign = 'center'
+      ctx.textBaseline = 'middle'
+      ctx.font = 'bold 13px system-ui, sans-serif'
+      ctx.lineJoin = 'round'
+      ctx.lineWidth = 3.5
+      for (const [fid, c] of Object.entries(factionCentroids)) {
+        if (c.n < 3) continue
+        const sx = (c.x / c.n) * zoom + offsetX
+        const sy = (c.y / c.n) * zoom + offsetY
+        if (sx < -60 || sx > canvas.width + 60) continue
+        if (sy < -20 || sy > canvas.height + 20) continue
+        const label = mapRef.current!.factions![fid].name
+        ctx.strokeStyle = 'rgba(0,0,0,0.9)'
+        ctx.strokeText(label, sx, sy)
+        ctx.fillStyle = '#ffffff'
+        ctx.fillText(label, sx, sy)
+      }
+      ctx.restore()
+    }
+
     // ── Grid lines ────────────────────────────────────────────────────────────
     if (layers.grid && zoom > 0.15) {
       ctx.strokeStyle = 'rgba(0,0,0,0.25)'
@@ -360,6 +497,32 @@ export function HexCanvas() {
         if (cx + cullPad < viewL || cx - cullPad > viewR) continue
         if (cy + cullPad < viewT || cy - cullPad > viewB) continue
         strokeHex(ctx, cx, cy, hexSize)
+      }
+    }
+
+    // ── Faction-paint hover preview (highlights entire hovered region) ───────
+    if (hoverCoord.current && activeToolRef.current === 'faction') {
+      const hKey = hexKey(hoverCoord.current.q, hoverCoord.current.r)
+      const hoveredRegionId = hexes[hKey]?.region
+      if (hoveredRegionId) {
+        const af = activeFactionRef.current
+        const previewColor = af && mapRef.current?.factions?.[af]
+          ? (mapRef.current.factions[af] as FactionData).color
+          : '#ff6666'
+        ctx.globalAlpha = 0.45
+        for (const hex of Object.values(hexes)) {
+          if (hex.region !== hoveredRegionId) continue
+          const [cx, cy] = hexToPixel(hex.q, hex.r, hexSize)
+          drawHexFill(ctx, cx, cy, hexSize, previewColor)
+        }
+        ctx.globalAlpha = 1
+        ctx.strokeStyle = previewColor
+        ctx.lineWidth = 1.5 / zoom
+        for (const hex of Object.values(hexes)) {
+          if (hex.region !== hoveredRegionId) continue
+          const [cx, cy] = hexToPixel(hex.q, hex.r, hexSize)
+          strokeHex(ctx, cx, cy, hexSize)
+        }
       }
     }
 
@@ -546,6 +709,12 @@ export function HexCanvas() {
         if (coord) paintRegionHex(coord.q, coord.r)
         return
       }
+      if (activeTool === 'faction') {
+        isPainting.current = true
+        const coord = hexAtScreen(e.clientX, e.clientY)
+        if (coord) paintFactionHex(coord.q, coord.r)
+        return
+      }
       if (activeTool === 'paint' || activeTool === 'erase') {
         isPainting.current = true
         beginStroke()
@@ -568,7 +737,7 @@ export function HexCanvas() {
         needsRedraw.current = true
       }
     },
-    [map, activeTool, beginStroke, hexAtScreen, paintHex, paintRegionHex, paintClimateHex, selectHex, selectRegion, toggleRiverEdge, screenToWorld]
+    [map, activeTool, beginStroke, hexAtScreen, paintHex, paintRegionHex, paintClimateHex, paintFactionHex, selectHex, selectRegion, toggleRiverEdge, screenToWorld]
   )
 
   const onMouseMove = useCallback(
@@ -605,9 +774,10 @@ export function HexCanvas() {
         if (activeTool === 'paint' || activeTool === 'erase') paintHex(coord.q, coord.r)
         if (activeTool === 'region') paintRegionHex(coord.q, coord.r)
         if (activeTool === 'climate') paintClimateHex(coord.q, coord.r)
+        if (activeTool === 'faction') paintFactionHex(coord.q, coord.r)
       }
     },
-    [activeTool, map, hexAtScreen, paintHex, paintRegionHex, paintClimateHex, toggleRiverEdge, screenToWorld]
+    [activeTool, map, hexAtScreen, paintHex, paintRegionHex, paintClimateHex, paintFactionHex, toggleRiverEdge, screenToWorld]
   )
 
   const onMouseUp = useCallback(() => {

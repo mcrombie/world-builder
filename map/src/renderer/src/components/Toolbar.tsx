@@ -1,16 +1,17 @@
 import { useEffect, useRef, useState } from 'react'
-import { useMapStore, REGION_PALETTE } from '../store/mapStore'
+import { useMapStore, REGION_PALETTE, FACTION_PALETTE } from '../store/mapStore'
 import { ALL_TERRAINS, TERRAIN_COLORS, TERRAIN_LABELS, CLIMATE_COLORS, CLIMATE_GROUPS, CLIMATE_LABELS } from '../lib/terrain'
 import { fileIO } from '../lib/fileIO'
 import { AzloreFile, Tool, LayerVisibility, RiverSize, SelectMode } from '../types/map'
 
 const TOOLS: { id: Tool; label: string; icon: string }[] = [
-  { id: 'paint',  label: 'Paint',  icon: '🖌' },
-  { id: 'erase',  label: 'Erase',  icon: '⬜' },
-  { id: 'river',  label: 'River',  icon: '〰️' },
-  { id: 'region', label: 'Region', icon: '🗺' },
-  { id: 'select', label: 'Select', icon: '🔍' },
-  { id: 'pan',    label: 'Pan',    icon: '✋' },
+  { id: 'paint',   label: 'Paint',   icon: '🖌' },
+  { id: 'erase',   label: 'Erase',   icon: '⬜' },
+  { id: 'river',   label: 'River',   icon: '〰️' },
+  { id: 'region',  label: 'Region',  icon: '🗺' },
+  { id: 'faction', label: 'Faction', icon: '⚑' },
+  { id: 'select',  label: 'Select',  icon: '🔍' },
+  { id: 'pan',     label: 'Pan',     icon: '✋' },
   { id: 'climate', label: 'Climate', icon: '🌡' },
 ]
 
@@ -18,6 +19,7 @@ const LAYER_LABELS: Record<keyof LayerVisibility, string> = {
   terrain:     'Terrain',
   grid:        'Grid',
   regions:     'Regions',
+  factions:    'Factions',
   settlements: 'Settlements',
   rivers:      'Rivers',
   underlay:    'Underlay',
@@ -64,11 +66,18 @@ export function Toolbar() {
   const setBrushRadius  = useMapStore((s) => s.setBrushRadius)
   const setLayer        = useMapStore((s) => s.setLayer)
   const setUnderlay     = useMapStore((s) => s.setUnderlay)
-  const setActiveRegion = useMapStore((s) => s.setActiveRegion)
-  const upsertRegion    = useMapStore((s) => s.upsertRegion)
-  const deleteRegion    = useMapStore((s) => s.deleteRegion)
+  const setActiveRegion    = useMapStore((s) => s.setActiveRegion)
+  const upsertRegion       = useMapStore((s) => s.upsertRegion)
+  const deleteRegion       = useMapStore((s) => s.deleteRegion)
+  const selectedFaction    = useMapStore((s) => s.selectedFaction)
+  const setSelectedFaction = useMapStore((s) => s.setSelectedFaction)
+  const activeFaction      = useMapStore((s) => s.activeFaction)
+  const setActiveFaction   = useMapStore((s) => s.setActiveFaction)
+  const upsertFaction      = useMapStore((s) => s.upsertFaction)
+  const deleteFaction      = useMapStore((s) => s.deleteFaction)
 
   const [newRegionName, setNewRegionName] = useState('')
+  const [newFactionName, setNewFactionName] = useState('')
   const [sidebarWidth, setSidebarWidth] = useState(loadSidebarWidth)
   const sidebarWidthRef = useRef(sidebarWidth)
   const resizeStart = useRef<{ x: number; width: number } | null>(null)
@@ -123,6 +132,11 @@ export function Toolbar() {
     return REGION_PALETTE[used % REGION_PALETTE.length]
   }
 
+  function nextFactionColor(): string {
+    const used = Object.keys(map?.factions ?? {}).length
+    return FACTION_PALETTE[used % FACTION_PALETTE.length]
+  }
+
   function createRegion() {
     const name = newRegionName.trim()
     if (!name) return
@@ -131,8 +145,19 @@ export function Toolbar() {
     setNewRegionName('')
   }
 
+  function createFaction() {
+    const name = newFactionName.trim()
+    if (!name) return
+    upsertFaction(name, { name, color: nextFactionColor(), polityTier: 'state', governmentForm: 'monarchy' })
+    if (activeTool === 'faction') setActiveFaction(name)
+    else setSelectedFaction(name)
+    setNewFactionName('')
+  }
+
   const regions = map?.regions ?? {}
   const regionIds = Object.keys(regions)
+  const factions = map?.factions ?? {}
+  const factionIds = Object.keys(factions)
 
   return (
     <aside
@@ -355,6 +380,97 @@ export function Toolbar() {
             >
               +
             </button>
+          </div>
+        </section>
+      )}
+
+      {/* Faction painter palette — only when faction tool is active */}
+      {activeTool === 'faction' && (
+        <section>
+          <h3 className="text-xs font-semibold uppercase tracking-widest text-gray-400 mb-2">Faction Painter</h3>
+          <div className="flex flex-col gap-1 mb-2">
+            <button
+              onClick={() => setActiveFaction(null)}
+              className={`flex items-center gap-2 px-2 py-1 rounded text-sm transition-colors
+                ${activeFaction === null ? 'ring-2 ring-indigo-400 bg-gray-800' : 'hover:bg-gray-800'}`}
+            >
+              <span className="inline-block w-4 h-4 rounded-sm border border-dashed border-gray-500 shrink-0" />
+              <span className="truncate text-gray-400">None (clear)</span>
+            </button>
+            {factionIds.map((id) => {
+              const fd = factions[id]
+              return (
+                <button
+                  key={id}
+                  onClick={() => setActiveFaction(id)}
+                  className={`flex items-center gap-2 px-2 py-1 rounded text-sm transition-colors text-left
+                    ${activeFaction === id ? 'ring-2 ring-indigo-400 bg-gray-800' : 'hover:bg-gray-800'}`}
+                >
+                  <span
+                    className="inline-block w-4 h-4 rounded-sm border border-gray-600 shrink-0"
+                    style={{ background: fd.color }}
+                  />
+                  <span className="truncate">{fd.name}</span>
+                </button>
+              )
+            })}
+            {factionIds.length === 0 && (
+              <p className="text-xs text-gray-500 italic px-2">No factions yet — create one below.</p>
+            )}
+          </div>
+          <div className="flex gap-1">
+            <input
+              className="flex-1 bg-gray-800 rounded px-2 py-1 text-xs outline-none focus:ring-1 ring-indigo-500 min-w-0"
+              placeholder="New faction…"
+              value={newFactionName}
+              onChange={(e) => setNewFactionName(e.target.value)}
+              onKeyDown={(e) => { if (e.key === 'Enter') createFaction() }}
+            />
+            <button onClick={createFaction} className="bg-indigo-600 hover:bg-indigo-500 rounded px-2 py-1 text-xs shrink-0">+</button>
+          </div>
+        </section>
+      )}
+
+      {/* Faction management list — always visible when factions exist (and not in painter mode) */}
+      {map && activeTool !== 'faction' && (
+        <section>
+          <h3 className="text-xs font-semibold uppercase tracking-widest text-gray-400 mb-2">Factions</h3>
+          <div className="flex flex-col gap-1 mb-2">
+            {factionIds.map((id) => {
+              const fd = factions[id]
+              return (
+                <div key={id} className="flex items-center gap-1">
+                  <button
+                    onClick={() => setSelectedFaction(selectedFaction === id ? null : id)}
+                    className={`flex items-center gap-2 px-2 py-1 rounded text-sm transition-colors flex-1 min-w-0
+                      ${selectedFaction === id ? 'ring-2 ring-indigo-400 bg-gray-800' : 'hover:bg-gray-800'}`}
+                  >
+                    <span
+                      className="inline-block w-4 h-4 rounded-sm border border-gray-600 shrink-0"
+                      style={{ background: fd.color }}
+                    />
+                    <span className="truncate">{fd.name}</span>
+                  </button>
+                  <button
+                    onClick={() => { if (selectedFaction === id) setSelectedFaction(null); deleteFaction(id) }}
+                    className="text-gray-600 hover:text-red-400 px-1 text-xs shrink-0"
+                    title="Delete faction"
+                  >
+                    ✕
+                  </button>
+                </div>
+              )
+            })}
+          </div>
+          <div className="flex gap-1">
+            <input
+              className="flex-1 bg-gray-800 rounded px-2 py-1 text-xs outline-none focus:ring-1 ring-indigo-500 min-w-0"
+              placeholder="New faction…"
+              value={newFactionName}
+              onChange={(e) => setNewFactionName(e.target.value)}
+              onKeyDown={(e) => { if (e.key === 'Enter') createFaction() }}
+            />
+            <button onClick={createFaction} className="bg-indigo-600 hover:bg-indigo-500 rounded px-2 py-1 text-xs shrink-0">+</button>
           </div>
         </section>
       )}

@@ -46,6 +46,24 @@ export type KoppenClimate =
 export type Climate = KoppenClimate
 export type CoreStatus = 'homeland' | 'core' | 'frontier'
 
+export type PolityTier = 'band' | 'tribe' | 'chiefdom' | 'state' | 'empire'
+export type GovernmentForm =
+  | 'council' | 'leader' | 'monarchy' | 'oligarchy'
+  | 'republic' | 'theocracy' | 'military'
+
+export interface FactionData {
+  name: string
+  color: string
+  polityTier: PolityTier
+  governmentForm: GovernmentForm
+  capital?: string           // region ID of heartland/capital
+  startingTreasury?: number
+  primaryEthnicity?: string
+  religion?: string
+  notes?: string
+  loreRef?: string
+}
+
 export interface RegionData {
   name: string
   color: string
@@ -79,6 +97,7 @@ export interface MapData {
   lorePath?: string                      // absolute path to the linked .azlore file
   rivers: Record<string, RiverSize>      // edgeKey → size
   regions: Record<string, RegionData>    // regionId → RegionData
+  factions?: Record<string, FactionData> // factionId → FactionData
 }
 
 export interface SimFaction {
@@ -214,7 +233,7 @@ export interface SimWorldState {
   active_shocks?: SimActiveShock[]
 }
 
-export type Tool = 'paint' | 'erase' | 'select' | 'pan' | 'river' | 'region' | 'climate'
+export type Tool = 'paint' | 'erase' | 'select' | 'pan' | 'river' | 'region' | 'climate' | 'faction'
 export type SelectMode = 'tile' | 'region'
 export type ViewMode = 'map' | 'balanced' | 'panel' | 'lore'
 
@@ -222,6 +241,7 @@ export interface LayerVisibility {
   terrain: boolean
   grid: boolean
   regions: boolean
+  factions: boolean
   settlements: boolean
   rivers: boolean
   underlay: boolean

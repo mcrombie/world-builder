@@ -2,8 +2,9 @@ import { useMemo, useState, useCallback } from 'react'
 import { useMapStore } from '../store/mapStore'
 import { TERRAIN_LABELS, ALL_CLIMATES } from '../lib/terrain'
 import { getClimateCodeLabel, getClimateColor, normalizeClimate } from '../lib/climate'
-import { Climate, LoreEntry, RegionData, SettlementSize, CoreStatus, ViewMode, SimDetailSelection, SimEvent, SimFaction, SimHotRegion, SimRegion, SimWorldState } from '../types/map'
+import { Climate, FactionData, LoreEntry, RegionData, SettlementSize, CoreStatus, ViewMode, SimDetailSelection, SimEvent, SimFaction, SimHotRegion, SimRegion, SimWorldState } from '../types/map'
 import { buildFactionColorMap } from './SimulationPanel'
+import { FactionPanel } from './FactionPanel'
 
 const SETTLEMENT_SIZES: SettlementSize[] = ['village', 'town', 'city', 'capital']
 const CORE_STATUSES: CoreStatus[] = ['homeland', 'core', 'frontier']
@@ -749,12 +750,17 @@ function DominantClimateField({
 function FactionField({
   owner,
   value,
+  factions,
   onChange,
+  onSelectFaction,
 }: {
   owner: SimOwner | null | undefined
   value: string
+  factions: Record<string, FactionData>
   onChange: (value: string) => void
+  onSelectFaction?: (id: string) => void
 }) {
+  const factionIds = Object.keys(factions)
   return (
     <Field label="Faction">
       {owner !== undefined ? (
@@ -766,6 +772,32 @@ function FactionField({
         ) : (
           <p className="text-sm text-gray-500 italic px-2.5 py-1.5 bg-gray-800 rounded">Unowned</p>
         )
+      ) : factionIds.length > 0 ? (
+        <div className="flex items-center gap-2">
+          {value && factions[value] && (
+            <span className="inline-block w-4 h-4 rounded-sm border border-gray-600 shrink-0"
+              style={{ background: factions[value].color }} />
+          )}
+          <select
+            className={`${INPUT} flex-1`}
+            value={value}
+            onChange={(e) => onChange(e.target.value)}
+          >
+            <option value="">— unowned —</option>
+            {factionIds.map((id) => (
+              <option key={id} value={id}>{factions[id].name}</option>
+            ))}
+          </select>
+          {value && onSelectFaction && (
+            <button
+              className="text-xs text-indigo-400 hover:text-indigo-200 shrink-0 whitespace-nowrap"
+              onClick={() => onSelectFaction(value)}
+              title="Open faction editor"
+            >
+              Edit
+            </button>
+          )}
+        </div>
       ) : (
         <input
           className={INPUT}
@@ -960,15 +992,17 @@ function LoreReader({ regionId, rd }: { regionId: string; rd: RegionData }) {
 // ── Main panel ────────────────────────────────────────────────────────────────
 
 export function InfoPanel() {
-  const map            = useMapStore((s) => s.map)
-  const selectedHex    = useMapStore((s) => s.selectedHex)
-  const selectedRegion = useMapStore((s) => s.selectedRegion)
-  const updateHex      = useMapStore((s) => s.updateHex)
-  const upsertRegion   = useMapStore((s) => s.upsertRegion)
-  const viewMode       = useMapStore((s) => s.viewMode)
-  const simWorld       = useMapStore((s) => s.simWorld)
+  const map              = useMapStore((s) => s.map)
+  const selectedHex      = useMapStore((s) => s.selectedHex)
+  const selectedRegion   = useMapStore((s) => s.selectedRegion)
+  const selectedFaction  = useMapStore((s) => s.selectedFaction)
+  const setSelectedFaction = useMapStore((s) => s.setSelectedFaction)
+  const updateHex        = useMapStore((s) => s.updateHex)
+  const upsertRegion     = useMapStore((s) => s.upsertRegion)
+  const viewMode         = useMapStore((s) => s.viewMode)
+  const simWorld         = useMapStore((s) => s.simWorld)
   const simDetailSelection = useMapStore((s) => s.simDetailSelection)
-  const panelW         = PANEL_WIDTH[viewMode]
+  const panelW           = PANEL_WIDTH[viewMode]
 
   const factionColors = useMemo(
     () => buildFactionColorMap(simWorld?.factions ?? []),
@@ -1052,6 +1086,11 @@ export function InfoPanel() {
     )
   }
 
+  // ── Faction editor panel ─────────────────────────────────────────────────
+  if (selectedFaction && map?.factions?.[selectedFaction]) {
+    return <FactionPanel factionId={selectedFaction} panelW={panelW} />
+  }
+
   // ── Region-select panel (non-lore modes) ──────────────────────────────────
   if (selectedRegion && map?.regions[selectedRegion]) {
     const rd = map.regions[selectedRegion]
@@ -1085,7 +1124,9 @@ export function InfoPanel() {
         <FactionField
           owner={simWorld ? simOwner : undefined}
           value={rd.faction ?? ''}
+          factions={map?.factions ?? {}}
           onChange={(value) => upsertRegion(selectedRegion, { faction: value || undefined })}
+          onSelectFaction={setSelectedFaction}
         />
         {simWorld && <SimulationClimateField region={simRegion} />}
         <DominantClimateField regionId={selectedRegion} />
@@ -1198,7 +1239,9 @@ export function InfoPanel() {
           <FactionField
             owner={simWorld ? simOwner : undefined}
             value={regionData.faction ?? ''}
+            factions={map?.factions ?? {}}
             onChange={(value) => upsertRegion(hex.region!, { faction: value || undefined })}
+            onSelectFaction={setSelectedFaction}
           />
           {simWorld && <SimulationClimateField region={simRegion} />}
           <DominantClimateField regionId={hex.region!} />

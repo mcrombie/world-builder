@@ -1,5 +1,5 @@
 import { create } from 'zustand'
-import { AzloreFile, Climate, HexData, MapData, RegionData, RiverSize, SelectMode, SimDetailSelection, SimWorldState, TerrainType, Tool, LayerVisibility, ViewMode } from '../types/map'
+import { AzloreFile, Climate, FactionData, HexData, MapData, RegionData, RiverSize, SelectMode, SimDetailSelection, SimWorldState, TerrainType, Tool, LayerVisibility, ViewMode } from '../types/map'
 import { hexKey, hexesInRadius } from '../lib/hex'
 import { normalizeClimate } from '../lib/climate'
 
@@ -37,6 +37,11 @@ export const REGION_PALETTE = [
   '#c0392b', '#e67e22', '#d4ac0d', '#27ae60', '#16a085',
   '#2980b9', '#8e44ad', '#e91e63', '#ff5722', '#546e7a',
   '#6d4c41', '#00897b', '#1e88e5', '#5e35b1', '#f06292',
+]
+
+export const FACTION_PALETTE = [
+  '#1a6b3c', '#7b2d8b', '#b5451b', '#1f4e79', '#6b4c11',
+  '#2c3e70', '#7a1f3a', '#1a5c5c', '#4a3000', '#3d1a6e',
 ]
 
 // Maps old climate-encoded terrain types to [terrain, climate]
@@ -157,6 +162,9 @@ interface MapStore {
   setRiverSize: (size: RiverSize) => void
   paintClimateHex: (q: number, r: number) => void
   setActiveRegion: (id: string | null) => void
+  activeFaction: string | null
+  setActiveFaction: (id: string | null) => void
+  paintFactionHex: (q: number, r: number) => void
   setBrushRadius: (radius: number) => void
   toggleRiverEdge: (edgeKey: string) => void
   setLayer: (layer: keyof LayerVisibility, visible: boolean) => void
@@ -165,6 +173,10 @@ interface MapStore {
   resizeMap: (newWidth: number, newHeight: number) => void
   upsertRegion: (id: string, data: Partial<RegionData>) => void
   deleteRegion: (id: string) => void
+  selectedFaction: string | null
+  setSelectedFaction: (id: string | null) => void
+  upsertFaction: (id: string, data: Partial<FactionData>) => void
+  deleteFaction: (id: string) => void
 
   simWorld: SimWorldState | null
   isSimulating: boolean
@@ -205,6 +217,7 @@ export const useMapStore = create<MapStore>((set, get) => ({
     terrain: true,
     grid: true,
     regions: false,
+    factions: false,
     settlements: true,
     rivers: true,
     underlay: false,
@@ -213,6 +226,40 @@ export const useMapStore = create<MapStore>((set, get) => ({
   isDirty: false,
   history: [],
   strokeBefore: null,
+  selectedFaction: null,
+  setSelectedFaction: (id) => set({ selectedFaction: id, selectedRegion: null, selectedHex: null, simDetailSelection: null }),
+
+  upsertFaction: (id, data) =>
+    set((state) => {
+      if (!state.map) return {}
+      const existing = state.map.factions?.[id] ?? {
+        name: id, color: '#888888', polityTier: 'state' as const, governmentForm: 'monarchy' as const,
+      }
+      return {
+        map: {
+          ...state.map,
+          factions: { ...(state.map.factions ?? {}), [id]: { ...existing, ...data } },
+        },
+        isDirty: true,
+      }
+    }),
+
+  deleteFaction: (id) =>
+    set((state) => {
+      if (!state.map) return {}
+      const { [id]: _removed, ...rest } = state.map.factions ?? {}
+      // Unlink regions that referenced this faction
+      const regions = { ...state.map.regions }
+      for (const [key, region] of Object.entries(regions)) {
+        if (region.faction === id) regions[key] = { ...region, faction: undefined }
+      }
+      return {
+        map: { ...state.map, factions: rest, regions },
+        selectedFaction: state.selectedFaction === id ? null : state.selectedFaction,
+        isDirty: true,
+      }
+    }),
+
   simWorld: null,
   isSimulating: false,
   simFactionCount: 9,
@@ -330,6 +377,7 @@ export const useMapStore = create<MapStore>((set, get) => ({
       hexes: migratedHexes,
       rivers,
       regions: migratedRegions,
+      factions: (data as any).factions ?? undefined,
     })
 
     set((state) => ({
@@ -339,6 +387,7 @@ export const useMapStore = create<MapStore>((set, get) => ({
       isDirty: false,
       selectedHex: null,
       selectedRegion: null,
+      selectedFaction: null,
       simDetailSelection: null,
       history: [],
       strokeBefore: null,
@@ -425,9 +474,9 @@ export const useMapStore = create<MapStore>((set, get) => ({
     })
   },
 
-  selectHex:    (key)  => set({ selectedHex: key, selectedRegion: null, simDetailSelection: null }),
-  selectRegion: (id)   => set({ selectedRegion: id, selectedHex: null, simDetailSelection: null }),
-  setSelectMode:(mode) => set({ selectMode: mode, selectedHex: null, selectedRegion: null, simDetailSelection: null }),
+  selectHex:    (key)  => set({ selectedHex: key, selectedRegion: null, selectedFaction: null, simDetailSelection: null }),
+  selectRegion: (id)   => set({ selectedRegion: id, selectedHex: null, selectedFaction: null, simDetailSelection: null }),
+  setSelectMode:(mode) => set({ selectMode: mode, selectedHex: null, selectedRegion: null, selectedFaction: null, simDetailSelection: null }),
 
   updateHex: (key, data) =>
     set((state) => {
@@ -469,6 +518,27 @@ export const useMapStore = create<MapStore>((set, get) => ({
     })
   },
   setActiveRegion: (id) => set({ activeRegion: id }),
+  activeFaction: null,
+  setActiveFaction: (id) => set({ activeFaction: id }),
+  paintFactionHex: (q, r) =>
+    set((state) => {
+      if (!state.map) return {}
+      const key = hexKey(q, r)
+      const hex = state.map.hexes[key]
+      if (!hex?.region) return {}
+      const regionId = hex.region
+      const existing = state.map.regions[regionId]
+      if (!existing) return {}
+      const newFaction = state.activeFaction ?? undefined
+      if (existing.faction === newFaction) return {}
+      return {
+        map: {
+          ...state.map,
+          regions: { ...state.map.regions, [regionId]: { ...existing, faction: newFaction } },
+        },
+        isDirty: true,
+      }
+    }),
   setBrushRadius: (radius) => set({ brushRadius: radius }),
 
   toggleRiverEdge: (edgeKey) =>
