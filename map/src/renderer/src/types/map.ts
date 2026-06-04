@@ -88,6 +88,35 @@ export interface SimFaction {
   owned_regions: number
   population: number
   doctrine_label: string
+  government_type?: string
+  polity_tier?: string
+  culture_name?: string
+  is_rebel?: boolean
+  origin_faction?: string | null
+  net_income?: number
+  effective_income?: number
+  maintenance?: number
+  food_balance?: number
+  food_stored?: number
+  food_capacity?: number
+  administrative_efficiency?: number
+  administrative_overextension?: number
+  military_readiness?: number
+  army_quality?: number
+  standing_forces?: number
+  manpower_pool?: number
+  shock_exposure?: number
+  famine_pressure?: number
+  trade_collapse_exposure?: number
+  technology?: number
+  institutional_technology?: number
+  ruler_name?: string
+  legitimacy?: number
+  top_ally?: string | null
+  top_rival?: string | null
+  overlord?: string | null
+  tributary_count?: number
+  claim_dispute_count?: number
 }
 
 export interface SimRegion {
@@ -102,13 +131,72 @@ export interface SimRegion {
   climate_anomaly?: number
 }
 
+export interface SimSummary {
+  active_factions: number
+  successor_factions: number
+  owned_regions: number
+  unowned_regions: number
+  total_regions: number
+  total_population: number
+  total_treasury: number
+  average_unrest: number
+  high_unrest_regions: number
+  active_wars: number
+  active_shocks: number
+  alliances: number
+  pacts: number
+  rivalries: number
+  tributaries: number
+  total_events: number
+  recent_events: number
+}
+
+export interface SimHotRegion {
+  name: string
+  display_name: string
+  owner: string | null
+  population: number
+  unrest: number
+  food_deficit: number
+  trade_warfare_pressure: number
+  climate_anomaly: number
+  shock_exposure: number
+  pressure: number
+}
+
+export interface SimActiveWar {
+  factions: string[]
+  aggressor: string
+  defender: string
+  objective: string
+  target_region?: string | null
+  turns_active: number
+  attacks: number
+  war_exhaustion: number
+  score: number
+}
+
+export interface SimActiveShock {
+  kind: string
+  origin_region?: string | null
+  faction?: string | null
+  phase: string
+  intensity: number
+  turns_remaining: number
+  affected_regions: number
+}
+
 export interface SimWorldState {
   ok?: boolean
   turn: number
   turn_label: string
+  summary?: SimSummary
   factions: SimFaction[]
   regions: SimRegion[]
   recent_events: unknown[]
+  hot_regions?: SimHotRegion[]
+  active_wars?: SimActiveWar[]
+  active_shocks?: SimActiveShock[]
 }
 
 export type Tool = 'paint' | 'erase' | 'select' | 'pan' | 'river' | 'region' | 'climate'

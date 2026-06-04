@@ -16,17 +16,19 @@ type ScenarioMode = 'azhora' | 'random'
 
 const AZHORA_FACTION_COUNT = 9
 const AZHORA_SIM_TYPE: SimType = 'clashvergence'
-const AZHORA_SEED = ''
+const FACTION_OPTIONS = [2, 3, 4, 5, 6, 7, 8, 9]
 
 export function SimulateDialog({ initialFactionCount, initialSimType, initialSeed, isAzhoraMap, onStartNew, onLoadSaved, onClose }: Props) {
   const [scenario, setScenario] = useState<ScenarioMode>(isAzhoraMap ? 'azhora' : 'random')
+  const [azhoraFactionCount, setAzhoraFactionCount] = useState(AZHORA_FACTION_COUNT)
+  const [azhoraSeed, setAzhoraSeed] = useState(initialSeed)
   const [factionCount, setFactionCount] = useState(initialFactionCount)
   const [simType, setSimType]     = useState<SimType>(initialSimType)
   const [seed, setSeed]           = useState(initialSeed)
 
   function handleStart() {
     if (scenario === 'azhora') {
-      onStartNew(AZHORA_FACTION_COUNT, AZHORA_SIM_TYPE, AZHORA_SEED)
+      onStartNew(azhoraFactionCount, AZHORA_SIM_TYPE, azhoraSeed)
     } else {
       onStartNew(factionCount, simType, seed)
     }
@@ -57,7 +59,7 @@ export function SimulateDialog({ initialFactionCount, initialSimType, initialSee
             >
               <div className="text-sm font-medium">Azhora Starting Scenario</div>
               <div className="text-xs text-gray-500 mt-0.5">
-                9 factions · Clashvergence · historical cultures and starting positions
+                Clashvergence · historical cultures and starting positions
               </div>
             </button>
           )}
@@ -78,6 +80,30 @@ export function SimulateDialog({ initialFactionCount, initialSimType, initialSee
             </div>
           </button>
         </div>
+
+        {/* Azhora scenario controls */}
+        {scenario === 'azhora' && (
+          <div className="grid grid-cols-[auto_1fr] items-center gap-x-3 gap-y-3">
+            <label className="text-sm text-gray-300 shrink-0">Factions</label>
+            <select
+              className="min-w-0 px-2 py-1.5 rounded bg-gray-800 border border-gray-700 text-gray-200 text-sm"
+              value={azhoraFactionCount}
+              onChange={(e) => setAzhoraFactionCount(Number(e.target.value))}
+            >
+              {FACTION_OPTIONS.map((n) => (
+                <option key={n} value={n}>{n}</option>
+              ))}
+            </select>
+
+            <label className="text-sm text-gray-300 shrink-0">Seed</label>
+            <input
+              className="min-w-0 px-2 py-1.5 rounded bg-gray-800 border border-gray-700 text-gray-200 text-sm"
+              value={azhoraSeed}
+              onChange={(e) => setAzhoraSeed(e.target.value)}
+              placeholder="azhora-calibration-003"
+            />
+          </div>
+        )}
 
         {/* Random-mode controls */}
         {scenario === 'random' && (
@@ -115,7 +141,7 @@ export function SimulateDialog({ initialFactionCount, initialSimType, initialSee
                 value={factionCount}
                 onChange={(e) => setFactionCount(Number(e.target.value))}
               >
-                {[2, 3, 4, 5, 6, 7, 8, 9].map((n) => (
+                {FACTION_OPTIONS.map((n) => (
                   <option key={n} value={n}>{n}</option>
                 ))}
               </select>

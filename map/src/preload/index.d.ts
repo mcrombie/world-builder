@@ -6,9 +6,9 @@ interface _ImageResult  { dataUrl?: string; filePath?: string; canceled?: boolea
 interface _RecentFile   { path: string; name: string; savedAt: string }
 interface _ExampleMeta  { id: string; name: string; description: string }
 
-interface _SimFaction   { name: string; display_name: string; treasury: number; owned_regions: number; population: number; doctrine_label: string }
+interface _SimFaction   { name: string; display_name: string; treasury: number; owned_regions: number; population: number; doctrine_label: string; [key: string]: unknown }
 interface _SimRegion    { name: string; display_name: string; owner: string | null; population: number; resources: number; unrest: number }
-interface _SimWorld     { ok?: boolean; error?: string; turn: number; turn_label: string; factions: _SimFaction[]; regions: _SimRegion[]; recent_events: unknown[] }
+interface _SimWorld     { ok?: boolean; error?: string; turn: number; turn_label: string; summary?: Record<string, unknown>; factions: _SimFaction[]; regions: _SimRegion[]; recent_events: unknown[]; hot_regions?: unknown[]; active_wars?: unknown[]; active_shocks?: unknown[] }
 interface _SimStartResult { ok: boolean; error?: string; canceled?: boolean; world?: _SimWorld; seed?: string; generatedMapPath?: string }
 interface _SimSaveResult  { ok?: boolean; error?: string; canceled?: boolean; filePath?: string }
 
