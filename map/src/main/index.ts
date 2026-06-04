@@ -335,7 +335,8 @@ async function _spawnServer(
   }
 
   const stderrChunks: Buffer[] = []
-  const simArgs = [join(simDir, 'main.py'), '--map-file', mapFileArg, '--game-server', '--port', String(SIM_PORT)]
+  const serverModeArg = isClaudevergence ? '--game-server' : '--observer-server'
+  const simArgs = [join(simDir, 'main.py'), '--map-file', mapFileArg, serverModeArg, '--port', String(SIM_PORT)]
   if (normalizedSeed) {
     simArgs.push('--seed', normalizedSeed)
   }
@@ -537,11 +538,15 @@ ipcMain.handle('sim:world', async () => {
 
 ipcMain.handle('sim:advance', async () => {
   try {
-    const stateRaw = await simGet('/api/state')
-    const state = JSON.parse(stateRaw)
-    const actions: Array<{ action_id: string }> = state.state?.available_actions ?? []
-    const actionId = actions[0]?.action_id ?? 'hold'
-    await simPost('/api/action', { action_id: actionId })
+    if (simType === 'clashvergence') {
+      await simPost('/api/advance', {})
+    } else {
+      const stateRaw = await simGet('/api/state')
+      const state = JSON.parse(stateRaw)
+      const actions: Array<{ action_id: string }> = state.state?.available_actions ?? []
+      const actionId = actions[0]?.action_id ?? 'hold'
+      await simPost('/api/action', { action_id: actionId })
+    }
     return JSON.parse(await simGet('/api/world'))
   } catch (e: any) {
     return { ok: false, error: e.message }

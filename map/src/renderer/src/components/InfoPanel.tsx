@@ -261,12 +261,8 @@ function LoreLinkField({
 
 function DominantClimateField({
   regionId,
-  value,
-  onChange,
 }: {
   regionId: string
-  value?: Climate
-  onChange: (value: Climate | undefined) => void
 }) {
   const map = useMapStore((s) => s.map)
   const { dominant, total } = useMemo(() => {
@@ -287,23 +283,15 @@ function DominantClimateField({
 
   return (
     <Field label="Climate">
-      <select className={SELECT} value={value ?? ''}
-        onChange={(e) => onChange(e.target.value ? normalizeClimate(e.target.value) : undefined)}>
-        <option value="">
-          {dominant ? `Use painted dominant: ${getClimateCodeLabel(dominant)}` : 'Use painted dominant'}
-        </option>
-        {ALL_CLIMATES.map((c) => <option key={c} value={c}>{getClimateCodeLabel(c)}</option>)}
-      </select>
       {dominant ? (
-        <div className="flex items-center gap-2 px-2.5 py-1.5 bg-gray-800 rounded mt-1">
+        <div className="flex items-center gap-2 px-2.5 py-1.5 bg-gray-800 rounded">
           <span className="inline-block w-3 h-3 rounded-sm border border-gray-600 shrink-0"
             style={{ background: getClimateColor(dominant) }} />
-          <span className="text-xs text-gray-400">Painted</span>
           <span className="text-sm text-gray-200 truncate">{getClimateCodeLabel(dominant)}</span>
           <span className="text-xs text-gray-500 ml-auto">{total} hex{total !== 1 ? 'es' : ''}</span>
         </div>
       ) : (
-        <p className="text-sm text-gray-500 italic px-2.5 py-1.5 bg-gray-800 rounded mt-1">
+        <p className="text-sm text-gray-500 italic px-2.5 py-1.5 bg-gray-800 rounded">
           — paint hexes to set —
         </p>
       )}
@@ -463,11 +451,7 @@ function LoreReader({ regionId, rd }: { regionId: string; rd: RegionData }) {
               onChange={(e) => upsertRegion(regionId, { faction: e.target.value || undefined })} />
           </Field>
           <div className="grid grid-cols-2 gap-3">
-            <DominantClimateField
-              regionId={regionId}
-              value={rd.climate}
-              onChange={(climate) => upsertRegion(regionId, { climate })}
-            />
+            <DominantClimateField regionId={regionId} />
             <Field label="Status">
               <select className={SELECT} value={rd.coreStatus ?? ''}
                 onChange={(e) => upsertRegion(regionId, { coreStatus: (e.target.value || undefined) as CoreStatus | undefined })}>
@@ -645,11 +629,7 @@ export function InfoPanel() {
           onChange={(value) => upsertRegion(selectedRegion, { faction: value || undefined })}
         />
         {simWorld && <SimulationClimateField region={simRegion} />}
-        <DominantClimateField
-          regionId={selectedRegion}
-          value={rd.climate}
-          onChange={(climate) => upsertRegion(selectedRegion, { climate })}
-        />
+        <DominantClimateField regionId={selectedRegion} />
         <Field label="Status">
           <select className={SELECT} value={rd.coreStatus ?? ''}
             onChange={(e) => upsertRegion(selectedRegion, { coreStatus: (e.target.value || undefined) as CoreStatus | undefined })}>
@@ -762,11 +742,7 @@ export function InfoPanel() {
             onChange={(value) => upsertRegion(hex.region!, { faction: value || undefined })}
           />
           {simWorld && <SimulationClimateField region={simRegion} />}
-          <DominantClimateField
-            regionId={hex.region!}
-            value={regionData.climate}
-            onChange={(climate) => upsertRegion(hex.region!, { climate })}
-          />
+          <DominantClimateField regionId={hex.region!} />
           <Field label="Status">
             <select className={SELECT} value={regionData.coreStatus ?? ''}
               onChange={(e) => upsertRegion(hex.region!, { coreStatus: (e.target.value || undefined) as CoreStatus | undefined })}>

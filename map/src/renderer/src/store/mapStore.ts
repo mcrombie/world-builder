@@ -86,6 +86,34 @@ function migrateRegion(raw: RegionData): RegionData {
   }
 }
 
+function dominantClimatesByRegion(hexes: Record<string, HexData>): Record<string, Climate> {
+  const countsByRegion: Record<string, Partial<Record<Climate, number>>> = {}
+  for (const hex of Object.values(hexes)) {
+    if (!hex.region || !hex.climate) continue
+    const climate = normalizeClimate(hex.climate)
+    const counts = countsByRegion[hex.region] ?? {}
+    counts[climate] = (counts[climate] ?? 0) + 1
+    countsByRegion[hex.region] = counts
+  }
+  return Object.fromEntries(
+    Object.entries(countsByRegion).map(([regionId, counts]) => {
+      const entries = Object.entries(counts) as [Climate, number][]
+      return [regionId, entries.reduce((best, item) => item[1] > best[1] ? item : best)[0]]
+    }),
+  )
+}
+
+function deriveRegionClimates(map: MapData): MapData {
+  const dominantByRegion = dominantClimatesByRegion(map.hexes)
+  const regions: Record<string, RegionData> = {}
+  for (const [id, region] of Object.entries(map.regions)) {
+    const dominant = dominantByRegion[id]
+    const { climate: _oldClimate, ...withoutClimate } = region
+    regions[id] = dominant ? { ...withoutClimate, climate: dominant } : withoutClimate
+  }
+  return { ...map, regions }
+}
+
 interface MapStore {
   map: MapData | null
   mapVersion: number
@@ -238,8 +266,9 @@ export const useMapStore = create<MapStore>((set, get) => ({
     const regions = Object.fromEntries(
       Object.entries(precomputedRegions ?? {}).map(([key, region]) => [key, migrateRegion(region)]),
     )
+    const newMap = deriveRegionClimates({ name, width, height, hexSize, climateSystem: 'koppen-v1', hexes, rivers: {}, regions })
     set({
-      map: { name, width, height, hexSize, climateSystem: 'koppen-v1', hexes, rivers: {}, regions },
+      map: newMap,
       mapVersion: get().mapVersion + 1,
       currentFilePath: null,
       isDirty: true,
@@ -267,8 +296,16 @@ export const useMapStore = create<MapStore>((set, get) => ({
       migratedRegions[key] = migrateRegion(region as RegionData)
     }
 
+    const migratedMap = deriveRegionClimates({
+      ...data,
+      climateSystem: 'koppen-v1',
+      hexes: migratedHexes,
+      rivers,
+      regions: migratedRegions,
+    })
+
     set((state) => ({
-      map: { ...data, climateSystem: 'koppen-v1', hexes: migratedHexes, rivers, regions: migratedRegions },
+      map: migratedMap,
       mapVersion: state.mapVersion + 1,
       currentFilePath: filePath,
       isDirty: false,
@@ -298,11 +335,15 @@ export const useMapStore = create<MapStore>((set, get) => ({
       }
     }
     if (Object.keys(updates).length === 0) return
-    set((state) => ({
-      map: state.map ? { ...state.map, hexes: { ...state.map.hexes, ...updates } } : null,
-      strokeBefore: newStrokeBefore,
-      isDirty: true,
-    }))
+    set((state) => {
+      if (!state.map) return {}
+      const nextMap = deriveRegionClimates({ ...state.map, hexes: { ...state.map.hexes, ...updates } })
+      return {
+        map: nextMap,
+        strokeBefore: newStrokeBefore,
+        isDirty: true,
+      }
+    })
   },
 
   paintRegionHex: (q, r) => {
@@ -318,11 +359,15 @@ export const useMapStore = create<MapStore>((set, get) => ({
       }
     }
     if (Object.keys(updates).length === 0) return
-    set((state) => ({
-      map: state.map ? { ...state.map, hexes: { ...state.map.hexes, ...updates } } : null,
-      strokeBefore: newStrokeBefore,
-      isDirty: true,
-    }))
+    set((state) => {
+      if (!state.map) return {}
+      const nextMap = deriveRegionClimates({ ...state.map, hexes: { ...state.map.hexes, ...updates } })
+      return {
+        map: nextMap,
+        strokeBefore: newStrokeBefore,
+        isDirty: true,
+      }
+    })
   },
 
   endStroke: () => {
@@ -341,11 +386,14 @@ export const useMapStore = create<MapStore>((set, get) => ({
     const { map, history } = get()
     if (!map || history.length === 0) return
     const before = history[history.length - 1]
-    set((state) => ({
-      map: state.map ? { ...state.map, hexes: { ...state.map.hexes, ...before } } : null,
-      history: state.history.slice(0, -1),
-      isDirty: true,
-    }))
+    set((state) => {
+      if (!state.map) return {}
+      return {
+        map: deriveRegionClimates({ ...state.map, hexes: { ...state.map.hexes, ...before } }),
+        history: state.history.slice(0, -1),
+        isDirty: true,
+      }
+    })
   },
 
   selectHex:    (key)  => set({ selectedHex: key, selectedRegion: null }),
@@ -354,13 +402,13 @@ export const useMapStore = create<MapStore>((set, get) => ({
 
   updateHex: (key, data) =>
     set((state) => {
+      if (!state.map) return {}
       const patch = data.climate ? { ...data, climate: normalizeClimate(data.climate) } : data
-      return {
-        map: state.map
-          ? { ...state.map, hexes: { ...state.map.hexes, [key]: { ...state.map.hexes[key], ...patch } } }
-          : null,
-        isDirty: true,
-      }
+      const nextMap = deriveRegionClimates({
+        ...state.map,
+        hexes: { ...state.map.hexes, [key]: { ...state.map.hexes[key], ...patch } },
+      })
+      return { map: nextMap, isDirty: true }
     }),
 
   setTool: (tool) => set({ activeTool: tool }),
@@ -381,11 +429,15 @@ export const useMapStore = create<MapStore>((set, get) => ({
       }
     }
     if (Object.keys(updates).length === 0) return
-    set((state) => ({
-      map: state.map ? { ...state.map, hexes: { ...state.map.hexes, ...updates } } : null,
-      strokeBefore: newStrokeBefore,
-      isDirty: true,
-    }))
+    set((state) => {
+      if (!state.map) return {}
+      const nextMap = deriveRegionClimates({ ...state.map, hexes: { ...state.map.hexes, ...updates } })
+      return {
+        map: nextMap,
+        strokeBefore: newStrokeBefore,
+        isDirty: true,
+      }
+    })
   },
   setActiveRegion: (id) => set({ activeRegion: id }),
   setBrushRadius: (radius) => set({ brushRadius: radius }),
@@ -431,11 +483,14 @@ export const useMapStore = create<MapStore>((set, get) => ({
         hexes[key] = { q: qs, r: rs, terrain: 'ocean', climate: 'Cfb' }
       }
     }
-    set((state) => ({
-      map: state.map ? { ...state.map, width: newWidth, height: newHeight, hexes } : null,
-      isDirty: true,
-      history: [],
-    }))
+    set((state) => {
+      if (!state.map) return {}
+      return {
+        map: deriveRegionClimates({ ...state.map, width: newWidth, height: newHeight, hexes }),
+        isDirty: true,
+        history: [],
+      }
+    })
   },
 
   upsertRegion: (id, data) =>
@@ -443,11 +498,12 @@ export const useMapStore = create<MapStore>((set, get) => ({
       if (!state.map) return {}
       const existing = state.map.regions[id] ?? { name: id, color: '#888888' }
       const patch = data.climate ? { ...data, climate: normalizeClimate(data.climate) } : data
+      const nextMap = deriveRegionClimates({
+        ...state.map,
+        regions: { ...state.map.regions, [id]: { ...existing, ...patch } },
+      })
       return {
-        map: {
-          ...state.map,
-          regions: { ...state.map.regions, [id]: { ...existing, ...patch } },
-        },
+        map: nextMap,
         isDirty: true,
       }
     }),

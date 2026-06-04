@@ -168,7 +168,7 @@ class ClashvergenceExportTests(unittest.TestCase):
 
         self.assertEqual(map_definition["regions"]["Steppe"]["climate"], "BSh")
 
-    def test_region_climate_override_beats_painted_dominant_climate(self):
+    def test_painted_dominant_climate_beats_region_override(self):
         tmp_dir = ROOT / ".tmp_clashvergence_export_tests"
         tmp_dir.mkdir(exist_ok=True)
         map_path = tmp_dir / "region_override.azmap"
@@ -185,7 +185,7 @@ class ClashvergenceExportTests(unittest.TestCase):
         finally:
             shutil.rmtree(tmp_dir)
 
-        self.assertEqual(map_definition["regions"]["South"]["climate"], "Csa")
+        self.assertEqual(map_definition["regions"]["South"]["climate"], "Af")
 
     def test_export_rejects_unknown_climate(self):
         tmp_dir = ROOT / ".tmp_clashvergence_export_tests"

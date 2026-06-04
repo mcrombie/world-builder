@@ -136,11 +136,11 @@ def _compute_terrain_tags(terrain_counts: Counter) -> list[str]:
 
 
 def _resolve_region_climate(region, meta: dict) -> str:
+    if region.dominant_climate:
+        return normalize_climate(region.dominant_climate)
     explicit = meta.get("climate")
     if explicit:
         return normalize_climate(explicit)
-    if region.dominant_climate:
-        return normalize_climate(region.dominant_climate)
     return normalize_climate(None)
 
 
