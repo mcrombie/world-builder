@@ -339,6 +339,23 @@
       "neighbors": [],
       "owner": null,
       "resources": 2,
+      "display_name": "Cold Stones",
+      "founding_name": "Cold Stones",
+      "name_metadata": {
+        "source": "world_builder",
+        "authored_name": "Cold Stones",
+        "current_name_reason": "authored",
+        "name_layers": [
+          {
+            "type": "authored",
+            "name": "Cold Stones",
+            "pattern": "world_builder",
+            "faction_id": null,
+            "faction_name": null,
+            "turn": 0
+          }
+        ]
+      },
       "terrain_tags": [
         "plains"
       ],
@@ -352,6 +369,23 @@
       ],
       "owner": null,
       "resources": 2,
+      "display_name": "North Orsa",
+      "founding_name": "North Orsa",
+      "name_metadata": {
+        "source": "world_builder",
+        "authored_name": "North Orsa",
+        "current_name_reason": "authored",
+        "name_layers": [
+          {
+            "type": "authored",
+            "name": "North Orsa",
+            "pattern": "world_builder",
+            "faction_id": null,
+            "faction_name": null,
+            "turn": 0
+          }
+        ]
+      },
       "terrain_tags": [
         "steppe"
       ],
@@ -366,6 +400,23 @@
       ],
       "owner": null,
       "resources": 2,
+      "display_name": "North Thoth",
+      "founding_name": "North Thoth",
+      "name_metadata": {
+        "source": "world_builder",
+        "authored_name": "North Thoth",
+        "current_name_reason": "authored",
+        "name_layers": [
+          {
+            "type": "authored",
+            "name": "North Thoth",
+            "pattern": "world_builder",
+            "faction_id": null,
+            "faction_name": null,
+            "turn": 0
+          }
+        ]
+      },
       "terrain_tags": [
         "steppe"
       ],
@@ -380,6 +431,23 @@
       ],
       "owner": null,
       "resources": 2,
+      "display_name": "West Witherst",
+      "founding_name": "West Witherst",
+      "name_metadata": {
+        "source": "world_builder",
+        "authored_name": "West Witherst",
+        "current_name_reason": "authored",
+        "name_layers": [
+          {
+            "type": "authored",
+            "name": "West Witherst",
+            "pattern": "world_builder",
+            "faction_id": null,
+            "faction_name": null,
+            "turn": 0
+          }
+        ]
+      },
       "terrain_tags": [
         "steppe"
       ],
@@ -393,6 +461,23 @@
       ],
       "owner": null,
       "resources": 2,
+      "display_name": "South Orsa",
+      "founding_name": "South Orsa",
+      "name_metadata": {
+        "source": "world_builder",
+        "authored_name": "South Orsa",
+        "current_name_reason": "authored",
+        "name_layers": [
+          {
+            "type": "authored",
+            "name": "South Orsa",
+            "pattern": "world_builder",
+            "faction_id": null,
+            "faction_name": null,
+            "turn": 0
+          }
+        ]
+      },
       "terrain_tags": [
         "steppe"
       ],
@@ -410,6 +495,23 @@
       ],
       "owner": null,
       "resources": 2,
+      "display_name": "Central Thoth",
+      "founding_name": "Central Thoth",
+      "name_metadata": {
+        "source": "world_builder",
+        "authored_name": "Central Thoth",
+        "current_name_reason": "authored",
+        "name_layers": [
+          {
+            "type": "authored",
+            "name": "Central Thoth",
+            "pattern": "world_builder",
+            "faction_id": null,
+            "faction_name": null,
+            "turn": 0
+          }
+        ]
+      },
       "terrain_tags": [
         "steppe"
       ],
@@ -426,6 +528,23 @@
       ],
       "owner": null,
       "resources": 2,
+      "display_name": "North Gorgi Mountains",
+      "founding_name": "North Gorgi Mountains",
+      "name_metadata": {
+        "source": "world_builder",
+        "authored_name": "North Gorgi Mountains",
+        "current_name_reason": "authored",
+        "name_layers": [
+          {
+            "type": "authored",
+            "name": "North Gorgi Mountains",
+            "pattern": "world_builder",
+            "faction_id": null,
+            "faction_name": null,
+            "turn": 0
+          }
+        ]
+      },
       "terrain_tags": [
         "highland",
         "hills"
@@ -441,6 +560,23 @@
       ],
       "owner": null,
       "resources": 2,
+      "display_name": "North Nonoth",
+      "founding_name": "North Nonoth",
+      "name_metadata": {
+        "source": "world_builder",
+        "authored_name": "North Nonoth",
+        "current_name_reason": "authored",
+        "name_layers": [
+          {
+            "type": "authored",
+            "name": "North Nonoth",
+            "pattern": "world_builder",
+            "faction_id": null,
+            "faction_name": null,
+            "turn": 0
+          }
+        ]
+      },
       "terrain_tags": [
         "steppe"
       ],
@@ -454,6 +590,23 @@
       ],
       "owner": null,
       "resources": 2,
+      "display_name": "East Witherst",
+      "founding_name": "East Witherst",
+      "name_metadata": {
+        "source": "world_builder",
+        "authored_name": "East Witherst",
+        "current_name_reason": "authored",
+        "name_layers": [
+          {
+            "type": "authored",
+            "name": "East Witherst",
+            "pattern": "world_builder",
+            "faction_id": null,
+            "faction_name": null,
+            "turn": 0
+          }
+        ]
+      },
       "terrain_tags": [
         "steppe"
       ],
@@ -470,6 +623,23 @@
       ],
       "owner": null,
       "resources": 3,
+      "display_name": "West Gorgi Mountains",
+      "founding_name": "West Gorgi Mountains",
+      "name_metadata": {
+        "source": "world_builder",
+        "authored_name": "West Gorgi Mountains",
+        "current_name_reason": "authored",
+        "name_layers": [
+          {
+            "type": "authored",
+            "name": "West Gorgi Mountains",
+            "pattern": "world_builder",
+            "faction_id": null,
+            "faction_name": null,
+            "turn": 0
+          }
+        ]
+      },
       "terrain_tags": [
         "riverland",
         "highland",
@@ -487,6 +657,23 @@
       ],
       "owner": null,
       "resources": 2,
+      "display_name": "East Gorgi Mountains",
+      "founding_name": "East Gorgi Mountains",
+      "name_metadata": {
+        "source": "world_builder",
+        "authored_name": "East Gorgi Mountains",
+        "current_name_reason": "authored",
+        "name_layers": [
+          {
+            "type": "authored",
+            "name": "East Gorgi Mountains",
+            "pattern": "world_builder",
+            "faction_id": null,
+            "faction_name": null,
+            "turn": 0
+          }
+        ]
+      },
       "terrain_tags": [
         "highland",
         "hills"
@@ -505,6 +692,23 @@
       ],
       "owner": null,
       "resources": 2,
+      "display_name": "Eshtor Plateau",
+      "founding_name": "Eshtor Plateau",
+      "name_metadata": {
+        "source": "world_builder",
+        "authored_name": "Eshtor Plateau",
+        "current_name_reason": "authored",
+        "name_layers": [
+          {
+            "type": "authored",
+            "name": "Eshtor Plateau",
+            "pattern": "world_builder",
+            "faction_id": null,
+            "faction_name": null,
+            "turn": 0
+          }
+        ]
+      },
       "terrain_tags": [
         "hills"
       ],
@@ -519,6 +723,23 @@
       ],
       "owner": null,
       "resources": 2,
+      "display_name": "South Nonoth",
+      "founding_name": "South Nonoth",
+      "name_metadata": {
+        "source": "world_builder",
+        "authored_name": "South Nonoth",
+        "current_name_reason": "authored",
+        "name_layers": [
+          {
+            "type": "authored",
+            "name": "South Nonoth",
+            "pattern": "world_builder",
+            "faction_id": null,
+            "faction_name": null,
+            "turn": 0
+          }
+        ]
+      },
       "terrain_tags": [
         "steppe"
       ],
@@ -534,6 +755,23 @@
       ],
       "owner": null,
       "resources": 2,
+      "display_name": "South Thoth",
+      "founding_name": "South Thoth",
+      "name_metadata": {
+        "source": "world_builder",
+        "authored_name": "South Thoth",
+        "current_name_reason": "authored",
+        "name_layers": [
+          {
+            "type": "authored",
+            "name": "South Thoth",
+            "pattern": "world_builder",
+            "faction_id": null,
+            "faction_name": null,
+            "turn": 0
+          }
+        ]
+      },
       "terrain_tags": [
         "steppe"
       ],
@@ -549,6 +787,23 @@
       ],
       "owner": null,
       "resources": 2,
+      "display_name": "North Riesov",
+      "founding_name": "North Riesov",
+      "name_metadata": {
+        "source": "world_builder",
+        "authored_name": "North Riesov",
+        "current_name_reason": "authored",
+        "name_layers": [
+          {
+            "type": "authored",
+            "name": "North Riesov",
+            "pattern": "world_builder",
+            "faction_id": null,
+            "faction_name": null,
+            "turn": 0
+          }
+        ]
+      },
       "terrain_tags": [
         "hills",
         "steppe"
@@ -567,6 +822,23 @@
       ],
       "owner": null,
       "resources": 2,
+      "display_name": "Noth Hills",
+      "founding_name": "Noth Hills",
+      "name_metadata": {
+        "source": "world_builder",
+        "authored_name": "Noth Hills",
+        "current_name_reason": "authored",
+        "name_layers": [
+          {
+            "type": "authored",
+            "name": "Noth Hills",
+            "pattern": "world_builder",
+            "faction_id": null,
+            "faction_name": null,
+            "turn": 0
+          }
+        ]
+      },
       "terrain_tags": [
         "hills"
       ],
@@ -582,6 +854,23 @@
       ],
       "owner": null,
       "resources": 1,
+      "display_name": "Orgmala",
+      "founding_name": "Orgmala",
+      "name_metadata": {
+        "source": "world_builder",
+        "authored_name": "Orgmala",
+        "current_name_reason": "authored",
+        "name_layers": [
+          {
+            "type": "authored",
+            "name": "Orgmala",
+            "pattern": "world_builder",
+            "faction_id": null,
+            "faction_name": null,
+            "turn": 0
+          }
+        ]
+      },
       "terrain_tags": [
         "highland",
         "hills",
@@ -604,6 +893,23 @@
       ],
       "owner": null,
       "resources": 3,
+      "display_name": "North Lond",
+      "founding_name": "North Lond",
+      "name_metadata": {
+        "source": "world_builder",
+        "authored_name": "North Lond",
+        "current_name_reason": "authored",
+        "name_layers": [
+          {
+            "type": "authored",
+            "name": "North Lond",
+            "pattern": "world_builder",
+            "faction_id": null,
+            "faction_name": null,
+            "turn": 0
+          }
+        ]
+      },
       "terrain_tags": [
         "riverland",
         "steppe",
@@ -620,6 +926,23 @@
       ],
       "owner": null,
       "resources": 2,
+      "display_name": "Nothwood",
+      "founding_name": "Nothwood",
+      "name_metadata": {
+        "source": "world_builder",
+        "authored_name": "Nothwood",
+        "current_name_reason": "authored",
+        "name_layers": [
+          {
+            "type": "authored",
+            "name": "Nothwood",
+            "pattern": "world_builder",
+            "faction_id": null,
+            "faction_name": null,
+            "turn": 0
+          }
+        ]
+      },
       "terrain_tags": [
         "highland",
         "forest",
@@ -638,6 +961,23 @@
       ],
       "owner": null,
       "resources": 2,
+      "display_name": "West Baldro Mountains",
+      "founding_name": "West Baldro Mountains",
+      "name_metadata": {
+        "source": "world_builder",
+        "authored_name": "West Baldro Mountains",
+        "current_name_reason": "authored",
+        "name_layers": [
+          {
+            "type": "authored",
+            "name": "West Baldro Mountains",
+            "pattern": "world_builder",
+            "faction_id": null,
+            "faction_name": null,
+            "turn": 0
+          }
+        ]
+      },
       "terrain_tags": [
         "highland",
         "hills"
@@ -652,6 +992,23 @@
       ],
       "owner": null,
       "resources": 2,
+      "display_name": "South Riesov",
+      "founding_name": "South Riesov",
+      "name_metadata": {
+        "source": "world_builder",
+        "authored_name": "South Riesov",
+        "current_name_reason": "authored",
+        "name_layers": [
+          {
+            "type": "authored",
+            "name": "South Riesov",
+            "pattern": "world_builder",
+            "faction_id": null,
+            "faction_name": null,
+            "turn": 0
+          }
+        ]
+      },
       "terrain_tags": [
         "hills",
         "steppe"
@@ -670,6 +1027,23 @@
       ],
       "owner": null,
       "resources": 2,
+      "display_name": "East Lond",
+      "founding_name": "East Lond",
+      "name_metadata": {
+        "source": "world_builder",
+        "authored_name": "East Lond",
+        "current_name_reason": "authored",
+        "name_layers": [
+          {
+            "type": "authored",
+            "name": "East Lond",
+            "pattern": "world_builder",
+            "faction_id": null,
+            "faction_name": null,
+            "turn": 0
+          }
+        ]
+      },
       "terrain_tags": [
         "steppe",
         "plains"
@@ -687,6 +1061,23 @@
       ],
       "owner": null,
       "resources": 2,
+      "display_name": "West Lond",
+      "founding_name": "West Lond",
+      "name_metadata": {
+        "source": "world_builder",
+        "authored_name": "West Lond",
+        "current_name_reason": "authored",
+        "name_layers": [
+          {
+            "type": "authored",
+            "name": "West Lond",
+            "pattern": "world_builder",
+            "faction_id": null,
+            "faction_name": null,
+            "turn": 0
+          }
+        ]
+      },
       "terrain_tags": [
         "steppe",
         "plains"
@@ -702,6 +1093,23 @@
       ],
       "owner": "Faction1",
       "resources": 3,
+      "display_name": "Central Lond",
+      "founding_name": "Central Lond",
+      "name_metadata": {
+        "source": "world_builder",
+        "authored_name": "Central Lond",
+        "current_name_reason": "authored",
+        "name_layers": [
+          {
+            "type": "authored",
+            "name": "Central Lond",
+            "pattern": "world_builder",
+            "faction_id": null,
+            "faction_name": null,
+            "turn": 0
+          }
+        ]
+      },
       "terrain_tags": [
         "riverland",
         "plains"
@@ -718,6 +1126,23 @@
       ],
       "owner": null,
       "resources": 2,
+      "display_name": "East Baldro Mountains",
+      "founding_name": "East Baldro Mountains",
+      "name_metadata": {
+        "source": "world_builder",
+        "authored_name": "East Baldro Mountains",
+        "current_name_reason": "authored",
+        "name_layers": [
+          {
+            "type": "authored",
+            "name": "East Baldro Mountains",
+            "pattern": "world_builder",
+            "faction_id": null,
+            "faction_name": null,
+            "turn": 0
+          }
+        ]
+      },
       "terrain_tags": [
         "highland",
         "hills"
@@ -733,6 +1158,23 @@
       ],
       "owner": null,
       "resources": 2,
+      "display_name": "North Endevor",
+      "founding_name": "North Endevor",
+      "name_metadata": {
+        "source": "world_builder",
+        "authored_name": "North Endevor",
+        "current_name_reason": "authored",
+        "name_layers": [
+          {
+            "type": "authored",
+            "name": "North Endevor",
+            "pattern": "world_builder",
+            "faction_id": null,
+            "faction_name": null,
+            "turn": 0
+          }
+        ]
+      },
       "terrain_tags": [
         "steppe"
       ],
@@ -749,6 +1191,23 @@
       ],
       "owner": null,
       "resources": 2,
+      "display_name": "East Endevor",
+      "founding_name": "East Endevor",
+      "name_metadata": {
+        "source": "world_builder",
+        "authored_name": "East Endevor",
+        "current_name_reason": "authored",
+        "name_layers": [
+          {
+            "type": "authored",
+            "name": "East Endevor",
+            "pattern": "world_builder",
+            "faction_id": null,
+            "faction_name": null,
+            "turn": 0
+          }
+        ]
+      },
       "terrain_tags": [
         "steppe"
       ],
@@ -762,6 +1221,23 @@
       ],
       "owner": null,
       "resources": 2,
+      "display_name": "West Endevor",
+      "founding_name": "West Endevor",
+      "name_metadata": {
+        "source": "world_builder",
+        "authored_name": "West Endevor",
+        "current_name_reason": "authored",
+        "name_layers": [
+          {
+            "type": "authored",
+            "name": "West Endevor",
+            "pattern": "world_builder",
+            "faction_id": null,
+            "faction_name": null,
+            "turn": 0
+          }
+        ]
+      },
       "terrain_tags": [
         "steppe"
       ],
@@ -777,6 +1253,23 @@
       ],
       "owner": null,
       "resources": 3,
+      "display_name": "North Ganun",
+      "founding_name": "North Ganun",
+      "name_metadata": {
+        "source": "world_builder",
+        "authored_name": "North Ganun",
+        "current_name_reason": "authored",
+        "name_layers": [
+          {
+            "type": "authored",
+            "name": "North Ganun",
+            "pattern": "world_builder",
+            "faction_id": null,
+            "faction_name": null,
+            "turn": 0
+          }
+        ]
+      },
       "terrain_tags": [
         "riverland",
         "steppe"
@@ -793,6 +1286,23 @@
       ],
       "owner": null,
       "resources": 3,
+      "display_name": "East Ganun",
+      "founding_name": "East Ganun",
+      "name_metadata": {
+        "source": "world_builder",
+        "authored_name": "East Ganun",
+        "current_name_reason": "authored",
+        "name_layers": [
+          {
+            "type": "authored",
+            "name": "East Ganun",
+            "pattern": "world_builder",
+            "faction_id": null,
+            "faction_name": null,
+            "turn": 0
+          }
+        ]
+      },
       "terrain_tags": [
         "riverland",
         "steppe"
@@ -810,6 +1320,23 @@
       ],
       "owner": null,
       "resources": 2,
+      "display_name": "South Endevor",
+      "founding_name": "South Endevor",
+      "name_metadata": {
+        "source": "world_builder",
+        "authored_name": "South Endevor",
+        "current_name_reason": "authored",
+        "name_layers": [
+          {
+            "type": "authored",
+            "name": "South Endevor",
+            "pattern": "world_builder",
+            "faction_id": null,
+            "faction_name": null,
+            "turn": 0
+          }
+        ]
+      },
       "terrain_tags": [
         "steppe"
       ],
@@ -826,6 +1353,23 @@
       ],
       "owner": null,
       "resources": 3,
+      "display_name": "South Lond",
+      "founding_name": "South Lond",
+      "name_metadata": {
+        "source": "world_builder",
+        "authored_name": "South Lond",
+        "current_name_reason": "authored",
+        "name_layers": [
+          {
+            "type": "authored",
+            "name": "South Lond",
+            "pattern": "world_builder",
+            "faction_id": null,
+            "faction_name": null,
+            "turn": 0
+          }
+        ]
+      },
       "terrain_tags": [
         "riverland",
         "steppe",
@@ -843,6 +1387,23 @@
       ],
       "owner": null,
       "resources": 2,
+      "display_name": "West Ganun",
+      "founding_name": "West Ganun",
+      "name_metadata": {
+        "source": "world_builder",
+        "authored_name": "West Ganun",
+        "current_name_reason": "authored",
+        "name_layers": [
+          {
+            "type": "authored",
+            "name": "West Ganun",
+            "pattern": "world_builder",
+            "faction_id": null,
+            "faction_name": null,
+            "turn": 0
+          }
+        ]
+      },
       "terrain_tags": [
         "steppe"
       ],
@@ -860,6 +1421,23 @@
       ],
       "owner": null,
       "resources": 2,
+      "display_name": "North Acorwood",
+      "founding_name": "North Acorwood",
+      "name_metadata": {
+        "source": "world_builder",
+        "authored_name": "North Acorwood",
+        "current_name_reason": "authored",
+        "name_layers": [
+          {
+            "type": "authored",
+            "name": "North Acorwood",
+            "pattern": "world_builder",
+            "faction_id": null,
+            "faction_name": null,
+            "turn": 0
+          }
+        ]
+      },
       "terrain_tags": [
         "highland",
         "forest"
@@ -873,6 +1451,23 @@
       ],
       "owner": null,
       "resources": 2,
+      "display_name": "Cape Thalmagar",
+      "founding_name": "Cape Thalmagar",
+      "name_metadata": {
+        "source": "world_builder",
+        "authored_name": "Cape Thalmagar",
+        "current_name_reason": "authored",
+        "name_layers": [
+          {
+            "type": "authored",
+            "name": "Cape Thalmagar",
+            "pattern": "world_builder",
+            "faction_id": null,
+            "faction_name": null,
+            "turn": 0
+          }
+        ]
+      },
       "terrain_tags": [
         "steppe"
       ],
@@ -889,6 +1484,23 @@
       ],
       "owner": null,
       "resources": 2,
+      "display_name": "West Acorwood",
+      "founding_name": "West Acorwood",
+      "name_metadata": {
+        "source": "world_builder",
+        "authored_name": "West Acorwood",
+        "current_name_reason": "authored",
+        "name_layers": [
+          {
+            "type": "authored",
+            "name": "West Acorwood",
+            "pattern": "world_builder",
+            "faction_id": null,
+            "faction_name": null,
+            "turn": 0
+          }
+        ]
+      },
       "terrain_tags": [
         "highland",
         "forest"
@@ -903,6 +1515,23 @@
       ],
       "owner": null,
       "resources": 2,
+      "display_name": "East Acordwood",
+      "founding_name": "East Acordwood",
+      "name_metadata": {
+        "source": "world_builder",
+        "authored_name": "East Acordwood",
+        "current_name_reason": "authored",
+        "name_layers": [
+          {
+            "type": "authored",
+            "name": "East Acordwood",
+            "pattern": "world_builder",
+            "faction_id": null,
+            "faction_name": null,
+            "turn": 0
+          }
+        ]
+      },
       "terrain_tags": [
         "highland",
         "forest"
@@ -916,6 +1545,23 @@
       ],
       "owner": null,
       "resources": 3,
+      "display_name": "South Ganun",
+      "founding_name": "South Ganun",
+      "name_metadata": {
+        "source": "world_builder",
+        "authored_name": "South Ganun",
+        "current_name_reason": "authored",
+        "name_layers": [
+          {
+            "type": "authored",
+            "name": "South Ganun",
+            "pattern": "world_builder",
+            "faction_id": null,
+            "faction_name": null,
+            "turn": 0
+          }
+        ]
+      },
       "terrain_tags": [
         "riverland",
         "steppe"
@@ -928,6 +1574,23 @@
       ],
       "owner": null,
       "resources": 2,
+      "display_name": "East Inseld",
+      "founding_name": "East Inseld",
+      "name_metadata": {
+        "source": "world_builder",
+        "authored_name": "East Inseld",
+        "current_name_reason": "authored",
+        "name_layers": [
+          {
+            "type": "authored",
+            "name": "East Inseld",
+            "pattern": "world_builder",
+            "faction_id": null,
+            "faction_name": null,
+            "turn": 0
+          }
+        ]
+      },
       "terrain_tags": [
         "plains"
       ],
@@ -944,6 +1607,23 @@
       ],
       "owner": null,
       "resources": 1,
+      "display_name": "Acor Wetlands",
+      "founding_name": "Acor Wetlands",
+      "name_metadata": {
+        "source": "world_builder",
+        "authored_name": "Acor Wetlands",
+        "current_name_reason": "authored",
+        "name_layers": [
+          {
+            "type": "authored",
+            "name": "Acor Wetlands",
+            "pattern": "world_builder",
+            "faction_id": null,
+            "faction_name": null,
+            "turn": 0
+          }
+        ]
+      },
       "terrain_tags": [
         "marsh"
       ],
@@ -959,6 +1639,23 @@
       ],
       "owner": null,
       "resources": 3,
+      "display_name": "Narcosh",
+      "founding_name": "Narcosh",
+      "name_metadata": {
+        "source": "world_builder",
+        "authored_name": "Narcosh",
+        "current_name_reason": "authored",
+        "name_layers": [
+          {
+            "type": "authored",
+            "name": "Narcosh",
+            "pattern": "world_builder",
+            "faction_id": null,
+            "faction_name": null,
+            "turn": 0
+          }
+        ]
+      },
       "terrain_tags": [
         "coast",
         "highland",
@@ -977,6 +1674,23 @@
       ],
       "owner": null,
       "resources": 2,
+      "display_name": "Cudon",
+      "founding_name": "Cudon",
+      "name_metadata": {
+        "source": "world_builder",
+        "authored_name": "Cudon",
+        "current_name_reason": "authored",
+        "name_layers": [
+          {
+            "type": "authored",
+            "name": "Cudon",
+            "pattern": "world_builder",
+            "faction_id": null,
+            "faction_name": null,
+            "turn": 0
+          }
+        ]
+      },
       "terrain_tags": [
         "highland",
         "hills",
@@ -993,6 +1707,23 @@
       ],
       "owner": null,
       "resources": 2,
+      "display_name": "South Acordwood",
+      "founding_name": "South Acordwood",
+      "name_metadata": {
+        "source": "world_builder",
+        "authored_name": "South Acordwood",
+        "current_name_reason": "authored",
+        "name_layers": [
+          {
+            "type": "authored",
+            "name": "South Acordwood",
+            "pattern": "world_builder",
+            "faction_id": null,
+            "faction_name": null,
+            "turn": 0
+          }
+        ]
+      },
       "terrain_tags": [
         "highland",
         "forest"
@@ -1005,6 +1736,23 @@
       ],
       "owner": null,
       "resources": 2,
+      "display_name": "West Inseld",
+      "founding_name": "West Inseld",
+      "name_metadata": {
+        "source": "world_builder",
+        "authored_name": "West Inseld",
+        "current_name_reason": "authored",
+        "name_layers": [
+          {
+            "type": "authored",
+            "name": "West Inseld",
+            "pattern": "world_builder",
+            "faction_id": null,
+            "faction_name": null,
+            "turn": 0
+          }
+        ]
+      },
       "terrain_tags": [
         "steppe",
         "plains"
@@ -1020,6 +1768,23 @@
       ],
       "owner": null,
       "resources": 2,
+      "display_name": "Lesser Oremindi Mountains",
+      "founding_name": "Lesser Oremindi Mountains",
+      "name_metadata": {
+        "source": "world_builder",
+        "authored_name": "Lesser Oremindi Mountains",
+        "current_name_reason": "authored",
+        "name_layers": [
+          {
+            "type": "authored",
+            "name": "Lesser Oremindi Mountains",
+            "pattern": "world_builder",
+            "faction_id": null,
+            "faction_name": null,
+            "turn": 0
+          }
+        ]
+      },
       "terrain_tags": [
         "highland",
         "hills"
@@ -1036,6 +1801,23 @@
       ],
       "owner": null,
       "resources": 3,
+      "display_name": "North Mithala",
+      "founding_name": "North Mithala",
+      "name_metadata": {
+        "source": "world_builder",
+        "authored_name": "North Mithala",
+        "current_name_reason": "authored",
+        "name_layers": [
+          {
+            "type": "authored",
+            "name": "North Mithala",
+            "pattern": "world_builder",
+            "faction_id": null,
+            "faction_name": null,
+            "turn": 0
+          }
+        ]
+      },
       "terrain_tags": [
         "riverland",
         "steppe",
@@ -1056,6 +1838,23 @@
       ],
       "owner": null,
       "resources": 2,
+      "display_name": "Henborth",
+      "founding_name": "Henborth",
+      "name_metadata": {
+        "source": "world_builder",
+        "authored_name": "Henborth",
+        "current_name_reason": "authored",
+        "name_layers": [
+          {
+            "type": "authored",
+            "name": "Henborth",
+            "pattern": "world_builder",
+            "faction_id": null,
+            "faction_name": null,
+            "turn": 0
+          }
+        ]
+      },
       "terrain_tags": [
         "steppe"
       ],
@@ -1071,6 +1870,23 @@
       ],
       "owner": null,
       "resources": 2,
+      "display_name": "North Oreminidi Mountains",
+      "founding_name": "North Oreminidi Mountains",
+      "name_metadata": {
+        "source": "world_builder",
+        "authored_name": "North Oreminidi Mountains",
+        "current_name_reason": "authored",
+        "name_layers": [
+          {
+            "type": "authored",
+            "name": "North Oreminidi Mountains",
+            "pattern": "world_builder",
+            "faction_id": null,
+            "faction_name": null,
+            "turn": 0
+          }
+        ]
+      },
       "terrain_tags": [
         "highland",
         "hills"
@@ -1087,6 +1903,23 @@
       ],
       "owner": null,
       "resources": 2,
+      "display_name": "East Mithala",
+      "founding_name": "East Mithala",
+      "name_metadata": {
+        "source": "world_builder",
+        "authored_name": "East Mithala",
+        "current_name_reason": "authored",
+        "name_layers": [
+          {
+            "type": "authored",
+            "name": "East Mithala",
+            "pattern": "world_builder",
+            "faction_id": null,
+            "faction_name": null,
+            "turn": 0
+          }
+        ]
+      },
       "terrain_tags": [
         "steppe",
         "plains"
@@ -1103,6 +1936,23 @@
       ],
       "owner": "Faction5",
       "resources": 3,
+      "display_name": "West Mithala",
+      "founding_name": "West Mithala",
+      "name_metadata": {
+        "source": "world_builder",
+        "authored_name": "West Mithala",
+        "current_name_reason": "authored",
+        "name_layers": [
+          {
+            "type": "authored",
+            "name": "West Mithala",
+            "pattern": "world_builder",
+            "faction_id": null,
+            "faction_name": null,
+            "turn": 0
+          }
+        ]
+      },
       "terrain_tags": [
         "riverland",
         "steppe",
@@ -1118,6 +1968,23 @@
       ],
       "owner": null,
       "resources": 2,
+      "display_name": "West Oremindi Mountains",
+      "founding_name": "West Oremindi Mountains",
+      "name_metadata": {
+        "source": "world_builder",
+        "authored_name": "West Oremindi Mountains",
+        "current_name_reason": "authored",
+        "name_layers": [
+          {
+            "type": "authored",
+            "name": "West Oremindi Mountains",
+            "pattern": "world_builder",
+            "faction_id": null,
+            "faction_name": null,
+            "turn": 0
+          }
+        ]
+      },
       "terrain_tags": [
         "highland",
         "hills"
@@ -1135,6 +2002,23 @@
       ],
       "owner": null,
       "resources": 2,
+      "display_name": "East Oremindi Mountains",
+      "founding_name": "East Oremindi Mountains",
+      "name_metadata": {
+        "source": "world_builder",
+        "authored_name": "East Oremindi Mountains",
+        "current_name_reason": "authored",
+        "name_layers": [
+          {
+            "type": "authored",
+            "name": "East Oremindi Mountains",
+            "pattern": "world_builder",
+            "faction_id": null,
+            "faction_name": null,
+            "turn": 0
+          }
+        ]
+      },
       "terrain_tags": [
         "highland",
         "hills"
@@ -1152,6 +2036,23 @@
       ],
       "owner": null,
       "resources": 2,
+      "display_name": "South Mithala",
+      "founding_name": "South Mithala",
+      "name_metadata": {
+        "source": "world_builder",
+        "authored_name": "South Mithala",
+        "current_name_reason": "authored",
+        "name_layers": [
+          {
+            "type": "authored",
+            "name": "South Mithala",
+            "pattern": "world_builder",
+            "faction_id": null,
+            "faction_name": null,
+            "turn": 0
+          }
+        ]
+      },
       "terrain_tags": [
         "hills",
         "steppe",
@@ -1169,6 +2070,23 @@
       ],
       "owner": null,
       "resources": 2,
+      "display_name": "North Celder",
+      "founding_name": "North Celder",
+      "name_metadata": {
+        "source": "world_builder",
+        "authored_name": "North Celder",
+        "current_name_reason": "authored",
+        "name_layers": [
+          {
+            "type": "authored",
+            "name": "North Celder",
+            "pattern": "world_builder",
+            "faction_id": null,
+            "faction_name": null,
+            "turn": 0
+          }
+        ]
+      },
       "terrain_tags": [
         "steppe",
         "plains"
@@ -1185,6 +2103,23 @@
       ],
       "owner": null,
       "resources": 2,
+      "display_name": "East Lotharn Mountains",
+      "founding_name": "East Lotharn Mountains",
+      "name_metadata": {
+        "source": "world_builder",
+        "authored_name": "East Lotharn Mountains",
+        "current_name_reason": "authored",
+        "name_layers": [
+          {
+            "type": "authored",
+            "name": "East Lotharn Mountains",
+            "pattern": "world_builder",
+            "faction_id": null,
+            "faction_name": null,
+            "turn": 0
+          }
+        ]
+      },
       "terrain_tags": [
         "highland",
         "hills"
@@ -1199,6 +2134,23 @@
       ],
       "owner": null,
       "resources": 3,
+      "display_name": "Feradom",
+      "founding_name": "Feradom",
+      "name_metadata": {
+        "source": "world_builder",
+        "authored_name": "Feradom",
+        "current_name_reason": "authored",
+        "name_layers": [
+          {
+            "type": "authored",
+            "name": "Feradom",
+            "pattern": "world_builder",
+            "faction_id": null,
+            "faction_name": null,
+            "turn": 0
+          }
+        ]
+      },
       "terrain_tags": [
         "riverland",
         "highland",
@@ -1218,6 +2170,23 @@
       ],
       "owner": null,
       "resources": 2,
+      "display_name": "South Celder",
+      "founding_name": "South Celder",
+      "name_metadata": {
+        "source": "world_builder",
+        "authored_name": "South Celder",
+        "current_name_reason": "authored",
+        "name_layers": [
+          {
+            "type": "authored",
+            "name": "South Celder",
+            "pattern": "world_builder",
+            "faction_id": null,
+            "faction_name": null,
+            "turn": 0
+          }
+        ]
+      },
       "terrain_tags": [
         "steppe"
       ],
@@ -1235,6 +2204,23 @@
       ],
       "owner": null,
       "resources": 2,
+      "display_name": "West Lotharn Mountains",
+      "founding_name": "West Lotharn Mountains",
+      "name_metadata": {
+        "source": "world_builder",
+        "authored_name": "West Lotharn Mountains",
+        "current_name_reason": "authored",
+        "name_layers": [
+          {
+            "type": "authored",
+            "name": "West Lotharn Mountains",
+            "pattern": "world_builder",
+            "faction_id": null,
+            "faction_name": null,
+            "turn": 0
+          }
+        ]
+      },
       "terrain_tags": [
         "highland",
         "hills"
@@ -1252,6 +2238,23 @@
       ],
       "owner": null,
       "resources": 3,
+      "display_name": "South Oremindi Mountains",
+      "founding_name": "South Oremindi Mountains",
+      "name_metadata": {
+        "source": "world_builder",
+        "authored_name": "South Oremindi Mountains",
+        "current_name_reason": "authored",
+        "name_layers": [
+          {
+            "type": "authored",
+            "name": "South Oremindi Mountains",
+            "pattern": "world_builder",
+            "faction_id": null,
+            "faction_name": null,
+            "turn": 0
+          }
+        ]
+      },
       "terrain_tags": [
         "coast",
         "highland",
@@ -1269,6 +2272,23 @@
       ],
       "owner": null,
       "resources": 2,
+      "display_name": "Amod",
+      "founding_name": "Amod",
+      "name_metadata": {
+        "source": "world_builder",
+        "authored_name": "Amod",
+        "current_name_reason": "authored",
+        "name_layers": [
+          {
+            "type": "authored",
+            "name": "Amod",
+            "pattern": "world_builder",
+            "faction_id": null,
+            "faction_name": null,
+            "turn": 0
+          }
+        ]
+      },
       "terrain_tags": [
         "highland",
         "hills",
@@ -1285,6 +2305,23 @@
       ],
       "owner": null,
       "resources": 3,
+      "display_name": "North Ibenal",
+      "founding_name": "North Ibenal",
+      "name_metadata": {
+        "source": "world_builder",
+        "authored_name": "North Ibenal",
+        "current_name_reason": "authored",
+        "name_layers": [
+          {
+            "type": "authored",
+            "name": "North Ibenal",
+            "pattern": "world_builder",
+            "faction_id": null,
+            "faction_name": null,
+            "turn": 0
+          }
+        ]
+      },
       "terrain_tags": [
         "riverland",
         "hills",
@@ -1302,6 +2339,23 @@
       ],
       "owner": null,
       "resources": 2,
+      "display_name": "Vastos",
+      "founding_name": "Vastos",
+      "name_metadata": {
+        "source": "world_builder",
+        "authored_name": "Vastos",
+        "current_name_reason": "authored",
+        "name_layers": [
+          {
+            "type": "authored",
+            "name": "Vastos",
+            "pattern": "world_builder",
+            "faction_id": null,
+            "faction_name": null,
+            "turn": 0
+          }
+        ]
+      },
       "terrain_tags": [
         "plains"
       ],
@@ -1317,6 +2371,23 @@
       ],
       "owner": null,
       "resources": 2,
+      "display_name": "Yunethre",
+      "founding_name": "Yunethre",
+      "name_metadata": {
+        "source": "world_builder",
+        "authored_name": "Yunethre",
+        "current_name_reason": "authored",
+        "name_layers": [
+          {
+            "type": "authored",
+            "name": "Yunethre",
+            "pattern": "world_builder",
+            "faction_id": null,
+            "faction_name": null,
+            "turn": 0
+          }
+        ]
+      },
       "terrain_tags": [
         "steppe"
       ],
@@ -1330,6 +2401,23 @@
       ],
       "owner": null,
       "resources": 2,
+      "display_name": "Pueth",
+      "founding_name": "Pueth",
+      "name_metadata": {
+        "source": "world_builder",
+        "authored_name": "Pueth",
+        "current_name_reason": "authored",
+        "name_layers": [
+          {
+            "type": "authored",
+            "name": "Pueth",
+            "pattern": "world_builder",
+            "faction_id": null,
+            "faction_name": null,
+            "turn": 0
+          }
+        ]
+      },
       "terrain_tags": [
         "hills",
         "steppe",
@@ -1348,6 +2436,23 @@
       ],
       "owner": null,
       "resources": 2,
+      "display_name": "Meneth",
+      "founding_name": "Meneth",
+      "name_metadata": {
+        "source": "world_builder",
+        "authored_name": "Meneth",
+        "current_name_reason": "authored",
+        "name_layers": [
+          {
+            "type": "authored",
+            "name": "Meneth",
+            "pattern": "world_builder",
+            "faction_id": null,
+            "faction_name": null,
+            "turn": 0
+          }
+        ]
+      },
       "terrain_tags": [
         "plains"
       ],
@@ -1365,6 +2470,23 @@
       ],
       "owner": null,
       "resources": 2,
+      "display_name": "North Ibenwood",
+      "founding_name": "North Ibenwood",
+      "name_metadata": {
+        "source": "world_builder",
+        "authored_name": "North Ibenwood",
+        "current_name_reason": "authored",
+        "name_layers": [
+          {
+            "type": "authored",
+            "name": "North Ibenwood",
+            "pattern": "world_builder",
+            "faction_id": null,
+            "faction_name": null,
+            "turn": 0
+          }
+        ]
+      },
       "terrain_tags": [
         "highland",
         "forest"
@@ -1383,6 +2505,23 @@
       ],
       "owner": "Faction8",
       "resources": 4,
+      "display_name": "Elagos",
+      "founding_name": "Elagos",
+      "name_metadata": {
+        "source": "world_builder",
+        "authored_name": "Elagos",
+        "current_name_reason": "authored",
+        "name_layers": [
+          {
+            "type": "authored",
+            "name": "Elagos",
+            "pattern": "world_builder",
+            "faction_id": null,
+            "faction_name": null,
+            "turn": 0
+          }
+        ]
+      },
       "terrain_tags": [
         "coast",
         "riverland",
@@ -1403,6 +2542,23 @@
       ],
       "owner": null,
       "resources": 3,
+      "display_name": "Isareos",
+      "founding_name": "Isareos",
+      "name_metadata": {
+        "source": "world_builder",
+        "authored_name": "Isareos",
+        "current_name_reason": "authored",
+        "name_layers": [
+          {
+            "type": "authored",
+            "name": "Isareos",
+            "pattern": "world_builder",
+            "faction_id": null,
+            "faction_name": null,
+            "turn": 0
+          }
+        ]
+      },
       "terrain_tags": [
         "riverland",
         "steppe",
@@ -1418,6 +2574,23 @@
       ],
       "owner": null,
       "resources": 3,
+      "display_name": "Drent",
+      "founding_name": "Drent",
+      "name_metadata": {
+        "source": "world_builder",
+        "authored_name": "Drent",
+        "current_name_reason": "authored",
+        "name_layers": [
+          {
+            "type": "authored",
+            "name": "Drent",
+            "pattern": "world_builder",
+            "faction_id": null,
+            "faction_name": null,
+            "turn": 0
+          }
+        ]
+      },
       "terrain_tags": [
         "riverland",
         "steppe",
@@ -1435,6 +2608,23 @@
       ],
       "owner": null,
       "resources": 2,
+      "display_name": "Caricas",
+      "founding_name": "Caricas",
+      "name_metadata": {
+        "source": "world_builder",
+        "authored_name": "Caricas",
+        "current_name_reason": "authored",
+        "name_layers": [
+          {
+            "type": "authored",
+            "name": "Caricas",
+            "pattern": "world_builder",
+            "faction_id": null,
+            "faction_name": null,
+            "turn": 0
+          }
+        ]
+      },
       "terrain_tags": [
         "steppe",
         "plains"
@@ -1449,6 +2639,23 @@
       ],
       "owner": null,
       "resources": 3,
+      "display_name": "South Ibenal",
+      "founding_name": "South Ibenal",
+      "name_metadata": {
+        "source": "world_builder",
+        "authored_name": "South Ibenal",
+        "current_name_reason": "authored",
+        "name_layers": [
+          {
+            "type": "authored",
+            "name": "South Ibenal",
+            "pattern": "world_builder",
+            "faction_id": null,
+            "faction_name": null,
+            "turn": 0
+          }
+        ]
+      },
       "terrain_tags": [
         "riverland",
         "steppe"
@@ -1466,6 +2673,23 @@
       ],
       "owner": null,
       "resources": 2,
+      "display_name": "West Ibenwood",
+      "founding_name": "West Ibenwood",
+      "name_metadata": {
+        "source": "world_builder",
+        "authored_name": "West Ibenwood",
+        "current_name_reason": "authored",
+        "name_layers": [
+          {
+            "type": "authored",
+            "name": "West Ibenwood",
+            "pattern": "world_builder",
+            "faction_id": null,
+            "faction_name": null,
+            "turn": 0
+          }
+        ]
+      },
       "terrain_tags": [
         "highland",
         "forest"
@@ -1481,6 +2705,23 @@
       ],
       "owner": null,
       "resources": 3,
+      "display_name": "Central Ibenwood",
+      "founding_name": "Central Ibenwood",
+      "name_metadata": {
+        "source": "world_builder",
+        "authored_name": "Central Ibenwood",
+        "current_name_reason": "authored",
+        "name_layers": [
+          {
+            "type": "authored",
+            "name": "Central Ibenwood",
+            "pattern": "world_builder",
+            "faction_id": null,
+            "faction_name": null,
+            "turn": 0
+          }
+        ]
+      },
       "terrain_tags": [
         "riverland",
         "highland",
@@ -1501,6 +2742,23 @@
       ],
       "owner": null,
       "resources": 2,
+      "display_name": "East Ibenwood",
+      "founding_name": "East Ibenwood",
+      "name_metadata": {
+        "source": "world_builder",
+        "authored_name": "East Ibenwood",
+        "current_name_reason": "authored",
+        "name_layers": [
+          {
+            "type": "authored",
+            "name": "East Ibenwood",
+            "pattern": "world_builder",
+            "faction_id": null,
+            "faction_name": null,
+            "turn": 0
+          }
+        ]
+      },
       "terrain_tags": [
         "highland",
         "forest"
@@ -1517,6 +2775,23 @@
       ],
       "owner": null,
       "resources": 2,
+      "display_name": "Luscia",
+      "founding_name": "Luscia",
+      "name_metadata": {
+        "source": "world_builder",
+        "authored_name": "Luscia",
+        "current_name_reason": "authored",
+        "name_layers": [
+          {
+            "type": "authored",
+            "name": "Luscia",
+            "pattern": "world_builder",
+            "faction_id": null,
+            "faction_name": null,
+            "turn": 0
+          }
+        ]
+      },
       "terrain_tags": [
         "forest",
         "steppe",
@@ -1528,6 +2803,23 @@
       "neighbors": [],
       "owner": null,
       "resources": 2,
+      "display_name": "Peblos",
+      "founding_name": "Peblos",
+      "name_metadata": {
+        "source": "world_builder",
+        "authored_name": "Peblos",
+        "current_name_reason": "authored",
+        "name_layers": [
+          {
+            "type": "authored",
+            "name": "Peblos",
+            "pattern": "world_builder",
+            "faction_id": null,
+            "faction_name": null,
+            "turn": 0
+          }
+        ]
+      },
       "terrain_tags": [
         "hills",
         "steppe"
@@ -1544,6 +2836,23 @@
       ],
       "owner": null,
       "resources": 3,
+      "display_name": "Nethereum",
+      "founding_name": "Nethereum",
+      "name_metadata": {
+        "source": "world_builder",
+        "authored_name": "Nethereum",
+        "current_name_reason": "authored",
+        "name_layers": [
+          {
+            "type": "authored",
+            "name": "Nethereum",
+            "pattern": "world_builder",
+            "faction_id": null,
+            "faction_name": null,
+            "turn": 0
+          }
+        ]
+      },
       "terrain_tags": [
         "riverland",
         "steppe",
@@ -1563,6 +2872,23 @@
       ],
       "owner": null,
       "resources": 2,
+      "display_name": "Nesdor",
+      "founding_name": "Nesdor",
+      "name_metadata": {
+        "source": "world_builder",
+        "authored_name": "Nesdor",
+        "current_name_reason": "authored",
+        "name_layers": [
+          {
+            "type": "authored",
+            "name": "Nesdor",
+            "pattern": "world_builder",
+            "faction_id": null,
+            "faction_name": null,
+            "turn": 0
+          }
+        ]
+      },
       "terrain_tags": [
         "forest",
         "steppe",
@@ -1580,6 +2906,23 @@
       ],
       "owner": null,
       "resources": 2,
+      "display_name": "Moros Plain",
+      "founding_name": "Moros Plain",
+      "name_metadata": {
+        "source": "world_builder",
+        "authored_name": "Moros Plain",
+        "current_name_reason": "authored",
+        "name_layers": [
+          {
+            "type": "authored",
+            "name": "Moros Plain",
+            "pattern": "world_builder",
+            "faction_id": null,
+            "faction_name": null,
+            "turn": 0
+          }
+        ]
+      },
       "terrain_tags": [
         "steppe"
       ],
@@ -1593,6 +2936,23 @@
       ],
       "owner": null,
       "resources": 2,
+      "display_name": "East Suval",
+      "founding_name": "East Suval",
+      "name_metadata": {
+        "source": "world_builder",
+        "authored_name": "East Suval",
+        "current_name_reason": "authored",
+        "name_layers": [
+          {
+            "type": "authored",
+            "name": "East Suval",
+            "pattern": "world_builder",
+            "faction_id": null,
+            "faction_name": null,
+            "turn": 0
+          }
+        ]
+      },
       "terrain_tags": [
         "hills",
         "steppe",
@@ -1610,6 +2970,23 @@
       ],
       "owner": null,
       "resources": 3,
+      "display_name": "South Ibenwood",
+      "founding_name": "South Ibenwood",
+      "name_metadata": {
+        "source": "world_builder",
+        "authored_name": "South Ibenwood",
+        "current_name_reason": "authored",
+        "name_layers": [
+          {
+            "type": "authored",
+            "name": "South Ibenwood",
+            "pattern": "world_builder",
+            "faction_id": null,
+            "faction_name": null,
+            "turn": 0
+          }
+        ]
+      },
       "terrain_tags": [
         "riverland",
         "highland",
@@ -1628,6 +3005,23 @@
       ],
       "owner": null,
       "resources": 2,
+      "display_name": "Nether Desert",
+      "founding_name": "Nether Desert",
+      "name_metadata": {
+        "source": "world_builder",
+        "authored_name": "Nether Desert",
+        "current_name_reason": "authored",
+        "name_layers": [
+          {
+            "type": "authored",
+            "name": "Nether Desert",
+            "pattern": "world_builder",
+            "faction_id": null,
+            "faction_name": null,
+            "turn": 0
+          }
+        ]
+      },
       "terrain_tags": [
         "steppe"
       ],
@@ -1644,6 +3038,23 @@
       ],
       "owner": null,
       "resources": 2,
+      "display_name": "Ovesos",
+      "founding_name": "Ovesos",
+      "name_metadata": {
+        "source": "world_builder",
+        "authored_name": "Ovesos",
+        "current_name_reason": "authored",
+        "name_layers": [
+          {
+            "type": "authored",
+            "name": "Ovesos",
+            "pattern": "world_builder",
+            "faction_id": null,
+            "faction_name": null,
+            "turn": 0
+          }
+        ]
+      },
       "terrain_tags": [
         "steppe",
         "plains"
@@ -1660,6 +3071,23 @@
       ],
       "owner": null,
       "resources": 2,
+      "display_name": "West Suval",
+      "founding_name": "West Suval",
+      "name_metadata": {
+        "source": "world_builder",
+        "authored_name": "West Suval",
+        "current_name_reason": "authored",
+        "name_layers": [
+          {
+            "type": "authored",
+            "name": "West Suval",
+            "pattern": "world_builder",
+            "faction_id": null,
+            "faction_name": null,
+            "turn": 0
+          }
+        ]
+      },
       "terrain_tags": [
         "hills",
         "steppe",
@@ -1677,6 +3105,23 @@
       ],
       "owner": null,
       "resources": 2,
+      "display_name": "Oves Desert",
+      "founding_name": "Oves Desert",
+      "name_metadata": {
+        "source": "world_builder",
+        "authored_name": "Oves Desert",
+        "current_name_reason": "authored",
+        "name_layers": [
+          {
+            "type": "authored",
+            "name": "Oves Desert",
+            "pattern": "world_builder",
+            "faction_id": null,
+            "faction_name": null,
+            "turn": 0
+          }
+        ]
+      },
       "terrain_tags": [
         "hills",
         "steppe"
@@ -1693,6 +3138,23 @@
       ],
       "owner": null,
       "resources": 3,
+      "display_name": "Alezhor",
+      "founding_name": "Alezhor",
+      "name_metadata": {
+        "source": "world_builder",
+        "authored_name": "Alezhor",
+        "current_name_reason": "authored",
+        "name_layers": [
+          {
+            "type": "authored",
+            "name": "Alezhor",
+            "pattern": "world_builder",
+            "faction_id": null,
+            "faction_name": null,
+            "turn": 0
+          }
+        ]
+      },
       "terrain_tags": [
         "riverland",
         "steppe",
@@ -1711,6 +3173,23 @@
       ],
       "owner": null,
       "resources": 2,
+      "display_name": "Navarth",
+      "founding_name": "Navarth",
+      "name_metadata": {
+        "source": "world_builder",
+        "authored_name": "Navarth",
+        "current_name_reason": "authored",
+        "name_layers": [
+          {
+            "type": "authored",
+            "name": "Navarth",
+            "pattern": "world_builder",
+            "faction_id": null,
+            "faction_name": null,
+            "turn": 0
+          }
+        ]
+      },
       "terrain_tags": [
         "hills",
         "forest",
@@ -1728,6 +3207,23 @@
       ],
       "owner": "Faction3",
       "resources": 2,
+      "display_name": "West Pyros",
+      "founding_name": "West Pyros",
+      "name_metadata": {
+        "source": "world_builder",
+        "authored_name": "West Pyros",
+        "current_name_reason": "authored",
+        "name_layers": [
+          {
+            "type": "authored",
+            "name": "West Pyros",
+            "pattern": "world_builder",
+            "faction_id": null,
+            "faction_name": null,
+            "turn": 0
+          }
+        ]
+      },
       "terrain_tags": [
         "steppe",
         "plains"
@@ -1744,6 +3240,23 @@
       ],
       "owner": null,
       "resources": 2,
+      "display_name": "East Pyros",
+      "founding_name": "East Pyros",
+      "name_metadata": {
+        "source": "world_builder",
+        "authored_name": "East Pyros",
+        "current_name_reason": "authored",
+        "name_layers": [
+          {
+            "type": "authored",
+            "name": "East Pyros",
+            "pattern": "world_builder",
+            "faction_id": null,
+            "faction_name": null,
+            "turn": 0
+          }
+        ]
+      },
       "terrain_tags": [
         "steppe",
         "plains"
@@ -1760,6 +3273,23 @@
       ],
       "owner": null,
       "resources": 2,
+      "display_name": "Eer",
+      "founding_name": "Eer",
+      "name_metadata": {
+        "source": "world_builder",
+        "authored_name": "Eer",
+        "current_name_reason": "authored",
+        "name_layers": [
+          {
+            "type": "authored",
+            "name": "Eer",
+            "pattern": "world_builder",
+            "faction_id": null,
+            "faction_name": null,
+            "turn": 0
+          }
+        ]
+      },
       "terrain_tags": [
         "steppe",
         "plains"
@@ -1778,6 +3308,23 @@
       ],
       "owner": null,
       "resources": 2,
+      "display_name": "Gala",
+      "founding_name": "Gala",
+      "name_metadata": {
+        "source": "world_builder",
+        "authored_name": "Gala",
+        "current_name_reason": "authored",
+        "name_layers": [
+          {
+            "type": "authored",
+            "name": "Gala",
+            "pattern": "world_builder",
+            "faction_id": null,
+            "faction_name": null,
+            "turn": 0
+          }
+        ]
+      },
       "terrain_tags": [
         "steppe",
         "plains"
@@ -1791,6 +3338,23 @@
       ],
       "owner": null,
       "resources": 2,
+      "display_name": "South Suval",
+      "founding_name": "South Suval",
+      "name_metadata": {
+        "source": "world_builder",
+        "authored_name": "South Suval",
+        "current_name_reason": "authored",
+        "name_layers": [
+          {
+            "type": "authored",
+            "name": "South Suval",
+            "pattern": "world_builder",
+            "faction_id": null,
+            "faction_name": null,
+            "turn": 0
+          }
+        ]
+      },
       "terrain_tags": [
         "highland",
         "hills",
@@ -1807,6 +3371,23 @@
       ],
       "owner": "Faction9",
       "resources": 2,
+      "display_name": "Telemonia",
+      "founding_name": "Telemonia",
+      "name_metadata": {
+        "source": "world_builder",
+        "authored_name": "Telemonia",
+        "current_name_reason": "authored",
+        "name_layers": [
+          {
+            "type": "authored",
+            "name": "Telemonia",
+            "pattern": "world_builder",
+            "faction_id": null,
+            "faction_name": null,
+            "turn": 0
+          }
+        ]
+      },
       "terrain_tags": [
         "hills",
         "steppe"
@@ -1817,6 +3398,23 @@
       "neighbors": [],
       "owner": null,
       "resources": 2,
+      "display_name": "Iscare Archipeligo",
+      "founding_name": "Iscare Archipeligo",
+      "name_metadata": {
+        "source": "world_builder",
+        "authored_name": "Iscare Archipeligo",
+        "current_name_reason": "authored",
+        "name_layers": [
+          {
+            "type": "authored",
+            "name": "Iscare Archipeligo",
+            "pattern": "world_builder",
+            "faction_id": null,
+            "faction_name": null,
+            "turn": 0
+          }
+        ]
+      },
       "terrain_tags": [
         "hills",
         "steppe",
@@ -1834,6 +3432,23 @@
       ],
       "owner": null,
       "resources": 2,
+      "display_name": "Ganesh Desert",
+      "founding_name": "Ganesh Desert",
+      "name_metadata": {
+        "source": "world_builder",
+        "authored_name": "Ganesh Desert",
+        "current_name_reason": "authored",
+        "name_layers": [
+          {
+            "type": "authored",
+            "name": "Ganesh Desert",
+            "pattern": "world_builder",
+            "faction_id": null,
+            "faction_name": null,
+            "turn": 0
+          }
+        ]
+      },
       "terrain_tags": [
         "steppe"
       ],
@@ -1847,6 +3462,23 @@
       ],
       "owner": null,
       "resources": 2,
+      "display_name": "Northern Ascarth",
+      "founding_name": "Northern Ascarth",
+      "name_metadata": {
+        "source": "world_builder",
+        "authored_name": "Northern Ascarth",
+        "current_name_reason": "authored",
+        "name_layers": [
+          {
+            "type": "authored",
+            "name": "Northern Ascarth",
+            "pattern": "world_builder",
+            "faction_id": null,
+            "faction_name": null,
+            "turn": 0
+          }
+        ]
+      },
       "terrain_tags": [
         "hills",
         "plains"
@@ -1859,6 +3491,23 @@
       ],
       "owner": null,
       "resources": 2,
+      "display_name": "East Izol",
+      "founding_name": "East Izol",
+      "name_metadata": {
+        "source": "world_builder",
+        "authored_name": "East Izol",
+        "current_name_reason": "authored",
+        "name_layers": [
+          {
+            "type": "authored",
+            "name": "East Izol",
+            "pattern": "world_builder",
+            "faction_id": null,
+            "faction_name": null,
+            "turn": 0
+          }
+        ]
+      },
       "terrain_tags": [
         "highland",
         "hills",
@@ -1879,6 +3528,23 @@
       ],
       "owner": null,
       "resources": 2,
+      "display_name": "Ganesh Plain",
+      "founding_name": "Ganesh Plain",
+      "name_metadata": {
+        "source": "world_builder",
+        "authored_name": "Ganesh Plain",
+        "current_name_reason": "authored",
+        "name_layers": [
+          {
+            "type": "authored",
+            "name": "Ganesh Plain",
+            "pattern": "world_builder",
+            "faction_id": null,
+            "faction_name": null,
+            "turn": 0
+          }
+        ]
+      },
       "terrain_tags": [
         "steppe",
         "plains"
@@ -1893,6 +3559,23 @@
       ],
       "owner": null,
       "resources": 2,
+      "display_name": "Legemum",
+      "founding_name": "Legemum",
+      "name_metadata": {
+        "source": "world_builder",
+        "authored_name": "Legemum",
+        "current_name_reason": "authored",
+        "name_layers": [
+          {
+            "type": "authored",
+            "name": "Legemum",
+            "pattern": "world_builder",
+            "faction_id": null,
+            "faction_name": null,
+            "turn": 0
+          }
+        ]
+      },
       "terrain_tags": [
         "hills",
         "steppe",
@@ -1907,6 +3590,23 @@
       ],
       "owner": null,
       "resources": 2,
+      "display_name": "Cape Heth",
+      "founding_name": "Cape Heth",
+      "name_metadata": {
+        "source": "world_builder",
+        "authored_name": "Cape Heth",
+        "current_name_reason": "authored",
+        "name_layers": [
+          {
+            "type": "authored",
+            "name": "Cape Heth",
+            "pattern": "world_builder",
+            "faction_id": null,
+            "faction_name": null,
+            "turn": 0
+          }
+        ]
+      },
       "terrain_tags": [
         "steppe",
         "plains"
@@ -1919,6 +3619,23 @@
       ],
       "owner": null,
       "resources": 2,
+      "display_name": "West Izol",
+      "founding_name": "West Izol",
+      "name_metadata": {
+        "source": "world_builder",
+        "authored_name": "West Izol",
+        "current_name_reason": "authored",
+        "name_layers": [
+          {
+            "type": "authored",
+            "name": "West Izol",
+            "pattern": "world_builder",
+            "faction_id": null,
+            "faction_name": null,
+            "turn": 0
+          }
+        ]
+      },
       "terrain_tags": [
         "hills",
         "steppe",
@@ -1936,6 +3653,23 @@
       ],
       "owner": null,
       "resources": 2,
+      "display_name": "Dinelv Highlands",
+      "founding_name": "Dinelv Highlands",
+      "name_metadata": {
+        "source": "world_builder",
+        "authored_name": "Dinelv Highlands",
+        "current_name_reason": "authored",
+        "name_layers": [
+          {
+            "type": "authored",
+            "name": "Dinelv Highlands",
+            "pattern": "world_builder",
+            "faction_id": null,
+            "faction_name": null,
+            "turn": 0
+          }
+        ]
+      },
       "terrain_tags": [
         "highland",
         "hills",
@@ -1949,6 +3683,23 @@
       ],
       "owner": null,
       "resources": 2,
+      "display_name": "Southern Ascarth",
+      "founding_name": "Southern Ascarth",
+      "name_metadata": {
+        "source": "world_builder",
+        "authored_name": "Southern Ascarth",
+        "current_name_reason": "authored",
+        "name_layers": [
+          {
+            "type": "authored",
+            "name": "Southern Ascarth",
+            "pattern": "world_builder",
+            "faction_id": null,
+            "faction_name": null,
+            "turn": 0
+          }
+        ]
+      },
       "terrain_tags": [
         "plains"
       ],
@@ -1964,6 +3715,23 @@
       ],
       "owner": "Faction4",
       "resources": 3,
+      "display_name": "Marosh",
+      "founding_name": "Marosh",
+      "name_metadata": {
+        "source": "world_builder",
+        "authored_name": "Marosh",
+        "current_name_reason": "authored",
+        "name_layers": [
+          {
+            "type": "authored",
+            "name": "Marosh",
+            "pattern": "world_builder",
+            "faction_id": null,
+            "faction_name": null,
+            "turn": 0
+          }
+        ]
+      },
       "terrain_tags": [
         "riverland",
         "hills",
@@ -1981,6 +3749,23 @@
       ],
       "owner": null,
       "resources": 2,
+      "display_name": "North Meroshe Desert",
+      "founding_name": "North Meroshe Desert",
+      "name_metadata": {
+        "source": "world_builder",
+        "authored_name": "North Meroshe Desert",
+        "current_name_reason": "authored",
+        "name_layers": [
+          {
+            "type": "authored",
+            "name": "North Meroshe Desert",
+            "pattern": "world_builder",
+            "faction_id": null,
+            "faction_name": null,
+            "turn": 0
+          }
+        ]
+      },
       "terrain_tags": [
         "steppe"
       ],
@@ -1990,6 +3775,23 @@
       "neighbors": [],
       "owner": null,
       "resources": 2,
+      "display_name": "Aurumlis Archipeligo",
+      "founding_name": "Aurumlis Archipeligo",
+      "name_metadata": {
+        "source": "world_builder",
+        "authored_name": "Aurumlis Archipeligo",
+        "current_name_reason": "authored",
+        "name_layers": [
+          {
+            "type": "authored",
+            "name": "Aurumlis Archipeligo",
+            "pattern": "world_builder",
+            "faction_id": null,
+            "faction_name": null,
+            "turn": 0
+          }
+        ]
+      },
       "terrain_tags": [
         "hills",
         "plains"
@@ -2005,6 +3807,23 @@
       ],
       "owner": null,
       "resources": 2,
+      "display_name": "West Meroshe Desert",
+      "founding_name": "West Meroshe Desert",
+      "name_metadata": {
+        "source": "world_builder",
+        "authored_name": "West Meroshe Desert",
+        "current_name_reason": "authored",
+        "name_layers": [
+          {
+            "type": "authored",
+            "name": "West Meroshe Desert",
+            "pattern": "world_builder",
+            "faction_id": null,
+            "faction_name": null,
+            "turn": 0
+          }
+        ]
+      },
       "terrain_tags": [
         "steppe"
       ],
@@ -2020,6 +3839,23 @@
       ],
       "owner": null,
       "resources": 2,
+      "display_name": "Central Meroshe Desert",
+      "founding_name": "Central Meroshe Desert",
+      "name_metadata": {
+        "source": "world_builder",
+        "authored_name": "Central Meroshe Desert",
+        "current_name_reason": "authored",
+        "name_layers": [
+          {
+            "type": "authored",
+            "name": "Central Meroshe Desert",
+            "pattern": "world_builder",
+            "faction_id": null,
+            "faction_name": null,
+            "turn": 0
+          }
+        ]
+      },
       "terrain_tags": [
         "steppe"
       ],
@@ -2029,6 +3865,23 @@
       "neighbors": [],
       "owner": null,
       "resources": 2,
+      "display_name": "Selemi",
+      "founding_name": "Selemi",
+      "name_metadata": {
+        "source": "world_builder",
+        "authored_name": "Selemi",
+        "current_name_reason": "authored",
+        "name_layers": [
+          {
+            "type": "authored",
+            "name": "Selemi",
+            "pattern": "world_builder",
+            "faction_id": null,
+            "faction_name": null,
+            "turn": 0
+          }
+        ]
+      },
       "terrain_tags": [
         "plains"
       ],
@@ -2038,6 +3891,23 @@
       "neighbors": [],
       "owner": null,
       "resources": 2,
+      "display_name": "Azhor Stones",
+      "founding_name": "Azhor Stones",
+      "name_metadata": {
+        "source": "world_builder",
+        "authored_name": "Azhor Stones",
+        "current_name_reason": "authored",
+        "name_layers": [
+          {
+            "type": "authored",
+            "name": "Azhor Stones",
+            "pattern": "world_builder",
+            "faction_id": null,
+            "faction_name": null,
+            "turn": 0
+          }
+        ]
+      },
       "terrain_tags": [
         "highland",
         "forest"
@@ -2053,6 +3923,23 @@
       ],
       "owner": null,
       "resources": 2,
+      "display_name": "South Meroshe Desert",
+      "founding_name": "South Meroshe Desert",
+      "name_metadata": {
+        "source": "world_builder",
+        "authored_name": "South Meroshe Desert",
+        "current_name_reason": "authored",
+        "name_layers": [
+          {
+            "type": "authored",
+            "name": "South Meroshe Desert",
+            "pattern": "world_builder",
+            "faction_id": null,
+            "faction_name": null,
+            "turn": 0
+          }
+        ]
+      },
       "terrain_tags": [
         "steppe"
       ],
@@ -2065,6 +3952,23 @@
       ],
       "owner": null,
       "resources": 3,
+      "display_name": "Trogo",
+      "founding_name": "Trogo",
+      "name_metadata": {
+        "source": "world_builder",
+        "authored_name": "Trogo",
+        "current_name_reason": "authored",
+        "name_layers": [
+          {
+            "type": "authored",
+            "name": "Trogo",
+            "pattern": "world_builder",
+            "faction_id": null,
+            "faction_name": null,
+            "turn": 0
+          }
+        ]
+      },
       "terrain_tags": [
         "riverland",
         "highland",
@@ -2081,6 +3985,23 @@
       ],
       "owner": null,
       "resources": 2,
+      "display_name": "Hama",
+      "founding_name": "Hama",
+      "name_metadata": {
+        "source": "world_builder",
+        "authored_name": "Hama",
+        "current_name_reason": "authored",
+        "name_layers": [
+          {
+            "type": "authored",
+            "name": "Hama",
+            "pattern": "world_builder",
+            "faction_id": null,
+            "faction_name": null,
+            "turn": 0
+          }
+        ]
+      },
       "terrain_tags": [
         "steppe",
         "plains"
@@ -2091,6 +4012,23 @@
       "neighbors": [],
       "owner": null,
       "resources": 3,
+      "display_name": "Babon",
+      "founding_name": "Babon",
+      "name_metadata": {
+        "source": "world_builder",
+        "authored_name": "Babon",
+        "current_name_reason": "authored",
+        "name_layers": [
+          {
+            "type": "authored",
+            "name": "Babon",
+            "pattern": "world_builder",
+            "faction_id": null,
+            "faction_name": null,
+            "turn": 0
+          }
+        ]
+      },
       "terrain_tags": [
         "riverland",
         "highland",
@@ -2105,6 +4043,23 @@
       ],
       "owner": null,
       "resources": 2,
+      "display_name": "North Scythe",
+      "founding_name": "North Scythe",
+      "name_metadata": {
+        "source": "world_builder",
+        "authored_name": "North Scythe",
+        "current_name_reason": "authored",
+        "name_layers": [
+          {
+            "type": "authored",
+            "name": "North Scythe",
+            "pattern": "world_builder",
+            "faction_id": null,
+            "faction_name": null,
+            "turn": 0
+          }
+        ]
+      },
       "terrain_tags": [
         "highland",
         "forest"
@@ -2117,6 +4072,23 @@
       ],
       "owner": null,
       "resources": 2,
+      "display_name": "South Scythe",
+      "founding_name": "South Scythe",
+      "name_metadata": {
+        "source": "world_builder",
+        "authored_name": "South Scythe",
+        "current_name_reason": "authored",
+        "name_layers": [
+          {
+            "type": "authored",
+            "name": "South Scythe",
+            "pattern": "world_builder",
+            "faction_id": null,
+            "faction_name": null,
+            "turn": 0
+          }
+        ]
+      },
       "terrain_tags": [
         "highland",
         "forest"

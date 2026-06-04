@@ -382,10 +382,28 @@ def translate(wwmap_path: str | Path, num_factions: int = 4) -> dict:
         else:
             owner = auto_start_owners.get(rid)
 
+        display_name = str(meta.get("display_name") or meta.get("name") or rid).strip() or rid
         clashvergence_regions[rid] = {
             "neighbors": sorted(region.land_neighbors),
             "owner": owner,
             "resources": _resources_for_tags(tags),
+            "display_name": display_name,
+            "founding_name": display_name,
+            "name_metadata": {
+                "source": "world_builder",
+                "authored_name": display_name,
+                "current_name_reason": "authored",
+                "name_layers": [
+                    {
+                        "type": "authored",
+                        "name": display_name,
+                        "pattern": "world_builder",
+                        "faction_id": None,
+                        "faction_name": None,
+                        "turn": 0,
+                    }
+                ],
+            },
             "terrain_tags": tags,
             "climate": _resolve_region_climate(region, meta),
         }

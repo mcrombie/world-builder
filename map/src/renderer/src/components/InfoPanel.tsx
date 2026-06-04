@@ -2,7 +2,7 @@ import { useMemo, useState, useCallback } from 'react'
 import { useMapStore } from '../store/mapStore'
 import { TERRAIN_LABELS, ALL_CLIMATES } from '../lib/terrain'
 import { getClimateCodeLabel, getClimateColor, normalizeClimate } from '../lib/climate'
-import { Climate, LoreEntry, RegionData, SettlementSize, CoreStatus, ViewMode, SimRegion } from '../types/map'
+import { Climate, LoreEntry, RegionData, SettlementSize, CoreStatus, ViewMode, SimDetailSelection, SimEvent, SimFaction, SimHotRegion, SimRegion, SimWorldState } from '../types/map'
 import { buildFactionColorMap } from './SimulationPanel'
 
 const SETTLEMENT_SIZES: SettlementSize[] = ['village', 'town', 'city', 'capital']
@@ -33,6 +33,453 @@ const SELECT = INPUT
 interface SimOwner {
   displayName: string
   color: string
+}
+
+function fmtSimNum(value: number | null | undefined): string {
+  const n = Number(value ?? 0)
+  if (Math.abs(n) >= 1_000_000) return `${(n / 1_000_000).toFixed(1)}M`
+  if (Math.abs(n) >= 10_000) return `${(n / 1_000).toFixed(0)}k`
+  if (Math.abs(n) >= 1_000) return `${(n / 1_000).toFixed(1)}k`
+  return String(Math.round(n))
+}
+
+function fmtSimMoney(value: number | null | undefined): string {
+  const n = Number(value ?? 0)
+  const sign = n < 0 ? '-' : ''
+  return `${sign}$${fmtSimNum(Math.abs(n))}`
+}
+
+function fmtSimSigned(value: number | null | undefined, digits = 1): string {
+  const n = Number(value ?? 0)
+  const sign = n > 0 ? '+' : ''
+  return `${sign}${n.toFixed(digits)}`
+}
+
+function fmtSimPct(value: number | null | undefined): string {
+  const n = Number(value ?? 0)
+  return `${Math.round(n * 100)}%`
+}
+
+function fmtSimEventType(type: string | null | undefined): string {
+  if (!type) return 'Event'
+  const labels: Record<string, string> = {
+    expand: 'Expand',
+    attack: 'Attack',
+    develop: 'Develop',
+    war_declared: 'War Declared',
+    war_peace: 'War Peace',
+    diplomacy_pact: 'Pact',
+    diplomacy_rivalry: 'Rivalry',
+    diplomacy_tributary: 'Tributary',
+    diplomacy_truce: 'Truce',
+    unrest_secession: 'Secession',
+    rebel_independence: 'Independence',
+    shock_trade_collapse: 'Trade Collapse',
+    shock_climate_anomaly: 'Climate Shock',
+    technology_adoption: 'Technology',
+    technology_institutionalized: 'Institutional Tech',
+  }
+  return labels[type] ?? type.split('_').map((part) => part.charAt(0).toUpperCase() + part.slice(1)).join(' ')
+}
+
+function fmtSimKey(key: string): string {
+  return key.split('_').map((part) => part.charAt(0).toUpperCase() + part.slice(1)).join(' ')
+}
+
+function fmtSimValue(value: unknown): string {
+  if (value === null || value === undefined || value === '') return 'None'
+  if (typeof value === 'number') {
+    if (!Number.isFinite(value)) return '0'
+    if (Math.abs(value) <= 1 && value !== 0) return value.toFixed(2)
+    return Number.isInteger(value) ? String(value) : value.toFixed(2)
+  }
+  if (typeof value === 'boolean') return value ? 'Yes' : 'No'
+  if (Array.isArray(value)) return value.map(fmtSimValue).join(', ')
+  if (typeof value === 'object') return JSON.stringify(value)
+  return String(value)
+}
+
+function DetailMetric({ label, value, tone = 'neutral' }: {
+  label: string
+  value: string
+  tone?: 'neutral' | 'good' | 'warn' | 'bad'
+}) {
+  const toneClass = {
+    neutral: 'text-gray-100',
+    good: 'text-emerald-300',
+    warn: 'text-amber-300',
+    bad: 'text-red-300',
+  }[tone]
+  return (
+    <div className="rounded bg-gray-800/70 px-2.5 py-2 min-w-0">
+      <div className={`text-base font-semibold tabular-nums truncate ${toneClass}`}>{value}</div>
+      <div className="text-[10px] uppercase tracking-wide text-gray-500 truncate">{label}</div>
+    </div>
+  )
+}
+
+function DetailSection({ title, children }: { title: string; children: React.ReactNode }) {
+  return (
+    <section className="flex flex-col gap-2">
+      <h3 className="text-xs font-medium uppercase tracking-wide text-gray-500">{title}</h3>
+      {children}
+    </section>
+  )
+}
+
+function DetailRows({ rows }: { rows: [string, string | number | null | undefined][] }) {
+  return (
+    <div className="rounded bg-gray-800/45 divide-y divide-gray-700/50">
+      {rows.map(([label, value]) => (
+        <div key={label} className="grid grid-cols-[9rem_minmax(0,1fr)] gap-2 px-2.5 py-1.5 text-sm">
+          <span className="text-gray-500">{label}</span>
+          <span className="text-gray-200 truncate">{value ?? 'None'}</span>
+        </div>
+      ))}
+    </div>
+  )
+}
+
+function findSimRegion(simWorld: SimWorldState, regionName: string | null | undefined): SimRegion | undefined {
+  if (!regionName) return undefined
+  return simWorld.regions.find((region) => region.name === regionName || region.display_name === regionName)
+}
+
+function findSimFaction(simWorld: SimWorldState, factionName: string | null | undefined): SimFaction | undefined {
+  if (!factionName) return undefined
+  return simWorld.factions.find((faction) => faction.name === factionName || faction.display_name === factionName)
+}
+
+function getEventFactionRefs(event: SimEvent, simWorld: SimWorldState): string[] {
+  const candidates = [
+    event.faction,
+    event.details?.target_faction,
+    event.details?.defender,
+    event.details?.aggressor,
+    event.details?.winner,
+    event.details?.loser,
+    event.details?.counterpart,
+    event.details?.rebel_faction,
+    event.details?.origin_faction,
+  ]
+  const names = new Set<string>()
+  for (const candidate of candidates) {
+    if (typeof candidate !== 'string') continue
+    const faction = findSimFaction(simWorld, candidate)
+    if (faction) names.add(faction.name)
+  }
+  return [...names]
+}
+
+function eventTouchesFaction(event: SimEvent, factionName: string): boolean {
+  if (event.faction === factionName) return true
+  return Object.values(event.details ?? {}).some((value) => value === factionName)
+}
+
+function SimulationDetailPanel({
+  panelW,
+  selection,
+  simWorld,
+  factionColors,
+}: {
+  panelW: string
+  selection: SimDetailSelection
+  simWorld: SimWorldState
+  factionColors: Record<string, string>
+}) {
+  const setSimDetailSelection = useMapStore((s) => s.setSimDetailSelection)
+  const events = simWorld.recent_events ?? []
+
+  function factionLabel(name: string | null | undefined): string {
+    return findSimFaction(simWorld, name)?.display_name ?? name ?? 'None'
+  }
+
+  function openFaction(name: string | null | undefined) {
+    const faction = findSimFaction(simWorld, name)
+    if (faction) setSimDetailSelection({ type: 'faction', factionName: faction.name })
+  }
+
+  function openRegion(name: string | null | undefined) {
+    const region = findSimRegion(simWorld, name)
+    if (region) setSimDetailSelection({ type: 'region', regionName: region.name })
+  }
+
+  function renderEventButton(event: SimEvent, index: number) {
+    return (
+      <button
+        key={`${event.type}-${event.turn ?? 'x'}-${index}`}
+        type="button"
+        onClick={() => setSimDetailSelection({ type: 'event', event })}
+        className="rounded bg-gray-800/45 px-2.5 py-2 text-left hover:bg-gray-700/70 focus:outline-none focus:ring-1 focus:ring-indigo-500"
+      >
+        <div className="flex items-center gap-2 text-sm">
+          <span className="text-gray-500 tabular-nums">T{event.turn ?? simWorld.turn}</span>
+          <span className="text-gray-200 font-medium truncate">{fmtSimEventType(event.type)}</span>
+        </div>
+        <div className="text-xs text-gray-500 truncate">
+          {[factionLabel(event.faction), event.region].filter(Boolean).join(' | ')}
+        </div>
+      </button>
+    )
+  }
+
+  let title = 'Simulation Detail'
+  let subtitle = simWorld.turn_label
+  let swatch: string | undefined
+  let content: React.ReactNode
+
+  if (selection.type === 'faction') {
+    const faction = findSimFaction(simWorld, selection.factionName)
+    if (!faction) {
+      title = 'Faction Missing'
+      subtitle = selection.factionName
+      content = <p className="text-sm text-gray-500 italic">This faction is no longer present in the current simulation state.</p>
+    } else {
+      title = faction.display_name
+      subtitle = faction.name
+      swatch = factionColors[faction.name]
+      const ownedRegions = simWorld.regions
+        .filter((region) => region.owner === faction.name)
+        .sort((a, b) => b.population - a.population || a.display_name.localeCompare(b.display_name))
+      const factionEvents = events
+        .filter((event) => eventTouchesFaction(event, faction.name))
+        .slice(-8)
+        .reverse()
+      content = (
+        <>
+          <div className="grid grid-cols-2 gap-2">
+            <DetailMetric label="Regions" value={String(faction.owned_regions)} />
+            <DetailMetric label="Population" value={fmtSimNum(faction.population)} />
+            <DetailMetric label="Treasury" value={fmtSimMoney(faction.treasury)} />
+            <DetailMetric
+              label="Net Income"
+              value={fmtSimSigned(faction.net_income ?? 0)}
+              tone={(faction.net_income ?? 0) >= 0 ? 'good' : 'bad'}
+            />
+          </div>
+          <DetailSection title="Profile">
+            <DetailRows rows={[
+              ['Doctrine', faction.doctrine_label],
+              ['Government', faction.government_type],
+              ['Tier', faction.polity_tier],
+              ['Culture', faction.culture_name],
+              ['Ruler', faction.ruler_name],
+              ['Legitimacy', typeof faction.legitimacy === 'number' ? fmtSimPct(faction.legitimacy) : null],
+              ['Status', faction.is_rebel ? 'Successor / rebel polity' : 'Established polity'],
+              ['Origin', faction.origin_faction ? factionLabel(faction.origin_faction) : null],
+            ]} />
+          </DetailSection>
+          <DetailSection title="Capacity">
+            <DetailRows rows={[
+              ['Effective Income', typeof faction.effective_income === 'number' ? fmtSimMoney(faction.effective_income) : null],
+              ['Maintenance', typeof faction.maintenance === 'number' ? fmtSimMoney(faction.maintenance) : null],
+              ['Food Balance', typeof faction.food_balance === 'number' ? fmtSimSigned(faction.food_balance) : null],
+              ['Food Stored', `${fmtSimNum(faction.food_stored)} / ${fmtSimNum(faction.food_capacity)}`],
+              ['Administration', typeof faction.administrative_efficiency === 'number' ? fmtSimPct(faction.administrative_efficiency) : null],
+              ['Overextension', typeof faction.administrative_overextension === 'number' ? fmtSimPct(faction.administrative_overextension) : null],
+              ['Military Readiness', typeof faction.military_readiness === 'number' ? fmtSimPct(faction.military_readiness) : null],
+              ['Standing Forces', typeof faction.standing_forces === 'number' ? fmtSimNum(faction.standing_forces) : null],
+              ['Manpower', typeof faction.manpower_pool === 'number' ? fmtSimNum(faction.manpower_pool) : null],
+              ['Technology', typeof faction.technology === 'number' ? fmtSimPct(faction.technology) : null],
+            ]} />
+          </DetailSection>
+          <DetailSection title="Diplomacy">
+            <DetailRows rows={[
+              ['Top Ally', faction.top_ally ? factionLabel(faction.top_ally) : null],
+              ['Top Rival', faction.top_rival ? factionLabel(faction.top_rival) : null],
+              ['Overlord', faction.overlord ? factionLabel(faction.overlord) : null],
+              ['Tributaries', faction.tributary_count],
+              ['Claim Disputes', faction.claim_dispute_count],
+            ]} />
+          </DetailSection>
+          <DetailSection title="Owned Regions">
+            <div className="flex flex-col gap-1.5">
+              {ownedRegions.length === 0 && <p className="text-sm text-gray-500 italic">No held regions.</p>}
+              {ownedRegions.slice(0, 12).map((region) => (
+                <button
+                  key={region.name}
+                  type="button"
+                  onClick={() => openRegion(region.name)}
+                  className="flex items-center gap-2 rounded bg-gray-800/45 px-2.5 py-1.5 text-left hover:bg-gray-700/70 focus:outline-none focus:ring-1 focus:ring-indigo-500"
+                >
+                  <span className="text-sm text-gray-200 truncate flex-1">{region.display_name || region.name}</span>
+                  <span className="text-xs text-gray-500 tabular-nums">{fmtSimNum(region.population)}</span>
+                  <span className="text-xs text-amber-300 tabular-nums">{fmtSimPct(region.unrest)}</span>
+                </button>
+              ))}
+            </div>
+          </DetailSection>
+          {factionEvents.length > 0 && (
+            <DetailSection title="Recent Faction Events">
+              <div className="flex flex-col gap-1.5">
+                {factionEvents.map(renderEventButton)}
+              </div>
+            </DetailSection>
+          )}
+        </>
+      )
+    }
+  } else if (selection.type === 'region') {
+    const region = findSimRegion(simWorld, selection.regionName)
+    if (!region) {
+      title = 'Region Missing'
+      subtitle = selection.regionName
+      content = <p className="text-sm text-gray-500 italic">This region is not present in the current simulation state.</p>
+    } else {
+      const owner = findSimFaction(simWorld, region.owner)
+      const hot = (simWorld.hot_regions ?? []).find((item: SimHotRegion) => item.name === region.name)
+      const regionEvents = events
+        .filter((event) => event.region === region.name || event.region === region.display_name)
+        .slice(-8)
+        .reverse()
+      title = region.display_name || region.name
+      subtitle = region.name
+      swatch = region.owner ? factionColors[region.owner] : '#6b7280'
+      content = (
+        <>
+          <div className="grid grid-cols-2 gap-2">
+            <DetailMetric label="Population" value={fmtSimNum(region.population)} />
+            <DetailMetric label="Resources" value={String(region.resources)} />
+            <DetailMetric
+              label="Unrest"
+              value={fmtSimPct(region.unrest)}
+              tone={region.unrest > 0.55 ? 'bad' : region.unrest > 0.3 ? 'warn' : 'neutral'}
+            />
+            <DetailMetric label="Pressure" value={hot ? fmtSimPct(hot.pressure) : 'None'} tone={hot && hot.pressure > 0.55 ? 'warn' : 'neutral'} />
+          </div>
+          <DetailSection title="Control">
+            <div className="rounded bg-gray-800/45 px-2.5 py-2">
+              {owner ? (
+                <button
+                  type="button"
+                  onClick={() => openFaction(owner.name)}
+                  className="flex items-center gap-2 rounded text-left hover:text-indigo-300 focus:outline-none focus:ring-1 focus:ring-indigo-500"
+                >
+                  <span className="w-3 h-3 rounded-sm shrink-0" style={{ background: factionColors[owner.name] }} />
+                  <span className="text-sm text-gray-100">{owner.display_name}</span>
+                </button>
+              ) : (
+                <p className="text-sm text-gray-500 italic">Unowned</p>
+              )}
+            </div>
+          </DetailSection>
+          <DetailSection title="Conditions">
+            <DetailRows rows={[
+              ['Climate', region.climate_label || region.climate],
+              ['Climate Anomaly', typeof region.climate_anomaly === 'number' ? region.climate_anomaly.toFixed(2) : null],
+              ['Food Deficit', typeof hot?.food_deficit === 'number' ? fmtSimSigned(hot.food_deficit, 0) : null],
+              ['Trade Pressure', typeof hot?.trade_warfare_pressure === 'number' ? fmtSimPct(hot.trade_warfare_pressure) : null],
+              ['Shock Exposure', typeof hot?.shock_exposure === 'number' ? fmtSimPct(hot.shock_exposure) : null],
+            ]} />
+          </DetailSection>
+          {regionEvents.length > 0 && (
+            <DetailSection title="Recent Region Events">
+              <div className="flex flex-col gap-1.5">
+                {regionEvents.map(renderEventButton)}
+              </div>
+            </DetailSection>
+          )}
+        </>
+      )
+    }
+  } else {
+    const event = selection.event
+    const factionRefs = getEventFactionRefs(event, simWorld)
+    const region = findSimRegion(simWorld, event.region)
+    title = fmtSimEventType(event.type)
+    subtitle = `Turn ${event.turn ?? simWorld.turn}`
+    swatch = event.faction ? factionColors[event.faction] : undefined
+    content = (
+      <>
+        <div className="grid grid-cols-2 gap-2">
+          <DetailMetric label="Turn" value={String(event.turn ?? simWorld.turn)} />
+          <DetailMetric label="Significance" value={typeof event.significance === 'number' ? event.significance.toFixed(2) : 'None'} />
+        </div>
+        {(factionRefs.length > 0 || region) && (
+          <DetailSection title="Related">
+            <div className="flex flex-wrap gap-2">
+              {factionRefs.map((name) => {
+                const faction = findSimFaction(simWorld, name)
+                return (
+                  <button
+                    key={name}
+                    type="button"
+                    onClick={() => openFaction(name)}
+                    className="inline-flex items-center gap-1.5 rounded bg-gray-800/70 px-2 py-1 text-sm text-gray-200 hover:bg-gray-700/70 focus:outline-none focus:ring-1 focus:ring-indigo-500"
+                  >
+                    <span className="w-2.5 h-2.5 rounded-sm" style={{ background: factionColors[name] }} />
+                    {faction?.display_name ?? name}
+                  </button>
+                )
+              })}
+              {region && (
+                <button
+                  type="button"
+                  onClick={() => openRegion(region.name)}
+                  className="rounded bg-gray-800/70 px-2 py-1 text-sm text-gray-200 hover:bg-gray-700/70 focus:outline-none focus:ring-1 focus:ring-indigo-500"
+                >
+                  {region.display_name || region.name}
+                </button>
+              )}
+            </div>
+          </DetailSection>
+        )}
+        <DetailSection title="Details">
+          <div className="rounded bg-gray-800/45 divide-y divide-gray-700/50">
+            {Object.entries(event.details ?? {}).length === 0 && (
+              <p className="px-2.5 py-2 text-sm text-gray-500 italic">No detail payload.</p>
+            )}
+            {Object.entries(event.details ?? {}).map(([key, value]) => (
+              <div key={key} className="grid grid-cols-[9rem_minmax(0,1fr)] gap-2 px-2.5 py-1.5 text-sm">
+                <span className="text-gray-500">{fmtSimKey(key)}</span>
+                <span className="text-gray-200 break-words">{fmtSimValue(value)}</span>
+              </div>
+            ))}
+          </div>
+        </DetailSection>
+        <DetailSection title="Impact">
+          <div className="rounded bg-gray-800/45 divide-y divide-gray-700/50">
+            {Object.entries(event.impact ?? {}).length === 0 && (
+              <p className="px-2.5 py-2 text-sm text-gray-500 italic">No impact payload.</p>
+            )}
+            {Object.entries(event.impact ?? {}).map(([key, value]) => (
+              <div key={key} className="grid grid-cols-[9rem_minmax(0,1fr)] gap-2 px-2.5 py-1.5 text-sm">
+                <span className="text-gray-500">{fmtSimKey(key)}</span>
+                <span className="text-gray-200 break-words">{fmtSimValue(value)}</span>
+              </div>
+            ))}
+          </div>
+        </DetailSection>
+      </>
+    )
+  }
+
+  return (
+    <aside className={`${panelW} bg-gray-900 text-gray-100 flex flex-col shrink-0 overflow-y-auto border-l border-gray-800`}>
+      <div className="sticky top-0 z-10 bg-gray-900 border-b border-gray-800 px-5 py-4">
+        <div className="flex items-start justify-between gap-3">
+          <div className="min-w-0">
+            <div className="text-xs font-semibold uppercase tracking-wide text-gray-500">Simulation Detail</div>
+            <h2 className="mt-1 text-base font-semibold text-gray-100 flex items-center gap-2 min-w-0">
+              {swatch && <span className="w-3 h-3 rounded-sm shrink-0" style={{ background: swatch }} />}
+              <span className="truncate">{title}</span>
+            </h2>
+            <p className="mt-0.5 text-xs text-gray-500 truncate">{subtitle}</p>
+          </div>
+          <button
+            type="button"
+            onClick={() => setSimDetailSelection(null)}
+            className="text-xs text-gray-500 hover:text-gray-300 px-2 py-1 rounded hover:bg-gray-800"
+          >
+            Close
+          </button>
+        </div>
+      </div>
+      <div className="p-5 flex flex-col gap-5">
+        {content}
+      </div>
+    </aside>
+  )
 }
 
 // ── Simple lore body renderer ─────────────────────────────────────────────────
@@ -520,6 +967,7 @@ export function InfoPanel() {
   const upsertRegion   = useMapStore((s) => s.upsertRegion)
   const viewMode       = useMapStore((s) => s.viewMode)
   const simWorld       = useMapStore((s) => s.simWorld)
+  const simDetailSelection = useMapStore((s) => s.simDetailSelection)
   const panelW         = PANEL_WIDTH[viewMode]
 
   const factionColors = useMemo(
@@ -570,6 +1018,17 @@ export function InfoPanel() {
     if (!regionId || !map) return null
     const regionName = map.regions[regionId]?.name
     return simRegions[regionId] ?? (regionName ? simRegions[regionName] : null) ?? null
+  }
+
+  if (simWorld && simDetailSelection) {
+    return (
+      <SimulationDetailPanel
+        panelW={panelW}
+        selection={simDetailSelection}
+        simWorld={simWorld}
+        factionColors={factionColors}
+      />
+    )
   }
 
   // ── Lore reader mode ──────────────────────────────────────────────────────

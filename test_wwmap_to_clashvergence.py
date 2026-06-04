@@ -129,6 +129,11 @@ class ClashvergenceExportTests(unittest.TestCase):
             shutil.rmtree(tmp_dir)
 
         self.assertNotIn("faction_language_families", map_definition)
+        north = map_definition["regions"]["North"]
+        self.assertEqual(north["display_name"], "North")
+        self.assertEqual(north["founding_name"], "North")
+        self.assertEqual(north["name_metadata"]["authored_name"], "North")
+        self.assertEqual(north["name_metadata"]["source"], "world_builder")
 
     def test_export_normalizes_legacy_hex_climate(self):
         tmp_dir = ROOT / ".tmp_clashvergence_export_tests"

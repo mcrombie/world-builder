@@ -186,6 +186,21 @@ export interface SimActiveShock {
   affected_regions: number
 }
 
+export interface SimEvent {
+  type: string
+  faction?: string | null
+  region?: string | null
+  turn?: number
+  details?: Record<string, unknown>
+  impact?: Record<string, unknown>
+  significance?: number
+}
+
+export type SimDetailSelection =
+  | { type: 'faction'; factionName: string }
+  | { type: 'region'; regionName: string }
+  | { type: 'event'; event: SimEvent }
+
 export interface SimWorldState {
   ok?: boolean
   turn: number
@@ -193,7 +208,7 @@ export interface SimWorldState {
   summary?: SimSummary
   factions: SimFaction[]
   regions: SimRegion[]
-  recent_events: unknown[]
+  recent_events: SimEvent[]
   hot_regions?: SimHotRegion[]
   active_wars?: SimActiveWar[]
   active_shocks?: SimActiveShock[]

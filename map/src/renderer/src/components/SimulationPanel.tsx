@@ -1,7 +1,7 @@
 import { useMemo, useState, useRef, useEffect } from 'react'
 import { useMapStore } from '../store/mapStore'
 import { IS_BROWSER } from '../lib/fileIO'
-import type { SimActiveShock, SimActiveWar, SimFaction, SimHotRegion, ViewMode } from '../types/map'
+import type { SimActiveShock, SimActiveWar, SimEvent, SimFaction, SimHotRegion, ViewMode } from '../types/map'
 
 const SIM_PANEL_WIDTH: Record<ViewMode, string> = {
   map:      'w-80',
@@ -66,16 +66,6 @@ function fmtEventType(type: string): string {
     shock_trade_collapse: 'Trade Collapse',
   }
   return labels[type] ?? type.split('_').map(w => w[0].toUpperCase() + w.slice(1)).join(' ')
-}
-
-interface SimEvent {
-  type: string
-  faction?: string
-  region?: string
-  turn?: number
-  details?: Record<string, unknown>
-  impact?: Record<string, unknown>
-  significance?: number
 }
 
 function fileName(path: string): string {
@@ -147,6 +137,8 @@ export function SimulationPanel() {
   const simSeed         = useMapStore((s) => s.simSeed)
   const simGeneratedMapPath = useMapStore((s) => s.simGeneratedMapPath)
   const setSimGeneratedMapPath = useMapStore((s) => s.setSimGeneratedMapPath)
+  const simDetailSelection = useMapStore((s) => s.simDetailSelection)
+  const setSimDetailSelection = useMapStore((s) => s.setSimDetailSelection)
   const viewMode       = useMapStore((s) => s.viewMode)
   const [isAdvancing, setIsAdvancing] = useState(false)
   const [isPlaying,   setIsPlaying]   = useState(false)
@@ -344,8 +336,15 @@ export function SimulationPanel() {
               <div className="px-3 py-2 border-b border-gray-800">
                 <SectionTitle>Pressure Regions</SectionTitle>
                 <div className="flex flex-col gap-1.5">
-                  {hotRegions.map((region) => (
-                    <div key={region.name} className="rounded bg-gray-800/50 px-2 py-1.5">
+                  {hotRegions.map((region) => {
+                    const active = simDetailSelection?.type === 'region' && simDetailSelection.regionName === region.name
+                    return (
+                    <button
+                      key={region.name}
+                      type="button"
+                      onClick={() => setSimDetailSelection({ type: 'region', regionName: region.name })}
+                      className={`w-full rounded px-2 py-1.5 text-left transition-colors hover:bg-gray-700/70 focus:outline-none focus:ring-1 focus:ring-indigo-500 ${active ? 'bg-indigo-950/60 border border-indigo-600/50' : 'bg-gray-800/50 border border-transparent'}`}
+                    >
                       <div className="flex items-center gap-2 text-xs">
                         <span
                           className="w-2 h-2 rounded-sm shrink-0"
@@ -359,8 +358,9 @@ export function SimulationPanel() {
                         <span>Food {fmtSigned(region.food_deficit, 0)}</span>
                         <span>Shock {fmtPct(region.shock_exposure)}</span>
                       </div>
-                    </div>
-                  ))}
+                    </button>
+                    )
+                  })}
                 </div>
               </div>
             )}
@@ -405,8 +405,14 @@ export function SimulationPanel() {
                   const foodRatio = foodCapacity > 0 ? (f.food_stored ?? 0) / foodCapacity : 0
                   const admin = f.administrative_efficiency ?? 1
                   const readiness = f.military_readiness ?? 0
+                  const active = simDetailSelection?.type === 'faction' && simDetailSelection.factionName === f.name
                   return (
-                    <div key={f.name} className="rounded bg-gray-800/45 px-2 py-2">
+                    <button
+                      key={f.name}
+                      type="button"
+                      onClick={() => setSimDetailSelection({ type: 'faction', factionName: f.name })}
+                      className={`w-full rounded px-2 py-2 text-left transition-colors hover:bg-gray-700/70 focus:outline-none focus:ring-1 focus:ring-indigo-500 ${active ? 'bg-indigo-950/60 border border-indigo-600/50' : 'bg-gray-800/45 border border-transparent'}`}
+                    >
                       <div className="flex items-center gap-2">
                         <span className="text-xs text-gray-600 w-4 shrink-0 tabular-nums">#{i + 1}</span>
                         <span
@@ -445,7 +451,7 @@ export function SimulationPanel() {
                       {f.doctrine_label && (
                         <div className="mt-0.5 text-xs text-gray-600 italic truncate">{f.doctrine_label}</div>
                       )}
-                    </div>
+                    </button>
                   )
                 })}
               </div>
@@ -460,8 +466,14 @@ export function SimulationPanel() {
                     const displayFaction = ev.faction ? factionName(ev.faction) : null
                     const color = ev.faction ? factionColors[ev.faction] : undefined
                     const details = eventDetail(ev)
+                    const active = simDetailSelection?.type === 'event' && simDetailSelection.event === ev
                     return (
-                      <div key={i} className="rounded bg-gray-800/40 px-2 py-1.5 text-xs flex items-start gap-2">
+                      <button
+                        key={i}
+                        type="button"
+                        onClick={() => setSimDetailSelection({ type: 'event', event: ev })}
+                        className={`w-full rounded px-2 py-1.5 text-xs flex items-start gap-2 text-left transition-colors hover:bg-gray-700/70 focus:outline-none focus:ring-1 focus:ring-indigo-500 ${active ? 'bg-indigo-950/60 border border-indigo-600/50' : 'bg-gray-800/40 border border-transparent'}`}
+                      >
                         <span className="text-gray-600 tabular-nums w-6 shrink-0">T{ev.turn ?? simWorld.turn}</span>
                         {color && (
                           <span className="w-1.5 h-1.5 rounded-full mt-1.5 shrink-0" style={{ background: color }} />
@@ -472,7 +484,7 @@ export function SimulationPanel() {
                           {details && <span className="text-gray-600 truncate">{details}</span>}
                           {ev.region && <span className="text-gray-600 truncate">→ {ev.region}</span>}
                         </div>
-                      </div>
+                      </button>
                     )
                   })}
                 </div>

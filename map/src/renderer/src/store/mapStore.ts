@@ -1,5 +1,5 @@
 import { create } from 'zustand'
-import { AzloreFile, Climate, HexData, MapData, RegionData, RiverSize, SelectMode, SimWorldState, TerrainType, Tool, LayerVisibility, ViewMode } from '../types/map'
+import { AzloreFile, Climate, HexData, MapData, RegionData, RiverSize, SelectMode, SimDetailSelection, SimWorldState, TerrainType, Tool, LayerVisibility, ViewMode } from '../types/map'
 import { hexKey, hexesInRadius } from '../lib/hex'
 import { normalizeClimate } from '../lib/climate'
 
@@ -114,6 +114,13 @@ function deriveRegionClimates(map: MapData): MapData {
   return { ...map, regions }
 }
 
+function findMapRegionId(map: MapData | null, regionName: string | null | undefined): string | null {
+  if (!map || !regionName) return null
+  if (map.regions[regionName]) return regionName
+  const match = Object.entries(map.regions).find(([, region]) => region.name === regionName)
+  return match?.[0] ?? null
+}
+
 interface MapStore {
   map: MapData | null
   mapVersion: number
@@ -165,12 +172,14 @@ interface MapStore {
   simType: 'clashvergence' | 'claudevergence'
   simSeed: string
   simGeneratedMapPath: string
+  simDetailSelection: SimDetailSelection | null
   setSimWorld: (world: SimWorldState | null) => void
   setSimulating: (v: boolean) => void
   setSimFactionCount: (n: number) => void
   setSimType: (t: 'clashvergence' | 'claudevergence') => void
   setSimSeed: (seed: string) => void
   setSimGeneratedMapPath: (path: string) => void
+  setSimDetailSelection: (selection: SimDetailSelection | null) => void
 
   loreFile: AzloreFile | null
   setLoreFile: (f: AzloreFile | null, filePath?: string) => void
@@ -210,12 +219,30 @@ export const useMapStore = create<MapStore>((set, get) => ({
   simType: 'clashvergence',
   simSeed: '',
   simGeneratedMapPath: '',
-  setSimWorld: (world) => set({ simWorld: world }),
+  simDetailSelection: null,
+  setSimWorld: (world) => set({ simWorld: world, ...(world ? {} : { simDetailSelection: null }) }),
   setSimulating: (v) => set({ isSimulating: v }),
   setSimFactionCount: (n) => set({ simFactionCount: n }),
   setSimType: (t) => set({ simType: t }),
   setSimSeed: (seed) => set({ simSeed: seed }),
   setSimGeneratedMapPath: (path) => set({ simGeneratedMapPath: path }),
+  setSimDetailSelection: (selection) =>
+    set((state) => {
+      if (!selection) return { simDetailSelection: null }
+
+      const regionName = selection.type === 'region'
+        ? selection.regionName
+        : selection.type === 'event'
+          ? selection.event.region
+          : null
+      const selectedRegion = findMapRegionId(state.map, regionName)
+
+      return {
+        simDetailSelection: selection,
+        selectedHex: null,
+        selectedRegion: selectedRegion ?? null,
+      }
+    }),
 
   loreFile: null,
   setLoreFile: (f, filePath?) => {
@@ -274,6 +301,7 @@ export const useMapStore = create<MapStore>((set, get) => ({
       isDirty: true,
       selectedHex: null,
       selectedRegion: null,
+      simDetailSelection: null,
       history: [],
       strokeBefore: null,
     })
@@ -311,6 +339,7 @@ export const useMapStore = create<MapStore>((set, get) => ({
       isDirty: false,
       selectedHex: null,
       selectedRegion: null,
+      simDetailSelection: null,
       history: [],
       strokeBefore: null,
       loreFile: null,
@@ -396,9 +425,9 @@ export const useMapStore = create<MapStore>((set, get) => ({
     })
   },
 
-  selectHex:    (key)  => set({ selectedHex: key, selectedRegion: null }),
-  selectRegion: (id)   => set({ selectedRegion: id, selectedHex: null }),
-  setSelectMode:(mode) => set({ selectMode: mode, selectedHex: null, selectedRegion: null }),
+  selectHex:    (key)  => set({ selectedHex: key, selectedRegion: null, simDetailSelection: null }),
+  selectRegion: (id)   => set({ selectedRegion: id, selectedHex: null, simDetailSelection: null }),
+  setSelectMode:(mode) => set({ selectMode: mode, selectedHex: null, selectedRegion: null, simDetailSelection: null }),
 
   updateHex: (key, data) =>
     set((state) => {
