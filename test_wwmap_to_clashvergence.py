@@ -3,7 +3,7 @@ import shutil
 import unittest
 from pathlib import Path
 
-from wwmap_to_clashvergence import translate
+from wwmap_to_clashvergence import default_output_path, translate
 
 
 ROOT = Path(__file__).parent
@@ -24,6 +24,12 @@ def _write_test_map(path: Path, *, regions: dict, hexes: dict) -> None:
 
 
 class ClashvergenceExportTests(unittest.TestCase):
+    def test_default_output_path_uses_clean_cmap_name(self):
+        self.assertEqual(default_output_path("azhora.azmap"), Path("azhora.cmap.json"))
+        self.assertEqual(default_output_path("azhora.wwmap"), Path("azhora.cmap.json"))
+        self.assertEqual(default_output_path("azhora.json"), Path("azhora.cmap.json"))
+        self.assertEqual(default_output_path("azhora.cmap.json"), Path("azhora.cmap.json"))
+
     def test_azhora_export_includes_default_language_families(self):
         map_definition = translate(ROOT / "saved_maps" / "azhora.azmap", num_factions=9)
         language_families = map_definition.get("faction_language_families")

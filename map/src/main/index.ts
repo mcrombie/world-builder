@@ -1,5 +1,5 @@
 import { app, shell, BrowserWindow, ipcMain, dialog } from 'electron'
-import { join } from 'path'
+import { basename, dirname, extname, join } from 'path'
 import { readFileSync, writeFileSync, existsSync, mkdirSync } from 'fs'
 import { spawn, spawnSync, ChildProcess } from 'child_process'
 import * as http from 'http'
@@ -218,8 +218,43 @@ let simType: string = 'clashvergence'
 let simSeed: string | null = null
 
 function _generatedMapPathFor(sourcePath: string, mapExt: string): string {
-  const normalized = sourcePath.replace(/\.(azmap|wwmap|json)$/i, mapExt)
-  return normalized === sourcePath ? sourcePath + mapExt : normalized
+  const dir = dirname(sourcePath)
+  let name = basename(sourcePath)
+  for (const suffix of ['.cmap.json', '.cvmap.json', '.azmap', '.wwmap', '.json']) {
+    if (name.toLowerCase().endsWith(suffix)) {
+      name = name.slice(0, -suffix.length)
+      return join(dir, `${name}${mapExt}`)
+    }
+  }
+  const ext = extname(name)
+  const stem = ext ? name.slice(0, -ext.length) : name
+  return join(dir, `${stem}${mapExt}`)
+}
+
+function _processText(value: unknown): string {
+  if (value == null) return ''
+  return Buffer.isBuffer(value) ? value.toString('utf-8') : String(value)
+}
+
+function _formatProcessOutput(label: string, stdout?: unknown, stderr?: unknown): string[] {
+  const lines: string[] = []
+  const cleanStdout = _processText(stdout).trim()
+  const cleanStderr = _processText(stderr).trim()
+  if (cleanStdout) lines.push(`${label} stdout:\n${cleanStdout}`)
+  if (cleanStderr) lines.push(`${label} stderr:\n${cleanStderr}`)
+  return lines
+}
+
+function _formatTranslatorFailure(result: ReturnType<typeof spawnSync>, translatorScript: string, inputPath: string, outputPath: string): string {
+  const parts = [
+    'Map translation failed.',
+    `Translator: ${translatorScript}`,
+    `Input: ${inputPath}`,
+    `Output: ${outputPath}`,
+  ]
+  if (result.error?.message) parts.push(`Process error: ${result.error.message}`)
+  parts.push(..._formatProcessOutput('Translator', result.stdout, result.stderr))
+  return parts.join('\n\n')
 }
 
 function killSimProcess() {
@@ -258,7 +293,7 @@ async function _spawnServer(
   numFactions: number,
   requestedSimType: string = 'clashvergence',
   requestedSeed: string | null = null,
-): Promise<{ ok: boolean; error?: string }> {
+): Promise<{ ok: boolean; error?: string; generatedMapPath?: string }> {
   killSimProcess()
 
   // Kill any process LISTENING on our port (orphan from a crashed previous session).
@@ -287,9 +322,16 @@ async function _spawnServer(
   const mapFileArg       = _generatedMapPathFor(resolvedMapPath, mapExt)
   const normalizedSeed   = (requestedSeed ?? '').trim()
 
+  if (!existsSync(translatorScript)) {
+    return { ok: false, error: `Translator script not found:\n${translatorScript}` }
+  }
+  if (!existsSync(simDir)) {
+    return { ok: false, error: `Simulation project directory not found:\n${simDir}` }
+  }
+
   const xResult = spawnSync(PYTHON_CMD, [translatorScript, resolvedMapPath, mapFileArg, String(numFactions)], { encoding: 'utf-8' })
   if (xResult.status !== 0) {
-    return { ok: false, error: xResult.stderr?.trim() || xResult.error?.message || 'Translator failed.' }
+    return { ok: false, error: _formatTranslatorFailure(xResult, translatorScript, resolvedMapPath, mapFileArg) }
   }
 
   const stderrChunks: Buffer[] = []
@@ -307,11 +349,19 @@ async function _spawnServer(
 
   try {
     await waitForServer()
-    return { ok: true }
+    return { ok: true, generatedMapPath: mapFileArg }
   } catch (e: any) {
     const stderr = Buffer.concat(stderrChunks).toString('utf-8').trim()
+    const details = [
+      `${isClaudevergence ? 'Claudevergence' : 'Clashvergence'} server did not start.`,
+      `Command: ${PYTHON_CMD} ${simArgs.join(' ')}`,
+      `Generated map: ${mapFileArg}`,
+      ..._formatProcessOutput('Translator', xResult.stdout, xResult.stderr),
+      stderr ? `Server stderr:\n${stderr}` : '',
+      e.message ? `Startup error:\n${e.message}` : '',
+    ].filter(Boolean)
     killSimProcess()
-    return { ok: false, error: stderr || e.message }
+    return { ok: false, error: details.join('\n\n') }
   }
 }
 
@@ -379,7 +429,12 @@ ipcMain.handle('sim:start', async (_, mapFilePath: string, numFactions: number =
 
   try {
     const raw = await simGet('/api/world')
-    return { ok: true, world: JSON.parse(raw), seed: simSeed ?? '' }
+    return {
+      ok: true,
+      world: JSON.parse(raw),
+      seed: simSeed ?? '',
+      generatedMapPath: spawn_result.generatedMapPath,
+    }
   } catch (e: any) {
     killSimProcess()
     return { ok: false, error: e.message }
@@ -401,6 +456,10 @@ ipcMain.handle('sim:save-state', async () => {
       sim_type: simType,
       sim_seed: simSeed,
       map_path: simMapPath,
+      generated_map_path: _generatedMapPathFor(
+        _resolveMapPath(simMapPath ?? '') ?? '',
+        simType === 'claudevergence' ? '.cvmap.json' : '.cmap.json',
+      ),
       num_factions: simNumFactions,
       world_state: JSON.parse(worldRaw),
     }
@@ -451,7 +510,12 @@ ipcMain.handle('sim:load-and-start', async () => {
       killSimProcess()
       return { ok: false, error: loadResult.error ?? 'Server rejected save state.' }
     }
-    return { ok: true, world: loadResult, seed: simSeed ?? '' }
+    return {
+      ok: true,
+      world: loadResult,
+      seed: simSeed ?? '',
+      generatedMapPath: spawn_result.generatedMapPath,
+    }
   } catch (e: any) {
     killSimProcess()
     return { ok: false, error: e.message }

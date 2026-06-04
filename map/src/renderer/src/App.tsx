@@ -50,6 +50,7 @@ export default function App() {
   const setSimType       = useMapStore((s) => s.setSimType)
   const simSeed          = useMapStore((s) => s.simSeed)
   const setSimSeed       = useMapStore((s) => s.setSimSeed)
+  const setSimGeneratedMapPath = useMapStore((s) => s.setSimGeneratedMapPath)
   const viewMode         = useMapStore((s) => s.viewMode)
   const setViewMode      = useMapStore((s) => s.setViewMode)
   const lorePath         = useMapStore((s) => s.map?.lorePath)
@@ -168,6 +169,7 @@ export default function App() {
       await window.electronAPI.sim.stop()
       setSimulating(false)
       setSimWorld(null)
+      setSimGeneratedMapPath('')
       return
     }
     if (!currentPath) {
@@ -189,8 +191,10 @@ export default function App() {
     if (!result.ok) {
       alert('Simulation failed to start:\n' + (result.error ?? 'Unknown error'))
       setSimulating(false)
+      setSimGeneratedMapPath('')
     } else if (result.world) {
       setSimWorld(result.world as SimWorldState)
+      setSimGeneratedMapPath(result.generatedMapPath ?? '')
     }
   }
 
@@ -206,9 +210,11 @@ export default function App() {
     if (!result.ok) {
       alert('Failed to load simulation:\n' + (result.error ?? 'Unknown error'))
       setSimulating(false)
+      setSimGeneratedMapPath('')
     } else if (result.world) {
       setSimSeed(result.seed ?? '')
       setSimWorld(result.world as SimWorldState)
+      setSimGeneratedMapPath(result.generatedMapPath ?? '')
     }
   }
 
@@ -229,8 +235,10 @@ export default function App() {
           if (!result.ok) {
             alert('Simulation failed to start:\n' + (result.error ?? 'Unknown error'))
             setSimulating(false)
+            setSimGeneratedMapPath('')
           } else if (result.world) {
             setSimWorld(result.world as SimWorldState)
+            setSimGeneratedMapPath(result.generatedMapPath ?? '')
           }
         }
       } catch (err) {

@@ -9,7 +9,7 @@ interface _ExampleMeta  { id: string; name: string; description: string }
 interface _SimFaction   { name: string; display_name: string; treasury: number; owned_regions: number; population: number; doctrine_label: string }
 interface _SimRegion    { name: string; display_name: string; owner: string | null; population: number; resources: number; unrest: number }
 interface _SimWorld     { ok?: boolean; error?: string; turn: number; turn_label: string; factions: _SimFaction[]; regions: _SimRegion[]; recent_events: unknown[] }
-interface _SimStartResult { ok: boolean; error?: string; canceled?: boolean; world?: _SimWorld; seed?: string }
+interface _SimStartResult { ok: boolean; error?: string; canceled?: boolean; world?: _SimWorld; seed?: string; generatedMapPath?: string }
 interface _SimSaveResult  { ok?: boolean; error?: string; canceled?: boolean; filePath?: string }
 
 interface _LoreResult { data?: string; filePath?: string; canceled?: boolean; error?: string }

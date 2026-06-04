@@ -47,6 +47,8 @@ Tasks:
 - Include translator stdout and stderr in startup errors.
 - Re-run translation every time simulation starts so generated maps never go
   stale after edits.
+- Surface the generated `.cmap.json` or `.cvmap.json` path in the simulation
+  panel so a run can be traced back to the disposable bridge output.
 - Update bridge script docs from "Worldwright/.wwmap" to "world-builder/.azmap".
 - Trim legacy terrain mappings to the current terrain system or move legacy
   aliases into one explicit compatibility table.
@@ -161,6 +163,16 @@ Acceptance criteria:
 - Batch runs produce a compact report of dominant factions, collapse patterns,
   and outlier events.
 - Event logs become readable historical notes instead of only action labels.
+
+Current calibration command:
+
+```powershell
+python ..\..\python\Clashvergence\experiments\experiment_azhora_calibration.py --runs 25 --turns 120
+```
+
+The script translates `saved_maps/azhora.azmap` when available, writes the
+disposable generated map into Clashvergence's `reports/calibration/`, and emits
+both text and JSON calibration summaries.
 
 ## Implementation Slice 1
 

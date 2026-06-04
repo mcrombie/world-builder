@@ -439,6 +439,15 @@ def translate(wwmap_path: str | Path, num_factions: int = 4) -> dict:
     return map_definition
 
 
+def default_output_path(input_path: str | Path) -> Path:
+    path = Path(input_path)
+    name = path.name
+    for suffix in (".cmap.json", ".cvmap.json", ".azmap", ".wwmap", ".json"):
+        if name.lower().endswith(suffix):
+            return path.with_name(f"{name[:-len(suffix)]}.cmap.json")
+    return path.with_suffix(".cmap.json")
+
+
 def main() -> None:
     if len(sys.argv) < 2:
         print(__doc__)
@@ -447,7 +456,7 @@ def main() -> None:
     input_path = Path(sys.argv[1])
     output_path = (
         Path(sys.argv[2]) if len(sys.argv) > 2
-        else input_path.with_suffix(".cmap.json")
+        else default_output_path(input_path)
     )
     num_factions = int(sys.argv[3]) if len(sys.argv) > 3 else 4
 

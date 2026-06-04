@@ -47,6 +47,10 @@ function fmtEventType(type: string): string {
 
 interface SimEvent { type: string; faction?: string; region?: string; turn?: number }
 
+function fileName(path: string): string {
+  return path.split(/[\\/]/).pop() ?? path
+}
+
 export function SimulationPanel() {
   const simWorld       = useMapStore((s) => s.simWorld)
   const setSimWorld    = useMapStore((s) => s.setSimWorld)
@@ -55,6 +59,8 @@ export function SimulationPanel() {
   const simFactionCount = useMapStore((s) => s.simFactionCount)
   const simType         = useMapStore((s) => s.simType)
   const simSeed         = useMapStore((s) => s.simSeed)
+  const simGeneratedMapPath = useMapStore((s) => s.simGeneratedMapPath)
+  const setSimGeneratedMapPath = useMapStore((s) => s.setSimGeneratedMapPath)
   const viewMode       = useMapStore((s) => s.viewMode)
   const [isAdvancing, setIsAdvancing] = useState(false)
   const [isPlaying,   setIsPlaying]   = useState(false)
@@ -134,6 +140,7 @@ export function SimulationPanel() {
     await window.electronAPI.sim.stop()
     setSimulating(false)
     setSimWorld(null)
+    setSimGeneratedMapPath('')
   }
 
   async function handleReset() {
@@ -148,6 +155,7 @@ export function SimulationPanel() {
       setError(result.error ?? 'Failed to restart simulation.')
     } else if (result.world) {
       setSimWorld(result.world as any)
+      setSimGeneratedMapPath(result.generatedMapPath ?? '')
     }
     setIsAdvancing(false)
   }
@@ -174,6 +182,11 @@ export function SimulationPanel() {
             <div className="text-sm font-bold text-indigo-300 mt-0.5">{simWorld.turn_label}</div>
             {simSeed && (
               <div className="text-[11px] text-gray-500 mt-0.5 truncate">Seed: {simSeed}</div>
+            )}
+            {simGeneratedMapPath && (
+              <div className="text-[11px] text-gray-500 mt-0.5 truncate" title={simGeneratedMapPath}>
+                Map: {fileName(simGeneratedMapPath)}
+              </div>
             )}
           </>
         )}

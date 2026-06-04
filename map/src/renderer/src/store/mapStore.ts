@@ -136,11 +136,13 @@ interface MapStore {
   simFactionCount: number
   simType: 'clashvergence' | 'claudevergence'
   simSeed: string
+  simGeneratedMapPath: string
   setSimWorld: (world: SimWorldState | null) => void
   setSimulating: (v: boolean) => void
   setSimFactionCount: (n: number) => void
   setSimType: (t: 'clashvergence' | 'claudevergence') => void
   setSimSeed: (seed: string) => void
+  setSimGeneratedMapPath: (path: string) => void
 
   loreFile: AzloreFile | null
   setLoreFile: (f: AzloreFile | null, filePath?: string) => void
@@ -179,11 +181,13 @@ export const useMapStore = create<MapStore>((set, get) => ({
   simFactionCount: 9,
   simType: 'clashvergence',
   simSeed: '',
+  simGeneratedMapPath: '',
   setSimWorld: (world) => set({ simWorld: world }),
   setSimulating: (v) => set({ isSimulating: v }),
   setSimFactionCount: (n) => set({ simFactionCount: n }),
   setSimType: (t) => set({ simType: t }),
   setSimSeed: (seed) => set({ simSeed: seed }),
+  setSimGeneratedMapPath: (path) => set({ simGeneratedMapPath: path }),
 
   loreFile: null,
   setLoreFile: (f, filePath?) => {

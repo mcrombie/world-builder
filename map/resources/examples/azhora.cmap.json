@@ -4,1208 +4,8 @@
   "faction_names": [],
   "sea_links": [
     [
-      "Alezhor",
-      "Aurumlis Archipeligo"
-    ],
-    [
-      "Alezhor",
-      "Babon"
-    ],
-    [
-      "Alezhor",
-      "Cape Heth"
-    ],
-    [
-      "Alezhor",
-      "Drent"
-    ],
-    [
-      "Alezhor",
-      "East Izol"
-    ],
-    [
-      "Alezhor",
-      "East Pyros"
-    ],
-    [
-      "Alezhor",
-      "East Suval"
-    ],
-    [
-      "Alezhor",
-      "Eer"
-    ],
-    [
-      "Alezhor",
-      "Gala"
-    ],
-    [
-      "Alezhor",
-      "Ganesh Plain"
-    ],
-    [
-      "Alezhor",
-      "Hama"
-    ],
-    [
-      "Alezhor",
-      "Iscare Archipeligo"
-    ],
-    [
-      "Alezhor",
-      "Legemum"
-    ],
-    [
-      "Alezhor",
-      "Marosh"
-    ],
-    [
-      "Alezhor",
-      "Narcosh"
-    ],
-    [
-      "Alezhor",
-      "Northern Ascarth"
-    ],
-    [
-      "Alezhor",
-      "Selemi"
-    ],
-    [
-      "Alezhor",
-      "South Oremindi Mountains"
-    ],
-    [
-      "Alezhor",
-      "South Suval"
-    ],
-    [
-      "Alezhor",
-      "Southern Ascarth"
-    ],
-    [
-      "Alezhor",
-      "Trogo"
-    ],
-    [
-      "Alezhor",
-      "West Izol"
-    ],
-    [
-      "Alezhor",
-      "West Pyros"
-    ],
-    [
-      "Alezhor",
-      "West Suval"
-    ],
-    [
-      "Aurumlis Archipeligo",
-      "Babon"
-    ],
-    [
-      "Aurumlis Archipeligo",
-      "Cape Heth"
-    ],
-    [
-      "Aurumlis Archipeligo",
-      "Drent"
-    ],
-    [
-      "Aurumlis Archipeligo",
-      "East Izol"
-    ],
-    [
-      "Aurumlis Archipeligo",
-      "East Pyros"
-    ],
-    [
-      "Aurumlis Archipeligo",
-      "East Suval"
-    ],
-    [
-      "Aurumlis Archipeligo",
-      "Eer"
-    ],
-    [
-      "Aurumlis Archipeligo",
-      "Gala"
-    ],
-    [
-      "Aurumlis Archipeligo",
-      "Ganesh Plain"
-    ],
-    [
-      "Aurumlis Archipeligo",
-      "Hama"
-    ],
-    [
-      "Aurumlis Archipeligo",
-      "Iscare Archipeligo"
-    ],
-    [
-      "Aurumlis Archipeligo",
-      "Legemum"
-    ],
-    [
-      "Aurumlis Archipeligo",
-      "Marosh"
-    ],
-    [
-      "Aurumlis Archipeligo",
-      "Narcosh"
-    ],
-    [
-      "Aurumlis Archipeligo",
-      "Northern Ascarth"
-    ],
-    [
-      "Aurumlis Archipeligo",
-      "Selemi"
-    ],
-    [
-      "Aurumlis Archipeligo",
-      "South Oremindi Mountains"
-    ],
-    [
-      "Aurumlis Archipeligo",
-      "South Suval"
-    ],
-    [
-      "Aurumlis Archipeligo",
-      "Southern Ascarth"
-    ],
-    [
-      "Aurumlis Archipeligo",
-      "Trogo"
-    ],
-    [
-      "Aurumlis Archipeligo",
-      "West Izol"
-    ],
-    [
-      "Aurumlis Archipeligo",
-      "West Pyros"
-    ],
-    [
-      "Aurumlis Archipeligo",
-      "West Suval"
-    ],
-    [
-      "Babon",
-      "Cape Heth"
-    ],
-    [
-      "Babon",
-      "Drent"
-    ],
-    [
-      "Babon",
-      "East Izol"
-    ],
-    [
-      "Babon",
-      "East Pyros"
-    ],
-    [
-      "Babon",
-      "East Suval"
-    ],
-    [
-      "Babon",
-      "Eer"
-    ],
-    [
-      "Babon",
-      "Gala"
-    ],
-    [
-      "Babon",
-      "Ganesh Plain"
-    ],
-    [
-      "Babon",
-      "Hama"
-    ],
-    [
-      "Babon",
-      "Iscare Archipeligo"
-    ],
-    [
-      "Babon",
-      "Legemum"
-    ],
-    [
-      "Babon",
-      "Marosh"
-    ],
-    [
-      "Babon",
-      "Narcosh"
-    ],
-    [
-      "Babon",
-      "Northern Ascarth"
-    ],
-    [
-      "Babon",
-      "Selemi"
-    ],
-    [
-      "Babon",
-      "South Oremindi Mountains"
-    ],
-    [
-      "Babon",
-      "South Suval"
-    ],
-    [
-      "Babon",
-      "Southern Ascarth"
-    ],
-    [
-      "Babon",
-      "Trogo"
-    ],
-    [
-      "Babon",
-      "West Izol"
-    ],
-    [
-      "Babon",
-      "West Pyros"
-    ],
-    [
-      "Babon",
-      "West Suval"
-    ],
-    [
-      "Cape Heth",
-      "Drent"
-    ],
-    [
-      "Cape Heth",
-      "East Izol"
-    ],
-    [
-      "Cape Heth",
-      "East Pyros"
-    ],
-    [
-      "Cape Heth",
-      "East Suval"
-    ],
-    [
-      "Cape Heth",
-      "Eer"
-    ],
-    [
-      "Cape Heth",
-      "Gala"
-    ],
-    [
-      "Cape Heth",
-      "Ganesh Plain"
-    ],
-    [
-      "Cape Heth",
-      "Hama"
-    ],
-    [
-      "Cape Heth",
-      "Iscare Archipeligo"
-    ],
-    [
-      "Cape Heth",
-      "Legemum"
-    ],
-    [
-      "Cape Heth",
-      "Marosh"
-    ],
-    [
-      "Cape Heth",
-      "Narcosh"
-    ],
-    [
-      "Cape Heth",
-      "Northern Ascarth"
-    ],
-    [
-      "Cape Heth",
-      "Selemi"
-    ],
-    [
-      "Cape Heth",
-      "South Oremindi Mountains"
-    ],
-    [
-      "Cape Heth",
-      "South Suval"
-    ],
-    [
-      "Cape Heth",
-      "Southern Ascarth"
-    ],
-    [
-      "Cape Heth",
-      "Trogo"
-    ],
-    [
-      "Cape Heth",
-      "West Izol"
-    ],
-    [
-      "Cape Heth",
-      "West Pyros"
-    ],
-    [
-      "Cape Heth",
-      "West Suval"
-    ],
-    [
-      "Drent",
-      "East Izol"
-    ],
-    [
-      "Drent",
-      "East Pyros"
-    ],
-    [
-      "Drent",
-      "East Suval"
-    ],
-    [
-      "Drent",
-      "Eer"
-    ],
-    [
-      "Drent",
-      "Elagos"
-    ],
-    [
-      "Drent",
-      "Gala"
-    ],
-    [
-      "Drent",
-      "Ganesh Plain"
-    ],
-    [
-      "Drent",
-      "Hama"
-    ],
-    [
-      "Drent",
-      "Iscare Archipeligo"
-    ],
-    [
-      "Drent",
-      "Legemum"
-    ],
-    [
-      "Drent",
-      "Marosh"
-    ],
-    [
-      "Drent",
-      "Narcosh"
-    ],
-    [
-      "Drent",
-      "Northern Ascarth"
-    ],
-    [
-      "Drent",
-      "Selemi"
-    ],
-    [
-      "Drent",
-      "South Oremindi Mountains"
-    ],
-    [
-      "Drent",
-      "South Suval"
-    ],
-    [
-      "Drent",
-      "Southern Ascarth"
-    ],
-    [
-      "Drent",
-      "Trogo"
-    ],
-    [
-      "Drent",
-      "West Izol"
-    ],
-    [
-      "Drent",
-      "West Pyros"
-    ],
-    [
-      "Drent",
-      "West Suval"
-    ],
-    [
-      "East Izol",
-      "East Pyros"
-    ],
-    [
-      "East Izol",
-      "East Suval"
-    ],
-    [
-      "East Izol",
-      "Eer"
-    ],
-    [
-      "East Izol",
-      "Gala"
-    ],
-    [
-      "East Izol",
-      "Ganesh Plain"
-    ],
-    [
-      "East Izol",
-      "Hama"
-    ],
-    [
-      "East Izol",
-      "Iscare Archipeligo"
-    ],
-    [
-      "East Izol",
-      "Legemum"
-    ],
-    [
-      "East Izol",
-      "Marosh"
-    ],
-    [
-      "East Izol",
-      "Narcosh"
-    ],
-    [
-      "East Izol",
-      "Northern Ascarth"
-    ],
-    [
-      "East Izol",
-      "Selemi"
-    ],
-    [
-      "East Izol",
-      "South Oremindi Mountains"
-    ],
-    [
-      "East Izol",
-      "South Suval"
-    ],
-    [
-      "East Izol",
-      "Southern Ascarth"
-    ],
-    [
-      "East Izol",
-      "Trogo"
-    ],
-    [
-      "East Izol",
-      "West Izol"
-    ],
-    [
-      "East Izol",
-      "West Pyros"
-    ],
-    [
-      "East Izol",
-      "West Suval"
-    ],
-    [
-      "East Pyros",
-      "East Suval"
-    ],
-    [
-      "East Pyros",
-      "Eer"
-    ],
-    [
-      "East Pyros",
-      "Gala"
-    ],
-    [
-      "East Pyros",
-      "Ganesh Plain"
-    ],
-    [
-      "East Pyros",
-      "Hama"
-    ],
-    [
-      "East Pyros",
-      "Iscare Archipeligo"
-    ],
-    [
-      "East Pyros",
-      "Legemum"
-    ],
-    [
-      "East Pyros",
-      "Marosh"
-    ],
-    [
-      "East Pyros",
-      "Narcosh"
-    ],
-    [
-      "East Pyros",
-      "Northern Ascarth"
-    ],
-    [
-      "East Pyros",
-      "Selemi"
-    ],
-    [
-      "East Pyros",
-      "South Oremindi Mountains"
-    ],
-    [
-      "East Pyros",
-      "South Suval"
-    ],
-    [
-      "East Pyros",
-      "Southern Ascarth"
-    ],
-    [
-      "East Pyros",
-      "Trogo"
-    ],
-    [
-      "East Pyros",
-      "West Izol"
-    ],
-    [
-      "East Pyros",
-      "West Pyros"
-    ],
-    [
-      "East Pyros",
-      "West Suval"
-    ],
-    [
-      "East Suval",
-      "Eer"
-    ],
-    [
-      "East Suval",
-      "Gala"
-    ],
-    [
-      "East Suval",
-      "Ganesh Plain"
-    ],
-    [
-      "East Suval",
-      "Hama"
-    ],
-    [
-      "East Suval",
-      "Iscare Archipeligo"
-    ],
-    [
-      "East Suval",
-      "Legemum"
-    ],
-    [
-      "East Suval",
-      "Marosh"
-    ],
-    [
-      "East Suval",
-      "Narcosh"
-    ],
-    [
-      "East Suval",
-      "Northern Ascarth"
-    ],
-    [
-      "East Suval",
-      "Selemi"
-    ],
-    [
-      "East Suval",
-      "South Oremindi Mountains"
-    ],
-    [
-      "East Suval",
-      "South Suval"
-    ],
-    [
-      "East Suval",
-      "Southern Ascarth"
-    ],
-    [
-      "East Suval",
-      "Trogo"
-    ],
-    [
-      "East Suval",
-      "West Izol"
-    ],
-    [
-      "East Suval",
-      "West Pyros"
-    ],
-    [
-      "East Suval",
-      "West Suval"
-    ],
-    [
-      "Eer",
-      "Gala"
-    ],
-    [
-      "Eer",
-      "Ganesh Plain"
-    ],
-    [
-      "Eer",
-      "Hama"
-    ],
-    [
-      "Eer",
-      "Iscare Archipeligo"
-    ],
-    [
-      "Eer",
-      "Legemum"
-    ],
-    [
-      "Eer",
-      "Marosh"
-    ],
-    [
-      "Eer",
-      "Narcosh"
-    ],
-    [
-      "Eer",
-      "Northern Ascarth"
-    ],
-    [
-      "Eer",
-      "Selemi"
-    ],
-    [
-      "Eer",
-      "South Oremindi Mountains"
-    ],
-    [
-      "Eer",
-      "South Suval"
-    ],
-    [
-      "Eer",
-      "Southern Ascarth"
-    ],
-    [
-      "Eer",
-      "Trogo"
-    ],
-    [
-      "Eer",
-      "West Izol"
-    ],
-    [
-      "Eer",
-      "West Pyros"
-    ],
-    [
-      "Eer",
-      "West Suval"
-    ],
-    [
-      "Gala",
-      "Ganesh Plain"
-    ],
-    [
-      "Gala",
-      "Hama"
-    ],
-    [
-      "Gala",
-      "Iscare Archipeligo"
-    ],
-    [
-      "Gala",
-      "Legemum"
-    ],
-    [
-      "Gala",
-      "Marosh"
-    ],
-    [
-      "Gala",
-      "Narcosh"
-    ],
-    [
-      "Gala",
-      "Northern Ascarth"
-    ],
-    [
-      "Gala",
-      "Selemi"
-    ],
-    [
-      "Gala",
-      "South Oremindi Mountains"
-    ],
-    [
-      "Gala",
-      "South Suval"
-    ],
-    [
-      "Gala",
-      "Southern Ascarth"
-    ],
-    [
-      "Gala",
-      "Trogo"
-    ],
-    [
-      "Gala",
-      "West Izol"
-    ],
-    [
-      "Gala",
-      "West Pyros"
-    ],
-    [
-      "Gala",
-      "West Suval"
-    ],
-    [
-      "Ganesh Plain",
-      "Hama"
-    ],
-    [
-      "Ganesh Plain",
-      "Iscare Archipeligo"
-    ],
-    [
-      "Ganesh Plain",
-      "Legemum"
-    ],
-    [
-      "Ganesh Plain",
-      "Marosh"
-    ],
-    [
-      "Ganesh Plain",
-      "Narcosh"
-    ],
-    [
-      "Ganesh Plain",
-      "Northern Ascarth"
-    ],
-    [
-      "Ganesh Plain",
-      "Selemi"
-    ],
-    [
-      "Ganesh Plain",
-      "South Oremindi Mountains"
-    ],
-    [
-      "Ganesh Plain",
-      "South Suval"
-    ],
-    [
-      "Ganesh Plain",
-      "Southern Ascarth"
-    ],
-    [
-      "Ganesh Plain",
-      "Trogo"
-    ],
-    [
-      "Ganesh Plain",
-      "West Izol"
-    ],
-    [
-      "Ganesh Plain",
-      "West Pyros"
-    ],
-    [
-      "Ganesh Plain",
-      "West Suval"
-    ],
-    [
-      "Hama",
-      "Iscare Archipeligo"
-    ],
-    [
-      "Hama",
-      "Legemum"
-    ],
-    [
-      "Hama",
-      "Marosh"
-    ],
-    [
-      "Hama",
-      "Narcosh"
-    ],
-    [
-      "Hama",
-      "Northern Ascarth"
-    ],
-    [
-      "Hama",
-      "Selemi"
-    ],
-    [
-      "Hama",
-      "South Oremindi Mountains"
-    ],
-    [
-      "Hama",
-      "South Suval"
-    ],
-    [
-      "Hama",
-      "Southern Ascarth"
-    ],
-    [
-      "Hama",
-      "Trogo"
-    ],
-    [
-      "Hama",
-      "West Izol"
-    ],
-    [
-      "Hama",
-      "West Pyros"
-    ],
-    [
-      "Hama",
-      "West Suval"
-    ],
-    [
-      "Iscare Archipeligo",
-      "Legemum"
-    ],
-    [
-      "Iscare Archipeligo",
-      "Marosh"
-    ],
-    [
-      "Iscare Archipeligo",
-      "Narcosh"
-    ],
-    [
-      "Iscare Archipeligo",
-      "Northern Ascarth"
-    ],
-    [
-      "Iscare Archipeligo",
-      "Selemi"
-    ],
-    [
-      "Iscare Archipeligo",
-      "South Oremindi Mountains"
-    ],
-    [
-      "Iscare Archipeligo",
-      "South Suval"
-    ],
-    [
-      "Iscare Archipeligo",
-      "Southern Ascarth"
-    ],
-    [
-      "Iscare Archipeligo",
-      "Trogo"
-    ],
-    [
-      "Iscare Archipeligo",
-      "West Izol"
-    ],
-    [
-      "Iscare Archipeligo",
-      "West Pyros"
-    ],
-    [
-      "Iscare Archipeligo",
-      "West Suval"
-    ],
-    [
-      "Legemum",
-      "Marosh"
-    ],
-    [
-      "Legemum",
-      "Narcosh"
-    ],
-    [
-      "Legemum",
-      "Northern Ascarth"
-    ],
-    [
-      "Legemum",
-      "Selemi"
-    ],
-    [
-      "Legemum",
-      "South Oremindi Mountains"
-    ],
-    [
-      "Legemum",
-      "South Suval"
-    ],
-    [
-      "Legemum",
-      "Southern Ascarth"
-    ],
-    [
-      "Legemum",
-      "Trogo"
-    ],
-    [
-      "Legemum",
-      "West Izol"
-    ],
-    [
-      "Legemum",
-      "West Pyros"
-    ],
-    [
-      "Legemum",
-      "West Suval"
-    ],
-    [
-      "Marosh",
-      "Narcosh"
-    ],
-    [
-      "Marosh",
-      "Northern Ascarth"
-    ],
-    [
-      "Marosh",
-      "Selemi"
-    ],
-    [
-      "Marosh",
-      "South Oremindi Mountains"
-    ],
-    [
-      "Marosh",
-      "South Suval"
-    ],
-    [
-      "Marosh",
-      "Southern Ascarth"
-    ],
-    [
-      "Marosh",
-      "Trogo"
-    ],
-    [
-      "Marosh",
-      "West Izol"
-    ],
-    [
-      "Marosh",
-      "West Pyros"
-    ],
-    [
-      "Marosh",
-      "West Suval"
-    ],
-    [
-      "Narcosh",
-      "Northern Ascarth"
-    ],
-    [
-      "Narcosh",
-      "Selemi"
-    ],
-    [
       "Narcosh",
       "South Oremindi Mountains"
-    ],
-    [
-      "Narcosh",
-      "South Suval"
-    ],
-    [
-      "Narcosh",
-      "Southern Ascarth"
-    ],
-    [
-      "Narcosh",
-      "Trogo"
-    ],
-    [
-      "Narcosh",
-      "West Izol"
-    ],
-    [
-      "Narcosh",
-      "West Pyros"
-    ],
-    [
-      "Narcosh",
-      "West Suval"
-    ],
-    [
-      "Northern Ascarth",
-      "Selemi"
-    ],
-    [
-      "Northern Ascarth",
-      "South Oremindi Mountains"
-    ],
-    [
-      "Northern Ascarth",
-      "South Suval"
-    ],
-    [
-      "Northern Ascarth",
-      "Southern Ascarth"
-    ],
-    [
-      "Northern Ascarth",
-      "Trogo"
-    ],
-    [
-      "Northern Ascarth",
-      "West Izol"
-    ],
-    [
-      "Northern Ascarth",
-      "West Pyros"
-    ],
-    [
-      "Northern Ascarth",
-      "West Suval"
-    ],
-    [
-      "Selemi",
-      "South Oremindi Mountains"
-    ],
-    [
-      "Selemi",
-      "South Suval"
-    ],
-    [
-      "Selemi",
-      "Southern Ascarth"
-    ],
-    [
-      "Selemi",
-      "Trogo"
-    ],
-    [
-      "Selemi",
-      "West Izol"
-    ],
-    [
-      "Selemi",
-      "West Pyros"
-    ],
-    [
-      "Selemi",
-      "West Suval"
-    ],
-    [
-      "South Oremindi Mountains",
-      "South Suval"
-    ],
-    [
-      "South Oremindi Mountains",
-      "Southern Ascarth"
-    ],
-    [
-      "South Oremindi Mountains",
-      "Trogo"
-    ],
-    [
-      "South Oremindi Mountains",
-      "West Izol"
-    ],
-    [
-      "South Oremindi Mountains",
-      "West Pyros"
-    ],
-    [
-      "South Oremindi Mountains",
-      "West Suval"
-    ],
-    [
-      "South Suval",
-      "Southern Ascarth"
-    ],
-    [
-      "South Suval",
-      "Trogo"
-    ],
-    [
-      "South Suval",
-      "West Izol"
-    ],
-    [
-      "South Suval",
-      "West Pyros"
-    ],
-    [
-      "South Suval",
-      "West Suval"
-    ],
-    [
-      "Southern Ascarth",
-      "Trogo"
-    ],
-    [
-      "Southern Ascarth",
-      "West Izol"
-    ],
-    [
-      "Southern Ascarth",
-      "West Pyros"
-    ],
-    [
-      "Southern Ascarth",
-      "West Suval"
-    ],
-    [
-      "Trogo",
-      "West Izol"
-    ],
-    [
-      "Trogo",
-      "West Pyros"
-    ],
-    [
-      "Trogo",
-      "West Suval"
-    ],
-    [
-      "West Izol",
-      "West Pyros"
-    ],
-    [
-      "West Izol",
-      "West Suval"
-    ],
-    [
-      "West Pyros",
-      "West Suval"
     ]
   ],
   "river_links": [
@@ -1540,9 +340,9 @@
       "owner": null,
       "resources": 2,
       "terrain_tags": [
-        "hills"
+        "plains"
       ],
-      "climate": "cold"
+      "climate": "Dfb"
     },
     "North Orsa": {
       "neighbors": [
@@ -1553,9 +353,9 @@
       "owner": null,
       "resources": 2,
       "terrain_tags": [
-        "plains"
+        "steppe"
       ],
-      "climate": "cold"
+      "climate": "Dfb"
     },
     "North Thoth": {
       "neighbors": [
@@ -1567,9 +367,9 @@
       "owner": null,
       "resources": 2,
       "terrain_tags": [
-        "plains"
+        "steppe"
       ],
-      "climate": "cold"
+      "climate": "Dfb"
     },
     "West Witherst": {
       "neighbors": [
@@ -1581,9 +381,9 @@
       "owner": null,
       "resources": 2,
       "terrain_tags": [
-        "plains"
+        "steppe"
       ],
-      "climate": "cold"
+      "climate": "Dfb"
     },
     "South Orsa": {
       "neighbors": [
@@ -1594,10 +394,9 @@
       "owner": null,
       "resources": 2,
       "terrain_tags": [
-        "steppe",
-        "plains"
+        "steppe"
       ],
-      "climate": "cold"
+      "climate": "Dfb"
     },
     "Central Thoth": {
       "neighbors": [
@@ -1612,9 +411,9 @@
       "owner": null,
       "resources": 2,
       "terrain_tags": [
-        "plains"
+        "steppe"
       ],
-      "climate": "cold"
+      "climate": "Dfb"
     },
     "North Gorgi Mountains": {
       "neighbors": [
@@ -1631,7 +430,7 @@
         "highland",
         "hills"
       ],
-      "climate": "cold"
+      "climate": "Dfb"
     },
     "North Nonoth": {
       "neighbors": [
@@ -1643,10 +442,9 @@
       "owner": null,
       "resources": 2,
       "terrain_tags": [
-        "steppe",
-        "plains"
+        "steppe"
       ],
-      "climate": "cold"
+      "climate": "Dfb"
     },
     "East Witherst": {
       "neighbors": [
@@ -1657,9 +455,9 @@
       "owner": null,
       "resources": 2,
       "terrain_tags": [
-        "plains"
+        "steppe"
       ],
-      "climate": "cold"
+      "climate": "Dfb"
     },
     "West Gorgi Mountains": {
       "neighbors": [
@@ -1677,7 +475,7 @@
         "highland",
         "hills"
       ],
-      "climate": "cold"
+      "climate": "Dfb"
     },
     "East Gorgi Mountains": {
       "neighbors": [
@@ -1693,7 +491,7 @@
         "highland",
         "hills"
       ],
-      "climate": "cold"
+      "climate": "Dfb"
     },
     "Eshtor Plateau": {
       "neighbors": [
@@ -1710,7 +508,7 @@
       "terrain_tags": [
         "hills"
       ],
-      "climate": "cold"
+      "climate": "Dfb"
     },
     "South Nonoth": {
       "neighbors": [
@@ -1722,10 +520,9 @@
       "owner": null,
       "resources": 2,
       "terrain_tags": [
-        "steppe",
-        "plains"
+        "steppe"
       ],
-      "climate": "cold"
+      "climate": "Dfb"
     },
     "South Thoth": {
       "neighbors": [
@@ -1738,9 +535,9 @@
       "owner": null,
       "resources": 2,
       "terrain_tags": [
-        "plains"
+        "steppe"
       ],
-      "climate": "cold"
+      "climate": "Dfb"
     },
     "North Riesov": {
       "neighbors": [
@@ -1754,9 +551,9 @@
       "resources": 2,
       "terrain_tags": [
         "hills",
-        "plains"
+        "steppe"
       ],
-      "climate": "oceanic"
+      "climate": "Cfb"
     },
     "Noth Hills": {
       "neighbors": [
@@ -1773,7 +570,7 @@
       "terrain_tags": [
         "hills"
       ],
-      "climate": "cold"
+      "climate": "Dfb"
     },
     "Orgmala": {
       "neighbors": [
@@ -1793,7 +590,7 @@
         "steppe",
         "plains"
       ],
-      "climate": "cold"
+      "climate": "Dfb"
     },
     "North Lond": {
       "neighbors": [
@@ -1812,7 +609,7 @@
         "steppe",
         "plains"
       ],
-      "climate": "steppe"
+      "climate": "BSk"
     },
     "Nothwood": {
       "neighbors": [
@@ -1826,9 +623,9 @@
       "terrain_tags": [
         "highland",
         "forest",
-        "plains"
+        "steppe"
       ],
-      "climate": "cold"
+      "climate": "Dfb"
     },
     "West Baldro Mountains": {
       "neighbors": [
@@ -1845,7 +642,7 @@
         "highland",
         "hills"
       ],
-      "climate": "cold"
+      "climate": "Dfb"
     },
     "South Riesov": {
       "neighbors": [
@@ -1859,7 +656,7 @@
         "hills",
         "steppe"
       ],
-      "climate": "oceanic"
+      "climate": "Cfb"
     },
     "East Lond": {
       "neighbors": [
@@ -1877,7 +674,7 @@
         "steppe",
         "plains"
       ],
-      "climate": "steppe"
+      "climate": "BSk"
     },
     "West Lond": {
       "neighbors": [
@@ -1894,7 +691,7 @@
         "steppe",
         "plains"
       ],
-      "climate": "steppe"
+      "climate": "BSk"
     },
     "Central Lond": {
       "neighbors": [
@@ -1909,7 +706,7 @@
         "riverland",
         "plains"
       ],
-      "climate": "steppe"
+      "climate": "BSk"
     },
     "East Baldro Mountains": {
       "neighbors": [
@@ -1925,7 +722,7 @@
         "highland",
         "hills"
       ],
-      "climate": "cold"
+      "climate": "Dfb"
     },
     "North Endevor": {
       "neighbors": [
@@ -1939,7 +736,7 @@
       "terrain_tags": [
         "steppe"
       ],
-      "climate": "cold"
+      "climate": "Dfb"
     },
     "East Endevor": {
       "neighbors": [
@@ -1955,7 +752,7 @@
       "terrain_tags": [
         "steppe"
       ],
-      "climate": "cold"
+      "climate": "Dfb"
     },
     "West Endevor": {
       "neighbors": [
@@ -1968,7 +765,7 @@
       "terrain_tags": [
         "steppe"
       ],
-      "climate": "cold"
+      "climate": "Dfb"
     },
     "North Ganun": {
       "neighbors": [
@@ -1984,7 +781,7 @@
         "riverland",
         "steppe"
       ],
-      "climate": "steppe"
+      "climate": "BSk"
     },
     "East Ganun": {
       "neighbors": [
@@ -2000,7 +797,7 @@
         "riverland",
         "steppe"
       ],
-      "climate": "steppe"
+      "climate": "BSk"
     },
     "South Endevor": {
       "neighbors": [
@@ -2016,7 +813,7 @@
       "terrain_tags": [
         "steppe"
       ],
-      "climate": "cold"
+      "climate": "Dfb"
     },
     "South Lond": {
       "neighbors": [
@@ -2034,7 +831,7 @@
         "steppe",
         "plains"
       ],
-      "climate": "steppe"
+      "climate": "BSk"
     },
     "West Ganun": {
       "neighbors": [
@@ -2049,7 +846,7 @@
       "terrain_tags": [
         "steppe"
       ],
-      "climate": "steppe"
+      "climate": "BSk"
     },
     "North Acorwood": {
       "neighbors": [
@@ -2067,7 +864,7 @@
         "highland",
         "forest"
       ],
-      "climate": "temperate"
+      "climate": "Cfb"
     },
     "Cape Thalmagar": {
       "neighbors": [
@@ -2079,7 +876,7 @@
       "terrain_tags": [
         "steppe"
       ],
-      "climate": "cold"
+      "climate": "Dfb"
     },
     "West Acorwood": {
       "neighbors": [
@@ -2096,7 +893,7 @@
         "highland",
         "forest"
       ],
-      "climate": "temperate"
+      "climate": "Cfb"
     },
     "East Acordwood": {
       "neighbors": [
@@ -2110,7 +907,7 @@
         "highland",
         "forest"
       ],
-      "climate": "temperate"
+      "climate": "Cfb"
     },
     "South Ganun": {
       "neighbors": [
@@ -2123,7 +920,7 @@
         "riverland",
         "steppe"
       ],
-      "climate": "steppe"
+      "climate": "BSk"
     },
     "East Inseld": {
       "neighbors": [
@@ -2134,7 +931,7 @@
       "terrain_tags": [
         "plains"
       ],
-      "climate": "oceanic"
+      "climate": "Cfb"
     },
     "Acor Wetlands": {
       "neighbors": [
@@ -2150,7 +947,7 @@
       "terrain_tags": [
         "marsh"
       ],
-      "climate": "temperate"
+      "climate": "Cfb"
     },
     "Narcosh": {
       "neighbors": [
@@ -2169,7 +966,7 @@
         "steppe",
         "plains"
       ],
-      "climate": "cold"
+      "climate": "Dfb"
     },
     "Cudon": {
       "neighbors": [
@@ -2183,9 +980,9 @@
       "terrain_tags": [
         "highland",
         "hills",
-        "plains"
+        "steppe"
       ],
-      "climate": "temperate"
+      "climate": "Cfb"
     },
     "South Acordwood": {
       "neighbors": [
@@ -2200,7 +997,7 @@
         "highland",
         "forest"
       ],
-      "climate": "temperate"
+      "climate": "Cfb"
     },
     "West Inseld": {
       "neighbors": [
@@ -2212,7 +1009,7 @@
         "steppe",
         "plains"
       ],
-      "climate": "oceanic"
+      "climate": "Cfb"
     },
     "Lesser Oremindi Mountains": {
       "neighbors": [
@@ -2227,7 +1024,7 @@
         "highland",
         "hills"
       ],
-      "climate": "cold"
+      "climate": "Dfb"
     },
     "North Mithala": {
       "neighbors": [
@@ -2244,7 +1041,7 @@
         "steppe",
         "plains"
       ],
-      "climate": "steppe"
+      "climate": "BSk"
     },
     "Henborth": {
       "neighbors": [
@@ -2262,7 +1059,7 @@
       "terrain_tags": [
         "steppe"
       ],
-      "climate": "cold"
+      "climate": "Dfb"
     },
     "North Oreminidi Mountains": {
       "neighbors": [
@@ -2278,7 +1075,7 @@
         "highland",
         "hills"
       ],
-      "climate": "cold"
+      "climate": "Dfb"
     },
     "East Mithala": {
       "neighbors": [
@@ -2294,7 +1091,7 @@
         "steppe",
         "plains"
       ],
-      "climate": "steppe"
+      "climate": "BSk"
     },
     "West Mithala": {
       "neighbors": [
@@ -2311,7 +1108,7 @@
         "steppe",
         "plains"
       ],
-      "climate": "steppe"
+      "climate": "BSk"
     },
     "West Oremindi Mountains": {
       "neighbors": [
@@ -2325,7 +1122,7 @@
         "highland",
         "hills"
       ],
-      "climate": "cold"
+      "climate": "Dfb"
     },
     "East Oremindi Mountains": {
       "neighbors": [
@@ -2342,7 +1139,7 @@
         "highland",
         "hills"
       ],
-      "climate": "cold"
+      "climate": "Dfb"
     },
     "South Mithala": {
       "neighbors": [
@@ -2360,7 +1157,7 @@
         "steppe",
         "plains"
       ],
-      "climate": "steppe"
+      "climate": "BSk"
     },
     "North Celder": {
       "neighbors": [
@@ -2376,7 +1173,7 @@
         "steppe",
         "plains"
       ],
-      "climate": "steppe"
+      "climate": "BSk"
     },
     "East Lotharn Mountains": {
       "neighbors": [
@@ -2392,7 +1189,7 @@
         "highland",
         "hills"
       ],
-      "climate": "cold"
+      "climate": "Dfb"
     },
     "Feradom": {
       "neighbors": [
@@ -2408,7 +1205,7 @@
         "hills",
         "steppe"
       ],
-      "climate": "temperate"
+      "climate": "Cfb"
     },
     "South Celder": {
       "neighbors": [
@@ -2424,7 +1221,7 @@
       "terrain_tags": [
         "steppe"
       ],
-      "climate": "steppe"
+      "climate": "BSk"
     },
     "West Lotharn Mountains": {
       "neighbors": [
@@ -2442,7 +1239,7 @@
         "highland",
         "hills"
       ],
-      "climate": "cold"
+      "climate": "Dfb"
     },
     "South Oremindi Mountains": {
       "neighbors": [
@@ -2460,7 +1257,7 @@
         "highland",
         "hills"
       ],
-      "climate": "cold"
+      "climate": "Dfb"
     },
     "Amod": {
       "neighbors": [
@@ -2477,7 +1274,7 @@
         "hills",
         "plains"
       ],
-      "climate": "temperate"
+      "climate": "Cfb"
     },
     "North Ibenal": {
       "neighbors": [
@@ -2493,7 +1290,7 @@
         "hills",
         "steppe"
       ],
-      "climate": "temperate"
+      "climate": "Cfb"
     },
     "Vastos": {
       "neighbors": [
@@ -2508,7 +1305,7 @@
       "terrain_tags": [
         "plains"
       ],
-      "climate": "temperate"
+      "climate": "Cfb"
     },
     "Yunethre": {
       "neighbors": [
@@ -2523,7 +1320,7 @@
       "terrain_tags": [
         "steppe"
       ],
-      "climate": "temperate"
+      "climate": "Cfb"
     },
     "Pueth": {
       "neighbors": [
@@ -2538,7 +1335,7 @@
         "steppe",
         "plains"
       ],
-      "climate": "temperate"
+      "climate": "Cfb"
     },
     "Meneth": {
       "neighbors": [
@@ -2554,7 +1351,7 @@
       "terrain_tags": [
         "plains"
       ],
-      "climate": "cold"
+      "climate": "Dfb"
     },
     "North Ibenwood": {
       "neighbors": [
@@ -2572,7 +1369,7 @@
         "highland",
         "forest"
       ],
-      "climate": "temperate"
+      "climate": "Cfb"
     },
     "Elagos": {
       "neighbors": [
@@ -2592,7 +1389,7 @@
         "forest",
         "plains"
       ],
-      "climate": "temperate"
+      "climate": "Cfb"
     },
     "Isareos": {
       "neighbors": [
@@ -2611,7 +1408,7 @@
         "steppe",
         "plains"
       ],
-      "climate": "oceanic"
+      "climate": "Cfb"
     },
     "Drent": {
       "neighbors": [
@@ -2620,14 +1417,13 @@
         "Pueth"
       ],
       "owner": null,
-      "resources": 4,
+      "resources": 3,
       "terrain_tags": [
-        "coast",
         "riverland",
         "steppe",
         "plains"
       ],
-      "climate": "temperate"
+      "climate": "Cfb"
     },
     "Caricas": {
       "neighbors": [
@@ -2643,7 +1439,7 @@
         "steppe",
         "plains"
       ],
-      "climate": "temperate"
+      "climate": "Cfb"
     },
     "South Ibenal": {
       "neighbors": [
@@ -2657,7 +1453,7 @@
         "riverland",
         "steppe"
       ],
-      "climate": "temperate"
+      "climate": "Cfb"
     },
     "West Ibenwood": {
       "neighbors": [
@@ -2674,7 +1470,7 @@
         "highland",
         "forest"
       ],
-      "climate": "temperate"
+      "climate": "Cfb"
     },
     "Central Ibenwood": {
       "neighbors": [
@@ -2690,7 +1486,7 @@
         "highland",
         "forest"
       ],
-      "climate": "temperate"
+      "climate": "Cfb"
     },
     "East Ibenwood": {
       "neighbors": [
@@ -2709,7 +1505,7 @@
         "highland",
         "forest"
       ],
-      "climate": "temperate"
+      "climate": "Cfb"
     },
     "Luscia": {
       "neighbors": [
@@ -2726,7 +1522,7 @@
         "steppe",
         "plains"
       ],
-      "climate": "steppe"
+      "climate": "BSk"
     },
     "Peblos": {
       "neighbors": [],
@@ -2736,7 +1532,7 @@
         "hills",
         "steppe"
       ],
-      "climate": "oceanic"
+      "climate": "Cfb"
     },
     "Nethereum": {
       "neighbors": [
@@ -2753,7 +1549,7 @@
         "steppe",
         "plains"
       ],
-      "climate": "temperate"
+      "climate": "Cfb"
     },
     "Nesdor": {
       "neighbors": [
@@ -2772,7 +1568,7 @@
         "steppe",
         "plains"
       ],
-      "climate": "steppe"
+      "climate": "BSk"
     },
     "Moros Plain": {
       "neighbors": [
@@ -2787,7 +1583,7 @@
       "terrain_tags": [
         "steppe"
       ],
-      "climate": "steppe"
+      "climate": "BSk"
     },
     "East Suval": {
       "neighbors": [
@@ -2796,14 +1592,13 @@
         "West Suval"
       ],
       "owner": null,
-      "resources": 3,
+      "resources": 2,
       "terrain_tags": [
-        "coast",
         "hills",
         "steppe",
         "plains"
       ],
-      "climate": "oceanic"
+      "climate": "Cfb"
     },
     "South Ibenwood": {
       "neighbors": [
@@ -2820,7 +1615,7 @@
         "highland",
         "forest"
       ],
-      "climate": "temperate"
+      "climate": "Cfb"
     },
     "Nether Desert": {
       "neighbors": [
@@ -2836,7 +1631,7 @@
       "terrain_tags": [
         "steppe"
       ],
-      "climate": "arid"
+      "climate": "BWh"
     },
     "Ovesos": {
       "neighbors": [
@@ -2853,7 +1648,7 @@
         "steppe",
         "plains"
       ],
-      "climate": "temperate"
+      "climate": "Cfb"
     },
     "West Suval": {
       "neighbors": [
@@ -2864,14 +1659,13 @@
         "South Suval"
       ],
       "owner": null,
-      "resources": 3,
+      "resources": 2,
       "terrain_tags": [
-        "coast",
         "hills",
         "steppe",
         "plains"
       ],
-      "climate": "oceanic"
+      "climate": "Cfb"
     },
     "Oves Desert": {
       "neighbors": [
@@ -2887,7 +1681,7 @@
         "hills",
         "steppe"
       ],
-      "climate": "arid"
+      "climate": "BWh"
     },
     "Alezhor": {
       "neighbors": [
@@ -2898,14 +1692,13 @@
         "West Ibenwood"
       ],
       "owner": null,
-      "resources": 4,
+      "resources": 3,
       "terrain_tags": [
-        "coast",
         "riverland",
         "steppe",
         "plains"
       ],
-      "climate": "temperate"
+      "climate": "Cfb"
     },
     "Navarth": {
       "neighbors": [
@@ -2923,7 +1716,7 @@
         "forest",
         "steppe"
       ],
-      "climate": "temperate"
+      "climate": "Cfb"
     },
     "West Pyros": {
       "neighbors": [
@@ -2934,13 +1727,12 @@
         "Nether Desert"
       ],
       "owner": "Faction3",
-      "resources": 3,
+      "resources": 2,
       "terrain_tags": [
-        "coast",
         "steppe",
         "plains"
       ],
-      "climate": "temperate"
+      "climate": "Cfb"
     },
     "East Pyros": {
       "neighbors": [
@@ -2951,13 +1743,12 @@
         "West Pyros"
       ],
       "owner": null,
-      "resources": 3,
+      "resources": 2,
       "terrain_tags": [
-        "coast",
         "steppe",
         "plains"
       ],
-      "climate": "temperate"
+      "climate": "Cfb"
     },
     "Eer": {
       "neighbors": [
@@ -2968,13 +1759,12 @@
         "West Suval"
       ],
       "owner": null,
-      "resources": 3,
+      "resources": 2,
       "terrain_tags": [
-        "coast",
         "steppe",
         "plains"
       ],
-      "climate": "temperate"
+      "climate": "Cfb"
     },
     "Gala": {
       "neighbors": [
@@ -2987,13 +1777,12 @@
         "Telemonia"
       ],
       "owner": null,
-      "resources": 3,
+      "resources": 2,
       "terrain_tags": [
-        "coast",
         "steppe",
         "plains"
       ],
-      "climate": "temperate"
+      "climate": "Cfb"
     },
     "South Suval": {
       "neighbors": [
@@ -3001,14 +1790,13 @@
         "West Suval"
       ],
       "owner": null,
-      "resources": 3,
+      "resources": 2,
       "terrain_tags": [
-        "coast",
         "highland",
         "hills",
         "plains"
       ],
-      "climate": "oceanic"
+      "climate": "Cfb"
     },
     "Telemonia": {
       "neighbors": [
@@ -3023,19 +1811,18 @@
         "hills",
         "steppe"
       ],
-      "climate": "temperate"
+      "climate": "Cfb"
     },
     "Iscare Archipeligo": {
       "neighbors": [],
       "owner": null,
-      "resources": 3,
+      "resources": 2,
       "terrain_tags": [
-        "coast",
         "hills",
         "steppe",
         "plains"
       ],
-      "climate": "oceanic"
+      "climate": "Cfb"
     },
     "Ganesh Desert": {
       "neighbors": [
@@ -3050,7 +1837,7 @@
       "terrain_tags": [
         "steppe"
       ],
-      "climate": "arid"
+      "climate": "BWh"
     },
     "Northern Ascarth": {
       "neighbors": [
@@ -3059,29 +1846,27 @@
         "Southern Ascarth"
       ],
       "owner": null,
-      "resources": 3,
+      "resources": 2,
       "terrain_tags": [
-        "coast",
         "hills",
         "plains"
       ],
-      "climate": "temperate"
+      "climate": "Cfb"
     },
     "East Izol": {
       "neighbors": [
         "West Izol"
       ],
       "owner": null,
-      "resources": 3,
+      "resources": 2,
       "terrain_tags": [
-        "coast",
         "highland",
         "hills",
         "forest",
         "steppe",
         "plains"
       ],
-      "climate": "oceanic"
+      "climate": "Cfb"
     },
     "Ganesh Plain": {
       "neighbors": [
@@ -3093,13 +1878,12 @@
         "West Pyros"
       ],
       "owner": null,
-      "resources": 3,
+      "resources": 2,
       "terrain_tags": [
-        "coast",
         "steppe",
         "plains"
       ],
-      "climate": "arid"
+      "climate": "BWh"
     },
     "Legemum": {
       "neighbors": [
@@ -3108,14 +1892,13 @@
         "Telemonia"
       ],
       "owner": null,
-      "resources": 3,
+      "resources": 2,
       "terrain_tags": [
-        "coast",
         "hills",
         "steppe",
         "plains"
       ],
-      "climate": "temperate"
+      "climate": "Cfb"
     },
     "Cape Heth": {
       "neighbors": [
@@ -3123,27 +1906,25 @@
         "Ganesh Desert"
       ],
       "owner": null,
-      "resources": 3,
+      "resources": 2,
       "terrain_tags": [
-        "coast",
         "steppe",
         "plains"
       ],
-      "climate": "oceanic"
+      "climate": "Cfb"
     },
     "West Izol": {
       "neighbors": [
         "East Izol"
       ],
       "owner": null,
-      "resources": 3,
+      "resources": 2,
       "terrain_tags": [
-        "coast",
         "hills",
         "steppe",
         "plains"
       ],
-      "climate": "oceanic"
+      "climate": "Cfb"
     },
     "Dinelv Highlands": {
       "neighbors": [
@@ -3160,19 +1941,18 @@
         "hills",
         "steppe"
       ],
-      "climate": "arid"
+      "climate": "BWh"
     },
     "Southern Ascarth": {
       "neighbors": [
         "Northern Ascarth"
       ],
       "owner": null,
-      "resources": 3,
+      "resources": 2,
       "terrain_tags": [
-        "coast",
         "plains"
       ],
-      "climate": "temperate"
+      "climate": "Cfb"
     },
     "Marosh": {
       "neighbors": [
@@ -3183,14 +1963,13 @@
         "Trogo"
       ],
       "owner": "Faction4",
-      "resources": 4,
+      "resources": 3,
       "terrain_tags": [
-        "coast",
         "riverland",
         "hills",
         "plains"
       ],
-      "climate": "arid"
+      "climate": "BWh"
     },
     "North Meroshe Desert": {
       "neighbors": [
@@ -3205,18 +1984,17 @@
       "terrain_tags": [
         "steppe"
       ],
-      "climate": "arid"
+      "climate": "BWh"
     },
     "Aurumlis Archipeligo": {
       "neighbors": [],
       "owner": null,
-      "resources": 3,
+      "resources": 2,
       "terrain_tags": [
-        "coast",
         "hills",
         "plains"
       ],
-      "climate": "oceanic"
+      "climate": "Cfb"
     },
     "West Meroshe Desert": {
       "neighbors": [
@@ -3230,7 +2008,7 @@
       "terrain_tags": [
         "steppe"
       ],
-      "climate": "arid"
+      "climate": "BWh"
     },
     "Central Meroshe Desert": {
       "neighbors": [
@@ -3245,17 +2023,16 @@
       "terrain_tags": [
         "steppe"
       ],
-      "climate": "arid"
+      "climate": "BWh"
     },
     "Selemi": {
       "neighbors": [],
       "owner": null,
-      "resources": 3,
+      "resources": 2,
       "terrain_tags": [
-        "coast",
         "plains"
       ],
-      "climate": "oceanic"
+      "climate": "Cfb"
     },
     "Azhor Stones": {
       "neighbors": [],
@@ -3265,7 +2042,7 @@
         "highland",
         "forest"
       ],
-      "climate": "oceanic"
+      "climate": "Cfb"
     },
     "South Meroshe Desert": {
       "neighbors": [
@@ -3279,7 +2056,7 @@
       "terrain_tags": [
         "steppe"
       ],
-      "climate": "arid"
+      "climate": "BWh"
     },
     "Trogo": {
       "neighbors": [
@@ -3287,15 +2064,14 @@
         "South Meroshe Desert"
       ],
       "owner": null,
-      "resources": 4,
+      "resources": 3,
       "terrain_tags": [
-        "coast",
         "riverland",
         "highland",
         "forest",
         "plains"
       ],
-      "climate": "tropical"
+      "climate": "Aw"
     },
     "Hama": {
       "neighbors": [
@@ -3304,26 +2080,24 @@
         "West Meroshe Desert"
       ],
       "owner": null,
-      "resources": 3,
+      "resources": 2,
       "terrain_tags": [
-        "coast",
         "steppe",
         "plains"
       ],
-      "climate": "arid"
+      "climate": "BWh"
     },
     "Babon": {
       "neighbors": [],
       "owner": null,
-      "resources": 4,
+      "resources": 3,
       "terrain_tags": [
-        "coast",
         "riverland",
         "highland",
         "forest",
         "plains"
       ],
-      "climate": "arid"
+      "climate": "BWh"
     },
     "North Scythe": {
       "neighbors": [
@@ -3335,7 +2109,7 @@
         "highland",
         "forest"
       ],
-      "climate": "oceanic"
+      "climate": "Cfb"
     },
     "South Scythe": {
       "neighbors": [
@@ -3347,7 +2121,7 @@
         "highland",
         "forest"
       ],
-      "climate": "oceanic"
+      "climate": "Cfb"
     }
   },
   "faction_language_families": {
