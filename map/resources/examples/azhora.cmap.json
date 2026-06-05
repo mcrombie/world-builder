@@ -2,12 +2,7 @@
   "description": "world-builder map: Azhora",
   "num_factions": 9,
   "faction_names": [],
-  "sea_links": [
-    [
-      "Narcosh",
-      "South Oremindi Mountains"
-    ]
-  ],
+  "sea_links": [],
   "river_links": [
     [
       "Alezhor",
@@ -3589,7 +3584,7 @@
         "Ganesh Desert"
       ],
       "owner": null,
-      "resources": 2,
+      "resources": 3,
       "display_name": "Cape Heth",
       "founding_name": "Cape Heth",
       "name_metadata": {
@@ -3608,8 +3603,8 @@
         ]
       },
       "terrain_tags": [
-        "steppe",
-        "plains"
+        "coast",
+        "steppe"
       ],
       "climate": "BWh"
     },
