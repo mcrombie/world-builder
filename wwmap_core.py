@@ -18,6 +18,7 @@ from climate_compat import normalize_climate
 
 HEX_NEIGHBORS = [(1, 0), (1, -1), (0, -1), (-1, 0), (-1, 1), (0, 1)]
 WATER_TERRAINS = {"ocean", "lake"}
+UNREGIONED_MARITIME_TERRAINS = {"coast"}
 
 
 def parse_hex_key(key: str) -> tuple[int, int]:
@@ -80,6 +81,7 @@ class RegionInfo:
     land_neighbors: set[str] = field(default_factory=set)
     sea_neighbors: set[str] = field(default_factory=set)
     river_neighbors: set[str] = field(default_factory=set)
+    touches_water: bool = False
     has_interior_river: bool = False
     centroid_q: float = 0.0
     centroid_r: float = 0.0
@@ -127,7 +129,7 @@ def load_map_graph(path: str | Path, num_factions: int = 4) -> MapGraph:
         q, r = parse_hex_key(key)
         terrain = hex_data.get("terrain", "plains")
         region = hex_data.get("region")
-        if terrain in WATER_TERRAINS:
+        if terrain in WATER_TERRAINS or (not region and terrain in UNREGIONED_MARITIME_TERRAINS):
             ocean_coords.add((q, r))
         if region:
             region_hexes[region].append(hex_data)
@@ -168,11 +170,9 @@ def load_map_graph(path: str | Path, num_factions: int = 4) -> MapGraph:
             if nb_region and nb_region != region_id:
                 region_neighbors[region_id].add(nb_region)
 
-    # Sea links via BFS through ocean
-    coast_tag_regions: set[str] = {
-        rid for rid, hlist in region_hexes.items()
-        if any(h.get("terrain") in {"coast", "lake", "mediterranean"} for h in hlist)
-    }
+    # Sea links via BFS through water. A region may touch water even when its
+    # painted land hexes are not explicitly tagged "coast".
+    water_adjacent_regions: set[str] = set()
     sea_links_set: set[tuple[str, str]] = set()
     if ocean_coords:
         remaining = set(ocean_coords)
@@ -190,8 +190,8 @@ def load_map_graph(path: str | Path, num_factions: int = 4) -> MapGraph:
                         queue.append(nb)
                     elif nb in hex_to_region:
                         rid = hex_to_region[nb]
-                        if rid in coast_tag_regions:
-                            reachable.add(rid)
+                        water_adjacent_regions.add(rid)
+                        reachable.add(rid)
             remaining -= visited
             reachable_list = sorted(reachable)
             for i, ra in enumerate(reachable_list):
@@ -244,6 +244,7 @@ def load_map_graph(path: str | Path, num_factions: int = 4) -> MapGraph:
             land_neighbors=set(region_neighbors[rid]),
             sea_neighbors=set(sea_neighbors_map[rid]),
             river_neighbors=set(river_neighbors_map[rid]),
+            touches_water=rid in water_adjacent_regions,
             has_interior_river=rid in regions_with_interior_rivers,
             centroid_q=cq,
             centroid_r=cr,

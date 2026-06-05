@@ -374,6 +374,8 @@ def translate(wwmap_path: str | Path, num_factions: int = 4) -> dict:
         # Interior rivers add riverland tag
         if region.has_interior_river and "riverland" not in tags:
             tags = _sorted_terrain_tags(["riverland"] + tags)
+        if region.touches_water and "coast" not in tags:
+            tags = _sorted_terrain_tags(["coast"] + tags)
 
         meta = region.meta
         faction = meta.get("faction")

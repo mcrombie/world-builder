@@ -135,6 +135,63 @@ class ClashvergenceExportTests(unittest.TestCase):
         self.assertEqual(north["name_metadata"]["authored_name"], "North")
         self.assertEqual(north["name_metadata"]["source"], "world_builder")
 
+    def test_export_infers_sea_links_from_ocean_adjacency(self):
+        tmp_dir = ROOT / ".tmp_clashvergence_export_tests"
+        tmp_dir.mkdir(exist_ok=True)
+        map_path = tmp_dir / "water_gap.azmap"
+        _write_test_map(
+            map_path,
+            regions={
+                "West": {"name": "West", "color": "#aaaaaa"},
+                "East": {"name": "East", "color": "#bbbbbb"},
+                "Inland": {"name": "Inland", "color": "#cccccc"},
+            },
+            hexes={
+                "-1,0": {"q": -1, "r": 0, "terrain": "forest", "region": "Inland"},
+                "0,0": {"q": 0, "r": 0, "terrain": "grassland", "region": "West"},
+                "1,0": {"q": 1, "r": 0, "terrain": "ocean"},
+                "2,0": {"q": 2, "r": 0, "terrain": "hills", "region": "East"},
+            },
+        )
+        try:
+            map_definition = translate(map_path, num_factions=2)
+        finally:
+            shutil.rmtree(tmp_dir)
+
+        sea_links = {tuple(link) for link in map_definition["sea_links"]}
+        self.assertIn(("East", "West"), sea_links)
+        self.assertIn("coast", map_definition["regions"]["West"]["terrain_tags"])
+        self.assertIn("coast", map_definition["regions"]["East"]["terrain_tags"])
+        self.assertNotIn("coast", map_definition["regions"]["Inland"]["terrain_tags"])
+
+    def test_export_treats_unregioned_coast_as_maritime_water(self):
+        tmp_dir = ROOT / ".tmp_clashvergence_export_tests"
+        tmp_dir.mkdir(exist_ok=True)
+        map_path = tmp_dir / "coastal_water_gap.azmap"
+        _write_test_map(
+            map_path,
+            regions={
+                "Mainland": {"name": "Mainland", "color": "#aaaaaa"},
+                "Island": {"name": "Island", "color": "#bbbbbb"},
+            },
+            hexes={
+                "0,0": {"q": 0, "r": 0, "terrain": "grassland", "region": "Mainland"},
+                "1,0": {"q": 1, "r": 0, "terrain": "coast"},
+                "2,0": {"q": 2, "r": 0, "terrain": "ocean"},
+                "3,0": {"q": 3, "r": 0, "terrain": "coast"},
+                "4,0": {"q": 4, "r": 0, "terrain": "forest", "region": "Island"},
+            },
+        )
+        try:
+            map_definition = translate(map_path, num_factions=2)
+        finally:
+            shutil.rmtree(tmp_dir)
+
+        sea_links = {tuple(link) for link in map_definition["sea_links"]}
+        self.assertIn(("Island", "Mainland"), sea_links)
+        self.assertIn("coast", map_definition["regions"]["Mainland"]["terrain_tags"])
+        self.assertIn("coast", map_definition["regions"]["Island"]["terrain_tags"])
+
     def test_export_normalizes_legacy_hex_climate(self):
         tmp_dir = ROOT / ".tmp_clashvergence_export_tests"
         tmp_dir.mkdir(exist_ok=True)
