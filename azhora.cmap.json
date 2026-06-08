@@ -1,1206 +1,750 @@
 {
   "description": "world-builder map: Azhora",
-  "num_factions": 4,
+  "num_factions": 9,
   "faction_names": [],
   "sea_links": [
     [
-      "Cape Heth",
+      "Acor Wetlands",
+      "Cape Thalmagar"
+    ],
+    [
+      "Acor Wetlands",
       "Narcosh"
     ],
     [
-      "Alezhor",
-      "Southern Ascarth"
-    ],
-    [
-      "Alezhor",
-      "Babon"
-    ],
-    [
-      "Gala",
-      "Trogo"
-    ],
-    [
-      "Southern Ascarth",
-      "West Suval"
-    ],
-    [
-      "Drent",
-      "Narcosh"
-    ],
-    [
-      "Legemum",
-      "South Oremindi Mountains"
-    ],
-    [
-      "Gala",
-      "Southern Ascarth"
-    ],
-    [
-      "Aurumlis Archipeligo",
-      "Gala"
-    ],
-    [
-      "Marosh",
-      "Narcosh"
-    ],
-    [
-      "Narcosh",
-      "Trogo"
-    ],
-    [
-      "Babon",
-      "West Izol"
-    ],
-    [
-      "Alezhor",
-      "Legemum"
-    ],
-    [
-      "Alezhor",
-      "West Suval"
-    ],
-    [
-      "Eer",
-      "West Pyros"
-    ],
-    [
-      "Alezhor",
-      "East Pyros"
-    ],
-    [
-      "Narcosh",
-      "Southern Ascarth"
-    ],
-    [
-      "Babon",
-      "Iscare Archipeligo"
-    ],
-    [
-      "Gala",
-      "Legemum"
-    ],
-    [
-      "Eer",
-      "Marosh"
-    ],
-    [
-      "Gala",
-      "West Suval"
-    ],
-    [
-      "East Suval",
-      "South Oremindi Mountains"
-    ],
-    [
-      "East Suval",
-      "West Pyros"
-    ],
-    [
-      "East Suval",
-      "Marosh"
-    ],
-    [
-      "Ganesh Plain",
-      "Northern Ascarth"
-    ],
-    [
-      "Babon",
-      "Eer"
+      "Acor Wetlands",
+      "West Endevor"
     ],
     [
       "Alezhor",
       "Cape Heth"
     ],
     [
-      "Eer",
-      "South Suval"
+      "Alezhor",
+      "Ganesh Desert"
     ],
     [
-      "Narcosh",
-      "West Suval"
+      "Alezhor",
+      "South Ibenal"
     ],
     [
-      "Aurumlis Archipeligo",
-      "Iscare Archipeligo"
+      "Amod",
+      "Drent"
     ],
     [
-      "Cape Heth",
-      "Marosh"
+      "Amod",
+      "Elagos"
     ],
     [
-      "Eer",
-      "Ganesh Plain"
-    ],
-    [
-      "East Suval",
-      "South Suval"
-    ],
-    [
-      "South Suval",
-      "West Izol"
-    ],
-    [
-      "Eer",
-      "West Izol"
-    ],
-    [
-      "Aurumlis Archipeligo",
-      "Eer"
-    ],
-    [
-      "Cape Heth",
-      "South Suval"
-    ],
-    [
-      "East Izol",
-      "South Oremindi Mountains"
-    ],
-    [
-      "Ganesh Plain",
-      "Selemi"
-    ],
-    [
-      "Eer",
-      "Iscare Archipeligo"
-    ],
-    [
-      "West Izol",
-      "West Suval"
-    ],
-    [
-      "Cape Heth",
-      "Ganesh Plain"
-    ],
-    [
-      "Drent",
-      "South Suval"
-    ],
-    [
-      "Babon",
-      "Trogo"
-    ],
-    [
-      "Marosh",
-      "South Suval"
-    ],
-    [
-      "Trogo",
-      "West Izol"
-    ],
-    [
-      "Hama",
-      "Narcosh"
-    ],
-    [
-      "Cape Heth",
-      "West Izol"
-    ],
-    [
-      "Drent",
-      "Ganesh Plain"
-    ],
-    [
-      "Babon",
-      "Southern Ascarth"
-    ],
-    [
-      "Cape Heth",
-      "Iscare Archipeligo"
-    ],
-    [
-      "Drent",
-      "West Izol"
-    ],
-    [
-      "East Izol",
-      "Hama"
-    ],
-    [
-      "Eer",
-      "Northern Ascarth"
-    ],
-    [
-      "Marosh",
-      "West Izol"
-    ],
-    [
-      "Legemum",
-      "Narcosh"
-    ],
-    [
-      "Aurumlis Archipeligo",
-      "Trogo"
-    ],
-    [
-      "Northern Ascarth",
-      "South Oremindi Mountains"
-    ],
-    [
-      "Drent",
-      "Iscare Archipeligo"
-    ],
-    [
-      "Northern Ascarth",
-      "West Pyros"
-    ],
-    [
-      "East Suval",
-      "Northern Ascarth"
-    ],
-    [
-      "Cape Heth",
-      "Eer"
-    ],
-    [
-      "Aurumlis Archipeligo",
-      "Southern Ascarth"
+      "Amod",
+      "Pueth"
     ],
     [
       "Aurumlis Archipeligo",
       "Babon"
     ],
     [
-      "Babon",
-      "Legemum"
-    ],
-    [
-      "Babon",
-      "West Suval"
-    ],
-    [
-      "Babon",
-      "East Pyros"
-    ],
-    [
-      "South Suval",
-      "Trogo"
-    ],
-    [
-      "Drent",
-      "Eer"
-    ],
-    [
-      "Alezhor",
-      "East Izol"
-    ],
-    [
-      "Cape Heth",
-      "Northern Ascarth"
-    ],
-    [
-      "Iscare Archipeligo",
-      "South Oremindi Mountains"
-    ],
-    [
-      "Iscare Archipeligo",
-      "West Pyros"
-    ],
-    [
-      "East Suval",
-      "Narcosh"
-    ],
-    [
-      "Eer",
-      "Selemi"
-    ],
-    [
-      "Iscare Archipeligo",
-      "Marosh"
-    ],
-    [
-      "Aurumlis Archipeligo",
-      "Legemum"
-    ],
-    [
-      "Aurumlis Archipeligo",
-      "West Suval"
-    ],
-    [
-      "Babon",
-      "Cape Heth"
-    ],
-    [
-      "Hama",
-      "West Pyros"
-    ],
-    [
       "Aurumlis Archipeligo",
       "East Pyros"
     ],
     [
-      "Marosh",
-      "Northern Ascarth"
-    ],
-    [
-      "East Suval",
-      "Selemi"
-    ],
-    [
-      "Hama",
-      "Marosh"
-    ],
-    [
-      "East Pyros",
-      "Hama"
-    ],
-    [
-      "Cape Heth",
-      "Trogo"
-    ],
-    [
-      "Iscare Archipeligo",
-      "South Suval"
-    ],
-    [
-      "East Izol",
-      "East Suval"
-    ],
-    [
-      "Cape Heth",
-      "Selemi"
-    ],
-    [
-      "Ganesh Plain",
-      "West Izol"
-    ],
-    [
-      "Legemum",
-      "West Pyros"
-    ],
-    [
-      "South Suval",
-      "West Suval"
+      "Aurumlis Archipeligo",
+      "Gala"
     ],
     [
       "Aurumlis Archipeligo",
-      "Cape Heth"
-    ],
-    [
-      "Drent",
-      "Trogo"
-    ],
-    [
-      "Eer",
-      "West Suval"
-    ],
-    [
-      "Ganesh Plain",
-      "Iscare Archipeligo"
-    ],
-    [
-      "Drent",
-      "Selemi"
-    ],
-    [
-      "Hama",
-      "South Suval"
-    ],
-    [
-      "Legemum",
-      "Marosh"
-    ],
-    [
-      "Marosh",
-      "Selemi"
-    ],
-    [
-      "Drent",
-      "Southern Ascarth"
-    ],
-    [
-      "East Izol",
-      "Narcosh"
-    ],
-    [
-      "Selemi",
-      "South Oremindi Mountains"
-    ],
-    [
-      "Selemi",
-      "West Pyros"
-    ],
-    [
-      "Alezhor",
-      "Hama"
-    ],
-    [
-      "Hama",
-      "West Izol"
-    ],
-    [
-      "Eer",
-      "Gala"
-    ],
-    [
-      "Legemum",
-      "South Suval"
-    ],
-    [
-      "Trogo",
-      "West Suval"
-    ],
-    [
-      "Cape Heth",
-      "West Suval"
-    ],
-    [
-      "Cape Heth",
-      "East Pyros"
-    ],
-    [
-      "Gala",
-      "Hama"
-    ],
-    [
-      "Hama",
-      "Iscare Archipeligo"
-    ],
-    [
-      "East Suval",
-      "Gala"
-    ],
-    [
-      "Drent",
-      "West Suval"
-    ],
-    [
-      "Legemum",
-      "West Izol"
-    ],
-    [
-      "Drent",
-      "East Pyros"
-    ],
-    [
-      "Marosh",
-      "West Suval"
-    ],
-    [
-      "Alezhor",
-      "Drent"
-    ],
-    [
-      "Cape Heth",
-      "Gala"
-    ],
-    [
-      "East Pyros",
-      "East Suval"
-    ],
-    [
-      "Iscare Archipeligo",
-      "Northern Ascarth"
-    ],
-    [
-      "Drent",
-      "Gala"
-    ],
-    [
-      "East Suval",
       "Ganesh Plain"
     ],
     [
-      "Hama",
-      "Northern Ascarth"
+      "Aurumlis Archipeligo",
+      "Legemum"
     ],
     [
-      "Babon",
-      "East Izol"
-    ],
-    [
-      "Ganesh Plain",
-      "Trogo"
-    ],
-    [
-      "East Izol",
-      "West Pyros"
-    ],
-    [
-      "East Suval",
-      "West Izol"
-    ],
-    [
-      "Iscare Archipeligo",
-      "Narcosh"
-    ],
-    [
-      "West Pyros",
-      "West Suval"
-    ],
-    [
-      "Ganesh Plain",
-      "Southern Ascarth"
-    ],
-    [
-      "East Izol",
+      "Aurumlis Archipeligo",
       "Marosh"
     ],
     [
-      "Alezhor",
+      "Aurumlis Archipeligo",
+      "Northern Ascarth"
+    ],
+    [
+      "Aurumlis Archipeligo",
+      "Selemi"
+    ],
+    [
+      "Aurumlis Archipeligo",
+      "Southern Ascarth"
+    ],
+    [
+      "Aurumlis Archipeligo",
+      "Trogo"
+    ],
+    [
+      "Aurumlis Archipeligo",
+      "West Pyros"
+    ],
+    [
+      "Azhor Stones",
+      "East Izol"
+    ],
+    [
+      "Azhor Stones",
+      "Iscare Archipeligo"
+    ],
+    [
+      "Azhor Stones",
+      "Selemi"
+    ],
+    [
+      "Azhor Stones",
+      "Southern Ascarth"
+    ],
+    [
+      "Azhor Stones",
+      "West Izol"
+    ],
+    [
+      "Babon",
+      "Hama"
+    ],
+    [
+      "Babon",
+      "Legemum"
+    ],
+    [
+      "Babon",
+      "Marosh"
+    ],
+    [
+      "Babon",
+      "Selemi"
+    ],
+    [
+      "Babon",
+      "South Meroshe Desert"
+    ],
+    [
+      "Babon",
+      "Southern Ascarth"
+    ],
+    [
+      "Babon",
+      "Trogo"
+    ],
+    [
+      "Cape Heth",
+      "Dinelv Highlands"
+    ],
+    [
+      "Cape Heth",
+      "Ganesh Desert"
+    ],
+    [
+      "Cape Heth",
+      "Hama"
+    ],
+    [
+      "Cape Heth",
+      "South Ibenal"
+    ],
+    [
+      "Cape Heth",
+      "West Meroshe Desert"
+    ],
+    [
+      "Cape Thalmagar",
+      "Cudon"
+    ],
+    [
+      "Cape Thalmagar",
+      "Narcosh"
+    ],
+    [
+      "Cape Thalmagar",
+      "North Oreminidi Mountains"
+    ],
+    [
+      "Cape Thalmagar",
+      "West Endevor"
+    ],
+    [
+      "Cape Thalmagar",
+      "West Oremindi Mountains"
+    ],
+    [
+      "Cold Stones",
+      "East Witherst"
+    ],
+    [
+      "Cold Stones",
+      "West Witherst"
+    ],
+    [
+      "Cudon",
+      "North Oreminidi Mountains"
+    ],
+    [
+      "Cudon",
+      "West Oremindi Mountains"
+    ],
+    [
+      "Dinelv Highlands",
+      "Hama"
+    ],
+    [
+      "Dinelv Highlands",
+      "West Meroshe Desert"
+    ],
+    [
+      "Drent",
       "East Suval"
+    ],
+    [
+      "Drent",
+      "Elagos"
+    ],
+    [
+      "Drent",
+      "Feradom"
+    ],
+    [
+      "Drent",
+      "Luscia"
+    ],
+    [
+      "Drent",
+      "Peblos"
+    ],
+    [
+      "Drent",
+      "Pueth"
+    ],
+    [
+      "Drent",
+      "South Suval"
+    ],
+    [
+      "East Acordwood",
+      "East Lotharn Mountains"
+    ],
+    [
+      "East Acordwood",
+      "East Mithala"
+    ],
+    [
+      "East Acordwood",
+      "Feradom"
+    ],
+    [
+      "East Acordwood",
+      "South Acordwood"
+    ],
+    [
+      "East Acordwood",
+      "South Lond"
+    ],
+    [
+      "East Acordwood",
+      "South Mithala"
+    ],
+    [
+      "East Acordwood",
+      "West Ganun"
+    ],
+    [
+      "East Ganun",
+      "East Inseld"
+    ],
+    [
+      "East Ganun",
+      "South Ganun"
+    ],
+    [
+      "East Ganun",
+      "South Riesov"
+    ],
+    [
+      "East Ganun",
+      "West Inseld"
+    ],
+    [
+      "East Ibenwood",
+      "Nether Desert"
+    ],
+    [
+      "East Ibenwood",
+      "Nethereum"
+    ],
+    [
+      "East Inseld",
+      "South Ganun"
+    ],
+    [
+      "East Inseld",
+      "South Riesov"
+    ],
+    [
+      "East Inseld",
+      "West Inseld"
+    ],
+    [
+      "East Izol",
+      "East Suval"
+    ],
+    [
+      "East Izol",
+      "Iscare Archipeligo"
+    ],
+    [
+      "East Izol",
+      "South Suval"
+    ],
+    [
+      "East Izol",
+      "West Izol"
+    ],
+    [
+      "East Lotharn Mountains",
+      "East Mithala"
+    ],
+    [
+      "East Lotharn Mountains",
+      "Feradom"
+    ],
+    [
+      "East Lotharn Mountains",
+      "South Acordwood"
+    ],
+    [
+      "East Lotharn Mountains",
+      "South Mithala"
+    ],
+    [
+      "East Mithala",
+      "Feradom"
+    ],
+    [
+      "East Mithala",
+      "South Acordwood"
+    ],
+    [
+      "East Mithala",
+      "South Mithala"
+    ],
+    [
+      "East Pyros",
+      "Ganesh Plain"
+    ],
+    [
+      "East Pyros",
+      "Legemum"
+    ],
+    [
+      "East Pyros",
+      "Marosh"
+    ],
+    [
+      "East Pyros",
+      "West Pyros"
     ],
     [
       "East Suval",
       "Iscare Archipeligo"
     ],
     [
-      "Legemum",
+      "East Suval",
+      "Luscia"
+    ],
+    [
+      "East Suval",
+      "Peblos"
+    ],
+    [
+      "East Suval",
+      "Pueth"
+    ],
+    [
+      "East Suval",
+      "South Suval"
+    ],
+    [
+      "East Suval",
+      "West Izol"
+    ],
+    [
+      "East Witherst",
+      "North Riesov"
+    ],
+    [
+      "East Witherst",
+      "South Riesov"
+    ],
+    [
+      "East Witherst",
+      "West Witherst"
+    ],
+    [
+      "Eer",
+      "Iscare Archipeligo"
+    ],
+    [
+      "Eer",
+      "Northern Ascarth"
+    ],
+    [
+      "Eer",
+      "South Suval"
+    ],
+    [
+      "Eer",
+      "Southern Ascarth"
+    ],
+    [
+      "Eer",
+      "West Suval"
+    ],
+    [
+      "Elagos",
+      "Pueth"
+    ],
+    [
+      "Feradom",
+      "Peblos"
+    ],
+    [
+      "Feradom",
+      "Pueth"
+    ],
+    [
+      "Feradom",
+      "South Acordwood"
+    ],
+    [
+      "Feradom",
+      "South Mithala"
+    ],
+    [
+      "Gala",
+      "Legemum"
+    ],
+    [
+      "Gala",
+      "Northern Ascarth"
+    ],
+    [
+      "Gala",
+      "Southern Ascarth"
+    ],
+    [
+      "Ganesh Plain",
+      "Legemum"
+    ],
+    [
+      "Ganesh Plain",
+      "Marosh"
+    ],
+    [
+      "Ganesh Plain",
+      "West Pyros"
+    ],
+    [
+      "Hama",
+      "North Scythe"
+    ],
+    [
+      "Hama",
+      "South Meroshe Desert"
+    ],
+    [
+      "Hama",
+      "Trogo"
+    ],
+    [
+      "Hama",
+      "West Meroshe Desert"
+    ],
+    [
+      "Iscare Archipeligo",
       "Northern Ascarth"
     ],
     [
       "Iscare Archipeligo",
       "Selemi"
+    ],
+    [
+      "Iscare Archipeligo",
+      "South Suval"
+    ],
+    [
+      "Iscare Archipeligo",
+      "Southern Ascarth"
+    ],
+    [
+      "Iscare Archipeligo",
+      "West Izol"
+    ],
+    [
+      "Iscare Archipeligo",
+      "West Suval"
+    ],
+    [
+      "Legemum",
+      "Marosh"
+    ],
+    [
+      "Legemum",
+      "Northern Ascarth"
+    ],
+    [
+      "Legemum",
+      "Southern Ascarth"
+    ],
+    [
+      "Legemum",
+      "Trogo"
+    ],
+    [
+      "Legemum",
+      "West Pyros"
+    ],
+    [
+      "Luscia",
+      "Peblos"
+    ],
+    [
+      "Luscia",
+      "Pueth"
+    ],
+    [
+      "Luscia",
+      "South Suval"
+    ],
+    [
+      "Marosh",
+      "Trogo"
+    ],
+    [
+      "Marosh",
+      "West Pyros"
+    ],
+    [
+      "Narcosh",
+      "West Endevor"
+    ],
+    [
+      "Nether Desert",
+      "Nethereum"
+    ],
+    [
+      "North Acorwood",
+      "South Endevor"
+    ],
+    [
+      "North Acorwood",
+      "West Acorwood"
+    ],
+    [
+      "North Endevor",
+      "Nothwood"
+    ],
+    [
+      "North Endevor",
+      "South Nonoth"
+    ],
+    [
+      "North Endevor",
+      "West Endevor"
+    ],
+    [
+      "North Ibenal",
+      "South Ibenal"
+    ],
+    [
+      "North Ibenal",
+      "South Oremindi Mountains"
+    ],
+    [
+      "North Ibenal",
+      "West Oremindi Mountains"
+    ],
+    [
+      "North Ibenwood",
+      "South Oremindi Mountains"
+    ],
+    [
+      "North Ibenwood",
+      "Yunethre"
+    ],
+    [
+      "North Nonoth",
+      "North Orsa"
+    ],
+    [
+      "North Nonoth",
+      "Nothwood"
+    ],
+    [
+      "North Nonoth",
+      "South Nonoth"
+    ],
+    [
+      "North Nonoth",
+      "South Orsa"
+    ],
+    [
+      "North Oreminidi Mountains",
+      "West Oremindi Mountains"
+    ],
+    [
+      "North Orsa",
+      "North Thoth"
+    ],
+    [
+      "North Orsa",
+      "South Nonoth"
+    ],
+    [
+      "North Orsa",
+      "South Orsa"
+    ],
+    [
+      "North Orsa",
+      "West Witherst"
+    ],
+    [
+      "North Riesov",
+      "South Riesov"
+    ],
+    [
+      "North Scythe",
+      "South Meroshe Desert"
+    ],
+    [
+      "North Scythe",
+      "South Scythe"
+    ],
+    [
+      "North Scythe",
+      "Trogo"
+    ],
+    [
+      "North Thoth",
+      "West Witherst"
+    ],
+    [
+      "Northern Ascarth",
+      "Selemi"
+    ],
+    [
+      "Northern Ascarth",
+      "Southern Ascarth"
+    ],
+    [
+      "Northern Ascarth",
+      "West Suval"
+    ],
+    [
+      "Nothwood",
+      "South Nonoth"
+    ],
+    [
+      "Nothwood",
+      "South Orsa"
+    ],
+    [
+      "Nothwood",
+      "West Endevor"
+    ],
+    [
+      "Peblos",
+      "Pueth"
+    ],
+    [
+      "Peblos",
+      "South Suval"
+    ],
+    [
+      "Selemi",
+      "Southern Ascarth"
+    ],
+    [
+      "Selemi",
+      "West Izol"
+    ],
+    [
+      "South Acordwood",
+      "South Mithala"
+    ],
+    [
+      "South Endevor",
+      "West Acorwood"
+    ],
+    [
+      "South Ganun",
+      "South Lond"
+    ],
+    [
+      "South Ganun",
+      "South Riesov"
+    ],
+    [
+      "South Ganun",
+      "West Ganun"
+    ],
+    [
+      "South Ganun",
+      "West Inseld"
+    ],
+    [
+      "South Lond",
+      "West Ganun"
+    ],
+    [
+      "South Meroshe Desert",
+      "Trogo"
+    ],
+    [
+      "South Nonoth",
+      "South Orsa"
+    ],
+    [
+      "South Nonoth",
+      "West Endevor"
     ],
     [
       "South Oremindi Mountains",
-      "West Pyros"
+      "West Oremindi Mountains"
     ],
     [
-      "Aurumlis Archipeligo",
-      "East Izol"
-    ],
-    [
-      "East Izol",
-      "South Suval"
-    ],
-    [
-      "Hama",
-      "Selemi"
-    ],
-    [
-      "Alezhor",
-      "Narcosh"
-    ],
-    [
-      "East Suval",
-      "Eer"
-    ],
-    [
-      "Ganesh Plain",
-      "Legemum"
-    ],
-    [
-      "Ganesh Plain",
-      "West Suval"
-    ],
-    [
-      "East Izol",
-      "Ganesh Plain"
-    ],
-    [
-      "East Izol",
-      "West Izol"
-    ],
-    [
-      "Legemum",
-      "Selemi"
-    ],
-    [
-      "East Pyros",
-      "South Oremindi Mountains"
-    ],
-    [
-      "East Pyros",
-      "West Pyros"
-    ],
-    [
-      "Babon",
-      "Hama"
-    ],
-    [
-      "East Izol",
-      "Iscare Archipeligo"
-    ],
-    [
-      "Hama",
-      "West Suval"
-    ],
-    [
-      "East Pyros",
-      "Marosh"
-    ],
-    [
-      "Eer",
-      "Trogo"
-    ],
-    [
-      "Northern Ascarth",
-      "South Suval"
+      "South Oremindi Mountains",
+      "Yunethre"
     ],
     [
       "South Suval",
       "Southern Ascarth"
     ],
     [
+      "South Suval",
+      "West Izol"
+    ],
+    [
+      "South Suval",
+      "West Suval"
+    ],
+    [
       "Southern Ascarth",
-      "West Pyros"
-    ],
-    [
-      "Eer",
-      "Southern Ascarth"
-    ],
-    [
-      "East Suval",
-      "Trogo"
-    ],
-    [
-      "East Pyros",
-      "South Suval"
-    ],
-    [
-      "Aurumlis Archipeligo",
-      "Hama"
-    ],
-    [
-      "Legemum",
-      "West Suval"
-    ],
-    [
-      "Babon",
-      "Drent"
-    ],
-    [
-      "East Suval",
-      "Southern Ascarth"
-    ],
-    [
-      "Alezhor",
-      "South Oremindi Mountains"
-    ],
-    [
-      "Alezhor",
-      "West Pyros"
-    ],
-    [
-      "East Izol",
-      "Northern Ascarth"
-    ],
-    [
-      "Northern Ascarth",
       "West Izol"
     ],
     [
-      "Alezhor",
-      "Marosh"
-    ],
-    [
-      "Gala",
-      "South Oremindi Mountains"
-    ],
-    [
-      "Cape Heth",
-      "Southern Ascarth"
-    ],
-    [
-      "Eer",
-      "Legemum"
-    ],
-    [
-      "Gala",
-      "West Pyros"
-    ],
-    [
-      "Marosh",
-      "Trogo"
-    ],
-    [
-      "Gala",
-      "Marosh"
-    ],
-    [
-      "Iscare Archipeligo",
-      "West Izol"
-    ],
-    [
-      "Aurumlis Archipeligo",
-      "Drent"
-    ],
-    [
-      "East Suval",
-      "Legemum"
-    ],
-    [
-      "East Suval",
+      "Southern Ascarth",
       "West Suval"
     ],
     [
-      "Marosh",
-      "Southern Ascarth"
-    ],
-    [
-      "Alezhor",
-      "South Suval"
-    ],
-    [
-      "Babon",
-      "East Suval"
-    ],
-    [
-      "Narcosh",
-      "South Oremindi Mountains"
-    ],
-    [
-      "Narcosh",
-      "West Pyros"
-    ],
-    [
-      "East Izol",
-      "Selemi"
-    ],
-    [
-      "Cape Heth",
-      "Legemum"
-    ],
-    [
-      "Gala",
-      "South Suval"
-    ],
-    [
-      "Alezhor",
-      "Aurumlis Archipeligo"
-    ],
-    [
-      "Selemi",
-      "South Suval"
-    ],
-    [
-      "Babon",
-      "Narcosh"
-    ],
-    [
-      "Drent",
-      "Legemum"
-    ],
-    [
-      "East Pyros",
-      "Northern Ascarth"
-    ],
-    [
-      "Aurumlis Archipeligo",
-      "East Suval"
-    ],
-    [
-      "Narcosh",
-      "South Suval"
+      "West Ganun",
+      "West Inseld"
     ],
     [
       "West Izol",
-      "West Pyros"
-    ],
-    [
-      "Selemi",
-      "West Izol"
-    ],
-    [
-      "East Izol",
-      "West Suval"
-    ],
-    [
-      "Northern Ascarth",
-      "Trogo"
-    ],
-    [
-      "Aurumlis Archipeligo",
-      "Narcosh"
-    ],
-    [
-      "Northern Ascarth",
-      "Selemi"
-    ],
-    [
-      "East Pyros",
-      "Narcosh"
-    ],
-    [
-      "Northern Ascarth",
-      "Southern Ascarth"
-    ],
-    [
-      "Alezhor",
-      "Northern Ascarth"
-    ],
-    [
-      "East Izol",
-      "Gala"
-    ],
-    [
-      "East Pyros",
-      "Selemi"
-    ],
-    [
-      "Iscare Archipeligo",
-      "Trogo"
-    ],
-    [
-      "Gala",
-      "Northern Ascarth"
-    ],
-    [
-      "Iscare Archipeligo",
-      "Southern Ascarth"
-    ],
-    [
-      "Hama",
-      "Trogo"
-    ],
-    [
-      "Babon",
-      "South Oremindi Mountains"
-    ],
-    [
-      "Babon",
-      "West Pyros"
-    ],
-    [
-      "Northern Ascarth",
-      "West Suval"
-    ],
-    [
-      "Babon",
-      "Marosh"
-    ],
-    [
-      "Hama",
-      "Southern Ascarth"
-    ],
-    [
-      "Drent",
-      "East Suval"
-    ],
-    [
-      "Gala",
-      "Narcosh"
-    ],
-    [
-      "Narcosh",
-      "Northern Ascarth"
-    ],
-    [
-      "Ganesh Plain",
-      "Hama"
-    ],
-    [
-      "Alezhor",
-      "Selemi"
-    ],
-    [
-      "Legemum",
-      "Trogo"
-    ],
-    [
-      "South Oremindi Mountains",
-      "South Suval"
-    ],
-    [
-      "Iscare Archipeligo",
-      "Legemum"
-    ],
-    [
-      "Aurumlis Archipeligo",
-      "West Pyros"
-    ],
-    [
-      "Aurumlis Archipeligo",
-      "South Oremindi Mountains"
-    ],
-    [
-      "Babon",
-      "South Suval"
-    ],
-    [
-      "Gala",
-      "Selemi"
-    ],
-    [
-      "Iscare Archipeligo",
-      "West Suval"
-    ],
-    [
-      "Legemum",
-      "Southern Ascarth"
-    ],
-    [
-      "Selemi",
-      "Trogo"
-    ],
-    [
-      "Aurumlis Archipeligo",
-      "Marosh"
-    ],
-    [
-      "Hama",
-      "Legemum"
-    ],
-    [
-      "Babon",
-      "Ganesh Plain"
-    ],
-    [
-      "East Pyros",
-      "Gala"
-    ],
-    [
-      "South Oremindi Mountains",
-      "West Izol"
-    ],
-    [
-      "Selemi",
-      "Southern Ascarth"
-    ],
-    [
-      "South Suval",
-      "West Pyros"
-    ],
-    [
-      "Cape Heth",
-      "East Izol"
-    ],
-    [
-      "East Izol",
-      "Eer"
-    ],
-    [
-      "Narcosh",
-      "Selemi"
-    ],
-    [
-      "Aurumlis Archipeligo",
-      "South Suval"
-    ],
-    [
-      "Eer",
-      "South Oremindi Mountains"
-    ],
-    [
-      "Drent",
-      "East Izol"
-    ],
-    [
-      "Aurumlis Archipeligo",
-      "Ganesh Plain"
-    ],
-    [
-      "East Pyros",
-      "Ganesh Plain"
-    ],
-    [
-      "Selemi",
-      "West Suval"
-    ],
-    [
-      "Alezhor",
-      "Gala"
-    ],
-    [
-      "Aurumlis Archipeligo",
-      "West Izol"
-    ],
-    [
-      "Trogo",
-      "West Pyros"
-    ],
-    [
-      "East Pyros",
-      "West Izol"
-    ],
-    [
-      "Cape Heth",
-      "South Oremindi Mountains"
-    ],
-    [
-      "Cape Heth",
-      "West Pyros"
-    ],
-    [
-      "Eer",
-      "Hama"
-    ],
-    [
-      "Southern Ascarth",
-      "West Izol"
-    ],
-    [
-      "East Pyros",
-      "Iscare Archipeligo"
-    ],
-    [
-      "Babon",
-      "Northern Ascarth"
-    ],
-    [
-      "Drent",
-      "South Oremindi Mountains"
-    ],
-    [
-      "Drent",
-      "West Pyros"
-    ],
-    [
-      "Marosh",
-      "South Oremindi Mountains"
-    ],
-    [
-      "East Izol",
-      "Trogo"
-    ],
-    [
-      "Marosh",
-      "West Pyros"
-    ],
-    [
-      "East Suval",
-      "Hama"
-    ],
-    [
-      "Drent",
-      "Marosh"
-    ],
-    [
-      "Alezhor",
-      "Ganesh Plain"
-    ],
-    [
-      "Ganesh Plain",
-      "Narcosh"
-    ],
-    [
-      "East Izol",
-      "Southern Ascarth"
-    ],
-    [
-      "East Pyros",
-      "Eer"
-    ],
-    [
-      "Gala",
-      "Ganesh Plain"
-    ],
-    [
-      "Alezhor",
-      "West Izol"
-    ],
-    [
-      "Cape Heth",
-      "Hama"
-    ],
-    [
-      "Aurumlis Archipeligo",
-      "Northern Ascarth"
-    ],
-    [
-      "South Oremindi Mountains",
-      "Trogo"
-    ],
-    [
-      "Gala",
-      "West Izol"
-    ],
-    [
-      "Alezhor",
-      "Iscare Archipeligo"
-    ],
-    [
-      "Drent",
-      "Hama"
-    ],
-    [
-      "South Oremindi Mountains",
-      "Southern Ascarth"
-    ],
-    [
-      "Babon",
-      "Selemi"
-    ],
-    [
-      "East Izol",
-      "Legemum"
-    ],
-    [
-      "Gala",
-      "Iscare Archipeligo"
-    ],
-    [
-      "East Izol",
-      "East Pyros"
-    ],
-    [
-      "Hama",
-      "South Oremindi Mountains"
-    ],
-    [
-      "Cape Heth",
-      "Drent"
-    ],
-    [
-      "Alezhor",
-      "Eer"
-    ],
-    [
-      "Narcosh",
-      "West Izol"
-    ],
-    [
-      "East Pyros",
-      "Trogo"
-    ],
-    [
-      "Aurumlis Archipeligo",
-      "Selemi"
-    ],
-    [
-      "South Oremindi Mountains",
-      "West Suval"
-    ],
-    [
-      "Ganesh Plain",
-      "South Oremindi Mountains"
-    ],
-    [
-      "Ganesh Plain",
-      "West Pyros"
-    ],
-    [
-      "East Pyros",
-      "Southern Ascarth"
-    ],
-    [
-      "Southern Ascarth",
-      "Trogo"
-    ],
-    [
-      "Ganesh Plain",
-      "Marosh"
-    ],
-    [
-      "Eer",
-      "Narcosh"
-    ],
-    [
-      "Cape Heth",
-      "East Suval"
-    ],
-    [
-      "Drent",
-      "Northern Ascarth"
-    ],
-    [
-      "Babon",
-      "Gala"
-    ],
-    [
-      "Ganesh Plain",
-      "South Suval"
-    ],
-    [
-      "Alezhor",
-      "Trogo"
-    ],
-    [
-      "East Pyros",
-      "Legemum"
-    ],
-    [
-      "East Pyros",
       "West Suval"
     ]
   ],
@@ -1533,12 +1077,30 @@
   "regions": {
     "Cold Stones": {
       "neighbors": [],
-      "owner": "Faction3",
-      "resources": 2,
+      "owner": null,
+      "resources": 3,
+      "display_name": "Cold Stones",
+      "founding_name": "Cold Stones",
+      "name_metadata": {
+        "source": "world_builder",
+        "authored_name": "Cold Stones",
+        "current_name_reason": "authored",
+        "name_layers": [
+          {
+            "type": "authored",
+            "name": "Cold Stones",
+            "pattern": "world_builder",
+            "faction_id": null,
+            "faction_name": null,
+            "turn": 0
+          }
+        ]
+      },
       "terrain_tags": [
+        "coast",
         "hills"
       ],
-      "climate": "temperate"
+      "climate": "Dfb"
     },
     "North Orsa": {
       "neighbors": [
@@ -1547,11 +1109,29 @@
         "South Orsa"
       ],
       "owner": null,
-      "resources": 2,
+      "resources": 3,
+      "display_name": "North Orsa",
+      "founding_name": "North Orsa",
+      "name_metadata": {
+        "source": "world_builder",
+        "authored_name": "North Orsa",
+        "current_name_reason": "authored",
+        "name_layers": [
+          {
+            "type": "authored",
+            "name": "North Orsa",
+            "pattern": "world_builder",
+            "faction_id": null,
+            "faction_name": null,
+            "turn": 0
+          }
+        ]
+      },
       "terrain_tags": [
-        "plains"
+        "coast",
+        "steppe"
       ],
-      "climate": "temperate"
+      "climate": "Dfb"
     },
     "North Thoth": {
       "neighbors": [
@@ -1561,11 +1141,29 @@
         "West Witherst"
       ],
       "owner": null,
-      "resources": 2,
+      "resources": 3,
+      "display_name": "North Thoth",
+      "founding_name": "North Thoth",
+      "name_metadata": {
+        "source": "world_builder",
+        "authored_name": "North Thoth",
+        "current_name_reason": "authored",
+        "name_layers": [
+          {
+            "type": "authored",
+            "name": "North Thoth",
+            "pattern": "world_builder",
+            "faction_id": null,
+            "faction_name": null,
+            "turn": 0
+          }
+        ]
+      },
       "terrain_tags": [
-        "plains"
+        "coast",
+        "steppe"
       ],
-      "climate": "temperate"
+      "climate": "Dfb"
     },
     "West Witherst": {
       "neighbors": [
@@ -1575,11 +1173,29 @@
         "North Thoth"
       ],
       "owner": null,
-      "resources": 2,
+      "resources": 3,
+      "display_name": "West Witherst",
+      "founding_name": "West Witherst",
+      "name_metadata": {
+        "source": "world_builder",
+        "authored_name": "West Witherst",
+        "current_name_reason": "authored",
+        "name_layers": [
+          {
+            "type": "authored",
+            "name": "West Witherst",
+            "pattern": "world_builder",
+            "faction_id": null,
+            "faction_name": null,
+            "turn": 0
+          }
+        ]
+      },
       "terrain_tags": [
-        "plains"
+        "coast",
+        "steppe"
       ],
-      "climate": "temperate"
+      "climate": "Dfb"
     },
     "South Orsa": {
       "neighbors": [
@@ -1588,12 +1204,29 @@
         "North Orsa"
       ],
       "owner": null,
-      "resources": 2,
+      "resources": 3,
+      "display_name": "South Orsa",
+      "founding_name": "South Orsa",
+      "name_metadata": {
+        "source": "world_builder",
+        "authored_name": "South Orsa",
+        "current_name_reason": "authored",
+        "name_layers": [
+          {
+            "type": "authored",
+            "name": "South Orsa",
+            "pattern": "world_builder",
+            "faction_id": null,
+            "faction_name": null,
+            "turn": 0
+          }
+        ]
+      },
       "terrain_tags": [
-        "steppe",
-        "plains"
+        "coast",
+        "steppe"
       ],
-      "climate": "temperate"
+      "climate": "Dfb"
     },
     "Central Thoth": {
       "neighbors": [
@@ -1607,10 +1240,27 @@
       ],
       "owner": null,
       "resources": 2,
+      "display_name": "Central Thoth",
+      "founding_name": "Central Thoth",
+      "name_metadata": {
+        "source": "world_builder",
+        "authored_name": "Central Thoth",
+        "current_name_reason": "authored",
+        "name_layers": [
+          {
+            "type": "authored",
+            "name": "Central Thoth",
+            "pattern": "world_builder",
+            "faction_id": null,
+            "faction_name": null,
+            "turn": 0
+          }
+        ]
+      },
       "terrain_tags": [
-        "plains"
+        "steppe"
       ],
-      "climate": "temperate"
+      "climate": "Dfb"
     },
     "North Gorgi Mountains": {
       "neighbors": [
@@ -1623,11 +1273,28 @@
       ],
       "owner": null,
       "resources": 2,
+      "display_name": "North Gorgi Mountains",
+      "founding_name": "North Gorgi Mountains",
+      "name_metadata": {
+        "source": "world_builder",
+        "authored_name": "North Gorgi Mountains",
+        "current_name_reason": "authored",
+        "name_layers": [
+          {
+            "type": "authored",
+            "name": "North Gorgi Mountains",
+            "pattern": "world_builder",
+            "faction_id": null,
+            "faction_name": null,
+            "turn": 0
+          }
+        ]
+      },
       "terrain_tags": [
         "highland",
         "hills"
       ],
-      "climate": "temperate"
+      "climate": "Dfb"
     },
     "North Nonoth": {
       "neighbors": [
@@ -1637,12 +1304,29 @@
         "South Thoth"
       ],
       "owner": null,
-      "resources": 2,
+      "resources": 3,
+      "display_name": "North Nonoth",
+      "founding_name": "North Nonoth",
+      "name_metadata": {
+        "source": "world_builder",
+        "authored_name": "North Nonoth",
+        "current_name_reason": "authored",
+        "name_layers": [
+          {
+            "type": "authored",
+            "name": "North Nonoth",
+            "pattern": "world_builder",
+            "faction_id": null,
+            "faction_name": null,
+            "turn": 0
+          }
+        ]
+      },
       "terrain_tags": [
-        "steppe",
-        "plains"
+        "coast",
+        "steppe"
       ],
-      "climate": "temperate"
+      "climate": "Dfb"
     },
     "East Witherst": {
       "neighbors": [
@@ -1651,11 +1335,29 @@
         "West Witherst"
       ],
       "owner": null,
-      "resources": 2,
+      "resources": 3,
+      "display_name": "East Witherst",
+      "founding_name": "East Witherst",
+      "name_metadata": {
+        "source": "world_builder",
+        "authored_name": "East Witherst",
+        "current_name_reason": "authored",
+        "name_layers": [
+          {
+            "type": "authored",
+            "name": "East Witherst",
+            "pattern": "world_builder",
+            "faction_id": null,
+            "faction_name": null,
+            "turn": 0
+          }
+        ]
+      },
       "terrain_tags": [
-        "plains"
+        "coast",
+        "steppe"
       ],
-      "climate": "temperate"
+      "climate": "Dfb"
     },
     "West Gorgi Mountains": {
       "neighbors": [
@@ -1668,12 +1370,29 @@
       ],
       "owner": null,
       "resources": 3,
+      "display_name": "West Gorgi Mountains",
+      "founding_name": "West Gorgi Mountains",
+      "name_metadata": {
+        "source": "world_builder",
+        "authored_name": "West Gorgi Mountains",
+        "current_name_reason": "authored",
+        "name_layers": [
+          {
+            "type": "authored",
+            "name": "West Gorgi Mountains",
+            "pattern": "world_builder",
+            "faction_id": null,
+            "faction_name": null,
+            "turn": 0
+          }
+        ]
+      },
       "terrain_tags": [
         "riverland",
         "highland",
         "hills"
       ],
-      "climate": "temperate"
+      "climate": "Dfb"
     },
     "East Gorgi Mountains": {
       "neighbors": [
@@ -1685,11 +1404,28 @@
       ],
       "owner": null,
       "resources": 2,
+      "display_name": "East Gorgi Mountains",
+      "founding_name": "East Gorgi Mountains",
+      "name_metadata": {
+        "source": "world_builder",
+        "authored_name": "East Gorgi Mountains",
+        "current_name_reason": "authored",
+        "name_layers": [
+          {
+            "type": "authored",
+            "name": "East Gorgi Mountains",
+            "pattern": "world_builder",
+            "faction_id": null,
+            "faction_name": null,
+            "turn": 0
+          }
+        ]
+      },
       "terrain_tags": [
         "highland",
         "hills"
       ],
-      "climate": "temperate"
+      "climate": "Dfb"
     },
     "Eshtor Plateau": {
       "neighbors": [
@@ -1703,10 +1439,27 @@
       ],
       "owner": null,
       "resources": 2,
+      "display_name": "Eshtor Plateau",
+      "founding_name": "Eshtor Plateau",
+      "name_metadata": {
+        "source": "world_builder",
+        "authored_name": "Eshtor Plateau",
+        "current_name_reason": "authored",
+        "name_layers": [
+          {
+            "type": "authored",
+            "name": "Eshtor Plateau",
+            "pattern": "world_builder",
+            "faction_id": null,
+            "faction_name": null,
+            "turn": 0
+          }
+        ]
+      },
       "terrain_tags": [
         "hills"
       ],
-      "climate": "temperate"
+      "climate": "Dfb"
     },
     "South Nonoth": {
       "neighbors": [
@@ -1716,12 +1469,29 @@
         "South Thoth"
       ],
       "owner": null,
-      "resources": 2,
+      "resources": 3,
+      "display_name": "South Nonoth",
+      "founding_name": "South Nonoth",
+      "name_metadata": {
+        "source": "world_builder",
+        "authored_name": "South Nonoth",
+        "current_name_reason": "authored",
+        "name_layers": [
+          {
+            "type": "authored",
+            "name": "South Nonoth",
+            "pattern": "world_builder",
+            "faction_id": null,
+            "faction_name": null,
+            "turn": 0
+          }
+        ]
+      },
       "terrain_tags": [
-        "steppe",
-        "plains"
+        "coast",
+        "steppe"
       ],
-      "climate": "temperate"
+      "climate": "Dfb"
     },
     "South Thoth": {
       "neighbors": [
@@ -1733,10 +1503,27 @@
       ],
       "owner": null,
       "resources": 2,
+      "display_name": "South Thoth",
+      "founding_name": "South Thoth",
+      "name_metadata": {
+        "source": "world_builder",
+        "authored_name": "South Thoth",
+        "current_name_reason": "authored",
+        "name_layers": [
+          {
+            "type": "authored",
+            "name": "South Thoth",
+            "pattern": "world_builder",
+            "faction_id": null,
+            "faction_name": null,
+            "turn": 0
+          }
+        ]
+      },
       "terrain_tags": [
-        "plains"
+        "steppe"
       ],
-      "climate": "temperate"
+      "climate": "Dfb"
     },
     "North Riesov": {
       "neighbors": [
@@ -1747,12 +1534,30 @@
         "West Baldro Mountains"
       ],
       "owner": null,
-      "resources": 2,
+      "resources": 3,
+      "display_name": "North Riesov",
+      "founding_name": "North Riesov",
+      "name_metadata": {
+        "source": "world_builder",
+        "authored_name": "North Riesov",
+        "current_name_reason": "authored",
+        "name_layers": [
+          {
+            "type": "authored",
+            "name": "North Riesov",
+            "pattern": "world_builder",
+            "faction_id": null,
+            "faction_name": null,
+            "turn": 0
+          }
+        ]
+      },
       "terrain_tags": [
+        "coast",
         "hills",
-        "plains"
+        "steppe"
       ],
-      "climate": "temperate"
+      "climate": "Dfb"
     },
     "Noth Hills": {
       "neighbors": [
@@ -1766,10 +1571,27 @@
       ],
       "owner": null,
       "resources": 2,
+      "display_name": "Noth Hills",
+      "founding_name": "Noth Hills",
+      "name_metadata": {
+        "source": "world_builder",
+        "authored_name": "Noth Hills",
+        "current_name_reason": "authored",
+        "name_layers": [
+          {
+            "type": "authored",
+            "name": "Noth Hills",
+            "pattern": "world_builder",
+            "faction_id": null,
+            "faction_name": null,
+            "turn": 0
+          }
+        ]
+      },
       "terrain_tags": [
         "hills"
       ],
-      "climate": "temperate"
+      "climate": "Cfb"
     },
     "Orgmala": {
       "neighbors": [
@@ -1781,6 +1603,23 @@
       ],
       "owner": null,
       "resources": 1,
+      "display_name": "Orgmala",
+      "founding_name": "Orgmala",
+      "name_metadata": {
+        "source": "world_builder",
+        "authored_name": "Orgmala",
+        "current_name_reason": "authored",
+        "name_layers": [
+          {
+            "type": "authored",
+            "name": "Orgmala",
+            "pattern": "world_builder",
+            "faction_id": null,
+            "faction_name": null,
+            "turn": 0
+          }
+        ]
+      },
       "terrain_tags": [
         "highland",
         "hills",
@@ -1789,7 +1628,7 @@
         "steppe",
         "plains"
       ],
-      "climate": "temperate"
+      "climate": "Cfb"
     },
     "North Lond": {
       "neighbors": [
@@ -1803,12 +1642,29 @@
       ],
       "owner": null,
       "resources": 3,
+      "display_name": "North Lond",
+      "founding_name": "North Lond",
+      "name_metadata": {
+        "source": "world_builder",
+        "authored_name": "North Lond",
+        "current_name_reason": "authored",
+        "name_layers": [
+          {
+            "type": "authored",
+            "name": "North Lond",
+            "pattern": "world_builder",
+            "faction_id": null,
+            "faction_name": null,
+            "turn": 0
+          }
+        ]
+      },
       "terrain_tags": [
         "riverland",
         "steppe",
         "plains"
       ],
-      "climate": "temperate"
+      "climate": "Cfb"
     },
     "Nothwood": {
       "neighbors": [
@@ -1818,13 +1674,31 @@
         "South Nonoth"
       ],
       "owner": null,
-      "resources": 2,
+      "resources": 3,
+      "display_name": "Nothwood",
+      "founding_name": "Nothwood",
+      "name_metadata": {
+        "source": "world_builder",
+        "authored_name": "Nothwood",
+        "current_name_reason": "authored",
+        "name_layers": [
+          {
+            "type": "authored",
+            "name": "Nothwood",
+            "pattern": "world_builder",
+            "faction_id": null,
+            "faction_name": null,
+            "turn": 0
+          }
+        ]
+      },
       "terrain_tags": [
+        "coast",
         "highland",
         "forest",
-        "plains"
+        "steppe"
       ],
-      "climate": "temperate"
+      "climate": "Cfb"
     },
     "West Baldro Mountains": {
       "neighbors": [
@@ -1837,11 +1711,28 @@
       ],
       "owner": null,
       "resources": 2,
+      "display_name": "West Baldro Mountains",
+      "founding_name": "West Baldro Mountains",
+      "name_metadata": {
+        "source": "world_builder",
+        "authored_name": "West Baldro Mountains",
+        "current_name_reason": "authored",
+        "name_layers": [
+          {
+            "type": "authored",
+            "name": "West Baldro Mountains",
+            "pattern": "world_builder",
+            "faction_id": null,
+            "faction_name": null,
+            "turn": 0
+          }
+        ]
+      },
       "terrain_tags": [
         "highland",
         "hills"
       ],
-      "climate": "temperate"
+      "climate": "Dfb"
     },
     "South Riesov": {
       "neighbors": [
@@ -1850,12 +1741,30 @@
         "North Riesov"
       ],
       "owner": null,
-      "resources": 2,
+      "resources": 3,
+      "display_name": "South Riesov",
+      "founding_name": "South Riesov",
+      "name_metadata": {
+        "source": "world_builder",
+        "authored_name": "South Riesov",
+        "current_name_reason": "authored",
+        "name_layers": [
+          {
+            "type": "authored",
+            "name": "South Riesov",
+            "pattern": "world_builder",
+            "faction_id": null,
+            "faction_name": null,
+            "turn": 0
+          }
+        ]
+      },
       "terrain_tags": [
+        "coast",
         "hills",
         "steppe"
       ],
-      "climate": "temperate"
+      "climate": "Cfb"
     },
     "East Lond": {
       "neighbors": [
@@ -1869,11 +1778,28 @@
       ],
       "owner": null,
       "resources": 2,
+      "display_name": "East Lond",
+      "founding_name": "East Lond",
+      "name_metadata": {
+        "source": "world_builder",
+        "authored_name": "East Lond",
+        "current_name_reason": "authored",
+        "name_layers": [
+          {
+            "type": "authored",
+            "name": "East Lond",
+            "pattern": "world_builder",
+            "faction_id": null,
+            "faction_name": null,
+            "turn": 0
+          }
+        ]
+      },
       "terrain_tags": [
         "steppe",
         "plains"
       ],
-      "climate": "temperate"
+      "climate": "Cfb"
     },
     "West Lond": {
       "neighbors": [
@@ -1886,11 +1812,28 @@
       ],
       "owner": null,
       "resources": 2,
+      "display_name": "West Lond",
+      "founding_name": "West Lond",
+      "name_metadata": {
+        "source": "world_builder",
+        "authored_name": "West Lond",
+        "current_name_reason": "authored",
+        "name_layers": [
+          {
+            "type": "authored",
+            "name": "West Lond",
+            "pattern": "world_builder",
+            "faction_id": null,
+            "faction_name": null,
+            "turn": 0
+          }
+        ]
+      },
       "terrain_tags": [
         "steppe",
         "plains"
       ],
-      "climate": "temperate"
+      "climate": "Cfb"
     },
     "Central Lond": {
       "neighbors": [
@@ -1899,13 +1842,30 @@
         "South Lond",
         "West Lond"
       ],
-      "owner": null,
+      "owner": "Faction1",
       "resources": 3,
+      "display_name": "Central Lond",
+      "founding_name": "Central Lond",
+      "name_metadata": {
+        "source": "world_builder",
+        "authored_name": "Central Lond",
+        "current_name_reason": "authored",
+        "name_layers": [
+          {
+            "type": "authored",
+            "name": "Central Lond",
+            "pattern": "world_builder",
+            "faction_id": null,
+            "faction_name": null,
+            "turn": 0
+          }
+        ]
+      },
       "terrain_tags": [
         "riverland",
         "plains"
       ],
-      "climate": "temperate"
+      "climate": "Cfb"
     },
     "East Baldro Mountains": {
       "neighbors": [
@@ -1917,11 +1877,28 @@
       ],
       "owner": null,
       "resources": 2,
+      "display_name": "East Baldro Mountains",
+      "founding_name": "East Baldro Mountains",
+      "name_metadata": {
+        "source": "world_builder",
+        "authored_name": "East Baldro Mountains",
+        "current_name_reason": "authored",
+        "name_layers": [
+          {
+            "type": "authored",
+            "name": "East Baldro Mountains",
+            "pattern": "world_builder",
+            "faction_id": null,
+            "faction_name": null,
+            "turn": 0
+          }
+        ]
+      },
       "terrain_tags": [
         "highland",
         "hills"
       ],
-      "climate": "temperate"
+      "climate": "Dfb"
     },
     "North Endevor": {
       "neighbors": [
@@ -1931,11 +1908,29 @@
         "West Endevor"
       ],
       "owner": null,
-      "resources": 2,
+      "resources": 3,
+      "display_name": "North Endevor",
+      "founding_name": "North Endevor",
+      "name_metadata": {
+        "source": "world_builder",
+        "authored_name": "North Endevor",
+        "current_name_reason": "authored",
+        "name_layers": [
+          {
+            "type": "authored",
+            "name": "North Endevor",
+            "pattern": "world_builder",
+            "faction_id": null,
+            "faction_name": null,
+            "turn": 0
+          }
+        ]
+      },
       "terrain_tags": [
+        "coast",
         "steppe"
       ],
-      "climate": "temperate"
+      "climate": "Cfb"
     },
     "East Endevor": {
       "neighbors": [
@@ -1948,10 +1943,27 @@
       ],
       "owner": null,
       "resources": 2,
+      "display_name": "East Endevor",
+      "founding_name": "East Endevor",
+      "name_metadata": {
+        "source": "world_builder",
+        "authored_name": "East Endevor",
+        "current_name_reason": "authored",
+        "name_layers": [
+          {
+            "type": "authored",
+            "name": "East Endevor",
+            "pattern": "world_builder",
+            "faction_id": null,
+            "faction_name": null,
+            "turn": 0
+          }
+        ]
+      },
       "terrain_tags": [
         "steppe"
       ],
-      "climate": "temperate"
+      "climate": "Cfb"
     },
     "West Endevor": {
       "neighbors": [
@@ -1960,11 +1972,29 @@
         "South Endevor"
       ],
       "owner": null,
-      "resources": 2,
+      "resources": 3,
+      "display_name": "West Endevor",
+      "founding_name": "West Endevor",
+      "name_metadata": {
+        "source": "world_builder",
+        "authored_name": "West Endevor",
+        "current_name_reason": "authored",
+        "name_layers": [
+          {
+            "type": "authored",
+            "name": "West Endevor",
+            "pattern": "world_builder",
+            "faction_id": null,
+            "faction_name": null,
+            "turn": 0
+          }
+        ]
+      },
       "terrain_tags": [
+        "coast",
         "steppe"
       ],
-      "climate": "temperate"
+      "climate": "Cfb"
     },
     "North Ganun": {
       "neighbors": [
@@ -1976,11 +2006,28 @@
       ],
       "owner": null,
       "resources": 3,
+      "display_name": "North Ganun",
+      "founding_name": "North Ganun",
+      "name_metadata": {
+        "source": "world_builder",
+        "authored_name": "North Ganun",
+        "current_name_reason": "authored",
+        "name_layers": [
+          {
+            "type": "authored",
+            "name": "North Ganun",
+            "pattern": "world_builder",
+            "faction_id": null,
+            "faction_name": null,
+            "turn": 0
+          }
+        ]
+      },
       "terrain_tags": [
         "riverland",
         "steppe"
       ],
-      "climate": "temperate"
+      "climate": "Cfb"
     },
     "East Ganun": {
       "neighbors": [
@@ -1991,12 +2038,30 @@
         "West Ganun"
       ],
       "owner": null,
-      "resources": 3,
+      "resources": 4,
+      "display_name": "East Ganun",
+      "founding_name": "East Ganun",
+      "name_metadata": {
+        "source": "world_builder",
+        "authored_name": "East Ganun",
+        "current_name_reason": "authored",
+        "name_layers": [
+          {
+            "type": "authored",
+            "name": "East Ganun",
+            "pattern": "world_builder",
+            "faction_id": null,
+            "faction_name": null,
+            "turn": 0
+          }
+        ]
+      },
       "terrain_tags": [
+        "coast",
         "riverland",
         "steppe"
       ],
-      "climate": "temperate"
+      "climate": "Cfb"
     },
     "South Endevor": {
       "neighbors": [
@@ -2008,11 +2073,29 @@
         "West Endevor"
       ],
       "owner": null,
-      "resources": 2,
+      "resources": 3,
+      "display_name": "South Endevor",
+      "founding_name": "South Endevor",
+      "name_metadata": {
+        "source": "world_builder",
+        "authored_name": "South Endevor",
+        "current_name_reason": "authored",
+        "name_layers": [
+          {
+            "type": "authored",
+            "name": "South Endevor",
+            "pattern": "world_builder",
+            "faction_id": null,
+            "faction_name": null,
+            "turn": 0
+          }
+        ]
+      },
       "terrain_tags": [
+        "coast",
         "steppe"
       ],
-      "climate": "temperate"
+      "climate": "Cfb"
     },
     "South Lond": {
       "neighbors": [
@@ -2024,13 +2107,31 @@
         "West Lond"
       ],
       "owner": null,
-      "resources": 3,
+      "resources": 4,
+      "display_name": "South Lond",
+      "founding_name": "South Lond",
+      "name_metadata": {
+        "source": "world_builder",
+        "authored_name": "South Lond",
+        "current_name_reason": "authored",
+        "name_layers": [
+          {
+            "type": "authored",
+            "name": "South Lond",
+            "pattern": "world_builder",
+            "faction_id": null,
+            "faction_name": null,
+            "turn": 0
+          }
+        ]
+      },
       "terrain_tags": [
+        "coast",
         "riverland",
         "steppe",
         "plains"
       ],
-      "climate": "temperate"
+      "climate": "Cfb"
     },
     "West Ganun": {
       "neighbors": [
@@ -2041,11 +2142,29 @@
         "South Lond"
       ],
       "owner": null,
-      "resources": 2,
+      "resources": 3,
+      "display_name": "West Ganun",
+      "founding_name": "West Ganun",
+      "name_metadata": {
+        "source": "world_builder",
+        "authored_name": "West Ganun",
+        "current_name_reason": "authored",
+        "name_layers": [
+          {
+            "type": "authored",
+            "name": "West Ganun",
+            "pattern": "world_builder",
+            "faction_id": null,
+            "faction_name": null,
+            "turn": 0
+          }
+        ]
+      },
       "terrain_tags": [
+        "coast",
         "steppe"
       ],
-      "climate": "temperate"
+      "climate": "Cfb"
     },
     "North Acorwood": {
       "neighbors": [
@@ -2058,24 +2177,60 @@
         "West Lond"
       ],
       "owner": null,
-      "resources": 2,
+      "resources": 3,
+      "display_name": "North Acorwood",
+      "founding_name": "North Acorwood",
+      "name_metadata": {
+        "source": "world_builder",
+        "authored_name": "North Acorwood",
+        "current_name_reason": "authored",
+        "name_layers": [
+          {
+            "type": "authored",
+            "name": "North Acorwood",
+            "pattern": "world_builder",
+            "faction_id": null,
+            "faction_name": null,
+            "turn": 0
+          }
+        ]
+      },
       "terrain_tags": [
+        "coast",
         "highland",
         "forest"
       ],
-      "climate": "temperate"
+      "climate": "Cfb"
     },
     "Cape Thalmagar": {
       "neighbors": [
         "Cudon",
         "Narcosh"
       ],
-      "owner": "Faction1",
-      "resources": 2,
+      "owner": null,
+      "resources": 3,
+      "display_name": "Cape Thalmagar",
+      "founding_name": "Cape Thalmagar",
+      "name_metadata": {
+        "source": "world_builder",
+        "authored_name": "Cape Thalmagar",
+        "current_name_reason": "authored",
+        "name_layers": [
+          {
+            "type": "authored",
+            "name": "Cape Thalmagar",
+            "pattern": "world_builder",
+            "faction_id": null,
+            "faction_name": null,
+            "turn": 0
+          }
+        ]
+      },
       "terrain_tags": [
+        "coast",
         "steppe"
       ],
-      "climate": "temperate"
+      "climate": "Cfb"
     },
     "West Acorwood": {
       "neighbors": [
@@ -2087,12 +2242,30 @@
         "South Endevor"
       ],
       "owner": null,
-      "resources": 2,
+      "resources": 3,
+      "display_name": "West Acorwood",
+      "founding_name": "West Acorwood",
+      "name_metadata": {
+        "source": "world_builder",
+        "authored_name": "West Acorwood",
+        "current_name_reason": "authored",
+        "name_layers": [
+          {
+            "type": "authored",
+            "name": "West Acorwood",
+            "pattern": "world_builder",
+            "faction_id": null,
+            "faction_name": null,
+            "turn": 0
+          }
+        ]
+      },
       "terrain_tags": [
+        "coast",
         "highland",
         "forest"
       ],
-      "climate": "temperate"
+      "climate": "Cfb"
     },
     "East Acordwood": {
       "neighbors": [
@@ -2101,12 +2274,30 @@
         "South Lond"
       ],
       "owner": null,
-      "resources": 2,
+      "resources": 3,
+      "display_name": "East Acordwood",
+      "founding_name": "East Acordwood",
+      "name_metadata": {
+        "source": "world_builder",
+        "authored_name": "East Acordwood",
+        "current_name_reason": "authored",
+        "name_layers": [
+          {
+            "type": "authored",
+            "name": "East Acordwood",
+            "pattern": "world_builder",
+            "faction_id": null,
+            "faction_name": null,
+            "turn": 0
+          }
+        ]
+      },
       "terrain_tags": [
+        "coast",
         "highland",
         "forest"
       ],
-      "climate": "temperate"
+      "climate": "Cfb"
     },
     "South Ganun": {
       "neighbors": [
@@ -2114,23 +2305,59 @@
         "West Ganun"
       ],
       "owner": null,
-      "resources": 3,
+      "resources": 4,
+      "display_name": "South Ganun",
+      "founding_name": "South Ganun",
+      "name_metadata": {
+        "source": "world_builder",
+        "authored_name": "South Ganun",
+        "current_name_reason": "authored",
+        "name_layers": [
+          {
+            "type": "authored",
+            "name": "South Ganun",
+            "pattern": "world_builder",
+            "faction_id": null,
+            "faction_name": null,
+            "turn": 0
+          }
+        ]
+      },
       "terrain_tags": [
+        "coast",
         "riverland",
         "steppe"
       ],
-      "climate": "temperate"
+      "climate": "Cfb"
     },
     "East Inseld": {
       "neighbors": [
         "West Inseld"
       ],
       "owner": null,
-      "resources": 2,
+      "resources": 3,
+      "display_name": "East Inseld",
+      "founding_name": "East Inseld",
+      "name_metadata": {
+        "source": "world_builder",
+        "authored_name": "East Inseld",
+        "current_name_reason": "authored",
+        "name_layers": [
+          {
+            "type": "authored",
+            "name": "East Inseld",
+            "pattern": "world_builder",
+            "faction_id": null,
+            "faction_name": null,
+            "turn": 0
+          }
+        ]
+      },
       "terrain_tags": [
+        "coast",
         "plains"
       ],
-      "climate": "temperate"
+      "climate": "Cfb"
     },
     "Acor Wetlands": {
       "neighbors": [
@@ -2142,11 +2369,29 @@
         "West Endevor"
       ],
       "owner": null,
-      "resources": 1,
+      "resources": 2,
+      "display_name": "Acor Wetlands",
+      "founding_name": "Acor Wetlands",
+      "name_metadata": {
+        "source": "world_builder",
+        "authored_name": "Acor Wetlands",
+        "current_name_reason": "authored",
+        "name_layers": [
+          {
+            "type": "authored",
+            "name": "Acor Wetlands",
+            "pattern": "world_builder",
+            "faction_id": null,
+            "faction_name": null,
+            "turn": 0
+          }
+        ]
+      },
       "terrain_tags": [
+        "coast",
         "marsh"
       ],
-      "climate": "temperate"
+      "climate": "Cfb"
     },
     "Narcosh": {
       "neighbors": [
@@ -2158,6 +2403,23 @@
       ],
       "owner": null,
       "resources": 3,
+      "display_name": "Narcosh",
+      "founding_name": "Narcosh",
+      "name_metadata": {
+        "source": "world_builder",
+        "authored_name": "Narcosh",
+        "current_name_reason": "authored",
+        "name_layers": [
+          {
+            "type": "authored",
+            "name": "Narcosh",
+            "pattern": "world_builder",
+            "faction_id": null,
+            "faction_name": null,
+            "turn": 0
+          }
+        ]
+      },
       "terrain_tags": [
         "coast",
         "highland",
@@ -2165,7 +2427,7 @@
         "steppe",
         "plains"
       ],
-      "climate": "temperate"
+      "climate": "Cfb"
     },
     "Cudon": {
       "neighbors": [
@@ -2175,13 +2437,31 @@
         "North Oreminidi Mountains"
       ],
       "owner": null,
-      "resources": 2,
+      "resources": 3,
+      "display_name": "Cudon",
+      "founding_name": "Cudon",
+      "name_metadata": {
+        "source": "world_builder",
+        "authored_name": "Cudon",
+        "current_name_reason": "authored",
+        "name_layers": [
+          {
+            "type": "authored",
+            "name": "Cudon",
+            "pattern": "world_builder",
+            "faction_id": null,
+            "faction_name": null,
+            "turn": 0
+          }
+        ]
+      },
       "terrain_tags": [
+        "coast",
         "highland",
         "hills",
-        "plains"
+        "steppe"
       ],
-      "climate": "temperate"
+      "climate": "Dfb"
     },
     "South Acordwood": {
       "neighbors": [
@@ -2191,24 +2471,60 @@
         "West Acorwood"
       ],
       "owner": null,
-      "resources": 2,
+      "resources": 3,
+      "display_name": "South Acordwood",
+      "founding_name": "South Acordwood",
+      "name_metadata": {
+        "source": "world_builder",
+        "authored_name": "South Acordwood",
+        "current_name_reason": "authored",
+        "name_layers": [
+          {
+            "type": "authored",
+            "name": "South Acordwood",
+            "pattern": "world_builder",
+            "faction_id": null,
+            "faction_name": null,
+            "turn": 0
+          }
+        ]
+      },
       "terrain_tags": [
+        "coast",
         "highland",
         "forest"
       ],
-      "climate": "temperate"
+      "climate": "Cfb"
     },
     "West Inseld": {
       "neighbors": [
         "East Inseld"
       ],
       "owner": null,
-      "resources": 2,
+      "resources": 3,
+      "display_name": "West Inseld",
+      "founding_name": "West Inseld",
+      "name_metadata": {
+        "source": "world_builder",
+        "authored_name": "West Inseld",
+        "current_name_reason": "authored",
+        "name_layers": [
+          {
+            "type": "authored",
+            "name": "West Inseld",
+            "pattern": "world_builder",
+            "faction_id": null,
+            "faction_name": null,
+            "turn": 0
+          }
+        ]
+      },
       "terrain_tags": [
+        "coast",
         "steppe",
         "plains"
       ],
-      "climate": "temperate"
+      "climate": "Cfb"
     },
     "Lesser Oremindi Mountains": {
       "neighbors": [
@@ -2219,11 +2535,28 @@
       ],
       "owner": null,
       "resources": 2,
+      "display_name": "Lesser Oremindi Mountains",
+      "founding_name": "Lesser Oremindi Mountains",
+      "name_metadata": {
+        "source": "world_builder",
+        "authored_name": "Lesser Oremindi Mountains",
+        "current_name_reason": "authored",
+        "name_layers": [
+          {
+            "type": "authored",
+            "name": "Lesser Oremindi Mountains",
+            "pattern": "world_builder",
+            "faction_id": null,
+            "faction_name": null,
+            "turn": 0
+          }
+        ]
+      },
       "terrain_tags": [
         "highland",
         "hills"
       ],
-      "climate": "temperate"
+      "climate": "Dfb"
     },
     "North Mithala": {
       "neighbors": [
@@ -2235,12 +2568,29 @@
       ],
       "owner": null,
       "resources": 3,
+      "display_name": "North Mithala",
+      "founding_name": "North Mithala",
+      "name_metadata": {
+        "source": "world_builder",
+        "authored_name": "North Mithala",
+        "current_name_reason": "authored",
+        "name_layers": [
+          {
+            "type": "authored",
+            "name": "North Mithala",
+            "pattern": "world_builder",
+            "faction_id": null,
+            "faction_name": null,
+            "turn": 0
+          }
+        ]
+      },
       "terrain_tags": [
         "riverland",
         "steppe",
         "plains"
       ],
-      "climate": "temperate"
+      "climate": "Cfb"
     },
     "Henborth": {
       "neighbors": [
@@ -2255,10 +2605,27 @@
       ],
       "owner": null,
       "resources": 2,
+      "display_name": "Henborth",
+      "founding_name": "Henborth",
+      "name_metadata": {
+        "source": "world_builder",
+        "authored_name": "Henborth",
+        "current_name_reason": "authored",
+        "name_layers": [
+          {
+            "type": "authored",
+            "name": "Henborth",
+            "pattern": "world_builder",
+            "faction_id": null,
+            "faction_name": null,
+            "turn": 0
+          }
+        ]
+      },
       "terrain_tags": [
         "steppe"
       ],
-      "climate": "temperate"
+      "climate": "Cfb"
     },
     "North Oreminidi Mountains": {
       "neighbors": [
@@ -2269,12 +2636,30 @@
         "West Oremindi Mountains"
       ],
       "owner": null,
-      "resources": 2,
+      "resources": 3,
+      "display_name": "North Oreminidi Mountains",
+      "founding_name": "North Oreminidi Mountains",
+      "name_metadata": {
+        "source": "world_builder",
+        "authored_name": "North Oreminidi Mountains",
+        "current_name_reason": "authored",
+        "name_layers": [
+          {
+            "type": "authored",
+            "name": "North Oreminidi Mountains",
+            "pattern": "world_builder",
+            "faction_id": null,
+            "faction_name": null,
+            "turn": 0
+          }
+        ]
+      },
       "terrain_tags": [
+        "coast",
         "highland",
         "hills"
       ],
-      "climate": "temperate"
+      "climate": "Dfb"
     },
     "East Mithala": {
       "neighbors": [
@@ -2285,12 +2670,30 @@
         "West Mithala"
       ],
       "owner": null,
-      "resources": 2,
+      "resources": 3,
+      "display_name": "East Mithala",
+      "founding_name": "East Mithala",
+      "name_metadata": {
+        "source": "world_builder",
+        "authored_name": "East Mithala",
+        "current_name_reason": "authored",
+        "name_layers": [
+          {
+            "type": "authored",
+            "name": "East Mithala",
+            "pattern": "world_builder",
+            "faction_id": null,
+            "faction_name": null,
+            "turn": 0
+          }
+        ]
+      },
       "terrain_tags": [
+        "coast",
         "steppe",
         "plains"
       ],
-      "climate": "temperate"
+      "climate": "Cfb"
     },
     "West Mithala": {
       "neighbors": [
@@ -2300,14 +2703,31 @@
         "North Mithala",
         "South Mithala"
       ],
-      "owner": null,
+      "owner": "Faction5",
       "resources": 3,
+      "display_name": "West Mithala",
+      "founding_name": "West Mithala",
+      "name_metadata": {
+        "source": "world_builder",
+        "authored_name": "West Mithala",
+        "current_name_reason": "authored",
+        "name_layers": [
+          {
+            "type": "authored",
+            "name": "West Mithala",
+            "pattern": "world_builder",
+            "faction_id": null,
+            "faction_name": null,
+            "turn": 0
+          }
+        ]
+      },
       "terrain_tags": [
         "riverland",
         "steppe",
         "plains"
       ],
-      "climate": "temperate"
+      "climate": "Cfb"
     },
     "West Oremindi Mountains": {
       "neighbors": [
@@ -2316,12 +2736,30 @@
         "South Oremindi Mountains"
       ],
       "owner": null,
-      "resources": 2,
+      "resources": 3,
+      "display_name": "West Oremindi Mountains",
+      "founding_name": "West Oremindi Mountains",
+      "name_metadata": {
+        "source": "world_builder",
+        "authored_name": "West Oremindi Mountains",
+        "current_name_reason": "authored",
+        "name_layers": [
+          {
+            "type": "authored",
+            "name": "West Oremindi Mountains",
+            "pattern": "world_builder",
+            "faction_id": null,
+            "faction_name": null,
+            "turn": 0
+          }
+        ]
+      },
       "terrain_tags": [
+        "coast",
         "highland",
         "hills"
       ],
-      "climate": "temperate"
+      "climate": "Dfb"
     },
     "East Oremindi Mountains": {
       "neighbors": [
@@ -2334,11 +2772,28 @@
       ],
       "owner": null,
       "resources": 2,
+      "display_name": "East Oremindi Mountains",
+      "founding_name": "East Oremindi Mountains",
+      "name_metadata": {
+        "source": "world_builder",
+        "authored_name": "East Oremindi Mountains",
+        "current_name_reason": "authored",
+        "name_layers": [
+          {
+            "type": "authored",
+            "name": "East Oremindi Mountains",
+            "pattern": "world_builder",
+            "faction_id": null,
+            "faction_name": null,
+            "turn": 0
+          }
+        ]
+      },
       "terrain_tags": [
         "highland",
         "hills"
       ],
-      "climate": "temperate"
+      "climate": "Dfb"
     },
     "South Mithala": {
       "neighbors": [
@@ -2350,13 +2805,31 @@
         "West Mithala"
       ],
       "owner": null,
-      "resources": 2,
+      "resources": 3,
+      "display_name": "South Mithala",
+      "founding_name": "South Mithala",
+      "name_metadata": {
+        "source": "world_builder",
+        "authored_name": "South Mithala",
+        "current_name_reason": "authored",
+        "name_layers": [
+          {
+            "type": "authored",
+            "name": "South Mithala",
+            "pattern": "world_builder",
+            "faction_id": null,
+            "faction_name": null,
+            "turn": 0
+          }
+        ]
+      },
       "terrain_tags": [
+        "coast",
         "hills",
         "steppe",
         "plains"
       ],
-      "climate": "temperate"
+      "climate": "Cfb"
     },
     "North Celder": {
       "neighbors": [
@@ -2368,11 +2841,28 @@
       ],
       "owner": null,
       "resources": 2,
+      "display_name": "North Celder",
+      "founding_name": "North Celder",
+      "name_metadata": {
+        "source": "world_builder",
+        "authored_name": "North Celder",
+        "current_name_reason": "authored",
+        "name_layers": [
+          {
+            "type": "authored",
+            "name": "North Celder",
+            "pattern": "world_builder",
+            "faction_id": null,
+            "faction_name": null,
+            "turn": 0
+          }
+        ]
+      },
       "terrain_tags": [
         "steppe",
         "plains"
       ],
-      "climate": "temperate"
+      "climate": "Cfb"
     },
     "East Lotharn Mountains": {
       "neighbors": [
@@ -2383,12 +2873,30 @@
         "West Lotharn Mountains"
       ],
       "owner": null,
-      "resources": 2,
+      "resources": 3,
+      "display_name": "East Lotharn Mountains",
+      "founding_name": "East Lotharn Mountains",
+      "name_metadata": {
+        "source": "world_builder",
+        "authored_name": "East Lotharn Mountains",
+        "current_name_reason": "authored",
+        "name_layers": [
+          {
+            "type": "authored",
+            "name": "East Lotharn Mountains",
+            "pattern": "world_builder",
+            "faction_id": null,
+            "faction_name": null,
+            "turn": 0
+          }
+        ]
+      },
       "terrain_tags": [
+        "coast",
         "highland",
         "hills"
       ],
-      "climate": "temperate"
+      "climate": "Cfb"
     },
     "Feradom": {
       "neighbors": [
@@ -2397,14 +2905,32 @@
         "Pueth"
       ],
       "owner": null,
-      "resources": 3,
+      "resources": 4,
+      "display_name": "Feradom",
+      "founding_name": "Feradom",
+      "name_metadata": {
+        "source": "world_builder",
+        "authored_name": "Feradom",
+        "current_name_reason": "authored",
+        "name_layers": [
+          {
+            "type": "authored",
+            "name": "Feradom",
+            "pattern": "world_builder",
+            "faction_id": null,
+            "faction_name": null,
+            "turn": 0
+          }
+        ]
+      },
       "terrain_tags": [
+        "coast",
         "riverland",
         "highland",
         "hills",
         "steppe"
       ],
-      "climate": "temperate"
+      "climate": "Cfb"
     },
     "South Celder": {
       "neighbors": [
@@ -2417,10 +2943,27 @@
       ],
       "owner": null,
       "resources": 2,
+      "display_name": "South Celder",
+      "founding_name": "South Celder",
+      "name_metadata": {
+        "source": "world_builder",
+        "authored_name": "South Celder",
+        "current_name_reason": "authored",
+        "name_layers": [
+          {
+            "type": "authored",
+            "name": "South Celder",
+            "pattern": "world_builder",
+            "faction_id": null,
+            "faction_name": null,
+            "turn": 0
+          }
+        ]
+      },
       "terrain_tags": [
         "steppe"
       ],
-      "climate": "temperate"
+      "climate": "Cfb"
     },
     "West Lotharn Mountains": {
       "neighbors": [
@@ -2434,11 +2977,28 @@
       ],
       "owner": null,
       "resources": 2,
+      "display_name": "West Lotharn Mountains",
+      "founding_name": "West Lotharn Mountains",
+      "name_metadata": {
+        "source": "world_builder",
+        "authored_name": "West Lotharn Mountains",
+        "current_name_reason": "authored",
+        "name_layers": [
+          {
+            "type": "authored",
+            "name": "West Lotharn Mountains",
+            "pattern": "world_builder",
+            "faction_id": null,
+            "faction_name": null,
+            "turn": 0
+          }
+        ]
+      },
       "terrain_tags": [
         "highland",
         "hills"
       ],
-      "climate": "temperate"
+      "climate": "Dfb"
     },
     "South Oremindi Mountains": {
       "neighbors": [
@@ -2451,12 +3011,29 @@
       ],
       "owner": null,
       "resources": 3,
+      "display_name": "South Oremindi Mountains",
+      "founding_name": "South Oremindi Mountains",
+      "name_metadata": {
+        "source": "world_builder",
+        "authored_name": "South Oremindi Mountains",
+        "current_name_reason": "authored",
+        "name_layers": [
+          {
+            "type": "authored",
+            "name": "South Oremindi Mountains",
+            "pattern": "world_builder",
+            "faction_id": null,
+            "faction_name": null,
+            "turn": 0
+          }
+        ]
+      },
       "terrain_tags": [
         "coast",
         "highland",
         "hills"
       ],
-      "climate": "temperate"
+      "climate": "Cfb"
     },
     "Amod": {
       "neighbors": [
@@ -2467,13 +3044,31 @@
         "Vastos"
       ],
       "owner": null,
-      "resources": 2,
+      "resources": 3,
+      "display_name": "Amod",
+      "founding_name": "Amod",
+      "name_metadata": {
+        "source": "world_builder",
+        "authored_name": "Amod",
+        "current_name_reason": "authored",
+        "name_layers": [
+          {
+            "type": "authored",
+            "name": "Amod",
+            "pattern": "world_builder",
+            "faction_id": null,
+            "faction_name": null,
+            "turn": 0
+          }
+        ]
+      },
       "terrain_tags": [
+        "coast",
         "highland",
         "hills",
         "plains"
       ],
-      "climate": "temperate"
+      "climate": "Cfb"
     },
     "North Ibenal": {
       "neighbors": [
@@ -2483,13 +3078,31 @@
         "West Ibenwood"
       ],
       "owner": null,
-      "resources": 3,
+      "resources": 4,
+      "display_name": "North Ibenal",
+      "founding_name": "North Ibenal",
+      "name_metadata": {
+        "source": "world_builder",
+        "authored_name": "North Ibenal",
+        "current_name_reason": "authored",
+        "name_layers": [
+          {
+            "type": "authored",
+            "name": "North Ibenal",
+            "pattern": "world_builder",
+            "faction_id": null,
+            "faction_name": null,
+            "turn": 0
+          }
+        ]
+      },
       "terrain_tags": [
+        "coast",
         "riverland",
         "hills",
         "steppe"
       ],
-      "climate": "temperate"
+      "climate": "Cfb"
     },
     "Vastos": {
       "neighbors": [
@@ -2501,10 +3114,27 @@
       ],
       "owner": null,
       "resources": 2,
+      "display_name": "Vastos",
+      "founding_name": "Vastos",
+      "name_metadata": {
+        "source": "world_builder",
+        "authored_name": "Vastos",
+        "current_name_reason": "authored",
+        "name_layers": [
+          {
+            "type": "authored",
+            "name": "Vastos",
+            "pattern": "world_builder",
+            "faction_id": null,
+            "faction_name": null,
+            "turn": 0
+          }
+        ]
+      },
       "terrain_tags": [
         "plains"
       ],
-      "climate": "temperate"
+      "climate": "Cfb"
     },
     "Yunethre": {
       "neighbors": [
@@ -2515,11 +3145,29 @@
         "West Lotharn Mountains"
       ],
       "owner": null,
-      "resources": 2,
+      "resources": 3,
+      "display_name": "Yunethre",
+      "founding_name": "Yunethre",
+      "name_metadata": {
+        "source": "world_builder",
+        "authored_name": "Yunethre",
+        "current_name_reason": "authored",
+        "name_layers": [
+          {
+            "type": "authored",
+            "name": "Yunethre",
+            "pattern": "world_builder",
+            "faction_id": null,
+            "faction_name": null,
+            "turn": 0
+          }
+        ]
+      },
       "terrain_tags": [
+        "coast",
         "steppe"
       ],
-      "climate": "temperate"
+      "climate": "Cfb"
     },
     "Pueth": {
       "neighbors": [
@@ -2528,13 +3176,31 @@
         "Feradom"
       ],
       "owner": null,
-      "resources": 2,
+      "resources": 3,
+      "display_name": "Pueth",
+      "founding_name": "Pueth",
+      "name_metadata": {
+        "source": "world_builder",
+        "authored_name": "Pueth",
+        "current_name_reason": "authored",
+        "name_layers": [
+          {
+            "type": "authored",
+            "name": "Pueth",
+            "pattern": "world_builder",
+            "faction_id": null,
+            "faction_name": null,
+            "turn": 0
+          }
+        ]
+      },
       "terrain_tags": [
+        "coast",
         "hills",
         "steppe",
         "plains"
       ],
-      "climate": "temperate"
+      "climate": "Cfb"
     },
     "Meneth": {
       "neighbors": [
@@ -2547,10 +3213,27 @@
       ],
       "owner": null,
       "resources": 2,
+      "display_name": "Meneth",
+      "founding_name": "Meneth",
+      "name_metadata": {
+        "source": "world_builder",
+        "authored_name": "Meneth",
+        "current_name_reason": "authored",
+        "name_layers": [
+          {
+            "type": "authored",
+            "name": "Meneth",
+            "pattern": "world_builder",
+            "faction_id": null,
+            "faction_name": null,
+            "turn": 0
+          }
+        ]
+      },
       "terrain_tags": [
         "plains"
       ],
-      "climate": "temperate"
+      "climate": "Cfb"
     },
     "North Ibenwood": {
       "neighbors": [
@@ -2563,12 +3246,30 @@
         "Yunethre"
       ],
       "owner": null,
-      "resources": 2,
+      "resources": 3,
+      "display_name": "North Ibenwood",
+      "founding_name": "North Ibenwood",
+      "name_metadata": {
+        "source": "world_builder",
+        "authored_name": "North Ibenwood",
+        "current_name_reason": "authored",
+        "name_layers": [
+          {
+            "type": "authored",
+            "name": "North Ibenwood",
+            "pattern": "world_builder",
+            "faction_id": null,
+            "faction_name": null,
+            "turn": 0
+          }
+        ]
+      },
       "terrain_tags": [
+        "coast",
         "highland",
         "forest"
       ],
-      "climate": "temperate"
+      "climate": "Cfb"
     },
     "Elagos": {
       "neighbors": [
@@ -2580,15 +3281,32 @@
         "Nesdor",
         "Vastos"
       ],
-      "owner": null,
+      "owner": "Faction8",
       "resources": 4,
+      "display_name": "Elagos",
+      "founding_name": "Elagos",
+      "name_metadata": {
+        "source": "world_builder",
+        "authored_name": "Elagos",
+        "current_name_reason": "authored",
+        "name_layers": [
+          {
+            "type": "authored",
+            "name": "Elagos",
+            "pattern": "world_builder",
+            "faction_id": null,
+            "faction_name": null,
+            "turn": 0
+          }
+        ]
+      },
       "terrain_tags": [
         "coast",
         "riverland",
         "forest",
         "plains"
       ],
-      "climate": "temperate"
+      "climate": "Cfb"
     },
     "Isareos": {
       "neighbors": [
@@ -2602,12 +3320,29 @@
       ],
       "owner": null,
       "resources": 3,
+      "display_name": "Isareos",
+      "founding_name": "Isareos",
+      "name_metadata": {
+        "source": "world_builder",
+        "authored_name": "Isareos",
+        "current_name_reason": "authored",
+        "name_layers": [
+          {
+            "type": "authored",
+            "name": "Isareos",
+            "pattern": "world_builder",
+            "faction_id": null,
+            "faction_name": null,
+            "turn": 0
+          }
+        ]
+      },
       "terrain_tags": [
         "riverland",
         "steppe",
         "plains"
       ],
-      "climate": "temperate"
+      "climate": "Cfb"
     },
     "Drent": {
       "neighbors": [
@@ -2617,13 +3352,30 @@
       ],
       "owner": null,
       "resources": 4,
+      "display_name": "Drent",
+      "founding_name": "Drent",
+      "name_metadata": {
+        "source": "world_builder",
+        "authored_name": "Drent",
+        "current_name_reason": "authored",
+        "name_layers": [
+          {
+            "type": "authored",
+            "name": "Drent",
+            "pattern": "world_builder",
+            "faction_id": null,
+            "faction_name": null,
+            "turn": 0
+          }
+        ]
+      },
       "terrain_tags": [
         "coast",
         "riverland",
         "steppe",
         "plains"
       ],
-      "climate": "temperate"
+      "climate": "Cfb"
     },
     "Caricas": {
       "neighbors": [
@@ -2635,11 +3387,28 @@
       ],
       "owner": null,
       "resources": 2,
+      "display_name": "Caricas",
+      "founding_name": "Caricas",
+      "name_metadata": {
+        "source": "world_builder",
+        "authored_name": "Caricas",
+        "current_name_reason": "authored",
+        "name_layers": [
+          {
+            "type": "authored",
+            "name": "Caricas",
+            "pattern": "world_builder",
+            "faction_id": null,
+            "faction_name": null,
+            "turn": 0
+          }
+        ]
+      },
       "terrain_tags": [
         "steppe",
         "plains"
       ],
-      "climate": "temperate"
+      "climate": "Cfb"
     },
     "South Ibenal": {
       "neighbors": [
@@ -2648,12 +3417,30 @@
         "West Ibenwood"
       ],
       "owner": null,
-      "resources": 3,
+      "resources": 4,
+      "display_name": "South Ibenal",
+      "founding_name": "South Ibenal",
+      "name_metadata": {
+        "source": "world_builder",
+        "authored_name": "South Ibenal",
+        "current_name_reason": "authored",
+        "name_layers": [
+          {
+            "type": "authored",
+            "name": "South Ibenal",
+            "pattern": "world_builder",
+            "faction_id": null,
+            "faction_name": null,
+            "turn": 0
+          }
+        ]
+      },
       "terrain_tags": [
+        "coast",
         "riverland",
         "steppe"
       ],
-      "climate": "temperate"
+      "climate": "Cfb"
     },
     "West Ibenwood": {
       "neighbors": [
@@ -2666,11 +3453,28 @@
       ],
       "owner": null,
       "resources": 2,
+      "display_name": "West Ibenwood",
+      "founding_name": "West Ibenwood",
+      "name_metadata": {
+        "source": "world_builder",
+        "authored_name": "West Ibenwood",
+        "current_name_reason": "authored",
+        "name_layers": [
+          {
+            "type": "authored",
+            "name": "West Ibenwood",
+            "pattern": "world_builder",
+            "faction_id": null,
+            "faction_name": null,
+            "turn": 0
+          }
+        ]
+      },
       "terrain_tags": [
         "highland",
         "forest"
       ],
-      "climate": "temperate"
+      "climate": "Cfb"
     },
     "Central Ibenwood": {
       "neighbors": [
@@ -2681,12 +3485,29 @@
       ],
       "owner": null,
       "resources": 3,
+      "display_name": "Central Ibenwood",
+      "founding_name": "Central Ibenwood",
+      "name_metadata": {
+        "source": "world_builder",
+        "authored_name": "Central Ibenwood",
+        "current_name_reason": "authored",
+        "name_layers": [
+          {
+            "type": "authored",
+            "name": "Central Ibenwood",
+            "pattern": "world_builder",
+            "faction_id": null,
+            "faction_name": null,
+            "turn": 0
+          }
+        ]
+      },
       "terrain_tags": [
         "riverland",
         "highland",
         "forest"
       ],
-      "climate": "temperate"
+      "climate": "Cfb"
     },
     "East Ibenwood": {
       "neighbors": [
@@ -2700,12 +3521,30 @@
         "West Pyros"
       ],
       "owner": null,
-      "resources": 2,
+      "resources": 3,
+      "display_name": "East Ibenwood",
+      "founding_name": "East Ibenwood",
+      "name_metadata": {
+        "source": "world_builder",
+        "authored_name": "East Ibenwood",
+        "current_name_reason": "authored",
+        "name_layers": [
+          {
+            "type": "authored",
+            "name": "East Ibenwood",
+            "pattern": "world_builder",
+            "faction_id": null,
+            "faction_name": null,
+            "turn": 0
+          }
+        ]
+      },
       "terrain_tags": [
+        "coast",
         "highland",
         "forest"
       ],
-      "climate": "temperate"
+      "climate": "Cfb"
     },
     "Luscia": {
       "neighbors": [
@@ -2716,23 +3555,59 @@
         "West Suval"
       ],
       "owner": null,
-      "resources": 2,
+      "resources": 3,
+      "display_name": "Luscia",
+      "founding_name": "Luscia",
+      "name_metadata": {
+        "source": "world_builder",
+        "authored_name": "Luscia",
+        "current_name_reason": "authored",
+        "name_layers": [
+          {
+            "type": "authored",
+            "name": "Luscia",
+            "pattern": "world_builder",
+            "faction_id": null,
+            "faction_name": null,
+            "turn": 0
+          }
+        ]
+      },
       "terrain_tags": [
+        "coast",
         "forest",
         "steppe",
         "plains"
       ],
-      "climate": "temperate"
+      "climate": "Cfb"
     },
     "Peblos": {
       "neighbors": [],
-      "owner": "Faction4",
-      "resources": 2,
+      "owner": null,
+      "resources": 3,
+      "display_name": "Peblos",
+      "founding_name": "Peblos",
+      "name_metadata": {
+        "source": "world_builder",
+        "authored_name": "Peblos",
+        "current_name_reason": "authored",
+        "name_layers": [
+          {
+            "type": "authored",
+            "name": "Peblos",
+            "pattern": "world_builder",
+            "faction_id": null,
+            "faction_name": null,
+            "turn": 0
+          }
+        ]
+      },
       "terrain_tags": [
+        "coast",
         "hills",
         "steppe"
       ],
-      "climate": "temperate"
+      "climate": "BWh"
     },
     "Nethereum": {
       "neighbors": [
@@ -2743,13 +3618,31 @@
         "Ovesos"
       ],
       "owner": null,
-      "resources": 3,
+      "resources": 4,
+      "display_name": "Nethereum",
+      "founding_name": "Nethereum",
+      "name_metadata": {
+        "source": "world_builder",
+        "authored_name": "Nethereum",
+        "current_name_reason": "authored",
+        "name_layers": [
+          {
+            "type": "authored",
+            "name": "Nethereum",
+            "pattern": "world_builder",
+            "faction_id": null,
+            "faction_name": null,
+            "turn": 0
+          }
+        ]
+      },
       "terrain_tags": [
+        "coast",
         "riverland",
         "steppe",
         "plains"
       ],
-      "climate": "temperate"
+      "climate": "Cfb"
     },
     "Nesdor": {
       "neighbors": [
@@ -2763,12 +3656,29 @@
       ],
       "owner": null,
       "resources": 2,
+      "display_name": "Nesdor",
+      "founding_name": "Nesdor",
+      "name_metadata": {
+        "source": "world_builder",
+        "authored_name": "Nesdor",
+        "current_name_reason": "authored",
+        "name_layers": [
+          {
+            "type": "authored",
+            "name": "Nesdor",
+            "pattern": "world_builder",
+            "faction_id": null,
+            "faction_name": null,
+            "turn": 0
+          }
+        ]
+      },
       "terrain_tags": [
         "forest",
         "steppe",
         "plains"
       ],
-      "climate": "temperate"
+      "climate": "Cfb"
     },
     "Moros Plain": {
       "neighbors": [
@@ -2780,10 +3690,27 @@
       ],
       "owner": null,
       "resources": 2,
+      "display_name": "Moros Plain",
+      "founding_name": "Moros Plain",
+      "name_metadata": {
+        "source": "world_builder",
+        "authored_name": "Moros Plain",
+        "current_name_reason": "authored",
+        "name_layers": [
+          {
+            "type": "authored",
+            "name": "Moros Plain",
+            "pattern": "world_builder",
+            "faction_id": null,
+            "faction_name": null,
+            "turn": 0
+          }
+        ]
+      },
       "terrain_tags": [
         "steppe"
       ],
-      "climate": "temperate"
+      "climate": "Cfb"
     },
     "East Suval": {
       "neighbors": [
@@ -2793,13 +3720,30 @@
       ],
       "owner": null,
       "resources": 3,
+      "display_name": "East Suval",
+      "founding_name": "East Suval",
+      "name_metadata": {
+        "source": "world_builder",
+        "authored_name": "East Suval",
+        "current_name_reason": "authored",
+        "name_layers": [
+          {
+            "type": "authored",
+            "name": "East Suval",
+            "pattern": "world_builder",
+            "faction_id": null,
+            "faction_name": null,
+            "turn": 0
+          }
+        ]
+      },
       "terrain_tags": [
         "coast",
         "hills",
         "steppe",
         "plains"
       ],
-      "climate": "temperate"
+      "climate": "Cfb"
     },
     "South Ibenwood": {
       "neighbors": [
@@ -2811,12 +3755,29 @@
       ],
       "owner": null,
       "resources": 3,
+      "display_name": "South Ibenwood",
+      "founding_name": "South Ibenwood",
+      "name_metadata": {
+        "source": "world_builder",
+        "authored_name": "South Ibenwood",
+        "current_name_reason": "authored",
+        "name_layers": [
+          {
+            "type": "authored",
+            "name": "South Ibenwood",
+            "pattern": "world_builder",
+            "faction_id": null,
+            "faction_name": null,
+            "turn": 0
+          }
+        ]
+      },
       "terrain_tags": [
         "riverland",
         "highland",
         "forest"
       ],
-      "climate": "temperate"
+      "climate": "Cfb"
     },
     "Nether Desert": {
       "neighbors": [
@@ -2828,11 +3789,29 @@
         "West Pyros"
       ],
       "owner": null,
-      "resources": 2,
+      "resources": 3,
+      "display_name": "Nether Desert",
+      "founding_name": "Nether Desert",
+      "name_metadata": {
+        "source": "world_builder",
+        "authored_name": "Nether Desert",
+        "current_name_reason": "authored",
+        "name_layers": [
+          {
+            "type": "authored",
+            "name": "Nether Desert",
+            "pattern": "world_builder",
+            "faction_id": null,
+            "faction_name": null,
+            "turn": 0
+          }
+        ]
+      },
       "terrain_tags": [
+        "coast",
         "steppe"
       ],
-      "climate": "temperate"
+      "climate": "BWh"
     },
     "Ovesos": {
       "neighbors": [
@@ -2845,11 +3824,28 @@
       ],
       "owner": null,
       "resources": 2,
+      "display_name": "Ovesos",
+      "founding_name": "Ovesos",
+      "name_metadata": {
+        "source": "world_builder",
+        "authored_name": "Ovesos",
+        "current_name_reason": "authored",
+        "name_layers": [
+          {
+            "type": "authored",
+            "name": "Ovesos",
+            "pattern": "world_builder",
+            "faction_id": null,
+            "faction_name": null,
+            "turn": 0
+          }
+        ]
+      },
       "terrain_tags": [
         "steppe",
         "plains"
       ],
-      "climate": "temperate"
+      "climate": "Cfb"
     },
     "West Suval": {
       "neighbors": [
@@ -2861,13 +3857,30 @@
       ],
       "owner": null,
       "resources": 3,
+      "display_name": "West Suval",
+      "founding_name": "West Suval",
+      "name_metadata": {
+        "source": "world_builder",
+        "authored_name": "West Suval",
+        "current_name_reason": "authored",
+        "name_layers": [
+          {
+            "type": "authored",
+            "name": "West Suval",
+            "pattern": "world_builder",
+            "faction_id": null,
+            "faction_name": null,
+            "turn": 0
+          }
+        ]
+      },
       "terrain_tags": [
         "coast",
         "hills",
         "steppe",
         "plains"
       ],
-      "climate": "temperate"
+      "climate": "Cfb"
     },
     "Oves Desert": {
       "neighbors": [
@@ -2879,11 +3892,28 @@
       ],
       "owner": null,
       "resources": 2,
+      "display_name": "Oves Desert",
+      "founding_name": "Oves Desert",
+      "name_metadata": {
+        "source": "world_builder",
+        "authored_name": "Oves Desert",
+        "current_name_reason": "authored",
+        "name_layers": [
+          {
+            "type": "authored",
+            "name": "Oves Desert",
+            "pattern": "world_builder",
+            "faction_id": null,
+            "faction_name": null,
+            "turn": 0
+          }
+        ]
+      },
       "terrain_tags": [
         "hills",
         "steppe"
       ],
-      "climate": "temperate"
+      "climate": "BWh"
     },
     "Alezhor": {
       "neighbors": [
@@ -2895,13 +3925,30 @@
       ],
       "owner": null,
       "resources": 4,
+      "display_name": "Alezhor",
+      "founding_name": "Alezhor",
+      "name_metadata": {
+        "source": "world_builder",
+        "authored_name": "Alezhor",
+        "current_name_reason": "authored",
+        "name_layers": [
+          {
+            "type": "authored",
+            "name": "Alezhor",
+            "pattern": "world_builder",
+            "faction_id": null,
+            "faction_name": null,
+            "turn": 0
+          }
+        ]
+      },
       "terrain_tags": [
         "coast",
         "riverland",
         "steppe",
         "plains"
       ],
-      "climate": "temperate"
+      "climate": "Cfb"
     },
     "Navarth": {
       "neighbors": [
@@ -2914,12 +3961,29 @@
       ],
       "owner": null,
       "resources": 2,
+      "display_name": "Navarth",
+      "founding_name": "Navarth",
+      "name_metadata": {
+        "source": "world_builder",
+        "authored_name": "Navarth",
+        "current_name_reason": "authored",
+        "name_layers": [
+          {
+            "type": "authored",
+            "name": "Navarth",
+            "pattern": "world_builder",
+            "faction_id": null,
+            "faction_name": null,
+            "turn": 0
+          }
+        ]
+      },
       "terrain_tags": [
         "hills",
         "forest",
         "steppe"
       ],
-      "climate": "temperate"
+      "climate": "Cfb"
     },
     "West Pyros": {
       "neighbors": [
@@ -2929,14 +3993,31 @@
         "Navarth",
         "Nether Desert"
       ],
-      "owner": null,
+      "owner": "Faction3",
       "resources": 3,
+      "display_name": "West Pyros",
+      "founding_name": "West Pyros",
+      "name_metadata": {
+        "source": "world_builder",
+        "authored_name": "West Pyros",
+        "current_name_reason": "authored",
+        "name_layers": [
+          {
+            "type": "authored",
+            "name": "West Pyros",
+            "pattern": "world_builder",
+            "faction_id": null,
+            "faction_name": null,
+            "turn": 0
+          }
+        ]
+      },
       "terrain_tags": [
         "coast",
         "steppe",
         "plains"
       ],
-      "climate": "temperate"
+      "climate": "Cfb"
     },
     "East Pyros": {
       "neighbors": [
@@ -2948,12 +4029,29 @@
       ],
       "owner": null,
       "resources": 3,
+      "display_name": "East Pyros",
+      "founding_name": "East Pyros",
+      "name_metadata": {
+        "source": "world_builder",
+        "authored_name": "East Pyros",
+        "current_name_reason": "authored",
+        "name_layers": [
+          {
+            "type": "authored",
+            "name": "East Pyros",
+            "pattern": "world_builder",
+            "faction_id": null,
+            "faction_name": null,
+            "turn": 0
+          }
+        ]
+      },
       "terrain_tags": [
         "coast",
         "steppe",
         "plains"
       ],
-      "climate": "temperate"
+      "climate": "Cfb"
     },
     "Eer": {
       "neighbors": [
@@ -2965,12 +4063,29 @@
       ],
       "owner": null,
       "resources": 3,
+      "display_name": "Eer",
+      "founding_name": "Eer",
+      "name_metadata": {
+        "source": "world_builder",
+        "authored_name": "Eer",
+        "current_name_reason": "authored",
+        "name_layers": [
+          {
+            "type": "authored",
+            "name": "Eer",
+            "pattern": "world_builder",
+            "faction_id": null,
+            "faction_name": null,
+            "turn": 0
+          }
+        ]
+      },
       "terrain_tags": [
         "coast",
         "steppe",
         "plains"
       ],
-      "climate": "temperate"
+      "climate": "Cfb"
     },
     "Gala": {
       "neighbors": [
@@ -2984,12 +4099,29 @@
       ],
       "owner": null,
       "resources": 3,
+      "display_name": "Gala",
+      "founding_name": "Gala",
+      "name_metadata": {
+        "source": "world_builder",
+        "authored_name": "Gala",
+        "current_name_reason": "authored",
+        "name_layers": [
+          {
+            "type": "authored",
+            "name": "Gala",
+            "pattern": "world_builder",
+            "faction_id": null,
+            "faction_name": null,
+            "turn": 0
+          }
+        ]
+      },
       "terrain_tags": [
         "coast",
         "steppe",
         "plains"
       ],
-      "climate": "temperate"
+      "climate": "Cfb"
     },
     "South Suval": {
       "neighbors": [
@@ -2998,13 +4130,30 @@
       ],
       "owner": null,
       "resources": 3,
+      "display_name": "South Suval",
+      "founding_name": "South Suval",
+      "name_metadata": {
+        "source": "world_builder",
+        "authored_name": "South Suval",
+        "current_name_reason": "authored",
+        "name_layers": [
+          {
+            "type": "authored",
+            "name": "South Suval",
+            "pattern": "world_builder",
+            "faction_id": null,
+            "faction_name": null,
+            "turn": 0
+          }
+        ]
+      },
       "terrain_tags": [
         "coast",
         "highland",
         "hills",
         "plains"
       ],
-      "climate": "temperate"
+      "climate": "Cfb"
     },
     "Telemonia": {
       "neighbors": [
@@ -3013,25 +4162,59 @@
         "Legemum",
         "Oves Desert"
       ],
-      "owner": null,
+      "owner": "Faction9",
       "resources": 2,
+      "display_name": "Telemonia",
+      "founding_name": "Telemonia",
+      "name_metadata": {
+        "source": "world_builder",
+        "authored_name": "Telemonia",
+        "current_name_reason": "authored",
+        "name_layers": [
+          {
+            "type": "authored",
+            "name": "Telemonia",
+            "pattern": "world_builder",
+            "faction_id": null,
+            "faction_name": null,
+            "turn": 0
+          }
+        ]
+      },
       "terrain_tags": [
         "hills",
         "steppe"
       ],
-      "climate": "temperate"
+      "climate": "Cfb"
     },
     "Iscare Archipeligo": {
       "neighbors": [],
       "owner": null,
       "resources": 3,
+      "display_name": "Iscare Archipeligo",
+      "founding_name": "Iscare Archipeligo",
+      "name_metadata": {
+        "source": "world_builder",
+        "authored_name": "Iscare Archipeligo",
+        "current_name_reason": "authored",
+        "name_layers": [
+          {
+            "type": "authored",
+            "name": "Iscare Archipeligo",
+            "pattern": "world_builder",
+            "faction_id": null,
+            "faction_name": null,
+            "turn": 0
+          }
+        ]
+      },
       "terrain_tags": [
         "coast",
         "hills",
         "steppe",
         "plains"
       ],
-      "climate": "temperate"
+      "climate": "Cfb"
     },
     "Ganesh Desert": {
       "neighbors": [
@@ -3042,11 +4225,29 @@
         "Navarth"
       ],
       "owner": null,
-      "resources": 2,
+      "resources": 3,
+      "display_name": "Ganesh Desert",
+      "founding_name": "Ganesh Desert",
+      "name_metadata": {
+        "source": "world_builder",
+        "authored_name": "Ganesh Desert",
+        "current_name_reason": "authored",
+        "name_layers": [
+          {
+            "type": "authored",
+            "name": "Ganesh Desert",
+            "pattern": "world_builder",
+            "faction_id": null,
+            "faction_name": null,
+            "turn": 0
+          }
+        ]
+      },
       "terrain_tags": [
+        "coast",
         "steppe"
       ],
-      "climate": "temperate"
+      "climate": "BWh"
     },
     "Northern Ascarth": {
       "neighbors": [
@@ -3056,12 +4257,29 @@
       ],
       "owner": null,
       "resources": 3,
+      "display_name": "Northern Ascarth",
+      "founding_name": "Northern Ascarth",
+      "name_metadata": {
+        "source": "world_builder",
+        "authored_name": "Northern Ascarth",
+        "current_name_reason": "authored",
+        "name_layers": [
+          {
+            "type": "authored",
+            "name": "Northern Ascarth",
+            "pattern": "world_builder",
+            "faction_id": null,
+            "faction_name": null,
+            "turn": 0
+          }
+        ]
+      },
       "terrain_tags": [
         "coast",
         "hills",
         "plains"
       ],
-      "climate": "temperate"
+      "climate": "Cfb"
     },
     "East Izol": {
       "neighbors": [
@@ -3069,6 +4287,23 @@
       ],
       "owner": null,
       "resources": 3,
+      "display_name": "East Izol",
+      "founding_name": "East Izol",
+      "name_metadata": {
+        "source": "world_builder",
+        "authored_name": "East Izol",
+        "current_name_reason": "authored",
+        "name_layers": [
+          {
+            "type": "authored",
+            "name": "East Izol",
+            "pattern": "world_builder",
+            "faction_id": null,
+            "faction_name": null,
+            "turn": 0
+          }
+        ]
+      },
       "terrain_tags": [
         "coast",
         "highland",
@@ -3077,7 +4312,7 @@
         "steppe",
         "plains"
       ],
-      "climate": "temperate"
+      "climate": "Cfb"
     },
     "Ganesh Plain": {
       "neighbors": [
@@ -3090,12 +4325,29 @@
       ],
       "owner": null,
       "resources": 3,
+      "display_name": "Ganesh Plain",
+      "founding_name": "Ganesh Plain",
+      "name_metadata": {
+        "source": "world_builder",
+        "authored_name": "Ganesh Plain",
+        "current_name_reason": "authored",
+        "name_layers": [
+          {
+            "type": "authored",
+            "name": "Ganesh Plain",
+            "pattern": "world_builder",
+            "faction_id": null,
+            "faction_name": null,
+            "turn": 0
+          }
+        ]
+      },
       "terrain_tags": [
         "coast",
         "steppe",
         "plains"
       ],
-      "climate": "temperate"
+      "climate": "Cfb"
     },
     "Legemum": {
       "neighbors": [
@@ -3105,13 +4357,30 @@
       ],
       "owner": null,
       "resources": 3,
+      "display_name": "Legemum",
+      "founding_name": "Legemum",
+      "name_metadata": {
+        "source": "world_builder",
+        "authored_name": "Legemum",
+        "current_name_reason": "authored",
+        "name_layers": [
+          {
+            "type": "authored",
+            "name": "Legemum",
+            "pattern": "world_builder",
+            "faction_id": null,
+            "faction_name": null,
+            "turn": 0
+          }
+        ]
+      },
       "terrain_tags": [
         "coast",
         "hills",
         "steppe",
         "plains"
       ],
-      "climate": "temperate"
+      "climate": "Cfb"
     },
     "Cape Heth": {
       "neighbors": [
@@ -3120,12 +4389,29 @@
       ],
       "owner": null,
       "resources": 3,
+      "display_name": "Cape Heth",
+      "founding_name": "Cape Heth",
+      "name_metadata": {
+        "source": "world_builder",
+        "authored_name": "Cape Heth",
+        "current_name_reason": "authored",
+        "name_layers": [
+          {
+            "type": "authored",
+            "name": "Cape Heth",
+            "pattern": "world_builder",
+            "faction_id": null,
+            "faction_name": null,
+            "turn": 0
+          }
+        ]
+      },
       "terrain_tags": [
         "coast",
         "steppe",
         "plains"
       ],
-      "climate": "temperate"
+      "climate": "BWh"
     },
     "West Izol": {
       "neighbors": [
@@ -3133,13 +4419,30 @@
       ],
       "owner": null,
       "resources": 3,
+      "display_name": "West Izol",
+      "founding_name": "West Izol",
+      "name_metadata": {
+        "source": "world_builder",
+        "authored_name": "West Izol",
+        "current_name_reason": "authored",
+        "name_layers": [
+          {
+            "type": "authored",
+            "name": "West Izol",
+            "pattern": "world_builder",
+            "faction_id": null,
+            "faction_name": null,
+            "turn": 0
+          }
+        ]
+      },
       "terrain_tags": [
         "coast",
         "hills",
         "steppe",
         "plains"
       ],
-      "climate": "temperate"
+      "climate": "Cfb"
     },
     "Dinelv Highlands": {
       "neighbors": [
@@ -3150,13 +4453,31 @@
         "West Meroshe Desert"
       ],
       "owner": null,
-      "resources": 2,
+      "resources": 3,
+      "display_name": "Dinelv Highlands",
+      "founding_name": "Dinelv Highlands",
+      "name_metadata": {
+        "source": "world_builder",
+        "authored_name": "Dinelv Highlands",
+        "current_name_reason": "authored",
+        "name_layers": [
+          {
+            "type": "authored",
+            "name": "Dinelv Highlands",
+            "pattern": "world_builder",
+            "faction_id": null,
+            "faction_name": null,
+            "turn": 0
+          }
+        ]
+      },
       "terrain_tags": [
+        "coast",
         "highland",
         "hills",
         "steppe"
       ],
-      "climate": "temperate"
+      "climate": "Cfb"
     },
     "Southern Ascarth": {
       "neighbors": [
@@ -3164,11 +4485,28 @@
       ],
       "owner": null,
       "resources": 3,
+      "display_name": "Southern Ascarth",
+      "founding_name": "Southern Ascarth",
+      "name_metadata": {
+        "source": "world_builder",
+        "authored_name": "Southern Ascarth",
+        "current_name_reason": "authored",
+        "name_layers": [
+          {
+            "type": "authored",
+            "name": "Southern Ascarth",
+            "pattern": "world_builder",
+            "faction_id": null,
+            "faction_name": null,
+            "turn": 0
+          }
+        ]
+      },
       "terrain_tags": [
         "coast",
         "plains"
       ],
-      "climate": "temperate"
+      "climate": "Cfb"
     },
     "Marosh": {
       "neighbors": [
@@ -3178,15 +4516,32 @@
         "South Meroshe Desert",
         "Trogo"
       ],
-      "owner": null,
+      "owner": "Faction4",
       "resources": 4,
+      "display_name": "Marosh",
+      "founding_name": "Marosh",
+      "name_metadata": {
+        "source": "world_builder",
+        "authored_name": "Marosh",
+        "current_name_reason": "authored",
+        "name_layers": [
+          {
+            "type": "authored",
+            "name": "Marosh",
+            "pattern": "world_builder",
+            "faction_id": null,
+            "faction_name": null,
+            "turn": 0
+          }
+        ]
+      },
       "terrain_tags": [
         "coast",
         "riverland",
         "hills",
         "plains"
       ],
-      "climate": "temperate"
+      "climate": "Cfb"
     },
     "North Meroshe Desert": {
       "neighbors": [
@@ -3198,21 +4553,55 @@
       ],
       "owner": null,
       "resources": 2,
+      "display_name": "North Meroshe Desert",
+      "founding_name": "North Meroshe Desert",
+      "name_metadata": {
+        "source": "world_builder",
+        "authored_name": "North Meroshe Desert",
+        "current_name_reason": "authored",
+        "name_layers": [
+          {
+            "type": "authored",
+            "name": "North Meroshe Desert",
+            "pattern": "world_builder",
+            "faction_id": null,
+            "faction_name": null,
+            "turn": 0
+          }
+        ]
+      },
       "terrain_tags": [
         "steppe"
       ],
-      "climate": "temperate"
+      "climate": "BWh"
     },
     "Aurumlis Archipeligo": {
       "neighbors": [],
       "owner": null,
       "resources": 3,
+      "display_name": "Aurumlis Archipeligo",
+      "founding_name": "Aurumlis Archipeligo",
+      "name_metadata": {
+        "source": "world_builder",
+        "authored_name": "Aurumlis Archipeligo",
+        "current_name_reason": "authored",
+        "name_layers": [
+          {
+            "type": "authored",
+            "name": "Aurumlis Archipeligo",
+            "pattern": "world_builder",
+            "faction_id": null,
+            "faction_name": null,
+            "turn": 0
+          }
+        ]
+      },
       "terrain_tags": [
         "coast",
         "hills",
         "plains"
       ],
-      "climate": "temperate"
+      "climate": "Cfb"
     },
     "West Meroshe Desert": {
       "neighbors": [
@@ -3222,11 +4611,29 @@
         "North Meroshe Desert"
       ],
       "owner": null,
-      "resources": 2,
+      "resources": 3,
+      "display_name": "West Meroshe Desert",
+      "founding_name": "West Meroshe Desert",
+      "name_metadata": {
+        "source": "world_builder",
+        "authored_name": "West Meroshe Desert",
+        "current_name_reason": "authored",
+        "name_layers": [
+          {
+            "type": "authored",
+            "name": "West Meroshe Desert",
+            "pattern": "world_builder",
+            "faction_id": null,
+            "faction_name": null,
+            "turn": 0
+          }
+        ]
+      },
       "terrain_tags": [
+        "coast",
         "steppe"
       ],
-      "climate": "temperate"
+      "climate": "BWh"
     },
     "Central Meroshe Desert": {
       "neighbors": [
@@ -3238,30 +4645,82 @@
       ],
       "owner": null,
       "resources": 2,
+      "display_name": "Central Meroshe Desert",
+      "founding_name": "Central Meroshe Desert",
+      "name_metadata": {
+        "source": "world_builder",
+        "authored_name": "Central Meroshe Desert",
+        "current_name_reason": "authored",
+        "name_layers": [
+          {
+            "type": "authored",
+            "name": "Central Meroshe Desert",
+            "pattern": "world_builder",
+            "faction_id": null,
+            "faction_name": null,
+            "turn": 0
+          }
+        ]
+      },
       "terrain_tags": [
         "steppe"
       ],
-      "climate": "temperate"
+      "climate": "BWh"
     },
     "Selemi": {
       "neighbors": [],
       "owner": null,
       "resources": 3,
+      "display_name": "Selemi",
+      "founding_name": "Selemi",
+      "name_metadata": {
+        "source": "world_builder",
+        "authored_name": "Selemi",
+        "current_name_reason": "authored",
+        "name_layers": [
+          {
+            "type": "authored",
+            "name": "Selemi",
+            "pattern": "world_builder",
+            "faction_id": null,
+            "faction_name": null,
+            "turn": 0
+          }
+        ]
+      },
       "terrain_tags": [
         "coast",
         "plains"
       ],
-      "climate": "temperate"
+      "climate": "Cfb"
     },
     "Azhor Stones": {
       "neighbors": [],
       "owner": null,
-      "resources": 2,
+      "resources": 3,
+      "display_name": "Azhor Stones",
+      "founding_name": "Azhor Stones",
+      "name_metadata": {
+        "source": "world_builder",
+        "authored_name": "Azhor Stones",
+        "current_name_reason": "authored",
+        "name_layers": [
+          {
+            "type": "authored",
+            "name": "Azhor Stones",
+            "pattern": "world_builder",
+            "faction_id": null,
+            "faction_name": null,
+            "turn": 0
+          }
+        ]
+      },
       "terrain_tags": [
+        "coast",
         "highland",
         "forest"
       ],
-      "climate": "temperate"
+      "climate": "Cfb"
     },
     "South Meroshe Desert": {
       "neighbors": [
@@ -3271,11 +4730,29 @@
         "Trogo"
       ],
       "owner": null,
-      "resources": 2,
+      "resources": 3,
+      "display_name": "South Meroshe Desert",
+      "founding_name": "South Meroshe Desert",
+      "name_metadata": {
+        "source": "world_builder",
+        "authored_name": "South Meroshe Desert",
+        "current_name_reason": "authored",
+        "name_layers": [
+          {
+            "type": "authored",
+            "name": "South Meroshe Desert",
+            "pattern": "world_builder",
+            "faction_id": null,
+            "faction_name": null,
+            "turn": 0
+          }
+        ]
+      },
       "terrain_tags": [
+        "coast",
         "steppe"
       ],
-      "climate": "temperate"
+      "climate": "BWh"
     },
     "Trogo": {
       "neighbors": [
@@ -3284,6 +4761,23 @@
       ],
       "owner": null,
       "resources": 4,
+      "display_name": "Trogo",
+      "founding_name": "Trogo",
+      "name_metadata": {
+        "source": "world_builder",
+        "authored_name": "Trogo",
+        "current_name_reason": "authored",
+        "name_layers": [
+          {
+            "type": "authored",
+            "name": "Trogo",
+            "pattern": "world_builder",
+            "faction_id": null,
+            "faction_name": null,
+            "turn": 0
+          }
+        ]
+      },
       "terrain_tags": [
         "coast",
         "riverland",
@@ -3291,7 +4785,7 @@
         "forest",
         "plains"
       ],
-      "climate": "temperate"
+      "climate": "Cfb"
     },
     "Hama": {
       "neighbors": [
@@ -3301,17 +4795,51 @@
       ],
       "owner": null,
       "resources": 3,
+      "display_name": "Hama",
+      "founding_name": "Hama",
+      "name_metadata": {
+        "source": "world_builder",
+        "authored_name": "Hama",
+        "current_name_reason": "authored",
+        "name_layers": [
+          {
+            "type": "authored",
+            "name": "Hama",
+            "pattern": "world_builder",
+            "faction_id": null,
+            "faction_name": null,
+            "turn": 0
+          }
+        ]
+      },
       "terrain_tags": [
         "coast",
         "steppe",
         "plains"
       ],
-      "climate": "temperate"
+      "climate": "Cfb"
     },
     "Babon": {
       "neighbors": [],
       "owner": null,
       "resources": 4,
+      "display_name": "Babon",
+      "founding_name": "Babon",
+      "name_metadata": {
+        "source": "world_builder",
+        "authored_name": "Babon",
+        "current_name_reason": "authored",
+        "name_layers": [
+          {
+            "type": "authored",
+            "name": "Babon",
+            "pattern": "world_builder",
+            "faction_id": null,
+            "faction_name": null,
+            "turn": 0
+          }
+        ]
+      },
       "terrain_tags": [
         "coast",
         "riverland",
@@ -3319,31 +4847,1439 @@
         "forest",
         "plains"
       ],
-      "climate": "temperate"
+      "climate": "Cfb"
     },
     "North Scythe": {
       "neighbors": [
         "South Scythe"
       ],
       "owner": null,
-      "resources": 2,
+      "resources": 3,
+      "display_name": "North Scythe",
+      "founding_name": "North Scythe",
+      "name_metadata": {
+        "source": "world_builder",
+        "authored_name": "North Scythe",
+        "current_name_reason": "authored",
+        "name_layers": [
+          {
+            "type": "authored",
+            "name": "North Scythe",
+            "pattern": "world_builder",
+            "faction_id": null,
+            "faction_name": null,
+            "turn": 0
+          }
+        ]
+      },
       "terrain_tags": [
+        "coast",
         "highland",
         "forest"
       ],
-      "climate": "temperate"
+      "climate": "Cfb"
     },
     "South Scythe": {
       "neighbors": [
         "North Scythe"
       ],
-      "owner": "Faction2",
-      "resources": 2,
+      "owner": null,
+      "resources": 3,
+      "display_name": "South Scythe",
+      "founding_name": "South Scythe",
+      "name_metadata": {
+        "source": "world_builder",
+        "authored_name": "South Scythe",
+        "current_name_reason": "authored",
+        "name_layers": [
+          {
+            "type": "authored",
+            "name": "South Scythe",
+            "pattern": "world_builder",
+            "faction_id": null,
+            "faction_name": null,
+            "turn": 0
+          }
+        ]
+      },
       "terrain_tags": [
+        "coast",
         "highland",
         "forest"
       ],
-      "climate": "temperate"
+      "climate": "Cfb"
+    }
+  },
+  "faction_language_families": {
+    "Faction1": {
+      "family_name": "Boueni",
+      "default_culture_name": "Boueni",
+      "traditions": [
+        "azhoran",
+        "boueni"
+      ],
+      "inspirations": [
+        "Bouen",
+        "Orgmala",
+        "Oremindi",
+        "Cudon",
+        "Celder",
+        "Mithala",
+        "Aurumlis",
+        "Inseld"
+      ],
+      "candidate_pool": [
+        "Bouenel",
+        "Wisves",
+        "Sevun",
+        "Brenoul",
+        "Tesrel",
+        "Belvem",
+        "Kuvon",
+        "Mesrel"
+      ],
+      "onsets": [
+        "az",
+        "belv",
+        "bou",
+        "bren",
+        "di",
+        "grond",
+        "ia",
+        "kuv",
+        "mes",
+        "no",
+        "sev",
+        "srel",
+        "sri",
+        "te",
+        "vel",
+        "veln",
+        "wis"
+      ],
+      "middles": [
+        "a",
+        "an",
+        "e",
+        "en",
+        "i",
+        "o",
+        "on",
+        "u"
+      ],
+      "suffixes": [
+        "el",
+        "em",
+        "i",
+        "o",
+        "on",
+        "oul",
+        "srel",
+        "un",
+        "ves"
+      ],
+      "seed_fragments": [
+        "aur",
+        "bel",
+        "bou",
+        "bren",
+        "cel",
+        "cud",
+        "kuv",
+        "mes",
+        "ore",
+        "org",
+        "sev",
+        "srel",
+        "vel",
+        "wis"
+      ],
+      "lexical_roots": {
+        "settlement": [
+          "bou",
+          "cel"
+        ],
+        "river": [
+          "ore",
+          "vel"
+        ],
+        "forest": [
+          "wis",
+          "cel"
+        ],
+        "hill": [
+          "grond",
+          "org"
+        ],
+        "plain": [
+          "sev",
+          "bel"
+        ],
+        "marsh": [
+          "srel",
+          "ore"
+        ],
+        "sea": [
+          "aur",
+          "vel"
+        ],
+        "border": [
+          "grond",
+          "kuv"
+        ],
+        "market": [
+          "mes",
+          "bel"
+        ],
+        "fort": [
+          "grond",
+          "bren"
+        ],
+        "sacred": [
+          "aur",
+          "az"
+        ],
+        "sun": [
+          "aur",
+          "sev"
+        ],
+        "ancestor": [
+          "bou",
+          "org"
+        ],
+        "ruler": [
+          "bel",
+          "kuv"
+        ],
+        "dynasty": [
+          "bou",
+          "vel"
+        ]
+      },
+      "style_notes": [
+        "Southern and island-influenced names with bou, vel, wis, and srel stems.",
+        "Soft vowel bridges lead into clipped -el, -em, -un, and -ves endings."
+      ],
+      "shift_keys": []
+    },
+    "Faction2": {
+      "family_name": "Mittoli",
+      "default_culture_name": "Mittoli",
+      "traditions": [
+        "azhoran",
+        "mittoli"
+      ],
+      "inspirations": [
+        "Azhora",
+        "Mittolo",
+        "Caeras",
+        "Alezhor",
+        "Telemonia",
+        "Legemum",
+        "Minoleth",
+        "Nilom"
+      ],
+      "candidate_pool": [
+        "Caeloss",
+        "Velith",
+        "Galom",
+        "Daelith",
+        "Azhorel",
+        "Belath",
+        "Treloss",
+        "Nilor"
+      ],
+      "onsets": [
+        "al",
+        "ar",
+        "azh",
+        "bel",
+        "cael",
+        "dael",
+        "dor",
+        "el",
+        "gal",
+        "hom",
+        "kael",
+        "mel",
+        "mir",
+        "nil",
+        "sor",
+        "tal",
+        "thal",
+        "trel",
+        "vel",
+        "zael"
+      ],
+      "middles": [
+        "a",
+        "ae",
+        "e",
+        "i",
+        "o",
+        "oe",
+        "u"
+      ],
+      "suffixes": [
+        "a",
+        "ael",
+        "an",
+        "ath",
+        "el",
+        "eth",
+        "in",
+        "ith",
+        "oe",
+        "ol",
+        "om",
+        "on",
+        "or",
+        "os",
+        "oss",
+        "um"
+      ],
+      "seed_fragments": [
+        "azh",
+        "cael",
+        "dael",
+        "gal",
+        "hom",
+        "leg",
+        "min",
+        "mitt",
+        "nil",
+        "noth",
+        "tel",
+        "trel",
+        "vel"
+      ],
+      "lexical_roots": {
+        "settlement": [
+          "hom",
+          "mitt"
+        ],
+        "river": [
+          "cael",
+          "nil"
+        ],
+        "forest": [
+          "ib",
+          "noth"
+        ],
+        "hill": [
+          "thal",
+          "dor"
+        ],
+        "plain": [
+          "gal",
+          "bel"
+        ],
+        "marsh": [
+          "ac",
+          "ib"
+        ],
+        "sea": [
+          "vel",
+          "isca"
+        ],
+        "border": [
+          "trel",
+          "dor"
+        ],
+        "market": [
+          "leg",
+          "tel"
+        ],
+        "fort": [
+          "dor",
+          "thal"
+        ],
+        "sacred": [
+          "azh",
+          "cael"
+        ],
+        "sun": [
+          "ael",
+          "sol"
+        ],
+        "ancestor": [
+          "mitt",
+          "azhor"
+        ],
+        "ruler": [
+          "tal",
+          "bel"
+        ],
+        "dynasty": [
+          "azh",
+          "dael"
+        ]
+      },
+      "style_notes": [
+        "Old Azhoran civic names with liquid consonants and open vowels.",
+        "Often favors cael, vel, and azh roots for rivers, coasts, and sacred lineages."
+      ],
+      "shift_keys": []
+    },
+    "Faction3": {
+      "family_name": "Pyrosi",
+      "default_culture_name": "Pyrosi",
+      "traditions": [
+        "azhoran",
+        "pyrosi"
+      ],
+      "inspirations": [
+        "Pyros",
+        "Navarth",
+        "Velnor",
+        "Nethereum",
+        "Isareos",
+        "Caricas",
+        "Elagos",
+        "Vastos"
+      ],
+      "candidate_pool": [
+        "Vorell",
+        "Pyrath",
+        "Kelmarr",
+        "Taeloss",
+        "Nethir",
+        "Vaellom",
+        "Raelith",
+        "Gelovan"
+      ],
+      "onsets": [
+        "bass",
+        "dre",
+        "fell",
+        "gel",
+        "kael",
+        "kel",
+        "llaer",
+        "moss",
+        "neth",
+        "nor",
+        "pyr",
+        "rael",
+        "tael",
+        "tal",
+        "vaell",
+        "vel",
+        "vor"
+      ],
+      "middles": [
+        "a",
+        "ae",
+        "e",
+        "i",
+        "o",
+        "u"
+      ],
+      "suffixes": [
+        "ael",
+        "an",
+        "ell",
+        "eth",
+        "iel",
+        "in",
+        "ir",
+        "ith",
+        "marr",
+        "om",
+        "oss",
+        "ov",
+        "van"
+      ],
+      "seed_fragments": [
+        "car",
+        "ell",
+        "gel",
+        "nav",
+        "neth",
+        "pyr",
+        "rael",
+        "tael",
+        "vel",
+        "vor"
+      ],
+      "lexical_roots": {
+        "settlement": [
+          "nav",
+          "pyr"
+        ],
+        "river": [
+          "vaell",
+          "neth"
+        ],
+        "forest": [
+          "moss",
+          "gel"
+        ],
+        "hill": [
+          "fell",
+          "vor"
+        ],
+        "plain": [
+          "tael",
+          "vast"
+        ],
+        "marsh": [
+          "neth",
+          "moss"
+        ],
+        "sea": [
+          "is",
+          "rael"
+        ],
+        "border": [
+          "vor",
+          "fell"
+        ],
+        "market": [
+          "car",
+          "gel"
+        ],
+        "fort": [
+          "bass",
+          "vor"
+        ],
+        "sacred": [
+          "pyr",
+          "rael"
+        ],
+        "sun": [
+          "pyr",
+          "tael"
+        ],
+        "ancestor": [
+          "nav",
+          "vel"
+        ],
+        "ruler": [
+          "tal",
+          "kel"
+        ],
+        "dynasty": [
+          "pyr",
+          "neth"
+        ]
+      },
+      "style_notes": [
+        "Highland and volcanic names with py, vor, vel, and neth stems.",
+        "Compounds tend toward strong initial consonants and -oss, -ell, or -marr endings."
+      ],
+      "shift_keys": []
+    },
+    "Faction4": {
+      "family_name": "Moreshi",
+      "default_culture_name": "Moreshi",
+      "traditions": [
+        "azhoran",
+        "moreshi"
+      ],
+      "inspirations": [
+        "Marosh",
+        "Meroshe",
+        "Sabr",
+        "Nuur",
+        "Ghayth",
+        "Rih",
+        "Saxr",
+        "Muruus",
+        "Maan",
+        "Waaha"
+      ],
+      "candidate_pool": [
+        "Sahraan",
+        "Nuurat",
+        "Ghaymar",
+        "Rihas",
+        "Saxrul",
+        "Maanub",
+        "Waahan",
+        "Maroshi"
+      ],
+      "onsets": [
+        "al",
+        "ar",
+        "bar",
+        "ghay",
+        "ha",
+        "kal",
+        "maan",
+        "mar",
+        "naj",
+        "nur",
+        "qad",
+        "rih",
+        "sab",
+        "sar",
+        "sax",
+        "waa",
+        "zar"
+      ],
+      "middles": [
+        "a",
+        "aa",
+        "i",
+        "ii",
+        "u",
+        "uu"
+      ],
+      "suffixes": [
+        "ah",
+        "an",
+        "as",
+        "at",
+        "b",
+        "iim",
+        "l",
+        "m",
+        "n",
+        "r",
+        "t",
+        "ub"
+      ],
+      "seed_fragments": [
+        "bar",
+        "ghay",
+        "maan",
+        "mar",
+        "mer",
+        "mur",
+        "nur",
+        "qad",
+        "rih",
+        "sab",
+        "sax",
+        "waa"
+      ],
+      "lexical_roots": {
+        "settlement": [
+          "waa",
+          "maan"
+        ],
+        "river": [
+          "nahr",
+          "wadii"
+        ],
+        "forest": [
+          "ghab",
+          "zar"
+        ],
+        "hill": [
+          "sax",
+          "qad"
+        ],
+        "plain": [
+          "mur",
+          "mer"
+        ],
+        "marsh": [
+          "sab",
+          "wadii"
+        ],
+        "sea": [
+          "bahr",
+          "mar"
+        ],
+        "border": [
+          "hadd",
+          "sax"
+        ],
+        "market": [
+          "suq",
+          "maan"
+        ],
+        "fort": [
+          "hisn",
+          "qad"
+        ],
+        "sacred": [
+          "qad",
+          "nur"
+        ],
+        "sun": [
+          "sham",
+          "nur"
+        ],
+        "ancestor": [
+          "sabr",
+          "mar"
+        ],
+        "ruler": [
+          "malik",
+          "amir"
+        ],
+        "dynasty": [
+          "mar",
+          "ghay"
+        ]
+      },
+      "style_notes": [
+        "Desert and oasis names with long vowels, hissing consonants, and compact endings.",
+        "Common roots distinguish wells, stone ridges, caravans, and old sacred sites."
+      ],
+      "shift_keys": []
+    },
+    "Faction5": {
+      "family_name": "Grassic",
+      "default_culture_name": "Grassic",
+      "traditions": [
+        "azhoran",
+        "grassic"
+      ],
+      "inspirations": [
+        "Ibenal",
+        "Ibenwood",
+        "Acorwood",
+        "Nonoth",
+        "Lond",
+        "Mithala",
+        "Thoth",
+        "Witherst"
+      ],
+      "candidate_pool": [
+        "Velveth",
+        "Kaulgeil",
+        "Aulthor",
+        "Nellgaul",
+        "Thraunel",
+        "Golvoth",
+        "Belkaul",
+        "Sorthor"
+      ],
+      "onsets": [
+        "aul",
+        "bel",
+        "gaul",
+        "gol",
+        "hom",
+        "kaul",
+        "kor",
+        "nell",
+        "sor",
+        "tel",
+        "thel",
+        "thos",
+        "thraun",
+        "vel",
+        "wol"
+      ],
+      "middles": [
+        "a",
+        "e",
+        "i",
+        "o",
+        "u"
+      ],
+      "suffixes": [
+        "aul",
+        "gaul",
+        "geil",
+        "ke",
+        "ko",
+        "ne",
+        "nel",
+        "nol",
+        "ther",
+        "thor",
+        "veth",
+        "voth"
+      ],
+      "seed_fragments": [
+        "acor",
+        "aul",
+        "bel",
+        "iben",
+        "kaul",
+        "lond",
+        "mith",
+        "nell",
+        "noth",
+        "thel",
+        "thoth",
+        "vel"
+      ],
+      "lexical_roots": {
+        "settlement": [
+          "hom",
+          "iben"
+        ],
+        "river": [
+          "aul",
+          "vel"
+        ],
+        "forest": [
+          "iben",
+          "acor"
+        ],
+        "hill": [
+          "thoth",
+          "kaul"
+        ],
+        "plain": [
+          "lond",
+          "vel"
+        ],
+        "marsh": [
+          "acor",
+          "aul"
+        ],
+        "sea": [
+          "is",
+          "wol"
+        ],
+        "border": [
+          "kor",
+          "thos"
+        ],
+        "market": [
+          "tel",
+          "hom"
+        ],
+        "fort": [
+          "kor",
+          "bel"
+        ],
+        "sacred": [
+          "thel",
+          "thoth"
+        ],
+        "sun": [
+          "aul",
+          "vel"
+        ],
+        "ancestor": [
+          "noth",
+          "mith"
+        ],
+        "ruler": [
+          "bel",
+          "thel"
+        ],
+        "dynasty": [
+          "iben",
+          "nell"
+        ]
+      },
+      "style_notes": [
+        "Woodland and grassland names with Germanic-like th, v, and l clusters.",
+        "Favors compact roots for homesteads, woods, border stones, and old clearings."
+      ],
+      "shift_keys": []
+    },
+    "Faction6": {
+      "family_name": "Ibnael",
+      "default_culture_name": "Ibnael",
+      "traditions": [
+        "azhoran",
+        "ibnael",
+        "forest_mittoli"
+      ],
+      "inspirations": [
+        "Ibenwood",
+        "Ibenal",
+        "Ibenale",
+        "Alezhor",
+        "Elagos",
+        "Dark Groves",
+        "Velmara",
+        "Ondren"
+      ],
+      "candidate_pool": [
+        "Ibnael",
+        "Ibnoss",
+        "Aeliben",
+        "Threnib",
+        "Velmorn",
+        "Nothib",
+        "Gloameth",
+        "Ossiben"
+      ],
+      "onsets": [
+        "ael",
+        "dren",
+        "glom",
+        "ib",
+        "iben",
+        "ibn",
+        "morn",
+        "noth",
+        "ond",
+        "oss",
+        "thal",
+        "thren",
+        "vel",
+        "vorn",
+        "wyr"
+      ],
+      "middles": [
+        "a",
+        "ae",
+        "e",
+        "i",
+        "o",
+        "oe",
+        "u",
+        "y"
+      ],
+      "suffixes": [
+        "ael",
+        "ath",
+        "d",
+        "el",
+        "en",
+        "eth",
+        "ib",
+        "il",
+        "n",
+        "oss",
+        "th",
+        "um",
+        "yr"
+      ],
+      "seed_fragments": [
+        "ael",
+        "dren",
+        "el",
+        "glom",
+        "ib",
+        "iben",
+        "ibn",
+        "morn",
+        "noth",
+        "ond",
+        "oss",
+        "thal",
+        "thren",
+        "vel"
+      ],
+      "lexical_roots": {
+        "settlement": [
+          "ibn",
+          "ael"
+        ],
+        "river": [
+          "vel",
+          "ond"
+        ],
+        "forest": [
+          "iben",
+          "glom"
+        ],
+        "hill": [
+          "thal",
+          "dren"
+        ],
+        "plain": [
+          "ael",
+          "vel"
+        ],
+        "marsh": [
+          "ond",
+          "ib"
+        ],
+        "sea": [
+          "ael",
+          "vorn"
+        ],
+        "border": [
+          "thren",
+          "thal"
+        ],
+        "market": [
+          "ael",
+          "vel"
+        ],
+        "fort": [
+          "dren",
+          "oss"
+        ],
+        "sacred": [
+          "iben",
+          "morn"
+        ],
+        "sun": [
+          "ael",
+          "vel"
+        ],
+        "ancestor": [
+          "noth",
+          "iben"
+        ],
+        "ruler": [
+          "ael",
+          "oss"
+        ],
+        "dynasty": [
+          "ibn",
+          "noth"
+        ]
+      },
+      "style_notes": [
+        "Forest Mittoli endonym built from Ibenwood roots and older dense substrate forms.",
+        "Favors ib, ibn, thren, and glom clusters for old forest, silence, and unseen-presence concepts."
+      ],
+      "shift_keys": []
+    },
+    "Faction7": {
+      "family_name": "Elodi",
+      "default_culture_name": "Elodi",
+      "traditions": [
+        "azhoran",
+        "elodi",
+        "koleth"
+      ],
+      "inspirations": [
+        "Elod",
+        "Elodi",
+        "Koleth",
+        "Erath Kol",
+        "Balog",
+        "Threshold",
+        "Old Kingdom",
+        "Central Island"
+      ],
+      "candidate_pool": [
+        "Elodi",
+        "Koleth",
+        "Balogeth",
+        "Erathol",
+        "Threskol",
+        "Kolven",
+        "Lodikar",
+        "Velketh"
+      ],
+      "onsets": [
+        "bal",
+        "dar",
+        "el",
+        "er",
+        "eth",
+        "kel",
+        "kol",
+        "lod",
+        "nem",
+        "od",
+        "sov",
+        "thal",
+        "vel",
+        "zar"
+      ],
+      "middles": [
+        "a",
+        "e",
+        "i",
+        "o",
+        "u",
+        "ae",
+        "ia"
+      ],
+      "suffixes": [
+        "ag",
+        "an",
+        "ath",
+        "el",
+        "eth",
+        "i",
+        "ik",
+        "od",
+        "ol",
+        "on",
+        "th",
+        "um"
+      ],
+      "seed_fragments": [
+        "bal",
+        "el",
+        "elod",
+        "erath",
+        "eth",
+        "kol",
+        "koleth",
+        "lod",
+        "od",
+        "thal",
+        "vel"
+      ],
+      "lexical_roots": {
+        "settlement": [
+          "elod",
+          "kol"
+        ],
+        "river": [
+          "vel",
+          "od"
+        ],
+        "forest": [
+          "lod",
+          "thal"
+        ],
+        "hill": [
+          "erath",
+          "kol"
+        ],
+        "plain": [
+          "er",
+          "lod"
+        ],
+        "marsh": [
+          "od",
+          "vel"
+        ],
+        "sea": [
+          "kol",
+          "vel"
+        ],
+        "border": [
+          "thal",
+          "eth"
+        ],
+        "market": [
+          "kol",
+          "bal"
+        ],
+        "fort": [
+          "bal",
+          "erath"
+        ],
+        "sacred": [
+          "bal",
+          "kol"
+        ],
+        "sun": [
+          "sov",
+          "el"
+        ],
+        "ancestor": [
+          "erath",
+          "lod"
+        ],
+        "ruler": [
+          "balog",
+          "bal"
+        ],
+        "dynasty": [
+          "kol",
+          "erath"
+        ]
+      },
+      "style_notes": [
+        "Elodi names preserve an eastern Old Kingdom lineage rather than an Azhoran family.",
+        "Koleth and Balog roots mark scriptural, administrative, and sacred authority registers."
+      ],
+      "shift_keys": []
+    },
+    "Faction8": {
+      "family_name": "Elagosi",
+      "default_culture_name": "Elagosi",
+      "traditions": [
+        "azhoran",
+        "elagosi",
+        "ambronite"
+      ],
+      "inspirations": [
+        "Elagos",
+        "Ambron",
+        "Lake Ela",
+        "Brul",
+        "Ossen",
+        "Thelas",
+        "Moros Plain",
+        "Drent"
+      ],
+      "candidate_pool": [
+        "Ambron",
+        "Elagos",
+        "Thelasi",
+        "Brulon",
+        "Osseni",
+        "Vastosel",
+        "Menethar",
+        "Elauron"
+      ],
+      "onsets": [
+        "am",
+        "amb",
+        "brul",
+        "dr",
+        "el",
+        "ela",
+        "lag",
+        "men",
+        "oss",
+        "thel",
+        "vast",
+        "ven",
+        "zel"
+      ],
+      "middles": [
+        "a",
+        "ae",
+        "e",
+        "i",
+        "o",
+        "u"
+      ],
+      "suffixes": [
+        "an",
+        "ar",
+        "el",
+        "en",
+        "eth",
+        "i",
+        "on",
+        "or",
+        "os",
+        "um"
+      ],
+      "seed_fragments": [
+        "am",
+        "ambr",
+        "brul",
+        "ela",
+        "elag",
+        "men",
+        "oss",
+        "thel",
+        "vast"
+      ],
+      "lexical_roots": {
+        "settlement": [
+          "ambr",
+          "ela"
+        ],
+        "river": [
+          "ela",
+          "thel"
+        ],
+        "forest": [
+          "men",
+          "dr"
+        ],
+        "hill": [
+          "vast",
+          "brul"
+        ],
+        "plain": [
+          "mor",
+          "oss"
+        ],
+        "marsh": [
+          "oss",
+          "ela"
+        ],
+        "sea": [
+          "ros",
+          "ela"
+        ],
+        "border": [
+          "vast",
+          "men"
+        ],
+        "market": [
+          "ambr",
+          "thel"
+        ],
+        "fort": [
+          "ambr",
+          "vast"
+        ],
+        "sacred": [
+          "ela",
+          "brul"
+        ],
+        "sun": [
+          "zel",
+          "ela"
+        ],
+        "ancestor": [
+          "ambr",
+          "elag"
+        ],
+        "ruler": [
+          "ambr",
+          "thel"
+        ],
+        "dynasty": [
+          "ambr",
+          "ela"
+        ]
+      },
+      "style_notes": [
+        "Lake Lands and Ambronite administrative names with liquid lake roots and formal civic endings.",
+        "Favors ela, ambr, thel, oss, and brul roots for lakes, prefectures, courts, and portage towns."
+      ],
+      "shift_keys": []
+    },
+    "Faction9": {
+      "family_name": "Kellith",
+      "default_culture_name": "Telemon",
+      "traditions": [
+        "azhoran",
+        "kellith",
+        "telemon"
+      ],
+      "inspirations": [
+        "Telemonia",
+        "Telemon",
+        "Kellith",
+        "Gala",
+        "Legemum",
+        "East Pyros",
+        "Verath",
+        "Highland Passes"
+      ],
+      "candidate_pool": [
+        "Kellith",
+        "Verath",
+        "Tormon",
+        "Belketh",
+        "Rothkar",
+        "Galmeth",
+        "Tarnel",
+        "Kethorn"
+      ],
+      "onsets": [
+        "bel",
+        "gal",
+        "kel",
+        "kell",
+        "keth",
+        "morn",
+        "roth",
+        "tarn",
+        "tel",
+        "tor",
+        "ver",
+        "vorn"
+      ],
+      "middles": [
+        "a",
+        "e",
+        "i",
+        "o",
+        "u"
+      ],
+      "suffixes": [
+        "an",
+        "ath",
+        "el",
+        "eth",
+        "ith",
+        "k",
+        "kar",
+        "mon",
+        "n",
+        "orn",
+        "th"
+      ],
+      "seed_fragments": [
+        "bel",
+        "gal",
+        "kel",
+        "keth",
+        "mon",
+        "roth",
+        "tarn",
+        "tel",
+        "tor",
+        "ver"
+      ],
+      "lexical_roots": {
+        "settlement": [
+          "kel",
+          "tel"
+        ],
+        "river": [
+          "ver",
+          "gal"
+        ],
+        "forest": [
+          "morn",
+          "bel"
+        ],
+        "hill": [
+          "tarn",
+          "ver"
+        ],
+        "plain": [
+          "gal",
+          "tor"
+        ],
+        "marsh": [
+          "bel",
+          "morn"
+        ],
+        "sea": [
+          "gal",
+          "vel"
+        ],
+        "border": [
+          "ver",
+          "keth"
+        ],
+        "market": [
+          "gal",
+          "tel"
+        ],
+        "fort": [
+          "keth",
+          "tarn"
+        ],
+        "sacred": [
+          "kel",
+          "ver"
+        ],
+        "sun": [
+          "tor",
+          "kel"
+        ],
+        "ancestor": [
+          "kell",
+          "mon"
+        ],
+        "ruler": [
+          "tor",
+          "keth"
+        ],
+        "dynasty": [
+          "kell",
+          "ver"
+        ]
+      },
+      "style_notes": [
+        "Telemon highland names with compact forms and hard k, t, r, and th closures.",
+        "Kellith roots emphasize passes, endurance, bands, borders, and terrain known too precisely for outsiders."
+      ],
+      "shift_keys": []
+    }
+  },
+  "faction_arrivals": {
+    "Faction2": {
+      "language": "mittoli",
+      "arrival_turn": 10,
+      "arrival_type": "disruptive_colonial_landing",
+      "entry_region": "East Mithala",
+      "origin": "foreign land",
+      "status": "foreign_colony"
+    },
+    "Faction6": {
+      "language": "ibnael",
+      "arrival_turn": 11,
+      "arrival_type": "disruptive_colonial_landing",
+      "entry_region": "South Acordwood",
+      "origin": "foreign land",
+      "status": "foreign_colony"
+    },
+    "Faction7": {
+      "language": "elodi",
+      "arrival_turn": 20,
+      "arrival_type": "disruptive_colonial_landing",
+      "entry_region": "East Suval",
+      "origin": "foreign land",
+      "status": "foreign_colony"
     }
   }
 }

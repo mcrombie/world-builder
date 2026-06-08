@@ -164,6 +164,37 @@ class ClashvergenceExportTests(unittest.TestCase):
         self.assertIn("coast", map_definition["regions"]["East"]["terrain_tags"])
         self.assertNotIn("coast", map_definition["regions"]["Inland"]["terrain_tags"])
 
+    def test_export_keeps_connected_ocean_links_local(self):
+        tmp_dir = ROOT / ".tmp_clashvergence_export_tests"
+        tmp_dir.mkdir(exist_ok=True)
+        map_path = tmp_dir / "long_ocean.azmap"
+        hexes = {
+            "0,0": {"q": 0, "r": 0, "terrain": "grassland", "region": "West"},
+            "5,0": {"q": 5, "r": 0, "terrain": "forest", "region": "NearIsland"},
+            "20,0": {"q": 20, "r": 0, "terrain": "tundra", "region": "FarNorth"},
+        }
+        for q in range(1, 20):
+            if q not in {5}:
+                hexes[f"{q},0"] = {"q": q, "r": 0, "terrain": "ocean"}
+
+        _write_test_map(
+            map_path,
+            regions={
+                "West": {"name": "West", "color": "#aaaaaa"},
+                "NearIsland": {"name": "Near Island", "color": "#bbbbbb"},
+                "FarNorth": {"name": "Far North", "color": "#cccccc"},
+            },
+            hexes=hexes,
+        )
+        try:
+            map_definition = translate(map_path, num_factions=2)
+        finally:
+            shutil.rmtree(tmp_dir)
+
+        sea_links = {tuple(link) for link in map_definition["sea_links"]}
+        self.assertIn(("NearIsland", "West"), sea_links)
+        self.assertNotIn(("FarNorth", "West"), sea_links)
+
     def test_export_treats_unregioned_coast_as_maritime_water(self):
         tmp_dir = ROOT / ".tmp_clashvergence_export_tests"
         tmp_dir.mkdir(exist_ok=True)

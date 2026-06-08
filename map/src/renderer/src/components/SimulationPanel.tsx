@@ -10,14 +10,26 @@ const SIM_PANEL_WIDTH: Record<ViewMode, string> = {
   lore:     'w-80',
 }
 
-const FACTION_PALETTE = [
-  '#e74c3c', '#3498db', '#2ecc71', '#e67e22',
-  '#9b59b6', '#1abc9c', '#f1c40f', '#e91e63',
-]
+function hashFactionName(name: string): number {
+  let hash = 2166136261
+  for (let i = 0; i < name.length; i += 1) {
+    hash ^= name.charCodeAt(i)
+    hash = Math.imul(hash, 16777619)
+  }
+  return hash >>> 0
+}
+
+function colorForFactionName(name: string): string {
+  const hash = hashFactionName(name)
+  const hue = hash % 360
+  const saturation = 58 + ((hash >>> 8) % 18)
+  const lightness = 42 + ((hash >>> 16) % 12)
+  return `hsl(${hue}, ${saturation}%, ${lightness}%)`
+}
 
 export function buildFactionColorMap(factions: { name: string }[]): Record<string, string> {
   const map: Record<string, string> = {}
-  factions.forEach((f, i) => { map[f.name] = FACTION_PALETTE[i % FACTION_PALETTE.length] })
+  factions.forEach((f) => { map[f.name] = colorForFactionName(f.name) })
   return map
 }
 

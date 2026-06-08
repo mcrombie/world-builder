@@ -19,6 +19,7 @@ from climate_compat import normalize_climate
 HEX_NEIGHBORS = [(1, 0), (1, -1), (0, -1), (-1, 0), (-1, 1), (0, 1)]
 WATER_TERRAINS = {"ocean", "lake"}
 UNREGIONED_MARITIME_TERRAINS = {"coast"}
+MAX_LOCAL_SEA_LINK_WATER_STEPS = 8
 
 
 def parse_hex_key(key: str) -> tuple[int, int]:
@@ -170,33 +171,40 @@ def load_map_graph(path: str | Path, num_factions: int = 4) -> MapGraph:
             if nb_region and nb_region != region_id:
                 region_neighbors[region_id].add(nb_region)
 
-    # Sea links via BFS through water. A region may touch water even when its
-    # painted land hexes are not explicitly tagged "coast".
+    # Sea links via local BFS through water. A region may touch water even when
+    # its painted land hexes are not explicitly tagged "coast"; keep links to
+    # nearby crossings so a whole ocean does not become one complete graph.
     water_adjacent_regions: set[str] = set()
     sea_links_set: set[tuple[str, str]] = set()
     if ocean_coords:
-        remaining = set(ocean_coords)
-        while remaining:
-            start = next(iter(remaining))
-            queue = [start]
-            visited: set[tuple[int, int]] = {start}
-            reachable: set[str] = set()
+        water_access_by_region: dict[str, set[tuple[int, int]]] = defaultdict(set)
+        for oq, or_ in ocean_coords:
+            for dq, dr in HEX_NEIGHBORS:
+                rid = hex_to_region.get((oq + dq, or_ + dr))
+                if rid is None:
+                    continue
+                water_adjacent_regions.add(rid)
+                water_access_by_region[rid].add((oq, or_))
+
+        for source_region, access_coords in water_access_by_region.items():
+            queue = [(coord, 0) for coord in access_coords]
+            visited: set[tuple[int, int]] = set(access_coords)
             while queue:
-                oq, or_ = queue.pop(0)
+                (oq, or_), distance = queue.pop(0)
                 for dq, dr in HEX_NEIGHBORS:
                     nb = (oq + dq, or_ + dr)
-                    if nb in ocean_coords and nb not in visited:
+                    target_region = hex_to_region.get(nb)
+                    if target_region is not None:
+                        if target_region != source_region:
+                            sea_links_set.add(tuple(sorted([source_region, target_region])))  # type: ignore[arg-type]
+                        continue
+                    if (
+                        nb in ocean_coords
+                        and nb not in visited
+                        and distance < MAX_LOCAL_SEA_LINK_WATER_STEPS
+                    ):
                         visited.add(nb)
-                        queue.append(nb)
-                    elif nb in hex_to_region:
-                        rid = hex_to_region[nb]
-                        water_adjacent_regions.add(rid)
-                        reachable.add(rid)
-            remaining -= visited
-            reachable_list = sorted(reachable)
-            for i, ra in enumerate(reachable_list):
-                for rb in reachable_list[i + 1:]:
-                    sea_links_set.add((ra, rb))
+                        queue.append((nb, distance + 1))
 
     # Per-region neighbor sets
     sea_neighbors_map: dict[str, set[str]] = defaultdict(set)
