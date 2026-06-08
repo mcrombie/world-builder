@@ -5,7 +5,7 @@ import { fileIO } from '../lib/fileIO'
 import { AzloreFile, Tool, LayerVisibility, RiverSize, SelectMode } from '../types/map'
 
 const TOOLS: { id: Tool; label: string; icon: string }[] = [
-  { id: 'paint',   label: 'Paint',   icon: '🖌' },
+  { id: 'paint',   label: 'Terrain', icon: '🖌' },
   { id: 'erase',   label: 'Erase',   icon: '⬜' },
   { id: 'river',   label: 'River',   icon: '〰️' },
   { id: 'region',  label: 'Region',  icon: '🗺' },
