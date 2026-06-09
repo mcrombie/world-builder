@@ -5,7 +5,7 @@ import {
   riverEdgeKey, parseRiverEdge, NEIGHBOR_TO_EDGE_SLOT, HEX_NEIGHBORS,
 } from '../lib/hex'
 import { TERRAIN_COLORS, CLIMATE_COLORS } from '../lib/terrain'
-import { FactionData, HexData, RiverSize, SimWorldState } from '../types/map'
+import { FactionData, HexData, RegionData, RiverSize, SimWorldState } from '../types/map'
 import { SelectMode } from '../types/map'
 import { buildFactionColorMap } from './SimulationPanel'
 
@@ -255,8 +255,8 @@ export function HexCanvas() {
 
     // ── Region fill + borders ─────────────────────────────────────────────────
     if (layers.regions) {
-      // Translucent fill per region
-      ctx.globalAlpha = 0.22
+      // Soft tint per region; labels carry the layer, color only separates areas.
+      ctx.globalAlpha = 0.08
       for (const hex of Object.values(hexes)) {
         if (!hex.region) continue
         const rd = regions[hex.region]
@@ -270,6 +270,7 @@ export function HexCanvas() {
 
       // Borders: draw an edge wherever adjacent hexes belong to different regions
       ctx.lineCap = 'round'
+      ctx.globalAlpha = 0.38
       for (const hex of Object.values(hexes)) {
         if (!hex.region) continue
         const rd = regions[hex.region]
@@ -279,7 +280,7 @@ export function HexCanvas() {
         if (cy + cullPad < viewT || cy - cullPad > viewB) continue
         const corners = hexCorners(cx, cy, hexSize)
         ctx.strokeStyle = rd.color
-        ctx.lineWidth = Math.max(1.5, hexSize * 0.12) / zoom
+        ctx.lineWidth = Math.max(0.9, hexSize * 0.07) / zoom
         for (let d = 0; d < 6; d++) {
           const nq = hex.q + HEX_NEIGHBORS[d].q
           const nr = hex.r + HEX_NEIGHBORS[d].r
@@ -294,35 +295,9 @@ export function HexCanvas() {
           ctx.stroke()
         }
       }
+      ctx.globalAlpha = 1
 
-      // Region name labels at centroid of each region's hex cluster
-      if (zoom > 0.25) {
-        const sums: Record<string, { x: number; y: number; n: number }> = {}
-        for (const hex of Object.values(hexes)) {
-          if (!hex.region || !regions[hex.region]) continue
-          const [cx, cy] = hexToPixel(hex.q, hex.r, hexSize)
-          if (!sums[hex.region]) sums[hex.region] = { x: 0, y: 0, n: 0 }
-          sums[hex.region].x += cx
-          sums[hex.region].y += cy
-          sums[hex.region].n++
-        }
-        ctx.textAlign = 'center'
-        ctx.textBaseline = 'middle'
-        const fontSize = Math.max(9, hexSize * 0.55)
-        ctx.font = `italic bold ${fontSize}px serif`
-        for (const [id, { x, y, n }] of Object.entries(sums)) {
-          if (n === 0) continue
-          const lx = x / n, ly = y / n
-          if (lx + cullPad < viewL || lx - cullPad > viewR) continue
-          if (ly + cullPad < viewT || ly - cullPad > viewB) continue
-          const rd = regions[id]
-          ctx.strokeStyle = 'rgba(0,0,0,0.7)'
-          ctx.lineWidth = 3 / zoom
-          ctx.strokeText(rd.name, lx, ly)
-          ctx.fillStyle = rd.color
-          ctx.fillText(rd.name, lx, ly)
-        }
-      }
+      // Region labels are drawn at the end so text remains the primary cue.
     }
 
     // ── Faction overlay (manual, non-simulation) ─────────────────────────────
@@ -551,6 +526,13 @@ export function HexCanvas() {
         const [cx, cy] = hexToPixel(pq, pr, hexSize)
         strokeHex(ctx, cx, cy, hexSize)
       }
+    }
+
+    if (layers.regions) {
+      drawRegionLabels(
+        ctx, hexes, regions, hexSize, zoom, offsetX, offsetY,
+        canvas.width, canvas.height, viewL, viewT, viewR, viewB, cullPad,
+      )
     }
 
     ctx.restore()
@@ -846,6 +828,92 @@ function drawHexFill(ctx: CanvasRenderingContext2D, cx: number, cy: number, size
   ctx.closePath()
   ctx.fillStyle = color
   ctx.fill()
+}
+
+function drawRegionLabels(
+  ctx: CanvasRenderingContext2D,
+  hexes: Record<string, HexData>,
+  regions: Record<string, RegionData>,
+  hexSize: number,
+  zoom: number,
+  offsetX: number,
+  offsetY: number,
+  canvasWidth: number,
+  canvasHeight: number,
+  viewL: number,
+  viewT: number,
+  viewR: number,
+  viewB: number,
+  cullPad: number,
+) {
+  if (canvasWidth <= 0 || canvasHeight <= 0) return
+
+  const visibleSums: Record<string, { x: number; y: number; n: number }> = {}
+  for (const hex of Object.values(hexes)) {
+    if (!hex.region || !regions[hex.region]) continue
+    const [cx, cy] = hexToPixel(hex.q, hex.r, hexSize)
+    if (cx + cullPad < viewL || cx - cullPad > viewR) continue
+    if (cy + cullPad < viewT || cy - cullPad > viewB) continue
+    const sum = visibleSums[hex.region] ?? (visibleSums[hex.region] = { x: 0, y: 0, n: 0 })
+    sum.x += cx
+    sum.y += cy
+    sum.n += 1
+  }
+
+  ctx.save()
+  ctx.setTransform(1, 0, 0, 1, 0, 0)
+  ctx.globalAlpha = 1
+  ctx.textAlign = 'center'
+  ctx.textBaseline = 'middle'
+  const fontSize = zoom > 0.7 ? 14 : zoom > 0.28 ? 13 : 12
+  const lineHeight = fontSize + 3
+  ctx.font = `700 ${fontSize}px system-ui, sans-serif`
+  ctx.lineJoin = 'round'
+  ctx.strokeStyle = 'rgba(2,6,12,0.96)'
+  ctx.lineWidth = 4.4
+  ctx.fillStyle = 'rgba(255,255,255,0.98)'
+  ctx.shadowColor = 'rgba(0,0,0,0.35)'
+  ctx.shadowBlur = 2
+
+  const pad = 34
+  for (const [id, { x, y, n }] of Object.entries(visibleSums)) {
+    if (n === 0) continue
+    const rd = regions[id]
+    const rawX = (x / n) * zoom + offsetX
+    const rawY = (y / n) * zoom + offsetY
+    const sx = Math.min(Math.max(rawX, pad), Math.max(pad, canvasWidth - pad))
+    const sy = Math.min(Math.max(rawY, pad), Math.max(pad, canvasHeight - pad))
+    const lines = splitRegionLabel(rd.name)
+    const y0 = sy - ((lines.length - 1) * lineHeight) / 2
+    for (let i = 0; i < lines.length; i += 1) {
+      const lineY = y0 + i * lineHeight
+      ctx.strokeText(lines[i], sx, lineY)
+      ctx.fillText(lines[i], sx, lineY)
+    }
+  }
+  ctx.restore()
+}
+
+function splitRegionLabel(label: string): string[] {
+  const words = label.trim().split(/\s+/).filter(Boolean)
+  if (label.length <= 18 || words.length < 2) return [label]
+
+  let bestIndex = 1
+  let bestScore = Number.POSITIVE_INFINITY
+  for (let i = 1; i < words.length; i += 1) {
+    const left = words.slice(0, i).join(' ')
+    const right = words.slice(i).join(' ')
+    const score = Math.abs(left.length - right.length) + Math.max(left.length, right.length) * 0.15
+    if (score < bestScore) {
+      bestScore = score
+      bestIndex = i
+    }
+  }
+
+  return [
+    words.slice(0, bestIndex).join(' '),
+    words.slice(bestIndex).join(' '),
+  ]
 }
 
 function strokeHex(ctx: CanvasRenderingContext2D, cx: number, cy: number, size: number) {

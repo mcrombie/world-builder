@@ -10,6 +10,11 @@ const SIM_PANEL_WIDTH: Record<ViewMode, string> = {
   lore:     'w-80',
 }
 
+type TurnLoadMarker = {
+  id: number
+  startMs: number
+}
+
 function hashFactionName(name: string): number {
   let hash = 2166136261
   for (let i = 0; i < name.length; i += 1) {
@@ -58,6 +63,13 @@ function fmtSigned(n: number, digits = 0): string {
 function fmtPct(n: number): string {
   const value = Number.isFinite(n) ? n : 0
   return `${Math.round(value * 100)}%`
+}
+
+function fmtDuration(ms: number | null): string {
+  if (ms == null || !Number.isFinite(ms)) return '--'
+  if (ms < 1000) return `${Math.round(ms)}ms`
+  if (ms < 10_000) return `${(ms / 1000).toFixed(1)}s`
+  return `${Math.round(ms / 1000)}s`
 }
 
 function clamp01(n: number): number {
@@ -155,7 +167,16 @@ export function SimulationPanel() {
   const [isAdvancing, setIsAdvancing] = useState(false)
   const [isPlaying,   setIsPlaying]   = useState(false)
   const [error, setError]             = useState<string | null>(null)
+  const [isTurnLoading, setIsTurnLoading] = useState(false)
+  const [turnLoadProgress, setTurnLoadProgress] = useState(0)
+  const [turnLoadStats, setTurnLoadStats] = useState<{
+    lastMs: number | null
+    averageMs: number | null
+    samples: number
+  }>({ lastMs: null, averageMs: null, samples: 0 })
   const playRef = useRef(false)
+  const loadStartedAtRef = useRef<number | null>(null)
+  const loadRunIdRef = useRef(0)
 
   const factionColors = useMemo(
     () => buildFactionColorMap(simWorld?.factions ?? []),
@@ -197,18 +218,77 @@ export function SimulationPanel() {
     [simWorld?.active_shocks],
   )
 
+  function beginTurnLoad(): TurnLoadMarker {
+    const marker = {
+      id: loadRunIdRef.current + 1,
+      startMs: performance.now(),
+    }
+    loadRunIdRef.current = marker.id
+    loadStartedAtRef.current = marker.startMs
+    setIsTurnLoading(true)
+    setTurnLoadProgress(0.04)
+    return marker
+  }
+
+  function recordTurnLoad(durationMs: number) {
+    setTurnLoadStats((prev) => {
+      const samples = prev.samples + 1
+      const totalBefore = (prev.averageMs ?? 0) * prev.samples
+      return {
+        lastMs: durationMs,
+        averageMs: (totalBefore + durationMs) / samples,
+        samples,
+      }
+    })
+  }
+
+  function finishTurnLoad(marker: TurnLoadMarker, recordDuration = true) {
+    if (recordDuration) recordTurnLoad(performance.now() - marker.startMs)
+    if (marker.id !== loadRunIdRef.current) return
+    loadStartedAtRef.current = null
+    setTurnLoadProgress(1)
+    window.setTimeout(() => {
+      if (marker.id === loadRunIdRef.current) {
+        setIsTurnLoading(false)
+      }
+    }, 250)
+  }
+
+  function cancelTurnLoad(marker: TurnLoadMarker) {
+    if (marker.id !== loadRunIdRef.current) return
+    loadStartedAtRef.current = null
+    setIsTurnLoading(false)
+    setTurnLoadProgress(0)
+  }
+
+  useEffect(() => {
+    if (!isTurnLoading) return
+    const timer = window.setInterval(() => {
+      const startedAt = loadStartedAtRef.current
+      if (startedAt == null) return
+      const estimateMs = Math.max(500, turnLoadStats.averageMs ?? turnLoadStats.lastMs ?? 1800)
+      const elapsedMs = performance.now() - startedAt
+      setTurnLoadProgress(Math.min(0.94, Math.max(0.04, elapsedMs / estimateMs)))
+    }, 100)
+    return () => window.clearInterval(timer)
+  }, [isTurnLoading, turnLoadStats.averageMs, turnLoadStats.lastMs])
+
   async function advanceOnce(): Promise<boolean> {
     if (IS_BROWSER || !window.electronAPI?.sim) return false
+    const loadMarker = beginTurnLoad()
     try {
       const result = await window.electronAPI.sim.advance()
       if (result.ok === false) {
         setError((result as any).error ?? 'Failed to advance turn.')
+        cancelTurnLoad(loadMarker)
         return false
       }
       setSimWorld(result as any)
+      finishTurnLoad(loadMarker)
       return true
     } catch (e: any) {
       setError(e.message)
+      cancelTurnLoad(loadMarker)
       return false
     }
   }
@@ -220,10 +300,14 @@ export function SimulationPanel() {
     setIsAdvancing(false)
   }
 
+  function handlePause() {
+    playRef.current = false
+    setIsPlaying(false)
+  }
+
   function handleTogglePlay() {
     if (isPlaying) {
-      playRef.current = false
-      setIsPlaying(false)
+      handlePause()
     } else {
       playRef.current = true
       setIsPlaying(true)
@@ -261,13 +345,18 @@ export function SimulationPanel() {
     setIsPlaying(false)
     setIsAdvancing(true)
     setError(null)
+    const loadMarker = beginTurnLoad()
     // sim.start already kills the existing process — no need to stop first
     const result = await window.electronAPI.sim.start(currentFilePath, simFactionCount, simType, simSeed)
     if (!result.ok) {
       setError(result.error ?? 'Failed to restart simulation.')
+      cancelTurnLoad(loadMarker)
     } else if (result.world) {
       setSimWorld(result.world as any)
       setSimGeneratedMapPath(result.generatedMapPath ?? '')
+      finishTurnLoad(loadMarker, false)
+    } else {
+      finishTurnLoad(loadMarker, false)
     }
     setIsAdvancing(false)
   }
@@ -289,6 +378,8 @@ export function SimulationPanel() {
   }
 
   const summary = simWorld?.summary
+  const turnLoadPercent = Math.round(clamp01(turnLoadProgress) * 100)
+  const turnLoadWidth = isTurnLoading ? Math.max(4, turnLoadPercent) : (turnLoadStats.lastMs == null ? 0 : 100)
 
   return (
     <aside className={`${SIM_PANEL_WIDTH[viewMode]} bg-gray-900 text-gray-100 flex flex-col shrink-0 overflow-hidden border-l border-gray-800`}>
@@ -299,6 +390,18 @@ export function SimulationPanel() {
         {simWorld && (
           <>
             <div className="text-sm font-bold text-indigo-300 mt-0.5">{simWorld.turn_label}</div>
+            <div className="mt-2" title={`Last ${fmtDuration(turnLoadStats.lastMs)} | Avg ${fmtDuration(turnLoadStats.averageMs)}`}>
+              <div className="h-1.5 rounded-full bg-gray-700 overflow-hidden">
+                <div
+                  className={`h-full rounded-full transition-[width] duration-150 ${isTurnLoading ? 'bg-indigo-400' : 'bg-emerald-500/60'}`}
+                  style={{ width: `${turnLoadWidth}%` }}
+                />
+              </div>
+              <div className="mt-1 flex items-center justify-between gap-2 text-[10px] text-gray-500 tabular-nums">
+                <span>{isTurnLoading ? `Loading ${turnLoadPercent}%` : 'Turn load'}</span>
+                <span className="truncate">Last {fmtDuration(turnLoadStats.lastMs)} | Avg {fmtDuration(turnLoadStats.averageMs)}</span>
+              </div>
+            </div>
             {simSeed && (
               <div className="text-[11px] text-gray-500 mt-0.5 truncate">Seed: {simSeed}</div>
             )}
@@ -523,12 +626,12 @@ export function SimulationPanel() {
               {isAdvancing ? 'Advancing…' : 'Next Turn'}
             </button>
             <button
-              className={`px-3 py-1.5 text-sm rounded font-mono ${isPlaying ? 'bg-yellow-600 hover:bg-yellow-500' : 'bg-green-700 hover:bg-green-600'} disabled:opacity-40`}
+              className={`w-20 px-3 py-1.5 text-sm rounded ${isPlaying ? 'bg-yellow-600 hover:bg-yellow-500' : 'bg-green-700 hover:bg-green-600'} disabled:opacity-40`}
               onClick={handleTogglePlay}
-              disabled={isAdvancing}
+              disabled={isAdvancing && !isPlaying}
               title={isPlaying ? 'Pause' : 'Auto-advance'}
             >
-              {isPlaying ? '⏸' : '▶'}
+              {isPlaying ? 'Pause' : 'Auto'}
             </button>
           </div>
         )}
