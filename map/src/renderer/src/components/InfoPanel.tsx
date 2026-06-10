@@ -2,7 +2,7 @@ import { useMemo, useState, useCallback } from 'react'
 import { useMapStore } from '../store/mapStore'
 import { TERRAIN_LABELS, ALL_CLIMATES } from '../lib/terrain'
 import { getClimateCodeLabel, getClimateColor, normalizeClimate } from '../lib/climate'
-import { Climate, FactionData, LoreEntry, RegionData, SettlementSize, CoreStatus, ViewMode, SimDetailSelection, SimEvent, SimFaction, SimHotRegion, SimRegion, SimWorldState } from '../types/map'
+import { Climate, FactionData, LoreEntry, RegionData, SettlementSize, CoreStatus, ViewMode, SimDetailSelection, SimDiplomacyCounterpart, SimEvent, SimFaction, SimHotRegion, SimRegion, SimWorldState } from '../types/map'
 import { buildFactionColorMap } from './SimulationPanel'
 import { FactionPanel } from './FactionPanel'
 
@@ -141,6 +141,69 @@ function DetailRows({ rows }: { rows: [string, string | number | null | undefine
   )
 }
 
+function fmtRelationScore(score: number | null | undefined): string | null {
+  if (typeof score !== 'number' || !Number.isFinite(score)) return null
+  const sign = score > 0 ? '+' : ''
+  return `${sign}${score.toFixed(1)}`
+}
+
+function fmtRelationKind(value: string | null | undefined): string {
+  if (!value) return ''
+  return value.split('_').map((part) => part.charAt(0).toUpperCase() + part.slice(1)).join(' ')
+}
+
+function DiplomaticList({
+  title,
+  entries,
+  emptyLabel,
+  tone = 'neutral',
+  factionLabel,
+  openFaction,
+  detail,
+}: {
+  title: string
+  entries: SimDiplomacyCounterpart[]
+  emptyLabel?: string
+  tone?: 'neutral' | 'good' | 'warn' | 'bad'
+  factionLabel: (name: string | null | undefined) => string
+  openFaction: (name: string | null | undefined) => void
+  detail?: (entry: SimDiplomacyCounterpart) => string | null
+}) {
+  if (entries.length === 0) {
+    if (!emptyLabel) return null
+    return (
+      <div className="rounded bg-gray-800/35 px-2.5 py-2 text-sm text-gray-500 italic">
+        {emptyLabel}
+      </div>
+    )
+  }
+  const toneClass = {
+    neutral: 'border-gray-700/60 text-gray-200',
+    good: 'border-emerald-600/40 text-emerald-100',
+    warn: 'border-amber-600/45 text-amber-100',
+    bad: 'border-red-600/45 text-red-100',
+  }[tone]
+  return (
+    <div className="flex flex-col gap-1.5">
+      <div className="text-[11px] uppercase tracking-wide text-gray-500">{title}</div>
+      {entries.map((entry) => {
+        const detailText = detail?.(entry)
+        return (
+          <button
+            key={`${title}-${entry.name}`}
+            type="button"
+            onClick={() => openFaction(entry.name)}
+            className={`rounded border bg-gray-800/45 px-2.5 py-1.5 text-left hover:bg-gray-700/70 focus:outline-none focus:ring-1 focus:ring-indigo-500 ${toneClass}`}
+          >
+            <div className="text-sm font-medium truncate">{factionLabel(entry.name)}</div>
+            {detailText && <div className="text-xs text-gray-500 truncate">{detailText}</div>}
+          </button>
+        )
+      })}
+    </div>
+  )
+}
+
 function findSimRegion(simWorld: SimWorldState, regionName: string | null | undefined): SimRegion | undefined {
   if (!regionName) return undefined
   return simWorld.regions.find((region) => region.name === regionName || region.display_name === regionName)
@@ -246,6 +309,26 @@ function SimulationDetailPanel({
         .filter((event) => eventTouchesFaction(event, faction.name))
         .slice(-8)
         .reverse()
+      const warEnemies = faction.war_enemies ?? []
+      const allies = faction.allies ?? []
+      const pacts = faction.pacts ?? []
+      const truces = faction.truces ?? []
+      const rivals = faction.rivals ?? []
+      const tributaries = faction.tributaries ?? []
+      const claimDisputes = faction.claim_disputes ?? []
+      const overlord = faction.overlord
+        ? [{ name: faction.overlord, type: faction.overlord_type ?? undefined }]
+        : []
+      const hasDiplomaticDetails = [
+        warEnemies,
+        allies,
+        pacts,
+        truces,
+        rivals,
+        tributaries,
+        claimDisputes,
+        overlord,
+      ].some((entries) => entries.length > 0)
       content = (
         <>
           <div className="grid grid-cols-2 gap-2">
@@ -288,10 +371,97 @@ function SimulationDetailPanel({
             <DetailRows rows={[
               ['Top Ally', faction.top_ally ? factionLabel(faction.top_ally) : null],
               ['Top Rival', faction.top_rival ? factionLabel(faction.top_rival) : null],
-              ['Overlord', faction.overlord ? factionLabel(faction.overlord) : null],
-              ['Tributaries', faction.tributary_count],
+              ['At War', faction.active_war_count ?? warEnemies.length],
+              ['Allies', faction.alliance_count ?? allies.length],
+              ['Pacts', faction.pact_count ?? pacts.length],
+              ['Truces', faction.truce_count ?? truces.length],
+              ['Rivals', faction.rival_count ?? rivals.length],
+              ['Overlord', faction.overlord ? `${factionLabel(faction.overlord)}${faction.overlord_type ? ` (${fmtRelationKind(faction.overlord_type)})` : ''}` : null],
+              ['Tributaries', faction.tributary_count ?? tributaries.length],
               ['Claim Disputes', faction.claim_dispute_count],
             ]} />
+            <div className="flex flex-col gap-2">
+              {!hasDiplomaticDetails && (
+                <p className="rounded bg-gray-800/35 px-2.5 py-2 text-sm text-gray-500 italic">
+                  No active diplomatic ties.
+                </p>
+              )}
+              <DiplomaticList
+                title="At War"
+                entries={warEnemies}
+                tone="bad"
+                factionLabel={factionLabel}
+                openFaction={openFaction}
+                detail={(entry) => [
+                  entry.objective ? fmtRelationKind(entry.objective) : null,
+                  typeof entry.pressure === 'number' ? `pressure ${entry.pressure.toFixed(2)}` : null,
+                ].filter(Boolean).join(' / ') || null}
+              />
+              <DiplomaticList
+                title="Allies"
+                entries={allies}
+                tone="good"
+                factionLabel={factionLabel}
+                openFaction={openFaction}
+                detail={(entry) => fmtRelationScore(entry.score) ? `score ${fmtRelationScore(entry.score)}` : null}
+              />
+              <DiplomaticList
+                title="Pacts"
+                entries={pacts}
+                tone="good"
+                factionLabel={factionLabel}
+                openFaction={openFaction}
+                detail={(entry) => fmtRelationScore(entry.score) ? `score ${fmtRelationScore(entry.score)}` : null}
+              />
+              <DiplomaticList
+                title="Truces"
+                entries={truces}
+                tone="warn"
+                factionLabel={factionLabel}
+                openFaction={openFaction}
+                detail={(entry) => [
+                  typeof entry.turns_remaining === 'number' ? `${entry.turns_remaining} turns remaining` : null,
+                  fmtRelationScore(entry.score) ? `score ${fmtRelationScore(entry.score)}` : null,
+                ].filter(Boolean).join(' / ') || null}
+              />
+              <DiplomaticList
+                title="Rivals"
+                entries={rivals}
+                tone="bad"
+                factionLabel={factionLabel}
+                openFaction={openFaction}
+                detail={(entry) => fmtRelationScore(entry.score) ? `score ${fmtRelationScore(entry.score)}` : null}
+              />
+              <DiplomaticList
+                title="Subject To"
+                entries={overlord}
+                tone="warn"
+                factionLabel={factionLabel}
+                openFaction={openFaction}
+                detail={(entry) => entry.type ? fmtRelationKind(entry.type) : null}
+              />
+              <DiplomaticList
+                title="Tributaries"
+                entries={tributaries}
+                tone="warn"
+                factionLabel={factionLabel}
+                openFaction={openFaction}
+                detail={(entry) => [
+                  entry.type ? fmtRelationKind(entry.type) : null,
+                  typeof entry.tribute_share === 'number' ? `${fmtSimPct(entry.tribute_share)} tribute` : null,
+                ].filter(Boolean).join(' / ') || null}
+              />
+              <DiplomaticList
+                title="Claim Disputes"
+                entries={claimDisputes}
+                tone="warn"
+                factionLabel={factionLabel}
+                openFaction={openFaction}
+                detail={(entry) => typeof entry.regions === 'number'
+                  ? `${entry.regions} claimed ${entry.regions === 1 ? 'region' : 'regions'}`
+                  : null}
+              />
+            </div>
           </DetailSection>
           <DetailSection title="Owned Regions">
             <div className="flex flex-col gap-1.5">

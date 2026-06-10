@@ -10,18 +10,20 @@ import { ExampleMapsDialog } from './components/ExampleMapsDialog'
 import { SimulationPanel } from './components/SimulationPanel'
 import { SimulateDialog } from './components/SimulateDialog'
 import { StoryView } from './components/StoryView'
+import { TutorialView } from './components/TutorialView'
 import { WorldBuilderIcon } from './components/WorldBuilderIcon'
 import { useMapStore } from './store/mapStore'
 import { fileIO, IS_BROWSER, type RecentFile } from './lib/fileIO'
 import { autoSave, loadAutoSave, saveToLibrary } from './lib/mapLibrary'
 import type { AzloreFile, MapData, SimWorldState } from './types/map'
 
-type AppMode = 'editor' | 'generate' | 'story'
+type AppMode = 'editor' | 'generate' | 'story' | 'tutorial'
 
 const APP_TABS: { id: AppMode; label: string }[] = [
   { id: 'editor',   label: 'Editor'     },
   { id: 'generate', label: 'Generate'   },
   { id: 'story',    label: 'Story Mode' },
+  { id: 'tutorial', label: 'Tutorial'   },
 ]
 
 export default function App() {
@@ -428,7 +430,8 @@ export default function App() {
           </div>
         )}
 
-        {appMode === 'story' && <StoryView onComplete={handleStoryComplete} />}
+        {appMode === 'story'    && <StoryView onComplete={handleStoryComplete} />}
+        {appMode === 'tutorial' && <TutorialView onExit={() => setAppMode('editor')} />}
       </div>
 
       {/* ── Status bar ── */}

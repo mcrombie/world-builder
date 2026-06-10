@@ -17,6 +17,10 @@ interface ViewState {
 
 const MIN_ZOOM = 0.05
 const MAX_ZOOM = 4
+const REGION_LABEL_MIN_ZOOM = 0.72
+const REGION_LABEL_FADE_ZOOM_RANGE = 0.18
+const FACTION_LABEL_FONT_SIZE = 18
+const FACTION_LABEL_STROKE_WIDTH = 4.8
 const SETTLEMENT_DOT_RADIUS: Record<string, number> = {
   village: 2, town: 3, city: 4, capital: 5,
 }
@@ -38,6 +42,7 @@ export function HexCanvas() {
   const layers          = useMapStore((s) => s.layers)
   const selectedHex     = useMapStore((s) => s.selectedHex)
   const selectedRegion  = useMapStore((s) => s.selectedRegion)
+  const selectedFaction = useMapStore((s) => s.selectedFaction)
   const selectMode      = useMapStore((s) => s.selectMode)
   const activeTool      = useMapStore((s) => s.activeTool)
   const brushRadius     = useMapStore((s) => s.brushRadius)
@@ -52,6 +57,7 @@ export function HexCanvas() {
   const endStroke        = useMapStore((s) => s.endStroke)
   const selectHex       = useMapStore((s) => s.selectHex)
   const selectRegion    = useMapStore((s) => s.selectRegion)
+  const setSimDetailSelection = useMapStore((s) => s.setSimDetailSelection)
   const toggleRiverEdge = useMapStore((s) => s.toggleRiverEdge)
   const simWorld        = useMapStore((s) => s.simWorld)
   const isSimulating    = useMapStore((s) => s.isSimulating)
@@ -89,7 +95,7 @@ export function HexCanvas() {
     img.src = map.underlayPath
   }, [map?.underlayPath])
 
-  useEffect(() => { needsRedraw.current = true }, [map, layers, selectedHex, selectedRegion, brushRadius, activeTool, activeRegion, activeClimate, activeFaction, simWorld, isSimulating, simDetailSelection])
+  useEffect(() => { needsRedraw.current = true }, [map, layers, selectedHex, selectedRegion, selectedFaction, brushRadius, activeTool, activeRegion, activeClimate, activeFaction, simWorld, isSimulating, simDetailSelection])
 
   // ── Render ────────────────────────────────────────────────────────────────────
 
@@ -234,9 +240,9 @@ export function HexCanvas() {
       ctx.setTransform(1, 0, 0, 1, 0, 0)   // identity: switch to screen pixels
       ctx.textAlign = 'center'
       ctx.textBaseline = 'middle'
-      ctx.font = 'bold 13px system-ui, sans-serif'
+      ctx.font = `800 ${FACTION_LABEL_FONT_SIZE}px system-ui, sans-serif`
       ctx.lineJoin = 'round'
-      ctx.lineWidth = 3.5
+      ctx.lineWidth = FACTION_LABEL_STROKE_WIDTH
       for (const [owner, c] of Object.entries(centroids)) {
         if (c.n < 3) continue
         // world → screen
@@ -362,9 +368,9 @@ export function HexCanvas() {
       ctx.setTransform(1, 0, 0, 1, 0, 0)
       ctx.textAlign = 'center'
       ctx.textBaseline = 'middle'
-      ctx.font = 'bold 13px system-ui, sans-serif'
+      ctx.font = `800 ${FACTION_LABEL_FONT_SIZE}px system-ui, sans-serif`
       ctx.lineJoin = 'round'
-      ctx.lineWidth = 3.5
+      ctx.lineWidth = FACTION_LABEL_STROKE_WIDTH
       for (const [fid, c] of Object.entries(factionCentroids)) {
         if (c.n < 3) continue
         const sx = (c.x / c.n) * zoom + offsetX
@@ -611,21 +617,18 @@ export function HexCanvas() {
   }, [mapVersion, fitView])
 
   // ── Pan to selected region ────────────────────────────────────────────────────
-  useEffect(() => {
-    if (!selectedRegion || !mapRef.current) return
+  const panToHexes = useCallback((targetHexes: HexData[], hexSize: number) => {
     const canvas = canvasRef.current
     if (!canvas) return
-    const { hexes, hexSize } = mapRef.current
-    const regionHexes = Object.values(hexes).filter(h => h.region === selectedRegion)
-    if (regionHexes.length === 0) return
+    if (targetHexes.length === 0) return
 
     let sumX = 0, sumY = 0
-    for (const h of regionHexes) {
+    for (const h of targetHexes) {
       const [px, py] = hexToPixel(h.q, h.r, hexSize)
       sumX += px; sumY += py
     }
-    const centX = sumX / regionHexes.length
-    const centY = sumY / regionHexes.length
+    const centX = sumX / targetHexes.length
+    const centY = sumY / targetHexes.length
 
     const { zoom } = view.current
     panAnim.current = {
@@ -636,7 +639,44 @@ export function HexCanvas() {
       t0:    performance.now(),
       dur:   420,
     }
-  }, [selectedRegion])
+    needsRedraw.current = true
+  }, [])
+
+  useEffect(() => {
+    if (!selectedRegion || !mapRef.current) return
+    const { hexes, hexSize } = mapRef.current
+    const regionHexes = Object.values(hexes).filter(h => h.region === selectedRegion)
+    panToHexes(regionHexes, hexSize)
+  }, [selectedRegion, panToHexes])
+
+  useEffect(() => {
+    if (!selectedFaction || isSimRef.current || !mapRef.current) return
+    const { hexes, regions, hexSize } = mapRef.current
+    const factionHexes = Object.values(hexes).filter(h => h.region && regions[h.region]?.faction === selectedFaction)
+    panToHexes(factionHexes, hexSize)
+  }, [selectedFaction, panToHexes])
+
+  useEffect(() => {
+    if (simDetailSelection?.type !== 'faction') return
+    const world = simWorldRef.current
+    const m = mapRef.current
+    if (!world || !m) return
+
+    const ownedRegionNames = new Set<string>()
+    for (const region of world.regions) {
+      if (region.owner !== simDetailSelection.factionName) continue
+      ownedRegionNames.add(region.name)
+      ownedRegionNames.add(region.display_name)
+    }
+    if (ownedRegionNames.size === 0) return
+
+    const factionHexes = Object.values(m.hexes).filter((h) => {
+      if (!h.region) return false
+      const mapRegion = m.regions[h.region]
+      return ownedRegionNames.has(h.region) || (mapRegion ? ownedRegionNames.has(mapRegion.name) : false)
+    })
+    panToHexes(factionHexes, m.hexSize)
+  }, [simDetailSelection, panToHexes])
 
   const screenToWorld = useCallback((sx: number, sy: number): [number, number] => {
     const { offsetX, offsetY, zoom } = view.current
@@ -709,17 +749,28 @@ export function HexCanvas() {
         if (coord) paintClimateHex(coord.q, coord.r)
       } else if (activeTool === 'select') {
         const coord = hexAtScreen(e.clientX, e.clientY)
-        if (selectModeRef.current === 'region') {
-          const key = coord ? hexKey(coord.q, coord.r) : null
+        const key = coord ? hexKey(coord.q, coord.r) : null
+        if (selectModeRef.current === 'faction') {
+          const regionId = key && map.hexes[key]?.region ? map.hexes[key].region! : null
+          const mapRegionName = regionId ? map.regions[regionId]?.name : null
+          const simRegion = simWorldRef.current?.regions.find((region) =>
+            region.name === regionId ||
+            region.display_name === regionId ||
+            region.name === mapRegionName ||
+            region.display_name === mapRegionName
+          )
+          if (simRegion?.owner) setSimDetailSelection({ type: 'faction', factionName: simRegion.owner })
+          else setSimDetailSelection(null)
+        } else if (selectModeRef.current === 'region') {
           const regionId = key && map.hexes[key]?.region ? map.hexes[key].region! : null
           selectRegion(regionId)
         } else {
-          selectHex(coord ? hexKey(coord.q, coord.r) : null)
+          selectHex(key)
         }
         needsRedraw.current = true
       }
     },
-    [map, activeTool, beginStroke, hexAtScreen, paintHex, paintRegionHex, paintClimateHex, paintFactionHex, selectHex, selectRegion, toggleRiverEdge, screenToWorld]
+    [map, activeTool, beginStroke, hexAtScreen, paintHex, paintRegionHex, paintClimateHex, paintFactionHex, selectHex, selectRegion, setSimDetailSelection, toggleRiverEdge, screenToWorld]
   )
 
   const onMouseMove = useCallback(
@@ -846,6 +897,7 @@ function drawRegionLabels(
   viewB: number,
   cullPad: number,
 ) {
+  if (zoom < REGION_LABEL_MIN_ZOOM) return
   if (canvasWidth <= 0 || canvasHeight <= 0) return
 
   const visibleSums: Record<string, { x: number; y: number; n: number }> = {}
@@ -862,7 +914,7 @@ function drawRegionLabels(
 
   ctx.save()
   ctx.setTransform(1, 0, 0, 1, 0, 0)
-  ctx.globalAlpha = 1
+  ctx.globalAlpha = Math.min(1, (zoom - REGION_LABEL_MIN_ZOOM) / REGION_LABEL_FADE_ZOOM_RANGE)
   ctx.textAlign = 'center'
   ctx.textBaseline = 'middle'
   const fontSize = zoom > 0.7 ? 14 : zoom > 0.28 ? 13 : 12

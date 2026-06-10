@@ -54,6 +54,7 @@ export function Toolbar() {
   const activeClimate   = useMapStore((s) => s.activeClimate)
   const activeRiverSize = useMapStore((s) => s.activeRiverSize)
   const selectMode      = useMapStore((s) => s.selectMode)
+  const isSimulating    = useMapStore((s) => s.isSimulating)
   const brushRadius     = useMapStore((s) => s.brushRadius)
   const layers        = useMapStore((s) => s.layers)
   const activeRegion  = useMapStore((s) => s.activeRegion)
@@ -158,6 +159,7 @@ export function Toolbar() {
   const regionIds = Object.keys(regions)
   const factions = map?.factions ?? {}
   const factionIds = Object.keys(factions)
+  const selectModes: SelectMode[] = isSimulating ? ['tile', 'region', 'faction'] : ['tile', 'region']
 
   return (
     <aside
@@ -224,7 +226,7 @@ export function Toolbar() {
         <section>
           <h3 className="text-xs font-semibold uppercase tracking-widest text-gray-400 mb-2">Select</h3>
           <div className="flex gap-1">
-            {(['tile', 'region'] as SelectMode[]).map((mode) => (
+            {selectModes.map((mode) => (
               <button
                 key={mode}
                 onClick={() => setSelectMode(mode)}

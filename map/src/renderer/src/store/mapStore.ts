@@ -267,8 +267,20 @@ export const useMapStore = create<MapStore>((set, get) => ({
   simSeed: '',
   simGeneratedMapPath: '',
   simDetailSelection: null,
-  setSimWorld: (world) => set({ simWorld: world, ...(world ? {} : { simDetailSelection: null }) }),
-  setSimulating: (v) => set({ isSimulating: v }),
+  setSimWorld: (world) =>
+    set((state) => ({
+      simWorld: world,
+      ...(world ? {} : {
+        simDetailSelection: null,
+        selectMode: state.selectMode === 'faction' ? 'tile' : state.selectMode,
+      }),
+    })),
+  setSimulating: (v) =>
+    set((state) => ({
+      isSimulating: v,
+      ...(v && state.activeTool === 'select' ? { selectMode: 'faction' as SelectMode } : {}),
+      ...(!v && state.selectMode === 'faction' ? { selectMode: 'tile' as SelectMode } : {}),
+    })),
   setSimFactionCount: (n) => set({ simFactionCount: n }),
   setSimType: (t) => set({ simType: t }),
   setSimSeed: (seed) => set({ simSeed: seed }),
@@ -288,6 +300,7 @@ export const useMapStore = create<MapStore>((set, get) => ({
         simDetailSelection: selection,
         selectedHex: null,
         selectedRegion: selectedRegion ?? null,
+        selectedFaction: null,
       }
     }),
 
@@ -476,7 +489,14 @@ export const useMapStore = create<MapStore>((set, get) => ({
 
   selectHex:    (key)  => set({ selectedHex: key, selectedRegion: null, selectedFaction: null, simDetailSelection: null }),
   selectRegion: (id)   => set({ selectedRegion: id, selectedHex: null, selectedFaction: null, simDetailSelection: null }),
-  setSelectMode:(mode) => set({ selectMode: mode, selectedHex: null, selectedRegion: null, selectedFaction: null, simDetailSelection: null }),
+  setSelectMode:(mode) =>
+    set((state) => ({
+      selectMode: mode === 'faction' && !state.isSimulating ? 'tile' : mode,
+      selectedHex: null,
+      selectedRegion: null,
+      selectedFaction: null,
+      simDetailSelection: null,
+    })),
 
   updateHex: (key, data) =>
     set((state) => {
@@ -489,7 +509,13 @@ export const useMapStore = create<MapStore>((set, get) => ({
       return { map: nextMap, isDirty: true }
     }),
 
-  setTool: (tool) => set({ activeTool: tool }),
+  setTool: (tool) =>
+    set((state) => ({
+      activeTool: tool,
+      ...(tool === 'select'
+        ? { selectMode: state.isSimulating ? 'faction' as SelectMode : state.selectMode === 'faction' ? 'tile' as SelectMode : state.selectMode }
+        : {}),
+    })),
   setTerrain: (terrain) => set({ activeTerrain: terrain }),
   setClimate: (climate) => set({ activeClimate: normalizeClimate(climate) }),
   setRiverSize: (size) => set({ activeRiverSize: size }),

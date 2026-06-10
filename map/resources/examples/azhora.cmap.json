@@ -93,6 +93,18 @@
     ],
     [
       "Azhor Stones",
+      "Maanub"
+    ],
+    [
+      "Azhor Stones",
+      "Nuurat"
+    ],
+    [
+      "Azhor Stones",
+      "Rihas"
+    ],
+    [
+      "Azhor Stones",
       "Selemi"
     ],
     [
@@ -130,6 +142,14 @@
     [
       "Babon",
       "Trogo"
+    ],
+    [
+      "Barqat",
+      "Qadmar"
+    ],
+    [
+      "Barqat",
+      "Sabrqad"
     ],
     [
       "Cape Heth",
@@ -520,6 +540,22 @@
       "South Suval"
     ],
     [
+      "Maanub",
+      "Nuurat"
+    ],
+    [
+      "Maanub",
+      "Rihas"
+    ],
+    [
+      "Maanub",
+      "Saxrul"
+    ],
+    [
+      "Maanub",
+      "Waahan"
+    ],
+    [
       "Marosh",
       "Trogo"
     ],
@@ -656,12 +692,40 @@
       "West Endevor"
     ],
     [
+      "Nuurat",
+      "Rihas"
+    ],
+    [
+      "Nuurat",
+      "Saxrul"
+    ],
+    [
       "Peblos",
       "Pueth"
     ],
     [
       "Peblos",
       "South Suval"
+    ],
+    [
+      "Qadmar",
+      "Sabrqad"
+    ],
+    [
+      "Qadmar",
+      "Waahan"
+    ],
+    [
+      "Rihas",
+      "Saxrul"
+    ],
+    [
+      "Rihas",
+      "Waahan"
+    ],
+    [
+      "Saxrul",
+      "Waahan"
     ],
     [
       "Selemi",
@@ -4848,6 +4912,64 @@
       ],
       "climate": "Csa"
     },
+    "Maanub": {
+      "neighbors": [],
+      "owner": null,
+      "resources": 3,
+      "display_name": "Maanub",
+      "founding_name": "Maanub",
+      "name_metadata": {
+        "source": "world_builder",
+        "authored_name": "Maanub",
+        "current_name_reason": "authored",
+        "name_layers": [
+          {
+            "type": "authored",
+            "name": "Maanub",
+            "pattern": "world_builder",
+            "faction_id": null,
+            "faction_name": null,
+            "turn": 0
+          }
+        ]
+      },
+      "terrain_tags": [
+        "coast",
+        "highland",
+        "forest"
+      ],
+      "climate": "Af"
+    },
+    "Nuurat": {
+      "neighbors": [
+        "Rihas"
+      ],
+      "owner": null,
+      "resources": 3,
+      "display_name": "Nuurat",
+      "founding_name": "Nuurat",
+      "name_metadata": {
+        "source": "world_builder",
+        "authored_name": "Nuurat",
+        "current_name_reason": "authored",
+        "name_layers": [
+          {
+            "type": "authored",
+            "name": "Nuurat",
+            "pattern": "world_builder",
+            "faction_id": null,
+            "faction_name": null,
+            "turn": 0
+          }
+        ]
+      },
+      "terrain_tags": [
+        "coast",
+        "highland",
+        "forest"
+      ],
+      "climate": "Af"
+    },
     "North Scythe": {
       "neighbors": [
         "South Scythe"
@@ -4878,6 +5000,37 @@
       ],
       "climate": "Af"
     },
+    "Rihas": {
+      "neighbors": [
+        "Nuurat",
+        "Saxrul"
+      ],
+      "owner": null,
+      "resources": 3,
+      "display_name": "Rihas",
+      "founding_name": "Rihas",
+      "name_metadata": {
+        "source": "world_builder",
+        "authored_name": "Rihas",
+        "current_name_reason": "authored",
+        "name_layers": [
+          {
+            "type": "authored",
+            "name": "Rihas",
+            "pattern": "world_builder",
+            "faction_id": null,
+            "faction_name": null,
+            "turn": 0
+          }
+        ]
+      },
+      "terrain_tags": [
+        "coast",
+        "highland",
+        "forest"
+      ],
+      "climate": "Af"
+    },
     "South Scythe": {
       "neighbors": [
         "North Scythe"
@@ -4894,6 +5047,195 @@
           {
             "type": "authored",
             "name": "South Scythe",
+            "pattern": "world_builder",
+            "faction_id": null,
+            "faction_name": null,
+            "turn": 0
+          }
+        ]
+      },
+      "terrain_tags": [
+        "coast",
+        "highland",
+        "forest"
+      ],
+      "climate": "Af"
+    },
+    "Waahan": {
+      "neighbors": [
+        "Barqat",
+        "Qadmar",
+        "Saxrul"
+      ],
+      "owner": null,
+      "resources": 3,
+      "display_name": "Waahan",
+      "founding_name": "Waahan",
+      "name_metadata": {
+        "source": "world_builder",
+        "authored_name": "Waahan",
+        "current_name_reason": "authored",
+        "name_layers": [
+          {
+            "type": "authored",
+            "name": "Waahan",
+            "pattern": "world_builder",
+            "faction_id": null,
+            "faction_name": null,
+            "turn": 0
+          }
+        ]
+      },
+      "terrain_tags": [
+        "coast",
+        "highland",
+        "forest"
+      ],
+      "climate": "Af"
+    },
+    "Saxrul": {
+      "neighbors": [
+        "Barqat",
+        "Rihas",
+        "Waahan"
+      ],
+      "owner": null,
+      "resources": 3,
+      "display_name": "Saxrul",
+      "founding_name": "Saxrul",
+      "name_metadata": {
+        "source": "world_builder",
+        "authored_name": "Saxrul",
+        "current_name_reason": "authored",
+        "name_layers": [
+          {
+            "type": "authored",
+            "name": "Saxrul",
+            "pattern": "world_builder",
+            "faction_id": null,
+            "faction_name": null,
+            "turn": 0
+          }
+        ]
+      },
+      "terrain_tags": [
+        "coast",
+        "highland",
+        "forest"
+      ],
+      "climate": "Af"
+    },
+    "Qadmar": {
+      "neighbors": [
+        "Barqat",
+        "Waahan"
+      ],
+      "owner": null,
+      "resources": 3,
+      "display_name": "Qadmar",
+      "founding_name": "Qadmar",
+      "name_metadata": {
+        "source": "world_builder",
+        "authored_name": "Qadmar",
+        "current_name_reason": "authored",
+        "name_layers": [
+          {
+            "type": "authored",
+            "name": "Qadmar",
+            "pattern": "world_builder",
+            "faction_id": null,
+            "faction_name": null,
+            "turn": 0
+          }
+        ]
+      },
+      "terrain_tags": [
+        "coast",
+        "highland",
+        "forest"
+      ],
+      "climate": "Af"
+    },
+    "Barqat": {
+      "neighbors": [
+        "Qadmar",
+        "Sabrqad",
+        "Saxrul",
+        "Waahan"
+      ],
+      "owner": null,
+      "resources": 3,
+      "display_name": "Barqat",
+      "founding_name": "Barqat",
+      "name_metadata": {
+        "source": "world_builder",
+        "authored_name": "Barqat",
+        "current_name_reason": "authored",
+        "name_layers": [
+          {
+            "type": "authored",
+            "name": "Barqat",
+            "pattern": "world_builder",
+            "faction_id": null,
+            "faction_name": null,
+            "turn": 0
+          }
+        ]
+      },
+      "terrain_tags": [
+        "coast",
+        "highland",
+        "forest"
+      ],
+      "climate": "Af"
+    },
+    "Sabrqad": {
+      "neighbors": [
+        "Barqat",
+        "Waahaat"
+      ],
+      "owner": null,
+      "resources": 3,
+      "display_name": "Sabrqad",
+      "founding_name": "Sabrqad",
+      "name_metadata": {
+        "source": "world_builder",
+        "authored_name": "Sabrqad",
+        "current_name_reason": "authored",
+        "name_layers": [
+          {
+            "type": "authored",
+            "name": "Sabrqad",
+            "pattern": "world_builder",
+            "faction_id": null,
+            "faction_name": null,
+            "turn": 0
+          }
+        ]
+      },
+      "terrain_tags": [
+        "coast",
+        "highland",
+        "forest"
+      ],
+      "climate": "Af"
+    },
+    "Waahaat": {
+      "neighbors": [
+        "Sabrqad"
+      ],
+      "owner": null,
+      "resources": 3,
+      "display_name": "Waahaat",
+      "founding_name": "Waahaat",
+      "name_metadata": {
+        "source": "world_builder",
+        "authored_name": "Waahaat",
+        "current_name_reason": "authored",
+        "name_layers": [
+          {
+            "type": "authored",
+            "name": "Waahaat",
             "pattern": "world_builder",
             "faction_id": null,
             "faction_name": null,

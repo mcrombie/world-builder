@@ -100,6 +100,17 @@ export interface MapData {
   factions?: Record<string, FactionData> // factionId → FactionData
 }
 
+export interface SimDiplomacyCounterpart {
+  name: string
+  score?: number
+  pressure?: number
+  objective?: string
+  turns_remaining?: number
+  tribute_share?: number
+  type?: string
+  regions?: number
+}
+
 export interface SimFaction {
   name: string
   display_name: string
@@ -134,8 +145,22 @@ export interface SimFaction {
   top_ally?: string | null
   top_rival?: string | null
   overlord?: string | null
+  overlord_type?: string | null
+  top_tributary?: string | null
+  alliance_count?: number
+  pact_count?: number
+  truce_count?: number
+  rival_count?: number
+  active_war_count?: number
   tributary_count?: number
   claim_dispute_count?: number
+  war_enemies?: SimDiplomacyCounterpart[]
+  allies?: SimDiplomacyCounterpart[]
+  pacts?: SimDiplomacyCounterpart[]
+  truces?: SimDiplomacyCounterpart[]
+  rivals?: SimDiplomacyCounterpart[]
+  tributaries?: SimDiplomacyCounterpart[]
+  claim_disputes?: SimDiplomacyCounterpart[]
 }
 
 export interface SimRegion {
@@ -234,7 +259,7 @@ export interface SimWorldState {
 }
 
 export type Tool = 'paint' | 'erase' | 'select' | 'pan' | 'river' | 'region' | 'climate' | 'faction'
-export type SelectMode = 'tile' | 'region'
+export type SelectMode = 'tile' | 'region' | 'faction'
 export type ViewMode = 'map' | 'balanced' | 'panel' | 'lore'
 
 export interface LayerVisibility {

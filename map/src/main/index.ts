@@ -366,13 +366,20 @@ async function _spawnServer(
   }
 }
 
+function collectResponse(res: http.IncomingMessage): Promise<string> {
+  return new Promise((resolve, reject) => {
+    const chunks: Buffer[] = []
+    res.on('data', (chunk: Buffer) => chunks.push(chunk))
+    res.on('end', () => resolve(Buffer.concat(chunks).toString('utf-8')))
+    res.on('error', reject)
+  })
+}
+
 function simGet(path: string): Promise<string> {
   return new Promise((resolve, reject) => {
-    const req = http.get(`http://127.0.0.1:${SIM_PORT}${path}`, (res) => {
-      let data = ''
-      res.on('data', (chunk: Buffer) => { data += chunk })
-      res.on('end', () => resolve(data))
-    })
+    const req = http.get(`http://127.0.0.1:${SIM_PORT}${path}`, (res) =>
+      collectResponse(res).then(resolve, reject)
+    )
     req.on('error', reject)
   })
 }
@@ -383,11 +390,7 @@ function simPost(path: string, body: object): Promise<string> {
     const req = http.request(
       { hostname: '127.0.0.1', port: SIM_PORT, path, method: 'POST',
         headers: { 'Content-Type': 'application/json', 'Content-Length': Buffer.byteLength(payload) } },
-      (res) => {
-        let data = ''
-        res.on('data', (chunk: Buffer) => { data += chunk })
-        res.on('end', () => resolve(data))
-      },
+      (res) => collectResponse(res).then(resolve, reject),
     )
     req.on('error', reject)
     req.write(payload)
