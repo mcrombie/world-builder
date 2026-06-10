@@ -281,6 +281,25 @@ export default function App() {
           ))}
         </div>
 
+        {/* Tutorial-mode controls: Save + Simulate */}
+        {appMode === 'tutorial' && !IS_BROWSER && (<>
+          <button
+            className={`px-3 py-1 text-sm rounded ${isDirty ? 'hover:bg-gray-700' : 'opacity-40 cursor-default'}`}
+            onClick={handleSave}
+            disabled={!isDirty}
+          >
+            Save{isDirty ? ' *' : ''}
+          </button>
+          <button
+            className={`px-3 py-1 text-sm rounded ${isSimulating ? 'bg-indigo-700 text-white hover:bg-indigo-600' : map && currentPath ? 'hover:bg-gray-700' : 'opacity-40 cursor-default'}`}
+            onClick={handleSimulate}
+            disabled={!map || !currentPath}
+            title={isSimulating ? 'Stop simulation' : !map ? 'Load a map first' : !currentPath ? 'Save the map first' : 'Run Clashvergence simulation'}
+          >
+            {isSimulating ? 'Simulating…' : 'Simulate'}
+          </button>
+        </>)}
+
         {/* Editor-only controls */}
         {appMode === 'editor' && (<>
         <button className="px-3 py-1 text-sm rounded hover:bg-gray-700" onClick={() => setShowNewDialog(true)}>

@@ -1,4 +1,4 @@
-import { useState, useEffect, useRef, useCallback } from 'react'
+import { useState, useEffect, useRef, useCallback, useMemo } from 'react'
 import { useMapStore } from '../store/mapStore'
 import { TERRAIN_LABELS } from '../lib/terrain'
 import { getClimateCodeLabel } from '../lib/climate'
@@ -90,6 +90,21 @@ export function TutorialPanel({ stepIndex, onNext, onBack, onExit, visible }: Pr
   }
   const isComplete = step.isComplete(completionState)
 
+  // ── Region terrain/settlement stats ──────────────────────────────────────
+  const regionStats = useMemo(() => {
+    if (!selectedRegionId || !map) return null
+    const terrainCounts: Partial<Record<TerrainType, number>> = {}
+    const settlements: string[] = []
+    for (const hex of Object.values(map.hexes)) {
+      if (hex.region !== selectedRegionId) continue
+      terrainCounts[hex.terrain] = (terrainCounts[hex.terrain] ?? 0) + 1
+      if (hex.settlement) settlements.push(hex.settlement)
+    }
+    const terrainEntries = (Object.entries(terrainCounts) as [TerrainType, number][])
+      .sort((a, b) => b[1] - a[1])
+    return { terrainEntries, settlements }
+  }, [selectedRegionId, map])
+
   // ── Step 7 sub-step state ─────────────────────────────────────────────────
   const isSaved = currentPath !== null && !currentPath.startsWith('__')
 
@@ -150,28 +165,70 @@ export function TutorialPanel({ stepIndex, onNext, onBack, onExit, visible }: Pr
 
         {/* ── Selected region context ── */}
         {selectedRegion && step.selectMode === 'region' && (
-          <div className="mt-2 rounded-lg bg-gray-800 px-4 py-3 flex flex-col gap-1.5">
-            <p className="text-xs font-medium uppercase tracking-wide text-gray-400">Selected Region</p>
+          <div className="mt-2 rounded-lg bg-gray-800 px-4 py-3 flex flex-col gap-2">
+            {/* Name + colour swatch */}
             <div className="flex items-center gap-2">
               {selectedRegion.color && (
                 <div className="w-3 h-3 rounded-sm shrink-0" style={{ background: selectedRegion.color }} />
               )}
-              <p className="text-sm font-medium text-gray-100">{selectedRegion.name}</p>
+              <p className="text-sm font-semibold text-gray-100">{selectedRegion.name}</p>
             </div>
-            {selectedRegion.coreStatus && (
-              <p className="text-xs text-gray-400">
-                Status: <span className="text-gray-300 capitalize">{selectedRegion.coreStatus}</span>
-              </p>
+
+            <div className="flex flex-col gap-1">
+              {/* Climate */}
+              {selectedRegion.climate && (
+                <div className="flex justify-between items-baseline gap-2">
+                  <span className="text-xs text-gray-500 shrink-0">Climate</span>
+                  <span className="text-xs text-gray-200 text-right">
+                    {getClimateCodeLabel(selectedRegion.climate)}
+                    <span className="text-gray-500 ml-1">({selectedRegion.climate})</span>
+                  </span>
+                </div>
+              )}
+
+              {/* Faction */}
+              {selectedRegion.faction && map?.factions?.[selectedRegion.faction] && (
+                <div className="flex justify-between items-baseline gap-2">
+                  <span className="text-xs text-gray-500 shrink-0">Faction</span>
+                  <span className="text-xs text-gray-200">{map.factions[selectedRegion.faction].name}</span>
+                </div>
+              )}
+
+              {/* Core status */}
+              {selectedRegion.coreStatus && (
+                <div className="flex justify-between items-baseline gap-2">
+                  <span className="text-xs text-gray-500 shrink-0">Status</span>
+                  <span className="text-xs text-gray-200 capitalize">{selectedRegion.coreStatus}</span>
+                </div>
+              )}
+            </div>
+
+            {/* Terrain breakdown */}
+            {regionStats && regionStats.terrainEntries.length > 0 && (
+              <div>
+                <p className="text-xs text-gray-500 mb-1">Terrain</p>
+                <div className="flex flex-wrap gap-1.5">
+                  {regionStats.terrainEntries.map(([type, count]) => (
+                    <span
+                      key={type}
+                      className="inline-flex items-center gap-1 px-1.5 py-0.5 rounded bg-gray-700 text-xs text-gray-300"
+                    >
+                      {TERRAIN_LABELS[type] ?? type}
+                      <span className="text-gray-500">×{count}</span>
+                    </span>
+                  ))}
+                </div>
+              </div>
             )}
-            {selectedRegion.faction && map?.factions?.[selectedRegion.faction] && (
-              <p className="text-xs text-gray-400">
-                Faction: <span className="text-gray-300">{map.factions[selectedRegion.faction].name}</span>
-              </p>
-            )}
-            {selectedRegion.climate && (
-              <p className="text-xs text-gray-400">
-                Climate: <span className="text-gray-300">{selectedRegion.climate} – {getClimateCodeLabel(selectedRegion.climate)}</span>
-              </p>
+
+            {/* Settlements */}
+            {regionStats && regionStats.settlements.length > 0 && (
+              <div>
+                <p className="text-xs text-gray-500 mb-1">
+                  {regionStats.settlements.length === 1 ? 'Settlement' : 'Settlements'}
+                </p>
+                <p className="text-xs text-gray-300">{regionStats.settlements.join(', ')}</p>
+              </div>
             )}
           </div>
         )}
@@ -220,7 +277,7 @@ export function TutorialPanel({ stepIndex, onNext, onBack, onExit, visible }: Pr
                 {isSimulating ? '✓' : '2'}
               </div>
               <p className={`text-xs ${isSimulating ? 'text-green-300' : isSaved ? 'text-gray-400' : 'text-gray-600'}`}>
-                Click <span className="font-medium">Simulate</span> in the toolbar
+                Click <span className="font-medium">Simulate</span> in the header bar
               </p>
             </div>
           </div>

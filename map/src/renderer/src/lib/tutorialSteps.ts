@@ -95,14 +95,14 @@ export const TUTORIAL_STEPS: TutorialStep[] = [
     title: 'Factions — Who Will Rule',
     eyebrow: 'Step 5 of 9 — The Peoples',
     prose: [
-      'Factions are the simulation\'s actors. Each begins in a homeland you define on the map. They expand from there, driven by their doctrine — a strategic personality shaped by their home terrain and climate.',
+      'Factions are the simulation\'s actors. Each begins in a homeland you define on this map. They expand from there, driven by their doctrine — a strategic personality shaped by their home terrain and climate.',
       'A faction born in mountain highlands will prioritise horses, iron, and defensible positions. One from rich riverland plains will pursue grain surpluses, trade networks, and population growth. Neither approach is universally right; the map determines what works.',
-      'Coloured regions show faction starting territories. Click a coloured region to see which faction it belongs to.',
+      'Factions are generated when you start the simulation — they don\'t exist on the map yet. Any region could become a faction\'s homeland. Click one to see what it has to offer.',
     ],
-    action: 'Click a faction-coloured region',
-    layers: { terrain: true, climate: false, regions: true, factions: true, settlements: false, grid: false, rivers: true, underlay: false },
+    action: 'Click any region',
+    layers: { terrain: true, climate: false, regions: true, factions: true, settlements: true, grid: false, rivers: true, underlay: false },
     selectMode: 'region',
-    isComplete: (s) => s.selectedRegion?.faction !== undefined && s.selectedRegion.faction !== null,
+    isComplete: (s) => s.selectedRegion !== null,
   },
 
   // ── Step 6: Resources ────────────────────────────────────────────────────────
@@ -129,9 +129,9 @@ export const TUTORIAL_STEPS: TutorialStep[] = [
     prose: [
       'Each simulated year, every faction evaluates its position and picks one action: expand into an adjacent hex, attack an enemy, develop their existing regions to improve production, or skip and consolidate.',
       'These choices are driven by treasury, military readiness, food security, doctrine, and diplomacy. A faction running a food deficit will not expand. One with a large army but an empty treasury will struggle to sustain a campaign.',
-      'Save the map first, then click Simulate in the toolbar to start. You\'ll be able to choose the number of factions and a seed.',
+      'Save the map first, then click Simulate in the header bar to start. You\'ll be able to choose the number of factions and a seed.',
     ],
-    action: 'Save the map (Ctrl+S), then click Simulate in the toolbar',
+    action: 'Save the map (Ctrl+S or the Save button above), then click Simulate',
     layers: { terrain: true, climate: false, regions: true, factions: true, settlements: true, grid: false, rivers: true, underlay: false },
     selectMode: 'region',
     isComplete: (s) => {
