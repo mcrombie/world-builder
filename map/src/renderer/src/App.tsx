@@ -181,7 +181,7 @@ export default function App() {
     setShowSimulateDialog(true)
   }
 
-  async function handleStartNew(factionCount: number, selectedSimType: 'clashvergence' | 'claudevergence', seed: string) {
+  async function handleStartNew(factionCount: number, selectedSimType: 'clashvergence' | 'claudevergence', seed: string, scenario: string = 'default') {
     setShowSimulateDialog(false)
     if (!currentPath || !window.electronAPI?.sim) return
     const normalizedSeed = seed.trim()
@@ -189,7 +189,7 @@ export default function App() {
     setSimType(selectedSimType)
     setSimSeed(normalizedSeed)
     setSimulating(true)
-    const result = await window.electronAPI.sim.start(currentPath, factionCount, selectedSimType, normalizedSeed)
+    const result = await window.electronAPI.sim.start(currentPath, factionCount, selectedSimType, normalizedSeed, scenario)
     if (!result.ok) {
       alert('Simulation failed to start:\n' + (result.error ?? 'Unknown error'))
       setSimulating(false)

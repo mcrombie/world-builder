@@ -217,18 +217,18 @@ let simNumFactions: number = 9
 let simType: string = 'clashvergence'
 let simSeed: string | null = null
 
-function _generatedMapPathFor(sourcePath: string, mapExt: string): string {
+function _generatedMapPathFor(sourcePath: string, mapExt: string, nameSuffix: string = ''): string {
   const dir = dirname(sourcePath)
   let name = basename(sourcePath)
-  for (const suffix of ['.cmap.json', '.cvmap.json', '.azmap', '.wwmap', '.json']) {
-    if (name.toLowerCase().endsWith(suffix)) {
-      name = name.slice(0, -suffix.length)
-      return join(dir, `${name}${mapExt}`)
+  for (const knownExt of ['.cmap.json', '.cvmap.json', '.azmap', '.wwmap', '.json']) {
+    if (name.toLowerCase().endsWith(knownExt)) {
+      name = name.slice(0, -knownExt.length)
+      return join(dir, `${name}${nameSuffix}${mapExt}`)
     }
   }
   const ext = extname(name)
   const stem = ext ? name.slice(0, -ext.length) : name
-  return join(dir, `${stem}${mapExt}`)
+  return join(dir, `${stem}${nameSuffix}${mapExt}`)
 }
 
 function _processText(value: unknown): string {
@@ -293,6 +293,7 @@ async function _spawnServer(
   numFactions: number,
   requestedSimType: string = 'clashvergence',
   requestedSeed: string | null = null,
+  scenario: string = 'default',
 ): Promise<{ ok: boolean; error?: string; generatedMapPath?: string }> {
   killSimProcess()
 
@@ -319,7 +320,8 @@ async function _spawnServer(
   const translatorScript = isClaudevergence ? CV2_TRANSLATOR_SCRIPT : CV_TRANSLATOR_SCRIPT
   const mapExt           = isClaudevergence ? '.cvmap.json' : '.cmap.json'
   const simDir           = isClaudevergence ? CLAUDEVERGENCE_DIR : CLASHVERGENCE_DIR
-  const mapFileArg       = _generatedMapPathFor(resolvedMapPath, mapExt)
+  const nameSuffix       = scenario === 'default' ? '' : scenario
+  const mapFileArg       = _generatedMapPathFor(resolvedMapPath, mapExt, nameSuffix)
   const normalizedSeed   = (requestedSeed ?? '').trim()
 
   if (!existsSync(translatorScript)) {
@@ -329,7 +331,7 @@ async function _spawnServer(
     return { ok: false, error: `Simulation project directory not found:\n${simDir}` }
   }
 
-  const xResult = spawnSync(PYTHON_CMD, [translatorScript, resolvedMapPath, mapFileArg, String(numFactions)], { encoding: 'utf-8' })
+  const xResult = spawnSync(PYTHON_CMD, [translatorScript, resolvedMapPath, mapFileArg, String(numFactions), scenario], { encoding: 'utf-8' })
   if (xResult.status !== 0) {
     return { ok: false, error: _formatTranslatorFailure(xResult, translatorScript, resolvedMapPath, mapFileArg) }
   }
@@ -418,12 +420,12 @@ function _resolveMapPath(mapFilePath: string): string | null {
   return mapFilePath
 }
 
-ipcMain.handle('sim:start', async (_, mapFilePath: string, numFactions: number = 9, requestedSimType: string = 'clashvergence', requestedSeed: string = '') => {
+ipcMain.handle('sim:start', async (_, mapFilePath: string, numFactions: number = 9, requestedSimType: string = 'clashvergence', requestedSeed: string = '', scenario: string = 'default') => {
   const resolvedPath = _resolveMapPath(mapFilePath)
   if (!resolvedPath) return { ok: false, error: `Unknown example: ${mapFilePath}` }
 
   const normalizedSeed = requestedSeed.trim()
-  const spawn_result = await _spawnServer(resolvedPath, numFactions, requestedSimType, normalizedSeed)
+  const spawn_result = await _spawnServer(resolvedPath, numFactions, requestedSimType, normalizedSeed, scenario)
   if (!spawn_result.ok) return spawn_result
 
   simMapPath = mapFilePath

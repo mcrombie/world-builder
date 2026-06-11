@@ -30,7 +30,7 @@ export interface ElectronAPI {
     loadExample:  (id: string)                          => Promise<_LoadResult>
   }
   sim: {
-    start:        (mapFilePath: string, numFactions?: number, simType?: string, seed?: string) => Promise<_SimStartResult>
+    start:        (mapFilePath: string, numFactions?: number, simType?: string, seed?: string, scenario?: string) => Promise<_SimStartResult>
     stop:         ()                    => Promise<{ ok: boolean }>
     world:        ()                    => Promise<_SimWorld>
     advance:      ()                    => Promise<_SimWorld>

@@ -109,6 +109,76 @@ AZHORAN_DISRUPTIVE_ARRIVALS: dict[str, dict] = {
     },
 }
 
+# Scenario 2 — Waves of Arrival: Boueni and Moreshi start; others arrive in waves.
+AZHORAN_PREFERRED_START_REGIONS_2: dict[str, list[str]] = {
+    "boueni": ["Cold Stones"],
+    "moreshi": ["Azhor Stones"],
+}
+
+AZHORAN_DISRUPTIVE_ARRIVALS_2: dict[str, dict] = {
+    "grassic": {
+        "arrival_turn": 100,
+        "arrival_type": "disruptive_colonial_landing",
+        "entry_region": "East Mithala",
+        "origin": "foreign land",
+        "status": "foreign_colony",
+    },
+    "pyrosi": {
+        "arrival_turn": 100,
+        "arrival_type": "disruptive_colonial_landing",
+        "entry_region": "West Pyros",
+        "origin": "foreign land",
+        "status": "foreign_colony",
+    },
+    "mittoli": {
+        "arrival_turn": 200,
+        "arrival_type": "disruptive_colonial_landing",
+        "entry_region": "East Mithala",
+        "origin": "foreign land",
+        "status": "foreign_colony",
+    },
+    "ibnael": {
+        "arrival_turn": 200,
+        "arrival_type": "disruptive_colonial_landing",
+        "entry_region": "North Ibenal",
+        "origin": "foreign land",
+        "status": "foreign_colony",
+    },
+    "elagosi": {
+        "arrival_turn": 300,
+        "arrival_type": "disruptive_colonial_landing",
+        "entry_region": "Elagos",
+        "origin": "foreign land",
+        "status": "foreign_colony",
+    },
+    "kellith": {
+        "arrival_turn": 300,
+        "arrival_type": "disruptive_colonial_landing",
+        "entry_region": "Telemonia",
+        "origin": "foreign land",
+        "status": "foreign_colony",
+    },
+    "elodi": {
+        "arrival_turn": 400,
+        "arrival_type": "disruptive_colonial_landing",
+        "entry_region": "East Suval",
+        "origin": "foreign land",
+        "status": "foreign_colony",
+    },
+}
+
+_AZHORAN_SCENARIOS: dict[str, tuple[dict, dict]] = {
+    "default": (AZHORAN_PREFERRED_START_REGIONS, AZHORAN_DISRUPTIVE_ARRIVALS),
+    "2": (AZHORAN_PREFERRED_START_REGIONS_2, AZHORAN_DISRUPTIVE_ARRIVALS_2),
+}
+
+_AZHORAN_SCENARIO_FACTION_TRAITS: dict[str, dict[str, list[str]]] = {
+    "2": {
+        "boueni": ["chaos_pioneers"],
+        "moreshi": ["chaos_pioneers"],
+    },
+}
+
 
 def _sorted_terrain_tags(tags: list[str]) -> list[str]:
     unique = list(dict.fromkeys(tags))
@@ -211,11 +281,15 @@ def _apply_azhoran_start_preferences(
     graph,
     auto_start_owners: dict[str, str],
     num_factions: int,
+    preferred_start_regions: dict[str, list[str]] | None = None,
 ) -> None:
     if not _is_azhora_map(wwmap_path, graph):
         return
 
-    for language_key, preferred_regions in AZHORAN_PREFERRED_START_REGIONS.items():
+    if preferred_start_regions is None:
+        preferred_start_regions = AZHORAN_PREFERRED_START_REGIONS
+
+    for language_key, preferred_regions in preferred_start_regions.items():
         owner_id = _get_default_language_faction_id(language_key, num_factions)
         if owner_id is None:
             continue
@@ -251,12 +325,16 @@ def _build_azhoran_faction_arrivals(
     wwmap_path: Path,
     graph,
     num_factions: int,
+    disruptive_arrivals: dict[str, dict] | None = None,
 ) -> dict[str, dict]:
     if not _is_azhora_map(wwmap_path, graph):
         return {}
 
+    if disruptive_arrivals is None:
+        disruptive_arrivals = AZHORAN_DISRUPTIVE_ARRIVALS
+
     arrivals: dict[str, dict] = {}
-    for language_key, arrival in AZHORAN_DISRUPTIVE_ARRIVALS.items():
+    for language_key, arrival in disruptive_arrivals.items():
         owner_id = _get_default_language_faction_id(language_key, num_factions)
         if owner_id is None:
             continue
@@ -338,12 +416,16 @@ def _build_faction_language_families(
     return faction_language_families
 
 
-def translate(wwmap_path: str | Path, num_factions: int = 4) -> dict:
+def translate(wwmap_path: str | Path, num_factions: int = 4, scenario: str = "default") -> dict:
     """
     Reads a world-builder map file and returns a Clashvergence map definition dict.
     """
     wwmap_path = Path(wwmap_path)
     graph = load_map_graph(wwmap_path, num_factions)
+
+    preferred_start_regions, disruptive_arrivals = _AZHORAN_SCENARIOS.get(
+        scenario, (None, None)
+    )
 
     # Faction assignment
     faction_names = graph.explicit_factions
@@ -357,11 +439,13 @@ def translate(wwmap_path: str | Path, num_factions: int = 4) -> dict:
             graph,
             auto_start_owners,
             num_factions,
+            preferred_start_regions=preferred_start_regions,
         )
     faction_arrivals = _build_azhoran_faction_arrivals(
         wwmap_path,
         graph,
         num_factions,
+        disruptive_arrivals=disruptive_arrivals,
     )
     if faction_arrivals:
         _remove_delayed_azhoran_start_owners(auto_start_owners, faction_arrivals)
@@ -439,8 +523,11 @@ def translate(wwmap_path: str | Path, num_factions: int = 4) -> dict:
     sea_links = [list(x) for x in {tuple(lnk) for lnk in sea_links}]
 
     num_factions_out = len(faction_names) if faction_names else num_factions
+    description = f"world-builder map: {graph.name}"
+    if scenario != "default":
+        description += f" (Scenario {scenario})"
     map_definition = {
-        "description": f"world-builder map: {graph.name}",
+        "description": description,
         "num_factions": num_factions_out,
         "faction_names": faction_names,
         "sea_links": sorted(sea_links),
@@ -479,9 +566,10 @@ def main() -> None:
         else default_output_path(input_path)
     )
     num_factions = int(sys.argv[3]) if len(sys.argv) > 3 else 4
+    scenario = sys.argv[4] if len(sys.argv) > 4 else "default"
 
-    print(f"Translating: {input_path}")
-    map_def = translate(input_path, num_factions=num_factions)
+    print(f"Translating: {input_path} (scenario={scenario})")
+    map_def = translate(input_path, num_factions=num_factions, scenario=scenario)
     region_count = len(map_def["regions"])
     faction_count = map_def["num_factions"]
     print(f"  {region_count} regions, {faction_count} faction(s)")

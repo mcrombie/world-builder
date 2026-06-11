@@ -7,12 +7,12 @@ interface Props {
   initialSimType: SimType
   initialSeed: string
   isAzhoraMap: boolean
-  onStartNew: (factionCount: number, simType: SimType, seed: string) => void
+  onStartNew: (factionCount: number, simType: SimType, seed: string, scenario: string) => void
   onLoadSaved: () => void
   onClose: () => void
 }
 
-type ScenarioMode = 'azhora' | 'random'
+type ScenarioMode = 'azhora' | 'azhora2' | 'random'
 
 const AZHORA_FACTION_COUNT = 9
 const AZHORA_SIM_TYPE: SimType = 'clashvergence'
@@ -28,9 +28,11 @@ export function SimulateDialog({ initialFactionCount, initialSimType, initialSee
 
   function handleStart() {
     if (scenario === 'azhora') {
-      onStartNew(azhoraFactionCount, AZHORA_SIM_TYPE, azhoraSeed)
+      onStartNew(azhoraFactionCount, AZHORA_SIM_TYPE, azhoraSeed, 'default')
+    } else if (scenario === 'azhora2') {
+      onStartNew(azhoraFactionCount, AZHORA_SIM_TYPE, azhoraSeed, '2')
     } else {
-      onStartNew(factionCount, simType, seed)
+      onStartNew(factionCount, simType, seed, 'default')
     }
   }
 
@@ -64,6 +66,24 @@ export function SimulateDialog({ initialFactionCount, initialSimType, initialSee
             </button>
           )}
 
+          {/* Azhora: Waves of Arrival — only for the Azhora map */}
+          {isAzhoraMap && (
+            <button
+              type="button"
+              className={`w-full text-left px-3 py-2.5 rounded-lg border transition-colors ${
+                scenario === 'azhora2'
+                  ? 'border-indigo-500 bg-indigo-900/40 text-gray-100'
+                  : 'border-gray-700 bg-gray-800 text-gray-300 hover:border-gray-600'
+              }`}
+              onClick={() => setScenario('azhora2')}
+            >
+              <div className="text-sm font-medium">Azhora: Waves of Arrival</div>
+              <div className="text-xs text-gray-500 mt-0.5">
+                Boueni &amp; Moreshi start alone · 7 factions arrive in waves at turns 100–400
+              </div>
+            </button>
+          )}
+
           {/* Set Start Conditions */}
           <button
             type="button"
@@ -82,7 +102,7 @@ export function SimulateDialog({ initialFactionCount, initialSimType, initialSee
         </div>
 
         {/* Azhora scenario controls */}
-        {scenario === 'azhora' && (
+        {(scenario === 'azhora' || scenario === 'azhora2') && (
           <div className="grid grid-cols-[auto_1fr] items-center gap-x-3 gap-y-3">
             <label className="text-sm text-gray-300 shrink-0">Factions</label>
             <select
