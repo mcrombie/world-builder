@@ -1,6 +1,6 @@
 {
   "description": "world-builder map: Azhora (Scenario 2)",
-  "num_factions": 9,
+  "num_factions": 10,
   "faction_names": [],
   "sea_links": [
     [
@@ -1181,7 +1181,7 @@
   "regions": {
     "Cold Stones": {
       "neighbors": [],
-      "owner": "Faction1",
+      "owner": null,
       "resources": 3,
       "display_name": "Cold Stones",
       "founding_name": "Cold Stones",
@@ -2438,7 +2438,7 @@
       "neighbors": [
         "West Inseld"
       ],
-      "owner": null,
+      "owner": "Faction1",
       "resources": 3,
       "display_name": "East Inseld",
       "founding_name": "East Inseld",
@@ -4619,7 +4619,7 @@
         "South Meroshe Desert",
         "Trogo"
       ],
-      "owner": null,
+      "owner": "Faction4",
       "resources": 4,
       "display_name": "Marosh",
       "founding_name": "Marosh",
@@ -5343,7 +5343,7 @@
         "Saxrul",
         "Waahaat"
       ],
-      "owner": "Faction4",
+      "owner": null,
       "resources": 3,
       "display_name": "Qadwaaqaad",
       "founding_name": "Qadwaaqaad",
@@ -5649,7 +5649,10 @@
         "Southern and island-influenced names with bou, vel, wis, and srel stems.",
         "Soft vowel bridges lead into clipped -el, -em, -un, and -ves endings."
       ],
-      "shift_keys": []
+      "shift_keys": [],
+      "faction_traits": [
+        "chaos_pioneers"
+      ]
     },
     "Faction2": {
       "family_name": "Mittoli",
@@ -5808,7 +5811,10 @@
         "Old Azhoran civic names with liquid consonants and open vowels.",
         "Often favors cael, vel, and azh roots for rivers, coasts, and sacred lineages."
       ],
-      "shift_keys": []
+      "shift_keys": [],
+      "faction_traits": [
+        "military_expansion"
+      ]
     },
     "Faction3": {
       "family_name": "Pyrosi",
@@ -5957,7 +5963,10 @@
         "Highland and volcanic names with py, vor, vel, and neth stems.",
         "Compounds tend toward strong initial consonants and -oss, -ell, or -marr endings."
       ],
-      "shift_keys": []
+      "shift_keys": [],
+      "faction_traits": [
+        "desert_pioneers"
+      ]
     },
     "Faction4": {
       "family_name": "Moreshi",
@@ -6109,7 +6118,10 @@
         "Desert and oasis names with long vowels, hissing consonants, and compact endings.",
         "Common roots distinguish wells, stone ridges, caravans, and old sacred sites."
       ],
-      "shift_keys": []
+      "shift_keys": [],
+      "faction_traits": [
+        "chaos_pioneers"
+      ]
     },
     "Faction5": {
       "family_name": "Grassic",
@@ -6256,7 +6268,10 @@
         "Woodland and grassland names with Germanic-like th, v, and l clusters.",
         "Favors compact roots for homesteads, woods, border stones, and old clearings."
       ],
-      "shift_keys": []
+      "shift_keys": [],
+      "faction_traits": [
+        "plains_pioneers"
+      ]
     },
     "Faction6": {
       "family_name": "Ibnael",
@@ -6410,7 +6425,10 @@
         "Forest Mittoli endonym built from Ibenwood roots and older dense substrate forms.",
         "Favors ib, ibn, thren, and glom clusters for old forest, silence, and unseen-presence concepts."
       ],
-      "shift_keys": []
+      "shift_keys": [],
+      "faction_traits": [
+        "forest_pioneers"
+      ]
     },
     "Faction7": {
       "family_name": "Elodi",
@@ -6558,7 +6576,10 @@
         "Elodi names preserve an eastern Old Kingdom lineage rather than an Azhoran family.",
         "Koleth and Balog roots mark scriptural, administrative, and sacred authority registers."
       ],
-      "shift_keys": []
+      "shift_keys": [],
+      "faction_traits": [
+        "developmental_religious"
+      ]
     },
     "Faction8": {
       "family_name": "Elagosi",
@@ -6700,7 +6721,10 @@
         "Lake Lands and Ambronite administrative names with liquid lake roots and formal civic endings.",
         "Favors ela, ambr, thel, oss, and brul roots for lakes, prefectures, courts, and portage towns."
       ],
-      "shift_keys": []
+      "shift_keys": [],
+      "faction_traits": [
+        "subtropical_pioneers"
+      ]
     },
     "Faction9": {
       "family_name": "Kellith",
@@ -6842,65 +6866,224 @@
         "Telemon highland names with compact forms and hard k, t, r, and th closures.",
         "Kellith roots emphasize passes, endurance, bands, borders, and terrain known too precisely for outsiders."
       ],
-      "shift_keys": []
+      "shift_keys": [],
+      "faction_traits": [
+        "militarist_isolationist"
+      ]
+    },
+    "Faction10": {
+      "family_name": "Crefs",
+      "default_culture_name": "Crefs",
+      "traditions": [
+        "northern",
+        "crefs"
+      ],
+      "inspirations": [
+        "Cold Stones",
+        "Crefs",
+        "Krefar",
+        "Stornul",
+        "Grethal",
+        "Fordun",
+        "Vrakel",
+        "Harsk"
+      ],
+      "candidate_pool": [
+        "Krefar",
+        "Stornul",
+        "Grethal",
+        "Fordun",
+        "Vrakel",
+        "Harsk",
+        "Vralketh",
+        "Skordun"
+      ],
+      "onsets": [
+        "cref",
+        "dral",
+        "ford",
+        "gret",
+        "greth",
+        "har",
+        "kref",
+        "skord",
+        "storn",
+        "thral",
+        "vrak",
+        "vral",
+        "vralk",
+        "wrak"
+      ],
+      "middles": [
+        "a",
+        "e",
+        "i",
+        "o",
+        "u"
+      ],
+      "suffixes": [
+        "al",
+        "an",
+        "ar",
+        "d",
+        "el",
+        "eth",
+        "k",
+        "kel",
+        "n",
+        "ord",
+        "sk",
+        "ul",
+        "un"
+      ],
+      "seed_fragments": [
+        "cref",
+        "dral",
+        "ford",
+        "gret",
+        "har",
+        "kref",
+        "skord",
+        "storn",
+        "thral",
+        "vrak"
+      ],
+      "lexical_roots": {
+        "settlement": [
+          "ford",
+          "kref"
+        ],
+        "river": [
+          "thral",
+          "dral"
+        ],
+        "forest": [
+          "gret",
+          "vral"
+        ],
+        "hill": [
+          "storn",
+          "har"
+        ],
+        "plain": [
+          "dral",
+          "ford"
+        ],
+        "marsh": [
+          "thral",
+          "vrak"
+        ],
+        "sea": [
+          "kref",
+          "wrak"
+        ],
+        "border": [
+          "har",
+          "skord"
+        ],
+        "market": [
+          "ford",
+          "kref"
+        ],
+        "fort": [
+          "storn",
+          "skord"
+        ],
+        "sacred": [
+          "thral",
+          "gret"
+        ],
+        "sun": [
+          "har",
+          "dral"
+        ],
+        "ancestor": [
+          "kref",
+          "ford"
+        ],
+        "ruler": [
+          "storn",
+          "har"
+        ],
+        "dynasty": [
+          "kref",
+          "skord"
+        ]
+      },
+      "style_notes": [
+        "Cold northern names with hard consonant clusters and short vowels.",
+        "Favors storn, kref, skord, and thral roots for fortifications, cold ridges, and ancestral claims."
+      ],
+      "shift_keys": [],
+      "faction_traits": [
+        "militarist_pioneers"
+      ]
     }
   },
   "faction_arrivals": {
     "Faction5": {
-      "language": "grassic",
       "arrival_turn": 100,
       "arrival_type": "disruptive_colonial_landing",
       "entry_region": "East Mithala",
       "origin": "foreign land",
-      "status": "foreign_colony"
+      "status": "foreign_colony",
+      "language": "grassic"
     },
     "Faction3": {
-      "language": "pyrosi",
       "arrival_turn": 100,
       "arrival_type": "disruptive_colonial_landing",
       "entry_region": "West Pyros",
       "origin": "foreign land",
-      "status": "foreign_colony"
+      "status": "foreign_colony",
+      "language": "pyrosi"
     },
     "Faction2": {
-      "language": "mittoli",
       "arrival_turn": 200,
       "arrival_type": "disruptive_colonial_landing",
       "entry_region": "East Mithala",
       "origin": "foreign land",
-      "status": "foreign_colony"
+      "status": "foreign_colony",
+      "language": "mittoli"
     },
     "Faction6": {
-      "language": "ibnael",
       "arrival_turn": 200,
       "arrival_type": "disruptive_colonial_landing",
       "entry_region": "North Ibenal",
       "origin": "foreign land",
-      "status": "foreign_colony"
+      "status": "foreign_colony",
+      "language": "ibnael"
     },
     "Faction8": {
-      "language": "elagosi",
       "arrival_turn": 300,
       "arrival_type": "disruptive_colonial_landing",
       "entry_region": "Elagos",
       "origin": "foreign land",
-      "status": "foreign_colony"
+      "status": "foreign_colony",
+      "language": "elagosi"
     },
     "Faction9": {
-      "language": "kellith",
       "arrival_turn": 300,
       "arrival_type": "disruptive_colonial_landing",
       "entry_region": "Telemonia",
       "origin": "foreign land",
-      "status": "foreign_colony"
+      "status": "foreign_colony",
+      "language": "kellith"
     },
     "Faction7": {
-      "language": "elodi",
       "arrival_turn": 400,
       "arrival_type": "disruptive_colonial_landing",
       "entry_region": "East Suval",
       "origin": "foreign land",
-      "status": "foreign_colony"
+      "status": "foreign_colony",
+      "language": "elodi"
+    },
+    "Faction10": {
+      "arrival_turn": 400,
+      "arrival_type": "disruptive_colonial_landing",
+      "entry_region": "Cold Stones",
+      "origin": "foreign land",
+      "status": "foreign_colony",
+      "language": "crefs"
     }
   }
 }

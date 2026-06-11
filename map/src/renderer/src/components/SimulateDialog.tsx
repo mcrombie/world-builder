@@ -15,6 +15,7 @@ interface Props {
 type ScenarioMode = 'azhora' | 'azhora2' | 'random'
 
 const AZHORA_FACTION_COUNT = 9
+const AZHORA_SCENARIO_2_FACTION_COUNT = 10
 const AZHORA_SIM_TYPE: SimType = 'clashvergence'
 const FACTION_OPTIONS = [2, 3, 4, 5, 6, 7, 8, 9]
 
@@ -30,7 +31,7 @@ export function SimulateDialog({ initialFactionCount, initialSimType, initialSee
     if (scenario === 'azhora') {
       onStartNew(azhoraFactionCount, AZHORA_SIM_TYPE, azhoraSeed, 'default')
     } else if (scenario === 'azhora2') {
-      onStartNew(azhoraFactionCount, AZHORA_SIM_TYPE, azhoraSeed, '2')
+      onStartNew(AZHORA_SCENARIO_2_FACTION_COUNT, AZHORA_SIM_TYPE, azhoraSeed, '2')
     } else {
       onStartNew(factionCount, simType, seed, 'default')
     }

@@ -7,6 +7,7 @@ Usage:
 
 from __future__ import annotations
 
+import copy
 import json
 import re
 import sys
@@ -111,8 +112,8 @@ AZHORAN_DISRUPTIVE_ARRIVALS: dict[str, dict] = {
 
 # Scenario 2 — Waves of Arrival: Boueni and Moreshi start; others arrive in waves.
 AZHORAN_PREFERRED_START_REGIONS_2: dict[str, list[str]] = {
-    "boueni": ["Cold Stones"],
-    "moreshi": ["Azhor Stones"],
+    "boueni": ["East Inseld"],
+    "moreshi": ["Marosh"],
 }
 
 AZHORAN_DISRUPTIVE_ARRIVALS_2: dict[str, dict] = {
@@ -165,17 +166,34 @@ AZHORAN_DISRUPTIVE_ARRIVALS_2: dict[str, dict] = {
         "origin": "foreign land",
         "status": "foreign_colony",
     },
+    "crefs": {
+        "arrival_turn": 400,
+        "arrival_type": "disruptive_colonial_landing",
+        "entry_region": "Cold Stones",
+        "origin": "foreign land",
+        "status": "foreign_colony",
+    },
 }
 
-_AZHORAN_SCENARIOS: dict[str, tuple[dict, dict]] = {
-    "default": (AZHORAN_PREFERRED_START_REGIONS, AZHORAN_DISRUPTIVE_ARRIVALS),
-    "2": (AZHORAN_PREFERRED_START_REGIONS_2, AZHORAN_DISRUPTIVE_ARRIVALS_2),
+# Each entry is (preferred_starts, disruptive_arrivals, required_faction_count).
+# required_faction_count overrides the CLI num_factions when not explicitly set.
+_AZHORAN_SCENARIOS: dict[str, tuple[dict, dict, int | None]] = {
+    "default": (AZHORAN_PREFERRED_START_REGIONS, AZHORAN_DISRUPTIVE_ARRIVALS, None),
+    "2": (AZHORAN_PREFERRED_START_REGIONS_2, AZHORAN_DISRUPTIVE_ARRIVALS_2, 10),
 }
 
 _AZHORAN_SCENARIO_FACTION_TRAITS: dict[str, dict[str, list[str]]] = {
     "2": {
-        "boueni": ["chaos_pioneers"],
-        "moreshi": ["chaos_pioneers"],
+        "boueni":    ["chaos_pioneers"],
+        "moreshi":   ["chaos_pioneers"],
+        "pyrosi":    ["desert_pioneers"],
+        "grassic":   ["plains_pioneers"],
+        "mittoli":   ["military_expansion"],
+        "ibnael":    ["forest_pioneers"],
+        "elagosi":   ["subtropical_pioneers"],
+        "kellith":   ["militarist_isolationist"],
+        "elodi":     ["developmental_religious"],
+        "crefs":     ["militarist_pioneers"],
     },
 }
 
@@ -336,15 +354,17 @@ def _build_azhoran_faction_arrivals(
     arrivals: dict[str, dict] = {}
     for language_key, arrival in disruptive_arrivals.items():
         owner_id = _get_default_language_faction_id(language_key, num_factions)
+        if owner_id is None and _is_configured_faction_id(language_key, num_factions):
+            owner_id = language_key  # direct faction ID key (e.g. "Faction10")
         if owner_id is None:
             continue
         entry_region = arrival.get("entry_region")
         if entry_region not in graph.regions:
             continue
-        arrivals[owner_id] = {
-            "language": language_key,
-            **arrival,
-        }
+        entry = dict(arrival)
+        if owner_id != language_key:
+            entry["language"] = language_key
+        arrivals[owner_id] = entry
     return arrivals
 
 
@@ -423,9 +443,11 @@ def translate(wwmap_path: str | Path, num_factions: int = 4, scenario: str = "de
     wwmap_path = Path(wwmap_path)
     graph = load_map_graph(wwmap_path, num_factions)
 
-    preferred_start_regions, disruptive_arrivals = _AZHORAN_SCENARIOS.get(
-        scenario, (None, None)
+    preferred_start_regions, disruptive_arrivals, required_faction_count = _AZHORAN_SCENARIOS.get(
+        scenario, (None, None, None)
     )
+    if required_faction_count is not None:
+        num_factions = required_faction_count
 
     # Faction assignment
     faction_names = graph.explicit_factions
@@ -539,6 +561,18 @@ def translate(wwmap_path: str | Path, num_factions: int = 4, scenario: str = "de
         graph,
         num_factions_out,
     )
+    scenario_traits = _AZHORAN_SCENARIO_FACTION_TRAITS.get(scenario, {})
+    for language_key, traits in scenario_traits.items():
+        owner_id = _get_default_language_faction_id(language_key, num_factions_out)
+        if owner_id is None and _is_configured_faction_id(language_key, num_factions_out):
+            owner_id = language_key
+        if owner_id is None:
+            continue
+        if owner_id in faction_language_families:
+            faction_language_families[owner_id] = copy.copy(faction_language_families[owner_id])
+        else:
+            faction_language_families[owner_id] = {}
+        faction_language_families[owner_id]["faction_traits"] = list(traits)
     if faction_language_families:
         map_definition["faction_language_families"] = faction_language_families
     if faction_arrivals:
@@ -567,6 +601,7 @@ def main() -> None:
     )
     num_factions = int(sys.argv[3]) if len(sys.argv) > 3 else 4
     scenario = sys.argv[4] if len(sys.argv) > 4 else "default"
+    # translate() internally overrides num_factions from the scenario's required_faction_count.
 
     print(f"Translating: {input_path} (scenario={scenario})")
     map_def = translate(input_path, num_factions=num_factions, scenario=scenario)
