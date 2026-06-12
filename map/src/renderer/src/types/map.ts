@@ -271,4 +271,5 @@ export interface LayerVisibility {
   rivers: boolean
   underlay: boolean
   climate: boolean
+  wars: boolean
 }

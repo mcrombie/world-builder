@@ -484,8 +484,19 @@ export function SimulationPanel() {
               <div className="px-3 py-2 border-b border-gray-800">
                 <SectionTitle>Under The Hood</SectionTitle>
                 <div className="flex flex-col gap-1.5">
-                  {activeWars.map((war, index) => (
-                    <div key={`${war.aggressor}-${war.defender}-${index}`} className="rounded bg-red-950/25 border border-red-900/40 px-2 py-1.5 text-xs">
+                  {activeWars.map((war, index) => {
+                    const targetRegion = war.target_region ?? null
+                    const active = targetRegion != null && simDetailSelection?.type === 'region' && simDetailSelection.regionName === targetRegion
+                    return (
+                    <button
+                      key={`${war.aggressor}-${war.defender}-${targetRegion ?? index}`}
+                      type="button"
+                      disabled={targetRegion == null}
+                      onClick={() => {
+                        if (targetRegion) setSimDetailSelection({ type: 'region', regionName: targetRegion })
+                      }}
+                      className={`w-full rounded px-2 py-1.5 text-left text-xs transition-colors focus:outline-none focus:ring-1 focus:ring-indigo-500 disabled:cursor-default ${active ? 'bg-indigo-950/60 border border-indigo-600/50' : 'bg-red-950/25 border border-red-900/40 enabled:hover:bg-red-900/30'}`}
+                    >
                       <div className="flex items-center gap-1.5">
                         <span className="text-red-300 font-medium truncate">{factionName(war.aggressor)}</span>
                         <span className="text-gray-600">vs</span>
@@ -494,8 +505,9 @@ export function SimulationPanel() {
                       <div className="text-gray-500 truncate">
                         {war.objective || 'war'} | {war.turns_active} turns | {war.attacks} attacks
                       </div>
-                    </div>
-                  ))}
+                    </button>
+                    )
+                  })}
                   {activeShocks.map((shock, index) => (
                     <div key={`${shock.kind}-${index}`} className="rounded bg-amber-950/20 border border-amber-900/30 px-2 py-1.5 text-xs">
                       <div className="flex items-center justify-between gap-2">

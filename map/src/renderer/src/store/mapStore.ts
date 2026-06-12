@@ -222,6 +222,7 @@ export const useMapStore = create<MapStore>((set, get) => ({
     rivers: true,
     underlay: false,
     climate: true,
+    wars: true,
   },
   isDirty: false,
   history: [],

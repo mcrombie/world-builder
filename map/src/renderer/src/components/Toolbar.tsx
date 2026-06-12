@@ -24,6 +24,7 @@ const LAYER_LABELS: Record<keyof LayerVisibility, string> = {
   rivers:      'Rivers',
   underlay:    'Underlay',
   climate:     'Climate',
+  wars:        'Wars',
 }
 
 const BRUSH_SIZES = [
@@ -160,6 +161,8 @@ export function Toolbar() {
   const factions = map?.factions ?? {}
   const factionIds = Object.keys(factions)
   const selectModes: SelectMode[] = isSimulating ? ['tile', 'region', 'faction'] : ['tile', 'region']
+  const visibleLayerKeys = (Object.keys(LAYER_LABELS) as (keyof LayerVisibility)[])
+    .filter((key) => isSimulating || key !== 'wars')
 
   return (
     <aside
@@ -481,7 +484,7 @@ export function Toolbar() {
       <section>
         <h3 className="text-xs font-semibold uppercase tracking-widest text-gray-400 mb-2">Layers</h3>
         <div className="flex flex-col gap-1">
-          {(Object.keys(LAYER_LABELS) as (keyof LayerVisibility)[]).map((key) => (
+          {visibleLayerKeys.map((key) => (
             <label key={key} className="flex items-center gap-2 cursor-pointer text-sm hover:text-white">
               <input
                 type="checkbox"

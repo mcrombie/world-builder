@@ -5,7 +5,7 @@ import {
   riverEdgeKey, parseRiverEdge, NEIGHBOR_TO_EDGE_SLOT, HEX_NEIGHBORS,
 } from '../lib/hex'
 import { TERRAIN_COLORS, CLIMATE_COLORS } from '../lib/terrain'
-import { FactionData, HexData, RegionData, RiverSize, SimWorldState } from '../types/map'
+import { FactionData, HexData, RegionData, RiverSize, SimActiveWar, SimWorldState } from '../types/map'
 import { SelectMode } from '../types/map'
 import { buildFactionColorMap } from './SimulationPanel'
 
@@ -166,6 +166,14 @@ export function HexCanvas() {
       for (const r of simWorldRef.current.regions) {
         regionOwnerMap[r.name] = r.owner
       }
+      const activeWars = simWorldRef.current.active_wars ?? []
+      const warTargetSet = new Set<string>()
+      const warAggressorMap: Record<string, string> = {}
+      for (const war of activeWars) {
+        if (!war.target_region) continue
+        warTargetSet.add(war.target_region)
+        warAggressorMap[war.target_region] = war.aggressor
+      }
       const selectedSimFaction = simDetailSelectionRef.current?.type === 'faction'
         ? simDetailSelectionRef.current.factionName
         : null
@@ -257,6 +265,119 @@ export function HexCanvas() {
         ctx.fillText(label, sx, sy)
       }
       ctx.restore()
+
+      if (layers.wars && warTargetSet.size > 0) {
+        const t = performance.now() / 1000
+        const pulseAlpha = 0.18 + 0.20 * (0.5 + 0.5 * Math.sin(t * Math.PI * 2 / 1.4))
+
+        ctx.globalAlpha = pulseAlpha
+        for (const hex of Object.values(hexes)) {
+          if (!hex.region || !warTargetSet.has(hex.region)) continue
+          const [cx, cy] = hexToPixel(hex.q, hex.r, hexSize)
+          if (cx + cullPad < viewL || cx - cullPad > viewR) continue
+          if (cy + cullPad < viewT || cy - cullPad > viewB) continue
+          const aggressor = warAggressorMap[hex.region]
+          const color = aggressor ? (factionColors[aggressor] ?? '#ff2222') : '#ff2222'
+          drawHexFill(ctx, cx, cy, hexSize, color)
+        }
+        ctx.globalAlpha = 1
+
+        ctx.lineCap = 'round'
+        ctx.lineJoin = 'round'
+        for (const hex of Object.values(hexes)) {
+          if (!hex.region || !warTargetSet.has(hex.region)) continue
+          const [cx, cy] = hexToPixel(hex.q, hex.r, hexSize)
+          if (cx + cullPad < viewL || cx - cullPad > viewR) continue
+          if (cy + cullPad < viewT || cy - cullPad > viewB) continue
+          const corners = hexCorners(cx, cy, hexSize)
+          const aggressor = warAggressorMap[hex.region]
+          const borderColor = aggressor ? (factionColors[aggressor] ?? '#ff2222') : '#ff2222'
+          ctx.strokeStyle = borderColor
+          ctx.lineWidth = Math.max(2.0, hexSize * 0.16) / zoom
+          for (let d = 0; d < 6; d++) {
+            const nq = hex.q + HEX_NEIGHBORS[d].q
+            const nr = hex.r + HEX_NEIGHBORS[d].r
+            const neighbor = hexes[hexKey(nq, nr)]
+            if (neighbor?.region === hex.region) continue
+            const slot = NEIGHBOR_TO_EDGE_SLOT[d]
+            const [x1, y1] = corners[slot]
+            const [x2, y2] = corners[(slot + 1) % 6]
+            ctx.beginPath()
+            ctx.moveTo(x1, y1)
+            ctx.lineTo(x2, y2)
+            ctx.stroke()
+          }
+        }
+      }
+
+      const warCentroids: Array<{
+        war: SimActiveWar
+        cx: number
+        cy: number
+      }> = []
+
+      for (const war of activeWars) {
+        if (!war.target_region) continue
+        let sumX = 0
+        let sumY = 0
+        let count = 0
+        for (const hex of Object.values(hexes)) {
+          if (hex.region !== war.target_region) continue
+          const [hx, hy] = hexToPixel(hex.q, hex.r, hexSize)
+          sumX += hx
+          sumY += hy
+          count += 1
+        }
+        if (count === 0) continue
+        warCentroids.push({ war, cx: sumX / count, cy: sumY / count })
+      }
+
+      if (warCentroids.length > 0) {
+        ctx.save()
+        ctx.setTransform(1, 0, 0, 1, 0, 0)
+
+        for (const { war, cx: worldX, cy: worldY } of warCentroids) {
+          const sx = worldX * zoom + offsetX
+          const sy = worldY * zoom + offsetY
+          if (sx < -30 || sx > canvas.width + 30) continue
+          if (sy < -30 || sy > canvas.height + 30) continue
+
+          const aggressorColor = factionColors[war.aggressor] ?? '#ff4444'
+          const defenderColor = factionColors[war.defender] ?? '#888888'
+          const markerR = 10
+
+          ctx.beginPath()
+          ctx.arc(sx, sy, markerR + 3, 0, Math.PI * 2)
+          ctx.strokeStyle = defenderColor
+          ctx.lineWidth = 2.5
+          ctx.stroke()
+
+          ctx.beginPath()
+          ctx.arc(sx, sy, markerR, 0, Math.PI * 2)
+          ctx.fillStyle = aggressorColor
+          ctx.fill()
+
+          ctx.beginPath()
+          ctx.arc(sx, sy, markerR, 0, Math.PI * 2)
+          ctx.strokeStyle = 'rgba(0,0,0,0.7)'
+          ctx.lineWidth = 1.5
+          ctx.stroke()
+
+          if (zoom > 0.55) {
+            const label = `${factionLabels[war.aggressor] ?? war.aggressor} vs ${factionLabels[war.defender] ?? war.defender}`
+            ctx.font = '700 11px system-ui, sans-serif'
+            ctx.textAlign = 'center'
+            ctx.textBaseline = 'top'
+            ctx.lineWidth = 3
+            ctx.strokeStyle = 'rgba(0,0,0,0.9)'
+            ctx.strokeText(label, sx, sy + markerR + 5)
+            ctx.fillStyle = '#ffffff'
+            ctx.fillText(label, sx, sy + markerR + 5)
+          }
+        }
+
+        ctx.restore()
+      }
     }
 
     // ── Region fill + borders ─────────────────────────────────────────────────
@@ -557,6 +678,17 @@ export function HexCanvas() {
         needsRedraw.current = true
         if (t >= 1) panAnim.current = null
       }
+
+      const world = simWorldRef.current
+      if (
+        layers.wars &&
+        isSimRef.current &&
+        world?.active_wars &&
+        world.active_wars.length > 0
+      ) {
+        needsRedraw.current = true
+      }
+
       if (needsRedraw.current) {
         try { render() } catch (e) { console.error('HexCanvas render error:', e) }
         needsRedraw.current = false
