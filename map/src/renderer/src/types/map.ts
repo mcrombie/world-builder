@@ -121,6 +121,7 @@ export interface SimFaction {
   government_type?: string
   polity_tier?: string
   culture_name?: string
+  language_family?: string
   is_rebel?: boolean
   origin_faction?: string | null
   net_income?: number
@@ -273,4 +274,5 @@ export interface LayerVisibility {
   climate: boolean
   wars: boolean
   population: boolean
+  language: boolean
 }

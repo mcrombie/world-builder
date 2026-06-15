@@ -347,6 +347,7 @@ function SimulationDetailPanel({
               ['Government', faction.government_type],
               ['Tier', faction.polity_tier],
               ['Culture', faction.culture_name],
+              ['Language', faction.language_family],
               ['Ruler', faction.ruler_name],
               ['Legitimacy', typeof faction.legitimacy === 'number' ? fmtSimPct(faction.legitimacy) : null],
               ['Status', faction.is_rebel ? 'Successor / rebel polity' : 'Established polity'],

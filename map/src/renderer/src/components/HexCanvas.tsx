@@ -400,6 +400,31 @@ export function HexCanvas() {
       ctx.globalAlpha = 1
     }
 
+    // ── Language family overlay ───────────────────────────────────────────────
+    if (layers.language && isSimRef.current && simWorldRef.current) {
+      const regionOwnerMap: Record<string, string | null> = {}
+      for (const r of simWorldRef.current.regions) {
+        regionOwnerMap[r.name] = r.owner
+      }
+      const factionLangMap: Record<string, string> = {}
+      for (const f of simWorldRef.current.factions) {
+        if (f.language_family) factionLangMap[f.name] = f.language_family
+      }
+      ctx.globalAlpha = 0.70
+      for (const hex of Object.values(hexes)) {
+        if (!hex.region) continue
+        const owner = regionOwnerMap[hex.region]
+        if (!owner) continue
+        const lang = factionLangMap[owner]
+        if (!lang) continue
+        const [cx, cy] = hexToPixel(hex.q, hex.r, hexSize)
+        if (cx + cullPad < viewL || cx - cullPad > viewR) continue
+        if (cy + cullPad < viewT || cy - cullPad > viewB) continue
+        drawHexFill(ctx, cx, cy, hexSize, langFamilyColor(lang))
+      }
+      ctx.globalAlpha = 1
+    }
+
     // ── Region fill + borders ─────────────────────────────────────────────────
     if (layers.regions) {
       // Soft tint per region; labels carry the layer, color only separates areas.
@@ -1022,6 +1047,17 @@ export function HexCanvas() {
 }
 
 // ── Drawing helpers ────────────────────────────────────────────────────────────
+
+function langFamilyColor(family: string): string {
+  // FNV-1a hash → HSL; +30° hue offset so colours read differently from faction fills
+  let h = 2166136261
+  for (let i = 0; i < family.length; i++) {
+    h ^= family.charCodeAt(i)
+    h = (h * 16777619) >>> 0
+  }
+  const hue = (h % 360 + 30) % 360
+  return `hsl(${hue}, 62%, 48%)`
+}
 
 function popDensityColor(t: number): string {
   // YlOrBr ramp: pale yellow → orange → dark red-brown

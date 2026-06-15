@@ -17,7 +17,7 @@ type ScenarioMode = 'azhora' | 'azhora2' | 'random'
 const AZHORA_FACTION_COUNT = 9
 const AZHORA_SCENARIO_2_FACTION_COUNT = 10
 const AZHORA_SIM_TYPE: SimType = 'clashvergence'
-const FACTION_OPTIONS = [2, 3, 4, 5, 6, 7, 8, 9]
+const FACTION_OPTIONS = [2, 3, 4, 5, 6, 7, 8, 9, 10]
 
 export function SimulateDialog({ initialFactionCount, initialSimType, initialSeed, isAzhoraMap, onStartNew, onLoadSaved, onClose }: Props) {
   const [scenario, setScenario] = useState<ScenarioMode>(isAzhoraMap ? 'azhora' : 'random')
@@ -31,7 +31,7 @@ export function SimulateDialog({ initialFactionCount, initialSimType, initialSee
     if (scenario === 'azhora') {
       onStartNew(azhoraFactionCount, AZHORA_SIM_TYPE, azhoraSeed, 'default')
     } else if (scenario === 'azhora2') {
-      onStartNew(AZHORA_SCENARIO_2_FACTION_COUNT, AZHORA_SIM_TYPE, azhoraSeed, '2')
+      onStartNew(azhoraFactionCount, AZHORA_SIM_TYPE, azhoraSeed, '2')
     } else {
       onStartNew(factionCount, simType, seed, 'default')
     }
@@ -76,11 +76,11 @@ export function SimulateDialog({ initialFactionCount, initialSimType, initialSee
                   ? 'border-indigo-500 bg-indigo-900/40 text-gray-100'
                   : 'border-gray-700 bg-gray-800 text-gray-300 hover:border-gray-600'
               }`}
-              onClick={() => setScenario('azhora2')}
+              onClick={() => { setScenario('azhora2'); setAzhoraFactionCount(AZHORA_SCENARIO_2_FACTION_COUNT) }}
             >
               <div className="text-sm font-medium">Azhora: Waves of Arrival</div>
               <div className="text-xs text-gray-500 mt-0.5">
-                Boueni &amp; Moreshi start alone · 7 factions arrive in waves at turns 100–400
+                Boueni &amp; Moreshi start alone · 8 peoples arrive in waves at turns 100–400
               </div>
             </button>
           )}

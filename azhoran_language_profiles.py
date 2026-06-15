@@ -123,7 +123,7 @@ AZHORAN_LANGUAGE_PROFILES: dict[str, dict[str, Any]] = {
         "shift_keys": [],
     },
     "moreshi": {
-        "family_name": "Moreshi",
+        "family_name": "Mariiṣi",
         "default_culture_name": "Moreshi",
         "traditions": ["azhoran", "moreshi"],
         "inspirations": [
@@ -207,7 +207,7 @@ AZHORAN_LANGUAGE_PROFILES: dict[str, dict[str, Any]] = {
         "shift_keys": [],
     },
     "pyrosi": {
-        "family_name": "Pyrosi",
+        "family_name": "Pyrossel",
         "default_culture_name": "Pyrosi",
         "traditions": ["azhoran", "pyrosi"],
         "inspirations": [
@@ -287,7 +287,7 @@ AZHORAN_LANGUAGE_PROFILES: dict[str, dict[str, Any]] = {
         "shift_keys": [],
     },
     "grassic": {
-        "family_name": "Grassic",
+        "family_name": "Auwel",
         "default_culture_name": "Grassic",
         "traditions": ["azhoran", "grassic"],
         "inspirations": [
@@ -463,7 +463,7 @@ AZHORAN_LANGUAGE_PROFILES: dict[str, dict[str, Any]] = {
         "shift_keys": [],
     },
     "elodi": {
-        "family_name": "Elodi",
+        "family_name": "Koleth",
         "default_culture_name": "Elodi",
         "traditions": ["azhoran", "elodi", "koleth"],
         "inspirations": [
@@ -683,7 +683,7 @@ AZHORAN_LANGUAGE_PROFILES: dict[str, dict[str, Any]] = {
         "shift_keys": [],
     },
     "boueni": {
-        "family_name": "Boueni",
+        "family_name": "Bouéni",
         "default_culture_name": "Boueni",
         "traditions": ["azhoran", "boueni"],
         "inspirations": [
