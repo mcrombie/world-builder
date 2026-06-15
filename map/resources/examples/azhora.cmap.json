@@ -1202,9 +1202,9 @@
       },
       "terrain_tags": [
         "coast",
-        "plains"
+        "highland"
       ],
-      "climate": "Cfb"
+      "climate": "Dfc"
     },
     "North Orsa": {
       "neighbors": [
@@ -6847,28 +6847,28 @@
   },
   "faction_arrivals": {
     "Faction2": {
-      "language": "mittoli",
       "arrival_turn": 10,
       "arrival_type": "disruptive_colonial_landing",
       "entry_region": "East Mithala",
       "origin": "foreign land",
-      "status": "foreign_colony"
+      "status": "foreign_colony",
+      "language": "mittoli"
     },
     "Faction6": {
-      "language": "ibnael",
       "arrival_turn": 11,
       "arrival_type": "disruptive_colonial_landing",
       "entry_region": "South Acordwood",
       "origin": "foreign land",
-      "status": "foreign_colony"
+      "status": "foreign_colony",
+      "language": "ibnael"
     },
     "Faction7": {
-      "language": "elodi",
       "arrival_turn": 20,
       "arrival_type": "disruptive_colonial_landing",
       "entry_region": "East Suval",
       "origin": "foreign land",
-      "status": "foreign_colony"
+      "status": "foreign_colony",
+      "language": "elodi"
     }
   }
 }

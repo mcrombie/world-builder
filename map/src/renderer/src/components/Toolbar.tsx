@@ -25,6 +25,7 @@ const LAYER_LABELS: Record<keyof LayerVisibility, string> = {
   underlay:    'Underlay',
   climate:     'Climate',
   wars:        'Wars',
+  population:  'Population',
 }
 
 const BRUSH_SIZES = [
@@ -162,7 +163,7 @@ export function Toolbar() {
   const factionIds = Object.keys(factions)
   const selectModes: SelectMode[] = isSimulating ? ['tile', 'region', 'faction'] : ['tile', 'region']
   const visibleLayerKeys = (Object.keys(LAYER_LABELS) as (keyof LayerVisibility)[])
-    .filter((key) => isSimulating || key !== 'wars')
+    .filter((key) => isSimulating || (key !== 'wars' && key !== 'population'))
 
   return (
     <aside

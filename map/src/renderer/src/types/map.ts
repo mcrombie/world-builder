@@ -272,4 +272,5 @@ export interface LayerVisibility {
   underlay: boolean
   climate: boolean
   wars: boolean
+  population: boolean
 }

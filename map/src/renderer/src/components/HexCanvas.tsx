@@ -380,6 +380,26 @@ export function HexCanvas() {
       }
     }
 
+    // ── Population density overlay ────────────────────────────────────────────
+    if (layers.population && isSimRef.current && simWorldRef.current) {
+      const regionPopMap: Record<string, number> = {}
+      for (const r of simWorldRef.current.regions) {
+        regionPopMap[r.name] = r.population
+      }
+      const maxPop = Math.max(1, ...Object.values(regionPopMap))
+      ctx.globalAlpha = 0.65
+      for (const hex of Object.values(hexes)) {
+        if (!hex.region) continue
+        const pop = regionPopMap[hex.region]
+        if (pop === undefined) continue
+        const [cx, cy] = hexToPixel(hex.q, hex.r, hexSize)
+        if (cx + cullPad < viewL || cx - cullPad > viewR) continue
+        if (cy + cullPad < viewT || cy - cullPad > viewB) continue
+        drawHexFill(ctx, cx, cy, hexSize, popDensityColor(pop / maxPop))
+      }
+      ctx.globalAlpha = 1
+    }
+
     // ── Region fill + borders ─────────────────────────────────────────────────
     if (layers.regions) {
       // Soft tint per region; labels carry the layer, color only separates areas.
@@ -1002,6 +1022,25 @@ export function HexCanvas() {
 }
 
 // ── Drawing helpers ────────────────────────────────────────────────────────────
+
+function popDensityColor(t: number): string {
+  // YlOrBr ramp: pale yellow → orange → dark red-brown
+  const stops: [number, number, number][] = [
+    [255, 255, 212],
+    [254, 217, 142],
+    [254, 153,  41],
+    [217,  95,  14],
+    [153,  52,   4],
+  ]
+  const idx = Math.min(t * (stops.length - 1), stops.length - 1 - 1e-9)
+  const lo = Math.floor(idx)
+  const hi = Math.min(lo + 1, stops.length - 1)
+  const f = idx - lo
+  const r = Math.round(stops[lo][0] + f * (stops[hi][0] - stops[lo][0]))
+  const g = Math.round(stops[lo][1] + f * (stops[hi][1] - stops[lo][1]))
+  const b = Math.round(stops[lo][2] + f * (stops[hi][2] - stops[lo][2]))
+  return `rgb(${r},${g},${b})`
+}
 
 function drawHexFill(ctx: CanvasRenderingContext2D, cx: number, cy: number, size: number, color: string) {
   const corners = hexCorners(cx, cy, size)
