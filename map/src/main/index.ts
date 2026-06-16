@@ -1,4 +1,5 @@
 import { app, shell, BrowserWindow, ipcMain, dialog } from 'electron'
+import Anthropic from '@anthropic-ai/sdk'
 import { basename, dirname, extname, join } from 'path'
 import { readFileSync, writeFileSync, existsSync, mkdirSync } from 'fs'
 import { spawn, spawnSync, ChildProcess } from 'child_process'
@@ -447,7 +448,7 @@ ipcMain.handle('sim:start', async (_, mapFilePath: string, numFactions: number =
   }
 })
 
-ipcMain.handle('sim:save-state', async () => {
+ipcMain.handle('sim:save-state', async (_, chronicleData?: { chronicle: any[]; chroniclePerspective: any | null; chronicleInterval: number }) => {
   if (!simProcess) return { ok: false, error: 'No simulation running.' }
   try {
     const worldRaw = await simGet('/api/save')
@@ -468,6 +469,7 @@ ipcMain.handle('sim:save-state', async () => {
       ),
       num_factions: simNumFactions,
       world_state: JSON.parse(worldRaw),
+      chronicle: chronicleData ?? null,
     }
     writeFileSync(result.filePath, JSON.stringify(envelope, null, 2), 'utf-8')
     return { ok: true, filePath: result.filePath }
@@ -521,6 +523,7 @@ ipcMain.handle('sim:load-and-start', async () => {
       world: loadResult,
       seed: simSeed ?? '',
       generatedMapPath: spawn_result.generatedMapPath,
+      chronicle: envelope.chronicle ?? null,
     }
   } catch (e: any) {
     killSimProcess()
@@ -553,6 +556,116 @@ ipcMain.handle('sim:advance', async () => {
       await simPost('/api/action', { action_id: actionId })
     }
     return JSON.parse(await simGet('/api/world'))
+  } catch (e: any) {
+    return { ok: false, error: e.message }
+  }
+})
+
+// ── Chronicle generation ──────────────────────────────────────────────────────
+
+function _fmtNum(n: number): string {
+  if (n >= 1_000_000) return `${(n / 1_000_000).toFixed(1)}M`
+  if (n >= 10_000) return `${(n / 1_000).toFixed(0)}k`
+  if (n >= 1_000) return `${(n / 1_000).toFixed(1)}k`
+  return String(Math.round(n))
+}
+
+function buildChroniclePrompt(params: {
+  turnStart: number
+  turnEnd: number
+  turnLabel: string
+  currentFactions: any[]
+  prevFactions: any[]
+  recentEvents: any[]
+  perspective: string | null
+  perspectiveFaction: any | null
+  previousEntries: any[]
+}): string {
+  const { turnStart, turnEnd, turnLabel, currentFactions, prevFactions,
+          recentEvents, perspective, perspectiveFaction, previousEntries } = params
+
+  const prevMap: Record<string, any> = {}
+  for (const f of prevFactions) prevMap[f.name] = f
+
+  const activeFactions = currentFactions.filter(f => (f.owned_regions ?? 0) > 0)
+  activeFactions.sort((a, b) => (b.owned_regions ?? 0) - (a.owned_regions ?? 0))
+
+  const factionLines = activeFactions.map(f => {
+    const prev = prevMap[f.name]
+    const regionDelta = prev != null ? (f.owned_regions ?? 0) - (prev.owned_regions ?? 0) : null
+    const popDelta    = prev != null ? (f.population ?? 0) - (prev.population ?? 0) : null
+    const regionStr   = `${f.owned_regions ?? 0} regions${regionDelta != null ? ` (${regionDelta >= 0 ? '+' : ''}${regionDelta})` : ' (new)'}`
+    const popStr      = `pop ${_fmtNum(f.population ?? 0)}${popDelta != null ? ` (${popDelta >= 0 ? '+' : ''}${_fmtNum(popDelta)})` : ''}`
+    const warStr      = (f.active_war_count ?? 0) > 0 ? `at war (${f.active_war_count} front${f.active_war_count > 1 ? 's' : ''})` : 'at peace'
+    const langStr     = f.language_family ? ` [${f.language_family}]` : ''
+    const tierStr     = f.polity_tier ? ` · ${f.polity_tier}` : ''
+    return `  ${f.display_name}${langStr}${tierStr}: ${regionStr}, ${popStr}, ${warStr}`
+  }).join('\n')
+
+  const notableEvents = recentEvents.filter((e: any) => (e.significance ?? 0) >= 2).slice(0, 24)
+  const eventLines = notableEvents.length
+    ? notableEvents.map((e: any) => {
+        const who   = e.faction ? `${e.faction}` : ''
+        const where = e.region  ? ` in ${e.region}` : ''
+        const det   = e.details ? ` — ${Object.entries(e.details).slice(0, 2).map(([k, v]) => `${k}: ${v}`).join(', ')}` : ''
+        return `  [${e.type}]${who ? ' ' + who : ''}${where}${det}`
+      }).join('\n')
+    : '  (no major events this period)'
+
+  const prevTail = previousEntries.length
+    ? `\nPREVIOUS CHRONICLE EXCERPT (for continuity — do not repeat its content):\n${previousEntries[0].text.slice(0, 350)}…\n`
+    : ''
+
+  let voiceInstruction: string
+  if (!perspective || !perspectiveFaction) {
+    voiceInstruction =
+      'Write as an impartial historian observing the age from above. ' +
+      'Note major power shifts, wars begun or ended, the rise and fall of peoples, and cultural or linguistic changes. ' +
+      'Be analytical and measured in tone.'
+  } else {
+    const lang = perspectiveFaction.language_family ?? perspectiveFaction.culture_name ?? perspectiveFaction.display_name
+    voiceInstruction =
+      `Write as a chronicle-keeper of the ${lang}-speaking ${perspectiveFaction.display_name} people. ` +
+      `Celebrate their victories, mourn their losses. Refer to your own people as "we" or "our people". ` +
+      `View rivals and enemies with suspicion or contempt. Mention distant events only insofar as they affect your people. ` +
+      `The ${perspectiveFaction.display_name} currently hold ${perspectiveFaction.owned_regions ?? 0} regions with a population of ${_fmtNum(perspectiveFaction.population ?? 0)}.`
+  }
+
+  return (
+    `CHRONICLE ENTRY — Turns ${turnStart} to ${turnEnd} (${turnLabel})\n\n` +
+    `FACTION STATUS (compared to turn ${turnStart}):\n${factionLines}\n\n` +
+    `NOTABLE EVENTS THIS PERIOD:\n${eventLines}\n` +
+    prevTail +
+    `\nINSTRUCTION:\n${voiceInstruction}\n\n` +
+    `Write 2–3 paragraphs of vivid, in-world chronicle prose. ` +
+    `Use the faction and region names exactly as given. ` +
+    `Do not invent events not listed above. Do not use bullet points, headers, or markdown — prose only.`
+  )
+}
+
+ipcMain.handle('chronicle:generate', async (_, params: {
+  turnStart: number
+  turnEnd: number
+  turnLabel: string
+  currentFactions: any[]
+  prevFactions: any[]
+  recentEvents: any[]
+  perspective: string | null
+  perspectiveFaction: any | null
+  previousEntries: any[]
+}) => {
+  const apiKey = process.env.ANTHROPIC_API_KEY
+  if (!apiKey) return { ok: false, error: 'ANTHROPIC_API_KEY environment variable is not set.' }
+  try {
+    const anthropic = new Anthropic({ apiKey })
+    const prompt = buildChroniclePrompt(params)
+    const msg = await anthropic.messages.create({
+      model: 'claude-haiku-4-5-20251001',
+      max_tokens: 700,
+      messages: [{ role: 'user', content: prompt }],
+    })
+    const text = (msg.content[0] as any).text as string
+    return { ok: true, text }
   } catch (e: any) {
     return { ok: false, error: e.message }
   }

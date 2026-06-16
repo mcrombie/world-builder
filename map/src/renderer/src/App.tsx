@@ -10,6 +10,7 @@ import { ExampleMapsDialog } from './components/ExampleMapsDialog'
 import { SimulationPanel } from './components/SimulationPanel'
 import { SimulateDialog } from './components/SimulateDialog'
 import { StoryView } from './components/StoryView'
+import { PerspectiveModal } from './components/PerspectiveModal'
 import { TutorialView } from './components/TutorialView'
 import { WorldBuilderIcon } from './components/WorldBuilderIcon'
 import { useMapStore } from './store/mapStore'
@@ -55,6 +56,9 @@ export default function App() {
   const setSimGeneratedMapPath = useMapStore((s) => s.setSimGeneratedMapPath)
   const viewMode         = useMapStore((s) => s.viewMode)
   const setViewMode      = useMapStore((s) => s.setViewMode)
+  const setChronicleEntries  = useMapStore((s) => s.setChronicleEntries)
+  const setChroniclePerspec  = useMapStore((s) => s.setChroniclePerspec)
+  const setChronicleInterval = useMapStore((s) => s.setChronicleInterval)
   const lorePath         = useMapStore((s) => s.map?.lorePath)
   const setLoreFile      = useMapStore((s) => s.setLoreFile)
 
@@ -217,6 +221,11 @@ export default function App() {
       setSimSeed(result.seed ?? '')
       setSimWorld(result.world as SimWorldState)
       setSimGeneratedMapPath(result.generatedMapPath ?? '')
+      if (result.chronicle) {
+        setChronicleEntries((result.chronicle as any).chronicle ?? [])
+        setChroniclePerspec((result.chronicle as any).chroniclePerspective ?? null)
+        setChronicleInterval((result.chronicle as any).chronicleInterval ?? 10)
+      }
     }
   }
 
@@ -482,6 +491,7 @@ export default function App() {
           onClose={() => setShowSimulateDialog(false)}
         />
       )}
+      <PerspectiveModal />
       {showNewDialog     && <NewMapDialog     onClose={() => setShowNewDialog(false)} />}
       {showRandomDialog  && <RandomMapDialog  onClose={() => setShowRandomDialog(false)} />}
       {showResizeDialog  && <ResizeDialog     onClose={() => setShowResizeDialog(false)} />}

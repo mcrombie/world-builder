@@ -1,5 +1,5 @@
 import { create } from 'zustand'
-import { AzloreFile, Climate, FactionData, HexData, MapData, RegionData, RiverSize, SelectMode, SimDetailSelection, SimWorldState, TerrainType, Tool, LayerVisibility, ViewMode } from '../types/map'
+import { AzloreFile, ChronicleEntry, ChroniclePerspec, Climate, FactionData, HexData, MapData, PerspectivePrompt, RegionData, RiverSize, SelectMode, SimDetailSelection, SimWorldState, TerrainType, Tool, LayerVisibility, ViewMode } from '../types/map'
 import { hexKey, hexesInRadius } from '../lib/hex'
 import { normalizeClimate } from '../lib/climate'
 
@@ -198,6 +198,18 @@ interface MapStore {
 
   viewMode: ViewMode
   setViewMode: (m: ViewMode) => void
+
+  chronicle: ChronicleEntry[]
+  chroniclePerspective: ChroniclePerspec | null
+  chroniclePendingPrompt: PerspectivePrompt | null
+  chronicleInterval: number
+  chronicleGenerating: boolean
+  addChronicleEntry: (entry: ChronicleEntry) => void
+  setChronicleEntries: (entries: ChronicleEntry[]) => void
+  setChroniclePerspec: (p: ChroniclePerspec | null) => void
+  setChroniclePrompt: (p: PerspectivePrompt | null) => void
+  setChronicleInterval: (n: number) => void
+  setChronicleGenerating: (b: boolean) => void
 }
 
 export const useMapStore = create<MapStore>((set, get) => ({
@@ -337,6 +349,18 @@ export const useMapStore = create<MapStore>((set, get) => ({
 
   viewMode: 'map',
   setViewMode: (m) => set({ viewMode: m }),
+
+  chronicle: [],
+  chroniclePerspective: null,
+  chroniclePendingPrompt: null,
+  chronicleInterval: 10,
+  chronicleGenerating: false,
+  addChronicleEntry: (entry) => set((state) => ({ chronicle: [entry, ...state.chronicle] })),
+  setChronicleEntries: (entries) => set({ chronicle: entries }),
+  setChroniclePerspec: (p) => set({ chroniclePerspective: p }),
+  setChroniclePrompt: (p) => set({ chroniclePendingPrompt: p }),
+  setChronicleInterval: (n) => set({ chronicleInterval: n }),
+  setChronicleGenerating: (b) => set({ chronicleGenerating: b }),
 
   newMap: (name, width, height, hexSize, precomputedHexes, precomputedRegions) => {
     let hexes: Record<string, HexData>

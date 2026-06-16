@@ -2,6 +2,7 @@ import { useState, useEffect, useRef, useMemo, useCallback } from 'react'
 import { useMapStore } from '../store/mapStore'
 import { generateMap, generateRegions, MapGenConfig } from '../lib/mapgen'
 import { TERRAIN_COLORS } from '../lib/terrain'
+import type { ChroniclePerspec } from '../types/map'
 
 interface Props {
   onComplete: (numFactions: number, worldName: string) => void
@@ -228,7 +229,131 @@ const MINIMAP_MAX_W_FINAL = 420
 // ── Component ─────────────────────────────────────────────────────────────────
 // step 0 = name, steps 1–5 = CHOICE_STEPS[0–4], step 6 = final
 
+const INTERVAL_OPTIONS = [5, 10, 20, 50]
+
 export function StoryView({ onComplete }: Props) {
+  const isSimulating          = useMapStore((s) => s.isSimulating)
+  const chronicleEntries      = useMapStore((s) => s.chronicle)
+  const chroniclePerspective  = useMapStore((s) => s.chroniclePerspective)
+  const setChroniclePerspec   = useMapStore((s) => s.setChroniclePerspec)
+  const chronicleInterval     = useMapStore((s) => s.chronicleInterval)
+  const setChronicleInterval  = useMapStore((s) => s.setChronicleInterval)
+  const chronicleGenerating   = useMapStore((s) => s.chronicleGenerating)
+  const simWorld              = useMapStore((s) => s.simWorld)
+
+  // ── Chronicle view (shown when simulation is running) ────────────────────
+  if (isSimulating) {
+    const activeFactions = simWorld?.factions.filter(f => (f.owned_regions ?? 0) > 0) ?? []
+
+    function switchPerspec(factionName: string | null) {
+      if (!factionName) {
+        setChroniclePerspec(null)
+        return
+      }
+      const f = simWorld?.factions.find(f => f.name === factionName)
+      if (!f) return
+      const perspec: ChroniclePerspec = {
+        factionName: f.name,
+        displayName: f.display_name,
+        languageFamily: f.language_family,
+      }
+      setChroniclePerspec(perspec)
+    }
+
+    const perspLabel = chroniclePerspective
+      ? `${chroniclePerspective.displayName}${chroniclePerspective.languageFamily ? ` [${chroniclePerspective.languageFamily}]` : ''}`
+      : 'Impartial Chronicler'
+
+    return (
+      <div className="flex-1 flex flex-col min-h-0 bg-gray-950 text-gray-100">
+        {/* Header controls */}
+        <div className="flex items-center gap-3 px-5 py-3 border-b border-gray-800 shrink-0 flex-wrap">
+          <div className="text-xs font-semibold text-gray-400 uppercase tracking-wider mr-auto">Chronicles</div>
+
+          {/* Perspective selector */}
+          <div className="flex items-center gap-2">
+            <span className="text-xs text-gray-500">Perspective</span>
+            <select
+              className="px-2 py-1 rounded bg-gray-800 border border-gray-700 text-gray-200 text-xs"
+              value={chroniclePerspective?.factionName ?? ''}
+              onChange={(e) => switchPerspec(e.target.value || null)}
+            >
+              <option value="">Impartial Chronicler</option>
+              {activeFactions.map(f => (
+                <option key={f.name} value={f.name}>
+                  {f.display_name}{f.language_family ? ` [${f.language_family}]` : ''}
+                </option>
+              ))}
+            </select>
+          </div>
+
+          {/* Interval selector */}
+          <div className="flex items-center gap-2">
+            <span className="text-xs text-gray-500">Every</span>
+            <select
+              className="px-2 py-1 rounded bg-gray-800 border border-gray-700 text-gray-200 text-xs"
+              value={chronicleInterval}
+              onChange={(e) => setChronicleInterval(Number(e.target.value))}
+            >
+              {INTERVAL_OPTIONS.map(n => (
+                <option key={n} value={n}>{n} turns</option>
+              ))}
+            </select>
+          </div>
+        </div>
+
+        {/* Chronicle scroll */}
+        <div className="flex-1 overflow-y-auto px-5 py-4 flex flex-col gap-4">
+          {/* Generating indicator */}
+          {chronicleGenerating && (
+            <div className="rounded-lg border border-indigo-800/50 bg-indigo-950/30 px-4 py-3">
+              <div className="flex items-center gap-2 text-xs text-indigo-400">
+                <span className="animate-pulse">●</span>
+                <span>Composing chronicle for {perspLabel}…</span>
+              </div>
+            </div>
+          )}
+
+          {/* Empty state with perspective prompt */}
+          {!chronicleGenerating && chronicleEntries.length === 0 && (
+            <div className="flex flex-col items-center gap-5 py-12 text-center">
+              <div className="text-gray-600 text-sm">
+                The first chronicle entry will be written at turn {chronicleInterval}.
+              </div>
+              <div className="text-xs text-gray-700 max-w-xs leading-relaxed">
+                Choose a perspective above — follow a faction's story or watch as an impartial historian.
+              </div>
+            </div>
+          )}
+
+          {/* Chronicle entries (most recent first) */}
+          {chronicleEntries.map((entry) => {
+            const isImpartial = !entry.perspective
+            return (
+              <div key={entry.id} className="rounded-lg border border-gray-800 bg-gray-900/60 overflow-hidden">
+                {/* Entry header */}
+                <div className="flex items-center gap-3 px-4 py-2 border-b border-gray-800 bg-gray-900">
+                  <span className="text-xs font-mono text-gray-500">{entry.turnLabel}</span>
+                  <span className="text-[10px] uppercase tracking-widest text-gray-600">·</span>
+                  <span className={`text-xs font-medium ${isImpartial ? 'text-gray-400' : 'text-indigo-300'}`}>
+                    {entry.perspectiveLabel}
+                  </span>
+                  {entry.perspectiveLanguage && (
+                    <span className="text-[10px] text-indigo-500/70 font-mono ml-0.5">[{entry.perspectiveLanguage}]</span>
+                  )}
+                </div>
+                {/* Entry prose */}
+                <div className="px-4 py-3">
+                  <p className="text-sm text-gray-300 leading-7 font-serif whitespace-pre-line">{entry.text}</p>
+                </div>
+              </div>
+            )
+          })}
+        </div>
+      </div>
+    )
+  }
+
   const newMap = useMapStore((s) => s.newMap)
 
   const [step,      setStep]      = useState(0)

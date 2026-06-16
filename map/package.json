@@ -10,6 +10,7 @@
     "start": "powershell -Command \"Remove-Item Env:ELECTRON_RUN_AS_NODE -ErrorAction SilentlyContinue; npx electron-vite preview\""
   },
   "dependencies": {
+    "@anthropic-ai/sdk": "^0.104.2",
     "zustand": "^5.0.0"
   },
   "devDependencies": {

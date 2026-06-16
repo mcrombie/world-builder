@@ -12,7 +12,7 @@ interface Props {
   onClose: () => void
 }
 
-type ScenarioMode = 'azhora' | 'azhora2' | 'random'
+type ScenarioMode = 'azhora' | 'azhora2' | 'azhora3' | 'random'
 
 const AZHORA_FACTION_COUNT = 9
 const AZHORA_SCENARIO_2_FACTION_COUNT = 10
@@ -32,6 +32,8 @@ export function SimulateDialog({ initialFactionCount, initialSimType, initialSee
       onStartNew(azhoraFactionCount, AZHORA_SIM_TYPE, azhoraSeed, 'default')
     } else if (scenario === 'azhora2') {
       onStartNew(azhoraFactionCount, AZHORA_SIM_TYPE, azhoraSeed, '2')
+    } else if (scenario === 'azhora3') {
+      onStartNew(AZHORA_SCENARIO_2_FACTION_COUNT, AZHORA_SIM_TYPE, azhoraSeed, '3')
     } else {
       onStartNew(factionCount, simType, seed, 'default')
     }
@@ -85,6 +87,24 @@ export function SimulateDialog({ initialFactionCount, initialSimType, initialSee
             </button>
           )}
 
+          {/* Azhora: The Long Migration — only for the Azhora map */}
+          {isAzhoraMap && (
+            <button
+              type="button"
+              className={`w-full text-left px-3 py-2.5 rounded-lg border transition-colors ${
+                scenario === 'azhora3'
+                  ? 'border-indigo-500 bg-indigo-900/40 text-gray-100'
+                  : 'border-gray-700 bg-gray-800 text-gray-300 hover:border-gray-600'
+              }`}
+              onClick={() => setScenario('azhora3')}
+            >
+              <div className="text-sm font-medium">Azhora: The Long Migration</div>
+              <div className="text-xs text-gray-500 mt-0.5">
+                Boueni alone at the start · one new people arrives every 25 turns through turn 225
+              </div>
+            </button>
+          )}
+
           {/* Set Start Conditions */}
           <button
             type="button"
@@ -116,6 +136,19 @@ export function SimulateDialog({ initialFactionCount, initialSimType, initialSee
               ))}
             </select>
 
+            <label className="text-sm text-gray-300 shrink-0">Seed</label>
+            <input
+              className="min-w-0 px-2 py-1.5 rounded bg-gray-800 border border-gray-700 text-gray-200 text-sm"
+              value={azhoraSeed}
+              onChange={(e) => setAzhoraSeed(e.target.value)}
+              placeholder="azhora-calibration-003"
+            />
+          </div>
+        )}
+
+        {/* Long Migration seed control (faction count is always 10) */}
+        {scenario === 'azhora3' && (
+          <div className="grid grid-cols-[auto_1fr] items-center gap-x-3 gap-y-3">
             <label className="text-sm text-gray-300 shrink-0">Seed</label>
             <input
               className="min-w-0 px-2 py-1.5 rounded bg-gray-800 border border-gray-700 text-gray-200 text-sm"

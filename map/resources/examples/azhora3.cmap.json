@@ -1,5 +1,5 @@
 {
-  "description": "world-builder map: Azhora (Scenario 2)",
+  "description": "world-builder map: Azhora (Scenario 3)",
   "num_factions": 10,
   "faction_names": [],
   "sea_links": [
@@ -5472,7 +5472,7 @@
         "Qadwaaqaad",
         "Saxhan"
       ],
-      "owner": "Faction4",
+      "owner": null,
       "resources": 3,
       "display_name": "Sabrqad",
       "founding_name": "Sabrqad",
@@ -7021,8 +7021,16 @@
     }
   },
   "faction_arrivals": {
+    "Faction4": {
+      "arrival_turn": 25,
+      "arrival_type": "disruptive_colonial_landing",
+      "entry_region": "Sabrqad",
+      "origin": "foreign land",
+      "status": "foreign_colony",
+      "language": "moreshi"
+    },
     "Faction5": {
-      "arrival_turn": 100,
+      "arrival_turn": 50,
       "arrival_type": "disruptive_colonial_landing",
       "entry_region": "East Mithala",
       "origin": "foreign land",
@@ -7030,7 +7038,7 @@
       "language": "grassic"
     },
     "Faction3": {
-      "arrival_turn": 100,
+      "arrival_turn": 75,
       "arrival_type": "disruptive_colonial_landing",
       "entry_region": "West Pyros",
       "origin": "foreign land",
@@ -7038,7 +7046,7 @@
       "language": "pyrosi"
     },
     "Faction2": {
-      "arrival_turn": 200,
+      "arrival_turn": 100,
       "arrival_type": "disruptive_colonial_landing",
       "entry_region": "East Mithala",
       "origin": "foreign land",
@@ -7046,7 +7054,7 @@
       "language": "mittoli"
     },
     "Faction6": {
-      "arrival_turn": 200,
+      "arrival_turn": 125,
       "arrival_type": "disruptive_colonial_landing",
       "entry_region": "North Ibenal",
       "origin": "foreign land",
@@ -7054,7 +7062,7 @@
       "language": "ibnael"
     },
     "Faction8": {
-      "arrival_turn": 300,
+      "arrival_turn": 150,
       "arrival_type": "disruptive_colonial_landing",
       "entry_region": "Elagos",
       "origin": "foreign land",
@@ -7062,7 +7070,7 @@
       "language": "elagosi"
     },
     "Faction9": {
-      "arrival_turn": 300,
+      "arrival_turn": 175,
       "arrival_type": "disruptive_colonial_landing",
       "entry_region": "Telemonia",
       "origin": "foreign land",
@@ -7070,7 +7078,7 @@
       "language": "kellith"
     },
     "Faction7": {
-      "arrival_turn": 400,
+      "arrival_turn": 200,
       "arrival_type": "disruptive_colonial_landing",
       "entry_region": "East Suval",
       "origin": "foreign land",
@@ -7078,7 +7086,7 @@
       "language": "elodi"
     },
     "Faction10": {
-      "arrival_turn": 400,
+      "arrival_turn": 225,
       "arrival_type": "disruptive_colonial_landing",
       "entry_region": "Cold Stones",
       "origin": "foreign land",

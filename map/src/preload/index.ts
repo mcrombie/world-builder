@@ -18,10 +18,13 @@ contextBridge.exposeInMainWorld('electronAPI', {
   },
   sim: {
     start:         (mapFilePath: string, numFactions?: number, simType?: string, seed?: string, scenario?: string) => ipcRenderer.invoke('sim:start', mapFilePath, numFactions ?? 9, simType ?? 'clashvergence', seed ?? '', scenario ?? 'default'),
-    stop:          ()                    => ipcRenderer.invoke('sim:stop'),
-    world:         ()                    => ipcRenderer.invoke('sim:world'),
-    advance:       ()                    => ipcRenderer.invoke('sim:advance'),
-    saveState:     ()                    => ipcRenderer.invoke('sim:save-state'),
-    loadAndStart:  ()                    => ipcRenderer.invoke('sim:load-and-start'),
+    stop:          ()                         => ipcRenderer.invoke('sim:stop'),
+    world:         ()                         => ipcRenderer.invoke('sim:world'),
+    advance:       ()                         => ipcRenderer.invoke('sim:advance'),
+    saveState:     (chronicleData?: unknown)  => ipcRenderer.invoke('sim:save-state', chronicleData),
+    loadAndStart:  ()                         => ipcRenderer.invoke('sim:load-and-start'),
+  },
+  chronicle: {
+    generate: (params: unknown) => ipcRenderer.invoke('chronicle:generate', params),
   },
 })

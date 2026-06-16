@@ -1,7 +1,7 @@
 import { useMemo, useState, useRef, useEffect } from 'react'
 import { useMapStore } from '../store/mapStore'
 import { IS_BROWSER } from '../lib/fileIO'
-import type { SimActiveShock, SimActiveWar, SimEvent, SimFaction, SimHotRegion, ViewMode } from '../types/map'
+import type { ChronicleEntry, ChroniclePerspec, PerspectivePrompt, SimActiveShock, SimActiveWar, SimEvent, SimFaction, SimHotRegion, SimWorldState, ViewMode } from '../types/map'
 
 const SIM_PANEL_WIDTH: Record<ViewMode, string> = {
   map:      'w-80',
@@ -164,6 +164,21 @@ export function SimulationPanel() {
   const simDetailSelection = useMapStore((s) => s.simDetailSelection)
   const setSimDetailSelection = useMapStore((s) => s.setSimDetailSelection)
   const viewMode       = useMapStore((s) => s.viewMode)
+
+  const chronicle              = useMapStore((s) => s.chronicle)
+  const addChronicleEntry      = useMapStore((s) => s.addChronicleEntry)
+  const chroniclePerspective   = useMapStore((s) => s.chroniclePerspective)
+  const chroniclePendingPrompt = useMapStore((s) => s.chroniclePendingPrompt)
+  const setChroniclePrompt     = useMapStore((s) => s.setChroniclePrompt)
+  const chronicleInterval      = useMapStore((s) => s.chronicleInterval)
+  const setChronicleGenerating = useMapStore((s) => s.setChronicleGenerating)
+
+  // Chronicle tracking refs
+  const prevSimWorldRef          = useRef<SimWorldState | null>(null)
+  const bufferedEventsRef        = useRef<SimEvent[]>([])
+  const lastChronicleTurnRef     = useRef<number>(0)
+  const intervalStartFactionsRef = useRef<SimFaction[]>([])
+
   const [isAdvancing, setIsAdvancing] = useState(false)
   const [isPlaying,   setIsPlaying]   = useState(false)
   const [error, setError]             = useState<string | null>(null)
@@ -273,8 +288,80 @@ export function SimulationPanel() {
     return () => window.clearInterval(timer)
   }, [isTurnLoading, turnLoadStats.averageMs, turnLoadStats.lastMs])
 
+  function detectPerspectivePrompt(
+    prev: SimWorldState | null,
+    next: SimWorldState,
+    currentPerspec: ChroniclePerspec | null,
+  ): PerspectivePrompt | null {
+    if (!prev) return null
+    const prevNames = new Set(prev.factions.map(f => f.name))
+    for (const f of next.factions) {
+      if (prevNames.has(f.name)) continue
+      if (f.is_rebel && currentPerspec && f.origin_faction === currentPerspec.factionName) {
+        return {
+          type: 'splinter',
+          factionName: f.name,
+          displayName: f.display_name,
+          languageFamily: f.language_family,
+          originFaction: f.origin_faction ?? undefined,
+          description: `The ${f.display_name} have broken away from ${currentPerspec.displayName}. Will you follow their story?`,
+        }
+      }
+      if (!f.is_rebel && (f.owned_regions ?? 0) > 0) {
+        return {
+          type: 'arrival',
+          factionName: f.name,
+          displayName: f.display_name,
+          languageFamily: f.language_family,
+          description: `The ${f.display_name} have arrived${f.language_family ? `, speaking ${f.language_family}` : ''}. Will you shift your chronicle to their perspective?`,
+        }
+      }
+    }
+    return null
+  }
+
+  async function triggerChronicleGeneration(world: SimWorldState, perspec: ChroniclePerspec | null, currentChronicle: ChronicleEntry[]) {
+    if (!window.electronAPI?.chronicle) return
+    setChronicleGenerating(true)
+    const perspFaction = perspec
+      ? world.factions.find(f => f.name === perspec.factionName) ?? null
+      : null
+    const params = {
+      turnStart: lastChronicleTurnRef.current,
+      turnEnd: world.turn,
+      turnLabel: world.turn_label,
+      currentFactions: world.factions,
+      prevFactions: intervalStartFactionsRef.current,
+      recentEvents: bufferedEventsRef.current,
+      perspective: perspec?.factionName ?? null,
+      perspectiveFaction: perspFaction,
+      previousEntries: currentChronicle.slice(0, 2),
+    }
+    const result = await window.electronAPI.chronicle.generate(params)
+    setChronicleGenerating(false)
+    if (result.ok && result.text) {
+      addChronicleEntry({
+        id: crypto.randomUUID(),
+        turnStart: lastChronicleTurnRef.current,
+        turnEnd: world.turn,
+        turnLabel: world.turn_label,
+        perspective: perspec?.factionName ?? null,
+        perspectiveLabel: perspec?.displayName ?? 'Impartial Chronicler',
+        perspectiveLanguage: perspec?.languageFamily,
+        text: result.text,
+        generatedAt: Date.now(),
+      })
+      lastChronicleTurnRef.current = world.turn
+      intervalStartFactionsRef.current = world.factions
+      bufferedEventsRef.current = []
+    } else if (!result.ok) {
+      setError(result.error ?? 'Chronicle generation failed.')
+    }
+  }
+
   async function advanceOnce(): Promise<boolean> {
     if (IS_BROWSER || !window.electronAPI?.sim) return false
+    if (chroniclePendingPrompt) return false
     const loadMarker = beginTurnLoad()
     try {
       const result = await window.electronAPI.sim.advance()
@@ -283,8 +370,23 @@ export function SimulationPanel() {
         cancelTurnLoad(loadMarker)
         return false
       }
-      setSimWorld(result as any)
+      const next = result as SimWorldState
+      setSimWorld(next)
       finishTurnLoad(loadMarker)
+
+      // Buffer events for chronicle context
+      bufferedEventsRef.current.push(...(next.recent_events ?? []))
+
+      // Detect perspective-switch triggers
+      const store = useMapStore.getState()
+      const prompt = detectPerspectivePrompt(prevSimWorldRef.current, next, store.chroniclePerspective)
+      if (prompt) {
+        setChroniclePrompt(prompt)
+      } else if (next.turn > 0 && next.turn % store.chronicleInterval === 0) {
+        await triggerChronicleGeneration(next, store.chroniclePerspective, store.chronicle)
+      }
+
+      prevSimWorldRef.current = next
       return true
     } catch (e: any) {
       setError(e.message)
@@ -363,7 +465,13 @@ export function SimulationPanel() {
 
   async function handleSave() {
     if (IS_BROWSER || !window.electronAPI?.sim) return
-    const result = await window.electronAPI.sim.saveState()
+    const store = useMapStore.getState()
+    const chronicleData = {
+      chronicle: store.chronicle,
+      chroniclePerspective: store.chroniclePerspective,
+      chronicleInterval: store.chronicleInterval,
+    }
+    const result = await window.electronAPI.sim.saveState(chronicleData)
     if (result.ok === false) setError(result.error ?? 'Save failed.')
   }
 
@@ -633,9 +741,10 @@ export function SimulationPanel() {
             <button
               className="flex-1 px-3 py-1.5 text-sm rounded bg-indigo-600 hover:bg-indigo-500 disabled:opacity-40 disabled:cursor-wait"
               onClick={handleAdvance}
-              disabled={isAdvancing || isPlaying}
+              disabled={isAdvancing || isPlaying || !!chroniclePendingPrompt}
+              title={chroniclePendingPrompt ? 'Answer the chronicle prompt in Story Mode first' : undefined}
             >
-              {isAdvancing ? 'Advancing…' : 'Next Turn'}
+              {isAdvancing ? 'Advancing…' : chroniclePendingPrompt ? 'Chronicle…' : 'Next Turn'}
             </button>
             <button
               className={`w-20 px-3 py-1.5 text-sm rounded ${isPlaying ? 'bg-yellow-600 hover:bg-yellow-500' : 'bg-green-700 hover:bg-green-600'} disabled:opacity-40`}

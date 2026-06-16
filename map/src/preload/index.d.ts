@@ -11,6 +11,9 @@ interface _SimRegion    { name: string; display_name: string; owner: string | nu
 interface _SimWorld     { ok?: boolean; error?: string; turn: number; turn_label: string; summary?: Record<string, unknown>; factions: _SimFaction[]; regions: _SimRegion[]; recent_events: unknown[]; hot_regions?: unknown[]; active_wars?: unknown[]; active_shocks?: unknown[] }
 interface _SimStartResult { ok: boolean; error?: string; canceled?: boolean; world?: _SimWorld; seed?: string; generatedMapPath?: string }
 interface _SimSaveResult  { ok?: boolean; error?: string; canceled?: boolean; filePath?: string }
+interface _ChronicleGenerateResult { ok: boolean; text?: string; error?: string }
+interface _ChronicleData { chronicle: unknown[]; chroniclePerspective: unknown | null; chronicleInterval: number }
+interface _SimStartResultWithChronicle extends _SimStartResult { chronicle?: _ChronicleData | null }
 
 interface _LoreResult { data?: string; filePath?: string; canceled?: boolean; error?: string }
 
@@ -31,11 +34,14 @@ export interface ElectronAPI {
   }
   sim: {
     start:        (mapFilePath: string, numFactions?: number, simType?: string, seed?: string, scenario?: string) => Promise<_SimStartResult>
-    stop:         ()                    => Promise<{ ok: boolean }>
-    world:        ()                    => Promise<_SimWorld>
-    advance:      ()                    => Promise<_SimWorld>
-    saveState:    ()                    => Promise<_SimSaveResult>
-    loadAndStart: ()                    => Promise<_SimStartResult>
+    stop:         ()                              => Promise<{ ok: boolean }>
+    world:        ()                              => Promise<_SimWorld>
+    advance:      ()                              => Promise<_SimWorld>
+    saveState:    (chronicleData?: _ChronicleData) => Promise<_SimSaveResult>
+    loadAndStart: ()                              => Promise<_SimStartResultWithChronicle>
+  }
+  chronicle: {
+    generate: (params: unknown) => Promise<_ChronicleGenerateResult>
   }
 }
 

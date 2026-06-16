@@ -278,6 +278,33 @@ export interface SimWorldState {
   active_shocks?: SimActiveShock[]
 }
 
+export interface ChronicleEntry {
+  id: string
+  turnStart: number
+  turnEnd: number
+  turnLabel: string
+  perspective: string | null
+  perspectiveLabel: string
+  perspectiveLanguage?: string
+  text: string
+  generatedAt: number
+}
+
+export interface ChroniclePerspec {
+  factionName: string
+  displayName: string
+  languageFamily?: string
+}
+
+export interface PerspectivePrompt {
+  type: 'splinter' | 'arrival'
+  factionName: string
+  displayName: string
+  languageFamily?: string
+  originFaction?: string
+  description: string
+}
+
 export type Tool = 'paint' | 'erase' | 'select' | 'pan' | 'river' | 'region' | 'climate' | 'faction'
 export type SelectMode = 'tile' | 'region' | 'faction'
 export type ViewMode = 'map' | 'balanced' | 'panel' | 'lore'

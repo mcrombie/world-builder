@@ -113,8 +113,8 @@ AZHORAN_DISRUPTIVE_ARRIVALS: dict[str, dict] = {
 
 # Scenario 2 — Waves of Arrival: Boueni and Moreshi start; others arrive in waves.
 AZHORAN_PREFERRED_START_REGIONS_2: dict[str, list[str]] = {
-    "boueni": ["East Inseld"],
-    "moreshi": ["Marosh"],
+    "boueni": ["North Riesov"],
+    "moreshi": ["Sabrqad"],
 }
 
 AZHORAN_DISRUPTIVE_ARRIVALS_2: dict[str, dict] = {
@@ -176,15 +176,99 @@ AZHORAN_DISRUPTIVE_ARRIVALS_2: dict[str, dict] = {
     },
 }
 
+# Scenario 3 — The Long Migration: Boueni alone at turn 0; one people arrives every 25 turns.
+AZHORAN_PREFERRED_START_REGIONS_3: dict[str, list[str]] = {
+    "boueni": ["North Riesov"],
+}
+
+AZHORAN_DISRUPTIVE_ARRIVALS_3: dict[str, dict] = {
+    "moreshi": {
+        "arrival_turn": 25,
+        "arrival_type": "disruptive_colonial_landing",
+        "entry_region": "Sabrqad",
+        "origin": "foreign land",
+        "status": "foreign_colony",
+    },
+    "grassic": {
+        "arrival_turn": 50,
+        "arrival_type": "disruptive_colonial_landing",
+        "entry_region": "East Mithala",
+        "origin": "foreign land",
+        "status": "foreign_colony",
+    },
+    "pyrosi": {
+        "arrival_turn": 75,
+        "arrival_type": "disruptive_colonial_landing",
+        "entry_region": "West Pyros",
+        "origin": "foreign land",
+        "status": "foreign_colony",
+    },
+    "mittoli": {
+        "arrival_turn": 100,
+        "arrival_type": "disruptive_colonial_landing",
+        "entry_region": "East Mithala",
+        "origin": "foreign land",
+        "status": "foreign_colony",
+    },
+    "ibnael": {
+        "arrival_turn": 125,
+        "arrival_type": "disruptive_colonial_landing",
+        "entry_region": "North Ibenal",
+        "origin": "foreign land",
+        "status": "foreign_colony",
+    },
+    "elagosi": {
+        "arrival_turn": 150,
+        "arrival_type": "disruptive_colonial_landing",
+        "entry_region": "Elagos",
+        "origin": "foreign land",
+        "status": "foreign_colony",
+    },
+    "kellith": {
+        "arrival_turn": 175,
+        "arrival_type": "disruptive_colonial_landing",
+        "entry_region": "Telemonia",
+        "origin": "foreign land",
+        "status": "foreign_colony",
+    },
+    "elodi": {
+        "arrival_turn": 200,
+        "arrival_type": "disruptive_colonial_landing",
+        "entry_region": "East Suval",
+        "origin": "foreign land",
+        "status": "foreign_colony",
+    },
+    "crefs": {
+        "arrival_turn": 225,
+        "arrival_type": "disruptive_colonial_landing",
+        "entry_region": "Cold Stones",
+        "origin": "foreign land",
+        "status": "foreign_colony",
+    },
+}
+
 # Each entry is (preferred_starts, disruptive_arrivals, required_faction_count).
 # required_faction_count overrides the CLI num_factions when not explicitly set.
 _AZHORAN_SCENARIOS: dict[str, tuple[dict, dict, int | None]] = {
     "default": (AZHORAN_PREFERRED_START_REGIONS, AZHORAN_DISRUPTIVE_ARRIVALS, None),
     "2": (AZHORAN_PREFERRED_START_REGIONS_2, AZHORAN_DISRUPTIVE_ARRIVALS_2, 10),
+    "3": (AZHORAN_PREFERRED_START_REGIONS_3, AZHORAN_DISRUPTIVE_ARRIVALS_3, 10),
 }
 
 _AZHORAN_SCENARIO_FACTION_TRAITS: dict[str, dict[str, list[str]]] = {
     "2": {
+        "boueni":    ["chaos_pioneers"],
+        "moreshi":   ["chaos_pioneers"],
+        "pyrosi":    ["desert_pioneers"],
+        "grassic":   ["plains_pioneers"],
+        "mittoli":   ["military_expansion"],
+        "ibnael":    ["forest_pioneers"],
+        "elagosi":   ["subtropical_pioneers"],
+        "kellith":   ["militarist_isolationist"],
+        "elodi":     ["developmental_religious"],
+        "crefs":     ["militarist_pioneers"],
+    },
+    "3": {
         "boueni":    ["chaos_pioneers"],
         "moreshi":   ["chaos_pioneers"],
         "pyrosi":    ["desert_pioneers"],
