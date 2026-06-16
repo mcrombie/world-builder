@@ -146,9 +146,12 @@ export function SimulateDialog({ initialFactionCount, initialSimType, initialSee
           </div>
         )}
 
-        {/* Long Migration seed control (faction count is always 10) */}
+        {/* Long Migration controls (faction count is always 10) */}
         {scenario === 'azhora3' && (
           <div className="grid grid-cols-[auto_1fr] items-center gap-x-3 gap-y-3">
+            <label className="text-sm text-gray-300 shrink-0">Factions</label>
+            <span className="text-sm text-gray-400">10 (fixed)</span>
+
             <label className="text-sm text-gray-300 shrink-0">Seed</label>
             <input
               className="min-w-0 px-2 py-1.5 rounded bg-gray-800 border border-gray-700 text-gray-200 text-sm"

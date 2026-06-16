@@ -1,5 +1,5 @@
 import { useMapStore } from '../store/mapStore'
-import { FactionData, GovernmentForm, PolityTier } from '../types/map'
+import { AgendaType, FactionData, GovernmentForm, PolityTier } from '../types/map'
 
 const INPUT  = 'w-full bg-gray-800 text-sm rounded px-2.5 py-1.5 outline-none focus:ring-1 ring-indigo-500 text-gray-100'
 const SELECT = INPUT
@@ -29,6 +29,18 @@ const GOVERNMENT_FORMS: { value: GovernmentForm; label: string }[] = [
   { value: 'republic',  label: 'Republic' },
   { value: 'theocracy', label: 'Theocracy' },
   { value: 'military',  label: 'Military' },
+]
+
+const AGENDA_TYPES: { value: AgendaType; label: string }[] = [
+  { value: 'explore',            label: 'Explore' },
+  { value: 'settle_region',      label: 'Settle Region' },
+  { value: 'hold_regions',       label: 'Hold Regions' },
+  { value: 'expand_territory',   label: 'Expand Territory' },
+  { value: 'contiguous_terrain', label: 'Contiguous Terrain' },
+  { value: 'trade',              label: 'Trade' },
+  { value: 'defend_region',      label: 'Defend Region' },
+  { value: 'conquer',            label: 'Conquer' },
+  { value: 'imperial',           label: 'Imperial' },
 ]
 
 export function FactionPanel({ factionId, panelW }: { factionId: string; panelW: string }) {
@@ -145,6 +157,16 @@ export function FactionPanel({ factionId, panelW }: { factionId: string; panelW:
           )}
         </Field>
       )}
+
+      <Field label="Scenario Agenda">
+        <select className={SELECT} value={fd.agendaType ?? ''}
+          onChange={(e) => upd({ agendaType: (e.target.value as AgendaType) || undefined })}>
+          <option value="">— none —</option>
+          {AGENDA_TYPES.map(({ value, label }) => (
+            <option key={value} value={value}>{label}</option>
+          ))}
+        </select>
+      </Field>
 
       <Field label="Notes">
         <textarea className={`${INPUT} resize-none`} rows={5}

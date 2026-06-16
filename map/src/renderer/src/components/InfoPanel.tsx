@@ -92,6 +92,30 @@ function fmtSocialForm(value: string | null | undefined): string {
   return value.split('_').map((part) => part.charAt(0).toUpperCase() + part.slice(1)).join(' ')
 }
 
+function fmtAgendaLabel(agenda: { agenda_type: string; params: Record<string, unknown> } | null | undefined): string | null {
+  if (!agenda?.agenda_type) return null
+  const p = agenda.params ?? {}
+  switch (agenda.agenda_type) {
+    case 'explore': return 'Explore as much of the continent as possible'
+    case 'settle_region': return p.target_region ? `Settle in ${p.target_region}` : 'Settle in a target region'
+    case 'hold_regions': {
+      const regions = Array.isArray(p.regions) ? (p.regions as string[]) : []
+      return regions.length ? `Hold ${regions.join(' and ')}` : 'Hold key regions'
+    }
+    case 'expand_territory': return 'Expand territory as much as possible'
+    case 'contiguous_terrain': return p.terrain ? `Dominate a contiguous block of ${p.terrain} regions` : 'Build a contiguous terrain bloc'
+    case 'trade': return 'Pursue trade and diplomatic connections'
+    case 'defend_region': return p.region ? `Never lose ${p.region}` : 'Defend a core region unconditionally'
+    case 'conquer': return 'Conquer as much territory as possible'
+    case 'imperial': {
+      const target = p.region_target ? ` to ${p.region_target}+ regions` : ''
+      const trib = p.prefer_tributaries ? ', preferring tributaries' : ''
+      return `Imperial expansion${target}${trib}`
+    }
+    default: return agenda.agenda_type
+  }
+}
+
 function fmtSimValue(value: unknown): string {
   if (value === null || value === undefined || value === '') return 'None'
   if (typeof value === 'number') {
@@ -383,6 +407,7 @@ function SimulationDetailPanel({
               ['Legitimacy', typeof faction.legitimacy === 'number' ? fmtSimPct(faction.legitimacy) : null],
               ['Status', faction.is_rebel ? 'Successor / rebel polity' : 'Established polity'],
               ['Origin', faction.origin_faction ? factionLabel(faction.origin_faction) : null],
+              ...(!faction.is_rebel && faction.agenda ? [['Agenda', fmtAgendaLabel(faction.agenda)] as [string, string | null]] : []),
             ]} />
           </DetailSection>
           <DetailSection title="Band And Tribe">

@@ -1,6 +1,6 @@
 {
-  "description": "world-builder map: Azhora (Scenario 3)",
-  "num_factions": 10,
+  "description": "world-builder map: Azhora",
+  "num_factions": 3,
   "faction_names": [],
   "sea_links": [
     [
@@ -38,22 +38,6 @@
     [
       "Amod",
       "Pueth"
-    ],
-    [
-      "Anubrul",
-      "Haatrul"
-    ],
-    [
-      "Anubrul",
-      "Maanub"
-    ],
-    [
-      "Anubrul",
-      "Maawad"
-    ],
-    [
-      "Anubrul",
-      "Nuurat"
     ],
     [
       "Aurumlis Archipeligo",
@@ -109,18 +93,6 @@
     ],
     [
       "Azhor Stones",
-      "Maanub"
-    ],
-    [
-      "Azhor Stones",
-      "Nuurat"
-    ],
-    [
-      "Azhor Stones",
-      "Rihas"
-    ],
-    [
-      "Azhor Stones",
       "Selemi"
     ],
     [
@@ -158,14 +130,6 @@
     [
       "Babon",
       "Trogo"
-    ],
-    [
-      "Barqat",
-      "Qadmar"
-    ],
-    [
-      "Barqat",
-      "Sabrqad"
     ],
     [
       "Cape Heth",
@@ -484,14 +448,6 @@
       "West Pyros"
     ],
     [
-      "Haatrul",
-      "Maanub"
-    ],
-    [
-      "Haatrul",
-      "Nuurat"
-    ],
-    [
       "Hama",
       "North Scythe"
     ],
@@ -562,26 +518,6 @@
     [
       "Luscia",
       "South Suval"
-    ],
-    [
-      "Maanub",
-      "Nuurat"
-    ],
-    [
-      "Maanub",
-      "Rihas"
-    ],
-    [
-      "Maanub",
-      "Saxrul"
-    ],
-    [
-      "Maanub",
-      "Waahan"
-    ],
-    [
-      "Maawad",
-      "Riwaad"
     ],
     [
       "Marosh",
@@ -720,52 +656,12 @@
       "West Endevor"
     ],
     [
-      "Nuurat",
-      "Rihas"
-    ],
-    [
-      "Nuurat",
-      "Saxrul"
-    ],
-    [
       "Peblos",
       "Pueth"
     ],
     [
       "Peblos",
       "South Suval"
-    ],
-    [
-      "Qadmar",
-      "Sabrqad"
-    ],
-    [
-      "Qadmar",
-      "Waahan"
-    ],
-    [
-      "Qadwaaqaad",
-      "Riwaad"
-    ],
-    [
-      "Qadwaaqaad",
-      "Sabrqad"
-    ],
-    [
-      "Rihas",
-      "Saxrul"
-    ],
-    [
-      "Rihas",
-      "Waahan"
-    ],
-    [
-      "Riwaad",
-      "Sabrqad"
-    ],
-    [
-      "Saxrul",
-      "Waahan"
     ],
     [
       "Selemi",
@@ -1181,7 +1077,7 @@
   "regions": {
     "Cold Stones": {
       "neighbors": [],
-      "owner": "Faction1",
+      "owner": null,
       "resources": 3,
       "display_name": "Cold Stones",
       "founding_name": "Cold Stones",
@@ -1202,9 +1098,9 @@
       },
       "terrain_tags": [
         "coast",
-        "highland"
+        "hills"
       ],
-      "climate": "Dfc"
+      "climate": "Dfb"
     },
     "North Orsa": {
       "neighbors": [
@@ -1235,7 +1131,7 @@
         "coast",
         "steppe"
       ],
-      "climate": "Dfc"
+      "climate": "Dfb"
     },
     "North Thoth": {
       "neighbors": [
@@ -1267,7 +1163,7 @@
         "coast",
         "steppe"
       ],
-      "climate": "Dfc"
+      "climate": "Dfb"
     },
     "West Witherst": {
       "neighbors": [
@@ -1299,7 +1195,7 @@
         "coast",
         "steppe"
       ],
-      "climate": "Dfc"
+      "climate": "Dfb"
     },
     "South Orsa": {
       "neighbors": [
@@ -1330,7 +1226,7 @@
         "coast",
         "steppe"
       ],
-      "climate": "Dwc"
+      "climate": "Dfb"
     },
     "Central Thoth": {
       "neighbors": [
@@ -1364,7 +1260,7 @@
       "terrain_tags": [
         "steppe"
       ],
-      "climate": "Dwc"
+      "climate": "Dfb"
     },
     "North Gorgi Mountains": {
       "neighbors": [
@@ -1398,7 +1294,7 @@
         "highland",
         "hills"
       ],
-      "climate": "Dwc"
+      "climate": "Dfb"
     },
     "North Nonoth": {
       "neighbors": [
@@ -1430,7 +1326,7 @@
         "coast",
         "steppe"
       ],
-      "climate": "Dwc"
+      "climate": "Dfb"
     },
     "East Witherst": {
       "neighbors": [
@@ -1461,7 +1357,7 @@
         "coast",
         "steppe"
       ],
-      "climate": "Dfc"
+      "climate": "Dfb"
     },
     "West Gorgi Mountains": {
       "neighbors": [
@@ -1496,7 +1392,7 @@
         "highland",
         "hills"
       ],
-      "climate": "Dwc"
+      "climate": "Dfb"
     },
     "East Gorgi Mountains": {
       "neighbors": [
@@ -1529,7 +1425,7 @@
         "highland",
         "hills"
       ],
-      "climate": "Dwc"
+      "climate": "Dfb"
     },
     "Eshtor Plateau": {
       "neighbors": [
@@ -1563,7 +1459,7 @@
       "terrain_tags": [
         "hills"
       ],
-      "climate": "Dfc"
+      "climate": "Dfb"
     },
     "South Nonoth": {
       "neighbors": [
@@ -1595,7 +1491,7 @@
         "coast",
         "steppe"
       ],
-      "climate": "Dwc"
+      "climate": "Dfb"
     },
     "South Thoth": {
       "neighbors": [
@@ -1627,7 +1523,7 @@
       "terrain_tags": [
         "steppe"
       ],
-      "climate": "Dwc"
+      "climate": "Dfb"
     },
     "North Riesov": {
       "neighbors": [
@@ -1661,7 +1557,7 @@
         "hills",
         "steppe"
       ],
-      "climate": "Dfc"
+      "climate": "Dfb"
     },
     "Noth Hills": {
       "neighbors": [
@@ -1695,7 +1591,7 @@
       "terrain_tags": [
         "hills"
       ],
-      "climate": "Dwc"
+      "climate": "Cfb"
     },
     "Orgmala": {
       "neighbors": [
@@ -1732,7 +1628,7 @@
         "steppe",
         "plains"
       ],
-      "climate": "Dwc"
+      "climate": "Cfb"
     },
     "North Lond": {
       "neighbors": [
@@ -1836,7 +1732,7 @@
         "highland",
         "hills"
       ],
-      "climate": "Dwc"
+      "climate": "Dfb"
     },
     "South Riesov": {
       "neighbors": [
@@ -1868,7 +1764,7 @@
         "hills",
         "steppe"
       ],
-      "climate": "Dwc"
+      "climate": "Cfb"
     },
     "East Lond": {
       "neighbors": [
@@ -1946,7 +1842,7 @@
         "South Lond",
         "West Lond"
       ],
-      "owner": null,
+      "owner": "Faction1",
       "resources": 3,
       "display_name": "Central Lond",
       "founding_name": "Central Lond",
@@ -2002,7 +1898,7 @@
         "highland",
         "hills"
       ],
-      "climate": "Dwc"
+      "climate": "Dfb"
     },
     "North Endevor": {
       "neighbors": [
@@ -2304,7 +2200,7 @@
         "highland",
         "forest"
       ],
-      "climate": "Dfb"
+      "climate": "Cfb"
     },
     "Cape Thalmagar": {
       "neighbors": [
@@ -2369,7 +2265,7 @@
         "highland",
         "forest"
       ],
-      "climate": "Dfb"
+      "climate": "Cfb"
     },
     "East Acordwood": {
       "neighbors": [
@@ -2461,7 +2357,7 @@
         "coast",
         "plains"
       ],
-      "climate": "Dfb"
+      "climate": "Cfb"
     },
     "Acor Wetlands": {
       "neighbors": [
@@ -2495,7 +2391,7 @@
         "coast",
         "marsh"
       ],
-      "climate": "Dfb"
+      "climate": "Cfb"
     },
     "Narcosh": {
       "neighbors": [
@@ -2565,7 +2461,7 @@
         "hills",
         "steppe"
       ],
-      "climate": "Dwd"
+      "climate": "Dfb"
     },
     "South Acordwood": {
       "neighbors": [
@@ -2598,7 +2494,7 @@
         "highland",
         "forest"
       ],
-      "climate": "Dfb"
+      "climate": "Cfb"
     },
     "West Inseld": {
       "neighbors": [
@@ -2628,7 +2524,7 @@
         "steppe",
         "plains"
       ],
-      "climate": "Dfb"
+      "climate": "Cfb"
     },
     "Lesser Oremindi Mountains": {
       "neighbors": [
@@ -2694,7 +2590,7 @@
         "steppe",
         "plains"
       ],
-      "climate": "Dfa"
+      "climate": "Cfb"
     },
     "Henborth": {
       "neighbors": [
@@ -2729,7 +2625,7 @@
       "terrain_tags": [
         "steppe"
       ],
-      "climate": "Dfa"
+      "climate": "Cfb"
     },
     "North Oreminidi Mountains": {
       "neighbors": [
@@ -2763,7 +2659,7 @@
         "highland",
         "hills"
       ],
-      "climate": "ET"
+      "climate": "Dfb"
     },
     "East Mithala": {
       "neighbors": [
@@ -2797,7 +2693,7 @@
         "steppe",
         "plains"
       ],
-      "climate": "Dfa"
+      "climate": "Cfb"
     },
     "West Mithala": {
       "neighbors": [
@@ -2831,7 +2727,7 @@
         "steppe",
         "plains"
       ],
-      "climate": "Dfa"
+      "climate": "Cfb"
     },
     "West Oremindi Mountains": {
       "neighbors": [
@@ -2863,7 +2759,7 @@
         "highland",
         "hills"
       ],
-      "climate": "Dwd"
+      "climate": "Dfb"
     },
     "East Oremindi Mountains": {
       "neighbors": [
@@ -2897,7 +2793,7 @@
         "highland",
         "hills"
       ],
-      "climate": "Dfc"
+      "climate": "Dfb"
     },
     "South Mithala": {
       "neighbors": [
@@ -2933,7 +2829,7 @@
         "steppe",
         "plains"
       ],
-      "climate": "Dfa"
+      "climate": "Cfb"
     },
     "North Celder": {
       "neighbors": [
@@ -2966,7 +2862,7 @@
         "steppe",
         "plains"
       ],
-      "climate": "Dfa"
+      "climate": "Cfb"
     },
     "East Lotharn Mountains": {
       "neighbors": [
@@ -3000,7 +2896,7 @@
         "highland",
         "hills"
       ],
-      "climate": "Cfa"
+      "climate": "Cfb"
     },
     "Feradom": {
       "neighbors": [
@@ -3034,7 +2930,7 @@
         "hills",
         "steppe"
       ],
-      "climate": "Csb"
+      "climate": "Cfb"
     },
     "South Celder": {
       "neighbors": [
@@ -3067,7 +2963,7 @@
       "terrain_tags": [
         "steppe"
       ],
-      "climate": "Dfa"
+      "climate": "Cfb"
     },
     "West Lotharn Mountains": {
       "neighbors": [
@@ -3102,7 +2998,7 @@
         "highland",
         "hills"
       ],
-      "climate": "Cfa"
+      "climate": "Dfb"
     },
     "South Oremindi Mountains": {
       "neighbors": [
@@ -3137,7 +3033,7 @@
         "highland",
         "hills"
       ],
-      "climate": "Dwc"
+      "climate": "Cfb"
     },
     "Amod": {
       "neighbors": [
@@ -3172,7 +3068,7 @@
         "hills",
         "plains"
       ],
-      "climate": "Cfa"
+      "climate": "Cfb"
     },
     "North Ibenal": {
       "neighbors": [
@@ -3206,7 +3102,7 @@
         "hills",
         "steppe"
       ],
-      "climate": "Csc"
+      "climate": "Cfb"
     },
     "Vastos": {
       "neighbors": [
@@ -3238,7 +3134,7 @@
       "terrain_tags": [
         "plains"
       ],
-      "climate": "Cfa"
+      "climate": "Cfb"
     },
     "Yunethre": {
       "neighbors": [
@@ -3271,7 +3167,7 @@
         "coast",
         "steppe"
       ],
-      "climate": "Dfa"
+      "climate": "Cfb"
     },
     "Pueth": {
       "neighbors": [
@@ -3304,7 +3200,7 @@
         "steppe",
         "plains"
       ],
-      "climate": "Cfa"
+      "climate": "Cfb"
     },
     "Meneth": {
       "neighbors": [
@@ -3337,7 +3233,7 @@
       "terrain_tags": [
         "plains"
       ],
-      "climate": "Cfa"
+      "climate": "Cfb"
     },
     "North Ibenwood": {
       "neighbors": [
@@ -3373,7 +3269,7 @@
         "highland",
         "forest"
       ],
-      "climate": "Csc"
+      "climate": "Cfb"
     },
     "Elagos": {
       "neighbors": [
@@ -3410,7 +3306,7 @@
         "forest",
         "plains"
       ],
-      "climate": "Cfa"
+      "climate": "Cfb"
     },
     "Isareos": {
       "neighbors": [
@@ -3446,7 +3342,7 @@
         "steppe",
         "plains"
       ],
-      "climate": "Cfa"
+      "climate": "Cfb"
     },
     "Drent": {
       "neighbors": [
@@ -3479,7 +3375,7 @@
         "steppe",
         "plains"
       ],
-      "climate": "Cfa"
+      "climate": "Cfb"
     },
     "Caricas": {
       "neighbors": [
@@ -3512,7 +3408,7 @@
         "steppe",
         "plains"
       ],
-      "climate": "Cfa"
+      "climate": "Cfb"
     },
     "South Ibenal": {
       "neighbors": [
@@ -3544,7 +3440,7 @@
         "riverland",
         "steppe"
       ],
-      "climate": "Csb"
+      "climate": "Cfb"
     },
     "West Ibenwood": {
       "neighbors": [
@@ -3578,7 +3474,7 @@
         "highland",
         "forest"
       ],
-      "climate": "Csb"
+      "climate": "Cfb"
     },
     "Central Ibenwood": {
       "neighbors": [
@@ -3611,7 +3507,7 @@
         "highland",
         "forest"
       ],
-      "climate": "Csb"
+      "climate": "Cfb"
     },
     "East Ibenwood": {
       "neighbors": [
@@ -3648,7 +3544,7 @@
         "highland",
         "forest"
       ],
-      "climate": "Csb"
+      "climate": "Cfb"
     },
     "Luscia": {
       "neighbors": [
@@ -3683,7 +3579,7 @@
         "steppe",
         "plains"
       ],
-      "climate": "Cfa"
+      "climate": "Cfb"
     },
     "Peblos": {
       "neighbors": [],
@@ -3711,7 +3607,7 @@
         "hills",
         "steppe"
       ],
-      "climate": "Csb"
+      "climate": "BWh"
     },
     "Nethereum": {
       "neighbors": [
@@ -3746,7 +3642,7 @@
         "steppe",
         "plains"
       ],
-      "climate": "Cfa"
+      "climate": "Cfb"
     },
     "Nesdor": {
       "neighbors": [
@@ -3782,7 +3678,7 @@
         "steppe",
         "plains"
       ],
-      "climate": "Cfa"
+      "climate": "Cfb"
     },
     "Moros Plain": {
       "neighbors": [
@@ -3814,7 +3710,7 @@
       "terrain_tags": [
         "steppe"
       ],
-      "climate": "Cfa"
+      "climate": "Cfb"
     },
     "East Suval": {
       "neighbors": [
@@ -3847,7 +3743,7 @@
         "steppe",
         "plains"
       ],
-      "climate": "Csa"
+      "climate": "Cfb"
     },
     "South Ibenwood": {
       "neighbors": [
@@ -3881,7 +3777,7 @@
         "highland",
         "forest"
       ],
-      "climate": "Csb"
+      "climate": "Cfb"
     },
     "Nether Desert": {
       "neighbors": [
@@ -3915,7 +3811,7 @@
         "coast",
         "steppe"
       ],
-      "climate": "BSh"
+      "climate": "BWh"
     },
     "Ovesos": {
       "neighbors": [
@@ -3949,7 +3845,7 @@
         "steppe",
         "plains"
       ],
-      "climate": "BSh"
+      "climate": "Cfb"
     },
     "West Suval": {
       "neighbors": [
@@ -3984,7 +3880,7 @@
         "steppe",
         "plains"
       ],
-      "climate": "Csa"
+      "climate": "Cfb"
     },
     "Oves Desert": {
       "neighbors": [
@@ -4017,7 +3913,7 @@
         "hills",
         "steppe"
       ],
-      "climate": "BSh"
+      "climate": "BWh"
     },
     "Alezhor": {
       "neighbors": [
@@ -4052,7 +3948,7 @@
         "steppe",
         "plains"
       ],
-      "climate": "Csb"
+      "climate": "Cfb"
     },
     "Navarth": {
       "neighbors": [
@@ -4087,7 +3983,7 @@
         "forest",
         "steppe"
       ],
-      "climate": "BWh"
+      "climate": "Cfb"
     },
     "West Pyros": {
       "neighbors": [
@@ -4097,7 +3993,7 @@
         "Navarth",
         "Nether Desert"
       ],
-      "owner": null,
+      "owner": "Faction3",
       "resources": 3,
       "display_name": "West Pyros",
       "founding_name": "West Pyros",
@@ -4121,7 +4017,7 @@
         "steppe",
         "plains"
       ],
-      "climate": "BWh"
+      "climate": "Cfb"
     },
     "East Pyros": {
       "neighbors": [
@@ -4155,7 +4051,7 @@
         "steppe",
         "plains"
       ],
-      "climate": "BSh"
+      "climate": "Cfb"
     },
     "Eer": {
       "neighbors": [
@@ -4189,7 +4085,7 @@
         "steppe",
         "plains"
       ],
-      "climate": "Csa"
+      "climate": "Cfb"
     },
     "Gala": {
       "neighbors": [
@@ -4225,7 +4121,7 @@
         "steppe",
         "plains"
       ],
-      "climate": "BSh"
+      "climate": "Cfb"
     },
     "South Suval": {
       "neighbors": [
@@ -4257,7 +4153,7 @@
         "hills",
         "plains"
       ],
-      "climate": "Csa"
+      "climate": "Cfb"
     },
     "Telemonia": {
       "neighbors": [
@@ -4289,7 +4185,7 @@
         "hills",
         "steppe"
       ],
-      "climate": "BSh"
+      "climate": "Cfb"
     },
     "Iscare Archipeligo": {
       "neighbors": [],
@@ -4318,7 +4214,7 @@
         "steppe",
         "plains"
       ],
-      "climate": "Csa"
+      "climate": "Cfb"
     },
     "Ganesh Desert": {
       "neighbors": [
@@ -4383,7 +4279,7 @@
         "hills",
         "plains"
       ],
-      "climate": "Csa"
+      "climate": "Cfb"
     },
     "East Izol": {
       "neighbors": [
@@ -4416,7 +4312,7 @@
         "steppe",
         "plains"
       ],
-      "climate": "Csa"
+      "climate": "Cfb"
     },
     "Ganesh Plain": {
       "neighbors": [
@@ -4451,7 +4347,7 @@
         "steppe",
         "plains"
       ],
-      "climate": "BWh"
+      "climate": "Cfb"
     },
     "Legemum": {
       "neighbors": [
@@ -4484,7 +4380,7 @@
         "steppe",
         "plains"
       ],
-      "climate": "Csa"
+      "climate": "Cfb"
     },
     "Cape Heth": {
       "neighbors": [
@@ -4512,7 +4408,8 @@
       },
       "terrain_tags": [
         "coast",
-        "steppe"
+        "steppe",
+        "plains"
       ],
       "climate": "BWh"
     },
@@ -4545,7 +4442,7 @@
         "steppe",
         "plains"
       ],
-      "climate": "Csa"
+      "climate": "Cfb"
     },
     "Dinelv Highlands": {
       "neighbors": [
@@ -4580,7 +4477,7 @@
         "hills",
         "steppe"
       ],
-      "climate": "BWh"
+      "climate": "Cfb"
     },
     "Southern Ascarth": {
       "neighbors": [
@@ -4609,7 +4506,7 @@
         "coast",
         "plains"
       ],
-      "climate": "Csa"
+      "climate": "Cfb"
     },
     "Marosh": {
       "neighbors": [
@@ -4644,7 +4541,7 @@
         "hills",
         "plains"
       ],
-      "climate": "Csa"
+      "climate": "Cfb"
     },
     "North Meroshe Desert": {
       "neighbors": [
@@ -4704,7 +4601,7 @@
         "hills",
         "plains"
       ],
-      "climate": "BWh"
+      "climate": "Cfb"
     },
     "West Meroshe Desert": {
       "neighbors": [
@@ -4795,7 +4692,7 @@
         "coast",
         "plains"
       ],
-      "climate": "Csa"
+      "climate": "Cfb"
     },
     "Azhor Stones": {
       "neighbors": [],
@@ -4823,7 +4720,7 @@
         "highland",
         "forest"
       ],
-      "climate": "Af"
+      "climate": "Cfb"
     },
     "South Meroshe Desert": {
       "neighbors": [
@@ -4888,7 +4785,7 @@
         "forest",
         "plains"
       ],
-      "climate": "Af"
+      "climate": "Cfb"
     },
     "Hama": {
       "neighbors": [
@@ -4920,7 +4817,7 @@
         "steppe",
         "plains"
       ],
-      "climate": "BWh"
+      "climate": "Cfb"
     },
     "Babon": {
       "neighbors": [],
@@ -4950,98 +4847,7 @@
         "forest",
         "plains"
       ],
-      "climate": "Csa"
-    },
-    "Maanub": {
-      "neighbors": [],
-      "owner": null,
-      "resources": 3,
-      "display_name": "Maanub",
-      "founding_name": "Maanub",
-      "name_metadata": {
-        "source": "world_builder",
-        "authored_name": "Maanub",
-        "current_name_reason": "authored",
-        "name_layers": [
-          {
-            "type": "authored",
-            "name": "Maanub",
-            "pattern": "world_builder",
-            "faction_id": null,
-            "faction_name": null,
-            "turn": 0
-          }
-        ]
-      },
-      "terrain_tags": [
-        "coast",
-        "highland",
-        "forest"
-      ],
-      "climate": "Af"
-    },
-    "Nuurat": {
-      "neighbors": [
-        "Haatrul",
-        "Rihas",
-        "Waahaat"
-      ],
-      "owner": null,
-      "resources": 3,
-      "display_name": "Nuurat",
-      "founding_name": "Nuurat",
-      "name_metadata": {
-        "source": "world_builder",
-        "authored_name": "Nuurat",
-        "current_name_reason": "authored",
-        "name_layers": [
-          {
-            "type": "authored",
-            "name": "Nuurat",
-            "pattern": "world_builder",
-            "faction_id": null,
-            "faction_name": null,
-            "turn": 0
-          }
-        ]
-      },
-      "terrain_tags": [
-        "coast",
-        "highland",
-        "forest"
-      ],
-      "climate": "Af"
-    },
-    "Anubrul": {
-      "neighbors": [
-        "Haatrul",
-        "Maawad"
-      ],
-      "owner": null,
-      "resources": 3,
-      "display_name": "Anubrul",
-      "founding_name": "Anubrul",
-      "name_metadata": {
-        "source": "world_builder",
-        "authored_name": "Anubrul",
-        "current_name_reason": "authored",
-        "name_layers": [
-          {
-            "type": "authored",
-            "name": "Anubrul",
-            "pattern": "world_builder",
-            "faction_id": null,
-            "faction_name": null,
-            "turn": 0
-          }
-        ]
-      },
-      "terrain_tags": [
-        "coast",
-        "highland",
-        "forest"
-      ],
-      "climate": "Af"
+      "climate": "Cfb"
     },
     "North Scythe": {
       "neighbors": [
@@ -5071,139 +4877,7 @@
         "highland",
         "forest"
       ],
-      "climate": "Af"
-    },
-    "Haatrul": {
-      "neighbors": [
-        "Anubrul",
-        "Maawad",
-        "Nuurat",
-        "Riwaad",
-        "Waahaat"
-      ],
-      "owner": null,
-      "resources": 3,
-      "display_name": "Haatrul",
-      "founding_name": "Haatrul",
-      "name_metadata": {
-        "source": "world_builder",
-        "authored_name": "Haatrul",
-        "current_name_reason": "authored",
-        "name_layers": [
-          {
-            "type": "authored",
-            "name": "Haatrul",
-            "pattern": "world_builder",
-            "faction_id": null,
-            "faction_name": null,
-            "turn": 0
-          }
-        ]
-      },
-      "terrain_tags": [
-        "coast",
-        "highland",
-        "forest"
-      ],
-      "climate": "Af"
-    },
-    "Rihas": {
-      "neighbors": [
-        "Nuurat",
-        "Qadwaaqaad",
-        "Saxrul",
-        "Waahaat"
-      ],
-      "owner": null,
-      "resources": 3,
-      "display_name": "Rihas",
-      "founding_name": "Rihas",
-      "name_metadata": {
-        "source": "world_builder",
-        "authored_name": "Rihas",
-        "current_name_reason": "authored",
-        "name_layers": [
-          {
-            "type": "authored",
-            "name": "Rihas",
-            "pattern": "world_builder",
-            "faction_id": null,
-            "faction_name": null,
-            "turn": 0
-          }
-        ]
-      },
-      "terrain_tags": [
-        "coast",
-        "highland",
-        "forest"
-      ],
-      "climate": "Af"
-    },
-    "Waahaat": {
-      "neighbors": [
-        "Haatrul",
-        "Nuurat",
-        "Qadwaaqaad",
-        "Rihas",
-        "Riwaad"
-      ],
-      "owner": null,
-      "resources": 2,
-      "display_name": "Waahaat",
-      "founding_name": "Waahaat",
-      "name_metadata": {
-        "source": "world_builder",
-        "authored_name": "Waahaat",
-        "current_name_reason": "authored",
-        "name_layers": [
-          {
-            "type": "authored",
-            "name": "Waahaat",
-            "pattern": "world_builder",
-            "faction_id": null,
-            "faction_name": null,
-            "turn": 0
-          }
-        ]
-      },
-      "terrain_tags": [
-        "highland",
-        "forest"
-      ],
-      "climate": "Af"
-    },
-    "Maawad": {
-      "neighbors": [
-        "Anubrul",
-        "Haatrul",
-        "Riwaad"
-      ],
-      "owner": null,
-      "resources": 3,
-      "display_name": "Maawad",
-      "founding_name": "Maawad",
-      "name_metadata": {
-        "source": "world_builder",
-        "authored_name": "Maawad",
-        "current_name_reason": "authored",
-        "name_layers": [
-          {
-            "type": "authored",
-            "name": "Maawad",
-            "pattern": "world_builder",
-            "faction_id": null,
-            "faction_name": null,
-            "turn": 0
-          }
-        ]
-      },
-      "terrain_tags": [
-        "coast",
-        "highland",
-        "forest"
-      ],
-      "climate": "Af"
+      "climate": "Cfb"
     },
     "South Scythe": {
       "neighbors": [
@@ -5233,270 +4907,7 @@
         "highland",
         "forest"
       ],
-      "climate": "Af"
-    },
-    "Waahan": {
-      "neighbors": [
-        "Barqat",
-        "Qadmar",
-        "Saxrul"
-      ],
-      "owner": null,
-      "resources": 3,
-      "display_name": "Waahan",
-      "founding_name": "Waahan",
-      "name_metadata": {
-        "source": "world_builder",
-        "authored_name": "Waahan",
-        "current_name_reason": "authored",
-        "name_layers": [
-          {
-            "type": "authored",
-            "name": "Waahan",
-            "pattern": "world_builder",
-            "faction_id": null,
-            "faction_name": null,
-            "turn": 0
-          }
-        ]
-      },
-      "terrain_tags": [
-        "coast",
-        "highland",
-        "forest"
-      ],
-      "climate": "Af"
-    },
-    "Riwaad": {
-      "neighbors": [
-        "Haatrul",
-        "Maawad",
-        "Qadwaaqaad",
-        "Waahaat"
-      ],
-      "owner": null,
-      "resources": 3,
-      "display_name": "Riwaad",
-      "founding_name": "Riwaad",
-      "name_metadata": {
-        "source": "world_builder",
-        "authored_name": "Riwaad",
-        "current_name_reason": "authored",
-        "name_layers": [
-          {
-            "type": "authored",
-            "name": "Riwaad",
-            "pattern": "world_builder",
-            "faction_id": null,
-            "faction_name": null,
-            "turn": 0
-          }
-        ]
-      },
-      "terrain_tags": [
-        "coast",
-        "highland",
-        "forest"
-      ],
-      "climate": "Af"
-    },
-    "Saxrul": {
-      "neighbors": [
-        "Barqat",
-        "Qadwaaqaad",
-        "Rihas",
-        "Saxhan",
-        "Waahan"
-      ],
-      "owner": null,
-      "resources": 3,
-      "display_name": "Saxrul",
-      "founding_name": "Saxrul",
-      "name_metadata": {
-        "source": "world_builder",
-        "authored_name": "Saxrul",
-        "current_name_reason": "authored",
-        "name_layers": [
-          {
-            "type": "authored",
-            "name": "Saxrul",
-            "pattern": "world_builder",
-            "faction_id": null,
-            "faction_name": null,
-            "turn": 0
-          }
-        ]
-      },
-      "terrain_tags": [
-        "coast",
-        "highland",
-        "forest"
-      ],
-      "climate": "Af"
-    },
-    "Qadwaaqaad": {
-      "neighbors": [
-        "Rihas",
-        "Riwaad",
-        "Sabrqad",
-        "Saxhan",
-        "Saxrul",
-        "Waahaat"
-      ],
-      "owner": null,
-      "resources": 3,
-      "display_name": "Qadwaaqaad",
-      "founding_name": "Qadwaaqaad",
-      "name_metadata": {
-        "source": "world_builder",
-        "authored_name": "Qadwaaqaad",
-        "current_name_reason": "authored",
-        "name_layers": [
-          {
-            "type": "authored",
-            "name": "Qadwaaqaad",
-            "pattern": "world_builder",
-            "faction_id": null,
-            "faction_name": null,
-            "turn": 0
-          }
-        ]
-      },
-      "terrain_tags": [
-        "coast",
-        "highland",
-        "forest"
-      ],
-      "climate": "Af"
-    },
-    "Qadmar": {
-      "neighbors": [
-        "Barqat",
-        "Waahan"
-      ],
-      "owner": null,
-      "resources": 3,
-      "display_name": "Qadmar",
-      "founding_name": "Qadmar",
-      "name_metadata": {
-        "source": "world_builder",
-        "authored_name": "Qadmar",
-        "current_name_reason": "authored",
-        "name_layers": [
-          {
-            "type": "authored",
-            "name": "Qadmar",
-            "pattern": "world_builder",
-            "faction_id": null,
-            "faction_name": null,
-            "turn": 0
-          }
-        ]
-      },
-      "terrain_tags": [
-        "coast",
-        "highland",
-        "forest"
-      ],
-      "climate": "Af"
-    },
-    "Barqat": {
-      "neighbors": [
-        "Qadmar",
-        "Sabrqad",
-        "Saxhan",
-        "Saxrul",
-        "Waahan"
-      ],
-      "owner": null,
-      "resources": 3,
-      "display_name": "Barqat",
-      "founding_name": "Barqat",
-      "name_metadata": {
-        "source": "world_builder",
-        "authored_name": "Barqat",
-        "current_name_reason": "authored",
-        "name_layers": [
-          {
-            "type": "authored",
-            "name": "Barqat",
-            "pattern": "world_builder",
-            "faction_id": null,
-            "faction_name": null,
-            "turn": 0
-          }
-        ]
-      },
-      "terrain_tags": [
-        "coast",
-        "highland",
-        "forest"
-      ],
-      "climate": "Af"
-    },
-    "Saxhan": {
-      "neighbors": [
-        "Barqat",
-        "Qadwaaqaad",
-        "Sabrqad",
-        "Saxrul"
-      ],
-      "owner": null,
-      "resources": 2,
-      "display_name": "Saxhan",
-      "founding_name": "Saxhan",
-      "name_metadata": {
-        "source": "world_builder",
-        "authored_name": "Saxhan",
-        "current_name_reason": "authored",
-        "name_layers": [
-          {
-            "type": "authored",
-            "name": "Saxhan",
-            "pattern": "world_builder",
-            "faction_id": null,
-            "faction_name": null,
-            "turn": 0
-          }
-        ]
-      },
-      "terrain_tags": [
-        "highland",
-        "forest"
-      ],
-      "climate": "Af"
-    },
-    "Sabrqad": {
-      "neighbors": [
-        "Barqat",
-        "Qadwaaqaad",
-        "Saxhan"
-      ],
-      "owner": null,
-      "resources": 3,
-      "display_name": "Sabrqad",
-      "founding_name": "Sabrqad",
-      "name_metadata": {
-        "source": "world_builder",
-        "authored_name": "Sabrqad",
-        "current_name_reason": "authored",
-        "name_layers": [
-          {
-            "type": "authored",
-            "name": "Sabrqad",
-            "pattern": "world_builder",
-            "faction_id": null,
-            "faction_name": null,
-            "turn": 0
-          }
-        ]
-      },
-      "terrain_tags": [
-        "coast",
-        "highland",
-        "forest"
-      ],
-      "climate": "Af"
+      "climate": "Cfb"
     }
   },
   "faction_language_families": {
@@ -5649,10 +5060,7 @@
         "Southern and island-influenced names with bou, vel, wis, and srel stems.",
         "Soft vowel bridges lead into clipped -el, -em, -un, and -ves endings."
       ],
-      "shift_keys": [],
-      "faction_traits": [
-        "chaos_pioneers"
-      ]
+      "shift_keys": []
     },
     "Faction2": {
       "family_name": "Mittoli",
@@ -5811,10 +5219,7 @@
         "Old Azhoran civic names with liquid consonants and open vowels.",
         "Often favors cael, vel, and azh roots for rivers, coasts, and sacred lineages."
       ],
-      "shift_keys": [],
-      "faction_traits": [
-        "military_expansion"
-      ]
+      "shift_keys": []
     },
     "Faction3": {
       "family_name": "Pyrossel",
@@ -5963,1197 +5368,17 @@
         "Highland and volcanic names with py, vor, vel, and neth stems.",
         "Compounds tend toward strong initial consonants and -oss, -ell, or -marr endings."
       ],
-      "shift_keys": [],
-      "faction_traits": [
-        "desert_pioneers"
-      ]
-    },
-    "Faction4": {
-      "family_name": "Mariiṣi",
-      "default_culture_name": "Moreshi",
-      "traditions": [
-        "azhoran",
-        "moreshi"
-      ],
-      "inspirations": [
-        "Marosh",
-        "Meroshe",
-        "Sabr",
-        "Nuur",
-        "Ghayth",
-        "Rih",
-        "Saxr",
-        "Muruus",
-        "Maan",
-        "Waaha"
-      ],
-      "candidate_pool": [
-        "Sahraan",
-        "Nuurat",
-        "Ghaymar",
-        "Rihas",
-        "Saxrul",
-        "Maanub",
-        "Waahan",
-        "Maroshi"
-      ],
-      "onsets": [
-        "al",
-        "ar",
-        "bar",
-        "ghay",
-        "ha",
-        "kal",
-        "maan",
-        "mar",
-        "naj",
-        "nur",
-        "qad",
-        "rih",
-        "sab",
-        "sar",
-        "sax",
-        "waa",
-        "zar"
-      ],
-      "middles": [
-        "a",
-        "aa",
-        "i",
-        "ii",
-        "u",
-        "uu"
-      ],
-      "suffixes": [
-        "ah",
-        "an",
-        "as",
-        "at",
-        "b",
-        "iim",
-        "l",
-        "m",
-        "n",
-        "r",
-        "t",
-        "ub"
-      ],
-      "seed_fragments": [
-        "bar",
-        "ghay",
-        "maan",
-        "mar",
-        "mer",
-        "mur",
-        "nur",
-        "qad",
-        "rih",
-        "sab",
-        "sax",
-        "waa"
-      ],
-      "lexical_roots": {
-        "settlement": [
-          "waa",
-          "maan"
-        ],
-        "river": [
-          "nahr",
-          "wadii"
-        ],
-        "forest": [
-          "ghab",
-          "zar"
-        ],
-        "hill": [
-          "sax",
-          "qad"
-        ],
-        "plain": [
-          "mur",
-          "mer"
-        ],
-        "marsh": [
-          "sab",
-          "wadii"
-        ],
-        "sea": [
-          "bahr",
-          "mar"
-        ],
-        "border": [
-          "hadd",
-          "sax"
-        ],
-        "market": [
-          "suq",
-          "maan"
-        ],
-        "fort": [
-          "hisn",
-          "qad"
-        ],
-        "sacred": [
-          "qad",
-          "nur"
-        ],
-        "sun": [
-          "sham",
-          "nur"
-        ],
-        "ancestor": [
-          "sabr",
-          "mar"
-        ],
-        "ruler": [
-          "malik",
-          "amir"
-        ],
-        "dynasty": [
-          "mar",
-          "ghay"
-        ]
-      },
-      "style_notes": [
-        "Desert and oasis names with long vowels, hissing consonants, and compact endings.",
-        "Common roots distinguish wells, stone ridges, caravans, and old sacred sites."
-      ],
-      "shift_keys": [],
-      "faction_traits": [
-        "chaos_pioneers"
-      ]
-    },
-    "Faction5": {
-      "family_name": "Auwel",
-      "default_culture_name": "Grassic",
-      "traditions": [
-        "azhoran",
-        "grassic"
-      ],
-      "inspirations": [
-        "Ibenal",
-        "Ibenwood",
-        "Acorwood",
-        "Nonoth",
-        "Lond",
-        "Mithala",
-        "Thoth",
-        "Witherst"
-      ],
-      "candidate_pool": [
-        "Velveth",
-        "Kaulgeil",
-        "Aulthor",
-        "Nellgaul",
-        "Thraunel",
-        "Golvoth",
-        "Belkaul",
-        "Sorthor"
-      ],
-      "onsets": [
-        "aul",
-        "bel",
-        "gaul",
-        "gol",
-        "hom",
-        "kaul",
-        "kor",
-        "nell",
-        "sor",
-        "tel",
-        "thel",
-        "thos",
-        "thraun",
-        "vel",
-        "wol"
-      ],
-      "middles": [
-        "a",
-        "e",
-        "i",
-        "o",
-        "u"
-      ],
-      "suffixes": [
-        "aul",
-        "gaul",
-        "geil",
-        "ke",
-        "ko",
-        "ne",
-        "nel",
-        "nol",
-        "ther",
-        "thor",
-        "veth",
-        "voth"
-      ],
-      "seed_fragments": [
-        "acor",
-        "aul",
-        "bel",
-        "iben",
-        "kaul",
-        "lond",
-        "mith",
-        "nell",
-        "noth",
-        "thel",
-        "thoth",
-        "vel"
-      ],
-      "lexical_roots": {
-        "settlement": [
-          "hom",
-          "iben"
-        ],
-        "river": [
-          "aul",
-          "vel"
-        ],
-        "forest": [
-          "iben",
-          "acor"
-        ],
-        "hill": [
-          "thoth",
-          "kaul"
-        ],
-        "plain": [
-          "lond",
-          "vel"
-        ],
-        "marsh": [
-          "acor",
-          "aul"
-        ],
-        "sea": [
-          "is",
-          "wol"
-        ],
-        "border": [
-          "kor",
-          "thos"
-        ],
-        "market": [
-          "tel",
-          "hom"
-        ],
-        "fort": [
-          "kor",
-          "bel"
-        ],
-        "sacred": [
-          "thel",
-          "thoth"
-        ],
-        "sun": [
-          "aul",
-          "vel"
-        ],
-        "ancestor": [
-          "noth",
-          "mith"
-        ],
-        "ruler": [
-          "bel",
-          "thel"
-        ],
-        "dynasty": [
-          "iben",
-          "nell"
-        ]
-      },
-      "style_notes": [
-        "Woodland and grassland names with Germanic-like th, v, and l clusters.",
-        "Favors compact roots for homesteads, woods, border stones, and old clearings."
-      ],
-      "shift_keys": [],
-      "faction_traits": [
-        "plains_pioneers"
-      ]
-    },
-    "Faction6": {
-      "family_name": "Ibnael",
-      "default_culture_name": "Ibnael",
-      "traditions": [
-        "azhoran",
-        "ibnael",
-        "forest_mittoli"
-      ],
-      "inspirations": [
-        "Ibenwood",
-        "Ibenal",
-        "Ibenale",
-        "Alezhor",
-        "Elagos",
-        "Dark Groves",
-        "Velmara",
-        "Ondren"
-      ],
-      "candidate_pool": [
-        "Ibnael",
-        "Ibnoss",
-        "Aeliben",
-        "Threnib",
-        "Velmorn",
-        "Nothib",
-        "Gloameth",
-        "Ossiben"
-      ],
-      "onsets": [
-        "ael",
-        "dren",
-        "glom",
-        "ib",
-        "iben",
-        "ibn",
-        "morn",
-        "noth",
-        "ond",
-        "oss",
-        "thal",
-        "thren",
-        "vel",
-        "vorn",
-        "wyr"
-      ],
-      "middles": [
-        "a",
-        "ae",
-        "e",
-        "i",
-        "o",
-        "oe",
-        "u",
-        "y"
-      ],
-      "suffixes": [
-        "ael",
-        "ath",
-        "d",
-        "el",
-        "en",
-        "eth",
-        "ib",
-        "il",
-        "n",
-        "oss",
-        "th",
-        "um",
-        "yr"
-      ],
-      "seed_fragments": [
-        "ael",
-        "dren",
-        "el",
-        "glom",
-        "ib",
-        "iben",
-        "ibn",
-        "morn",
-        "noth",
-        "ond",
-        "oss",
-        "thal",
-        "thren",
-        "vel"
-      ],
-      "lexical_roots": {
-        "settlement": [
-          "ibn",
-          "ael"
-        ],
-        "river": [
-          "vel",
-          "ond"
-        ],
-        "forest": [
-          "iben",
-          "glom"
-        ],
-        "hill": [
-          "thal",
-          "dren"
-        ],
-        "plain": [
-          "ael",
-          "vel"
-        ],
-        "marsh": [
-          "ond",
-          "ib"
-        ],
-        "sea": [
-          "ael",
-          "vorn"
-        ],
-        "border": [
-          "thren",
-          "thal"
-        ],
-        "market": [
-          "ael",
-          "vel"
-        ],
-        "fort": [
-          "dren",
-          "oss"
-        ],
-        "sacred": [
-          "iben",
-          "morn"
-        ],
-        "sun": [
-          "ael",
-          "vel"
-        ],
-        "ancestor": [
-          "noth",
-          "iben"
-        ],
-        "ruler": [
-          "ael",
-          "oss"
-        ],
-        "dynasty": [
-          "ibn",
-          "noth"
-        ]
-      },
-      "style_notes": [
-        "Forest Mittoli endonym built from Ibenwood roots and older dense substrate forms.",
-        "Favors ib, ibn, thren, and glom clusters for old forest, silence, and unseen-presence concepts."
-      ],
-      "shift_keys": [],
-      "faction_traits": [
-        "forest_pioneers"
-      ]
-    },
-    "Faction7": {
-      "family_name": "Koleth",
-      "default_culture_name": "Elodi",
-      "traditions": [
-        "azhoran",
-        "elodi",
-        "koleth"
-      ],
-      "inspirations": [
-        "Elod",
-        "Elodi",
-        "Koleth",
-        "Erath Kol",
-        "Balog",
-        "Threshold",
-        "Old Kingdom",
-        "Central Island"
-      ],
-      "candidate_pool": [
-        "Elodi",
-        "Koleth",
-        "Balogeth",
-        "Erathol",
-        "Threskol",
-        "Kolven",
-        "Lodikar",
-        "Velketh"
-      ],
-      "onsets": [
-        "bal",
-        "dar",
-        "el",
-        "er",
-        "eth",
-        "kel",
-        "kol",
-        "lod",
-        "nem",
-        "od",
-        "sov",
-        "thal",
-        "vel",
-        "zar"
-      ],
-      "middles": [
-        "a",
-        "e",
-        "i",
-        "o",
-        "u",
-        "ae",
-        "ia"
-      ],
-      "suffixes": [
-        "ag",
-        "an",
-        "ath",
-        "el",
-        "eth",
-        "i",
-        "ik",
-        "od",
-        "ol",
-        "on",
-        "th",
-        "um"
-      ],
-      "seed_fragments": [
-        "bal",
-        "el",
-        "elod",
-        "erath",
-        "eth",
-        "kol",
-        "koleth",
-        "lod",
-        "od",
-        "thal",
-        "vel"
-      ],
-      "lexical_roots": {
-        "settlement": [
-          "elod",
-          "kol"
-        ],
-        "river": [
-          "vel",
-          "od"
-        ],
-        "forest": [
-          "lod",
-          "thal"
-        ],
-        "hill": [
-          "erath",
-          "kol"
-        ],
-        "plain": [
-          "er",
-          "lod"
-        ],
-        "marsh": [
-          "od",
-          "vel"
-        ],
-        "sea": [
-          "kol",
-          "vel"
-        ],
-        "border": [
-          "thal",
-          "eth"
-        ],
-        "market": [
-          "kol",
-          "bal"
-        ],
-        "fort": [
-          "bal",
-          "erath"
-        ],
-        "sacred": [
-          "bal",
-          "kol"
-        ],
-        "sun": [
-          "sov",
-          "el"
-        ],
-        "ancestor": [
-          "erath",
-          "lod"
-        ],
-        "ruler": [
-          "balog",
-          "bal"
-        ],
-        "dynasty": [
-          "kol",
-          "erath"
-        ]
-      },
-      "style_notes": [
-        "Elodi names preserve an eastern Old Kingdom lineage rather than an Azhoran family.",
-        "Koleth and Balog roots mark scriptural, administrative, and sacred authority registers."
-      ],
-      "shift_keys": [],
-      "faction_traits": [
-        "developmental_religious"
-      ]
-    },
-    "Faction8": {
-      "family_name": "Elagosi",
-      "default_culture_name": "Elagosi",
-      "traditions": [
-        "azhoran",
-        "elagosi",
-        "ambronite"
-      ],
-      "inspirations": [
-        "Elagos",
-        "Ambron",
-        "Lake Ela",
-        "Brul",
-        "Ossen",
-        "Thelas",
-        "Moros Plain",
-        "Drent"
-      ],
-      "candidate_pool": [
-        "Ambron",
-        "Elagos",
-        "Thelasi",
-        "Brulon",
-        "Osseni",
-        "Vastosel",
-        "Menethar",
-        "Elauron"
-      ],
-      "onsets": [
-        "am",
-        "amb",
-        "brul",
-        "dr",
-        "el",
-        "ela",
-        "lag",
-        "men",
-        "oss",
-        "thel",
-        "vast",
-        "ven",
-        "zel"
-      ],
-      "middles": [
-        "a",
-        "ae",
-        "e",
-        "i",
-        "o",
-        "u"
-      ],
-      "suffixes": [
-        "an",
-        "ar",
-        "el",
-        "en",
-        "eth",
-        "i",
-        "on",
-        "or",
-        "os",
-        "um"
-      ],
-      "seed_fragments": [
-        "am",
-        "ambr",
-        "brul",
-        "ela",
-        "elag",
-        "men",
-        "oss",
-        "thel",
-        "vast"
-      ],
-      "lexical_roots": {
-        "settlement": [
-          "ambr",
-          "ela"
-        ],
-        "river": [
-          "ela",
-          "thel"
-        ],
-        "forest": [
-          "men",
-          "dr"
-        ],
-        "hill": [
-          "vast",
-          "brul"
-        ],
-        "plain": [
-          "mor",
-          "oss"
-        ],
-        "marsh": [
-          "oss",
-          "ela"
-        ],
-        "sea": [
-          "ros",
-          "ela"
-        ],
-        "border": [
-          "vast",
-          "men"
-        ],
-        "market": [
-          "ambr",
-          "thel"
-        ],
-        "fort": [
-          "ambr",
-          "vast"
-        ],
-        "sacred": [
-          "ela",
-          "brul"
-        ],
-        "sun": [
-          "zel",
-          "ela"
-        ],
-        "ancestor": [
-          "ambr",
-          "elag"
-        ],
-        "ruler": [
-          "ambr",
-          "thel"
-        ],
-        "dynasty": [
-          "ambr",
-          "ela"
-        ]
-      },
-      "style_notes": [
-        "Lake Lands and Ambronite administrative names with liquid lake roots and formal civic endings.",
-        "Favors ela, ambr, thel, oss, and brul roots for lakes, prefectures, courts, and portage towns."
-      ],
-      "shift_keys": [],
-      "faction_traits": [
-        "subtropical_pioneers"
-      ]
-    },
-    "Faction9": {
-      "family_name": "Kellith",
-      "default_culture_name": "Telemon",
-      "traditions": [
-        "azhoran",
-        "kellith",
-        "telemon"
-      ],
-      "inspirations": [
-        "Telemonia",
-        "Telemon",
-        "Kellith",
-        "Gala",
-        "Legemum",
-        "East Pyros",
-        "Verath",
-        "Highland Passes"
-      ],
-      "candidate_pool": [
-        "Kellith",
-        "Verath",
-        "Tormon",
-        "Belketh",
-        "Rothkar",
-        "Galmeth",
-        "Tarnel",
-        "Kethorn"
-      ],
-      "onsets": [
-        "bel",
-        "gal",
-        "kel",
-        "kell",
-        "keth",
-        "morn",
-        "roth",
-        "tarn",
-        "tel",
-        "tor",
-        "ver",
-        "vorn"
-      ],
-      "middles": [
-        "a",
-        "e",
-        "i",
-        "o",
-        "u"
-      ],
-      "suffixes": [
-        "an",
-        "ath",
-        "el",
-        "eth",
-        "ith",
-        "k",
-        "kar",
-        "mon",
-        "n",
-        "orn",
-        "th"
-      ],
-      "seed_fragments": [
-        "bel",
-        "gal",
-        "kel",
-        "keth",
-        "mon",
-        "roth",
-        "tarn",
-        "tel",
-        "tor",
-        "ver"
-      ],
-      "lexical_roots": {
-        "settlement": [
-          "kel",
-          "tel"
-        ],
-        "river": [
-          "ver",
-          "gal"
-        ],
-        "forest": [
-          "morn",
-          "bel"
-        ],
-        "hill": [
-          "tarn",
-          "ver"
-        ],
-        "plain": [
-          "gal",
-          "tor"
-        ],
-        "marsh": [
-          "bel",
-          "morn"
-        ],
-        "sea": [
-          "gal",
-          "vel"
-        ],
-        "border": [
-          "ver",
-          "keth"
-        ],
-        "market": [
-          "gal",
-          "tel"
-        ],
-        "fort": [
-          "keth",
-          "tarn"
-        ],
-        "sacred": [
-          "kel",
-          "ver"
-        ],
-        "sun": [
-          "tor",
-          "kel"
-        ],
-        "ancestor": [
-          "kell",
-          "mon"
-        ],
-        "ruler": [
-          "tor",
-          "keth"
-        ],
-        "dynasty": [
-          "kell",
-          "ver"
-        ]
-      },
-      "style_notes": [
-        "Telemon highland names with compact forms and hard k, t, r, and th closures.",
-        "Kellith roots emphasize passes, endurance, bands, borders, and terrain known too precisely for outsiders."
-      ],
-      "shift_keys": [],
-      "faction_traits": [
-        "militarist_isolationist"
-      ]
-    },
-    "Faction10": {
-      "family_name": "Crefs",
-      "default_culture_name": "Crefs",
-      "traditions": [
-        "northern",
-        "crefs"
-      ],
-      "inspirations": [
-        "Cold Stones",
-        "Crefs",
-        "Krefar",
-        "Stornul",
-        "Grethal",
-        "Fordun",
-        "Vrakel",
-        "Harsk"
-      ],
-      "candidate_pool": [
-        "Krefar",
-        "Stornul",
-        "Grethal",
-        "Fordun",
-        "Vrakel",
-        "Harsk",
-        "Vralketh",
-        "Skordun"
-      ],
-      "onsets": [
-        "cref",
-        "dral",
-        "ford",
-        "gret",
-        "greth",
-        "har",
-        "kref",
-        "skord",
-        "storn",
-        "thral",
-        "vrak",
-        "vral",
-        "vralk",
-        "wrak"
-      ],
-      "middles": [
-        "a",
-        "e",
-        "i",
-        "o",
-        "u"
-      ],
-      "suffixes": [
-        "al",
-        "an",
-        "ar",
-        "d",
-        "el",
-        "eth",
-        "k",
-        "kel",
-        "n",
-        "ord",
-        "sk",
-        "ul",
-        "un"
-      ],
-      "seed_fragments": [
-        "cref",
-        "dral",
-        "ford",
-        "gret",
-        "har",
-        "kref",
-        "skord",
-        "storn",
-        "thral",
-        "vrak"
-      ],
-      "lexical_roots": {
-        "settlement": [
-          "ford",
-          "kref"
-        ],
-        "river": [
-          "thral",
-          "dral"
-        ],
-        "forest": [
-          "gret",
-          "vral"
-        ],
-        "hill": [
-          "storn",
-          "har"
-        ],
-        "plain": [
-          "dral",
-          "ford"
-        ],
-        "marsh": [
-          "thral",
-          "vrak"
-        ],
-        "sea": [
-          "kref",
-          "wrak"
-        ],
-        "border": [
-          "har",
-          "skord"
-        ],
-        "market": [
-          "ford",
-          "kref"
-        ],
-        "fort": [
-          "storn",
-          "skord"
-        ],
-        "sacred": [
-          "thral",
-          "gret"
-        ],
-        "sun": [
-          "har",
-          "dral"
-        ],
-        "ancestor": [
-          "kref",
-          "ford"
-        ],
-        "ruler": [
-          "storn",
-          "har"
-        ],
-        "dynasty": [
-          "kref",
-          "skord"
-        ]
-      },
-      "style_notes": [
-        "Cold northern names with hard consonant clusters and short vowels.",
-        "Favors storn, kref, skord, and thral roots for fortifications, cold ridges, and ancestral claims."
-      ],
-      "shift_keys": [],
-      "faction_traits": [
-        "militarist_pioneers"
-      ]
+      "shift_keys": []
     }
   },
   "faction_arrivals": {
-    "Faction4": {
-      "arrival_turn": 20,
-      "arrival_type": "disruptive_colonial_landing",
-      "entry_region": "East Izol",
-      "origin": "foreign land",
-      "status": "foreign_colony",
-      "initial_technologies": {
-        "seafaring": 0.5
-      },
-      "language": "moreshi"
-    },
-    "Faction5": {
-      "arrival_turn": 40,
-      "arrival_type": "disruptive_colonial_landing",
-      "entry_region": "East Mithala",
-      "origin": "foreign land",
-      "status": "foreign_colony",
-      "language": "grassic"
-    },
-    "Faction3": {
-      "arrival_turn": 60,
-      "arrival_type": "disruptive_colonial_landing",
-      "entry_region": "West Pyros",
-      "origin": "foreign land",
-      "status": "foreign_colony",
-      "language": "pyrosi"
-    },
     "Faction2": {
-      "arrival_turn": 80,
+      "arrival_turn": 10,
       "arrival_type": "disruptive_colonial_landing",
       "entry_region": "East Mithala",
       "origin": "foreign land",
       "status": "foreign_colony",
       "language": "mittoli"
-    },
-    "Faction6": {
-      "arrival_turn": 100,
-      "arrival_type": "disruptive_colonial_landing",
-      "entry_region": "North Ibenal",
-      "origin": "foreign land",
-      "status": "foreign_colony",
-      "language": "ibnael"
-    },
-    "Faction8": {
-      "arrival_turn": 120,
-      "arrival_type": "disruptive_colonial_landing",
-      "entry_region": "Elagos",
-      "origin": "foreign land",
-      "status": "foreign_colony",
-      "language": "elagosi"
-    },
-    "Faction9": {
-      "arrival_turn": 140,
-      "arrival_type": "disruptive_colonial_landing",
-      "entry_region": "Telemonia",
-      "origin": "foreign land",
-      "status": "foreign_colony",
-      "language": "kellith"
-    },
-    "Faction7": {
-      "arrival_turn": 160,
-      "arrival_type": "disruptive_colonial_landing",
-      "entry_region": "East Suval",
-      "origin": "foreign land",
-      "status": "foreign_colony",
-      "language": "elodi"
-    },
-    "Faction10": {
-      "arrival_turn": 180,
-      "arrival_type": "disruptive_colonial_landing",
-      "entry_region": "Cold Stones",
-      "origin": "foreign land",
-      "status": "foreign_colony",
-      "language": "crefs"
-    }
-  },
-  "faction_agendas": {
-    "Faction1": {
-      "agenda_type": "explore"
-    },
-    "Faction2": {
-      "agenda_type": "contiguous_terrain",
-      "params": {
-        "terrain": "plains"
-      }
-    },
-    "Faction3": {
-      "agenda_type": "hold_regions",
-      "params": {
-        "regions": [
-          "West Pyros",
-          "East Pyros"
-        ]
-      }
-    },
-    "Faction4": {
-      "agenda_type": "settle_region",
-      "params": {
-        "target_region": "Marosh"
-      }
-    },
-    "Faction5": {
-      "agenda_type": "expand_territory"
-    },
-    "Faction6": {
-      "agenda_type": "contiguous_terrain",
-      "params": {
-        "terrain": "forest"
-      }
-    },
-    "Faction8": {
-      "agenda_type": "imperial",
-      "params": {
-        "region_target": 15,
-        "prefer_tributaries": true
-      }
-    },
-    "Faction9": {
-      "agenda_type": "defend_region",
-      "params": {
-        "region": "Telemonia"
-      }
-    },
-    "Faction7": {
-      "agenda_type": "trade"
-    },
-    "Faction10": {
-      "agenda_type": "conquer"
-    }
-  },
-  "faction_initial_technologies": {
-    "Faction1": {
-      "seafaring": 0.5
     }
   }
 }

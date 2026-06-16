@@ -176,70 +176,71 @@ AZHORAN_DISRUPTIVE_ARRIVALS_2: dict[str, dict] = {
     },
 }
 
-# Scenario 3 — The Long Migration: Boueni alone at turn 0; one people arrives every 25 turns.
+# Scenario 3 — The Long Migration: Boueni alone at turn 0; Moreshi at turn 20; others every 20 turns.
 AZHORAN_PREFERRED_START_REGIONS_3: dict[str, list[str]] = {
-    "boueni": ["North Riesov"],
+    "boueni": ["Cold Stones"],
 }
 
 AZHORAN_DISRUPTIVE_ARRIVALS_3: dict[str, dict] = {
     "moreshi": {
-        "arrival_turn": 25,
+        "arrival_turn": 20,
         "arrival_type": "disruptive_colonial_landing",
-        "entry_region": "Sabrqad",
+        "entry_region": "East Izol",
         "origin": "foreign land",
         "status": "foreign_colony",
+        "initial_technologies": {"seafaring": 0.5},
     },
     "grassic": {
-        "arrival_turn": 50,
+        "arrival_turn": 40,
         "arrival_type": "disruptive_colonial_landing",
         "entry_region": "East Mithala",
         "origin": "foreign land",
         "status": "foreign_colony",
     },
     "pyrosi": {
-        "arrival_turn": 75,
+        "arrival_turn": 60,
         "arrival_type": "disruptive_colonial_landing",
         "entry_region": "West Pyros",
         "origin": "foreign land",
         "status": "foreign_colony",
     },
     "mittoli": {
-        "arrival_turn": 100,
+        "arrival_turn": 80,
         "arrival_type": "disruptive_colonial_landing",
         "entry_region": "East Mithala",
         "origin": "foreign land",
         "status": "foreign_colony",
     },
     "ibnael": {
-        "arrival_turn": 125,
+        "arrival_turn": 100,
         "arrival_type": "disruptive_colonial_landing",
         "entry_region": "North Ibenal",
         "origin": "foreign land",
         "status": "foreign_colony",
     },
     "elagosi": {
-        "arrival_turn": 150,
+        "arrival_turn": 120,
         "arrival_type": "disruptive_colonial_landing",
         "entry_region": "Elagos",
         "origin": "foreign land",
         "status": "foreign_colony",
     },
     "kellith": {
-        "arrival_turn": 175,
+        "arrival_turn": 140,
         "arrival_type": "disruptive_colonial_landing",
         "entry_region": "Telemonia",
         "origin": "foreign land",
         "status": "foreign_colony",
     },
     "elodi": {
-        "arrival_turn": 200,
+        "arrival_turn": 160,
         "arrival_type": "disruptive_colonial_landing",
         "entry_region": "East Suval",
         "origin": "foreign land",
         "status": "foreign_colony",
     },
     "crefs": {
-        "arrival_turn": 225,
+        "arrival_turn": 180,
         "arrival_type": "disruptive_colonial_landing",
         "entry_region": "Cold Stones",
         "origin": "foreign land",
@@ -279,6 +280,32 @@ _AZHORAN_SCENARIO_FACTION_TRAITS: dict[str, dict[str, list[str]]] = {
         "kellith":   ["militarist_isolationist"],
         "elodi":     ["developmental_religious"],
         "crefs":     ["militarist_pioneers"],
+    },
+}
+
+# Full agenda definitions keyed by language key (type + params).
+_AZHORAN_AGENDA_FULL_BY_LANGUAGE: dict[str, dict] = {
+    "boueni":  {"agenda_type": "explore"},
+    "mittoli": {"agenda_type": "contiguous_terrain", "params": {"terrain": "plains"}},
+    "pyrosi":  {"agenda_type": "hold_regions", "params": {"regions": ["West Pyros", "East Pyros"]}},
+    "moreshi": {"agenda_type": "settle_region", "params": {"target_region": "Marosh"}},
+    "grassic": {"agenda_type": "expand_territory"},
+    "ibnael":  {"agenda_type": "contiguous_terrain", "params": {"terrain": "forest"}},
+    "elagosi": {"agenda_type": "imperial", "params": {"region_target": 15, "prefer_tributaries": True}},
+    "kellith": {"agenda_type": "defend_region", "params": {"region": "Telemonia"}},
+    "elodi":   {"agenda_type": "trade"},
+    "crefs":   {"agenda_type": "conquer"},
+}
+
+# Which scenarios get faction agendas.
+_AZHORAN_SCENARIO_FACTION_AGENDAS: dict[str, dict[str, dict]] = {
+    "3": _AZHORAN_AGENDA_FULL_BY_LANGUAGE,
+}
+
+# Initial technologies granted to starting factions (not arrivals) per scenario.
+_AZHORAN_SCENARIO_INITIAL_TECHNOLOGIES: dict[str, dict[str, dict]] = {
+    "3": {
+        "boueni": {"seafaring": 0.5},
     },
 }
 
@@ -451,6 +478,40 @@ def _build_azhoran_faction_arrivals(
             entry["language"] = language_key
         arrivals[owner_id] = entry
     return arrivals
+
+
+def _build_azhoran_faction_agendas(
+    wwmap_path: Path,
+    graph,
+    num_factions: int,
+    agenda_definitions: dict[str, dict] | None = None,
+) -> dict[str, dict]:
+    if not _is_azhora_map(wwmap_path, graph) or not agenda_definitions:
+        return {}
+    agendas: dict[str, dict] = {}
+    for language_key, agenda in agenda_definitions.items():
+        owner_id = _get_default_language_faction_id(language_key, num_factions)
+        if owner_id is None:
+            continue
+        agendas[owner_id] = dict(agenda)
+    return agendas
+
+
+def _build_azhoran_initial_technologies(
+    wwmap_path: Path,
+    graph,
+    num_factions: int,
+    tech_definitions: dict[str, dict] | None = None,
+) -> dict[str, dict]:
+    if not _is_azhora_map(wwmap_path, graph) or not tech_definitions:
+        return {}
+    result: dict[str, dict] = {}
+    for language_key, tech_dict in tech_definitions.items():
+        owner_id = _get_default_language_faction_id(language_key, num_factions)
+        if owner_id is None:
+            continue
+        result[owner_id] = dict(tech_dict)
+    return result
 
 
 def _remove_delayed_azhoran_start_owners(
@@ -662,6 +723,22 @@ def translate(wwmap_path: str | Path, num_factions: int = 4, scenario: str = "de
         map_definition["faction_language_families"] = faction_language_families
     if faction_arrivals:
         map_definition["faction_arrivals"] = faction_arrivals
+    faction_agendas = _build_azhoran_faction_agendas(
+        wwmap_path,
+        graph,
+        num_factions_out,
+        agenda_definitions=_AZHORAN_SCENARIO_FACTION_AGENDAS.get(scenario),
+    )
+    if faction_agendas:
+        map_definition["faction_agendas"] = faction_agendas
+    faction_initial_technologies = _build_azhoran_initial_technologies(
+        wwmap_path,
+        graph,
+        num_factions_out,
+        tech_definitions=_AZHORAN_SCENARIO_INITIAL_TECHNOLOGIES.get(scenario),
+    )
+    if faction_initial_technologies:
+        map_definition["faction_initial_technologies"] = faction_initial_technologies
     return map_definition
 
 

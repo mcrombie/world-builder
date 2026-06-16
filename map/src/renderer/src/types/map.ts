@@ -51,6 +51,17 @@ export type GovernmentForm =
   | 'council' | 'leader' | 'monarchy' | 'oligarchy'
   | 'republic' | 'theocracy' | 'military'
 
+export type AgendaType =
+  | 'explore'
+  | 'settle_region'
+  | 'hold_regions'
+  | 'expand_territory'
+  | 'contiguous_terrain'
+  | 'trade'
+  | 'defend_region'
+  | 'conquer'
+  | 'imperial'
+
 export interface FactionData {
   name: string
   color: string
@@ -62,6 +73,7 @@ export interface FactionData {
   religion?: string
   notes?: string
   loreRef?: string
+  agendaType?: AgendaType
 }
 
 export interface RegionData {
@@ -174,6 +186,7 @@ export interface SimFaction {
   active_war_count?: number
   tributary_count?: number
   claim_dispute_count?: number
+  agenda?: { agenda_type: string; params: Record<string, unknown> } | null
   war_enemies?: SimDiplomacyCounterpart[]
   allies?: SimDiplomacyCounterpart[]
   pacts?: SimDiplomacyCounterpart[]
