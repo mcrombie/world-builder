@@ -84,6 +84,7 @@ AZHORAN_PREFERRED_START_REGIONS: dict[str, list[str]] = {
     "elodi": ["East Suval"],
     "elagosi": ["Elagos"],
     "kellith": ["Telemonia"],
+    "crefs": ["Cold Stones"],
 }
 
 AZHORAN_DISRUPTIVE_ARRIVALS: dict[str, dict] = {

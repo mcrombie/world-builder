@@ -87,6 +87,11 @@ function fmtSimKey(key: string): string {
   return key.split('_').map((part) => part.charAt(0).toUpperCase() + part.slice(1)).join(' ')
 }
 
+function fmtSocialForm(value: string | null | undefined): string {
+  if (!value) return 'Unknown'
+  return value.split('_').map((part) => part.charAt(0).toUpperCase() + part.slice(1)).join(' ')
+}
+
 function fmtSimValue(value: unknown): string {
   if (value === null || value === undefined || value === '') return 'None'
   if (typeof value === 'number') {
@@ -319,6 +324,29 @@ function SimulationDetailPanel({
       const overlord = faction.overlord
         ? [{ name: faction.overlord, type: faction.overlord_type ?? undefined }]
         : []
+      const socialForm = faction.social_form ?? faction.polity_tier ?? 'unknown'
+      const homelandLabel = faction.homeland_region
+        ? faction.homeland_region
+        : socialForm === 'nomadic_tribe'
+          ? 'None (nomadic tribe)'
+          : null
+      const exploredRegions = faction.band_explored_regions ?? []
+      const identityRegions = faction.nomadic_identity_regions ?? []
+      const mobilityRows: [string, string | number | null | undefined][] = [
+        ['Camp', faction.camp_region],
+        ['Roaming Years', typeof faction.band_roaming_turns === 'number' ? faction.band_roaming_turns : null],
+        ['Settled Years', typeof faction.band_settled_turns === 'number' ? faction.band_settled_turns : null],
+        ['Tribalization', typeof faction.tribalization_progress === 'number' ? fmtSimPct(faction.tribalization_progress) : null],
+        ['Migration Pressure', typeof faction.migration_pressure === 'number' ? fmtSimPct(faction.migration_pressure) : null],
+        ['Cooldown', typeof faction.migration_cooldown_turns === 'number' ? faction.migration_cooldown_turns : null],
+        ['Last Move', faction.last_migration_reason],
+        ['Best Homeland', faction.best_homeland_candidate
+          ? `${faction.best_homeland_candidate}${typeof faction.best_homeland_appeal === 'number' ? ` (${faction.best_homeland_appeal.toFixed(2)})` : ''}`
+          : null],
+        ['Explored', exploredRegions.length ? exploredRegions.join(', ') : null],
+        ['Identity Range', identityRegions.length ? identityRegions.join(', ') : null],
+        ['Fragmentation', typeof faction.nomadic_fragmentation_pressure === 'number' ? fmtSimPct(faction.nomadic_fragmentation_pressure) : null],
+      ]
       const hasDiplomaticDetails = [
         warEnemies,
         allies,
@@ -346,6 +374,9 @@ function SimulationDetailPanel({
               ['Doctrine', faction.doctrine_label],
               ['Government', faction.government_type],
               ['Tier', faction.polity_tier],
+              ['Social Form', fmtSocialForm(socialForm)],
+              ['Homeland', homelandLabel],
+              ['Homeland Appeal', typeof faction.homeland_appeal === 'number' && faction.homeland_appeal > 0 ? faction.homeland_appeal.toFixed(2) : null],
               ['Culture', faction.culture_name],
               ['Language', faction.language_family],
               ['Ruler', faction.ruler_name],
@@ -353,6 +384,9 @@ function SimulationDetailPanel({
               ['Status', faction.is_rebel ? 'Successor / rebel polity' : 'Established polity'],
               ['Origin', faction.origin_faction ? factionLabel(faction.origin_faction) : null],
             ]} />
+          </DetailSection>
+          <DetailSection title="Band And Tribe">
+            <DetailRows rows={mobilityRows} />
           </DetailSection>
           <DetailSection title="Capacity">
             <DetailRows rows={[

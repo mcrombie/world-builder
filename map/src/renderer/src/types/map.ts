@@ -120,6 +120,25 @@ export interface SimFaction {
   doctrine_label: string
   government_type?: string
   polity_tier?: string
+  social_form?: string
+  homeland_region?: string | null
+  homeland_appeal?: number
+  homeland_claim_source?: string
+  camp_region?: string | null
+  tribalization_progress?: number
+  band_settled_turns?: number
+  band_roaming_turns?: number
+  migration_pressure?: number
+  migration_cooldown_turns?: number
+  last_migration_reason?: string
+  last_migration_turn?: number | null
+  band_explored_regions?: string[]
+  best_homeland_candidate?: string | null
+  best_homeland_appeal?: number
+  nomadic_identity_regions?: string[]
+  nomadic_fragmentation_pressure?: number
+  nomadic_fragmentation_turns?: number
+  nomadic_fragmentation_cooldown_turns?: number
   culture_name?: string
   language_family?: string
   is_rebel?: boolean

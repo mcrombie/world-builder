@@ -38,13 +38,13 @@ class ClashvergenceExportTests(unittest.TestCase):
         self.assertEqual(
             [language_families[f"Faction{index}"]["family_name"] for index in range(1, 10)],
             [
-                "Boueni",
+                "Bouéni",
                 "Mittoli",
-                "Pyrosi",
-                "Moreshi",
-                "Grassic",
+                "Pyrossel",
+                "Mariiṣi",
+                "Auwel",
                 "Ibnael",
-                "Elodi",
+                "Koleth",
                 "Elagosi",
                 "Kellith",
             ],
@@ -61,7 +61,7 @@ class ClashvergenceExportTests(unittest.TestCase):
         self.assertIn("keth", language_families["Faction9"]["lexical_roots"]["fort"])
 
     def test_azhora_export_starts_language_families_in_homeland_regions(self):
-        map_definition = translate(ROOT / "saved_maps" / "azhora.azmap", num_factions=9)
+        map_definition = translate(ROOT / "saved_maps" / "azhora.azmap", num_factions=10)
         expected_starts = {
             "Faction1": "Central Lond",
             "Faction3": "West Pyros",
@@ -69,6 +69,7 @@ class ClashvergenceExportTests(unittest.TestCase):
             "Faction5": "West Mithala",
             "Faction8": "Elagos",
             "Faction9": "Telemonia",
+            "Faction10": "Cold Stones",
         }
         expected_arrivals = {
             "Faction2": (10, "East Mithala"),

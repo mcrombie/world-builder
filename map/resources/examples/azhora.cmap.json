@@ -5501,7 +5501,7 @@
   },
   "faction_language_families": {
     "Faction1": {
-      "family_name": "Boueni",
+      "family_name": "Bouéni",
       "default_culture_name": "Boueni",
       "traditions": [
         "azhoran",
@@ -5811,7 +5811,7 @@
       "shift_keys": []
     },
     "Faction3": {
-      "family_name": "Pyrosi",
+      "family_name": "Pyrossel",
       "default_culture_name": "Pyrosi",
       "traditions": [
         "azhoran",
@@ -5960,7 +5960,7 @@
       "shift_keys": []
     },
     "Faction4": {
-      "family_name": "Moreshi",
+      "family_name": "Mariiṣi",
       "default_culture_name": "Moreshi",
       "traditions": [
         "azhoran",
@@ -6112,7 +6112,7 @@
       "shift_keys": []
     },
     "Faction5": {
-      "family_name": "Grassic",
+      "family_name": "Auwel",
       "default_culture_name": "Grassic",
       "traditions": [
         "azhoran",
@@ -6413,7 +6413,7 @@
       "shift_keys": []
     },
     "Faction7": {
-      "family_name": "Elodi",
+      "family_name": "Koleth",
       "default_culture_name": "Elodi",
       "traditions": [
         "azhoran",
