@@ -20,6 +20,7 @@ contextBridge.exposeInMainWorld('electronAPI', {
     start:         (mapFilePath: string, numFactions?: number, simType?: string, seed?: string, scenario?: string) => ipcRenderer.invoke('sim:start', mapFilePath, numFactions ?? 9, simType ?? 'clashvergence', seed ?? '', scenario ?? 'default'),
     stop:          ()                         => ipcRenderer.invoke('sim:stop'),
     world:         ()                         => ipcRenderer.invoke('sim:world'),
+    setPerspective: (factionName?: string | null) => ipcRenderer.invoke('sim:set-perspective', factionName ?? null),
     advance:       ()                         => ipcRenderer.invoke('sim:advance'),
     saveState:     (chronicleData?: unknown)  => ipcRenderer.invoke('sim:save-state', chronicleData),
     loadAndStart:  ()                         => ipcRenderer.invoke('sim:load-and-start'),

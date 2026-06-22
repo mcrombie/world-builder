@@ -151,6 +151,18 @@ function eventDetail(ev: SimEvent): string {
   return bits.slice(0, 2).join(' | ')
 }
 
+function isNomadicSplinterBand(faction: SimFaction): boolean {
+  return Boolean(faction.origin_faction)
+    && (faction.social_form === 'nomadic_band' || faction.polity_tier === 'band')
+}
+
+function actionLabel(action: NonNullable<SimWorldState['available_actions']>[number]): string {
+  if (action.label) return action.label
+  const type = action.action_type ? fmtEventType(action.action_type) : action.action_id
+  const target = action.target_region ?? action.target_faction
+  return target ? `${type}: ${target}` : type
+}
+
 export function SimulationPanel() {
   const simWorld       = useMapStore((s) => s.simWorld)
   const setSimWorld    = useMapStore((s) => s.setSimWorld)
@@ -297,6 +309,7 @@ export function SimulationPanel() {
     const prevNames = new Set(prev.factions.map(f => f.name))
     for (const f of next.factions) {
       if (prevNames.has(f.name)) continue
+      if (isNomadicSplinterBand(f)) continue
       if (f.is_rebel && currentPerspec && f.origin_faction === currentPerspec.factionName) {
         return {
           type: 'splinter',
@@ -486,6 +499,8 @@ export function SimulationPanel() {
   }
 
   const summary = simWorld?.summary
+  const isPlayerView = simWorld?.view_mode === 'player' && simWorld.player_faction
+  const availableActions = simWorld?.available_actions ?? []
   const turnLoadPercent = Math.round(clamp01(turnLoadProgress) * 100)
   const turnLoadWidth = isTurnLoading ? Math.max(4, turnLoadPercent) : (turnLoadStats.lastMs == null ? 0 : 100)
 
@@ -526,6 +541,35 @@ export function SimulationPanel() {
 
         {simWorld ? (
           <>
+            {isPlayerView && (
+              <div className="px-3 py-2 border-b border-gray-800 bg-indigo-950/20">
+                <SectionTitle>Perspective</SectionTitle>
+                <div className="rounded bg-gray-800/70 px-2 py-2">
+                  <div className="text-sm font-semibold text-indigo-200 truncate">
+                    {simWorld.player_faction?.display_name ?? simWorld.player_faction?.name}
+                  </div>
+                  <div className="mt-1 flex flex-wrap gap-x-3 gap-y-1 text-[11px] text-gray-500">
+                    <span>{simWorld.visibility?.known_region_count ?? simWorld.regions.length}/{simWorld.visibility?.total_region_count ?? simWorld.regions.length} known</span>
+                    <span>{simWorld.visibility?.visible_region_count ?? simWorld.regions.length} visible</span>
+                    <span>{simWorld.factions.length} known factions</span>
+                  </div>
+                </div>
+                {availableActions.length > 0 && (
+                  <div className="mt-2 flex flex-col gap-1">
+                    {availableActions.slice(0, 3).map((action) => (
+                      <div
+                        key={action.action_id}
+                        className="rounded bg-gray-800/50 px-2 py-1.5 text-xs text-gray-300"
+                        title={action.description}
+                      >
+                        <span className="text-gray-500">{fmtEventType(action.action_type)}</span>
+                        <span className="text-gray-200"> {actionLabel(action)}</span>
+                      </div>
+                    ))}
+                  </div>
+                )}
+              </div>
+            )}
             {summary && (
               <div className="px-3 py-2 border-b border-gray-800">
                 <SectionTitle>World Pulse</SectionTitle>

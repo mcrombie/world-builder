@@ -128,8 +128,10 @@ export interface SimFaction {
   display_name: string
   treasury: number
   owned_regions: number
+  owned_region_count?: number
   population: number
   doctrine_label: string
+  relationship?: string
   government_type?: string
   polity_tier?: string
   social_form?: string
@@ -203,6 +205,10 @@ export interface SimRegion {
   population: number
   resources: number
   unrest: number
+  visibility?: 'controlled' | 'visible' | 'known'
+  population_estimate?: string
+  resource_estimate?: string
+  unrest_estimate?: string
   climate?: string
   climate_label?: string
   climate_anomaly?: number
@@ -282,6 +288,16 @@ export interface SimWorldState {
   ok?: boolean
   turn: number
   turn_label: string
+  view_mode?: 'observer' | 'player'
+  player_faction?: SimFaction | null
+  available_actions?: SimActionOption[]
+  visibility?: {
+    known_region_count: number
+    visible_region_count: number
+    total_region_count: number
+  }
+  notes?: string[]
+  known_factions?: Array<Record<string, unknown>>
   summary?: SimSummary
   factions: SimFaction[]
   regions: SimRegion[]
@@ -289,6 +305,16 @@ export interface SimWorldState {
   hot_regions?: SimHotRegion[]
   active_wars?: SimActiveWar[]
   active_shocks?: SimActiveShock[]
+}
+
+export interface SimActionOption {
+  action_id: string
+  action_type: string
+  label?: string
+  description?: string
+  target_region?: string | null
+  target_faction?: string | null
+  [key: string]: unknown
 }
 
 export interface ChronicleEntry {

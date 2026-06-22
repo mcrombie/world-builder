@@ -1,3 +1,4 @@
+import { useState } from 'react'
 import { useMapStore } from '../store/mapStore'
 import type { ChroniclePerspec } from '../types/map'
 
@@ -7,10 +8,13 @@ export function PerspectiveModal() {
   const setChroniclePrompt    = useMapStore((s) => s.setChroniclePrompt)
   const setChroniclePerspec   = useMapStore((s) => s.setChroniclePerspec)
   const simWorld              = useMapStore((s) => s.simWorld)
+  const setSimWorld           = useMapStore((s) => s.setSimWorld)
+  const setSimDetailSelection = useMapStore((s) => s.setSimDetailSelection)
   const chronicle             = useMapStore((s) => s.chronicle)
   const chronicleInterval     = useMapStore((s) => s.chronicleInterval)
   const setChronicleGenerating = useMapStore((s) => s.setChronicleGenerating)
   const addChronicleEntry     = useMapStore((s) => s.addChronicleEntry)
+  const [error, setError]     = useState<string | null>(null)
 
   if (!pendingPrompt || !simWorld) return null
 
@@ -20,22 +24,39 @@ export function PerspectiveModal() {
     : 'New arrivals'
 
   async function choose(newPerspec: ChroniclePerspec | null) {
+    setError(null)
+    let worldForChronicle = simWorld!
+    if (window.electronAPI?.sim?.setPerspective) {
+      const result = await window.electronAPI.sim.setPerspective(newPerspec?.factionName ?? null)
+      if ((result as any).ok === false) {
+        setError((result as any).error ?? 'Could not switch perspective.')
+        return
+      }
+      worldForChronicle = result as any
+      setSimWorld(worldForChronicle as any)
+      setSimDetailSelection(
+        newPerspec
+          ? { type: 'faction', factionName: newPerspec.factionName }
+          : null,
+      )
+    }
+
     setChroniclePerspec(newPerspec)
     setChroniclePrompt(null)
 
     // Generate chronicle if we just hit an interval boundary
-    if (simWorld!.turn > 0 && simWorld!.turn % chronicleInterval === 0 && window.electronAPI?.chronicle) {
+    if (worldForChronicle.turn > 0 && worldForChronicle.turn % chronicleInterval === 0 && window.electronAPI?.chronicle) {
       setChronicleGenerating(true)
       const perspFaction = newPerspec
-        ? simWorld!.factions.find(f => f.name === newPerspec.factionName) ?? null
+        ? worldForChronicle.factions.find(f => f.name === newPerspec.factionName) ?? null
         : null
       const params = {
-        turnStart: simWorld!.turn - chronicleInterval,
-        turnEnd: simWorld!.turn,
-        turnLabel: simWorld!.turn_label,
-        currentFactions: simWorld!.factions,
-        prevFactions: simWorld!.factions,
-        recentEvents: simWorld!.recent_events ?? [],
+        turnStart: worldForChronicle.turn - chronicleInterval,
+        turnEnd: worldForChronicle.turn,
+        turnLabel: worldForChronicle.turn_label,
+        currentFactions: worldForChronicle.factions,
+        prevFactions: worldForChronicle.factions,
+        recentEvents: worldForChronicle.recent_events ?? [],
         perspective: newPerspec?.factionName ?? null,
         perspectiveFaction: perspFaction,
         previousEntries: chronicle.slice(0, 2),
@@ -45,9 +66,9 @@ export function PerspectiveModal() {
       if (result.ok && result.text) {
         addChronicleEntry({
           id: crypto.randomUUID(),
-          turnStart: simWorld!.turn - chronicleInterval,
-          turnEnd: simWorld!.turn,
-          turnLabel: simWorld!.turn_label,
+          turnStart: worldForChronicle.turn - chronicleInterval,
+          turnEnd: worldForChronicle.turn,
+          turnLabel: worldForChronicle.turn_label,
           perspective: newPerspec?.factionName ?? null,
           perspectiveLabel: newPerspec?.displayName ?? 'Impartial Chronicler',
           perspectiveLanguage: newPerspec?.languageFamily,
@@ -75,6 +96,9 @@ export function PerspectiveModal() {
           <div className="text-sm text-gray-200 leading-relaxed">{pendingPrompt.description}</div>
           {pendingPrompt.languageFamily && (
             <div className="text-xs text-indigo-400 mt-0.5">Language: {pendingPrompt.languageFamily}</div>
+          )}
+          {error && (
+            <div className="text-xs text-red-300 mt-1">{error}</div>
           )}
         </div>
 

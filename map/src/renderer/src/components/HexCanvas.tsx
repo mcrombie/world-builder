@@ -700,9 +700,34 @@ export function HexCanvas() {
       }
     }
 
+    let labelRegions = regions
+    const knownSimRegions = new Set<string>()
+    if (isSimRef.current && simWorldRef.current?.view_mode === 'player') {
+      for (const region of simWorldRef.current.regions) {
+        knownSimRegions.add(region.name)
+        knownSimRegions.add(region.display_name)
+      }
+      ctx.globalAlpha = 0.66
+      for (const hex of Object.values(hexes)) {
+        if (!hex.region) continue
+        const rd = regions[hex.region]
+        if (knownSimRegions.has(hex.region) || (rd?.name && knownSimRegions.has(rd.name))) continue
+        const [cx, cy] = hexToPixel(hex.q, hex.r, hexSize)
+        if (cx + cullPad < viewL || cx - cullPad > viewR) continue
+        if (cy + cullPad < viewT || cy - cullPad > viewB) continue
+        drawHexFill(ctx, cx, cy, hexSize, '#030712')
+      }
+      ctx.globalAlpha = 1
+      labelRegions = Object.fromEntries(
+        Object.entries(regions).filter(([regionId, region]) =>
+          knownSimRegions.has(regionId) || knownSimRegions.has(region.name),
+        ),
+      )
+    }
+
     if (layers.regions) {
       drawRegionLabels(
-        ctx, hexes, regions, hexSize, zoom, offsetX, offsetY,
+        ctx, hexes, labelRegions, hexSize, zoom, offsetX, offsetY,
         canvas.width, canvas.height, viewL, viewT, viewR, viewB, cullPad,
       )
     }

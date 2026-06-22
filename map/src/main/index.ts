@@ -544,6 +544,16 @@ ipcMain.handle('sim:world', async () => {
   }
 })
 
+ipcMain.handle('sim:set-perspective', async (_, factionName: string | null) => {
+  try {
+    if (!simProcess) return { ok: false, error: 'No simulation running.' }
+    await simPost('/api/perspective', { faction: factionName ?? null })
+    return JSON.parse(await simGet('/api/world'))
+  } catch (e: any) {
+    return { ok: false, error: e.message }
+  }
+})
+
 ipcMain.handle('sim:advance', async () => {
   try {
     if (simType === 'clashvergence') {

@@ -8,7 +8,7 @@ interface _ExampleMeta  { id: string; name: string; description: string }
 
 interface _SimFaction   { name: string; display_name: string; treasury: number; owned_regions: number; population: number; doctrine_label: string; [key: string]: unknown }
 interface _SimRegion    { name: string; display_name: string; owner: string | null; population: number; resources: number; unrest: number }
-interface _SimWorld     { ok?: boolean; error?: string; turn: number; turn_label: string; summary?: Record<string, unknown>; factions: _SimFaction[]; regions: _SimRegion[]; recent_events: unknown[]; hot_regions?: unknown[]; active_wars?: unknown[]; active_shocks?: unknown[] }
+interface _SimWorld     { ok?: boolean; error?: string; turn: number; turn_label: string; view_mode?: string; player_faction?: _SimFaction | null; available_actions?: unknown[]; visibility?: Record<string, unknown>; summary?: Record<string, unknown>; factions: _SimFaction[]; regions: _SimRegion[]; recent_events: unknown[]; hot_regions?: unknown[]; active_wars?: unknown[]; active_shocks?: unknown[] }
 interface _SimStartResult { ok: boolean; error?: string; canceled?: boolean; world?: _SimWorld; seed?: string; generatedMapPath?: string }
 interface _SimSaveResult  { ok?: boolean; error?: string; canceled?: boolean; filePath?: string }
 interface _ChronicleGenerateResult { ok: boolean; text?: string; error?: string }
@@ -36,6 +36,7 @@ export interface ElectronAPI {
     start:        (mapFilePath: string, numFactions?: number, simType?: string, seed?: string, scenario?: string) => Promise<_SimStartResult>
     stop:         ()                              => Promise<{ ok: boolean }>
     world:        ()                              => Promise<_SimWorld>
+    setPerspective: (factionName?: string | null) => Promise<_SimWorld>
     advance:      ()                              => Promise<_SimWorld>
     saveState:    (chronicleData?: _ChronicleData) => Promise<_SimSaveResult>
     loadAndStart: ()                              => Promise<_SimStartResultWithChronicle>
