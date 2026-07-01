@@ -12,17 +12,20 @@ interface Props {
   onClose: () => void
 }
 
-type ScenarioMode = 'azhora' | 'azhora2' | 'azhora3' | 'random'
+type ScenarioMode = 'azhora' | 'azhora2' | 'azhora3' | 'azhora4' | 'azhoraGrassicOnly' | 'random'
 
 const AZHORA_FACTION_COUNT = 9
 const AZHORA_SCENARIO_2_FACTION_COUNT = 10
+const AZHORA_SCENARIO_4_FACTION_COUNT = 16
+const AZHORA_SCENARIO_4_DEFAULT_SEED = 'azhora-sc4-001'
+const AZHORA_GRASSIC_ONLY_DEFAULT_SEED = 'azhora-grassic-only-001'
 const AZHORA_SIM_TYPE: SimType = 'clashvergence'
 const FACTION_OPTIONS = [2, 3, 4, 5, 6, 7, 8, 9, 10]
 
 export function SimulateDialog({ initialFactionCount, initialSimType, initialSeed, isAzhoraMap, onStartNew, onLoadSaved, onClose }: Props) {
-  const [scenario, setScenario] = useState<ScenarioMode>(isAzhoraMap ? 'azhora' : 'random')
+  const [scenario, setScenario] = useState<ScenarioMode>(isAzhoraMap ? 'azhora4' : 'random')
   const [azhoraFactionCount, setAzhoraFactionCount] = useState(AZHORA_FACTION_COUNT)
-  const [azhoraSeed, setAzhoraSeed] = useState(initialSeed)
+  const [azhoraSeed, setAzhoraSeed] = useState(isAzhoraMap ? AZHORA_SCENARIO_4_DEFAULT_SEED : initialSeed)
   const [factionCount, setFactionCount] = useState(initialFactionCount)
   const [simType, setSimType]     = useState<SimType>(initialSimType)
   const [seed, setSeed]           = useState(initialSeed)
@@ -34,6 +37,10 @@ export function SimulateDialog({ initialFactionCount, initialSimType, initialSee
       onStartNew(azhoraFactionCount, AZHORA_SIM_TYPE, azhoraSeed, '2')
     } else if (scenario === 'azhora3') {
       onStartNew(AZHORA_SCENARIO_2_FACTION_COUNT, AZHORA_SIM_TYPE, azhoraSeed, '3')
+    } else if (scenario === 'azhora4') {
+      onStartNew(AZHORA_SCENARIO_4_FACTION_COUNT, AZHORA_SIM_TYPE, azhoraSeed, '4')
+    } else if (scenario === 'azhoraGrassicOnly') {
+      onStartNew(1, AZHORA_SIM_TYPE, azhoraSeed, 'grassic_only')
     } else {
       onStartNew(factionCount, simType, seed, 'default')
     }
@@ -83,6 +90,42 @@ export function SimulateDialog({ initialFactionCount, initialSimType, initialSee
               <div className="text-sm font-medium">Azhora: Waves of Arrival</div>
               <div className="text-xs text-gray-500 mt-0.5">
                 Boueni &amp; Moreshi start alone · 8 peoples arrive in waves at turns 100–400
+              </div>
+            </button>
+          )}
+
+          {/* Azhora: Century Waves — only for the Azhora map */}
+          {isAzhoraMap && (
+            <button
+              type="button"
+              className={`w-full text-left px-3 py-2.5 rounded-lg border transition-colors ${
+                scenario === 'azhora4'
+                  ? 'border-indigo-500 bg-indigo-900/40 text-gray-100'
+                  : 'border-gray-700 bg-gray-800 text-gray-300 hover:border-gray-600'
+              }`}
+              onClick={() => { setScenario('azhora4'); setAzhoraSeed(AZHORA_SCENARIO_4_DEFAULT_SEED) }}
+            >
+              <div className="text-sm font-medium">Azhora: Century Waves</div>
+              <div className="text-xs text-gray-500 mt-0.5">
+                Boueni alone at turn 0 · 15 civilizations arrive in century-spaced waves through turn 900
+              </div>
+            </button>
+          )}
+
+          {/* Azhora: Grassic Alone -- only for the Azhora map */}
+          {isAzhoraMap && (
+            <button
+              type="button"
+              className={`w-full text-left px-3 py-2.5 rounded-lg border transition-colors ${
+                scenario === 'azhoraGrassicOnly'
+                  ? 'border-indigo-500 bg-indigo-900/40 text-gray-100'
+                  : 'border-gray-700 bg-gray-800 text-gray-300 hover:border-gray-600'
+              }`}
+              onClick={() => { setScenario('azhoraGrassicOnly'); setAzhoraSeed(AZHORA_GRASSIC_ONLY_DEFAULT_SEED) }}
+            >
+              <div className="text-sm font-medium">Azhora: Grassic Alone</div>
+              <div className="text-xs text-gray-500 mt-0.5">
+                Grassic begin in East Mithala &middot; no staged arrivals
               </div>
             </button>
           )}
@@ -142,6 +185,38 @@ export function SimulateDialog({ initialFactionCount, initialSimType, initialSee
               value={azhoraSeed}
               onChange={(e) => setAzhoraSeed(e.target.value)}
               placeholder="azhora-calibration-003"
+            />
+          </div>
+        )}
+
+        {/* Century Waves controls (faction count is always 16) */}
+        {scenario === 'azhora4' && (
+          <div className="grid grid-cols-[auto_1fr] items-center gap-x-3 gap-y-3">
+            <label className="text-sm text-gray-300 shrink-0">Factions</label>
+            <span className="text-sm text-gray-400">16 (fixed)</span>
+
+            <label className="text-sm text-gray-300 shrink-0">Seed</label>
+            <input
+              className="min-w-0 px-2 py-1.5 rounded bg-gray-800 border border-gray-700 text-gray-200 text-sm"
+              value={azhoraSeed}
+              onChange={(e) => setAzhoraSeed(e.target.value)}
+              placeholder={AZHORA_SCENARIO_4_DEFAULT_SEED}
+            />
+          </div>
+        )}
+
+        {/* Grassic Alone controls (faction count is always 1) */}
+        {scenario === 'azhoraGrassicOnly' && (
+          <div className="grid grid-cols-[auto_1fr] items-center gap-x-3 gap-y-3">
+            <label className="text-sm text-gray-300 shrink-0">Factions</label>
+            <span className="text-sm text-gray-400">1 (fixed)</span>
+
+            <label className="text-sm text-gray-300 shrink-0">Seed</label>
+            <input
+              className="min-w-0 px-2 py-1.5 rounded bg-gray-800 border border-gray-700 text-gray-200 text-sm"
+              value={azhoraSeed}
+              onChange={(e) => setAzhoraSeed(e.target.value)}
+              placeholder={AZHORA_GRASSIC_ONLY_DEFAULT_SEED}
             />
           </div>
         )}

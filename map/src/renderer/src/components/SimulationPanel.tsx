@@ -156,6 +156,15 @@ function isNomadicSplinterBand(faction: SimFaction): boolean {
     && (faction.social_form === 'nomadic_band' || faction.polity_tier === 'band')
 }
 
+function isBandFaction(faction: SimFaction): boolean {
+  return faction.social_form === 'nomadic_band'
+    || faction.social_form === 'sedentary_band'
+    || faction.polity_tier === 'band'
+}
+
+// Temporary: automatic band perspective prompts interrupt long sim review.
+const ENABLE_AUTO_BAND_PERSPECTIVE_PROMPTS = false
+
 function actionLabel(action: NonNullable<SimWorldState['available_actions']>[number]): string {
   if (action.label) return action.label
   const type = action.action_type ? fmtEventType(action.action_type) : action.action_id
@@ -184,6 +193,10 @@ export function SimulationPanel() {
   const setChroniclePrompt     = useMapStore((s) => s.setChroniclePrompt)
   const chronicleInterval      = useMapStore((s) => s.chronicleInterval)
   const setChronicleGenerating = useMapStore((s) => s.setChronicleGenerating)
+
+  // Stop-at-turn
+  const [stopAtTurnInput, setStopAtTurnInput] = useState('')
+  const stopAtTurnRef = useRef(Infinity)
 
   // Chronicle tracking refs
   const prevSimWorldRef          = useRef<SimWorldState | null>(null)
@@ -310,6 +323,7 @@ export function SimulationPanel() {
     for (const f of next.factions) {
       if (prevNames.has(f.name)) continue
       if (isNomadicSplinterBand(f)) continue
+      if (!ENABLE_AUTO_BAND_PERSPECTIVE_PROMPTS && isBandFaction(f)) continue
       if (f.is_rebel && currentPerspec && f.origin_faction === currentPerspec.factionName) {
         return {
           type: 'splinter',
@@ -436,6 +450,13 @@ export function SimulationPanel() {
       while (playRef.current && !cancelled) {
         const ok = await advanceOnce()
         if (!ok) { playRef.current = false; setIsPlaying(false); break }
+        if ((prevSimWorldRef.current?.turn ?? 0) >= stopAtTurnRef.current) {
+          playRef.current = false
+          setIsPlaying(false)
+          setStopAtTurnInput('')
+          stopAtTurnRef.current = Infinity
+          break
+        }
         await new Promise<void>((r) => setTimeout(r, 800))
       }
     }
@@ -781,24 +802,41 @@ export function SimulationPanel() {
       <div className="px-3 py-3 border-t border-gray-800 flex flex-col gap-2">
         {error && <p className="text-xs text-red-400">{error}</p>}
         {simWorld && (
-          <div className="flex gap-2">
-            <button
-              className="flex-1 px-3 py-1.5 text-sm rounded bg-indigo-600 hover:bg-indigo-500 disabled:opacity-40 disabled:cursor-wait"
-              onClick={handleAdvance}
-              disabled={isAdvancing || isPlaying || !!chroniclePendingPrompt}
-              title={chroniclePendingPrompt ? 'Answer the chronicle prompt in Story Mode first' : undefined}
-            >
-              {isAdvancing ? 'Advancing…' : chroniclePendingPrompt ? 'Chronicle…' : 'Next Turn'}
-            </button>
-            <button
-              className={`w-20 px-3 py-1.5 text-sm rounded ${isPlaying ? 'bg-yellow-600 hover:bg-yellow-500' : 'bg-green-700 hover:bg-green-600'} disabled:opacity-40`}
-              onClick={handleTogglePlay}
-              disabled={isAdvancing && !isPlaying}
-              title={isPlaying ? 'Pause' : 'Auto-advance'}
-            >
-              {isPlaying ? 'Pause' : 'Auto'}
-            </button>
-          </div>
+          <>
+            <div className="flex gap-2">
+              <button
+                className="flex-1 px-3 py-1.5 text-sm rounded bg-indigo-600 hover:bg-indigo-500 disabled:opacity-40 disabled:cursor-wait"
+                onClick={handleAdvance}
+                disabled={isAdvancing || isPlaying || !!chroniclePendingPrompt}
+                title={chroniclePendingPrompt ? 'Answer the chronicle prompt in Story Mode first' : undefined}
+              >
+                {isAdvancing ? 'Advancing…' : chroniclePendingPrompt ? 'Chronicle…' : 'Next Turn'}
+              </button>
+              <button
+                className={`w-20 px-3 py-1.5 text-sm rounded ${isPlaying ? 'bg-yellow-600 hover:bg-yellow-500' : 'bg-green-700 hover:bg-green-600'} disabled:opacity-40`}
+                onClick={handleTogglePlay}
+                disabled={isAdvancing && !isPlaying}
+                title={isPlaying ? 'Pause' : 'Auto-advance'}
+              >
+                {isPlaying ? 'Pause' : 'Auto'}
+              </button>
+            </div>
+            <div className="flex items-center gap-2">
+              <span className="text-xs text-gray-400 whitespace-nowrap">Stop at turn</span>
+              <input
+                type="number"
+                min={1}
+                value={stopAtTurnInput}
+                onChange={(e) => {
+                  setStopAtTurnInput(e.target.value)
+                  const v = parseInt(e.target.value, 10)
+                  stopAtTurnRef.current = isNaN(v) || v < 1 ? Infinity : v
+                }}
+                placeholder="∞"
+                className="w-20 text-xs px-2 py-1 rounded bg-gray-800 border border-gray-600 text-gray-200 text-center"
+              />
+            </div>
+          </>
         )}
         <div className="flex gap-2">
           <button

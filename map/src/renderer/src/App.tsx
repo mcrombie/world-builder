@@ -62,6 +62,19 @@ export default function App() {
   const lorePath         = useMapStore((s) => s.map?.lorePath)
   const setLoreFile      = useMapStore((s) => s.setLoreFile)
 
+  // ── Auto-load Azhora on first launch (Electron only) ────────────────────────
+  const autoLoadedRef = useRef(false)
+  useEffect(() => {
+    if (IS_BROWSER || autoLoadedRef.current) return
+    autoLoadedRef.current = true
+    if (useMapStore.getState().map) return
+    ;(async () => {
+      const result = await fileIO.loadExample('azhora')
+      if (!result || result.canceled || !result.data) return
+      try { storeLoad(JSON.parse(result.data) as MapData, result.filePath ?? '__example__azhora') } catch {}
+    })()
+  }, [storeLoad])
+
   // ── Restore autosave on mount (browser only) ──────────────────────────────
   const restoredRef = useRef(false)
   useEffect(() => {

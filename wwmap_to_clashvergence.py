@@ -87,6 +87,10 @@ AZHORAN_PREFERRED_START_REGIONS: dict[str, list[str]] = {
     "crefs": ["Cold Stones"],
 }
 
+AZHORAN_GRASSIC_ONLY_START_REGIONS: dict[str, list[str]] = {
+    "Faction1": ["East Mithala"],
+}
+
 AZHORAN_DISRUPTIVE_ARRIVALS: dict[str, dict] = {
     "mittoli": {
         "arrival_turn": 10,
@@ -248,12 +252,147 @@ AZHORAN_DISRUPTIVE_ARRIVALS_3: dict[str, dict] = {
     },
 }
 
+# ── Scenario 4 — Century Waves: Boueni alone at turn 0; 15 outside arrivals spread across 9 centuries ─
+
+# Only the Boueni begin on the map; every other civilization arrives from outside Azhora.
+AZHORAN_PREFERRED_START_REGIONS_4: dict[str, list[str]] = {
+    "boueni": ["North Riesov"],
+}
+
+AZHORAN_DISRUPTIVE_ARRIVALS_4: dict[str, dict] = {
+    # Century 0 — first contact from the south
+    "moreshi": {
+        "arrival_turn": 20,
+        "arrival_type": "disruptive_colonial_landing",
+        "entry_region": "Marosh",
+        "origin": "foreign land",
+        "status": "foreign_colony",
+    },
+    # Century 1 — grasslands and highlands
+    "grassic": {
+        "arrival_turn": 120,
+        "arrival_type": "disruptive_colonial_landing",
+        "entry_region": "East Mithala",
+        "origin": "foreign land",
+        "status": "foreign_colony",
+    },
+    "pyrosi": {
+        "arrival_turn": 150,
+        "arrival_type": "disruptive_colonial_landing",
+        "entry_region": "West Pyros",
+        "origin": "foreign land",
+        "status": "foreign_colony",
+    },
+    # Century 2 — plains and forests
+    "mittoli": {
+        "arrival_turn": 250,
+        "arrival_type": "disruptive_colonial_landing",
+        "entry_region": "East Mithala",
+        "origin": "foreign land",
+        "status": "foreign_colony",
+    },
+    "ibnael": {
+        "arrival_turn": 270,
+        "arrival_type": "disruptive_colonial_landing",
+        "entry_region": "South Acordwood",
+        "origin": "foreign land",
+        "status": "foreign_colony",
+    },
+    # Century 3 — eastern highland traders
+    "kellith": {
+        "arrival_turn": 370,
+        "arrival_type": "disruptive_colonial_landing",
+        "entry_region": "Telemonia",
+        "origin": "foreign land",
+        "status": "foreign_colony",
+    },
+    # Century 4 — western cape merchants
+    "tennoca": {
+        "arrival_turn": 400,
+        "arrival_type": "disruptive_colonial_landing",
+        "entry_region": "Cape Thalmagar",
+        "origin": "foreign land",
+        "status": "foreign_colony",
+        "initial_technologies": {"seafaring": 0.5},
+    },
+    # Century 5 — northern and southern surge
+    "disht": {
+        "arrival_turn": 500,
+        "arrival_type": "disruptive_colonial_landing",
+        "entry_region": "Cold Stones",
+        "origin": "foreign land",
+        "status": "foreign_colony",
+    },
+    "groga": {
+        "arrival_turn": 520,
+        "arrival_type": "disruptive_colonial_landing",
+        "entry_region": "Babon",
+        "origin": "foreign land",
+        "status": "foreign_colony",
+    },
+    # Century 6 — imperial lake-lands and western merchants
+    "elagosi": {
+        "arrival_turn": 620,
+        "arrival_type": "disruptive_colonial_landing",
+        "entry_region": "Elagos",
+        "origin": "foreign land",
+        "status": "foreign_colony",
+    },
+    "lothi": {
+        "arrival_turn": 650,
+        "arrival_type": "disruptive_colonial_landing",
+        "entry_region": "Hama",
+        "origin": "foreign land",
+        "status": "foreign_colony",
+        "initial_technologies": {"seafaring": 0.4},
+    },
+    # Century 7 — cold north and desert south
+    "crefs": {
+        "arrival_turn": 750,
+        "arrival_type": "disruptive_colonial_landing",
+        "entry_region": "Cold Stones",
+        "origin": "foreign land",
+        "status": "foreign_colony",
+    },
+    "mujahal": {
+        "arrival_turn": 770,
+        "arrival_type": "disruptive_colonial_landing",
+        "entry_region": "South Meroshe Desert",
+        "origin": "foreign land",
+        "status": "foreign_colony",
+    },
+    # Century 8-9 — Old Kingdom diaspora and mountain builders
+    "elodi": {
+        "arrival_turn": 870,
+        "arrival_type": "disruptive_colonial_landing",
+        "entry_region": "East Suval",
+        "origin": "foreign land",
+        "status": "foreign_colony",
+        "initial_technologies": {"seafaring": 0.6},
+    },
+    "rov": {
+        "arrival_turn": 900,
+        "arrival_type": "disruptive_colonial_landing",
+        "entry_region": "West Oremindi Mountains",
+        "origin": "foreign land",
+        "status": "foreign_colony",
+    },
+}
+
 # Each entry is (preferred_starts, disruptive_arrivals, required_faction_count).
 # required_faction_count overrides the CLI num_factions when not explicitly set.
 _AZHORAN_SCENARIOS: dict[str, tuple[dict, dict, int | None]] = {
     "default": (AZHORAN_PREFERRED_START_REGIONS, AZHORAN_DISRUPTIVE_ARRIVALS, None),
     "2": (AZHORAN_PREFERRED_START_REGIONS_2, AZHORAN_DISRUPTIVE_ARRIVALS_2, 10),
     "3": (AZHORAN_PREFERRED_START_REGIONS_3, AZHORAN_DISRUPTIVE_ARRIVALS_3, 10),
+    "4": (AZHORAN_PREFERRED_START_REGIONS_4, AZHORAN_DISRUPTIVE_ARRIVALS_4, 16),
+    "grassic_only": (AZHORAN_GRASSIC_ONLY_START_REGIONS, {}, 1),
+}
+
+_AZHORAN_SCENARIO_LANGUAGE_OVERRIDES: dict[str, dict[str, str]] = {
+    "grassic_only": {
+        "Faction1": "grassic",
+    },
 }
 
 _AZHORAN_SCENARIO_FACTION_TRAITS: dict[str, dict[str, list[str]]] = {
@@ -281,6 +420,28 @@ _AZHORAN_SCENARIO_FACTION_TRAITS: dict[str, dict[str, list[str]]] = {
         "elodi":     ["developmental_religious"],
         "crefs":     ["militarist_pioneers"],
     },
+    # Scenario 4: traits encode doctrine pairs (primary/secondary) using available trait keys.
+    "4": {
+        "boueni":    ["chaos_pioneers", "developmental_religious"],  # industrious/population growth
+        "moreshi":   ["developmental_religious"],                     # commercial/population growth
+        "grassic":   ["plains_pioneers", "chaos_pioneers"],          # territorial expansion/population growth
+        "pyrosi":    ["military_expansion"],                          # militarist/conquering
+        "mittoli":   ["military_expansion"],                          # territorial expansion/conquering
+        "ibnael":    ["developmental_religious", "militarist_isolationist"],  # industrious/isolationist
+        "kellith":   ["militarist_isolationist"],                     # militarist/isolationist
+        "tennoca":   ["developmental_religious"],                     # commercial/defensive
+        "disht":     ["military_expansion", "developmental_religious"],  # commercial/conquering
+        "groga":     ["militarist_isolationist"],                     # militarist/defensive
+        "elagosi":   ["developmental_religious", "military_expansion"],  # industrious/conquering
+        "lothi":     ["plains_pioneers"],                             # territorial expansionist/isolationist
+        "crefs":     ["militarist_pioneers"],                         # militarist/population growth
+        "mujahal":   ["desert_pioneers"],                             # territorial expansion/defensive
+        "elodi":     ["developmental_religious", "militarist_isolationist"],  # commercial/isolationist
+        "rov":       ["developmental_religious"],                     # industrious/defensive
+    },
+    "grassic_only": {
+        "Faction1": ["plains_pioneers", "chaos_pioneers"],
+    },
 }
 
 # Full agenda definitions keyed by language key (type + params).
@@ -300,11 +461,35 @@ _AZHORAN_AGENDA_FULL_BY_LANGUAGE: dict[str, dict] = {
 # Which scenarios get faction agendas.
 _AZHORAN_SCENARIO_FACTION_AGENDAS: dict[str, dict[str, dict]] = {
     "3": _AZHORAN_AGENDA_FULL_BY_LANGUAGE,
+    "4": {
+        "boueni":   {"agenda_type": "explore"},
+        "moreshi":  {"agenda_type": "trade"},
+        "grassic":  {"agenda_type": "expand_territory"},
+        "pyrosi":   {"agenda_type": "conquer"},
+        "mittoli":  {"agenda_type": "contiguous_terrain", "params": {"terrain": "plains"}},
+        "ibnael":   {"agenda_type": "defend_region", "params": {"region": "South Acordwood"}},
+        "kellith":  {"agenda_type": "defend_region", "params": {"region": "Telemonia"}},
+        "tennoca":  {"agenda_type": "trade"},
+        "disht":    {"agenda_type": "conquer"},
+        "groga":    {"agenda_type": "defend_region", "params": {"region": "Babon"}},
+        "elagosi":  {"agenda_type": "imperial", "params": {"region_target": 15, "prefer_tributaries": True}},
+        "lothi":    {"agenda_type": "expand_territory"},
+        "crefs":    {"agenda_type": "conquer"},
+        "mujahal":  {"agenda_type": "expand_territory"},
+        "elodi":    {"agenda_type": "trade"},
+        "rov":      {"agenda_type": "defend_region", "params": {"region": "West Oremindi Mountains"}},
+    },
+    "grassic_only": {
+        "Faction1": {"agenda_type": "expand_territory"},
+    },
 }
 
 # Initial technologies granted to starting factions (not arrivals) per scenario.
 _AZHORAN_SCENARIO_INITIAL_TECHNOLOGIES: dict[str, dict[str, dict]] = {
     "3": {
+        "boueni": {"seafaring": 0.5},
+    },
+    "4": {
         "boueni": {"seafaring": 0.5},
     },
 }
@@ -421,6 +606,8 @@ def _apply_azhoran_start_preferences(
 
     for language_key, preferred_regions in preferred_start_regions.items():
         owner_id = _get_default_language_faction_id(language_key, num_factions)
+        if owner_id is None and _is_configured_faction_id(language_key, num_factions):
+            owner_id = language_key
         if owner_id is None:
             continue
 
@@ -491,6 +678,8 @@ def _build_azhoran_faction_agendas(
     agendas: dict[str, dict] = {}
     for language_key, agenda in agenda_definitions.items():
         owner_id = _get_default_language_faction_id(language_key, num_factions)
+        if owner_id is None and _is_configured_faction_id(language_key, num_factions):
+            owner_id = language_key
         if owner_id is None:
             continue
         agendas[owner_id] = dict(agenda)
@@ -508,6 +697,8 @@ def _build_azhoran_initial_technologies(
     result: dict[str, dict] = {}
     for language_key, tech_dict in tech_definitions.items():
         owner_id = _get_default_language_faction_id(language_key, num_factions)
+        if owner_id is None and _is_configured_faction_id(language_key, num_factions):
+            owner_id = language_key
         if owner_id is None:
             continue
         result[owner_id] = dict(tech_dict)
@@ -600,7 +791,7 @@ def translate(wwmap_path: str | Path, num_factions: int = 4, scenario: str = "de
     faction_to_id = graph.faction_to_id
     auto_start_owners: dict[str, str] = {}
     if not faction_names:
-        for i, rid in enumerate(graph.auto_start_regions):
+        for i, rid in enumerate(graph.auto_start_regions[:num_factions]):
             auto_start_owners[rid] = f"Faction{i + 1}"
         _apply_azhoran_start_preferences(
             wwmap_path,
@@ -707,6 +898,12 @@ def translate(wwmap_path: str | Path, num_factions: int = 4, scenario: str = "de
         graph,
         num_factions_out,
     )
+    for owner_id, language_key in _AZHORAN_SCENARIO_LANGUAGE_OVERRIDES.get(scenario, {}).items():
+        if not _is_configured_faction_id(owner_id, num_factions_out):
+            continue
+        profile = get_azhoran_language_profile(language_key)
+        if profile is not None:
+            faction_language_families[owner_id] = profile
     scenario_traits = _AZHORAN_SCENARIO_FACTION_TRAITS.get(scenario, {})
     for language_key, traits in scenario_traits.items():
         owner_id = _get_default_language_faction_id(language_key, num_factions_out)

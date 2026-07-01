@@ -371,9 +371,12 @@ async function _spawnServer(
 
 function collectResponse(res: http.IncomingMessage): Promise<string> {
   return new Promise((resolve, reject) => {
-    const chunks: Buffer[] = []
-    res.on('data', (chunk: Buffer) => chunks.push(chunk))
-    res.on('end', () => resolve(Buffer.concat(chunks).toString('utf-8')))
+    // Stream as string to avoid Node's 512 MB Buffer→string conversion limit
+    // on large world states. V8 string concatenation has a higher ceiling.
+    res.setEncoding('utf-8')
+    let body = ''
+    res.on('data', (chunk: string) => { body += chunk })
+    res.on('end', () => resolve(body))
     res.on('error', reject)
   })
 }

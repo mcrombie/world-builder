@@ -103,6 +103,34 @@ class ClashvergenceExportTests(unittest.TestCase):
                 [],
             )
 
+    def test_azhora_grassic_only_scenario_has_one_seed_and_no_arrivals(self):
+        map_definition = translate(
+            ROOT / "saved_maps" / "azhora.azmap",
+            num_factions=16,
+            scenario="grassic_only",
+        )
+        language_families = map_definition["faction_language_families"]
+        owned_regions = [
+            region_name
+            for region_name, region_data in map_definition["regions"].items()
+            if region_data.get("owner")
+        ]
+
+        self.assertEqual(map_definition["num_factions"], 1)
+        self.assertEqual(owned_regions, ["East Mithala"])
+        self.assertEqual(map_definition["regions"]["East Mithala"]["owner"], "Faction1")
+        self.assertNotIn("faction_arrivals", map_definition)
+        self.assertEqual(language_families["Faction1"]["default_culture_name"], "Grassic")
+        self.assertEqual(language_families["Faction1"]["family_name"], "Auwel")
+        self.assertEqual(
+            map_definition["faction_agendas"]["Faction1"]["agenda_type"],
+            "expand_territory",
+        )
+        self.assertIn(
+            "plains_pioneers",
+            language_families["Faction1"]["faction_traits"],
+        )
+
     def test_plain_export_omits_language_families(self):
         tmp_dir = ROOT / ".tmp_clashvergence_export_tests"
         tmp_dir.mkdir(exist_ok=True)
